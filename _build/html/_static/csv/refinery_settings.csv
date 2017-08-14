@@ -1,0 +1,14 @@
+Type of Refinery parameter,Parameter notes,"Example for ""Refinery Parameter"" column of mapping"
+relationshipType,Accepts a constant type code for the relationship type or a reference to the location in the data source where the type can be found,"{""relationshipType"": ""^10""} or {""relationshipType"": ""author""}"
+entityType,Accepts a constant list item idno from the list entity_types or a reference to the location in the data source where the type can be found,"{""entityType"": ""individual""}"
+attributes,Sets or maps metadata for the entity record by referencing the metadataElement code and the location in the data source where the data values can be found,"``{   ""attributes"": {
+      ""biography"":""^23"",
+      ""address"": {
+          ""address1"": ""^24"",
+          ""address2"": ""^25"",
+          ""city"": ""^26"",
+          ""stateprovince"": ""^27"",
+          ""postalcode"": ""^28"",
+          ""country"": ""^29""
+      }
+  } }``"

@@ -1,0 +1,430 @@
+
+
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Metadata Elements &mdash; CollectiveAccess 1.7 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/table_override.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="CollectiveAccess 1.7 documentation" href="../index.html"/>
+        <link rel="next" title="Relationships" href="Relationships.html"/>
+        <link rel="prev" title="Intrinsic Fields, Identifiers and Preferred/Non-Preferred Labels" href="intIDLabel.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> CollectiveAccess
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.7
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Introduction to CollectiveAccess</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../intro/whatIs.html">What is CollectiveAccess?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/whoUses.html">Who uses it?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/why.html">Why should I?</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Setup &amp; Install</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../setup/systemReq.html">System Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../setup/media.html">Media Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../setup/Installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../setup/Profiles.html">Profiles</a></li>
+</ul>
+<p class="caption"><span class="caption-text">How CA Organizes Information</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="records.html">Primary Tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="types.html">Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intIDLabel.html">Intrinsics, Identifiers and Labels</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Metadata Elements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Relationships.html">Relationships</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interstitial.html">Interstitial Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dateTime.html">Date and Time Formats</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Configuring Providence (Front-End)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../providence/Locales.html">Locales</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../providence/listsAuthorities.html">Lists and Authorities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../providence/metadata.html">Metadata Elements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../providence/interfaces.html">User Interfaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../providence/together.html">Putting It All Together</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../providence/profiles.html">Writing Your Own Installation Profile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../providence/system.html">System Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../providence/identifiers.html">Identifiers</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Search &amp; Browse</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../searchBrowse/intro.html">Intro to Search Pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../searchBrowse/syntax.html">Syntax</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../searchBrowse/indexing.html">Indexing Options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../searchBrowse/engines.html">Search Engines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../searchBrowse/advanced.html">Advanced Search Forms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../searchBrowse/query.html">Query Builder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../searchBrowse/facets.html">Browse Facets</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Reporting</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../reporting/displays.html">Using Displays</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reporting/templates.html">Display Template Syntax</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reporting/export.html">Exporting Search &amp; Browse Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reporting/pdfOut.html">PDF Output</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reporting/labels.html">Generating Labels</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Workflow</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../workflow/sets.html">Creating Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../workflow/status.html">Status Tracking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../workflow/access.html">Access Status</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../workflow/location.html">Tracking Current Object Location</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../workflow/history.html">Maintaining Object Use History</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Import</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../import/tutorial.html">Basic Importer Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../import/formats.html">Supported File Formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../import/mappings.html">Mappings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../import/running.html">Running an Import</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../import/worldcat.html">WorldCat</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../import/getty.html">Getty Vocabularies</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Export</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../export/formats.html">Supported File Formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../export/mappings.html">Mappings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../export/running.html">Running an Export</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Administration</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../administration/control.html">User Access Control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../administration/maint.html">Maintenance Functions</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Customizing Pawtucket</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../pawtucket/intro.html">Introduction to Themes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pawtucket/general.html">General Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pawtucket/media.html">Media Display &amp; Access</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pawtucket/access.html">Public Access Configurations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pawtucket/reg.html">Login &amp; Registration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pawtucket/static.html">Homepage &amp; Static Pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pawtucket/searchBrowse.html">Search &amp; Browse Pages and Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pawtucket/detail.html">Detail Pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pawtucket/lightbox.html">Lightboxes &amp; Galleries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pawtucket/classrooms.html">Classrooms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pawtucket/contact.html">Contact &amp; Mail Templates</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../reference/APIs.html">APIs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/FAQs.html">FAQs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/Glossaries.html">Glossaries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/prior.html">Prior Releases</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">CollectiveAccess</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li>Metadata Elements</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="metadata-elements">
+<h1>Metadata Elements<a class="headerlink" href="#metadata-elements" title="Permalink to this headline">¶</a></h1>
+<p>Attribute types represent all of the different varieties of fields supported by CollectiveAccess. Each one is slightly different because each is designed to accept and normalized data in different formats. See below for more details about the unique nature of each Attribute type. The full list of attribute types is listed <a class="reference external" href="https://github.com/collectiveaccess/providence/blob/master/app/conf/attribute_types.conf">here</a>.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type code</th>
+<th class="head">Description</th>
+<th class="head">Settings</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Container</td>
+<td>Unlike all other attribute types, containers do not represent data values. Rather their sole function is to organize attributes into groups for display. In a multi-attribute value set (for example an address with separate attributes for street number, city, state, country and postal code), there will be at least one container serving as the &#8220;root&#8221; (or top) of the attribute hierarchy. Other containers may serve to further group items in the multi-attribute set into sub-groups displayed on separate lines of a form.</td>
+<td>Attribute settings: Container</td>
+</tr>
+<tr class="row-odd"><td>Text</td>
+<td>Represents a free-text value.</td>
+<td>Attribute settings: Text</td>
+</tr>
+<tr class="row-even"><td>DateRange</td>
+<td>Represents an historic date range accepting date/time range expressions in the formats acceptedby the CA TimeExpressionParser module.</td>
+<td>Attribute settings: DateRange</td>
+</tr>
+<tr class="row-odd"><td>List</td>
+<td>Represents a value chosen from a drop-down list populated with values from a specified list as defined in the ca_lists table.</td>
+<td>Attribute settings: List</td>
+</tr>
+<tr class="row-even"><td>Geocode</td>
+<td>Represents one or more latitude/longitude coordinates. Coordinates can be entered as decimal latitude/longitude pairs (ex. 40.321,-74.55) or in degrees-minutes-seconds format (ex. 40° 23&#8217; 10N, 74° 30&#8217; 5W). Multiple latitude/longitude coordinates should be separated with semicolons (&#8221;;&#8221;). Non-coordinate entries are converted to coordinates using the Google Maps Geocoding service, which works well for most full and partial addresses worldwide. To unambiguously distinguish coordinate data from address data to be geocoded, it is strongly suggested that coordinate lists be enclosed in square brackets (ex. [40.321,-74.55; 41.321,-74.55;41.321,-75.55;40.321,-75.55;40.321,-74.55]. More notes on the Geocode types [GeocodeAttributeTypeNotes here]</td>
+<td>Attribute settings: Geocode</td>
+</tr>
+<tr class="row-odd"><td>Url</td>
+<td>Accepts a properly formatted URL value. Currently does fairly limited checking on overall syntax and specified protocol. May be expanded in the future to verify the URL&#8217;s HTTP return code.</td>
+<td>Attribute settings: Url</td>
+</tr>
+<tr class="row-even"><td>Currency</td>
+<td>Accepts a currency value composed of a currency specifier and a decimal number. The current specifier should be a standard three letter currency code (see <a class="reference external" href="http://www.xe.com/iso4217.php">http://www.xe.com/iso4217.php</a>) or one of the following special currency symbols: $ (US Dollar), ¥ (Japanese Yen), £ (English Pound) or € (Euro). Examples of valid input: $14.95, £32.50, CAD 20 [Canadian dollars], DKK 75 [Danish Kroner]</td>
+<td>Attribute settings: Currency</td>
+</tr>
+<tr class="row-odd"><td>Length</td>
+<td>Accepts length measurements in metric, English and points units (the latter being typographical points). Entries are simply a numeric quantity + a unit specifier. Supported units specifiers are described on the measurement input formats page. While any supported length unit may be used for input, output units are dictated by the user&#8217;s units preference setting. This preference may be set to use English units, metric units or to display the measurement using the units with which it was initially entered.</td>
+<td>Attribute settings: Length</td>
+</tr>
+<tr class="row-even"><td>Weight</td>
+<td>Accepts weight measurements in metric and English units. Entries are simply a numeric quantity + a unit specifier. Supported units specifiers are described on the measurement input formats page. While any supported unit of weight may be used for input, output units are dictated by the user&#8217;sunits preference setting. This preference may be set to use English units, metric units or to display the measurement using the units with which it was initially entered.</td>
+<td>Attribute settings: Weight</td>
+</tr>
+<tr class="row-odd"><td>TimeCode</td>
+<td>Accepts time offsets in a number of time code formats. Time code values are typically used to express a duration or temporal position within time-based media (eg. a location in a video or audio stream). Formats supported include: hh:mm:ss (ex. 2:10:52 = 2 hours, 10 minutes, 52 seconds); XXh XXm XXs (ex. 2h 10m 52s); or XXs (ex. 7852s = 7852 seconds).</td>
+<td>Attribute settings: TimeCode</td>
+</tr>
+<tr class="row-even"><td>Integer</td>
+<td>Accepts integer values, but no floats. In effect everything that contains only the digits 0-9 is accepted.</td>
+<td>Attribute settings: Integer</td>
+</tr>
+<tr class="row-odd"><td>Numeric</td>
+<td>Accepts numeric values. Numeric strings consist of optional sign, any number of digits, optional decimal part and optional exponential part. Thus +0123.45e6 is a valid numeric value. Hexadecimal notation (0xFF) is allowed too but only without sign, decimal and exponential part.</td>
+<td>Attribute settings: Numeric</td>
+</tr>
+<tr class="row-even"><td>LCSH</td>
+<td>Library of Congress Subject Heading value. Takes LCSH heading or first part of heading (the LCSH search service only supports truncation searches), does a lookup and returns a list of possible matches. Selected LCSH heading is stored as both text and the service URL identifier.</td>
+<td>Attribute settings: LCSH</td>
+</tr>
+<tr class="row-odd"><td>GeoNames</td>
+<td>GeoNames value. Takes search text, passes it to the GeoNames search service and provides a dropdown with search results (ordered by score). Selected geoname is stored as both text (name, country, continent and ID) and the service URL identifier.</td>
+<td>Attribute settings: GeoNames</td>
+</tr>
+<tr class="row-even"><td>File</td>
+<td>Uploaded file. CA will try to identify the file and extract limited metadata, but even if it can&#8217;t identify the file it will accept and store it.</td>
+<td>Attribute settings: File</td>
+</tr>
+<tr class="row-odd"><td>Media</td>
+<td>Uploaded media (image, sound video). CA will try to identify the file, extract metadata and create derivatives as configured in media_processing.conf. If CA cannot identify and parse the file it will reject it.</td>
+<td>Attribute settings: Media</td>
+</tr>
+<tr class="row-even"><td>Taxonomy</td>
+<td>Taxonomic name as returned from a taxonomic name service. Currently support lookups into ITISand uBio services.</td>
+<td>Attribute settings: Taxonomy</td>
+</tr>
+<tr class="row-odd"><td>InformationService</td>
+<td>Remote webservice lookup. Lookup values web services including the Getty TGN, ULAN and AAT, another CollectiveAccess instance, Wikipedia, WorldCat and uBio. See Information Services.</td>
+<td>Attribute settings: InformationService</td>
+</tr>
+<tr class="row-even"><td>ObjectRepresentations</td>
+<td>Reference object representations within your CollectiveAccess instance.</td>
+<td>Attribute settings: ObjectRepresentations</td>
+</tr>
+<tr class="row-odd"><td>Entities</td>
+<td>Entity value. Searches the CollectiveAccess entity authority for given text and creates a typeless pseudo-relationship with the selected entity.</td>
+<td>Attribute settings: Entities</td>
+</tr>
+<tr class="row-even"><td>Places</td>
+<td>Place value. Searches the CollectiveAccess place authority for given text and creates a typeless pseudo-relationship with the selected place (typeless). Can be restricted to a single place type.</td>
+<td>Attribute settings: Place</td>
+</tr>
+<tr class="row-odd"><td>Occurrences</td>
+<td>Occurrence value. Searches the CollectiveAccess occurrence authority for given text and creates a typeless pseudo-relationship with the selected occurrence (typeless). Can (and should) be restricted to a single occurrence type.</td>
+<td>Attribute settings: Occurrence</td>
+</tr>
+<tr class="row-even"><td>Collections</td>
+<td>Collection value. Searches the CollectiveAccess collection authority for given text and creates a typeless pseudo-relationship with the selected collection (typeless). Can be restricted to a single occurrence type.</td>
+<td>Attribute settings: Collection</td>
+</tr>
+<tr class="row-odd"><td>StorageLocations</td>
+<td>Storage Location value. Searches the CollectiveAccess storage location authority for given text and creates a typeless pseudo-relationship with the selected storage location (typeless). Can be restricted to a single storage location type.</td>
+<td>Attribute settings: StorageLocation</td>
+</tr>
+<tr class="row-even"><td>Loans</td>
+<td>Loan value. Searches the CollectiveAccess loan authority for given text and creates a typeless pseudo-relationship with the selected loan (typeless). Can be restricted to a single occurrence type.</td>
+<td>Attribute settings: Loan</td>
+</tr>
+<tr class="row-odd"><td>Movements</td>
+<td>Movement value. Searches the CollectiveAccess movement authority for given text and creates a typeless pseudo-relationship with the selected movement (typeless). Can be restricted to a single movement type.</td>
+<td>Attribute settings: Movement</td>
+</tr>
+<tr class="row-even"><td>Objects</td>
+<td>Object value. Searches the CollectiveAccess object authority for given text and creates a typeless pseudo-relationship with the selected object (typeless). Can be restricted to a single object type.</td>
+<td>Attribute settings: Object</td>
+</tr>
+<tr class="row-odd"><td>ObjectLots</td>
+<td>Object Lot value. Searches the CollectiveAccess object lot authority for given text and creates a typeless pseudo-relationship with the selected object lot (typeless). Can be restricted to a single object lot type.</td>
+<td>Attribute settings: ObjectLot</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Relationships.html" class="btn btn-neutral float-right" title="Relationships" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="intIDLabel.html" class="btn btn-neutral" title="Intrinsic Fields, Identifiers and Preferred/Non-Preferred Labels" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Whirl-i-Gig.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.7',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

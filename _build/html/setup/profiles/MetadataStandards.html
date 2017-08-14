@@ -1,0 +1,378 @@
+
+
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Metadata Standards &mdash; CollectiveAccess 1.7 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/table_override.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="CollectiveAccess 1.7 documentation" href="../../index.html"/>
+        <link rel="up" title="Profiles" href="../Profiles.html"/>
+        <link rel="next" title="Configuration Library" href="ConfigurationLibrary.html"/>
+        <link rel="prev" title="Profiles" href="../Profiles.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> CollectiveAccess
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.7
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Introduction to CollectiveAccess</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../intro/whatIs.html">What is CollectiveAccess?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../intro/whoUses.html">Who uses it?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../intro/why.html">Why should I?</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Setup &amp; Install</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../systemReq.html">System Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../media.html">Media Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Installation.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../Profiles.html">Profiles</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Metadata Standards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ConfigurationLibrary.html">Configuration Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="XMLSchema.html">XML Schema</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">How CA Organizes Information</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../org/records.html">Primary Tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../org/types.html">Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../org/intIDLabel.html">Intrinsics, Identifiers and Labels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../org/metadata.html">Metadata Elements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../org/Relationships.html">Relationships</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../org/interstitial.html">Interstitial Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../org/dateTime.html">Date and Time Formats</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Configuring Providence (Front-End)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../providence/Locales.html">Locales</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../providence/listsAuthorities.html">Lists and Authorities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../providence/metadata.html">Metadata Elements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../providence/interfaces.html">User Interfaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../providence/together.html">Putting It All Together</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../providence/profiles.html">Writing Your Own Installation Profile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../providence/system.html">System Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../providence/identifiers.html">Identifiers</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Search &amp; Browse</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../searchBrowse/intro.html">Intro to Search Pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../searchBrowse/syntax.html">Syntax</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../searchBrowse/indexing.html">Indexing Options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../searchBrowse/engines.html">Search Engines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../searchBrowse/advanced.html">Advanced Search Forms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../searchBrowse/query.html">Query Builder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../searchBrowse/facets.html">Browse Facets</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Reporting</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../reporting/displays.html">Using Displays</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reporting/templates.html">Display Template Syntax</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reporting/export.html">Exporting Search &amp; Browse Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reporting/pdfOut.html">PDF Output</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reporting/labels.html">Generating Labels</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Workflow</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../workflow/sets.html">Creating Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../workflow/status.html">Status Tracking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../workflow/access.html">Access Status</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../workflow/location.html">Tracking Current Object Location</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../workflow/history.html">Maintaining Object Use History</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Import</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../import/tutorial.html">Basic Importer Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../import/formats.html">Supported File Formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../import/mappings.html">Mappings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../import/running.html">Running an Import</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../import/worldcat.html">WorldCat</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../import/getty.html">Getty Vocabularies</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Export</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../export/formats.html">Supported File Formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../export/mappings.html">Mappings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../export/running.html">Running an Export</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Administration</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../administration/control.html">User Access Control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../administration/maint.html">Maintenance Functions</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Customizing Pawtucket</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../pawtucket/intro.html">Introduction to Themes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pawtucket/general.html">General Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pawtucket/media.html">Media Display &amp; Access</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pawtucket/access.html">Public Access Configurations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pawtucket/reg.html">Login &amp; Registration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pawtucket/static.html">Homepage &amp; Static Pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pawtucket/searchBrowse.html">Search &amp; Browse Pages and Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pawtucket/detail.html">Detail Pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pawtucket/lightbox.html">Lightboxes &amp; Galleries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pawtucket/classrooms.html">Classrooms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pawtucket/contact.html">Contact &amp; Mail Templates</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/APIs.html">APIs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/FAQs.html">FAQs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/Glossaries.html">Glossaries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/prior.html">Prior Releases</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">CollectiveAccess</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../Profiles.html">Profiles</a> &raquo;</li>
+      
+    <li>Metadata Standards</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="metadata-standards">
+<h1>Metadata Standards<a class="headerlink" href="#metadata-standards" title="Permalink to this headline">¶</a></h1>
+<p>Standards-compliant profiles available &#8220;out-of-the-box&#8221;. You can always configure others yourself if you are willing to create an installation profile):</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Standard</th>
+<th class="head">Description</th>
+<th class="head">Support</th>
+<th class="head">Profile</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference external" href="http://www.dublincore.org/">Dublin Core</a></td>
+<td>The &#8220;least common denominator&#8221; format suitable for those experimenting with cataloguing strategies, or with simple cataloguing requirements.</td>
+<td>Dublin Core is supported as a configuration profile for item-level (object) cataloguing. The profile set up includes fields as per the <a class="reference external" href="http://www.dublincore.org/documents/dces/">Simple Dublin Core specification</a> with a few extensions (ex. for uploaded media). Overhauled in 2014.</td>
+<td><a class="reference external" href="https://github.com/collectiveaccess/providence/blob/master/install/profiles/xml/dublincore_2014.xml">Dublin Core profile on Github</a></td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="http://rs.tdwg.org/dwc/">DarwinCore</a></td>
+<td>The Darwin Core standard was originally conceived to facilitate the discovery, retrieval, and integration of information about modern biological specimens, their spatiotemporal occurrence, and their supporting evidence housed in collections (physical or digital). The Darwin Core today is broader in scope and more versatile. It is meant to provide a stable standard reference for sharing information on biological diversity. As a glossary of terms, the Darwin Core is meant to provide stable semantic definitions with the goal of being maximally reusable in a variety of contexts.</td>
+<td>&nbsp;</td>
+<td><a class="reference external" href="https://github.com/collectiveaccess/providence/blob/master/install/profiles/xml/darwincore.xml">DarwinCore profile on Github</a></td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="https://tech.ebu.ch/metadata">EBU Core</a></td>
+<td>Based on Dublin Core, EBUCore is a minimum list of attributes to describe audio and video resources for a wide range of broadcasting applications including for archives, exchange and publication.</td>
+<td>Available as a configuration profile compliant with the EBU Core Version 1.4 specification.</td>
+<td><a class="reference external" href="https://github.com/collectiveaccess/providence/blob/master/install/profiles/xml/ebucore.xml">EBU Core profile on Github</a></td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="http://pbcore.org/">PBCore</a></td>
+<td>From PBCore.org:The PBCore (Public Broadcasting Metadata Dictionary) was created by the public broadcasting community in the United States of America for use by public broadcasters and related communities. Like EBUCore, the PBCore metadata specification is built on the foundation of Dublin Core, emphasizing the description of audio and video resources in production, archival, and broadcasting environments.</td>
+<td>PBCore is supported as a configuration profile for item-level (instantiation/intellectual content) cataloguing, and as an export target.</td>
+<td><a class="reference external" href="https://github.com/collectiveaccess/providence/blob/master/install/profiles/xml/pbcore.xml">PBCore profile on Github</a></td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="http://www.getty.edu/research/publications/electronic_publications/index.html">CDWA-Lite</a> / <a class="reference external" href="http://cco.vrafoundation.org/">CCO</a></td>
+<td>From the CDWA web site: CDWA Lite is an XML schema to describe core records for works of art and material culture based on the Categories for the Description of Works of Art (CDWA) and Cataloging Cultural Objects: A Guide to Describing Cultural Works and Their Images (CCO). CA can be configured to implement the format of the XML schema in its relational database. (For those keeping score: CA does not store CDWA data in an XML format, but will be able to export data in such a format in the first version of the data export feature).</td>
+<td>CDWA is supported as a configuration profile for item-level (object) and authority (entity, places, collections, etc.) cataloguing. An option to configure for the CDWA subset defined by Cataloguing Cultural Objects (CCO) is also provided. Will also be supported as a data export target format. This support is not yet fully implemented.</td>
+<td><a class="reference external" href="https://github.com/collectiveaccess/providence/blob/master/install/profiles/xml/cdwalite.xml">CDWA profile on Github</a></td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="http://www.loc.gov/ead/">EAD</a></td>
+<td>EAD is widely used in the United States as a data standard for finding aids produced by archives, libraries, museums, and manuscript repositories.</td>
+<td>EAD is supported as a data export target format.</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="http://www.archivists.org/governance/standards/dacs.asp">DACS</a></td>
+<td>DACS is widely used in the United States as a data content standard for finding aids produced by archives, libraries, museums, and manuscript repositories.</td>
+<td>DACS is supported as a configuration profile for all archival levels of description.</td>
+<td><a class="reference external" href="https://github.com/collectiveaccess/providence/blob/master/install/profiles/xml/dacs.xml">DACS profile on Github</a></td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="http://www.ica.org/en/isadg-general-international-standard-archival-description-second-edition">ISAD(G)</a></td>
+<td>ISAD(G) is widely used data content standard for finding aids produced by archives, libraries, museums, and manuscript repositories.</td>
+<td>ISAD(G) is supported as a configuration profile for all archival levels of description.</td>
+<td><a class="reference external" href="https://github.com/collectiveaccess/providence/blob/master/install/profiles/xml/isad_g.xml">ISAD(G) profile on Github</a></td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="http://core.vraweb.org/">VRA Core</a></td>
+<td>VRA VRA Core 4.0 is a data standard for the cultural heritage community that was developed by the Visual Resources Association&#8217;s Data Standards Committee. The element set provides a categorical organization for the description of works of visual culture as well as the images that document them.</td>
+<td>VRA Core 4.0 is supported as a configuration profile for item-level (object) and collection-level cataloguing. It will also be supported as a data export target format. This support is not yet implemented.</td>
+<td><a class="reference external" href="https://github.com/collectiveaccess/providence/blob/master/install/profiles/xml/vracore.xml">VRA Core profile on Github</a></td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="http://www.collectionstrust.org.uk/spectrum">SPECTRUM</a></td>
+<td>SPECTRUM is a procedural and data standard for museums, archives, and cultural heritage institutions primarily in the UK.</td>
+<td>A SPECTRUM-like setup is supported as a configuration profile. It has not been vetted by the CollectionsTrust and should not be considered as &#8220;compliant.&#8221;</td>
+<td><a class="reference external" href="https://github.com/collectiveaccess/providence/blob/master/install/profiles/xml/spectrum.xml">SPECTRUM profile on Github</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="ConfigurationLibrary.html" class="btn btn-neutral float-right" title="Configuration Library" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../Profiles.html" class="btn btn-neutral" title="Profiles" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Whirl-i-Gig.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1.7',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

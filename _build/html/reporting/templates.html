@@ -1,0 +1,728 @@
+
+
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Display Template Syntax &mdash; CollectiveAccess 1.7 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/table_override.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="CollectiveAccess 1.7 documentation" href="../index.html"/>
+        <link rel="next" title="Exporting Search &amp; Browse Results" href="export.html"/>
+        <link rel="prev" title="Using Displays" href="displays.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> CollectiveAccess
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.7
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Introduction to CollectiveAccess</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../intro/whatIs.html">What is CollectiveAccess?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/whoUses.html">Who uses it?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/why.html">Why should I?</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Setup &amp; Install</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../setup/systemReq.html">System Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../setup/media.html">Media Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../setup/Installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../setup/Profiles.html">Profiles</a></li>
+</ul>
+<p class="caption"><span class="caption-text">How CA Organizes Information</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../org/records.html">Primary Tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../org/types.html">Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../org/intIDLabel.html">Intrinsics, Identifiers and Labels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../org/metadata.html">Metadata Elements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../org/Relationships.html">Relationships</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../org/interstitial.html">Interstitial Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../org/dateTime.html">Date and Time Formats</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Configuring Providence (Front-End)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../providence/Locales.html">Locales</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../providence/listsAuthorities.html">Lists and Authorities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../providence/metadata.html">Metadata Elements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../providence/interfaces.html">User Interfaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../providence/together.html">Putting It All Together</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../providence/profiles.html">Writing Your Own Installation Profile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../providence/system.html">System Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../providence/identifiers.html">Identifiers</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Search &amp; Browse</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../searchBrowse/intro.html">Intro to Search Pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../searchBrowse/syntax.html">Syntax</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../searchBrowse/indexing.html">Indexing Options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../searchBrowse/engines.html">Search Engines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../searchBrowse/advanced.html">Advanced Search Forms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../searchBrowse/query.html">Query Builder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../searchBrowse/facets.html">Browse Facets</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Reporting</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="displays.html">Using Displays</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Display Template Syntax</a></li>
+<li class="toctree-l1"><a class="reference internal" href="export.html">Exporting Search &amp; Browse Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pdfOut.html">PDF Output</a></li>
+<li class="toctree-l1"><a class="reference internal" href="labels.html">Generating Labels</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Workflow</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../workflow/sets.html">Creating Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../workflow/status.html">Status Tracking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../workflow/access.html">Access Status</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../workflow/location.html">Tracking Current Object Location</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../workflow/history.html">Maintaining Object Use History</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Import</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../import/tutorial.html">Basic Importer Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../import/formats.html">Supported File Formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../import/mappings.html">Mappings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../import/running.html">Running an Import</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../import/worldcat.html">WorldCat</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../import/getty.html">Getty Vocabularies</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Export</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../export/formats.html">Supported File Formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../export/mappings.html">Mappings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../export/running.html">Running an Export</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Administration</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../administration/control.html">User Access Control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../administration/maint.html">Maintenance Functions</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Customizing Pawtucket</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../pawtucket/intro.html">Introduction to Themes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pawtucket/general.html">General Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pawtucket/media.html">Media Display &amp; Access</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pawtucket/access.html">Public Access Configurations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pawtucket/reg.html">Login &amp; Registration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pawtucket/static.html">Homepage &amp; Static Pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pawtucket/searchBrowse.html">Search &amp; Browse Pages and Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pawtucket/detail.html">Detail Pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pawtucket/lightbox.html">Lightboxes &amp; Galleries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pawtucket/classrooms.html">Classrooms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pawtucket/contact.html">Contact &amp; Mail Templates</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../reference/APIs.html">APIs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/FAQs.html">FAQs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/Glossaries.html">Glossaries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/prior.html">Prior Releases</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">CollectiveAccess</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li>Display Template Syntax</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="display-template-syntax">
+<h1>Display Template Syntax<a class="headerlink" href="#display-template-syntax" title="Permalink to this headline">¶</a></h1>
+<p>Display templates are used to format data from bundles (elements of metadata stored in CollectiveAccess) for display on screen, output into reports and presentation in search results. When no display template is defined CollectiveAccess defaults to displaying bundle data in the simplest possible way, typically as a semicolon-delimited list of values. For bundles comprised of a single value (Eg. a simple text metadata element) this is often enough. For complex bundles consisting of several discrete values – a mailing address for example – a template is usually required to adequately format the value. Other cases where bundle display templates are called for:</p>
+<blockquote>
+<div><ul class="simple">
+<li>To define styling, such as headings, bold and italics around bundle elements.</li>
+<li>To format and conditionally include delimiters and suffixes between values in a complex bundle. For example, in a bundle with width, length and height dimensions, &#8220;x&#8221; delimiters can be placed between each dimension value. A display can be used to output values in a width/length/height order (or any other order). Thus a bundle with length=24&#8221;, height=8&#8221; and width=3&#8221; can be output as 3&#8221; x 24&#8221; x 8&#8221; ... or 3&#8221;W x 24&#8221;L x 8&#8221;H ... or 3&#8221;W x 8&#8221;H if length happens to be undefined (because displays can intelligently omit the delimiter and suffix).</li>
+<li>To display data attached to related items. For example to display both the name and life dates for related entities a bundle display template can be used to extract and format the data. Any data attached to the related entity can be displayed.</li>
+<li>To display related data traversing any number of intervening relationships. As a simple example, imagine that you have an object related to a collection, and the collection is related to a donor. It&#8217;s not necessary to catalog the donor directly on the object in order to display the donor&#8217;s address there, because it&#8217;s possible to pull the address through the intervening collection relationship. Another example prevalent in film and performance archives, is that objects can be related to &#8220;works&#8221; (occurrences) which in turn have entity relationships (&#8220;director&#8221;, &#8220;actor&#8221;, &#8220;choreographer&#8221;). A display template can display object information alongside entity data related to a work that is related to the object.</li>
+<li>To apply one of several display formats using expressions conditional on one or more data values.</li>
+</ul>
+</div></blockquote>
+<p>Display templates are also used extensively by Pawtucket 2.0 for formatting in themes. They are the preferred formatting method in Pawtucket 2.0, although mixed HTML/PHP coding is still supported.</p>
+<div class="section" id="defining-templates">
+<h2>Defining templates<a class="headerlink" href="#defining-templates" title="Permalink to this headline">¶</a></h2>
+<p>Default display templates can be defined for metadata elements as part of their configuration. Default formatting can be overridden by additional context-specific templates within a display or user interface.</p>
+<p>The default template for a metadata element can be set in the configuration interface. Display and user interface related templates may be set in their respective configuration editors on a per-bundle basis. When a template is defined for a metadata element within a display or editor user interface it will take precedence over templates defined in the element&#8217;s configuration.</p>
+</div>
+<div class="section" id="template-syntax">
+<h2>Template syntax<a class="headerlink" href="#template-syntax" title="Permalink to this headline">¶</a></h2>
+<p>At their most basic, templates are simply text with placeholders to be replaced by bundle values. Placeholders always start with a caret (&#8220;^&#8221;) character followed by a bundle specifier, an unambiguous identifier for a metadata element. For example, if you have a metadata element in an object record with the element code description and wish to preface the value of the element with the label &#8220;Description:&#8221; the template would be:</p>
+<p><code class="docutils literal"><span class="pre">Description:</span> <span class="pre">^ca_objects.description</span></code></p>
+<p>where ca_objects indicates an object record and description is the metadata element code.</p>
+<p>If the value of the description metadata element happens to be empty, this template will cause the label &#8220;Description:&#8221; to be awkwardly displayed without a trailing value. To avoid unwanted blank spaces a display template can be made conditional on the presence of a value within a field. A template for description that only displays something if there&#8217;s a description available would look like this:</p>
+<p><code class="docutils literal"><span class="pre">&lt;ifdef</span> <span class="pre">code=&quot;ca_objects.description&quot;&gt;Description:</span> <span class="pre">^ca_objects.description&lt;/ifdef&gt;</span></code></p>
+<p>Everything between the &lt;ifdef&gt; and &lt;/ifdef&gt; is only output for the corresponding bundle (specified without the ^ in the &lt;ifdef&gt; tag because it&#8217;s a code, not a placeholder in this context) when it actually has a value.</p>
+<p>Conditional output can be used for more than just labels. For dimensions and other collections of quantities, conditional output can be used to deal with variations when not all values are available in all cases. For example, let&#8217;s say you have a metadata container on an object record named &#8220;dimensions&#8221; with three sub-elements: width, height and depth, all of which are elements of type Length. Displaying the container ca_objects.dimensions without a template would result in three values separated with semicolons, which are the default delimiter:</p>
+<blockquote>
+<div><code class="docutils literal"><span class="pre">12&quot;;</span> <span class="pre">6&quot;;</span> <span class="pre">9&quot;</span></code></div></blockquote>
+<p>(we assume here that we&#8217;re displaying in English units)</p>
+<p>To make it clearer we can format the container using this template:</p>
+<p><code class="docutils literal"><span class="pre">^ca_objects.dimensions.width</span> <span class="pre">W</span> <span class="pre">x</span> <span class="pre">^ca_objects.dimensions.height</span> <span class="pre">H</span> <span class="pre">x</span> <span class="pre">^ca_objects.dimensions.depth</span> <span class="pre">D</span></code></p>
+<p>This will display:</p>
+<blockquote>
+<div><code class="docutils literal"><span class="pre">12&quot;</span> <span class="pre">W</span> <span class="pre">x</span> <span class="pre">6&quot;</span> <span class="pre">H</span> <span class="pre">x</span> <span class="pre">9&quot;</span> <span class="pre">D</span></code></div></blockquote>
+<p>As you can see, a special syntax is used to articulate container elements. It is no longer just ^ca_objects.dimensions in our example, but rather the code for the parent container along with the specific sub-element you&#8217;ve chosen to display.</p>
+<p>If the depth value happens to be blank in some cases then the output would sometimes be like this:</p>
+<blockquote>
+<div><code class="docutils literal"><span class="pre">12&quot;</span> <span class="pre">W</span> <span class="pre">x</span> <span class="pre">6&quot;</span> <span class="pre">H</span> <span class="pre">x</span> <span class="pre">D</span></code></div></blockquote>
+<p>To rectify this we can use conditional output:</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>&lt;ifdef code=&quot;ca_objects.dimensions.width&quot;&gt;^ca_objects.dimensions.width W x&lt;/ifdef&gt; &lt;ifdef code=&quot;ca_objects.dimensions.height&quot;&gt;
+^ca_objects.dimensions.height H x&lt;/ifdef&gt; &lt;ifdef code=&quot;ca_objects.dimensions.depth&quot;&gt;^ca_objects.dimensions.depth D&lt;/ifdef&gt;
+</pre></div>
+</div>
+<p>Note that we can also use conditionals to close up the space between ^ca_objects.dimensions.width and the &#8220;W&#8221;, ^ca_objects.dimensions.height and &#8220;H&#8221; and ^ca_objects.dimensions.depth and &#8220;D&#8221;. Normally space is required between the placeholder and any non-placeholder text to make clear where the placeholder ends. With a conditional you can keep the placeholder separate from other text without resorting to spaces, as in this example:</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>^ca_objects.dimensions.width&lt;ifdef code=&quot;ca_objects.dimensions.width&quot;&gt;W x&lt;/ifdef&gt; ^ca_objects.dimensions.height
+&lt;ifdef code=&quot;ca_objects.dimensions.height&quot;&gt;H x&lt;/ifdef&gt; ^ca_objects.dimensions.depth&lt;ifdef code=&quot;ca_objects.dimensions.depth&quot;&gt;D&lt;/ifdef&gt;
+</pre></div>
+</div>
+<p>If you need to make part of your template conditional upon more than one value being set simply list the placeholder names in the &#8220;code&#8221; value separated by commas:</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>&lt;ifdef code=&quot;ca_objects.dimensions.width,ca_objects.dimensions.height,ca_objects.dimensions.depth&quot;&gt;Dimensions are: &lt;/ifdef&gt;
+^ca_objects.dimensions.width&lt;ifdef code=&quot;ca_objects.dimensions.width&quot;&gt;W
+x&lt;/ifde&gt; ^ca_objects.dimensions.height&lt;ifdef code=&quot;ca_objects.dimensions.height&quot;&gt;
+H x&lt;/ifdef&gt; ^ca_objects.dimensions.depth&lt;ifdef code=&quot;ca_objects.dimensions.depth&quot;&gt;D&lt;/ifdef&gt;
+</pre></div>
+</div>
+<p>&#8220;Dimensions are:&#8221; will only be output if width, height and depth all have values. The text can be output if any of the values in the code list are set by separating the placeholder names with &#8220;|&#8221; (aka. &#8220;pipe&#8221;) characters:</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>&lt;ifdef code=&quot;ca_objects.dimensions.width|ca_objects.dimensions.height|ca_objects.dimensions.depth&quot;&gt;Dimensions are: &lt;/ifdef&gt;
+^ca_objects.dimensions.width&lt;ifdef code=&quot;ca_objects.dimensions.width&quot;&gt;W x&lt;/ifdef&gt;
+^ca_objects.dimensions.height&lt;ifdef code=&quot;ca_objects.dimensions.height&quot;&gt;H x&lt;/ifdef&gt;
+^ca_objects.dimensions.depth&lt;ifdef code=&quot;ca_objects.dimensions.depth&quot;&gt;D&lt;/ifdef&gt;
+</pre></div>
+</div>
+<p>There are some cases in which you may need to make part of a template conditional upon a value or values not being defined. The &lt;ifnotdef&gt; tag will do this in an analogous manner to &lt;ifdef&gt;. For example, if you want to output a &#8220;No dimensions&#8221; message when no values are defined:</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>&lt;ifnotdef code=&quot;ca_objects.dimensions.width,ca_objects.dimensions.height,ca_objects.dimensions.depth&quot;&gt;No dimensions are set&lt;/ifnotdef&gt;
+^ca_objects.dimensions.width&lt;ifdef code=&quot;ca_objects.dimensions.width&quot;&gt;W x&lt;/ifdef&gt; ^ca_objects.dimensions.height
+&lt;ifdef code=&quot;ca_objects.dimensions.height&quot;&gt;H x&lt;/ifdef&gt; ^ca_objects.dimensions.depth&lt;ifdef code=&quot;ca_objects.dimensions.depth&quot;&gt;D&lt;/ifdef&gt;
+</pre></div>
+</div>
+</div>
+<div class="section" id="placeholder-options">
+<h2>Placeholder options<a class="headerlink" href="#placeholder-options" title="Permalink to this headline">¶</a></h2>
+<p>Placeholder values may be modified by options appended as a series of named parameters. Options are separated from the placeholder with a &#8220;%&#8221; character and listed in &lt;name&gt;=&lt;value&gt; pairs delimited by &#8220;&amp;&#8221; or &#8220;%&#8221; characters.((&#8220;&amp;&#8221; are used in older templates, but now may be used interchangeably with &#8220;%&#8221;). For example:</p>
+<p><code class="docutils literal"><span class="pre">^ca_objects.hierarchy.preferred_labels.name%maxLevelsFromBottom=4&amp;delimiter=_➜_</span></code></p>
+<p>will output a list of hierarchical object titles consisting of the bottom-most four titles separated by arrows. If those options were not set they would revert to defaults, in this case the entire hierarchy delimited by semicolons.</p>
+<p>Any number of options may be appended to a placeholder.</p>
+<p>Note that spaces are not allowed in options as they are used to separate placeholders. You can use URL encoding (eg. %20 for a space) or a underscores in place of spaces.</p>
+<p>The following options may be used to format the text value of any placeholder:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Placeholder</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>toUpper</td>
+<td>Forces text to all upper case when set to a non-zero value.</td>
+</tr>
+<tr class="row-odd"><td>toLower</td>
+<td>Forces text to all lower case when set to a non-zero value.</td>
+</tr>
+<tr class="row-even"><td>makeFirstUpper</td>
+<td>Make first character of text upper case when set to a non-zero value.</td>
+</tr>
+<tr class="row-odd"><td>trim</td>
+<td>Trim white space from beginning and end of value.</td>
+</tr>
+<tr class="row-even"><td>start</td>
+<td>Trim the beginning of the text such that it begins at the specified character; ex. &#8220;This is a test&#8221; with start=2 will be transformed to &#8220;is is a test&#8221;</td>
+</tr>
+<tr class="row-odd"><td>length</td>
+<td>Truncate the text to the specified number of characters. Can be used with the start option to extract sections of text, or alone to ensure text does not go beyond a maximum length.</td>
+</tr>
+<tr class="row-even"><td>truncate</td>
+<td>Truncates the text to the specified maximum length. The equivalent of setting the start option to zero and length option to the truncation length.</td>
+</tr>
+<tr class="row-odd"><td>ellipsis</td>
+<td>Add an ellipsis (&#8221;...&#8221;) to truncated text when set to a non-zero value. The resulting text will be the specified length including the three character ellipsis. That is, text truncated to 12 characters will include 9 characters of text and 3 characters of ellipsis.</td>
+</tr>
+</tbody>
+</table>
+<p>For simple true/false options such as toUpper you may omit the &#8220;=&#8221; and value. These two templates are the same:</p>
+<p><code class="docutils literal"><span class="pre">^ca_objects.preferred_labels.name%trim=1</span></code></p>
+<p>and</p>
+<p><code class="docutils literal"><span class="pre">^ca_objects.preferred_labels.name%trim</span></code></p>
+</div>
+<div class="section" id="pulling-metadata-through-a-relationship">
+<h2>Pulling metadata through a relationship<a class="headerlink" href="#pulling-metadata-through-a-relationship" title="Permalink to this headline">¶</a></h2>
+<p>In the previous examples, data displayed is always from a particular object record at hand – the &#8220;primary&#8221; record. Templates are always processed relative to to the primary record. If you are formatting object search results, for example, your template will be repeatedly evaluated for each object in the result set, with each object taking its turn as primary. It&#8217;s obvious but still worth stating: placeholders referring directly to data in the primary (^ca_objects.idno for example) derive their values from the primary. If a bundle repeats for a record, you may get multiple values, but all values referring to the primary will always be taken from the primary. Any record can be primary. Primary-ness is simply the context is which a template is processed.</p>
+<p>It is often necessary to display metadata from records related to the primary. For example, you might want to display entities related to an object (the primary) displaying each entity&#8217;s lifespan and birthplace next to their name. Or a display the related collections, with name, access restrictions and availability information. Or perhaps a display of objects related to the current primary object.</p>
+<p>For simple cases displaying related data is similar to primary data. For placeholders that refer to non-primary data CollectiveAccess will look for records of that kind directly related to the primary. For a ^ca_entities.preferred_labels.displayname placeholder in a display for object results, CollectiveAccess will pull the names of all entities directly related to the primary object. Using our sample data:</p>
+<p><code class="docutils literal"><span class="pre">^ca_entities.preferred_labels.displayname</span></code></p>
+<p>will result in a list of display names for related entities, separated by semicolons (the default delimiter):</p>
+<p><code class="docutils literal"><span class="pre">George</span> <span class="pre">Tilyou;</span> <span class="pre">Elmer</span> <span class="pre">Dundy</span></code></p>
+<p>To pull data from related records of the same kind as the primary (Ex. objects related to an object) add &#8220;related&#8221; to the bundle specifier:</p>
+<p><code class="docutils literal"><span class="pre">^ca_objects.related.preferred_labels.displayname</span></code></p>
+<p>With our sample data this will result in the title of the object related to the primary being returned. You can include &#8220;related&#8221; in specifiers for any kind of related record but it is only required when things would otherwise be ambiguous without it.</p>
+<p>You may pull any data in the related entity records using similarly constructed placeholders. For example, this template:</p>
+<p><code class="docutils literal"><span class="pre">^ca_entities.preferred_labels.displayname</span> <span class="pre">(Life</span> <span class="pre">dates:</span> <span class="pre">^ca_entities.life_span)</span></code></p>
+<p>will return</p>
+<p><code class="docutils literal"><span class="pre">George</span> <span class="pre">Tilyou;</span> <span class="pre">Elmer</span> <span class="pre">Dundy;</span> <span class="pre">(Life</span> <span class="pre">dates:</span> <span class="pre">1865</span> <span class="pre">-</span> <span class="pre">1914;</span> <span class="pre">1862</span> <span class="pre">-</span> <span class="pre">1907)</span></code></p>
+<p>Each placeholder is evaluated separately and a list of values returned in its place. To format several related data elements in a block, as well as to display indirectly related data (such as the related entity&#8217;s birthplaces), set custom delimiters and other options a new template directive, the &lt;unit&gt; tag, is needed.</p>
+</div>
+<div class="section" id="formatting-templates-with-unit">
+<h2>Formatting templates with &lt;unit&gt;<a class="headerlink" href="#formatting-templates-with-unit" title="Permalink to this headline">¶</a></h2>
+<p>&lt;unit&gt; tags allow you to break your templates into sub-templates that are evaluated independently and then reassembled for final output. Using the &lt;unit&gt; relativeTo attribute, the primary record of the template may be transformed into one or more related records, repeating values from the primary (e.g. values in a repeating container) or a set of hierarchical values, and the sub-template evaluated for each.</p>
+<p>&lt;unit&gt;&#8217;s and relativeTo enable a host of useful (and often complex) formatting transformations:</p>
+<ul class="simple">
+<li>When a record has repeating containers. Say you have a repeating address container on an entity record to accommodate multiple address changes. If you format your display template without specifying that each instance of the container needs to be displayed as a unit the result will be a single address in return, no matter how many addresses are entered, and each placeholder will contain the values for all of the addresses - a nonsensical way to display an address list. Wrapping the address portion of the template in &lt;unit&gt; tags and specifying that it be evaluated relative to the repeating address element, rather than the primary record itself, will force the template contained within to be evaluated once per repeating address value, resulting in an independently formatted value for each address. Ex.</li>
+</ul>
+<div class="highlight-none"><div class="highlight"><pre><span></span>&lt;unit relativeTo=&quot;ca_entities.address&quot;&gt;
+^ca_entities.address.street_address&lt;br/&gt;^ca_entities.address.city, ^ca_entities.address.state ^ca_entities.address.zip_code&lt;br/&gt;
+&lt;/unit&gt;
+</pre></div>
+</div>
+<p>The relativeTo option in the &lt;unit&gt; tag forces the sub-template to be evaluated once per address value in the primary record.</p>
+<ul class="simple">
+<li>When you need to present more than one data element from related records side-by-side. In the previous section we saw how different placeholders referencing the same related records always return separate lists, one per placeholder. When displayed side-by-side the result is a series of lists rather than the discrete blocks of output for each related item that are more typically desired. &lt;unit&gt; tags make it possible to define sub-templates that are evaluated repeatedly, as many times as there are related records. Our example in the previous section reformatted with &lt;unit&gt; tags like this:</li>
+</ul>
+<p><code class="docutils literal"><span class="pre">&lt;unit</span> <span class="pre">relativeTo=&quot;ca_entities&quot;&gt;^ca_entities.preferred_labels.displayname</span> <span class="pre">(Life</span> <span class="pre">dates:</span> <span class="pre">^ca_entities.life_span)&lt;/unit&gt;</span></code></p>
+<p>results in this output:</p>
+<p><code class="docutils literal"><span class="pre">George</span> <span class="pre">Tilyou</span> <span class="pre">(Life</span> <span class="pre">dates:</span> <span class="pre">1865</span> <span class="pre">-</span> <span class="pre">1914);</span> <span class="pre">Elmer</span> <span class="pre">Dundy</span> <span class="pre">(Life</span> <span class="pre">dates:</span> <span class="pre">1862</span> <span class="pre">-</span> <span class="pre">1907)</span></code></p>
+<p>Here the relativeTo option in the &lt;unit&gt; tag shifts the primary record to be each related entity in turn, in the sub-template defined by the &lt;unit&gt; only.</p>
+<ul class="simple">
+<li>When you need to set display options for part of a template. &lt;unit&gt; tags provide options to modify output for sub-templates. You can set the delimiter for repeating values using the delimiter option, or restrict the related items displayed by relationship type or related item type using restrictToRelationshipTypes and restrictToTypes respectively (or their counterparts excludeRelationshipTypes and excludeTypes). (You can also set options on individual placeholders, but declaring options on &lt;unit&gt; tags is usually more convenient and always more readable). Ex.</li>
+</ul>
+<div class="highlight-none"><div class="highlight"><pre><span></span>&lt;unit relativeTo=&quot;ca_entities&quot; restrictToRelationshipTypes=&quot;actor, director, producer&quot;&gt;
+^ca_entities.preferred_labels.displayname (Life dates: ^ca_entities.life_span)
+&lt;/unit&gt;
+</pre></div>
+</div>
+<ul class="simple">
+<li>When you need to display metadata relating to hierarchical records. Without the &lt;unit&gt; tag, there&#8217;s no way to individually list child records and accompanying metadata in a display. With the &lt;unit&gt; tag you can display parent and/or child records and hierarchical paths as discrete, complex units, by making the unit relativeTo the hierarchical record set. Ex.</li>
+</ul>
+<p><code class="docutils literal"><span class="pre">&lt;unit</span> <span class="pre">relativeTo=&quot;ca_list_items.hierarchy&quot;&gt;&lt;p&gt;^ca_list_items.preferred_labels.name_plural</span> <span class="pre">(ca_list_items.idno)&lt;/p&gt;&lt;/unit&gt;</span></code></p>
+<p>Here the relativeTo option in the &lt;unit&gt; tag shifts the primary record to be each related list item in the hierarchy in turn, in the sub-template defined by the &lt;unit&gt; only.</p>
+<ul class="simple">
+<li>When you need to pull metadata through an indirect relationship. Without the &lt;unit&gt; tag only metadata from records directly related to the primary can be displayed in a template. In our sample data, this means only the entities related to the primary object can be displayed. The birthplace data related to each entity cannot. By using &lt;unit&gt; tags nested within one another and specifying the relativeTo option we can shift the primary record for a sub-template across any number of relationships. We might call this &#8220;Six Degrees of Kevin Bacon for CollectiveAccess&#8221; where A is related to B which is related to C. For example, if the primary is an object, and you need to display place data from entities related to objects (not places related directly to the object), the following template would do the job:</li>
+</ul>
+<div class="highlight-none"><div class="highlight"><pre><span></span>Object is ^ca_objects.preferred_labels.name;
+Entities are: &lt;unit relativeTo=&quot;ca_entities&quot;&gt;^ca_entities.preferred_labels.displayname
+(Birthplace: &lt;unit relativeTo=&quot;ca_places&quot;&gt;^ca_places.preferred_labels.name&lt;/unit&gt;&lt;/unit&gt;
+</pre></div>
+</div>
+<p>Each unit shifts the primary by one relational &#8220;jump.&#8221; Nesting &lt;units&gt; allows shifts to accumulate because they are always evaluated relative to their context. Thus entities related to objects are grabbed, and then places related to those entities.</p>
+<p>&lt;unit&gt; tags may take any of the following attributes:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Attribute</th>
+<th class="head">Description</th>
+<th class="head">Default</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>relativeTo</td>
+<td>Transforms the primary record of the template or enclosing &lt;unit&gt; (when &lt;unit&gt;&#8217;s are nested) to a set of related records, hierarchically related records or repeating values.</td>
+<td>None; must be set</td>
+</tr>
+<tr class="row-odd"><td>restrictToTypes</td>
+<td>For &lt;unit&gt;&#8217;s relativeTo a relationship (eg. relativeTo=&#8217;ca_entities&#8217;) or hierarchy (eg. relativeTo=&#8217;ca_objects.hierarchy&#8217;, relativeTo=&#8217;ca_objects.parent&#8217;, relativeTo=&#8217;ca_objects.siblings&#8217;, relativeTo=&#8217;ca_objects.children&#8217;) will restrict the record set to those of the specified types. Use type identifiers and list multiple types separated by commas.</td>
+<td>None – no restriction</td>
+</tr>
+<tr class="row-even"><td>restrictToRelationshipTypes</td>
+<td>For &lt;unit&gt;&#8217;s relativeTo a relationship (eg. relativeTo=&#8217;ca_entities&#8217;) will restrict the record set to those related with the specified relationship types. Use relationship type codes and list multiple codes separated by commas.</td>
+<td>None – no restriction</td>
+</tr>
+<tr class="row-odd"><td>excludeTypes</td>
+<td>For &lt;unit&gt;&#8217;s relativeTo a relationship (eg. relativeTo=&#8217;ca_entities&#8217;) or hierarchy (eg. relativeTo=&#8217;ca_objects.hierarchy&#8217;, relativeTo=&#8217;ca_objects.parent&#8217;, relativeTo=&#8217;ca_objects.siblings&#8217;, relativeTo=&#8217;ca_objects.children&#8217;) will restrict the record set to those NOT of the specified types. Use type identifiers and list multiple types separated by commas.</td>
+<td>None – no restriction</td>
+</tr>
+<tr class="row-even"><td>excludeRelationshipTypes</td>
+<td>For &lt;unit&gt;&#8217;s relativeTo a relationship (eg. relativeTo=&#8217;ca_entities&#8217;) will restrict the record set to those related with relationship types NOT in the list. Use relationship type codes and list multiple codes separated by commas.</td>
+<td>None – no restriction</td>
+</tr>
+<tr class="row-odd"><td>sort</td>
+<td>One or more bundle specifiers to sort record set on. Specifiers should be relevant to the kind of records retrieved by the relativeTo value.</td>
+<td>None</td>
+</tr>
+<tr class="row-even"><td>sortDirection</td>
+<td>Direction of sort. Should be either ASC (ascending) or DESC (descending)</td>
+<td>ASC</td>
+</tr>
+<tr class="row-odd"><td>skipIfExpression</td>
+<td>An expression to evaluate. If true the &lt;unit&gt; will be skipped and no output generated. It is necessary to escape (prepend a &#8220;&#8221;) the surrounding quotes when using expressions.</td>
+<td>None</td>
+</tr>
+<tr class="row-even"><td>unique</td>
+<td>When set to a non-zero value repeat values in the unit will be removed.</td>
+<td>FALSE</td>
+</tr>
+<tr class="row-odd"><td>start</td>
+<td>For repeating values the index of the first value to return. Indices are zero-based. Ex. to start with the second value, set start to 1.</td>
+<td>0</td>
+</tr>
+<tr class="row-even"><td>length</td>
+<td>The maximum number of values to return. If not set all values are returned.</td>
+<td>none</td>
+</tr>
+<tr class="row-odd"><td>unique</td>
+<td>Remove duplicate values in unit using direct string comparison. If not set all values are returned.</td>
+<td>0</td>
+</tr>
+<tr class="row-even"><td>aggregateUnique</td>
+<td>Remove duplicate values in units by comparing individual values prior to conversion to strings. The difference between this and unique is subtle. Take, for example, a unit that formats lists of authors from several related objects. The unique option will eliminate only those lists of authors that are string-wise identical If the authors are in different orders for different objects they will be considered unique values. The aggregateUnique option considers the values used to create those lists, rather than the resulting strings. If the array of returned values for a unit, prior to conversion to a string, is the same, it is considered a duplicate no matter the order of the authors in the resulting string. Put simply, aggregateUnique applies a more aggressive de-duplication process.</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p>The &lt;unit&gt; tag presents many opportunities for complex display formatting which are explained in more detail, along with examples, here.</p>
+<p>You can limit the number of values returned from a &lt;unit&gt; operating on a repeating value using the start and limit unit attributes described previously. You can display text indicating how many values were not shown using the &lt;whenunitomits&gt; tag following a &lt;unit&gt;. For example, to show the first 5 related entities and then a message with the total number:</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>&lt;code&gt;
+&lt;unit relativeTo=&quot;ca_entities&quot; delimiter=&quot;, &quot; start=&quot;0&quot; length=&quot;5&quot;&gt;^ca_entities.preferred_labels.displayname&lt;/unit&gt;&lt;whenunitomits&gt; and ^omitcount more&lt;/whenunitomits&gt;
+&lt;/code&gt;
+</pre></div>
+</div>
+<p>The ^omitcount placeholder can be used within the &lt;unit&gt; or &lt;whenunitomits&gt; tag. The &lt;whenunitomits&gt; tag always refers to the number of values omitted in the &lt;unit&gt; before it in the template and will be suppressed when no values from the previous &lt;unit&gt; are hidden.</p>
+</div>
+<div class="section" id="contextual-tags-more-and-between">
+<h2>Contextual tags: &lt;more&gt; and &lt;between&gt;<a class="headerlink" href="#contextual-tags-more-and-between" title="Permalink to this headline">¶</a></h2>
+<p>Templates using &lt;ifdef&gt; and &lt;ifnotdef&gt; can get long and unruly when they include many elements dependent on the state of multiple placeholders. To help make such templates more manageable two tags are available that control output based solely upon their position in a template, obviating the need for long lists of placeholder names.</p>
+<p>The &lt;more&gt; tag will output content if any placeholders following it have a value. Thus this template:</p>
+<p><code class="docutils literal"><span class="pre">^ca_objects.description</span> <span class="pre">&lt;more&gt;&lt;br/&gt;The</span> <span class="pre">source</span> <span class="pre">for</span> <span class="pre">this</span> <span class="pre">was:</span> <span class="pre">&lt;/more&gt;^ca_objects.description_source</span></code></p>
+<p>will output this (assuming both description and description_source are set to &#8220;A metal pan&#8221; and &#8220;1978 auction catalogue&#8221; respectively):</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>A metal pan
+The source for this was: 1978 auction catalogue
+</pre></div>
+</div>
+<p>If description_source was empty the output would be:</p>
+<p><code class="docutils literal"><span class="pre">A</span> <span class="pre">metal</span> <span class="pre">pan</span></code></p>
+<p>The &lt;between&gt; tag will output content if any placeholders before it in the template and the placeholder directly following it in the template have values. This makes delimiting lists of values more compact than options using &lt;ifdef&gt;:</p>
+<p><code class="docutils literal"><span class="pre">^ca_objects.dimensions.width</span> <span class="pre">&lt;between&gt;x&lt;/between&gt;</span> <span class="pre">^ca_objects.dimensions.height</span> <span class="pre">&lt;between&gt;x&lt;/between&gt;</span> <span class="pre">^depth</span></code></p>
+<p>The output of this would be the defined dimensions with a single &#8220;x&#8221; delimiter between each pair.</p>
+</div>
+<div class="section" id="conditional-tags-ifdef-ifnotdef-ifcount-if">
+<h2>Conditional tags: &lt;ifdef&gt;, &lt;ifnotdef&gt;, &lt;ifcount&gt;, &lt;if&gt;<a class="headerlink" href="#conditional-tags-ifdef-ifnotdef-ifcount-if" title="Permalink to this headline">¶</a></h2>
+<p>As mentioned earlier you can make display of portions of your template contingent upon specified conditions by surrounding part of the template with &lt;ifdef&gt; and &lt;ifnotdef&gt; tags. Both tags take a &#8220;code&#8221; attribute containing one or more bundle specifiers. If the value for the bundle is not empty &lt;ifdef&gt; will display the portion of the template it encloses. Conversely, if the value is empty &lt;ifnotdef&gt; will display the content it encloses.</p>
+<p>For example:</p>
+<p><code class="docutils literal"><span class="pre">Title:</span> <span class="pre">^ca_objects.preferred_labels.name</span> <span class="pre">&lt;ifdef</span> <span class="pre">code=&quot;ca_objects.description&quot;&gt;Description:</span> <span class="pre">^ca_objects.description&lt;/ifdef&gt;</span></code></p>
+<p>Note that the specifier in the code attribute is not a placeholder and therefore does not take a &#8220;^&#8221; prefix.</p>
+<p>You can make &lt;ifdef&gt; and &lt;ifnotdef&gt; contingent upon more than one bundle by listing them in the code attribute separated by commas or pipes (&#8220;|&#8221;). When separated by commas, all of the bundles must be defined (&lt;ifdef&gt;) or not defined (&lt;ifnotdef&gt;) for the tag to display content. When separated by pipes, any of the bundles defined (&lt;ifdef&gt;) or not defined (&lt;ifnotdef&gt;) will cause the tag to display content.</p>
+<p>The &lt;ifcount&gt; tag controls display of content based upon the number of values available from the bundle specifier in code. It is useful when you wish to only show content when the number of values a bundle has is within a range. For example, if you wish to show a list of related entities only when there are between 2 and 5 relationships:</p>
+<p><code class="docutils literal"><span class="pre">&lt;ifcount</span> <span class="pre">code=&quot;ca_entities.related&quot;</span> <span class="pre">min=&quot;2&quot;</span> <span class="pre">max=&quot;5&quot;&gt;Related</span> <span class="pre">entities:</span> <span class="pre">^ca_entities.preferred_labels.displayname&lt;/ifcount&gt;</span></code></p>
+<p>You can show content whenever the count is greater than a number by omitting the max attribute:</p>
+<p><code class="docutils literal"><span class="pre">&lt;ifcount</span> <span class="pre">code=&quot;ca_entities.related&quot;</span> <span class="pre">min=&quot;2&quot;&gt;Related</span> <span class="pre">entities:</span> <span class="pre">^ca_entities.preferred_labels.displayname&lt;/ifcount&gt;</span></code></p>
+<p>If the min attribute is omitted it is assumed to be zero.</p>
+<p>To only show content when the count is a specific number set both min and max to the same number:</p>
+<p><code class="docutils literal"><span class="pre">&lt;ifcount</span> <span class="pre">code=&quot;ca_entities.related&quot;</span> <span class="pre">min=&quot;1&quot;</span> <span class="pre">max=&quot;1&quot;&gt;Related</span> <span class="pre">entity:</span> <span class="pre">^ca_entities.preferred_labels.displayname&lt;/ifcount&gt;</span></code></p>
+<p>The &lt;if&gt; tag provides maximum control by using expressions to determine when content is displayed. For example, to output the display only if &#8220;current&#8221; is selected from the type drop-down in a repeating credit line container:</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>&lt;unit relativeTo=&quot;ca_objects.credit_line&quot;&gt;&lt;if rule=\&quot;^credit_type =~ /current/\&quot;&gt;^ca_objects.credit_line.credit_text
+(^ca_objects.credit_line.credit_type)&lt;/if&gt;&lt;/unit&gt;
+</pre></div>
+</div>
+<p>The rule attribute must be set to a valid expression, which can use any valid placeholder available in the template, and must be enclosed in escaped (prepended &#8220;&#8221;) quotes to ensure that it is evaluated correctly.</p>
+</div>
+<div class="section" id="even-more-conditional-the-case-tag">
+<h2>Even more conditional: the &lt;case&gt; tag<a class="headerlink" href="#even-more-conditional-the-case-tag" title="Permalink to this headline">¶</a></h2>
+<p>Sometimes you need to to choose from one of several templates based upon varying criteria. For instance, when listing entities related to an object you might want to vary the text before the list with respect to the number of entities being listed. There are ways to do this with display templates, but the cleanest way is with a &lt;case&gt; tag:</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>&lt;case&gt;
+         &lt;ifcount code=&quot;ca_entities.related&quot; max=&quot;0&quot;&gt;No related entities&lt;/ifcount&gt;
+         &lt;ifcount code=&quot;ca_entities.related&quot; min=&quot;1&quot; max=&quot;1&quot;&gt;Related entity: ^ca_entities.preferred_labels.name&lt;/ifcount&gt;
+         &lt;ifcount code=&quot;ca_entities.related&quot; min=&quot;2&quot;&gt;Related entities: ^ca_entities.preferred_labels.name%delimiter=,_&lt;/ifcount&gt;
+&lt;/case&gt;
+</pre></div>
+</div>
+<p>The &lt;case&gt; tag evaluates each &lt;ifcount&gt; tag in order and stops at the first one that results in output. You can include templates beginning with &lt;ifdef&gt;, &lt;ifnotdef&gt; and &lt;if&gt; as well as &lt;ifcount&gt;. If a &lt;unit&gt; tag is included as the last template in a &lt;case&gt; it will be used as the default in case no other template results in output.</p>
+<p>Because &lt;case&gt; tags stop evaluating as soon as they find a template with output they are generally the best performing way to choose a template from a list of possibilities.</p>
+</div>
+<div class="section" id="expressions">
+<h2>Expressions<a class="headerlink" href="#expressions" title="Permalink to this headline">¶</a></h2>
+<p>It&#8217;s also possible to output the result of expressions as-is. A use case for this is making certain statistics about your metadata searchable. For instance, you could use Prepopulate to always keep the current number of entity relationships for your objects in a hidden (but searchable and sortable) field.</p>
+<p>Usage of the expression tag is simple: Anything inside the tag is treated as expression (see expressions for more info). You can use your typical caret-prefixed bundle placeholders and even unit tags. Unit tags get evaluated/replaced first when CollectiveAccess runs display templates, so you can use the result of a unit tag in your expression. Here are a few basic examples:</p>
+<p><code class="docutils literal"><span class="pre">&lt;expression&gt;5</span> <span class="pre">+</span> <span class="pre">4&lt;/expression&gt;</span></code>
+<code class="docutils literal"><span class="pre">&lt;expression&gt;length(^ca_objects.preferred_labels)&lt;/expression&gt;</span></code></p>
+<p>This one outputs related entity names and their string lengths:</p>
+<p><code class="docutils literal"><span class="pre">&lt;unit</span> <span class="pre">relativeTo=&quot;ca_entities&quot;&gt;^ca_entities.preferred_labels,</span> <span class="pre">&lt;expression&gt;length(^ca_entities.preferred_labels)&lt;/expression&gt;&lt;/unit&gt;</span></code></p>
+<p>The following counts the number of entity relationships for the current record. We use a unit tag to generate the parameters for the sizeof function.</p>
+<p><code class="docutils literal"><span class="pre">&lt;expression&gt;sizeof(&lt;unit</span> <span class="pre">relativeTo=&quot;ca_entities&quot;</span> <span class="pre">delimiter=&quot;,&quot;&gt;^ca_entities.entity_id&lt;/unit&gt;)&lt;/expression&gt;</span></code></p>
+<p>This one calculates the age of Alan Turing:</p>
+<p><code class="docutils literal"><span class="pre">&lt;expression&gt;age(&quot;23</span> <span class="pre">June</span> <span class="pre">1912&quot;,</span> <span class="pre">&quot;7</span> <span class="pre">June</span> <span class="pre">1954&quot;)&lt;/expression&gt;</span></code></p>
+</div>
+<div class="section" id="formatting-hierarchical-displays">
+<h2>Formatting hierarchical displays<a class="headerlink" href="#formatting-hierarchical-displays" title="Permalink to this headline">¶</a></h2>
+<p>Many types of records can be arranged hierarchically. To get some or all of the hierarchy for display use a hierarchical bundle specifier. This is just a normal specifier with a hierarchical modifier (hierarchy, parent, children) added.</p>
+<p>For example, for an object primary, a ^ca_objects.hierarchy.preferred_labels.name placeholder will return the names of all objects in the hierarchy from top to bottom. You&#8217;ll probably want to set a delimiter between each item in the hierarchy. You can do so by adding a placeholder option: append a percent sign and delimiter=&lt;my delimiter&gt; to the bundle specifier, like so:</p>
+<p><code class="docutils literal"><span class="pre">^ca_objects.hierarchy.preferred_labels.name%delimiter=_➔_</span></code></p>
+<p>When setting the delimiter, underscores are used in place of spaces. Spaces are used to delimit individual bundle specifiers, so you can&#8217;t have the delimiter floating out past a space associated with the specifier. The underscores will be converted to spaces for display.</p>
+<p>You can get more control over hierarchy displays using a &lt;unit&gt; set relative to a hierarchy. For our object primary:</p>
+<p><code class="docutils literal"><span class="pre">&lt;unit</span> <span class="pre">relativeTo=&quot;ca_objects.hierarchy&quot;&gt;^ca_objects.preferred_labels.name</span> <span class="pre">(^ca_objects.idno)&lt;/unit&gt;</span></code></p>
+<p>will evaluate the &lt;unit&gt; for each record in the hierarchy in turn set to primary. Related data can be accessed as well, and additional &lt;unit&gt;&#8217;s can be specified within.</p>
+<p>The parent and children modifiers work similarly to hierarchy but return the immediate parent of a record or its immediate children respectively.</p>
+<p>There are a number of placeholder options that can be used to modify how hierarchical data is displayed:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Option</th>
+<th class="head">Description</th>
+<th class="head">Default</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>delimiter</td>
+<td>Text to use as delimiter for multiple values.</td>
+<td>;</td>
+</tr>
+<tr class="row-odd"><td>maxLevelsFromTop</td>
+<td>Restrict the number of levels returned to the top-most beginning with the root.</td>
+<td>None</td>
+</tr>
+<tr class="row-even"><td>maxLevelsFromBottom</td>
+<td>Restrict the number of levels returned to the top-most beginning with the root.</td>
+<td>None</td>
+</tr>
+<tr class="row-odd"><td>hierarchyDirection</td>
+<td>Order in which to return hierarchical levels. Set to either &#8220;asc&#8221; or &#8220;desc&#8221;. &#8220;asc&#8221;ending returns hierarchy beginning with the root; &#8220;desc&#8221;ending begins with the child furthest from the root.</td>
+<td>asc</td>
+</tr>
+<tr class="row-even"><td>allDescendants</td>
+<td>Return all items from the full depth of the hierarchy when fetching children using the children modifier. By default only immediate children are returned.</td>
+<td>FALSE</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="making-links-to-other-records">
+<h2>Making links to other records<a class="headerlink" href="#making-links-to-other-records" title="Permalink to this headline">¶</a></h2>
+<p>The &lt;l&gt; tag may be used to create links within the template. The links will always point to the primary record. In Providence the link will lead to the editing interface for the record; in Pawtucket the link will be to the detail display for the record. It is possible to write plugins that override this behavior and create other sorts of links.</p>
+<p>Any stretch of the template may be made into a link. For example, assuming the primary is an entity:</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>&lt;l&gt;^ca_entities.preferred_labels.displayname&lt;/l&gt; &lt;ifdef code=&quot;ca_entities.address.address1&quot;&gt;(&lt;/ifdef&gt;^ca_entities.address.address1
+&lt;ifdef code=&quot;ca_entities.address.address1&quot;&gt;)&lt;/ifdef&gt;
+</pre></div>
+</div>
+<p>Clicking on the entity name in Providence would take a cataloguer to the editor for the entity record; in Providence it leads to the detail for the entity.</p>
+<p>Links always point to the primary record. If you use &lt;l&gt; tags within a &lt;unit&gt; the links will be to the primary within the &lt;unit&gt;.</p>
+</div>
+<div class="section" id="using-html">
+<h2>Using HTML<a class="headerlink" href="#using-html" title="Permalink to this headline">¶</a></h2>
+<p>You can freely use HTML tags for formatting within your templates, so long you follow the rules and use well-formed markup. Be sure to close any tag you open. The special template tags such as &lt;ifdef&gt; count in terms of well-formedness even though they don&#8217;t display. This, for instance, is not correct and will render unpredictably:</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>&lt;l&gt;^ca_occurrences.preferred_labels.names&lt;/l&gt; &lt;ifdef code=&quot;ca_occurrences.exhibit_date&quot;&gt;&lt;b&gt;(Dates: &lt;/ifdef&gt;^ca_occurrences.exhibit_date
+&lt;ifdef code=&quot;ca_occurrences.exhibit_date&quot;&gt;)&lt;/b&gt;&lt;/ifdef&gt; ^ca_occurrences.description
+</pre></div>
+</div>
+<p>Notice that the &lt;b&gt; tag in the first &lt;ifdef&gt; is not closed before the closing &lt;/ifdef&gt;, producing invalid markup. There is a &lt;/b&gt; tag later on but this too is taken on its own due to the enclosing &lt;ifdef&gt; tags. The correct way to write this template is:</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>&lt;l&gt;^ca_occurrences.preferred_labels.names&lt;/l&gt; &lt;ifdef code=&quot;ca_occurrences.exhibit_date&quot;&gt;&lt;b&gt;(Dates: ^ca_occurrences.exhibit_date
+&lt;/b&gt;&lt;/ifdef&gt; ^ca_occurrences.description
+</pre></div>
+</div>
+</div>
+<div class="section" id="special-placeholders">
+<h2>Special placeholders<a class="headerlink" href="#special-placeholders" title="Permalink to this headline">¶</a></h2>
+<p>There are a few placeholders that have special meanings for certain kinds of primary records:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Placeholder</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>^date</td>
+<td>Displays the current date. Valid in any template regardless of the kind of primary. Date is formatted as &#8220;day month year&#8221; (ex. &#8220;10 January 2014&#8221;) unless a format is specified using the format placeholder option. The option takes a PHP date()-style formatting string. See [1]. (Ex. ^date%format=c)</td>
+</tr>
+<tr class="row-odd"><td>^relationship_typename</td>
+<td>Displays the name of the relationship type when the primary is a relationship record such as ca_objects_x_entities. Note that templates pulling related records in bundle displays are evaluated relative to the primary representing the relationship, not the related record. Thus this and the other ^relationship_* placeholders are available by default when pulling related data in bundle displays</td>
+</tr>
+<tr class="row-even"><td>^relationship_type_id</td>
+<td>The internal numeric type_id for the relationship type when the primary is a relationship record such as ca_objects_x_entities.</td>
+</tr>
+<tr class="row-odd"><td>^relationship_typecode</td>
+<td>The alphanumeric code for the relationship type when the primary is a relationship record such as ca_objects_x_entities.</td>
+</tr>
+<tr class="row-even"><td>^primary</td>
+<td>Displays the name of the primary for the template or current &lt;unit&gt; sub-template. This can be useful for debugging.</td>
+</tr>
+<tr class="row-odd"><td>^count</td>
+<td>Displays the number of values in the current primary for the template or current &lt;unit&gt; sub-template.</td>
+</tr>
+<tr class="row-even"><td>^index</td>
+<td>Displays the one-based index of the current value in the primary or &lt;unit&gt; sub-template. As a &lt;unit&gt; iterates through each value ^index will increment by one until it reaches ^count.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="export.html" class="btn btn-neutral float-right" title="Exporting Search &amp; Browse Results" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="displays.html" class="btn btn-neutral" title="Using Displays" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Whirl-i-Gig.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.7',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

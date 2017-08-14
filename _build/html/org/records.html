@@ -1,0 +1,367 @@
+
+
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Primary Tables &mdash; CollectiveAccess 1.7 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/table_override.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="CollectiveAccess 1.7 documentation" href="../index.html"/>
+        <link rel="next" title="Types" href="types.html"/>
+        <link rel="prev" title="XML Schema" href="../setup/profiles/XMLSchema.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> CollectiveAccess
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.7
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Introduction to CollectiveAccess</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../intro/whatIs.html">What is CollectiveAccess?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/whoUses.html">Who uses it?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/why.html">Why should I?</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Setup &amp; Install</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../setup/systemReq.html">System Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../setup/media.html">Media Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../setup/Installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../setup/Profiles.html">Profiles</a></li>
+</ul>
+<p class="caption"><span class="caption-text">How CA Organizes Information</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Primary Tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="types.html">Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intIDLabel.html">Intrinsics, Identifiers and Labels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="metadata.html">Metadata Elements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Relationships.html">Relationships</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interstitial.html">Interstitial Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dateTime.html">Date and Time Formats</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Configuring Providence (Front-End)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../providence/Locales.html">Locales</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../providence/listsAuthorities.html">Lists and Authorities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../providence/metadata.html">Metadata Elements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../providence/interfaces.html">User Interfaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../providence/together.html">Putting It All Together</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../providence/profiles.html">Writing Your Own Installation Profile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../providence/system.html">System Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../providence/identifiers.html">Identifiers</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Search &amp; Browse</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../searchBrowse/intro.html">Intro to Search Pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../searchBrowse/syntax.html">Syntax</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../searchBrowse/indexing.html">Indexing Options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../searchBrowse/engines.html">Search Engines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../searchBrowse/advanced.html">Advanced Search Forms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../searchBrowse/query.html">Query Builder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../searchBrowse/facets.html">Browse Facets</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Reporting</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../reporting/displays.html">Using Displays</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reporting/templates.html">Display Template Syntax</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reporting/export.html">Exporting Search &amp; Browse Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reporting/pdfOut.html">PDF Output</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reporting/labels.html">Generating Labels</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Workflow</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../workflow/sets.html">Creating Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../workflow/status.html">Status Tracking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../workflow/access.html">Access Status</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../workflow/location.html">Tracking Current Object Location</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../workflow/history.html">Maintaining Object Use History</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Import</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../import/tutorial.html">Basic Importer Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../import/formats.html">Supported File Formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../import/mappings.html">Mappings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../import/running.html">Running an Import</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../import/worldcat.html">WorldCat</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../import/getty.html">Getty Vocabularies</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Export</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../export/formats.html">Supported File Formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../export/mappings.html">Mappings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../export/running.html">Running an Export</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Administration</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../administration/control.html">User Access Control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../administration/maint.html">Maintenance Functions</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Customizing Pawtucket</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../pawtucket/intro.html">Introduction to Themes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pawtucket/general.html">General Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pawtucket/media.html">Media Display &amp; Access</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pawtucket/access.html">Public Access Configurations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pawtucket/reg.html">Login &amp; Registration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pawtucket/static.html">Homepage &amp; Static Pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pawtucket/searchBrowse.html">Search &amp; Browse Pages and Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pawtucket/detail.html">Detail Pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pawtucket/lightbox.html">Lightboxes &amp; Galleries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pawtucket/classrooms.html">Classrooms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pawtucket/contact.html">Contact &amp; Mail Templates</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../reference/APIs.html">APIs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/FAQs.html">FAQs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/Glossaries.html">Glossaries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/prior.html">Prior Releases</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">CollectiveAccess</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li>Primary Tables</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="primary-tables">
+<h1>Primary Tables<a class="headerlink" href="#primary-tables" title="Permalink to this headline">¶</a></h1>
+<p>CollectiveAccess is structured around several primary tables with editors that can be enabled (or disabled) depending on project requirements. Distinct User Interfaces can be configured for each table, and within that, a single table can have multiple user interfaces restricted by Type (see Types).</p>
+<p>If you&#8217;re not using certain editors in your system (you don&#8217;t catalogue places for example), you can disable the menu items for them in the configuration file app.conf, by setting the various <a href="#id1"><span class="problematic" id="id2">*</span></a>_disable directives below to a non-zero value</p>
+<p>Here&#8217;s how it looks in app.conf:</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>#Editor &quot;disable&quot; switches
+#-------------------
+ca_objects_disable = 0
+ca_entities_disable = 0
+ca_places_disable = 0
+ca_occurrences_disable = 0
+ca_collections_disable = 0
+ca_object_lots_disable = 0
+ca_storage_locations_disable = 0
+ca_loans_disable = 0
+ca_movements_disable = 1
+ca_tours_disable = 1
+ca_tour_stops_disable = 1
+ca_object_representations_disable = 1
+</pre></div>
+</div>
+<div class="section" id="objects-ca-objects">
+<h2>Objects (ca_objects)<a class="headerlink" href="#objects-ca-objects" title="Permalink to this headline">¶</a></h2>
+<p>Object records represent the items or assets in a collection, typically the physical or born-digital items you are managing. Objects can refer to anything - historical artifacts, photographs, film, video, documents, and artwork. Every object record is by definition, of a &#8220;Type.&#8221; The types themselves can be customized to match your own cataloging requirements.</p>
+</div>
+<div class="section" id="entities-ca-entities">
+<h2>Entities (ca_entities)<a class="headerlink" href="#entities-ca-entities" title="Permalink to this headline">¶</a></h2>
+<p>Entity records represent the authority file for specific people and organizations. When Entity records are created, relationships can be created between them and specific Object records (or any other Table) with fully customizable relationship types. For example, an Entity authority record for an individual could be related to an Object record as the creator of the Object, the photographer, donor, publisher, performer, or anything else.</p>
+</div>
+<div class="section" id="places-ca-places">
+<h2>Places (ca_places)<a class="headerlink" href="#places-ca-places" title="Permalink to this headline">¶</a></h2>
+<p>Physical locations, geographic or otherwise. Places are inherently hierarchical allowing you to nest more specific Place records within broader ones. As with Entities, once a Place is created it can be related to any other kind of record.</p>
+</div>
+<div class="section" id="occurrences-ca-occurrences">
+<h2>Occurrences (ca_occurrences)<a class="headerlink" href="#occurrences-ca-occurrences" title="Permalink to this headline">¶</a></h2>
+<p>Events or “things.” An Occurrence is a catch-all term used by CollectiveAccess to refer to contextual items that may require complex cataloguing but are not Entities, Places, Collections or Storage Locations. You can use Occurrences to support structured authorities for virtually any kind of item. Typically, Occurrences are used to support entries for historical events, exhibitions, works, productions, and bibliographies.</p>
+</div>
+<div class="section" id="collections-ca-collections">
+<h2>Collections (ca_collections)<a class="headerlink" href="#collections-ca-collections" title="Permalink to this headline">¶</a></h2>
+<p>Collections contain a defined group of objects. Collections can represent physical collections, symbolic collections of items associated by some criteria, or any other arbitrary grouping. This table can also be used to manage formal archival processing and the creation of finding aids, by configuring the Collection User Interface to be compliant with the Describing Archives (DACS) content standard.</p>
+</div>
+<div class="section" id="lots-ca-object-lots">
+<h2>Lots (ca_object_lots)<a class="headerlink" href="#lots-ca-object-lots" title="Permalink to this headline">¶</a></h2>
+<p>Lots represent the accession or acquisition of one or more assets. The details and terms of a gift, purchase, or bequest are recorded here. This table is most commonly used by collecting institutions who may accession more than one unique item per Accession. At the Lot level, all of the registrarial information, such as the Deed of Gift, may be recorded, while individual cataloging of the accessioned items can remain at the Object level. And, as always, the Lot record can be related to each Object.</p>
+</div>
+<div class="section" id="storage-locations-ca-storage-locations">
+<h2>Storage Locations (ca_storage_locations)<a class="headerlink" href="#storage-locations-ca-storage-locations" title="Permalink to this headline">¶</a></h2>
+<p>Physical locations where Objects are stored. Like Places, Storage Locations are hierarchical – you can nest Locations to allow notation at any level of specificity (building, room, cabinet, drawer). Each Storage Location can take arbitrarily complex cataloguing, including access restrictions, map coordinates and other information. Storage Locations can be linked to both Objects and Lots, either directly, or through Movements.</p>
+</div>
+<div class="section" id="loans-ca-loans">
+<h2>Loans (ca_loans)<a class="headerlink" href="#loans-ca-loans" title="Permalink to this headline">¶</a></h2>
+<p>Loans are used to track objects that are on loan to or from other institutions. The Loan table, like all other tables, is fully customizable, and can be used to track every aspect of either an incoming or outgoing loan&#8217;s dates, shipping, and insurance information. Objects included in the Loan are related to the Loan record in the same manner as Collections, Entities, Lots, etc.</p>
+</div>
+<div class="section" id="movements-ca-movements">
+<h2>Movements (ca_movements)<a class="headerlink" href="#movements-ca-movements" title="Permalink to this headline">¶</a></h2>
+<p>For more complex workflow needs, this table can be used to Movements of Objects (e.g., temporary locations, storage rehousing, transport for exhibition, etc). Used in conjunction with Location Tracking and Object Use History, Movements can enable a robust record of every movement event in an object&#8217;s lifecycle.</p>
+</div>
+<div class="section" id="tours-ca-tours">
+<h2>Tours (ca_tours)<a class="headerlink" href="#tours-ca-tours" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="tour-stops-ca-tour-stops">
+<h2>Tour Stops (ca_tour_stops)<a class="headerlink" href="#tour-stops-ca-tour-stops" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="representations-ca-object-representations">
+<h2>Representations (ca_object_representations)<a class="headerlink" href="#representations-ca-object-representations" title="Permalink to this headline">¶</a></h2>
+<p>This table captures the Media (images, video, audio, PDFs) that represents an Object. While Representations most often consist of just the media file itself, they can take additional cataloguing that is specific to the media file (and not necessarily to the Object the file depicts or represents). This allows the addition of captions, credits, access information, rights and reproduction restrictions or any other type of information on a Representation-specific basis, if needed.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="types.html" class="btn btn-neutral float-right" title="Types" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../setup/profiles/XMLSchema.html" class="btn btn-neutral" title="XML Schema" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Whirl-i-Gig.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.7',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

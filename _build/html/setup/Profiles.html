@@ -1,0 +1,363 @@
+
+
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Profiles &mdash; CollectiveAccess 1.7 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/table_override.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="CollectiveAccess 1.7 documentation" href="../index.html"/>
+        <link rel="next" title="Metadata Standards" href="profiles/MetadataStandards.html"/>
+        <link rel="prev" title="Installing on Windows" href="install/Windows.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> CollectiveAccess
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.7
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Introduction to CollectiveAccess</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../intro/whatIs.html">What is CollectiveAccess?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/whoUses.html">Who uses it?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/why.html">Why should I?</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Setup &amp; Install</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="systemReq.html">System Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="media.html">Media Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Installation.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Profiles</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="profiles/MetadataStandards.html">Metadata Standards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="profiles/ConfigurationLibrary.html">Configuration Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="profiles/XMLSchema.html">XML Schema</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">How CA Organizes Information</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../org/records.html">Primary Tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../org/types.html">Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../org/intIDLabel.html">Intrinsics, Identifiers and Labels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../org/metadata.html">Metadata Elements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../org/Relationships.html">Relationships</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../org/interstitial.html">Interstitial Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../org/dateTime.html">Date and Time Formats</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Configuring Providence (Front-End)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../providence/Locales.html">Locales</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../providence/listsAuthorities.html">Lists and Authorities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../providence/metadata.html">Metadata Elements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../providence/interfaces.html">User Interfaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../providence/together.html">Putting It All Together</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../providence/profiles.html">Writing Your Own Installation Profile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../providence/system.html">System Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../providence/identifiers.html">Identifiers</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Search &amp; Browse</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../searchBrowse/intro.html">Intro to Search Pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../searchBrowse/syntax.html">Syntax</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../searchBrowse/indexing.html">Indexing Options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../searchBrowse/engines.html">Search Engines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../searchBrowse/advanced.html">Advanced Search Forms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../searchBrowse/query.html">Query Builder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../searchBrowse/facets.html">Browse Facets</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Reporting</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../reporting/displays.html">Using Displays</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reporting/templates.html">Display Template Syntax</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reporting/export.html">Exporting Search &amp; Browse Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reporting/pdfOut.html">PDF Output</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reporting/labels.html">Generating Labels</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Workflow</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../workflow/sets.html">Creating Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../workflow/status.html">Status Tracking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../workflow/access.html">Access Status</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../workflow/location.html">Tracking Current Object Location</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../workflow/history.html">Maintaining Object Use History</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Import</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../import/tutorial.html">Basic Importer Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../import/formats.html">Supported File Formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../import/mappings.html">Mappings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../import/running.html">Running an Import</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../import/worldcat.html">WorldCat</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../import/getty.html">Getty Vocabularies</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Export</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../export/formats.html">Supported File Formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../export/mappings.html">Mappings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../export/running.html">Running an Export</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Administration</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../administration/control.html">User Access Control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../administration/maint.html">Maintenance Functions</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Customizing Pawtucket</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../pawtucket/intro.html">Introduction to Themes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pawtucket/general.html">General Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pawtucket/media.html">Media Display &amp; Access</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pawtucket/access.html">Public Access Configurations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pawtucket/reg.html">Login &amp; Registration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pawtucket/static.html">Homepage &amp; Static Pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pawtucket/searchBrowse.html">Search &amp; Browse Pages and Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pawtucket/detail.html">Detail Pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pawtucket/lightbox.html">Lightboxes &amp; Galleries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pawtucket/classrooms.html">Classrooms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pawtucket/contact.html">Contact &amp; Mail Templates</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../reference/APIs.html">APIs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/FAQs.html">FAQs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/Glossaries.html">Glossaries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/prior.html">Prior Releases</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">CollectiveAccess</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li>Profiles</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="profiles">
+<h1>Profiles<a class="headerlink" href="#profiles" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="profiles/MetadataStandards.html">Metadata Standards</a></li>
+<li class="toctree-l1"><a class="reference internal" href="profiles/ConfigurationLibrary.html">Configuration Library</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="profiles/ConfigurationLibrary.html#libraries-museum-and-archives">Libraries, Museum, and Archives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="profiles/ConfigurationLibrary.html#consortiums">Consortiums</a></li>
+<li class="toctree-l2"><a class="reference internal" href="profiles/ConfigurationLibrary.html#institutional-archives">Institutional archives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="profiles/ConfigurationLibrary.html#performing-arts">Performing Arts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="profiles/ConfigurationLibrary.html#art-galleries">Art galleries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="profiles/ConfigurationLibrary.html#moving-images">Moving Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="profiles/ConfigurationLibrary.html#paleontology">Paleontology</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="profiles/XMLSchema.html">XML Schema</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="profiles/XMLSchema.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="profiles/XMLSchema.html#collectiveaccess-basics">CollectiveAccess Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="profiles/XMLSchema.html#about-profiles">About Profiles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="profiles/XMLSchema.html#putting-it-all-together">Putting It All Together</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="definition-and-purpose-of-a-profile">
+<h2>Definition and Purpose of a Profile<a class="headerlink" href="#definition-and-purpose-of-a-profile" title="Permalink to this headline">¶</a></h2>
+<p>A CollectiveAccess installation profile is an XML document that tells the software how to set up various aspects of Providence at the time of its installation. The profile enables you to configure nearly every aspect of the various cataloging interfaces in CollectiveAccess before you begin using the system. After installation, you can easily make additional changes using the tools in the &#8220;Manage&#8221; menu, but it&#8217;s usually more efficient to set up your installation in such a way that it meets your requirements from the start. Installation profiles:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Generate and define controlled vocabularies</li>
+<li>Define and label metadata fields</li>
+<li>Specify the method of metadata entry (e.g. a text entry field or a drop-down menu)</li>
+<li>Bundle the fields together for easy metadata entry</li>
+<li>Combine metadata elements on different screens for workflow management</li>
+<li>Delineate and describe the relationships between all of the various types of objects, entities, occurrences, lots, sets, etc. in your system</li>
+<li>Set the logins for different user types</li>
+<li>Configure the display of search results and data exports.</li>
+<li>Create standards-compliant set-ups</li>
+</ul>
+</div></blockquote>
+<p>Installation profiles &#8220;live&#8221; in the &#8216;install/profiles/xml&#8217; folder located in the directory where you loaded the software on your computer or server. When you first log in after installing CollectiveAccess, you&#8217;ll be asked to select one of the saved installation profiles in the &#8220;XML&#8221; folder, which will then be used to complete the installation process. In Providence, many pre-defined profiles are available, ranging from standard schemata (see <span class="target" id="metadata-standards">Metadata Standards</span>) to custom set ups created for and by organizations world wide (see <span class="target" id="configuration-library">Configuration Library</span>).</p>
+</div>
+<div class="section" id="creating-a-profile">
+<h2>Creating a Profile<a class="headerlink" href="#creating-a-profile" title="Permalink to this headline">¶</a></h2>
+<p>Profiles are written using an xml-based syntax. Typically no profile is created from scratch, but rather users modify <a class="reference external" href="https://github.com/collectiveaccess/providence/tree/master/install/profiles/xml">existing profiles</a> to meet their needs.</p>
+</div>
+<div class="section" id="troubleshooting-profiles">
+<h2>Troubleshooting Profiles<a class="headerlink" href="#troubleshooting-profiles" title="Permalink to this headline">¶</a></h2>
+<p>Installation profiles are often long and complex text documents. It&#8217;s easy to make mistakes that cause the installation process to fail or deviate from requirements. You can make errors much less likely by validating your profile against the profile syntax XML schema. The schema is located in <cite>install/profiles/xml/profile.xsd</cite>. Simply copy the schema to the same directory as the profile you are editing and use a validating XML editor such as OxygenXML. The editor will highlight mistakes as you type and point you to the location of the errors.</p>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">The CollectiveAccess installer will validate your profile against the schema before proceeding with installation, so if a profile doesn&#8217;t validate during editing it won&#8217;t be accepted by the installer. The bottom line: always make sure your profile validates!</p>
+</div>
+</div>
+<div class="section" id="changing-the-installation-profile-of-an-existing-system">
+<h2>Changing the installation profile of an existing system<a class="headerlink" href="#changing-the-installation-profile-of-an-existing-system" title="Permalink to this headline">¶</a></h2>
+<p>An oft-asked question is &#8220;I installed my system using installation profile X. How can I now change it to Y?&#8221; The answer is you can&#8217;t. Installation profiles are simply collections of rules (or templates, if you prefer) for the installer to follow when setting up a new system. Once the installation process is complete the profile ceases to play a role. You can continue to modify the configuration of your system using the web-based configuration tools, creating an installation different from the profile that originally created it. If you really need to change an existing system to conform to a new profile you have two choices: (1) modify the existing system by hand using the web-based configuration tools to match or (2) reinstall from scratch with the desired profile. In the latter case you will lose all existing data, of course.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="profiles/MetadataStandards.html" class="btn btn-neutral float-right" title="Metadata Standards" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="install/Windows.html" class="btn btn-neutral" title="Installing on Windows" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Whirl-i-Gig.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.7',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

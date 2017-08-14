@@ -1,0 +1,1736 @@
+
+
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Attribute Types Settings &mdash; CollectiveAccess 1.7 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/table_override.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="CollectiveAccess 1.7 documentation" href="../../index.html"/>
+        <link rel="up" title="Glossaries" href="../Glossaries.html"/>
+        <link rel="next" title="Bundles" href="Bundles.html"/>
+        <link rel="prev" title="API Endpoints &amp; Methods" href="endpoints.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> CollectiveAccess
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.7
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Introduction to CollectiveAccess</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../intro/whatIs.html">What is CollectiveAccess?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../intro/whoUses.html">Who uses it?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../intro/why.html">Why should I?</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Setup &amp; Install</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../setup/systemReq.html">System Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../setup/media.html">Media Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../setup/Installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../setup/Profiles.html">Profiles</a></li>
+</ul>
+<p class="caption"><span class="caption-text">How CA Organizes Information</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../org/records.html">Primary Tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../org/types.html">Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../org/intIDLabel.html">Intrinsics, Identifiers and Labels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../org/metadata.html">Metadata Elements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../org/Relationships.html">Relationships</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../org/interstitial.html">Interstitial Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../org/dateTime.html">Date and Time Formats</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Configuring Providence (Front-End)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../providence/Locales.html">Locales</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../providence/listsAuthorities.html">Lists and Authorities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../providence/metadata.html">Metadata Elements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../providence/interfaces.html">User Interfaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../providence/together.html">Putting It All Together</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../providence/profiles.html">Writing Your Own Installation Profile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../providence/system.html">System Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../providence/identifiers.html">Identifiers</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Search &amp; Browse</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../searchBrowse/intro.html">Intro to Search Pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../searchBrowse/syntax.html">Syntax</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../searchBrowse/indexing.html">Indexing Options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../searchBrowse/engines.html">Search Engines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../searchBrowse/advanced.html">Advanced Search Forms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../searchBrowse/query.html">Query Builder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../searchBrowse/facets.html">Browse Facets</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Reporting</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../reporting/displays.html">Using Displays</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reporting/templates.html">Display Template Syntax</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reporting/export.html">Exporting Search &amp; Browse Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reporting/pdfOut.html">PDF Output</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reporting/labels.html">Generating Labels</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Workflow</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../workflow/sets.html">Creating Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../workflow/status.html">Status Tracking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../workflow/access.html">Access Status</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../workflow/location.html">Tracking Current Object Location</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../workflow/history.html">Maintaining Object Use History</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Import</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../import/tutorial.html">Basic Importer Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../import/formats.html">Supported File Formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../import/mappings.html">Mappings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../import/running.html">Running an Import</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../import/worldcat.html">WorldCat</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../import/getty.html">Getty Vocabularies</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Export</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../export/formats.html">Supported File Formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../export/mappings.html">Mappings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../export/running.html">Running an Export</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Administration</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../administration/control.html">User Access Control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../administration/maint.html">Maintenance Functions</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Customizing Pawtucket</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../pawtucket/intro.html">Introduction to Themes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pawtucket/general.html">General Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pawtucket/media.html">Media Display &amp; Access</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pawtucket/access.html">Public Access Configurations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pawtucket/reg.html">Login &amp; Registration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pawtucket/static.html">Homepage &amp; Static Pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pawtucket/searchBrowse.html">Search &amp; Browse Pages and Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pawtucket/detail.html">Detail Pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pawtucket/lightbox.html">Lightboxes &amp; Galleries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pawtucket/classrooms.html">Classrooms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pawtucket/contact.html">Contact &amp; Mail Templates</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Reference</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../APIs.html">APIs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../FAQs.html">FAQs</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../Glossaries.html">Glossaries</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="endpoints.html">API Endpoints &amp; Methods</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Attribute Type Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Bundles.html">Bundles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templates.html">Display Templates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pawtucket.html">Pawtucket Helper Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SupportedMedia.html">Supported Media Formats</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../prior.html">Prior Releases</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">CollectiveAccess</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../Glossaries.html">Glossaries</a> &raquo;</li>
+      
+    <li>Attribute Types Settings</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="attribute-types-settings">
+<h1>Attribute Types Settings<a class="headerlink" href="#attribute-types-settings" title="Permalink to this headline">¶</a></h1>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><a class="reference internal" href="#attribute-settings-containers" id="id2">Attribute settings: Containers</a></li>
+<li><a class="reference internal" href="#attribute-settings-text" id="id3">Attribute settings: Text</a></li>
+<li><a class="reference internal" href="#attribute-settings-daterange" id="id4">Attribute settings: DateRange</a></li>
+<li><a class="reference internal" href="#attribute-settings-lists" id="id5">Attribute settings: Lists</a></li>
+<li><a class="reference internal" href="#attribute-settings-geocode" id="id6">Attribute settings: Geocode</a><ul>
+<li><a class="reference internal" href="#google-maps-integration" id="id7">Google Maps integration</a></li>
+<li><a class="reference internal" href="#adding-rectified-overlays" id="id8">Adding rectified overlays</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#attribute-settings-url" id="id9">Attribute settings: Url</a></li>
+<li><a class="reference internal" href="#attribute-settings-currency" id="id10">Attribute settings: Currency</a></li>
+<li><a class="reference internal" href="#attribute-settings-length" id="id11">Attribute settings: Length</a></li>
+<li><a class="reference internal" href="#attribute-settings-weight" id="id12">Attribute settings: Weight</a></li>
+<li><a class="reference internal" href="#attribute-settings-timecode" id="id13">Attribute settings: TimeCode</a></li>
+<li><a class="reference internal" href="#attribute-settings-integer" id="id14">Attribute settings: Integer</a></li>
+<li><a class="reference internal" href="#attribute-settings-numeric" id="id15">Attribute settings: Numeric</a></li>
+<li><a class="reference internal" href="#id1" id="id16">Attribute settings: Numeric</a></li>
+<li><a class="reference internal" href="#attribute-settings-lcsh" id="id17">Attribute settings: LCSH</a></li>
+<li><a class="reference internal" href="#attribute-settings-geonames" id="id18">Attribute settings: GeoNames</a></li>
+<li><a class="reference internal" href="#attribute-settings-files" id="id19">Attribute settings: Files</a></li>
+<li><a class="reference internal" href="#attribute-settings-media" id="id20">Attribute settings: Media</a></li>
+<li><a class="reference internal" href="#attribute-settings-taxonomy" id="id21">Attribute settings: Taxonomy</a></li>
+<li><a class="reference internal" href="#attribute-settings-entities" id="id22">Attribute settings: Entities</a></li>
+</ul>
+</div>
+<div class="section" id="attribute-settings-containers">
+<h2><a class="toc-backref" href="#id2">Attribute settings: Containers</a><a class="headerlink" href="#attribute-settings-containers" title="Permalink to this headline">¶</a></h2>
+<p>Unlike all other attribute types, containers do not represent data values. Rather their sole function is to organize attributes into groups for display. In a multi-attribute value set (for example an address with separate attributes for street number, city, state, country and postal code), there will be at least one container serving as the &#8220;root&#8221; (or top) of the attribute hierarchy. Other containers may serve to further group items in the multi-attribute set into sub-groups displayed on separate lines of a form.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Settings</th>
+<th class="head">Description</th>
+<th class="head">Default</th>
+<th class="head">Values</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>doesNotTakeLocale</td>
+<td>Defines whether element take locale specification.</td>
+<td>0 (takes locale)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-odd"><td>lineBreakAfterNumberOfElements</td>
+<td>Number of metadata elements after which a line break should be inserted.</td>
+<td>0 (no line breaks)</td>
+<td>Integers zero or greater</td>
+</tr>
+<tr class="row-even"><td>canBeUsedInSearchForm</td>
+<td>Use this option if the attribute value can be used in search forms.</td>
+<td>1 (used in search forms)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-odd"><td>canBeUsedInDisplay</td>
+<td>Use this option if the attribute value can be used for display in search results.</td>
+<td>1 (used for display)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-even"><td>displayTemplate</td>
+<td>Layout for value when used in a display. Element code tags prefixed with the ^ character, used to represent the value in the template. For example: <em>^my_element_code</em>.</td>
+<td>&nbsp;</td>
+<td>Display_Templates</td>
+</tr>
+<tr class="row-odd"><td>displayDelimiter</td>
+<td>Delimiter to use between multiple values.</td>
+<td>, (comma)</td>
+<td>Text</td>
+</tr>
+<tr class="row-even"><td>readonlyTemplate</td>
+<td><p class="first">Layout used when a container value is in read-only mode. If this template is set, existing values are always displayed in read-only mode until you click to edit. This can be used to preserve screen space for large containers.</p>
+<p class="last">Element code tags prefixed with the ^ character, used to represent the value in the template. For example: ^ca_objects.my_notes. Each of these templates is evaluated relative to a specific value instance for this container, so other display template elements like &lt;unit&gt;, &lt;ifdef&gt; or &lt;more&gt; might not work exactly as expected. More general notes on display templates are here: Display_Templates</p>
+</td>
+<td>&nbsp;</td>
+<td>HTML</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="attribute-settings-text">
+<h2><a class="toc-backref" href="#id3">Attribute settings: Text</a><a class="headerlink" href="#attribute-settings-text" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Settings</th>
+<th class="head">Description</th>
+<th class="head">Default</th>
+<th class="head">Values</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>minChars</td>
+<td>The minimum number of characters to allow. Input shorter than required will be rejected.</td>
+<td>0 (no minimum)</td>
+<td>Integers zero or greater</td>
+</tr>
+<tr class="row-odd"><td>maxChars</td>
+<td>The maximum number of characters to allow. Input longer than required will be rejected.</td>
+<td>65535</td>
+<td>Integers greater than zero</td>
+</tr>
+<tr class="row-even"><td>regex</td>
+<td>A Perl-format regular expression with which to validate the input. Input not matching the expression will be rejected. Do not include the leading and trailling delimiter characters (typically &#8220;/&#8221;) in your expression. Leave blank if you don&#8217;t want to use regular expression-based validation.</td>
+<td>&nbsp;</td>
+<td>Expression-based validation value</td>
+</tr>
+<tr class="row-odd"><td>fieldWidth</td>
+<td>Width, in characters, of the field when displayed in a user interface.</td>
+<td>40</td>
+<td>Integers greater than zero</td>
+</tr>
+<tr class="row-even"><td>fieldHeight</td>
+<td>Height, in characters, of the field when displayed in a user interface.</td>
+<td>1</td>
+<td>Integers greater than zero</td>
+</tr>
+<tr class="row-odd"><td>usewysiwygeditor</td>
+<td>Check this option if you want to use a word-processor like editor with this text field. If you expect users to enter rich text (italic, bold, underline) then you might want to enable this.</td>
+<td>0 (not enabled)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-even"><td>default_text</td>
+<td>Text to pre-populate a newly created attribute with</td>
+<td>&nbsp;</td>
+<td>Text</td>
+</tr>
+<tr class="row-odd"><td>suggestExistingValues</td>
+<td>Use this option if you want the attribute to suggest previously saved values as text. This option is only effective if the display height of the text entry is equal to 1.</td>
+<td>0 (does not suggest text)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-even"><td>suggestExistingValueSort</td>
+<td>If suggestion of existing values is enabled this option determines how returned values are sorted. Choose valueto sort alphabetically. Choose most recently added to sort with most recently entered values first.</td>
+<td>value</td>
+<td>value ormost recently added</td>
+</tr>
+<tr class="row-odd"><td>doesNotTakeLocale</td>
+<td>Defines whether element take locale specification</td>
+<td>0 (takes locale)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-even"><td>canBeUsedInSort</td>
+<td>Use this option if this attribute value can be used for sorting of search results.</td>
+<td>1 (used in sort)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-odd"><td>canBeUsedInSearchForm</td>
+<td>Use this option if the attribute value can be used in search forms</td>
+<td>1 (used in search forms)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-even"><td>canBeUsedInDisplay</td>
+<td>Use this option if the attribute value can be used for display in search results</td>
+<td>1 (used for display)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-odd"><td>displayTemplate</td>
+<td>Layout for value when used in a display. Element code tags prefixed with the ^ character, used to represent the value in the template. For example: &lt;i&gt;^my_element_code&lt;/i&gt;.</td>
+<td>&nbsp;</td>
+<td>HTML</td>
+</tr>
+<tr class="row-even"><td>displayDelimiter</td>
+<td>Delimiter to use between multiple values</td>
+<td>, (comma)</td>
+<td>Text</td>
+</tr>
+<tr class="row-odd"><td>mustBeUnique</td>
+<td>If this option is set, the system will prevent adding duplicate values for this metadata element. If a value already exists, it can&#8217;t be entered again. A warning will be placed next to the text field as data is entered and saving the record anyway will result in an error.</td>
+<td>1</td>
+<td>0 or 1</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="attribute-settings-daterange">
+<h2><a class="toc-backref" href="#id4">Attribute settings: DateRange</a><a class="headerlink" href="#attribute-settings-daterange" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Settings</th>
+<th class="head">Description</th>
+<th class="head">Default</th>
+<th class="head">Values</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>dateRangeBoundaries</td>
+<td>The range of dates that are accepted. Input dates outside the range will be rejected. Leave blank if you do not require restrictions.</td>
+<td>&nbsp;</td>
+<td>Accepted date/time expression</td>
+</tr>
+<tr class="row-odd"><td>fieldWidth</td>
+<td>Width, in characters, of the field when displayed in a user interface.</td>
+<td>40</td>
+<td>Integers greater than zero</td>
+</tr>
+<tr class="row-even"><td>useDatePicker</td>
+<td>Use this option if you want a calendar-based date picker to be available for date entry.</td>
+<td>0 (not enabled)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-odd"><td>default_text</td>
+<td>Value to pre-populate a newly created attribute with.</td>
+<td>&nbsp;</td>
+<td>Accepted date/time expression</td>
+</tr>
+<tr class="row-even"><td>mustNotBeBlank</td>
+<td>Use this option if this attribute value must be set to some value - if, in other words, it must not be blank.</td>
+<td>0 (can be blank)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-odd"><td>isLifespan</td>
+<td>Use this option if this attribute value represents a persons lifespan. Lifespans are displayed in a slightly different format in many languages than standard dates.</td>
+<td>0 (not enabled)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-even"><td>suggestExistingValues</td>
+<td>Use this option if you want the attribute to suggest previously saved values as text. This option is only effective if the display height of the text entry is equal to 1.</td>
+<td>0 (does not suggest text)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-odd"><td>suggestExistingValueSort</td>
+<td>If suggestion of existing values is enabled this option determines how returned values are sorted. Choose value to sort alphabetically. Choose most recently added to sort with most recently entered values first.</td>
+<td>value</td>
+<td>value or most recently added</td>
+</tr>
+<tr class="row-even"><td>doesNotTakeLocale</td>
+<td>Defines whether element take locale specification</td>
+<td>1 (does not take locale specifications)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-odd"><td>canBeUsedInSort</td>
+<td>Use this option if this attribute value can be used for sorting of search results.</td>
+<td>1 (used in sort)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-even"><td>canBeUsedInSearchForm</td>
+<td>Use this option if the attribute value can be used in search forms</td>
+<td>1 (used in search forms)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-odd"><td>canBeUsedInDisplay</td>
+<td>Use this option if the attribute value can be used for display in search results</td>
+<td>1 (used for display)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-even"><td>displayTemplate</td>
+<td>Layout for value when used in a display. Element code tags prefixed with the ^ character, used to represent the value in the template. For example: &lt;i&gt;^my_element_code&lt;/i&gt;.</td>
+<td>&nbsp;</td>
+<td>HTML</td>
+</tr>
+<tr class="row-odd"><td>displayDelimiter</td>
+<td>Delimiter to use between multiple values</td>
+<td>, (comma)</td>
+<td>Text</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="attribute-settings-lists">
+<h2><a class="toc-backref" href="#id5">Attribute settings: Lists</a><a class="headerlink" href="#attribute-settings-lists" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Settings</th>
+<th class="head">Description</th>
+<th class="head">Default</th>
+<th class="head">Values</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>listWidth</td>
+<td>Width, in characters or pixels, of the list when displayed in a user interface. When list is rendered as a hierarchy browser width must be in pixels.</td>
+<td>40</td>
+<td>Characters or pixels</td>
+</tr>
+<tr class="row-odd"><td>listHeight</td>
+<td>Height, in pixels, of the list when displayed in a user interface as a hierarchy browser.</td>
+<td>200px</td>
+<td>Pixels</td>
+</tr>
+<tr class="row-even"><td>maxColumns</td>
+<td>Maximum number of columns to use when laying out radio buttons or checklist.</td>
+<td>3</td>
+<td>Integers greater than zero</td>
+</tr>
+<tr class="row-odd"><td>render</td>
+<td>Determines how the list is displayed visually.</td>
+<td>Drop-down list (&#8216;select&#8217;)</td>
+<td>Drop-down menu (code=&#8221;select&#8221;)
+Yes/no checkbox (code=&#8221;yes_no_checkboxes&#8221;)
+Radio buttons (code=&#8221;radio_buttons&#8221;); Checklist (code=&#8221;checklist&#8221;)
+Type-ahead lookup (code=&#8221;lookup&#8221;)
+Horizontal hierarchy browser (code=&#8221;horiz_hierbrowser&#8221;)
+Horizontal hierarchy browser with search (code=&#8221;horiz_hierbrowser_with_search&#8221;)
+Vertical hierarchy browser (code=&#8221;vert_hierbrowser&#8221;)</td>
+</tr>
+<tr class="row-even"><td>doesNotTakeLocale</td>
+<td>Defines whether element takes locale specification</td>
+<td>1 (does not take locale specifications)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-odd"><td>requireValue</td>
+<td>Defines whether a list item must be explicitly set. If set to 1 then a valid list item must be selected, and in the absence of a selected value the default value is used. If set to zero then a &#8220;null&#8221; value (labeled &#8220;none&#8221; in the English locale) is added to the list and made default</td>
+<td>1 (require value)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-even"><td>canBeUsedInSort</td>
+<td>Use this option if this attribute value can be used for sorting of search results.</td>
+<td>1 (used in sort)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-odd"><td>canBeUsedInSearchForm</td>
+<td>Use this option if the attribute value can be used in search forms</td>
+<td>1 (used in search forms)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-even"><td>canBeUsedInDisplay</td>
+<td>Use this option if the attribute value can be used for display in search results</td>
+<td>1 (used for display)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-odd"><td>displayTemplate</td>
+<td>Layout for value when used in a display. Element code tags prefixed with the ^ character, used to represent the value in the template. For example: <em>^my_element_code</em>.</td>
+<td>&nbsp;</td>
+<td>HTML</td>
+</tr>
+<tr class="row-even"><td>displayDelimiter</td>
+<td>Delimiter to use between multiple values</td>
+<td>, (comma)</td>
+<td>Text</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="attribute-settings-geocode">
+<h2><a class="toc-backref" href="#id6">Attribute settings: Geocode</a><a class="headerlink" href="#attribute-settings-geocode" title="Permalink to this headline">¶</a></h2>
+<p>The Geocode attribute type represents one or more coordinates (latitude/longitude pairs) indicating the location of an item (collection object, geographic place, storage location or whatever else you want to place on a map).</p>
+<p>Coordinates can be entered as decimal latitude/longitude pairs (ex. 40.321,-74.55) or in degrees-minutes-seconds format (ex. 40? 23&#8217; 10N, 74? 30&#8217; 5W). Multiple latitude/longitude coordinates should be separated with semicolons (&#8221;;&#8221;). <a class="reference external" href="https://en.wikipedia.org/wiki/Universal_Transverse_Mercator_coordinate_system">UTM</a> format coordinates is also supported.</p>
+<p>Non-coordinate entries are converted to coordinates using the Google Maps Geocoding service, which works well for most full and partial addresses worldwide. To unambiguously distinguish coordinate data from address data to be geocoded, it is strongly suggested that coordinate lists be enclosed in square brackets (ex. [40.321,-74.55; 41.321,-74.55;41.321,-75.55;40.321,-75.55;40.321,-74.55].</p>
+<div class="section" id="google-maps-integration">
+<h3><a class="toc-backref" href="#id7">Google Maps integration</a><a class="headerlink" href="#google-maps-integration" title="Permalink to this headline">¶</a></h3>
+<p>The Google Maps mapping service is used to produce maps displaying your coordinates. The Geocode attribute used to support either version 2 or 3 of the Google Maps API, selectable via the google_api directive in the global.conf file. As of August 2010, only the v3 API is supported since v2 is now officially deprecated by Google. Any old v2 configuration in your installation (assuming you installed prior to August 2010) will be ignored.</p>
+</div>
+<div class="section" id="adding-rectified-overlays">
+<h3><a class="toc-backref" href="#id8">Adding rectified overlays</a><a class="headerlink" href="#adding-rectified-overlays" title="Permalink to this headline">¶</a></h3>
+<p>You can add layers that include rectified maps by creating serve-able tiles using a tool such as <a class="reference external" href="http://mapwarper.net">MapWarper</a> and the Google/OSM URL it provides as an export option. The OSM URL will be in the format <code class="docutils literal"><span class="pre">http://mapwarper.net/maps/tile/0001/z/x/y.png</span></code>. You will need to change the x, y and z placeholders in ${x}, ${y} and ${z} respectively. The example OSM URL for CollectiveAccess would be <code class="docutils literal"><span class="pre">http://mapwarper.net/maps/tile/3671/${z}/${x}/${y}.png</span></code>. This URL should be entered into the &#8220;Tile Server URL&#8221; option for the metadata element. You should also provide a layer name describing the content of the map. If you wish to allow users to toggle the layer on and off check the &#8220;Show layer switcher controls&#8221; checkbox.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Settings</th>
+<th class="head">Description</th>
+<th class="head">Default</th>
+<th class="head">Values</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>fieldWidth</td>
+<td>Width, in characters, of the field when displayed in a user interface.</td>
+<td>70</td>
+<td>Integers greater than zero</td>
+</tr>
+<tr class="row-odd"><td>fieldHeight</td>
+<td>Height, in characters, of the field when displayed in a user interface.</td>
+<td>2</td>
+<td>Integers greater than zero</td>
+</tr>
+<tr class="row-even"><td>mustNotBeBlank</td>
+<td>Use this option if this attribute value must be set to some value - if, in other words, it must not be blank.</td>
+<td>0 (can be blank)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-odd"><td>doesNotTakeLocale</td>
+<td>Defines whether element takes locale specification.</td>
+<td>1 (does not take locale specifications)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-even"><td>canBeUsedInSort</td>
+<td>Use this option if this attribute value can be used for sorting of search results.</td>
+<td>0 (not used in sort)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-odd"><td>canBeUsedInSearchForm</td>
+<td>Use this option if the attribute value can be used in search forms.</td>
+<td>1 (used in search forms)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-even"><td>canBeUsedInDisplay</td>
+<td>Use this option if the attribute value can be used for display in search results.</td>
+<td>1 (used for display)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-odd"><td>displayTemplate</td>
+<td>Layout for value when used in a display. Element code tags prefixed with the ^ character, used to represent the value in the template. For example: &lt;i&gt;^my_element_code&lt;/i&gt;.</td>
+<td>&nbsp;</td>
+<td>HTML</td>
+</tr>
+<tr class="row-even"><td>tileServerURL</td>
+<td>OSM URL for tileserver to load custom tiles from, with placeholders for X, Y and Z values in the format ${x}. .</td>
+<td><a class="reference external" href="http://mapwarper.net/maps/tile/3671">http://mapwarper.net/maps/tile/3671</a>/${z}/${x}/${y}.png</td>
+<td>URL with placeholders</td>
+</tr>
+<tr class="row-odd"><td>tileLayerName</td>
+<td>Display name for layer containing tiles loaded from tile server specified in the tile server URL setting.</td>
+<td>1929 Street Atlas</td>
+<td>Text</td>
+</tr>
+<tr class="row-even"><td>layerSwitcherControl</td>
+<td>Include layer switching controls in the map interface.</td>
+<td>1 (show controls)</td>
+<td>0 or 1</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="attribute-settings-url">
+<h2><a class="toc-backref" href="#id9">Attribute settings: Url</a><a class="headerlink" href="#attribute-settings-url" title="Permalink to this headline">¶</a></h2>
+<p>Accepts a properly formatted URL value.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Settings</th>
+<th class="head">Description</th>
+<th class="head">Default</th>
+<th class="head">Values</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>minChars</td>
+<td>The minimum number of characters to allow. Input shorter than required will be rejected.</td>
+<td>0 (no minimum)</td>
+<td>Integers zero or greater</td>
+</tr>
+<tr class="row-odd"><td>maxChars</td>
+<td>The maximum number of characters to allow. Input longer than required will be rejected.</td>
+<td>65535</td>
+<td>Integers greater than zero</td>
+</tr>
+<tr class="row-even"><td>regex</td>
+<td>A Perl-format regular expression with which to validate the input. Input not matching the expression will be rejected. Do not include the leading and trailling delimiter characters (typically &#8220;/&#8221;) in your expression. Leave blank if you don&#8217;t want to use regular expression-based validation.</td>
+<td>&nbsp;</td>
+<td>Expression-based validation value</td>
+</tr>
+<tr class="row-odd"><td>fieldWidth</td>
+<td>Width, in characters, of the field when displayed in a user interface.</td>
+<td>40</td>
+<td>Integers greater than zero</td>
+</tr>
+<tr class="row-even"><td>fieldHeight</td>
+<td>Height, in characters, of the field when displayed in a user interface.</td>
+<td>1</td>
+<td>Integers greater than zero</td>
+</tr>
+<tr class="row-odd"><td>requireValue</td>
+<td>Use this option if you want an error to be thrown if the URL is left blank.</td>
+<td>0 (entry not required)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-even"><td>suggestExistingValues</td>
+<td>Use this option if you want the attribute to suggest previously saved values as text. This option is only effective if the display height of the text entry is equal to 1.</td>
+<td>0 (does not suggest text)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-odd"><td>suggestExistingValueSort</td>
+<td>If suggestion of existing values is enabled this option determines how returned values are sorted. Choosevalue to sort alphabetically. Choose most recently added to sort with most recently entered values first.</td>
+<td>value</td>
+<td>value ormost recently added</td>
+</tr>
+<tr class="row-even"><td>doesNotTakeLocale</td>
+<td>Defines whether element takes locale specification.</td>
+<td>1 (does not take locale specifications)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-odd"><td>canBeUsedInSort</td>
+<td>Use this option if this attribute value can be used for sorting of search results.</td>
+<td>1 (used in sort)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-even"><td>canBeUsedInSearchForm</td>
+<td>Use this option if the attribute value can be used in search forms.</td>
+<td>1 (used in search forms)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-odd"><td>canBeUsedInDisplay</td>
+<td>Use this option if the attribute value can be used for display in search results.</td>
+<td>1 (used for display)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-even"><td>displayTemplate</td>
+<td>Layout for value when used in a display. Element code tags prefixed with the ^ character, used to represent the value in the template. For example: &lt;i&gt;^my_element_code&lt;/i&gt;.</td>
+<td>&nbsp;</td>
+<td>HTML</td>
+</tr>
+<tr class="row-odd"><td>displayDelimiter</td>
+<td>Delimiter to use between multiple values.</td>
+<td>, (comma)</td>
+<td>Text</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="attribute-settings-currency">
+<h2><a class="toc-backref" href="#id10">Attribute settings: Currency</a><a class="headerlink" href="#attribute-settings-currency" title="Permalink to this headline">¶</a></h2>
+<p>Accepts a currency value composed of a currency specifier and a decimal number.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Settings</th>
+<th class="head">Description</th>
+<th class="head">Default</th>
+<th class="head">Values</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>minValue</td>
+<td>The minimum value allowed. Input less than the required value will be rejected.</td>
+<td>0 (no minimum)</td>
+<td>Numeric</td>
+</tr>
+<tr class="row-odd"><td>maxValue</td>
+<td>The maximum value allowed. Input greater than the required value will be rejected.</td>
+<td>0 (no maximum)</td>
+<td>Numeric</td>
+</tr>
+<tr class="row-even"><td>fieldWidth</td>
+<td>Width, in characters, of the field when displayed in a user interface.</td>
+<td>40</td>
+<td>Integers greater then zero</td>
+</tr>
+<tr class="row-odd"><td>fieldHeight</td>
+<td>Height, in characters, of the field when displayed in a user interface.</td>
+<td>1</td>
+<td>Integers greater then zero</td>
+</tr>
+<tr class="row-even"><td>doesNotTakeLocale</td>
+<td>Defines whether element takes locale specification.</td>
+<td>1 (does not take locale specifications)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-odd"><td>canBeUsedInSort</td>
+<td>Use this option if this attribute value can be used for sorting of search results.</td>
+<td>1 (used in sort)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-even"><td>canBeUsedInSearchForm</td>
+<td>Use this option if the attribute value can be used in search forms.</td>
+<td>1 (used in search forms)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-odd"><td>canBeUsedInDisplay</td>
+<td>Use this option if the attribute value can be used for display in search results.</td>
+<td>1 (used for display)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-even"><td>displayTemplate</td>
+<td>Layout for value when used in a display. Element code tags prefixed with the ^ character, used to represent the value in the template. For example: &lt;i&gt;^my_element_code&lt;/i&gt;.</td>
+<td>&nbsp;</td>
+<td>HTML</td>
+</tr>
+<tr class="row-odd"><td>displayDelimiter</td>
+<td>Delimiter to use between multiple values.</td>
+<td>, (comma)</td>
+<td>Text</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="attribute-settings-length">
+<h2><a class="toc-backref" href="#id11">Attribute settings: Length</a><a class="headerlink" href="#attribute-settings-length" title="Permalink to this headline">¶</a></h2>
+<p>Accepts length measurements in metric, English and typographical points units.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Settings</th>
+<th class="head">Description</th>
+<th class="head">Default</th>
+<th class="head">Values</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>fieldWidth</td>
+<td>Width, in characters, of the field when displayed in a user interface.</td>
+<td>40</td>
+<td>Integers greater then zero</td>
+</tr>
+<tr class="row-odd"><td>fieldHeight</td>
+<td>Height, in characters, of the field when displayed in a user interface.</td>
+<td>1</td>
+<td>Integers greater then zero</td>
+</tr>
+<tr class="row-even"><td>requireValue</td>
+<td>Use this option if you want an error to be thrown if this measurement is left blank.</td>
+<td>0 (can be blank)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-odd"><td>doesNotTakeLocale</td>
+<td>Defines whether measurement takes locale specification.</td>
+<td>1 (does not take locale specifications)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-even"><td>canBeUsedInSort</td>
+<td>Use this option if this attribute value can be used for sorting of search results.</td>
+<td>1 (used in sort)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-odd"><td>canBeUsedInSearchForm</td>
+<td>Use this option if the attribute value can be used in search forms.</td>
+<td>1 (used in search forms)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-even"><td>canBeUsedInDisplay</td>
+<td>Use this option if the attribute value can be used for display in search results.</td>
+<td>1 (used for display)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-odd"><td>displayTemplate</td>
+<td>Layout for value when used in a display. Element code tags prefixed with the ^ character, used to represent the value in the template. For example: &lt;i&gt;^my_element_code&lt;/i&gt;.</td>
+<td>&nbsp;</td>
+<td>HTML</td>
+</tr>
+<tr class="row-even"><td>displayDelimiter</td>
+<td>Delimiter to use between multiple values.</td>
+<td>, (comma)</td>
+<td>Text</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="attribute-settings-weight">
+<h2><a class="toc-backref" href="#id12">Attribute settings: Weight</a><a class="headerlink" href="#attribute-settings-weight" title="Permalink to this headline">¶</a></h2>
+<p>Accepts weight measurements in metric and English units.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Settings</th>
+<th class="head">Description</th>
+<th class="head">Default</th>
+<th class="head">Values</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>fieldWidth</td>
+<td>Width, in characters, of the field when displayed in a user interface.</td>
+<td>40</td>
+<td>Integers greater then zero</td>
+</tr>
+<tr class="row-odd"><td>fieldHeight</td>
+<td>Height, in characters, of the field when displayed in a user interface.</td>
+<td>1</td>
+<td>Integers greater then zero</td>
+</tr>
+<tr class="row-even"><td>requireValue</td>
+<td>Use this option if you want an error to be thrown if this measurement is left blank.</td>
+<td>0 (can be blank)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-odd"><td>doesNotTakeLocale</td>
+<td>Defines whether measurement takes locale specification.</td>
+<td>1 (does not take locale specifications)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-even"><td>canBeUsedInSort</td>
+<td>Use this option if this attribute value can be used for sorting of search results.</td>
+<td>1 (used in sort)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-odd"><td>canBeUsedInSearchForm</td>
+<td>Use this option if the attribute value can be used in search forms.</td>
+<td>1 (used in search forms)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-even"><td>canBeUsedInDisplay</td>
+<td>Use this option if the attribute value can be used for display in search results.</td>
+<td>1 (used for display)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-odd"><td>displayTemplate</td>
+<td>Layout for value when used in a display. Element code tags prefixed with the ^ character, used to represent the value in the template. For example: &lt;i&gt;^my_element_code&lt;/i&gt;.</td>
+<td>&nbsp;</td>
+<td>HTML</td>
+</tr>
+<tr class="row-even"><td>displayDelimiter</td>
+<td>Delimiter to use between multiple values.</td>
+<td>, (comma)</td>
+<td>Text</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="attribute-settings-timecode">
+<h2><a class="toc-backref" href="#id13">Attribute settings: TimeCode</a><a class="headerlink" href="#attribute-settings-timecode" title="Permalink to this headline">¶</a></h2>
+<p>Accepts time offsets in a number of time code formats.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Settings</th>
+<th class="head">Description</th>
+<th class="head">Default</th>
+<th class="head">Values</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>fieldWidth</td>
+<td>Width, in characters, of the field when displayed in a user interface.</td>
+<td>40</td>
+<td>Integers greater than zero</td>
+</tr>
+<tr class="row-odd"><td>fieldHeight</td>
+<td>Height, in characters, of the field when displayed in a user interface.</td>
+<td>1</td>
+<td>Integers greater than zero</td>
+</tr>
+<tr class="row-even"><td>requireValue</td>
+<td>Use this option if you want an error to be thrown if this measurement is left blank.</td>
+<td>0 (can be blank)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-odd"><td>doesNotTakeLocale</td>
+<td>Defines whether measurement takes locale specification.</td>
+<td>1 (does not take locale specifications)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-even"><td>canBeUsedInSort</td>
+<td>Use this option if this attribute value can be used for sorting of search results.</td>
+<td>1 (used in sort)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-odd"><td>canBeUsedInSearchForm</td>
+<td>Use this option if the attribute value can be used in search forms.</td>
+<td>1 (used in search forms)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-even"><td>canBeUsedInDisplay</td>
+<td>Use this option if the attribute value can be used for display in search results.</td>
+<td>1 (used for display)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-odd"><td>displayTemplate</td>
+<td>Layout for value when used in a display. Element code tags prefixed with the ^ character, used to represent the value in the template. For example: &lt;i&gt;^my_element_code&lt;/i&gt;.</td>
+<td>&nbsp;</td>
+<td>HTML</td>
+</tr>
+<tr class="row-even"><td>displayDelimiter</td>
+<td>Delimiter to use between multiple values.</td>
+<td>, (comma)</td>
+<td>Text</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="attribute-settings-integer">
+<h2><a class="toc-backref" href="#id14">Attribute settings: Integer</a><a class="headerlink" href="#attribute-settings-integer" title="Permalink to this headline">¶</a></h2>
+<p>Accepts a properly formatted integer value.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Settings</th>
+<th class="head">Description</th>
+<th class="head">Default</th>
+<th class="head">Values</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>minChars</td>
+<td>The minimum number of characters to allow. Input shorter than required will be rejected.</td>
+<td>0 (no minimum)</td>
+<td>Integers zero or greater</td>
+</tr>
+<tr class="row-odd"><td>maxChars</td>
+<td>The maximum number of characters to allow. Input longer than required will be rejected.</td>
+<td>65535</td>
+<td>Integers greater than zero</td>
+</tr>
+<tr class="row-even"><td>minValue</td>
+<td>The minimum numeric value to allow. Values smaller than required will be rejected.</td>
+<td>&nbsp;</td>
+<td>Numeric</td>
+</tr>
+<tr class="row-odd"><td>maxValue</td>
+<td>The maximum numeric value to allow. Values greater than required will be rejected.</td>
+<td>&nbsp;</td>
+<td>Numeric</td>
+</tr>
+<tr class="row-even"><td>regex</td>
+<td>A Perl-format regular expression with which to validate the input. Input not matching the expression will be rejected. Do not include the leading and trailing delimiter characters (typically &#8220;/&#8221;) in your expression. Leave blank if you don&#8217;t want to use regular expression-based validation.</td>
+<td>&nbsp;</td>
+<td>Expression-based validation value</td>
+</tr>
+<tr class="row-odd"><td>fieldWidth</td>
+<td>Width, in characters, of the field when displayed in a user interface.</td>
+<td>40</td>
+<td>Integers greater than zero</td>
+</tr>
+<tr class="row-even"><td>fieldHeight</td>
+<td>Height, in characters, of the field when displayed in a user interface.</td>
+<td>1</td>
+<td>Integers greater than zero</td>
+</tr>
+<tr class="row-odd"><td>mustNotBeBlank</td>
+<td>Use this option if you want an error to be thrown if the URL is left blank.</td>
+<td>0 (entry not required)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-even"><td>doesNotTakeLocale</td>
+<td>Defines whether element takes locale specification.</td>
+<td>0 (takes locale specifications)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-odd"><td>canBeUsedInSort</td>
+<td>Use this option if this attribute value can be used for sorting of search results.</td>
+<td>1 (used in sort)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-even"><td>canBeUsedInSearchForm</td>
+<td>Use this option if the attribute value can be used in search forms.</td>
+<td>1 (used in search forms)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-odd"><td>canBeUsedInDisplay</td>
+<td>Use this option if the attribute value can be used for display in search results.</td>
+<td>1 (used for display)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-even"><td>displayTemplate</td>
+<td>Layout for value when used in a display. Element code tags prefixed with the ^ character, used to represent the value in the template. For example: &lt;i&gt;^my_element_code&lt;/i&gt;.</td>
+<td>&nbsp;</td>
+<td>HTML</td>
+</tr>
+<tr class="row-odd"><td>displayDelimiter</td>
+<td>Delimiter to use between multiple values.</td>
+<td>, (comma)</td>
+<td>Text</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="attribute-settings-numeric">
+<h2><a class="toc-backref" href="#id15">Attribute settings: Numeric</a><a class="headerlink" href="#attribute-settings-numeric" title="Permalink to this headline">¶</a></h2>
+<p>Accepts numeric values and strings consisting of optional sign, any number of digits, optional decimal part and optional exponential part.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Settings</th>
+<th class="head">Description</th>
+<th class="head">Default</th>
+<th class="head">Values</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>minChars</td>
+<td>The minimum number of characters to allow. Input shorter than required will be rejected.</td>
+<td>0 (no minimum)</td>
+<td>Integers zero or greater</td>
+</tr>
+<tr class="row-odd"><td>maxChars</td>
+<td>The maximum number of characters to allow. Input longer than required will be rejected.</td>
+<td>10</td>
+<td>Integers greater than zero</td>
+</tr>
+<tr class="row-even"><td>minValue</td>
+<td>The minimum numeric value to allow. Values smaller than required will be rejected.</td>
+<td>&nbsp;</td>
+<td>Integers</td>
+</tr>
+<tr class="row-odd"><td>maxValue</td>
+<td>The maximum numeric value to allow. Values greater than required will be rejected.</td>
+<td>&nbsp;</td>
+<td>Integers</td>
+</tr>
+<tr class="row-even"><td>regex</td>
+<td>A Perl-format regular expression with which to validate the input. Input not matching the expression will be rejected. Do not include the leading and trailing delimiter characters (typically &#8220;/&#8221;) in your expression. Leave blank if you don&#8217;t want to use regular expression-based validation.</td>
+<td>&nbsp;</td>
+<td>Expression-based validation value</td>
+</tr>
+<tr class="row-odd"><td>fieldWidth</td>
+<td>Width, in characters, of the field when displayed in a user interface.</td>
+<td>40</td>
+<td>Integers greater than zero</td>
+</tr>
+<tr class="row-even"><td>fieldHeight</td>
+<td>Height, in characters, of the field when displayed in a user interface.</td>
+<td>1</td>
+<td>Integers greater than zero</td>
+</tr>
+<tr class="row-odd"><td>mustNotBeBlank</td>
+<td>Use this option if you want an error to be thrown if the URL is left blank.</td>
+<td>0 (entry not required)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-even"><td>doesNotTakeLocale</td>
+<td>Defines whether element takes locale specification.</td>
+<td>0 (takes locale specifications)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-odd"><td>canBeUsedInSort</td>
+<td>Use this option if this attribute value can be used for sorting of search results.</td>
+<td>1 (used in sort)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-even"><td>canBeUsedInSearchForm</td>
+<td>Use this option if the attribute value can be used in search forms.</td>
+<td>1 (used in search forms)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-odd"><td>canBeUsedInDisplay</td>
+<td>Use this option if the attribute value can be used for display in search results.</td>
+<td>1 (used for display)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-even"><td>displayTemplate</td>
+<td>Layout for value when used in a display. Element code tags prefixed with the ^ character, used to represent the value in the template. For example: &lt;i&gt;^my_element_code&lt;/i&gt;.</td>
+<td>&nbsp;</td>
+<td>HTML</td>
+</tr>
+<tr class="row-odd"><td>displayDelimiter</td>
+<td>Delimiter to use between multiple values.</td>
+<td>, (comma)</td>
+<td>Text</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id1">
+<h2><a class="toc-backref" href="#id16">Attribute settings: Numeric</a><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>Accepts numeric values and strings consisting of optional sign, any number of digits, optional decimal part and optional exponential part.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Settings</th>
+<th class="head">Description</th>
+<th class="head">Default</th>
+<th class="head">Values</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>minChars</td>
+<td>The minimum number of characters to allow. Input shorter than required will be rejected.</td>
+<td>0 (no minimum)</td>
+<td>Integers zero or greater</td>
+</tr>
+<tr class="row-odd"><td>maxChars</td>
+<td>The maximum number of characters to allow. Input longer than required will be rejected.</td>
+<td>10</td>
+<td>Integers greater than zero</td>
+</tr>
+<tr class="row-even"><td>minValue</td>
+<td>The minimum numeric value to allow. Values smaller than required will be rejected.</td>
+<td>&nbsp;</td>
+<td>Integers</td>
+</tr>
+<tr class="row-odd"><td>maxValue</td>
+<td>The maximum numeric value to allow. Values greater than required will be rejected.</td>
+<td>&nbsp;</td>
+<td>Integers</td>
+</tr>
+<tr class="row-even"><td>regex</td>
+<td>A Perl-format regular expression with which to validate the input. Input not matching the expression will be rejected. Do not include the leading and trailing delimiter characters (typically &#8220;/&#8221;) in your expression. Leave blank if you don&#8217;t want to use regular expression-based validation.</td>
+<td>&nbsp;</td>
+<td>Expression-based validation value</td>
+</tr>
+<tr class="row-odd"><td>fieldWidth</td>
+<td>Width, in characters, of the field when displayed in a user interface.</td>
+<td>40</td>
+<td>Integers greater than zero</td>
+</tr>
+<tr class="row-even"><td>fieldHeight</td>
+<td>Height, in characters, of the field when displayed in a user interface.</td>
+<td>1</td>
+<td>Integers greater than zero</td>
+</tr>
+<tr class="row-odd"><td>mustNotBeBlank</td>
+<td>Use this option if you want an error to be thrown if the URL is left blank.</td>
+<td>0 (entry not required)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-even"><td>doesNotTakeLocale</td>
+<td>Defines whether element takes locale specification.</td>
+<td>0 (takes locale specifications)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-odd"><td>canBeUsedInSort</td>
+<td>Use this option if this attribute value can be used for sorting of search results.</td>
+<td>1 (used in sort)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-even"><td>canBeUsedInSearchForm</td>
+<td>Use this option if the attribute value can be used in search forms.</td>
+<td>1 (used in search forms)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-odd"><td>canBeUsedInDisplay</td>
+<td>Use this option if the attribute value can be used for display in search results.</td>
+<td>1 (used for display)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-even"><td>displayTemplate</td>
+<td>Layout for value when used in a display. Element code tags prefixed with the ^ character, used to represent the value in the template. For example: &lt;i&gt;^my_element_code&lt;/i&gt;.</td>
+<td>&nbsp;</td>
+<td>HTML</td>
+</tr>
+<tr class="row-odd"><td>displayDelimiter</td>
+<td>Delimiter to use between multiple values.</td>
+<td>, (comma)</td>
+<td>Text</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="attribute-settings-lcsh">
+<h2><a class="toc-backref" href="#id17">Attribute settings: LCSH</a><a class="headerlink" href="#attribute-settings-lcsh" title="Permalink to this headline">¶</a></h2>
+<p>Library of Congress Subject Heading values.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Settings</th>
+<th class="head">Description</th>
+<th class="head">Default</th>
+<th class="head">Values</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>fieldWidth</td>
+<td>Width, in characters, of the field when displayed in a user interface.</td>
+<td>60</td>
+<td>Integers greater than zero</td>
+</tr>
+<tr class="row-odd"><td>fieldHeight</td>
+<td>Height, in characters, of the field when displayed in a user interface.</td>
+<td>1</td>
+<td>Integers greater than zero</td>
+</tr>
+<tr class="row-even"><td>doesNotTakeLocale</td>
+<td>Defines whether element takes locale specification.</td>
+<td>1 (does not take locale specifications)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-odd"><td>canBeUsedInSort</td>
+<td>Use this option if this attribute value can be used for sorting of search results.</td>
+<td>0 (not used in sort)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-even"><td>canBeUsedInSearchForm</td>
+<td>Use this option if the attribute value can be used in search forms.</td>
+<td>1 (used in search forms)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-odd"><td>canBeUsedInDisplay</td>
+<td>Use this option if the attribute value can be used for display in search results.</td>
+<td>1 (used for display)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-even"><td>displayTemplate</td>
+<td>Layout for value when used in a display. Element code tags prefixed with the ^ character, used to represent the value in the template. For example: &lt;i&gt;^my_element_code&lt;/i&gt;.</td>
+<td>&nbsp;</td>
+<td>HTML</td>
+</tr>
+<tr class="row-odd"><td>displayDelimiter</td>
+<td>Delimiter to use between multiple values.</td>
+<td>, (comma)</td>
+<td>Text</td>
+</tr>
+<tr class="row-even"><td>vocabulary</td>
+<td>Selects which vocabulary will be searched.</td>
+<td>&nbsp;</td>
+<td>All vocabularies&#8217; =&gt; ;&#8217;LC Subject Headings&#8217; =&gt; &#8216;cs:http://id.loc.gov/authorities/subjects&#8217;;
+&#8216;LC Name Authority File&#8217; =&gt; &#8216;cs:http://id.loc.gov/authorities/names&#8217;;
+&#8216;LC Subject Headings for Children&#8217; =&gt; &#8216;cs:http://id.loc.gov/authorities/childrensSubjects&#8217;;
+&#8216;LC Genre/Forms File&#8217; =&gt; &#8216;cs:http://id.loc.gov/authorities/genreForms&#8217;;
+&#8216;Thesaurus of Graphic Materials&#8217; =&gt; &#8216;cs:http://id.loc.gov/vocabulary/graphicMaterials&#8217;;
+&#8216;Preservation Events&#8217; =&gt; &#8216;cs:http://id.loc.gov/vocabulary/preservationEvents&#8217;;
+&#8216;Preservation Level Role&#8217; =&gt; &#8216;cs:http://id.loc.gov/vocabulary/preservationLevelRole&#8217;;
+&#8216;Cryptographic Hash Functions&#8217; =&gt; &#8216;cs:http://id.loc.gov/vocabulary/cryptographicHashFunctions&#8217;;
+&#8216;MARC Relators&#8217; =&gt; &#8216;cs:http://id.loc.gov/vocabulary/relators&#8217;;
+&#8216;MARC Countries&#8217; =&gt; &#8216;cs:http://id.loc.gov/vocabulary/countries&#8217;;
+&#8216;MARC Geographic Areas&#8217; =&gt; &#8216;cs:http://id.loc.gov/vocabulary/geographicAreas&#8217;;
+&#8216;MARC Languages&#8217; =&gt; &#8216;cs:http://id.loc.gov/vocabulary/languages&#8217;;
+&#8216;ISO639-1 Languages&#8217; =&gt; &#8216;cs:http://id.loc.gov/vocabulary/iso639-1&#8217;;
+&#8216;ISO639-2 Languages&#8217; =&gt; &#8216;cs:http://id.loc.gov/vocabulary/iso639-2&#8217;;
+&#8216;ISO639-5 Languages&#8217; =&gt; &#8216;cs:http://id.loc.gov/vocabulary/iso639-5&#8217;;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="attribute-settings-geonames">
+<h2><a class="toc-backref" href="#id18">Attribute settings: GeoNames</a><a class="headerlink" href="#attribute-settings-geonames" title="Permalink to this headline">¶</a></h2>
+<p>Represents one or more latitude/longitude coordinates</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Settings</th>
+<th class="head">Description</th>
+<th class="head">Default</th>
+<th class="head">Values</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>fieldWidth</td>
+<td>Width, in characters, of the field when displayed in a user interface.</td>
+<td>60</td>
+<td>Integers greater than zero</td>
+</tr>
+<tr class="row-odd"><td>fieldHeight</td>
+<td>Height, in characters, of the field when displayed in a user interface.</td>
+<td>1</td>
+<td>Integers greater than zero</td>
+</tr>
+<tr class="row-even"><td>mustNotBeBlank</td>
+<td>Use this option if this attribute value must be set to some value - if, in other words, it must not be blank.</td>
+<td>0 (can be blank)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-odd"><td>doesNotTakeLocale</td>
+<td>Defines whether element takes locale specification.</td>
+<td>1 (does not take locale specifications)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-even"><td>canBeEmpty</td>
+<td>Use this option if you want to allow empty attribute values. This - of course - only makes sense if you bundle several elements in a container.</td>
+<td>0</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-odd"><td>canBeUsedInSort</td>
+<td>Use this option if this attribute value can be used for sorting of search results.</td>
+<td>0 (not used in sort)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-even"><td>canBeUsedInSearchForm</td>
+<td>Use this option if the attribute value can be used in search forms.</td>
+<td>1 (used in search forms)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-odd"><td>canBeUsedInDisplay</td>
+<td>Use this option if the attribute value can be used for display in search results.</td>
+<td>1 (used for display)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-even"><td>displayTemplate</td>
+<td>Layout for value when used in a display. Element code tags prefixed with the ^ character, used to represent the value in the template. For example: &lt;i&gt;^my_element_code&lt;/i&gt;.</td>
+<td>&nbsp;</td>
+<td>HTML</td>
+</tr>
+<tr class="row-odd"><td>displayDelimiter</td>
+<td>Delimiter to use between multiple values.</td>
+<td>, (comma)</td>
+<td>Text</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="attribute-settings-files">
+<h2><a class="toc-backref" href="#id19">Attribute settings: Files</a><a class="headerlink" href="#attribute-settings-files" title="Permalink to this headline">¶</a></h2>
+<p>Uploaded file</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Settings</th>
+<th class="head">Description</th>
+<th class="head">Default</th>
+<th class="head">Values</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>doesNotTakeLocale</td>
+<td>Defines whether element takes locale specification.</td>
+<td>1 (does not take locale specifications)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-odd"><td>canBeUsedInDisplay</td>
+<td>Use this option if the attribute value can be used for display in search results.</td>
+<td>1 (used for display)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-even"><td>displayTemplate</td>
+<td>Layout for value when used in a display. Element code tags prefixed with the ^ character, used to represent the value in the template. For example: &lt;i&gt;^my_element_code&lt;/i&gt;.</td>
+<td>&nbsp;</td>
+<td>HTML</td>
+</tr>
+<tr class="row-odd"><td>displayDelimiter</td>
+<td>Delimiter to use between multiple values.</td>
+<td>, (comma)</td>
+<td>Text</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="attribute-settings-media">
+<h2><a class="toc-backref" href="#id20">Attribute settings: Media</a><a class="headerlink" href="#attribute-settings-media" title="Permalink to this headline">¶</a></h2>
+<p>Uploaded media (image, sound video).</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Settings</th>
+<th class="head">Description</th>
+<th class="head">Default</th>
+<th class="head">Values</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>doesNotTakeLocale</td>
+<td>Defines whether element takes locale specification.</td>
+<td>1 (does not take locale specifications)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-odd"><td>canBeUsedInDisplay</td>
+<td>Use this option if the attribute value can be used for display in search results.</td>
+<td>1 (used for display)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-even"><td>displayTemplate</td>
+<td>Layout for value when used in a display. Element code tags prefixed with the ^ character, used to represent the value in the template. For example: &lt;i&gt;^my_element_code&lt;/i&gt;.</td>
+<td>&nbsp;</td>
+<td>HTML</td>
+</tr>
+<tr class="row-odd"><td>displayDelimiter</td>
+<td>Delimiter to use between multiple values.</td>
+<td>, (comma)</td>
+<td>Text</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="attribute-settings-taxonomy">
+<h2><a class="toc-backref" href="#id21">Attribute settings: Taxonomy</a><a class="headerlink" href="#attribute-settings-taxonomy" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Settings</th>
+<th class="head">Description</th>
+<th class="head">Default</th>
+<th class="head">Values</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>fieldWidth</td>
+<td>Width, in characters, of the field when displayed in a user interface.</td>
+<td>60</td>
+<td>Integers greater then zero</td>
+</tr>
+<tr class="row-odd"><td>doesNotTakeLocale</td>
+<td>Defines whether measurement takes locale specification.</td>
+<td>1 (does not take locale specifications)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-even"><td>restrictToOccurrenceTypeIdno</td>
+<td>Insert idno of a occurrence type here to restrict the lookup mechanism to that type.</td>
+<td>&nbsp;</td>
+<td>idno</td>
+</tr>
+<tr class="row-odd"><td>canBeUsedInSort</td>
+<td>Use this option if this attribute value can be used for sorting of search results.</td>
+<td>0 (not used in sort)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-even"><td>canBeUsedInSearchForm</td>
+<td>Use this option if the attribute value can be used in search forms.</td>
+<td>1 (used in search forms)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-odd"><td>canBeUsedInDisplay</td>
+<td>Use this option if the attribute value can be used for display in search results.</td>
+<td>1 (used for display)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-even"><td>displayTemplate</td>
+<td>Layout for value when used in a display. Element code tags prefixed with the ^ character, used to represent the value in the template. For example: &lt;i&gt;^my_element_code&lt;/i&gt;.</td>
+<td>&nbsp;</td>
+<td>HTML</td>
+</tr>
+<tr class="row-odd"><td>displayDelimiter</td>
+<td>Delimiter to use between multiple values.</td>
+<td>, (comma)</td>
+<td>Text</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="attribute-settings-entities">
+<h2><a class="toc-backref" href="#id22">Attribute settings: Entities</a><a class="headerlink" href="#attribute-settings-entities" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Settings</th>
+<th class="head">Description</th>
+<th class="head">Default</th>
+<th class="head">Values</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>fieldWidth</td>
+<td>Width, in characters, of the field when displayed in a user interface.</td>
+<td>60</td>
+<td>Integers greater then zero</td>
+</tr>
+<tr class="row-odd"><td>doesNotTakeLocale</td>
+<td>Defines whether measurement takes locale specification.</td>
+<td>1 (does not take locale specifications)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-even"><td>canBeUsedInSort</td>
+<td>Use this option if this attribute value can be used for sorting of search results.</td>
+<td>1 (used in sort)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-odd"><td>canBeUsedInSearchForm</td>
+<td>Use this option if the attribute value can be used in search forms.</td>
+<td>1 (used in search forms)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-even"><td>canBeUsedInDisplay</td>
+<td>Use this option if the attribute value can be used for display in search results.</td>
+<td>1 (used for display)</td>
+<td>0 or 1</td>
+</tr>
+<tr class="row-odd"><td>displayTemplate</td>
+<td>Layout for value when used in a display. Element code tags prefixed with the ^ character, used to represent the value in the template. For example: &lt;i&gt;^my_element_code&lt;/i&gt;.</td>
+<td>&nbsp;</td>
+<td>HTML</td>
+</tr>
+<tr class="row-even"><td>displayDelimiter</td>
+<td>Delimiter to use between multiple values.</td>
+<td>, (comma)</td>
+<td>Text</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Bundles.html" class="btn btn-neutral float-right" title="Bundles" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="endpoints.html" class="btn btn-neutral" title="API Endpoints &amp; Methods" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Whirl-i-Gig.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1.7',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

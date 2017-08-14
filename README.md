@@ -1,0 +1,2 @@
+== CollectiveAccess documentation ==
+

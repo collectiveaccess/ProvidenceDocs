@@ -1,0 +1,3 @@
+Year,"2016, 1950 ad; 450 b.c.; 40 mya","simple years as well as AD and BC dates and geologic time (mya aka ""millions of years ago"") are supported"
+Month and year,"June 2016, 6/2016",
+Specific date,"June 6 2016; June 7, 2016; 6/7/2016; 6/7/16",Support for European style dates (eg. day first rather than month first) is based upon users' current locale setting
