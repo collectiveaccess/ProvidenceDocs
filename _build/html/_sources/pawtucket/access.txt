@@ -1,2 +1,0 @@
-Public Access Configurations
-============================
