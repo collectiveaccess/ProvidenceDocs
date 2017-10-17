@@ -45,12 +45,12 @@ Contents
    org/Relationships
    Interstitial Data <org/interstitial>
    Date and Time Formats <org/dateTime>
-   
+
 .. toctree::
    :maxdepth: 2
    :caption: Configuring Providence (Front-End)
    :titlesonly:
-   
+
    providence/Locales
    Lists and Authorities <providence/listsAuthorities>
    Metadata Elements <providence/metadata>
@@ -64,14 +64,14 @@ Contents
    :maxdepth: 2
    :caption: Search & Browse
    :titlesonly:
- 
+
    Intro to Search Pages <searchBrowse/intro>
    Syntax <searchBrowse/syntax>
    Indexing Options <searchBrowse/indexing>
    Search Engines <searchBrowse/engines>
    Advanced Search Forms <searchBrowse/advanced>
    Query Builder <searchBrowse/query>
-   Browse Facets <searchBrowse/facets>   
+   Browse Facets <searchBrowse/facets>
 
 .. toctree::
    :maxdepth: 2
@@ -136,12 +136,13 @@ Contents
    Public Access Configurations <pawtucket/access>
    Login & Registration <pawtucket/reg>
    Homepage & Static Pages <pawtucket/static>
+   Site Pages & Templates <pawtucket/templates>
    Search & Browse Pages and Settings <pawtucket/searchBrowse>
    Detail Pages <pawtucket/detail>
    Lightboxes & Galleries <pawtucket/lightbox>
    Classrooms <pawtucket/classrooms>
    Contact & Mail Templates <pawtucket/contact>
- 
+
 .. toctree::
    :maxdepth: 2
    :caption: Reference
