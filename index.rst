@@ -59,6 +59,15 @@ Contents
    Writing Your Own Installation Profile <providence/profiles>
    System Settings <providence/system>
    Identifiers <providence/identifiers>
+   
+.. toctree::
+   :maxdepth: 2
+   :caption: Configuration files
+   :titlesonly:  
+
+   Browse.conf <configuration/browse>    
+   DateTime.conf <configuration/datetime>
+   Authentication.conf <configuration/authentication>
 
 .. toctree::
    :maxdepth: 2
