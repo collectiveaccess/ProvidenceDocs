@@ -20,7 +20,7 @@ XLS, XLSX, CSV, TSV
 
 Spreadsheets are mapped by column, with numeric identifiers provided in the Source column of the import mapping. If you wish to map from Column B of an Excel spreadsheet, you would list the Source as 2. (A = 1, B = 2, C = 3, and so on.)
 
-XML (Including FileMaker XML, Inmagic XML, PastPerfect XML, Vernon XML, TEI XML, PBCore XML, MediaBin, MARCXML & MODS)
+XML (Including FileMaker XML, Inmagic XML, EAD XML,PastPerfect XML, Vernon XML, TEI XML, PBCore XML, MediaBin, MARCXML & MODS)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 XML sources are referenced using `xPath <https://en.wikipedia.org/wiki/XPath>`_, a query language for selecting nodes and computing values from XML documents (a `basic tutorial <http://www.w3schools.com/xsl/xpath_intro.asp>`_ is available from W3C). 
