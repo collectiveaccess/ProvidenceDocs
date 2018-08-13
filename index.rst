@@ -68,6 +68,7 @@ Contents
    Browse.conf <configuration/browse>    
    DateTime.conf <configuration/datetime>
    Authentication.conf <configuration/authentication>
+   Prepopulate.conf <configuration/prepopulate>
 
 .. toctree::
    :maxdepth: 2
