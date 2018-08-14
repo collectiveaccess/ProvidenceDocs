@@ -1,0 +1,5 @@
+Setting,Description,Allowed values,Required?,Default,Synonyms
+displayName,Name of detail for display to end users.,Text,Yes,None,
+table,Kind of record this detail displays.,"Ex. ca_objects, ca_entities, ca_collections, Etc.",Yes,None,
+restrictToTypes,List of types to limit use of this detail to. Use type codes defined for the specified table. ,"Any valid type code for the detail's table. Ex. [books, maps, postcards] ",No,[] (no type restriction),
+options,A dictionary of options for the detail. Available options are described in detail below.,Dictionary,Yes,None,
