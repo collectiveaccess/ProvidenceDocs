@@ -6,7 +6,7 @@ has many possible settings affecting a wide-range of functions. Settings grouped
 function are described in detail below.
 
 ------------------
-Login and registration
+Login, registration and access control
 ------------------
 
 .. csv-table::
