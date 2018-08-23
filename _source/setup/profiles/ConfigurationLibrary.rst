@@ -1,4 +1,5 @@
 .. _section-head:
+
 Configuration Library
 =====================
 
@@ -12,49 +13,54 @@ Libraries, Museum, and Archives
 -------------------------------
 
 .. csv-table::
+   :widths: auto
    :header-rows: 1
-   :url: https://docs.google.com/spreadsheets/d/1b6bfOKLvl42ofkZgXCegqJV6QuI6QCBnsmeez0v4vAU/pub?output=csv
+   :file: ../../_static/csv/lams.csv
 
 Consortiums
 -----------
 
 .. csv-table::
+   :widths: auto
    :header-rows: 1
-   :url: https://docs.google.com/spreadsheets/d/1CXl3waJYlLshrt78UJkzLYsJZKEoCmXwY75ty-x3pKw/pub?output=csv
+   :file: ../../_static/csv/consortiums.csv
 
 Institutional archives
 ----------------------
 
 .. csv-table::
+   :widths: auto
    :header-rows: 1
-   :url: https://docs.google.com/spreadsheets/d/1CVEIvkq3nsX8a3Yxh7Qhy9DWD76vDXtPtITgjKM3kVM/pub?output=csv
+   :file: ../../_static/csv/institutional_archives.csv
 
 Performing Arts
 ---------------
 
 .. csv-table::
+   :widths: auto
    :header-rows: 1
-   :url: https://docs.google.com/spreadsheets/d/14jmkFWZlo6Fa-pp4UuaYXAeCnvGNF7x-QRheNWovrtk/pub?output=csv
-
+   :file: ../../_static/csv/performing_arts.csv
 
 Art galleries
 -------------
 
 .. csv-table::
+   :widths: auto
    :header-rows: 1
-   :url: https://docs.google.com/spreadsheets/d/1luW-zVTnDfXEEX2K2bHtEivL6jQ41wGkQaWNPM8Ioh8/pub?output=csv
-
+   :file: ../../_static/csv/art_galleries.csv
 
 Moving Images
 -------------
 
 .. csv-table::
+   :widths: auto
    :header-rows: 1
-   :url: https://docs.google.com/spreadsheets/d/177uIDD1owepXWdm90q90cGBmFAcFHzDQAMlOp0tX7pI/pub?output=csv
+   :file: ../../_static/csv/moving_images.csv
 
 Paleontology
 ------------
 
 .. csv-table::
+   :widths: auto
    :header-rows: 1
-   :url: https://docs.google.com/spreadsheets/d/1Yk-0CKRpWYZTpyKgeY-H_zBB_6yE5XRGSxegygmFxTg/pub?output=csv
+   :file: ../../_static/csv/paleontology.csv

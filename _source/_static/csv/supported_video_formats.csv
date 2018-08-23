@@ -1,0 +1,9 @@
+Format,Media processing backend,Comments
+MPEG-2,ffmpeg,
+MPEG-4,ffmpeg,
+QuickTime,ffmpeg,
+WindowsMedia,ffmpeg,
+FLV,ffmpeg,
+Ogg Theora,ffmpeg,
+AVI,ffmpeg,ffmpeg
+xvid,ffmpeg,Planned

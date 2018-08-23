@@ -31,22 +31,25 @@ Configuration
 Basic configuration of object-location tracking is done in app.conf using the following directives:
 
 .. csv-table::
+   :widths: auto
    :header-rows: 1
-   :url: https://docs.google.com/spreadsheets/d/1L0ZQPJccg1J5soEd6AeLy2_LEhIPjygAU-DyBrYyYjE/pub?output=csv
+   :file: ../_static/csv/direct_object-location_setting.csv
 
 There are two bundles available to implement location tracking in your editing user interfaces. The **ca_objects_location** bundle displays the current location, location history and adds a control to change the current location in the object editor.
 
 The **ca_objects_location** bundle provides the following options when used with direct object-location tracking. These can be set in your installation profile or in the web-based configuration UI:
 
 .. csv-table::
+   :widths: auto
    :header-rows: 1
-   :url: https://docs.google.com/spreadsheets/d/1NVO8KVS00eYpD_mWWwJITrHFZhvR9tQcid2AH7msV8M/pub?output=csv
-   
+   :file: ../_static/csv/settings_1.csv
+
 The **ca_storage_locations_contents** will display a list of all objects currently resident in a storage location. It provides the following options, which can be set in your installation profile or in the web-based configuration UI:
 
 .. csv-table::
+   :widths: auto
    :header-rows: 1
-   :url: https://docs.google.com/spreadsheets/d/1Jubu0-SaoSj0eFDMAlGP8bHgLNX9VoOdwCKi_Bp49LE/pub?output=csv
+   :file: ../_static/csv/settings_2.csv
 
 Note that when using direct object-location tracking, a ca_storage_locations relationship bundle placed in an object editor will display all object-location links, past, present and future, in a single undifferentiated list and can be configured to allow users to add object-location links. The ca_objects relationship bundle placed in a storage location editor will behave similarly. In general, the ca_objects and ca_storage_locations relationship bundles should not be placed in the storage location and objects editors respectively when direct object-location tracking is in use.
 
@@ -57,8 +60,9 @@ Configuration
 Basic configuration of movement-based location tracking is done in app.conf using the following directives:
 
 .. csv-table::
+   :widths: auto
    :header-rows: 1
-   :url: https://docs.google.com/spreadsheets/d/1VD9tznesFM3azkP3WOWMLvdnkx0WESi1Baq0EVkJNnQ/pub?output=csv
+   :file: ../_static/csv/movement-based_settings.csv
 
 As with direct object-location tracking there are two bundles available to implement location tracking in your editing user interfaces. The ca_objects_location bundle displays the current location, location history and adds a control to change the current location in the object editor. The options are the same as for object-location tracking, but the locationTrackingMode option should be set to ca_movements.
 
@@ -82,36 +86,36 @@ Primary configuration is done in **app.conf** through the **current_location_cri
 
 .. code-block:: none
 
-current_location_criteria = {
-	ca_storage_locations = {
-		related = { 
-			template = ^ca_storage_locations.hierarchy.preferred_labels%delimiter=_➜_ 
-		}
-	},
-	ca_movements = {
-		shipping = { date = pickup_date, color = 9bae33 },
-		framing = { date = pickup_date, color = 541353 },
-		conservation = { date = pickup_date, color = 245442 },
-		administrative = { date = pickup_date, color = 992222 },
-	},
-	ca_loans = {
-		collection = { 
-			date = loan_period,
-			color = cccccc
-		}
-	},
-	ca_occurrences = {
-		exhibition = { 
-			date = exh_dates,
-			color = 00cc00
-		}
-	},
-	# The entry for ca_objects controls if and how deaccessions are displayed
-	ca_objects = {
-		template = ^ca_objects.deaccession_notes (^ca_objects.deaccession_date),
-		color = cc0000
-	}
-}
+   current_location_criteria = {
+      ca_storage_locations = {
+         related = {
+            template = ^ca_storage_locations.hierarchy.preferred_labels%delimiter=_➜_
+         }
+      },
+      ca_movements = {
+         shipping = { date = pickup_date, color = 9bae33 },
+         framing = { date = pickup_date, color = 541353 },
+         conservation = { date = pickup_date, color = 245442 },
+         administrative = { date = pickup_date, color = 992222 },
+      },
+      ca_loans = {
+         collection = {
+            date = loan_period,
+            color = cccccc
+         }
+      },
+      ca_occurrences = {
+         exhibition = {
+            date = exh_dates,
+            color = 00cc00
+         }
+      },
+      # The entry for ca_objects controls if and how deaccessions are displayed
+      ca_objects = {
+         template = ^ca_objects.deaccession_notes (^ca_objects.deaccession_date),
+         color = cc0000
+      }
+   }
 
 In this example, ca_movements is a primary type, shipping is a movement sub-type and date is an option for the shipping sub-type (and others as well) specifying what date element should be used to calculate this movement sub-types place in the object's history. (For the ca_storage_locations primary type in the example, related is an object-storage location relationship type, and template is an option of that relationship type).
 
@@ -120,8 +124,9 @@ Note that display of deaccessions (managed via the ca_objects_deaccession editor
 Sub-type/relationship type options affect both the what is considered current and how the current location is displayed. Options include:
 
 .. csv-table::
+   :widths: auto
    :header-rows: 1
-   :url: https://docs.google.com/spreadsheets/d/1IjF72I6XttAk_oeX0UANrN9CPS16eeAoW1uIPdec_XE/pub?output=csv
+   :file: ../_static/csv/workflow-based_options.csv
 
 This configuration will be used to display current location in the editor inspectors, when browsing on workflow-based current location and by default in the Object Use History (ca_objects_history) editor bundle.
 
@@ -134,10 +139,10 @@ The contents of each block in the stream are entirely configurable using metadat
 
 .. code-block:: none
 
-<l>^ca_loans.preferred_labels</l><br>
-<ifdef code="ca_loans.loan_period">Loan Period:</ifdef> ^ca_loans.loan_period<br>
-Borrower: <unit relativeTo="ca_loans">
-<unit relativeTo="ca_entities" delimiter=", " restrictToRelationshipTypes="borrower">^ca_entities.preferred_labels</unit></unit>
+   <l>^ca_loans.preferred_labels</l><br>
+   <ifdef code="ca_loans.loan_period">Loan Period:</ifdef> ^ca_loans.loan_period<br>
+   Borrower: <unit relativeTo="ca_loans">
+   <unit relativeTo="ca_entities" delimiter=", " restrictToRelationshipTypes="borrower">^ca_entities.preferred_labels</unit></unit>
 
 Configuring bundle-specific settings through an installation profile
 
@@ -158,8 +163,9 @@ The chart below lists settings per table that can be included in your profile. B
 Note that there is no dateElement setting for storage locations. Storage locations are sorted on the date cataloged.
 
 .. csv-table::
+   :widths: auto
    :header-rows: 1
-   :url: https://docs.google.com/spreadsheets/d/1Lt-pnE9XWyM8fyhg6FYjPWFz_Xe_nbSGWB67-Hw5HHk/pub?output=csv
+   :file: ../_static/csv/bundle_specific_settings.csv
 
 Browsing by current location
 ----------------------------
@@ -168,62 +174,63 @@ Workflow-based location tracking will cache the current location of the object w
 
 .. code-block:: none
 
-current_location = {
-			type = location,
-			restrict_to_types = [],
-			
-			group_mode = none,
-			
-			collapse = {
-				ca_loans = On loan,
-				ca_movements/conservation = In conservation,
-				ca_movements/shipping = Shipped,
-				ca_movements/administrative = Consigned
-			},
-			
-			display = {
-				ca_storage_locations = {
-					related = { template = ^ca_storage_locations.hierarchy.preferred_labels%delimiter=_➜_ (storage) }
-				},
-				ca_occurrences = {
-					exhibition = { template = ^ca_occurrences.preferred_labels.name (exhibition) }
-				},
-			},
-			maximumBrowseDepth = 1,
-			include_none_option = No location specified,
-			
-			label_singular = _("current location"),
-			label_plural = _("current location")
-		},
+   current_location = {
+     type = location,
+      restrict_to_types = [],
+
+      group_mode = none,
+
+      collapse = {
+         ca_loans = On loan,
+         ca_movements/conservation = In conservation,
+         ca_movements/shipping = Shipped,
+         ca_movements/administrative = Consigned
+      },
+
+      display = {
+         ca_storage_locations = {
+            related = { template = ^ca_storage_locations.hierarchy.preferred_labels%delimiter=_➜_ (storage) }
+         },
+         ca_occurrences = {
+            exhibition = { template = ^ca_occurrences.preferred_labels.name (exhibition) }
+         },
+      },
+      maximumBrowseDepth = 1,
+      include_none_option = No location specified,
+
+      label_singular = _("current location"),
+      label_plural = _("current location")
+   }
 
 The collapse, display, maximumBrowseDepth and include_none_option directives are specific to location facets:
 
 .. csv-table::
+   :widths: auto
    :header-rows: 1
-   :url: https://docs.google.com/spreadsheets/d/1Zv-II7dsfkVpDKaH554AcxCUYa-cni7wS5aCo-lkXxk/pub?output=csv
+   :file: ../_static/csv/browse_directive.csv
 
 Updating the cache
 ^^^^^^^^^^^^^^^^^^
 
 For performance reasons, the current location of the object is cached within the object record itself. Since locations are calculated based upon the settings in the app.conf current_location_criteria directive, and change in current_location_criteria will likely invalidate the cached data. To regenerate the cache and ensure accurate browse results be sure to run the following caUtils command on the command line:
 
-.. code-block:: none
-bin/caUtils reload-object-current-locations
+``bin/caUtils reload-object-current-locations``
 
 Browsing current location when using non-workflow-based location tracking options
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Browsing on current location is only supported in workflow-based location tracking. Since workflow-based location tracking supplements the other tracking options, enabling browse for any kind of location tracking involves setting up a minimal workflow-based configuration like this:
 
 In app.conf, if you are using direct object-location location tracking:
+
 .. code-block:: none
 
-current_location_criteria = {
-	ca_storage_locations = {
-		[relationship type] = { 
-			template = ^ca_storage_locations.hierarchy.preferred_labels%delimiter=_➜_ 
-		}
-	}
-}
+   current_location_criteria = {
+      ca_storage_locations = {
+         [relationship type] = {
+            template = ^ca_storage_locations.hierarchy.preferred_labels%delimiter=_➜_
+         }
+      }
+   }
 
 where [relationship type] is set to whatever you have object_storage_location_tracking_relationship_type in app.conf set to.
 
@@ -231,14 +238,14 @@ If you are using movement-based location tracking then:
 
 .. code-block:: none
 
-current_location_criteria = {
-	ca_movements = {
-		[movement type] = { 
-			date = pickup_date,
-			template = ^ca_storage_locations.hierarchy.preferred_labels%delimiter=_➜_ 
-		}
-	}
-}
+   current_location_criteria = {
+      ca_movements = {
+         [movement type] = {
+            date = pickup_date,
+            template = ^ca_storage_locations.hierarchy.preferred_labels%delimiter=_➜_
+         }
+      }
+   }
 
 where [movement type] is a type of movement you want considered as indicating current location. You can list more than one type if needed.
 
@@ -246,55 +253,49 @@ Then in browse.conf add a facet definition like this for direct object-location 
 
 .. code-block:: none
 
-current_location = {
-			type = location,
-			restrict_to_types = [],
-			
-			group_mode = none,
-			
-			display = {
-				ca_storage_locations = {
-					[relationship type] = { template = ^ca_storage_locations.hierarchy.preferred_labels%delimiter=_➜_ (storage) }
-				}
-			},
-			
-			include_none_option = No location specified,
-			
-			label_singular = _("current location"),
-			label_plural = _("current location")
-		},
+   current_location = {
+      type = location,
+      restrict_to_types = [],
+
+      group_mode = none,
+
+      display = {
+         ca_storage_locations = {
+            [relationship type] = { template = ^ca_storage_locations.hierarchy.preferred_labels%delimiter=_➜_ (storage) }
+         }
+      },
+
+      include_none_option = No location specified,
+
+      label_singular = _("current location"),
+      label_plural = _("current location")
+   }
 
 where [relationship type] is set to whatever you have object_storage_location_tracking_relationship_type in app.conf set to.
 
 For movement-based tracking:
+
 .. code-block:: none
 
-current_location = {
-			type = location,
-			restrict_to_types = [],
-			
-			group_mode = none,
-			
-			display = {
-				ca_movements = {
-					[movement type] = { template = ^ca_storage_locations.hierarchy.preferred_labels%delimiter=_➜_ (storage) }
-				}
-			},
-			
-			include_none_option = No location specified,
-			
-			label_singular = _("current location"),
-			label_plural = _("current location")
-		},
+   current_location = {
+      type = location,
+      restrict_to_types = [],
+      group_mode = none,
+      display = {
+         ca_movements = {
+            [movement type] = { template = ^ca_storage_locations.hierarchy.preferred_labels%delimiter=_➜_ (storage) }
+         }
+      },
+      include_none_option = No location specified,
+      label_singular = _("current location"),
+      label_plural = _("current location")
+   }
 
 where [movement type] is a type of movement you want considered as indicating current location. You can list more than one type if needed.
 General maintenance
 
 Both direct object-location and movement-based location tracking rely on dates embedded in relationships between related records. If you are updating an older system, change app.conf configuration or otherwise have reason to believe these dates may be out of sync with the underlying movement and location data from which they are derived you can run the following caUtils command on the command line to refresh values:
 
-.. code-block:: none
-
-bin/caUtils reload-object-current-location-dates
+``bin/caUtils reload-object-current-location-dates``
 
 For most data sets this command should take only seconds to a few minutes to run and will not have adverse effects. If you are getting odd ordering in use histories or display of current location try running this command to resolve the issues.
-

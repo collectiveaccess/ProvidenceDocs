@@ -1,0 +1,12 @@
+Bundle type,Settings,Description,Default,Values
+"Label, Attribute, Relationship",delimiter,Text to place in-between repeating values.,,
+"Label, Attribute",format,Template used to format output.,,
+"Label, Attribute",maximum_length,"Maximum length, in characters, of displayed information.",100,Characters
+Relationship,makeEditorLink,If set name of related item will be displayed as a link to edit the item.,0 (not a link),0 or 1
+Relationship,restrict_to_relationship_types,Restricts display to items related using the specified relationship type(s). Leave all unselected for no restriction.,,type code
+Relationship,restrict_to_types,Restricts display to items of the specified type(s). Leave all unselected for no restriction.,,type code
+Relationship,show_hierarchy,If checked the full hierarchical path will be shown.,1 (full hierarchy shown),0 or 1
+Relationship,remove_first_items,"If set to a non-zero value, the specified number of items at the top of the hierarchy will be omitted. For example, if set to 2, the root and first child of the hierarchy will be omitted.",0,Integers zero or greater based on hierarchy
+Relationship,hierarchy_order,Determines order in which hierarchy is displayed.,,ASC (top first) DESC (bottom first)
+Attribute,show_empty_values,"If checked all values will be displayed, whether there is content for them or not.",1,0 or 1
+Attribute,filter,Expression to filter values with. Leave blank if you do not wish to filter values.,,"^ca_objects.dimensions.Type IN (""with_frame"")"

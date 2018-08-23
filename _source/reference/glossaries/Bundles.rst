@@ -13,9 +13,9 @@ Bundles are elements that can be placed on UI screens, included in search forms 
 Below is a break down of the bundle classes and the properties that are particular to each type.
 
 .. csv-table::
+   :widths: auto
    :header-rows: 1
-   :url: https://docs.google.com/spreadsheets/d/1-XBLw6K_12Y4PtuYd-ov2fvQW-vtmVPMB-zv_EFptGM/pub?gid=0&single=true&output=csv
-   
+   :file: ../../_static/csv/bundle_types.csv
 
 User interface Settings
 -----------------------
@@ -23,17 +23,17 @@ User interface Settings
 There are several settings that can be used to configure all bundles, regardless of type, when they are placed on a user interface screen.
 
 .. csv-table::
+   :widths: auto
    :header-rows: 1
-   :url: https://docs.google.com/spreadsheets/d/1LgGsjff6Iyco5b7xkAbdmTj4I7uJvfGWzt3cGdi9hFg/pub?gid=0&single=true&output=csv
-   
+   :file: ../../_static/csv/user_interface_bundles.csv
 
 However, there are type-specific settings as well, outlined below.
 
 .. csv-table::
+   :widths: auto
    :header-rows: 1
-   :url: https://docs.google.com/spreadsheets/d/1qelsfVWP_9af5Ftew1UI_WyRSb-XmgxPw_QQLqDVrUc/pub?gid=0&single=true&output=csv
+   :file: ../../_static/csv/user_interface_-_specific.csv
 
-   
 Here's an example of how some of the settings above would look at the code-level in an xml profile:
 
    ::
@@ -46,7 +46,7 @@ Here's an example of how some of the settings above would look at the code-level
                <setting name="add_label" locale="en_US">Add film</setting>
              </settings>
       </placement>
-           
+
 Display Settings
 ----------------
 
@@ -55,26 +55,29 @@ From /app/models/ca_bundle_displays.php
 Global display settings:
 
 .. csv-table::
+   :widths: auto
    :header-rows: 1
-   :url: https://docs.google.com/spreadsheets/d/1JFnHegfNAG65U9yz0enRSaye9_0ntlYjc_bt36l0cfE/pub?gid=0&single=true&output=csv
-   
+   :file: ../../_static/csv/global.csv
+
 Bundle display settings for all types:
 
 .. csv-table::
+   :widths: auto
    :header-rows: 1
-   :url: https://docs.google.com/spreadsheets/d/1YsBPRnqRSLtGX2MELoa0wgpLUFBgKXtkcWMQAAqec2o/pub?gid=0&single=true&output=csv
-   
+   :file: ../../_static/csv/all_types.csv
+
 Type-specific bundle display settings:
 
 .. csv-table::
+   :widths: auto
    :header-rows: 1
-   :url: https://docs.google.com/spreadsheets/d/1yBMv5XTannJQAmdtN1eO3Im2jcgHiCvrTorQFK1xig0/pub?gid=0&single=true&output=csv
-   
+   :file: ../../_static/csv/type-specific.csv
 
 Search Form Settings
 --------------------
 Regardless of type, bundles can take the follow setting when they are used in search forms.
 
 .. csv-table::
+   :widths: auto
    :header-rows: 1
-   :url: https://docs.google.com/spreadsheets/d/1UyzVedoV01j6QQ6qCjyW_5SVpsyXeLRbpjgyYfLdRvI/pub?gid=0&single=true&output=csv
+   :file: ../../_static/csv/search_form_settings.csv

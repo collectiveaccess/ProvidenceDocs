@@ -1,0 +1,14 @@
+Format,Media processing backend,Comments
+JPEG,"GD, ImageMagick, IMagick, GraphicsMagick, Gmagick",
+GIF,"GD, ImageMagick, IMagick, GraphicsMagick, Gmagick",
+TIFF,"ImageMagick, IMagick, GraphicsMagick, Gmagick",
+PNG,"GD, ImageMagick, IMagick, GraphicsMagick, Gmagick",
+TilePic,"GD, ImageMagick, IMagick, GraphicsMagick, Gmagick",
+Camera RAW,"ImageMagick, IMagick, GraphicsMagick, Gmagick",Supports whatever manufacturer formats your installed version of ImageMagick can handle
+Photoshop PSD,"ImageMagick, IMagick, GraphicsMagick, Gmagick",Derivatives for files with layer effects may not be rendered properly
+JPEG-2000,"ImageMagick, IMagick, GraphicsMagick, Gmagick",
+DICOM,"ImageMagick, IMagick, GraphicsMagick, Gmagick",
+DPX,"ImageMagick, IMagick, GraphicsMagick, Gmagick",Pixel values in non-Tilepic derivatives are adjusted for optimal viewing on computer monitors.
+OpenEXR,"ImageMagick, IMagick, GraphicsMagick, Gmagick",More information on this format can be found `here <http://openexr.com/>`_.
+QTVR (QuickTime VR),QuicktimeVR,"JPEG-format thumbnails are extracted; straight-QTVR is kept as ""original"" version. The QuicktimeVR plugin requires ffmpeg to be installed."
+Adobe DNG,"ImageMagick, IMagick, GraphicsMagick, Gmagick",

@@ -1,0 +1,5 @@
+Project,Description
+`The Sterling Morton Library <https://github.com/collectiveaccess/providence/blob/develop/install/profiles/xml/morton.xml>`_,"A mixed materials system supporting archival processing, library materials, and special collections cataloging."
+`Mattress Factory <https://github.com/collectiveaccess/providence/blob/develop/install/profiles/xml/mattress.xml>`_,A profile supporting the documentation of site-specfic and installation-based artwork.
+`Vancouver Holocaust Education Centre <https://github.com/collectiveaccess/providence/blob/develop/install/profiles/xml/vhec.xml>`_,"A profile for archives, library, and museum material with support for finding aids and MARC records."
+`Vancouver Maritime Museum <https://github.com/collectiveaccess/providence/blob/develop/install/profiles/xml/VMM_new.xml>`_,A mixed material maritime collection with integrated archival content.

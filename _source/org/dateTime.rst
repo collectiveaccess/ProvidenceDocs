@@ -6,7 +6,7 @@ CollectiveAccess can process dates and times in a variety of formats. Internally
     - January 1 2007 @ 00:00:00am - December 31 2007 @ 12:59:59pm
     - June 1 2007 @ 00:00:00am - June 30 2007 @ 12:59:59pm
     - June 7 2007 @ 00:00:00am - June 10 2007 @ 12:59:59pm
-    - June 7 2007 @ 00:00:00am - June 7 2007 @ 12:59:59pm 
+    - June 7 2007 @ 00:00:00am - June 7 2007 @ 12:59:59pm
 
 respectively.
 
@@ -26,16 +26,17 @@ Valid input formats
 ^^^^^^^^^^^^^^^^^^^
 
 .. csv-table::
+   :widths: auto
    :header-rows: 0
-   :url: https://docs.google.com/spreadsheets/d/1HQJRHMZI01s0op_3F23vXypXCa49jfnLVKSutHQNvuo/pub?output=csv
-   
+   :file: ../_static/csv/valid_input_formats.csv
+
 For numeric dates (eg. 6/7/2007) multiple delimiters are supported. For example, in the US localization the following dates are all valid and equivalent:
 
  6/7/2007
 
  6-7-2007
 
- 6.7.2007 
+ 6.7.2007
 
  7-JUN-2007
 
@@ -48,17 +49,20 @@ You can specify a time for any date by following the date with a time expression
 
   at, @
 
-   
+
 .. csv-table::
+   :widths: auto
    :header-rows: 0
-   :url: https://docs.google.com/spreadsheets/d/1JfqydJSPI11YvnlY5Mg4tr9oaiXJBuz2UuLoHD0kzY0/pub?output=csv
+   :file: ../_static/csv/dates_with_times.csv
 
 If you omit the time then a time is assumed depending upon whether the date is the beginning, end or both of a date range. For dates at the beginning of a range, the default time is 00:00:00 (midnight). For dates at the end of a range the default time is 11:59:59pm. This means that if you input a date without a time the entire day is encompassed.
 
 The elements of a time specification may be delimited in multiple ways. For the US localization the following delimiters are supported:
 
- :
- .
+.. code-block:: none
+
+   :
+   .
 
 Thus the following times are valid and equivalent:
 
@@ -183,7 +187,7 @@ Quarter-century dates
 
 Ranges of years falling on quarter centuries may be input as century/quarter pairs. For example:
 
- 20 Q3 
+ 20 Q3
 
 is equivalent to 1950 - 1975 (3rd quarter of 20th century). Quarter century expressions are always in the Common Era. They cannot be used for BC dates.
 

@@ -7,31 +7,34 @@ Supported Media File Formats
 Supported Image Formats
 -----------------------
 .. csv-table::
+   :widths: auto
    :header-rows: 1
-   :url: https://docs.google.com/spreadsheets/d/189YKSWAoRPDv55ooZeWkiC9cxUXxhFUDhR0xcSglLAc/pub?gid=0&single=true&output=csv
+   :file: ../../_static/csv/supported_image_formats.csv
 
 Supported Audio Formats
 -----------------------
 .. csv-table::
+   :widths: auto
    :header-rows: 1
-   :url: https://docs.google.com/spreadsheets/d/1ddL46JC4-T7uP8ObK2ZsIsBAs7LFzYeab1jsNoxT4Cs/pub?gid=0&single=true&output=csv
-   
+   :file: ../../_static/csv/supported_audio_formats.csv
+
 Supported Video Formats
 -----------------------
 .. csv-table::
+   :widths: auto
    :header-rows: 1
-   :url: https://docs.google.com/spreadsheets/d/1L49vfwzDf4FLLGB99rnEDAJ0A-yz7sYa4Y3Mgxh5llM/pub?gid=0&single=true&output=csv
-   
+   :file: ../../_static/csv/supported_video_formats.csv
+
 Supported Document Formats
 --------------------------
 .. csv-table::
+   :widths: auto
    :header-rows: 1
-   :url: https://docs.google.com/spreadsheets/d/1WF8GynyqQxosc4poFIen-rUIN6IyZk5JLTQvHgrjOkY/pub?gid=0&single=true&output=csv
-   
+   :file: ../../_static/csv/supported_document_formats.csv
+
 Supported Multimedia Formats
 ----------------------------
 .. csv-table::
+   :widths: auto
    :header-rows: 1
-   :url: https://docs.google.com/spreadsheets/d/1MkoFDnOhsQag66b9iplCD3sKVDmpju_y7sKIvRP5uDo/pub?gid=0&single=true&output=csv
-   
-   
+   :file: ../../_static/csv/supported_multimedia_formats.csv

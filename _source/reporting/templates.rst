@@ -106,8 +106,9 @@ Note that spaces are not allowed in options as they are used to separate placeho
 The following options may be used to format the text value of any placeholder:
 
 .. csv-table::
+   :widths: auto
    :header-rows: 1
-   :url: https://docs.google.com/spreadsheets/d/1vXa7bGtH83-9IHe2mBjMHATVgc1TmMTDsGh16MZJLYc/pub?output=csv
+   :file: ../_static/csv/placeholder_options.csv
 
 For simple true/false options such as toUpper you may omit the "=" and value. These two templates are the same:
 
@@ -200,8 +201,9 @@ Each unit shifts the primary by one relational "jump." Nesting <units> allows sh
 <unit> tags may take any of the following attributes:
 
 .. csv-table::
+   :widths: auto
    :header-rows: 1
-   :url: https://docs.google.com/spreadsheets/d/17gRolRur8_YI_w-OX6pro0vxHMY-r7u3FEjrtcmtioA/pub?output=csv
+   :file: ../_static/csv/unit_attributes.csv
 
 The <unit> tag presents many opportunities for complex display formatting which are explained in more detail, along with examples, here.
 
@@ -333,8 +335,9 @@ The parent and children modifiers work similarly to hierarchy but return the imm
 There are a number of placeholder options that can be used to modify how hierarchical data is displayed:
 
 .. csv-table::
+   :widths: auto
    :header-rows: 1
-   :url: https://docs.google.com/spreadsheets/d/1PHMP0Gzf-3JZvOtKAMzvziC7nWG-kgxW_Qt6XPCyBwU/pub?output=csv
+   :file: ../_static/csv/hierarchical_placeholders.csv
 
 Making links to other records
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -372,5 +375,6 @@ Special placeholders
 There are a few placeholders that have special meanings for certain kinds of primary records:
 
 .. csv-table::
+   :widths: auto
    :header-rows: 1
-   :url: https://docs.google.com/spreadsheets/d/11nqVpTQvB-fv6rcgJY-ag3vEEkotu7z4F-z86FyqNTc/pub?output=csv
+   :file: ../_static/csv/special_placeholders.csv

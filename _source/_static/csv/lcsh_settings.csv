@@ -1,0 +1,24 @@
+Settings,Description,Default,Values
+fieldWidth,"Width, in characters, of the field when displayed in a user interface.",60,Integers greater than zero
+fieldHeight,"Height, in characters, of the field when displayed in a user interface.",1,Integers greater than zero
+doesNotTakeLocale,Defines whether element takes locale specification.,1 (does not take locale specifications),0 or 1
+canBeUsedInSort,Use this option if this attribute value can be used for sorting of search results.,0 (not used in sort),0 or 1
+canBeUsedInSearchForm,Use this option if the attribute value can be used in search forms.,1 (used in search forms),0 or 1
+canBeUsedInDisplay,Use this option if the attribute value can be used for display in search results.,1 (used for display),0 or 1
+displayTemplate,"Layout for value when used in a display. Element code tags prefixed with the ^ character, used to represent the value in the template. For example: <i>^my_element_code</i>.",,HTML
+displayDelimiter,Delimiter to use between multiple values.,", (comma)",Text
+vocabulary,Selects which vocabulary will be searched.,,"All vocabularies' => ;'LC Subject Headings' => 'cs:http://id.loc.gov/authorities/subjects';
+'LC Name Authority File' => 'cs:http://id.loc.gov/authorities/names';
+'LC Subject Headings for Children' => 'cs:http://id.loc.gov/authorities/childrensSubjects';
+'LC Genre/Forms File' => 'cs:http://id.loc.gov/authorities/genreForms';
+'Thesaurus of Graphic Materials' => 'cs:http://id.loc.gov/vocabulary/graphicMaterials';
+'Preservation Events' => 'cs:http://id.loc.gov/vocabulary/preservationEvents';
+'Preservation Level Role' => 'cs:http://id.loc.gov/vocabulary/preservationLevelRole';
+'Cryptographic Hash Functions' => 'cs:http://id.loc.gov/vocabulary/cryptographicHashFunctions';
+'MARC Relators' => 'cs:http://id.loc.gov/vocabulary/relators';
+'MARC Countries' => 'cs:http://id.loc.gov/vocabulary/countries';
+'MARC Geographic Areas' => 'cs:http://id.loc.gov/vocabulary/geographicAreas';
+'MARC Languages' => 'cs:http://id.loc.gov/vocabulary/languages';
+'ISO639-1 Languages' => 'cs:http://id.loc.gov/vocabulary/iso639-1';
+'ISO639-2 Languages' => 'cs:http://id.loc.gov/vocabulary/iso639-2';
+'ISO639-5 Languages' => 'cs:http://id.loc.gov/vocabulary/iso639-5';"

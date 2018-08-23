@@ -21,25 +21,25 @@ XLS, XLSX, CSV, TSV
 Spreadsheets are mapped by column, with numeric identifiers provided in the Source column of the import mapping. If you wish to map from Column B of an Excel spreadsheet, you would list the Source as 2. (A = 1, B = 2, C = 3, and so on.)
 
 XML (Including FileMaker XML, Inmagic XML, EAD XML, PastPerfect XML, Vernon XML, TEI XML, PBCore XML, MediaBin, MARCXML & MODS)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-XML sources are referenced using `xPath <https://en.wikipedia.org/wiki/XPath>`_, a query language for selecting nodes and computing values from XML documents (a `basic tutorial <http://www.w3schools.com/xsl/xpath_intro.asp>`_ is available from W3C). 
+XML sources are referenced using `xPath <https://en.wikipedia.org/wiki/XPath>`_, a query language for selecting nodes and computing values from XML documents (a `basic tutorial <http://www.w3schools.com/xsl/xpath_intro.asp>`_ is available from W3C).
 
 In general the Source column should be set to the name of the XML tag, proceeded with a forward slash (i.e. /Sponsoring_Department or /inm:ContactName)
 
 Common examples of xPath expressions are provided in the table below.
 
 .. csv-table::
-   :widths: 10, 25, 25, 25, 15
+   :widths: auto
    :header-rows: 1
-   :url: https://docs.google.com/spreadsheets/d/1ky6LwTMPkNVOJJIr4IaptM_k4cCmyQlquJ-7hKhJ72w/pub?output=csv
+   :file: ../_static/csv/xpathexpamples.csv
 
 MARCXML files can also be imported using the xPath syntax. Standard fields and indicators can be selected as Sources as follows:
 
 .. csv-table::
-   :widths: 20, 20, 30, 30
+   :widths: auto
    :header-rows: 1
-   :url: https://docs.google.com/spreadsheets/d/1Wl5HAuelGuIXSdmHnb45gK8lmY7l68ESGhhzOOnfYOE/pub?output=csv
+   :file: ../_static/csv/marcxmlfields.csv
 
 FileMakerPro XMLRESULT files generally follow the XML and xPath conventions described above but require some special formatting considerations due to inclusion of invalid characters in field names in certain databases (i.e. ArtBase). Source field names in the mapping must follow these rules:
 
@@ -92,9 +92,9 @@ To extract the lens information the block heading "XMP-aux" would be joined with
 As this import format is used frequently in conjunction with media import, two more options are available to help identify uploaded media and match metadata to the correct files within the system. Use *_filename_* as a source if you wish to set any field in CollectiveAccess as the filename. And more importantly, *_filepath_* points to the media in the import directory, and can be used to trigger ingestion of the media itself.
 
 .. csv-table::
-   :widths: 20, 40, 40
+   :widths: auto
    :header-rows: 1
-   :url: https://docs.google.com/spreadsheets/d/1k5lnRifRqNrlEMbZMoeCZCg72ElBHETvZcqyQCKmqCg/pub?output=csv
+   :file: ../_static/csv/exifaddtloptions.csv
 
 RDF
 ^^^
@@ -104,7 +104,7 @@ This is an option for importing linked data in RDF format...
 ULAN-Linked Data
 ^^^^^^^^^^^^^^^^
 
-ULAN Data can be imported through an interface available in the Import menu dropdown in CollectiveAccess. 
+ULAN Data can be imported through an interface available in the Import menu dropdown in CollectiveAccess.
 
 Omeka
 ^^^^^
@@ -116,7 +116,7 @@ WorldCat
 
 WorldCat objects can be searched and imported using the WorldCat interface available in the Import menu dropdown. This tool uses standard import mappings to match the WorldCat source fields to fields in the CollectiveAccess profile.
 
-These import mappings are written as described above in the xPath notation used for MARCXML. 
+These import mappings are written as described above in the xPath notation used for MARCXML.
 
 CollectiveAccess
 ^^^^^^^^^^^^^^^^

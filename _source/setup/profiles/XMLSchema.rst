@@ -3,7 +3,7 @@ XML Schema
 
 .. contents::
    :local:
-   
+
 Introduction
 ------------
 
@@ -22,7 +22,7 @@ This manual should be enough to allow you to create your own profile. Topics cov
    - A full explanation of the various sections and components that comprise a profile
    - Modifying an existing profile and building profiles from scratch
    - Installing and testing your profile
-   
+
 CollectiveAccess Basics
 -----------------------
 
@@ -52,7 +52,7 @@ Installation profiles for CollectiveAccess are developed for specific projects o
    - Coney Island History Project, Brooklyn, NY, USA, (Historical Society Archive)
    - New Museum of Contemporary Art, New York, NY, USA, (Multimedia Digital Archive)
    - New School, New York, NY, USA, (Special Collections Archival Collection Management System)
-   
+
 Metadata standards based installation profiles create a generic cataloging interface that complies with established archival, museum, and library structure standards. These profiles offer a high level of sustainability and interoperability, but lack the custom features found in the project-specific profiles. Some examples of standards-based installation profiles include:
 
    - Dublin Core
@@ -60,7 +60,7 @@ Metadata standards based installation profiles create a generic cataloging inter
    - DarwinCore
    - VRACore
    - MARC
-   
+
 Whether you choose to use a project specific profile or a standards based profile, all can be modified. You can even create your own unique profile from scratch if need be. All profiles share the same components. The following sections describe these components.
 
 Parts of a Profile
@@ -75,7 +75,7 @@ Every profile begins with its declaration that sets its name, description, and o
 
    ::
 
-      <profile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="profile.xsd" useForConfiguration="1" 
+      <profile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="profile.xsd" useForConfiguration="1"
       base="base" infoUrl="http://providence.collectiveaccess.org/wiki/DublinCoreInstallationProfile">
       <profileName>[Standard] DublinCore</profileName>
       <profileDescription>Use this profile if you want a system that is compliant with simple DublinCore</profileDescription>
@@ -243,7 +243,7 @@ Lists are unique because they require reference code names defined in your list 
               </label>
             </labels>
             <documentationUrl>http://dublincore.org/documents/dcmi-terms/#terms-format</documentationUrl>
-      
+
 In this element set the code name is dcFormat, its datatype is List, the preferred labels are in English it is "Format". A description has been added and will appear as help text in the cataloging interface when the label is moused over. The list is defined from a code name defined in the list definitions. In this particular case it's dc_format. This links the element set with its corresponding List in list definitions creating the necessary code for the controlled vocabulary values. See List and Vocabulary Management for more details.
 
 Settings
@@ -277,7 +277,7 @@ Defining a restriction by, for example, object types creates unique cataloging i
               </settings>
           </restriction>
       </typeRestrictions>
-      
+
 .. note::
 
    Note that the item type specification - what type of item the restriction is bound to - is called "table" in the profile code. This is because the item types are specified using the names for their tables in the CollectiveAccess database. Specific table names are used for these Primary Types.
@@ -285,9 +285,9 @@ Defining a restriction by, for example, object types creates unique cataloging i
 Each type restriction can take settings. Currently defined settings values are:
 
 .. csv-table::
+   :widths: auto
    :header-rows: 1
-   :url: https://docs.google.com/spreadsheets/d/1CpAQQ9b6lVTrCNdpmBQgnIHwlD2CAPlP0B8uRLne8lc/pub?gid=0&single=true&output=csv
-
+   :file: ../../_static/csv/xml_syntax_(restrictions).csv
 
 User Interface Definitions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -341,7 +341,7 @@ To organize the data fields on each screen, you must first declare which interfa
                   </placement>
                 </bundlePlacements>
               </screen>
-              
+
 .. note::
 
    Note that each entry in the bundle list is actually comprised of several parts: a unique code as key and an associative array as value. At a minimum, the value array must define a bundle using the 'bundle' key and a valid bundle name as the value. Depending upon the bundle being listed, other settings can be passed as well.
@@ -363,7 +363,7 @@ The label and add_label allow you to override the default text labels in the use
                 <setting name="add_label" locale="de_DE">Addieren einen Beschriebung</setting>
               </settings>
       </placement>
-      
+
 The restrict_to_type setting applies only to bundles that create relationships between items - bundles like ca_objects and ca_entities. By default these bundles will allow linking to an item of any type - for example, by default ca_entities will let you link to an individual, and organization or any other type of entity. restrict_to_type does just what it says, which is limit the bundle such that it allows linking only to a specific type. The value you set restrict_to_type to should be the identifier (idno field value) of the type you wish to restrict to.
 
 For example, if you have an entity type of individual with its list item idno set to ind, then the bundle specification for a ca_entities linking control that only allows linking to individuals would look like this:
@@ -374,7 +374,7 @@ For example, if you have an entity type of individual with its list item idno se
               <settings>
               <setting name="restrict_to_types">ind</setting>
               </settings>
-            
+
 Additionally, the restrtict_to_relationship_types setting applies only to bundles that create relationships between items - bundles like ca_objects and ca_entities, but need to be linked to a specific relationship type. By default, when you create a relationship between any two records, that relationship can be defined through Relationship Types (see section 3.2.6). Furthermore, those relationship types can have hierarchical subtypes and so on. This is where being able to restrict to a relationship type is useful.
 
 For example, let's say you have entities relationship types that are creator, contributor, and publisher. These are further defined by another level of sub-types, so you can further define creator as artist, author, director, etc; contributor as assistant director, production assistant, etc; and publisher as copyright holder, distributor, etc. You can use restrict_to_relationship_type to create a relationship field limited only to that type. To create a relationship field that would only be limited to creator types, it would look like this:
@@ -389,7 +389,7 @@ For example, let's say you have entities relationship types that are creator, co
              <setting name="add_label" locale="en_US">Add creator & contributor</setting>
              </settings>
            </placement>
-           
+
 As of version 1.7 you can restrict display of bundle placements on a screen depending upon the type of the record being edited. For example, you can set up a bundle that appears when editing objects of type "book" but not type "video". By default a bundle will display for all types. To restrict it, set the typeRestrictions attribute in the <placement> tag to a comma-separated list of type codes. For example:
 
    ::
@@ -417,7 +417,7 @@ Relationships manifest themselves in the cataloging interface as repeating bundl
 Note that the date range qualifier, optional attributes and reification are not implemented in the user interface yet. Relationship types bundles are typically expressed like this.
 
    ::
-   
+
       <relationshipTable name="ca_objects_x_entities">
            <types>
              <type code="creator" default="1" rank="1">
@@ -450,7 +450,7 @@ Note that the date range qualifier, optional attributes and reification are not 
                <subTypeLeft> </subTypeLeft>
                <subTypeRight/>
              </type>
-        
+
 In this example the relationship types are ordered as follows: creator, contributor, publisher. This order is established by the rank setting in the type tag.
 
 Putting It All Together

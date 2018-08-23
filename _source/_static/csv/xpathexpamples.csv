@@ -1,0 +1,40 @@
+Imports,Description,XML example,Mapping source syntax,Notes
+Items,Imports element items,".. code-block:: none
+
+   <text>
+       <body>
+           <div>
+               ITEM
+           </div>
+       </body>
+   </text>",``/text/body/div``,"Example imports ""ITEM""."
+Items with a particular attribute value,Imports items only from elements with a certain attribute node value.,".. code-block:: none
+
+   <text>
+       <body>
+           <div attribute=""thistype!"">
+               ITEM
+           </div>
+       </body>
+   </text>",``/text/body/div[@attribute='thistype!']``,"Maps element items with ""thistype!"" as attribute value."
+Attribute value,Imports the attribute node value itself.,".. code-block:: none
+
+   <text>
+       <body
+           <div attribute=""thistype!"">
+               ITEM
+           </div>
+       </body>
+   </text>",``/text/body/div/@attribute``,"Using the example, this mapping would import 'thistype!' itself, as opposed to ""ITEM""."
+Items *not* of a particular attribute value,"Imports items in cases where the element does not have an attribute, or in cases where the attribute value is empty.",".. code-block:: none 
+
+   <text>
+       <body>
+          <div>
+               ITEM_1
+           </div>
+           <div attribute=""thistype!"">
+               ITEM_2
+           </div>
+       </body>
+   </text>",``/text/body/div[not(@attribute)]``,"This only necessary in cases where there are other instances where the same element does have the attribute, like the example here. In this case, ITEM_1 would be imported, and ITEM_2 would not."

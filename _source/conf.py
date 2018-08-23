@@ -425,3 +425,7 @@ epub_exclude_files = ['search.html']
 # If false, no index is generated.
 #
 # epub_use_index = True
+
+def setup(app):
+    app.add_stylesheet('custom_theme.css')
+    app.add_stylesheet('table_override.css')

@@ -1,0 +1,6 @@
+Format,Media processing backend,Comments
+MP3,ffmpeg,ffmpeg must be compiled with libLAME
+AIFF,ffmpeg,
+WAV,ffmpeg,Including Broadcast-WAVE
+AAC,ffmpeg,Requires ffmpeg to be compiled with `libfaac <http://www.audiocoding.com/faac.html>`_
+Ogg Vorbis,ffmpeg,

@@ -1,0 +1,28 @@
+,,,,
+Bundle type,Settings,Description,Default,Values
+Special (hierarchy_location and hierarchy_navigation only),open_hierarchy,If checked hierarchy browser will be open when form loads.,1 (open),0 or 1
+Special (hierarchy_location and hierarchy_navigation only),auto_shrink,If enabled hierarchy browser will shrink to height of contents. Version 1.5 and later.,1 (shrink),0 or 1
+"Special (hierarchy_location, hierarchy_navigation and ca_objects_history only)",expand_collapse,Controls the expand/collapse behavior for this bundle.,dont_force (default behavior = save expand/collapse state when the user changes it),"dont_force, collapse, expand"
+Relationship (ca_list_items only),restrict_to_lists,Restricts display to items from the specified list(s). Leave all unselected for no restriction.,,list code
+"Relationship (ca_list_items, ca_storage_locations, ca_places only)",useHierarchicalBrowser,If set a hierarchy browser will be used to select the related item rather than an auto-completing text field.,0,0 or 1
+"Relationship (ca_list_items, ca_storage_locations, ca_places only)",hierarchicalBrowserHeight,The height of the hierarchical browser displayed when theuseHierarchicalBrowser option is set.,200px,A pixel dimension ending with 'px' (eg. 500px)
+Relationship (ca_objects),restrictToTermsRelatedToCollection,Will restrict checklist to those terms applied to related collections.,0,0 or 1
+Relationship (ca_objects),restrictToTermsOnCollectionWithRelationshipType,Will restrict checklist to terms related to collections with the specified relationship type. Leave all unselected for no restriction.,,type code
+Relationship (ca_objects),restrictToTermsOnCollectionUseRelationshipType,Specifies the relationship used to relate collection-restricted terms to this object. (Required if usingrestrictToTermsRelatedToCollection),,type code
+Relationship,restrict_to_relationship_types,Restricts display to items related using the specified relationship type(s). Leave all unselected for no restriction.,,type code
+Relationship,restrict_to_types,Restricts display to items of the specified type(s). Leave all unselected for no restriction.,,type code
+Relationship,dont_include_subtypes_in_type_restriction,Normally restricting to type(s) automatically includes all sub-(child) types. If this option is checked then the lookup results will include items with the selected type(s) only,0,0 or 1
+Relationship,list_format,Format of relationship list.,bubbles,bubbles or list
+Relationship,dontShowDeleteButton,If checked the delete relationship control will not be provided.,0,0 or 1
+Relationship,minRelationshipsPerRow,Sets the minimum number of relationships that must be catalogued to save.,empty,numeric value
+Relationship,maxRelationshipsPerRow,Sets the maximum number of relationships that must be catalogued to save.,empty,numeric value
+Relationship,display_template,Layout for relationship when displayed in list (can include HTML). Element code tags prefixed with the ^ character can be used to represent the value in the template. For example: ^my_element_code.,^preferred_labels,Uses thebundle display template syntax
+Relationship,colorFirstItem,If set first item in list will use this color.,,
+Relationship,colorLastItem,If set last item in list will use this color.,,
+Relationship or Attribute,sort,Method used to sort related items.,"For attributes: use target element code for sort without table or container path i.e. dates_value NOT ca_objects.date.dates_value. To sort on order created do not use the sort setting at all, use only sortDirection. For relationships: use the target element code for sort WITH full table/container path. Use relation_id to set to order created.",
+Relationship or Attribute,sortDirection,"Direction of sort, when not in a user-specified order.",ASC,ASC or DESC
+Attribute or Label,usewysiwygeditor,"Check this option if you want to use a word-processor like editor with this text field. If you expect users to enter rich text (italic, bold, underline) then you might want to enable this.",,0 or 1
+Attribute or Label,width,Width of the placement on the UI,,pixels or characters
+Attribute or Label,height,Height of the placement on the UI,,pixels or characters
+Relationship or Label,documentation_url,A documentation link for the bundle,,URL
+Special (ca_objects_history),full list of settings here,The Object Use History bundle has many settings. See the included link for a full list.,,

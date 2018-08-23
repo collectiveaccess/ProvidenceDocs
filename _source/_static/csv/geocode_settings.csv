@@ -1,0 +1,12 @@
+Settings,Description,Default,Values
+fieldWidth,"Width, in characters, of the field when displayed in a user interface.",70,Integers greater than zero
+fieldHeight,"Height, in characters, of the field when displayed in a user interface.",2,Integers greater than zero
+mustNotBeBlank,"Use this option if this attribute value must be set to some value - if, in other words, it must not be blank.",0 (can be blank),0 or 1
+doesNotTakeLocale,Defines whether element takes locale specification.,1 (does not take locale specifications),0 or 1
+canBeUsedInSort,Use this option if this attribute value can be used for sorting of search results.,0 (not used in sort),0 or 1
+canBeUsedInSearchForm,Use this option if the attribute value can be used in search forms.,1 (used in search forms),0 or 1
+canBeUsedInDisplay,Use this option if the attribute value can be used for display in search results.,1 (used for display),0 or 1
+displayTemplate,"Layout for value when used in a display. Element code tags prefixed with the ^ character, used to represent the value in the template. For example: <i>^my_element_code</i>.",,HTML
+tileServerURL,"OSM URL for tileserver to load custom tiles from, with placeholders for X, Y and Z values in the format ${x}. .",http://mapwarper.net/maps/tile/3671/${z}/${x}/${y}.png,URL with placeholders
+tileLayerName,Display name for layer containing tiles loaded from tile server specified in the tile server URL setting.,1929 Street Atlas,Text
+layerSwitcherControl,Include layer switching controls in the map interface.,1 (show controls),0 or 1

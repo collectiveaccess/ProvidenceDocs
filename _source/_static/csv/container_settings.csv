@@ -1,0 +1,10 @@
+Settings,Description,Default,Values
+doesNotTakeLocale,Defines whether element take locale specification.,0 (takes locale),0 or 1
+lineBreakAfterNumberOfElements,Number of metadata elements after which a line break should be inserted.,0 (no line breaks),Integers zero or greater
+canBeUsedInSearchForm,Use this option if the attribute value can be used in search forms.,1 (used in search forms),0 or 1
+canBeUsedInDisplay,Use this option if the attribute value can be used for display in search results.,1 (used for display),0 or 1
+displayTemplate,"Layout for value when used in a display. Element code tags prefixed with the ^ character, used to represent the value in the template. For example: *^my_element_code*.",,Display_Templates
+displayDelimiter,Delimiter to use between multiple values.,", (comma)",Text
+readonlyTemplate,"Layout used when a container value is in read-only mode. If this template is set, existing values are always displayed in read-only mode until you click to edit. This can be used to preserve screen space for large containers.
+
+Element code tags prefixed with the ^ character, used to represent the value in the template. For example: ^ca_objects.my_notes. Each of these templates is evaluated relative to a specific value instance for this container, so other display template elements like <unit>, <ifdef> or <more> might not work exactly as expected. More general notes on display templates are here: Display_Templates",,HTML

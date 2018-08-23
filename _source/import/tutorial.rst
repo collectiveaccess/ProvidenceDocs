@@ -16,7 +16,7 @@ To begin this tutorial, download the following three files.
 | `Sample mapping.xlsx <http://docs.collectiveaccess.org/images/c/ca/Sample_mapping.xlsx>`_
 | `Sample data.xlsx <http://docs.collectiveaccess.org/images/6/68/Sample_data.xlsx>`_
 | `Sample import profile.xml <http://docs.collectiveaccess.org/images/f/fc/Sample_import_profile.xml>`_
-| 
+|
 
 At its simplest, the import mapping is essentially a schema crosswalk: for every data source you list, you declare a target "destination" for where the data should end up in CollectiveAccess. However, there are several additional rules and parameters you can set to ensure the "data reader" can correctly parse and process the data.
 
@@ -48,7 +48,7 @@ Every import mapping requires a few general settings, explained below. Again, th
 In our example mapping, we have set the name to Sample Mapping and code to sample_mapping. Because our sample data is in an Excel spreadsheet, we've set the inputFormat to XLSX. Our source data contains Objects, so we've set the table to ca_objects. Our system is empty (no records have been imported yet!) so the existingRecordPolicy is set to none. Finally, we are importing photographs, which in our profile corresponds to the object type code image.
 
 .. csv-table::
-   :widths: 15, 50, 20, 15
+   :widths: auto
    :header-rows: 1
    :file: ../_static/csv/import_settings.csv
 
@@ -160,10 +160,9 @@ Lastly, Splitters aren't the only type of Refinery - they're just the most commo
 In our entitySplitter example, we'll be using the most basic and commonly used refinery parameters: entityType, and relationshipType. In the objectLotSplitter we will be using another useful parameter called attributes.
 
 .. csv-table::
-   :widths: 20, 50, 30
+   :widths: auto
    :header-rows: 1
-   :url: https://docs.google.com/spreadsheets/d/1bxGGh5BpNqkpBztrR-Zr2TzyDgx_d5yFIEv9WazmkjA/pub?output=csv
-
+   :file: ../_static/csv/refineryparameters.csv
 .. _import_original:
 
 9. Original values/Replacement values (Columns 8 & 9)
@@ -194,4 +193,3 @@ Once you have installed the sample profile configuration, you can load the sampl
 Once the mapping is loaded, click on the icon to the right and you'll be able to upload the sample data on the following screen. From here, you can execute the data import!
 
 .. image:: ../../images/a/a9/Run_import1.png
-

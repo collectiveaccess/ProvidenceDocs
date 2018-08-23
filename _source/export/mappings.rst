@@ -15,12 +15,12 @@ Creating the mapping is a very dependent on the format you want to export. Speci
 Rule types
 ----------
 
-The first column of the main mapping spreadsheet is called "Rule type". What you set here basically qualifies what this row does. Most of the rows will end up being of the "Mapping" type but there are several options available: 
+The first column of the main mapping spreadsheet is called "Rule type". What you set here basically qualifies what this row does. Most of the rows will end up being of the "Mapping" type but there are several options available:
 
 .. csv-table::
-   :widths: 20, 50
+   :widths: auto
    :header-rows: 1
-   :url: https://docs.google.com/spreadsheets/d/1tz86ETrqAqQPA0ct4f6ZMNkVKTWasOzz1sgsqZDsHYc/pub?output=csv	
+   :file: ../_static/csv/1_-_rule_types.csv
 
 Hierarchical mappings
 ---------------------
@@ -42,19 +42,21 @@ XML Element values
 
 The XML format implementation allows valid XML element names as values for the "Element" column. If you want to specify an XML attribute, prefix the name with an @. The attribute will then be appended to the hierarchy parent (which can't be another attribute). The mapping item hierarchy pretty much represents the XML tree that will be constructed from it.
 
-Say you have the following very simple part of a mapping sheet and you export a single object. 
-	
+Say you have the following very simple part of a mapping sheet and you export a single object.
+
 .. csv-table::
-   :widths: 20, 20, 20, 20, 20, 20
+   :widths: auto
    :header-rows: 1
-   :url: https://docs.google.com/spreadsheets/d/1sjrD1YwG4qlVEqjJadc6AvOgtA4PoVa4UmwLaX5xOCw/pub?output=csv
+   :file: ../_static/csv/2_-_element_values.csv
 
-What you end up with as export for a given objects is something like the following: 
+What you end up with as export for a given objects is something like the following:
 
-<object idno="00001">
-  <title>My very cool object</title>
-</object>
-   
+.. code-block:: none
+
+   <object idno="00001">
+      <title>My very cool object</title>
+   </object>
+
 MARC Element values
 -------------------
 
@@ -62,18 +64,20 @@ Let's start off by saying that MARC is a very old and very specific format. Crea
 
 In MARC mappings, the Element value is either a control field or a data field definition. For control field definitions, simply enter the field code (like '001') here. For data field definitions, enter the field code, followed by a forward slash and both indicator characters. For details on valid field codes and indicators, please refer to the MARC documentation. For empty/unused indicators, use the pound sign (#). Valid examples are 001 300/## 490/1#
 
-Mapping items with data field definitions also shouldn't have any source definition or static data. The data resides in subfields, which should be separate mapping items with a hierarchical relationship (via Parent ID) to the field definition. For instance, you'd define an item for the data field "300/##". Suppose it had the ID 1. This field (like every data field) has a couple of subfields [1], namely a through g and 3, 6, 8 (leave out the $ character from the original documentation). Now create separate mapping items for each subfield you need, pull in the CA data you want using the 'Source' field in the mapping sheet and fill in the Parent ID "1", the identifier of the data field. Here's an example in table form (which may not make sense from a MARC standpoint but we're only trying to explain the format here, not the semantics of MARC fields): 
-	
+Mapping items with data field definitions also shouldn't have any source definition or static data. The data resides in subfields, which should be separate mapping items with a hierarchical relationship (via Parent ID) to the field definition. For instance, you'd define an item for the data field "300/##". Suppose it had the ID 1. This field (like every data field) has a couple of subfields [1], namely a through g and 3, 6, 8 (leave out the $ character from the original documentation). Now create separate mapping items for each subfield you need, pull in the CA data you want using the 'Source' field in the mapping sheet and fill in the Parent ID "1", the identifier of the data field. Here's an example in table form (which may not make sense from a MARC standpoint but we're only trying to explain the format here, not the semantics of MARC fields):
+
 .. csv-table::
-   :widths: 20, 20, 20, 20, 20, 20
+   :widths: auto
    :header-rows: 1
-   :url: https://docs.google.com/spreadsheets/d/1Z0Y_U8M2Kg5CRAPskng2kJ8TbsLa0s7kk_zU6dkrmHQ/pub?output=csv
+   :file: ../_static/csv/3_-_marc_element_values.csv
 
 An example export for a single object looks like this then. Note that we selected the 'readable' format for the MARC exporter, more info on format-specific settings are below.
 
-LDR                         
-001     00001
-300 ## _bMy very cool object
+.. code-block:: none
+
+   LDR
+   001     00001
+   300 ## _bMy very cool object
 
 Variables
 ---------
@@ -83,42 +87,44 @@ The identifier (essentially the name) that you assign to the variable goes into 
 
 The main (and for the moment only) use for variables are conditional mappings. Say you have two objects, a document and a photo. And say you have an attribute 'secret_info' that is valid for both object types but that you only want to have in your export for photos. You could build two different mappings for these cases or you could use a variable to assign the object type to a user-defined identifier and then use the skipIfExpression option for the mapping in question.
 
-A good way to think of variables is that they are mappings that don't end up in the actual export. They respect the current context, the current place in the hierarchy, everything. 
-	
+A good way to think of variables is that they are mappings that don't end up in the actual export. They respect the current context, the current place in the hierarchy, everything.
+
 .. csv-table::
-   :widths: 20, 20, 20, 20, 20, 20
+   :widths: auto
    :header-rows: 1
-   :url: https://docs.google.com/spreadsheets/d/1Yq5nRjtfe8m2MQcYlsSCchZMTzJ4-skAs4pjX3Runbg/pub?output=csv
+   :file: ../_static/csv/4_-_variables.csv
 
 We use the "type" variable in the skipIfExpression setting for the top_secret mapping. For more info on this setting, see the setting description below.
 
 Settings
 --------
 
-These are configuration options that apply to the whole exporter mapping. 
-	
+These are configuration options that apply to the whole exporter mapping.
+
 .. csv-table::
-   :widths: 20, 50, 20, 20
+   :widths: auto
    :header-rows: 1
-   :url: https://docs.google.com/spreadsheets/d/1k0y9XYqZcUaZvvsATshz7tfWkxV1gEDfdHc1xB1CyOc/pub?output=csv
+   :file: ../_static/csv/5_-_settings.csv
 
 Options
 -------
-Each mapping item (i.e. a line in the mapping spreadsheet) can have its own settings as well. To set these settings, you can fill out the 6th column of the mapping sheet, called 'Options'. The options must be filled in in JavaScript Object Notation. If you set this value and it's not formatted properly, the mapping loading tool will throw an error. Here's a description of the available options: 
-	
+Each mapping item (i.e. a line in the mapping spreadsheet) can have its own settings as well. To set these settings, you can fill out the 6th column of the mapping sheet, called 'Options'. The options must be filled in in JavaScript Object Notation. If you set this value and it's not formatted properly, the mapping loading tool will throw an error. Here's a description of the available options:
+
 .. csv-table::
-   :widths: 20, 50, 20, 20
+   :widths: auto
    :header-rows: 1
-   :url: https://docs.google.com/spreadsheets/d/1BjthkOVOTYHLBDm1ujmxmZyM09OtKEClkKiJNbT2de4/pub?output=csv
+   :file: ../_static/csv/6_-_options.csv
 
 Below is a properly formatted example in JSON that uses some of these options:
 
-{
-	"default" : "No value",
-	"delimiter" : ";",
-	"maxLength" : 80,
-	"filterByRegExp" : "[A-Z]+"
-}
+.. code-block:: none
+
+   {
+	   "default" : "No value",
+	   "delimiter" : ";",
+	   "maxLength" : 80,
+	   "filterByRegExp" : "[A-Z]+"
+   }
 
 Processing order
 ----------------
@@ -128,8 +134,10 @@ In some cases the order in which the options and replacements (see next sub-sect
 1) skipIfExpression (available for v1.5)
 2) filterByRegExp
 3) Replacements (see below)
-4a) If value is empty, respect 'default' setting
-4b) If value is not empty, use prefix and suffix
+
+   a) If value is empty, respect 'default' setting
+   b) If value is not empty, use prefix and suffix
+
 5) Truncate if result is longer than maxLength
 
 Replacements
@@ -151,12 +159,12 @@ Mapping repitition
 
 The 'RepeatMappings' rule type allows you to repeat a set list of mappings in a different context without actually defining them again. This is, for instance, very useful when creating EAD exports of hierarchical data where the basic structure is always the same (for archdesc, c01, c02, etc.) but the context changes. It's basically a shortcut that saves a lot of work in certain scenarios. Note that all hierarchy children of the listed items are repeated as well.
 
-If you create a RepeatMappings rule, the mapping loader expects a comma-delimited list of references to the 2nd column in the Mapping sheet. It also really only makes sense to create this type of rule if you change the context in the same step. A simple example could look like this: 
-	
+If you create a RepeatMappings rule, the mapping loader expects a comma-delimited list of references to the 2nd column in the Mapping sheet. It also really only makes sense to create this type of rule if you change the context in the same step. A simple example could look like this:
+
 .. csv-table::
-   :widths: 20, 20, 20, 20, 20, 20
+   :widths: auto
    :header-rows: 1
-   :url: https://docs.google.com/spreadsheets/d/1VHtXyz_niCsA0N0PFv9GxPwhkzpQdzet6igb49cPk5k/pub?output=csv
+   :file: ../_static/csv/7_-_mapping_repetitions.csv
 
 In this case, the 'child' element would be repeated for each hierarchy child of the exported item because of the context switch and for each of those children, the exporter would add the label and idno elements.
 
@@ -205,55 +213,57 @@ Sometimes a limited export scope to for example ca_objects like in the previous 
 
 Here is a minimal example that uses all the available features:
 
-wrap_before = ""
-wrap_after = ""
+``wrap_before = ""``
+``wrap_after = ""``
 
-nodes = {
-	my_images = {
-		mapping = object_mapping,
-		restrictBySearch = "access:1",
-		related = {
-			concepts = {
-				restrictToRelationshipTypes = [depicts],
-				mapping = concept_mapping,
-			},
-			agents = {
-				restrictToTypes = [person],
-				mapping = agent_mapping,
-			},
-		}
-	},
-}
+.. code-block:: none
+
+   nodes = {
+      my_images = {
+	     mapping = object_mapping,
+		    restrictBySearch = "access:1",
+		    related = {
+			   concepts = {
+			      restrictToRelationshipTypes = [depicts],
+				  mapping = concept_mapping,
+			   },
+			   agents = {
+				  restrictToTypes = [person],
+				  mapping = agent_mapping,
+			   },
+		   }
+	   },
+   }
 
 While processing this configuration, the exporter essentially builds one big list of records and corresponding mappings to export. There are no duplicates in this list, if object_id 23 is selected by two different node type definitions or by multiple related definitions, it is still only exported once, using the mapping provided by the first definition.
 
 Here is an example of how to run an RDF mode export:
 
-bin/caUtils export-data --rdf -c ~/rdf_mode.conf ~/export.xml 
+``bin/caUtils export-data --rdf -c ~/rdf_mode.conf ~/export.xml``
 
 RDF Mode configuration file options
 -----------------------------------
-	
+
 .. csv-table::
-   :widths: 20, 20
+   :widths: auto
    :header-rows: 1
-   :url: https://docs.google.com/spreadsheets/d/1-FYh1vPL1qwnNaYXjZoULLHXkFBhMTTY7FLwc3DDlg4/pub?output=csv
+   :file: ../_static/csv/8_-_rdf_mode.csv
 
 Node type definition options
 ----------------------------
-	
+
 .. csv-table::
-   :widths: 20, 20
+   :widths: auto
    :header-rows: 1
-   :url: https://docs.google.com/spreadsheets/d/15Piuy6Et2RjUzy70-XwmIMeA7y3fQ7C8GQTI-QNwOTA/pub?output=csv
+   :file: ../_static/csv/9_-_node_options.csv
 
 'related' options
 -----------------
-	
+
 .. csv-table::
-   :widths: 20, 50
+   :widths: auto
    :header-rows: 1
-   :url: https://docs.google.com/spreadsheets/d/1qAlfVKu-hphoQM753Q4le9Rsyq45gxScUkNMPXiD86c/pub?output=csv
+   :file: ../_static/csv/10_-_related_options.csv
 
 Misc Setting and Options
 ------------------------
@@ -273,4 +283,4 @@ LC services work a little differently. For these, you must append to the source 
 
 For example:
 
-ca_objects.lcsh_terms.text will get you the label name of all lcsh terms on the record. ca_objects.lcsh_terms.id will get you the URI for these terms. 
+``ca_objects.lcsh_terms.text`` will get you the label name of all lcsh terms on the record. ``ca_objects.lcsh_terms.id`` will get you the URI for these terms.

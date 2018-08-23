@@ -7,14 +7,14 @@ Mappings
 Introduction
 ------------
 
-An import mapping is a spreadsheet that defines how data is imported into CollectiveAccess. A basic introduction to writing and running an import mapping is provided in our :doc:`tutorial`. This page provides a detailed look at the available settings and options available through the import mapping. It is organized by column (again, see the tutorial for a simpler breakdown of the available columns), with a description of the function of each column along with the available settings for that column. 
+An import mapping is a spreadsheet that defines how data is imported into CollectiveAccess. A basic introduction to writing and running an import mapping is provided in our :doc:`tutorial`. This page provides a detailed look at the available settings and options available through the import mapping. It is organized by column (again, see the tutorial for a simpler breakdown of the available columns), with a description of the function of each column along with the available settings for that column.
 
 Import Mappings operate under two basic assumption about your data:
 1. That each row in a data set corresponds to a single record
 2. That each column corresponds to a single metadata element.
 
 .. note::
-   
+
    This is not universal. In general most mappings will follow the one row one record principle, but they can support an option called treatAsIdentifiersForMultipleRows that will explode a single row into multiple records. This is very useful if, say, you're doing a merge_on_idno (more on that below) and you have a data source that references common metadata shared by many pre-existing records in a single row.
 
 Settings
@@ -23,9 +23,9 @@ Settings
 The overall settings, including the name, the format of the input data and other import settings are defined here. This section can be placed at the top or bottom of a mapping spreadsheet with the setting in the first column and the provided parameter in the second. It functions separately from the main, column defined, body of the import mapping.
 
 .. csv-table::
-   :widths: 12, 32, 32, 12
+   :widths: auto
    :header-rows: 1
-   :url: https://docs.google.com/spreadsheets/d/1RrAC-l7RM1b6dcgOLY-6ichP6TOaHdAITolPhlLSrHo/pub?output=csv
+   :file: ../_static/csv/mappingsettings.csv
 
 Rules
 -----
@@ -33,9 +33,9 @@ Rules
 Each row in the mapping must have a rule defined that determins how the importer will treat the record. Available rules are:
 
 .. csv-table::
-   :widths: 15, 85
+   :widths: auto
    :header-rows: 1
-   :url: https://docs.google.com/spreadsheets/d/1rNGM3D33I64Yi64qSxf5ie7rme-dhJh95s7e_w0O_-0/pub?output=csv
+   :file: ../_static/csv/importerrules.csv
 
 Source
 ------
@@ -48,7 +48,7 @@ Currently: XLSX, XLS, MYSQL, Filemaker XML, Inmagic XML, PastPerfect XML, Vernon
 
 Planned imminently: OAI-PMH/DC
 
-A full description of the supported import formats and how they may be referenced is available in the :doc:`formats` page. 
+A full description of the supported import formats and how they may be referenced is available in the :doc:`formats` page.
 
 CA_table.element
 ----------------
@@ -108,11 +108,11 @@ tourStopSplitter                 :term:`attributes <attributes>`, :term:`dontCre
       Sets or maps metadata for the entity record by referencing the metadataElement code and the location in the data source where the data values can be found
 
       See below for additonal ``attribute`` settings for the entitySplitter and objectRepresentationSplitter
-      
+
       **Example**
-      
+
       .. code-block:: none
-      
+
          {"attributes": {
             "address": {
                "address1": "^24",
@@ -124,17 +124,17 @@ tourStopSplitter                 :term:`attributes <attributes>`, :term:`dontCre
             }
          }
 		 }
-		 
+
       **entitySplitter Additional Properties**
-      
-      To map source data to idnos in an entitySplitter, see the 'attributes' parameter above. An exception exists for when idnos are set to be auto-generated. To create auto-generated idnos within an entitySplitter, use the following syntax.	
-      
+
+      To map source data to idnos in an entitySplitter, see the 'attributes' parameter above. An exception exists for when idnos are set to be auto-generated. To create auto-generated idnos within an entitySplitter, use the following syntax.
+
       ``"attributes": {"idno":"%"}``
-      
+
       **objectRepresentationSplitter Additional Properties**
-      
+
       Sets the attributes for the object representation. "Media" sets the source of the media filename in the data, which is what will match on the actual media file in the import directory. Note: filenames in source data may or may not the include file extension, but source data must match filename exactly. Set the media filename to idno, using "idno". Additional attributes, such as the example, "internal_notes", can also be set here.
-      
+
       .. code-block:: none
 
          {"attributes":{
@@ -145,42 +145,42 @@ tourStopSplitter                 :term:`attributes <attributes>`, :term:`dontCre
          }
 
       *Applicable refineries*: collectionSplitter, entitySplitter, listItemSplitter, loanSplitter, measurementsSplitter, movementSplitter, placeSplitter, objectSplitter, objectLotsSplitter, occurrenceSplitter, tourStopSplitter
-      
+
    collectionType
       Accepts a constant list item idno from the list collection_types or a reference to the location in the data source where the type can be found
-      
+
       ``{"collectionType": "box"}``
-      
+
       *Applicable Refineries*: collectionSplitter
 
-   collectionTypeDefault      
+   collectionTypeDefault
       Sets the default collection type that will be used if none are defined or if the data source values do not match any values in the CollectiveAccess list collection_types
-      
+
       ``{"collectionTypeDefault":"series"}``
-      
+
       *Applicable Refineries*: collectionSplitter
-     
-   delimiter      
+
+   delimiter
       Sets the value of the delimiter to break on, separating data source values
-      
+
       ``{"delimiter": ";"}``
 
       *Applicable Refineries*: collection Splitter, entitySplitter, listItemSplitter, loanSplitter, measurementsSplitter, movementSplitter, placeSplitter, objectSplitter, objectLotSplitter, objectRepresentationSplitter, occurrenceSplitter, tourStopSplitter
-     
+
    displayNameFormat
       Allows you to format the output of the displayName. Options are: “surnameCommaForename” (forces display name to be surname, forename); “forenameCommaSurname” (forces display name to be forename, surname); “forenameSurname” (forces display name to be forename surname); “original” (is the same as leaving it blank; you just get display name set to the imported text). This option also supports an arbitrary format by using the sub-element codes in a template, i.e. “^surname, ^forename ^middlename”. Doesn't support full format templating with <unit> and <ifdef> tags, though.
-      
+
       ``{"displaynameFormat": "surnameCommaForename"}``
-   
+
    	  *Applicable Refineries*: entitySplitter
 
-   dontCreate      
+   dontCreate
       If set to true (or any non-zero value) the splitter will only do matching and will not create new records when matches are not found.
-      
+
       ``{"dontCreate": "1"}``
-      
+
       *Applicable Refineries*: collectionSplitter, entitySplitter, listItemSplitter, loanSplitter, movementSplitter, objectLotsSplitter, objectRepresentationSplitter, objectSplitter, occurrenceSplitter, placeSplitter, tourStopSplitter
-   
+
    elements
       Maps the components of the dimensions to specific metadata elements
 
@@ -200,81 +200,81 @@ tourStopSplitter                 :term:`attributes <attributes>`, :term:`dontCre
          ]}
 
       Note: the typeElement and type sub-components are optional and should only be used in measurement containers that include a type drop-down.
-      
+
       *Applicable Refineries*: measurementsSplitter
 
    entityType
       Accepts a constant list item idno from the list entity_types or a reference to the location in the data source where the type can be found
-      
+
       ``{"entityType": "person"}``
-      
+
       *Applicable Refineries*: entitySplitter
-    
+
    entityTypeDefault
       Sets the default entity type that will be used if none are defined or if the data source values do not match any values in the CollectiveAccess list entity_types
-      
+
       ``{"entityTypeDefault":"individual"}``
-      
+
       *Applicable Refineries:* entitySplitter
- 
+
    ignoreParent
       For use with collection hierarchies. When set to true this parameter allows global match across the entire hierarchy, regardless of parent_id. Use this parameter with datasets that include values to be merged into existing hierarchies but that do not include parent information. Paired with matchOn it's possible to merge the values using only name or idno, without any need for hierarchy info. Not ideal for situations where multiple matches can not be disambiguated with the information available.
-      
+
       ``{"ignoreParent": "1"}``
-      
+
       *Applicable Refineries*: collectionSplitter, entitySplitter, listItemSplitter, loanSplitter, movementSplitter, objectLotsSplitter, objectSplitter, occurrenceSplitter, placeSplitter, tourStopSplitter
-      
+
    interstitial
       Sets or maps metadata for the interstitial movementRelationship record by referencing the metadataElement code and the location in the data source where the data values can be found.
-      
-      .. code-block:: none   
+
+      .. code-block:: none
 
          {""interstitial"": {
             ""relationshipDate"": ""^4""
          }
       }
-      
+
       *Applicable Refineries*: collectionSplitter, entitySplitter, listItemSplitter, loanSplitter, movementSplitter, objectLotsSplitter, objectSplitter, occurrenceSplitter, placeSplitter, tourStopSplitter
-      
+
    list
       Enter the list_code for the list that the item should be added to. This is mandatory - if you forget to set it or set it to a list_code that doesn't exist the mapping will fail.)
-      
+
       ``{"list": "list_code"}``
-      
+
       *Applicable Refineries*: listItemSplitter
-      
+
    listItemType
       Accepts a constant list item idno from the list or a reference to the location in the data source where the type can be found.
-      
+
       ``{"listItemType": "concept"}``
-      
+
       *Applicable Refineries*: listItemSplitter
-      
+
    listItemTypeDefault
       Sets the default list item type that will be used if none are defined or if the data source values do not match any values in the CollectiveAccess list list_item_types
-         
+
       ``{"listItemTypeDefault":"concept"}``
-         
+
       *Applicable Refineries*: listItemSplitter
-         
+
    loanType
       Accepts a constant list item from the list loan_types
-      
+
       ``{"loanType":"out"}``
-      
+
       *Applicable Refineries*: loanSplitter
 
    loanTypeDefault
       Sets the default loan type that will be used if none are defined or if the data source values do not match any values in the CollectiveAccess list loan_types.
-      
+
       ``{"loanTypeDefault":"in"}``
-      
+
       *Applicable Refineries*: loanSplitter
 
    matchOn
       From version 1.5. Defines exactly how the splitter will establish matches with pre-existing records. You can set the splitter to match on idno, or labels. You can also include both labels and idno in the matchOn parameter, and it will try multiple matches in the order specified.
-      
-      "``{""matchOn"": [""labels"", ""idno""]}`` -Will try to match on labels first, then idno. 
+
+      "``{""matchOn"": [""labels"", ""idno""]}`` -Will try to match on labels first, then idno.
 
 ``{""matchOn"": [""idno"", ""labels""]}`` - Will do the opposite, first idno and then labels.
 

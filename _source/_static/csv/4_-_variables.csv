@@ -1,0 +1,5 @@
+Rule type,ID,Parent ID,Element,Source,Options
+Variable,,,type,ca_objects.type_id,
+Mapping,1,,object,,
+Mapping,2,1,@idno,ca_objects.idno,
+Mapping,3,1,secret,ca_objects.top_secret,"{ ""skipIfExpression"" : ""^type!~/49/"" }"
