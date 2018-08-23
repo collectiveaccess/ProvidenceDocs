@@ -44,7 +44,8 @@ prepopulate_rules = {
 	# -------------------
 }
 
-Below is a short description for each of the rule settings:
+Below is a short description for each of the rule settings
+
 .. csv-table::
    :widths: 12, 32
    :header-rows: 1
@@ -56,26 +57,26 @@ related_entities = {
 		table = ca_objects,
 
 		# add relationships that do not already exist
-		mode = merge,       
+		mode = merge,
 
 		# copy all entities related to objects related to the target record
 		target = ca_entities,
-		context = related,      
-		
+		context = related,
+
 		# copy only those entities related with the relationship type "artist"
 		restrictToRelationshipTypes = [artist],
-		
-		# don't copy relationships with specified relationship type codes; 
-		#excludeRelationshipTypes = [], 
-		
+
+		# don't copy relationships with specified relationship type codes;
+		#excludeRelationshipTypes = [],
+
 		# copy only entities that are the type "individual"
 		restrictToRelatedTypes = [ind],
-		
-		# don't copy relationships pointing to specified types   
-		#excludeRelatedTypes = [],  
-		
+
+		# don't copy relationships pointing to specified types
+		#excludeRelatedTypes = [],
+
 		# only consider "current" relationships – Eg. current storage location
-		currentOnly = 0,    
+		currentOnly = 0,
 	},
 
 Flowchart

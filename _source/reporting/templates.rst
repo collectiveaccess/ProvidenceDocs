@@ -69,7 +69,7 @@ If you need to make part of your template conditional upon more than one value b
 
 .. code-block:: none
 
-	<ifdef code="ca_objects.dimensions.width,ca_objects.dimensions.height,ca_objects.dimensions.depth">Dimensions are: </ifdef> 
+	<ifdef code="ca_objects.dimensions.width,ca_objects.dimensions.height,ca_objects.dimensions.depth">Dimensions are: </ifdef>
 	^ca_objects.dimensions.width<ifdef code="ca_objects.dimensions.width">W
 	x</ifde> ^ca_objects.dimensions.height<ifdef code="ca_objects.dimensions.height">
 	H x</ifdef> ^ca_objects.dimensions.depth<ifdef code="ca_objects.dimensions.depth">D</ifdef>
@@ -78,16 +78,16 @@ If you need to make part of your template conditional upon more than one value b
 
 .. code-block:: none
 
-	<ifdef code="ca_objects.dimensions.width|ca_objects.dimensions.height|ca_objects.dimensions.depth">Dimensions are: </ifdef> 
-	^ca_objects.dimensions.width<ifdef code="ca_objects.dimensions.width">W x</ifdef> 
-	^ca_objects.dimensions.height<ifdef code="ca_objects.dimensions.height">H x</ifdef> 
+	<ifdef code="ca_objects.dimensions.width|ca_objects.dimensions.height|ca_objects.dimensions.depth">Dimensions are: </ifdef>
+	^ca_objects.dimensions.width<ifdef code="ca_objects.dimensions.width">W x</ifdef>
+	^ca_objects.dimensions.height<ifdef code="ca_objects.dimensions.height">H x</ifdef>
 	^ca_objects.dimensions.depth<ifdef code="ca_objects.dimensions.depth">D</ifdef>
 
 There are some cases in which you may need to make part of a template conditional upon a value or values not being defined. The <ifnotdef> tag will do this in an analogous manner to <ifdef>. For example, if you want to output a "No dimensions" message when no values are defined:
 
 .. code-block:: none
 
-	<ifnotdef code="ca_objects.dimensions.width,ca_objects.dimensions.height,ca_objects.dimensions.depth">No dimensions are set</ifnotdef> 
+	<ifnotdef code="ca_objects.dimensions.width,ca_objects.dimensions.height,ca_objects.dimensions.depth">No dimensions are set</ifnotdef>
 	^ca_objects.dimensions.width<ifdef code="ca_objects.dimensions.width">W x</ifdef> ^ca_objects.dimensions.height
 	<ifdef code="ca_objects.dimensions.height">H x</ifdef> ^ca_objects.dimensions.depth<ifdef code="ca_objects.dimensions.depth">D</ifdef>
 
@@ -191,8 +191,8 @@ Here the relativeTo option in the <unit> tag shifts the primary record to be eac
 
 .. code-block:: none
 
-	Object is ^ca_objects.preferred_labels.name; 
-	Entities are: <unit relativeTo="ca_entities">^ca_entities.preferred_labels.displayname 
+	Object is ^ca_objects.preferred_labels.name;
+	Entities are: <unit relativeTo="ca_entities">^ca_entities.preferred_labels.displayname
 	(Birthplace: <unit relativeTo="ca_places">^ca_places.preferred_labels.name</unit></unit>
 
 Each unit shifts the primary by one relational "jump." Nesting <units> allows shifts to accumulate because they are always evaluated relative to their context. Thus entities related to objects are grabbed, and then places related to those entities.
@@ -270,7 +270,7 @@ The <if> tag provides maximum control by using expressions to determine when con
 
 .. code-block:: none
 
-	<unit relativeTo="ca_objects.credit_line"><if rule=\"^credit_type =~ /current/\">^ca_objects.credit_line.credit_text 
+	<unit relativeTo="ca_objects.credit_line"><if rule=\"^credit_type =~ /current/\">^ca_objects.credit_line.credit_text
 	(^ca_objects.credit_line.credit_type)</if></unit>
 
 The rule attribute must be set to a valid expression, which can use any valid placeholder available in the template, and must be enclosed in escaped (prepended "\") quotes to ensure that it is evaluated correctly.
@@ -369,7 +369,7 @@ Notice that the <b> tag in the first <ifdef> is not closed before the closing </
 
 Special placeholders
 ^^^^^^^^^^^^^^^^^^^^
-There are a few placeholders that have special meanings for certain kinds of primary records: 
+There are a few placeholders that have special meanings for certain kinds of primary records:
 
 .. csv-table::
    :header-rows: 1
