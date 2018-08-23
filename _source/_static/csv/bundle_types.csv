@@ -1,0 +1,6 @@
+Bundle type,Also known as,Description,Example
+Basic bundle,"Administrative bundle, Intrinsic bundle",Always present regardless of configuration. Single data entry; does not repeat.,access
+Relationship bundle,Related table,Bundles that create relationships between items.,ca_objects
+Label bundles,Name or Title bundle,Human-readable short descriptions used for display to identify a record.,preferred_labels
+Attribute bundles,Metadata element,Any field created by a user.,ca_attribute_elementcode
+Special bundles,,"Bundles that allow a cataloger to manage an item's locations in, for example, sets and hierarchies",hierarchy_location

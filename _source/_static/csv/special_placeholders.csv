@@ -1,0 +1,8 @@
+Placeholder,Description
+^date,"Displays the current date. Valid in any template regardless of the kind of primary. Date is formatted as ""day month year"" (ex. ""10 January 2014"") unless a format is specified using the format placeholder option. The option takes a PHP date()-style formatting string. See [1]. (Ex. ^date%format=c)"
+^relationship_typename,"Displays the name of the relationship type when the primary is a relationship record such as ca_objects_x_entities. Note that templates pulling related records in bundle displays are evaluated relative to the primary representing the relationship, not the related record. Thus this and the other ^relationship_* placeholders are available by default when pulling related data in bundle displays"
+^relationship_type_id,The internal numeric type_id for the relationship type when the primary is a relationship record such as ca_objects_x_entities.
+^relationship_typecode,The alphanumeric code for the relationship type when the primary is a relationship record such as ca_objects_x_entities.
+^primary,Displays the name of the primary for the template or current <unit> sub-template. This can be useful for debugging.
+^count,Displays the number of values in the current primary for the template or current <unit> sub-template.
+^index,Displays the one-based index of the current value in the primary or <unit> sub-template. As a <unit> iterates through each value ^index will increment by one until it reaches ^count.

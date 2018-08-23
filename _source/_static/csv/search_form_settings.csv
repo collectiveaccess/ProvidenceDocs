@@ -1,0 +1,3 @@
+Settings,Description,Default,Values
+label,Custom label text to use for this placement of this bundle.,,Text
+width,"Width, in pixels, of search form elements.",100px,A pixel dimension ending with 'px' (eg. 500px)

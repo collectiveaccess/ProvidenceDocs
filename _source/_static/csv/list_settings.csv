@@ -1,0 +1,19 @@
+Settings,Description,Default,Values
+listWidth,"Width, in characters or pixels, of the list when displayed in a user interface. When list is rendered as a hierarchy browser width must be in pixels.",40,Characters or pixels
+listHeight,"Height, in pixels, of the list when displayed in a user interface as a hierarchy browser.",200px,Pixels
+maxColumns,Maximum number of columns to use when laying out radio buttons or checklist.,3,Integers greater than zero
+render,Determines how the list is displayed visually.,Drop-down list ('select'),"Drop-down menu (code=""select"")
+Yes/no checkbox (code=""yes_no_checkboxes"")
+Radio buttons (code=""radio_buttons""); Checklist (code=""checklist"")
+Type-ahead lookup (code=""lookup"")
+Horizontal hierarchy browser (code=""horiz_hierbrowser"")
+Horizontal hierarchy browser with search (code=""horiz_hierbrowser_with_search"")
+Vertical hierarchy browser (code=""vert_hierbrowser"")
+"
+doesNotTakeLocale,Defines whether element takes locale specification,1 (does not take locale specifications),0 or 1
+requireValue,"Defines whether a list item must be explicitly set. If set to 1 then a valid list item must be selected, and in the absence of a selected value the default value is used. If set to zero then a ""null"" value (labeled ""none"" in the English locale) is added to the list and made default",1 (require value),0 or 1
+canBeUsedInSort,Use this option if this attribute value can be used for sorting of search results.,1 (used in sort),0 or 1
+canBeUsedInSearchForm,Use this option if the attribute value can be used in search forms,1 (used in search forms),0 or 1
+canBeUsedInDisplay,Use this option if the attribute value can be used for display in search results,1 (used for display),0 or 1
+displayTemplate,"Layout for value when used in a display. Element code tags prefixed with the ^ character, used to represent the value in the template. For example: *^my_element_code*.",,HTML
+displayDelimiter,Delimiter to use between multiple values,", (comma)",Text

@@ -1,0 +1,2 @@
+Settings,Description,Default,Values
+show_empty_values,"If checked all values will be displayed, whether there is content for them or not.",1,0 or 1

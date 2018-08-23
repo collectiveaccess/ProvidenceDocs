@@ -1,0 +1,9 @@
+Source,Description,Parameter notes
+__filename__,"This source value takes the filename of the media being imported. You can import filenames to any field in CollectiveAccess, including preferred_labels and idno.",
+__filepath__,This source takes the full server filepath from your media import directory to give you the media. Map this to ca_object_representations and use the objectRepresentationSplitter.,".. code-block:: none
+
+   {""objectRepresentationType"": ""front"",
+      ""attributes"": {
+          ""media"": ""^__filepath__""
+      }
+   }"

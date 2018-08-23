@@ -1,0 +1,5 @@
+Setting Name,Name in UI,Description,Values,Default
+list_format,Format of contents list,Format used to display location contents listing.,list for a list of objects; bubbles for left-floated bubbles,bubbles
+locationTrackingMode,Track location using,Determines whether the bundle uses object-location references or movements to track object location.,ca_storage_locations for direct object-location references; ca_movements for movement-based tracking,ca_movements
+displayTemplate,Display template,"Layout for each object in the storage location (can include HTML). The template is evaluated relative to each object-movement or object-location relationship. Element code tags prefixed with the ^ character can be used to represent the value in the template. For example: ^ca_objects.prefered_labels,name (^ca_objects.idno).",Valid display template.,
+colorItem,Object color,Color to use as highlight for each object in the storage location.,Hex color with leading hash (#),#ffffff

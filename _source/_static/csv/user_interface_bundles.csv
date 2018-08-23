@@ -1,0 +1,7 @@
+Settings,Description,Default,Values
+label,Custom label text to use for this placement of this bundle.,,
+add_label,Custom text to use for the add button for the placement of this bundle.,,
+description,"Descriptive text to use for help for bundle. Will override descriptive text set for underlying metadata element, if set. Make sure to include a locale specification, i.e. <setting name=""description"" locale=""en_US"">XXX</setting>",,
+readonly,"If checked, field will not be editable.",0 (not read only),0 or 1
+expand_collapse_value,"(Available for v1.5) Controls the expand/collapse behavior when there is at least one value present. While technically available for most bundles, the setting might have no effect for some of the ""special"" bundles. They have extra settings, see below.",dont_force (default behavior = save expand/collapse state when the user changes it),"dont_force, collapse, expand"
+expand_collapse_no_value,"(Available for v1.5) Controls the expand/collapse behavior when there is no value present. While technically available for most bundles, the setting might have no effect for some of the ""special"" bundles. They have extra settings, see below.",dont_force (default behavior = save expand/collapse state when the user changes it),"dont_force, collapse, expand"

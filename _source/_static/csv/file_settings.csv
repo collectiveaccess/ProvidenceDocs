@@ -1,0 +1,5 @@
+Settings,Description,Default,Values
+doesNotTakeLocale,Defines whether element takes locale specification.,1 (does not take locale specifications),0 or 1
+canBeUsedInDisplay,Use this option if the attribute value can be used for display in search results.,1 (used for display),0 or 1
+displayTemplate,"Layout for value when used in a display. Element code tags prefixed with the ^ character, used to represent the value in the template. For example: <i>^my_element_code</i>.",,HTML
+displayDelimiter,Delimiter to use between multiple values.,", (comma)",Text

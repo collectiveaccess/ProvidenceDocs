@@ -1,0 +1,6 @@
+Project,Description
+`New Museum <https://github.com/collectiveaccess/providence/blob/develop/install/profiles/xml/newmuseum.xml>`_,"Institutional archive for the digital preservation of program documentation for an art museum including exhibitions, public programs, education initiatives, and publications."
+`New School <https://github.com/collectiveaccess/providence/blob/develop/install/profiles/xml/newschool.xml>`_,"A mixed material digital archive including 2D, 3D and 4D special collections content."
+`New York Society Library <https://github.com/collectiveaccess/providence/blob/develop/install/profiles/xml/nysl_config.xml>`_,"This digital humanities configuration supports cataloging for data visualizations as well as special collections items.
+"
+`Girl Scouts of the USA <https://github.com/collectiveaccess/providence/blob/develop/install/profiles/xml/GSUSA.xml>`_,"An institution archive profile configuration with support for collections cataloging of photographs, documents, costumes and other archival items such as rare publications."
