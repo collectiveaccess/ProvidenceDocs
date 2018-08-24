@@ -12,76 +12,80 @@ The core configuration is done in app/conf/prepopulate.conf. There are two setti
 The main part of the configuration is a list of rules under prepopulate_rules. Below is an example block. Each rule should have a unique code, e.g. test_rule in the block below.
 
 .. code-block:: none
-prepopulate_rules = {
-	# -------------------
-	test_rule = {
-		# what types of records does this rule apply to?
-		table = ca_objects,
-		#restrictToTypes = [artwork],
 
-		# mode determines handling of existing values in target element
-		# can be overwrite, or addIfEmpty
-		# See the 'target' setting below and http://docs.collectiveaccess.org/wiki/Prepopulate
-		mode = addIfEmpty,
+   prepopulate_rules = {
+      # -------------------
+      test_rule = {
+         # what types of records does this rule apply to?
+         table = ca_objects,
+         #restrictToTypes = [artwork],
 
-		# What's the prepopulate target?
-		# This can be an intrinsic field, labels or an attribute.
-		#
-		# Note that if you want to target a List attribute, you have to
-		# provide a valid list item idno or id for that list as value!
-		#
-		# See http://docs.collectiveaccess.org/wiki/Prepopulate
-		target = ca_objects.title_notes,
+         # mode determines handling of existing values in target element
+         # can be overwrite, or addIfEmpty
+         # See the 'target' setting below and http://docs.collectiveaccess.org/wiki/Prepopulate
+         mode = addIfEmpty,
 
-		# skip this rule if expression returns true
-		# available variable names are bundle names
-		#skipIfExpression = ^ca_objects.idno =~ /test/,
+         # What's the prepopulate target?
+         # This can be an intrinsic field, labels or an attribute.
+         #
+         # Note that if you want to target a List attribute, you have to
+         # provide a valid list item idno or id for that list as value!
+         #
+         # See http://docs.collectiveaccess.org/wiki/Prepopulate
+         target = ca_objects.title_notes,
 
-		# content to prepopulate
-		# (this is a display template evaluated against the current record)
-		template = ^ca_objects.preferred_labels (^ca_objects.idno),
-	},
-	# -------------------
-}
+         # skip this rule if expression returns true
+         # available variable names are bundle names
+         #skipIfExpression = ^ca_objects.idno =~ /test/,
+
+         # content to prepopulate
+         # (this is a display template evaluated against the current record)
+         template = ^ca_objects.preferred_labels (^ca_objects.idno),
+      },
+	  # -------------------
+   }
 
 Below is a short description for each of the rule settings
 
 .. csv-table::
-   :widths: 12, 32
+   :widths: auto
    :header-rows: 1
-   :url: https://docs.google.com/spreadsheets/d/e/2PACX-1vSl_z-mFRscVYMgD89YnLhsInGV-Srmjt_huiwXR8nvFddR1f3PnJ81wv1YO0D7kI6Wajx7L5oqz2BS/pub?gid=0&single=true&output=csv
+   :file: ../_static/csv/prepopulate.csv
 
 Example use of "context" configuration:
+
 .. code-block:: none
-related_entities = {
-		table = ca_objects,
 
-		# add relationships that do not already exist
-		mode = merge,
+   related_entities = {
+      table = ca_objects,
 
-		# copy all entities related to objects related to the target record
-		target = ca_entities,
-		context = related,
+      # add relationships that do not already exist
+      mode = merge,
 
-		# copy only those entities related with the relationship type "artist"
-		restrictToRelationshipTypes = [artist],
+      # copy all entities related to objects related to the target record
+      target = ca_entities,
+      context = related,
 
-		# don't copy relationships with specified relationship type codes;
-		#excludeRelationshipTypes = [],
+      # copy only those entities related with the relationship type "artist"
+      restrictToRelationshipTypes = [artist],
 
-		# copy only entities that are the type "individual"
-		restrictToRelatedTypes = [ind],
+      # don't copy relationships with specified relationship type codes;
+      #excludeRelationshipTypes = [],
 
-		# don't copy relationships pointing to specified types
-		#excludeRelatedTypes = [],
+      # copy only entities that are the type "individual"
+      restrictToRelatedTypes = [ind],
 
-		# only consider "current" relationships – Eg. current storage location
-		currentOnly = 0,
-	},
+      # don't copy relationships pointing to specified types
+      #excludeRelatedTypes = [],
+
+      # only consider "current" relationships – Eg. current storage location
+      currentOnly = 0,
+   }
 
 Flowchart
 ---------
-.. figure:: /configuration/images/Prepopulate.jpg
+
+.. figure:: ../_static/images/Prepopulate.jpg
    :name: prepopulate
-   :target: ../../configuration/images/Prepopulate.jpg
+   :target: ../_static/images/Prepopulate.jpg
    :alt: Prepopulate flowchart

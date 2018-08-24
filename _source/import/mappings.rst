@@ -229,10 +229,11 @@ tourStopSplitter                 :term:`attributes <attributes>`, :term:`dontCre
 
       .. code-block:: none
 
-         {""interstitial"": {
-            ""relationshipDate"": ""^4""
+         {
+            "interstitial": {
+               "relationshipDate": "^4"
+            }
          }
-      }
 
       *Applicable Refineries*: collectionSplitter, entitySplitter, listItemSplitter, loanSplitter, movementSplitter, objectLotsSplitter, objectSplitter, occurrenceSplitter, placeSplitter, tourStopSplitter
 
