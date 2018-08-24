@@ -17,7 +17,9 @@ import fileinput
 sphx = "../_source"
 rstMatch = "*.rst"
 
-googleKey = "AIzaSyDcnu9ldNl-uWRlNg2HPduZdNo_F7OB_c0"
+googleKey = "" # This should be a Google API key that has been enabled to access
+               # Google Sheets API. There was one here :( but its been removed
+               # for security reasons
 
 def getCSVInfo(sheetID, googleKey):
     attempts = 3
