@@ -58,7 +58,7 @@ For facets of type **normalizedDates** these additional keys are defined:
 .. csv-table::
    :widths: 12, 32, 12
    :header-rows: 1
-   :url: https://docs.google.com/spreadsheets/d/e/2PACX-1vQNWT6Z9N81VOJD1I_2_hkp5frUotWu47zaju-hTqXCZYV4IpTiqgJglD8OfeE_-GEmnACHe7_Oh-Mv/pub?output=csv
+   :file: configuration_browse_conf_table.csv
 
 For facets of type **attribute** these additional keys are defined:
 
