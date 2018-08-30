@@ -55,18 +55,28 @@ for path, subdirs, files in os.walk(sphx):
             for i, line in enumerate(lines):
                 if 'docs.google.com' in line:
                     edit = True
+                    oldURL = True
                     googleURL = line[9:].strip()
-                    pattern =  re.compile("\/((?:(?!\/).)*)\/pub")
-                    sheetID = re.search(pattern, googleURL).group(1)
-                    csvInfo = getCSVInfo(sheetID, googleKey)
-                    if "ERROR" in csvInfo:
-                        errors.append(csvInfo)
-                        continue
-                    sheetName = csvInfo['properties']['title']
+                    if ('/d/e/' not in googleURL):
+                        oldURL = False
+                        pattern =  re.compile("\/((?:(?!\/).)*)\/pub")
+                        sheetID = re.search(pattern, googleURL).group(1)
+                        csvInfo = getCSVInfo(sheetID, googleKey)
+                        if "ERROR" in csvInfo:
+                            errors.append(csvInfo)
+                            continue
+                        sheetName = csvInfo['properties']['title']
+
+                    csvFile = requests.get(googleURL)
+
+                    if oldURL:
+                        contentDisp = csvFile.headers['content-disposition']
+                        rawFileName = re.findall('filename="(.+)";', contentDisp)
+                        sheetName = rawFileName[0].replace('-Sheet1.csv', '')
 
                     filename = sheetName.replace(' ', '_').lower() + ".csv"
                     filePath = assetPath + filename
-                    csvFile = requests.get(googleURL)
+
                     with open(filePath, 'wb') as openCSV:
                         openCSV.write(csvFile.content)
                     relPath = os.path.relpath(filePath, path)

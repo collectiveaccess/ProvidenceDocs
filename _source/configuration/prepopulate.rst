@@ -50,7 +50,7 @@ Below is a short description for each of the rule settings
 .. csv-table::
    :widths: auto
    :header-rows: 1
-   :file: ../_static/csv/prepopulate.csv
+   :file: ../_static/csv/prepop.csv
 
 Example use of "context" configuration:
 
