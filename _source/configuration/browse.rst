@@ -58,7 +58,11 @@ For facets of type **normalizedDates** these additional keys are defined:
 .. csv-table::
    :widths: 12, 32, 12
    :header-rows: 1
+<<<<<<< HEAD
    :file: ../_static/csv/browse7.csv
+=======
+   :file: configuration_browse_conf_table.csv
+>>>>>>> 024c9895d3bc3c9e3ba96cd76c14570696ef384a
 
 For facets of type **attribute** these additional keys are defined:
 
