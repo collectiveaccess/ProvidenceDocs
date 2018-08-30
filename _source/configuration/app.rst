@@ -1,7 +1,7 @@
 App.conf
 ===========
 
-General configuration of CollectiveAccess is controlled by the *app.conf* configuration file. 
+General configuration of CollectiveAccess is controlled by the *app.conf* configuration file.
 
 Structure
 -----------
@@ -13,4 +13,4 @@ To make editing app.conf a bit more manageable the file is broken up into severa
 .. csv-table::
    :widths: 12, 32, 12
    :header-rows: 1
-   :file: configuration_app_conf_hierarchies_table.csv
+   :file: ../_static/csv/configuration_app_conf_hierarchies_table.csv
