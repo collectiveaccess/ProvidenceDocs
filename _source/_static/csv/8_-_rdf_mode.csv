@@ -1,0 +1,4 @@
+Setting,Description
+wrap_before,Text to prepend before the export.
+wrap_after,Text to append after the export.
+nodes,List of primary node type definitions to be used for this export

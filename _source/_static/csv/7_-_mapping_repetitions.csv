@@ -1,0 +1,6 @@
+Rule type,ID,Parent ID,Element,Source,Options
+Mapping,1,,root,,
+Mapping,2,1,label,ca_objects.preferred_labels,
+Mapping,3,1,idno,ca_objects.idno,
+Mapping,4,1,children,,
+RepeatMappings,,4,child,"2,3","{ ""context"" : ""children"" }"

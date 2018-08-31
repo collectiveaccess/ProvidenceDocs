@@ -1,0 +1,4 @@
+Rule type,ID,Parent ID,Element,Source,Options
+Mapping,1,,1,ca_objects.idno,
+Mapping,2,,300/##,,
+Mapping,3,2,b,ca_objects.preferred_labels,

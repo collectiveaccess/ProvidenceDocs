@@ -1,0 +1,15 @@
+Settings,Description,Default,Values
+minChars,The minimum number of characters to allow. Input shorter than required will be rejected.,0 (no minimum),Integers zero or greater
+maxChars,The maximum number of characters to allow. Input longer than required will be rejected.,65535,Integers greater than zero
+minValue,The minimum numeric value to allow. Values smaller than required will be rejected.,,Numeric
+maxValue,The maximum numeric value to allow. Values greater than required will be rejected.,,Numeric
+regex,"A Perl-format regular expression with which to validate the input. Input not matching the expression will be rejected. Do not include the leading and trailing delimiter characters (typically ""/"") in your expression. Leave blank if you don't want to use regular expression-based validation.",,Expression-based validation value
+fieldWidth,"Width, in characters, of the field when displayed in a user interface.",40,Integers greater than zero
+fieldHeight,"Height, in characters, of the field when displayed in a user interface.",1,Integers greater than zero
+mustNotBeBlank,Use this option if you want an error to be thrown if the URL is left blank.,0 (entry not required),0 or 1
+doesNotTakeLocale,Defines whether element takes locale specification.,0 (takes locale specifications),0 or 1
+canBeUsedInSort,Use this option if this attribute value can be used for sorting of search results.,1 (used in sort),0 or 1
+canBeUsedInSearchForm,Use this option if the attribute value can be used in search forms.,1 (used in search forms),0 or 1
+canBeUsedInDisplay,Use this option if the attribute value can be used for display in search results.,1 (used for display),0 or 1
+displayTemplate,"Layout for value when used in a display. Element code tags prefixed with the ^ character, used to represent the value in the template. For example: <i>^my_element_code</i>.",,HTML
+displayDelimiter,Delimiter to use between multiple values.,", (comma)",Text

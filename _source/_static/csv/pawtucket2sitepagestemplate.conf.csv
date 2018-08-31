@@ -1,0 +1,6 @@
+Option,Description,Values,Example
+label,Main label for this field in Providence,Plain Text,Page title
+description,A brief description of the purpose of this field,Plain Text,The top-level title for this page
+width,"The width of the editor in providence, in pixels",Width in Pixels,600px
+height,The height of the editor in Providence,"Set to ""1"" for a single row editor, otherwise set in pixels",1 or 250px
+usewysiwygeditor,Enable or disable a WYSIWYG editor for this field. Enabling allows for embedding images,1 or 0,1

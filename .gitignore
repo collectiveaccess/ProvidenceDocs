@@ -1,1 +1,4 @@
 _build
+_build-doctres
+env
+.DS_Store

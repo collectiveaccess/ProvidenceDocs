@@ -1,0 +1,11 @@
+Settings,Description,Default,Values
+minValue,The minimum value allowed. Input less than the required value will be rejected.,0 (no minimum),Numeric
+maxValue,The maximum value allowed. Input greater than the required value will be rejected.,0 (no maximum),Numeric
+fieldWidth,"Width, in characters, of the field when displayed in a user interface.",40,Integers greater then zero
+fieldHeight,"Height, in characters, of the field when displayed in a user interface.",1,Integers greater then zero
+doesNotTakeLocale,Defines whether element takes locale specification.,1 (does not take locale specifications),0 or 1
+canBeUsedInSort,Use this option if this attribute value can be used for sorting of search results.,1 (used in sort),0 or 1
+canBeUsedInSearchForm,Use this option if the attribute value can be used in search forms.,1 (used in search forms),0 or 1
+canBeUsedInDisplay,Use this option if the attribute value can be used for display in search results.,1 (used for display),0 or 1
+displayTemplate,"Layout for value when used in a display. Element code tags prefixed with the ^ character, used to represent the value in the template. For example: <i>^my_element_code</i>.",,HTML
+displayDelimiter,Delimiter to use between multiple values.,", (comma)",Text

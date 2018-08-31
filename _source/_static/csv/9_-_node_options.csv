@@ -1,0 +1,4 @@
+Setting,Description
+mapping,Mapping to be used for this type of node. Has to be an existing mapping code.
+restrictbySearch,Restrict exported records using a search expression
+related,"List of related records also to be included in the global node set. You can use this for example to make sure you only export list_items that are actually actively used as vocabulary terms for objects, meaning you don't have to create an extra node type (which would potentially export all list items in your database) for this."

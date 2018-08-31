@@ -1,0 +1,2 @@
+App.conf Setting Name,Description
+object_storage_location_tracking_relationship_type,A single relationship type (identified by alphanumeric type code) used to indicate an object storage location. Must be set to a valid object-storage location relationship type.

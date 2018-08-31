@@ -1,0 +1,5 @@
+Setting,Description,Allowed values,Required?,Default,Synonyms
+dontAllowRegistrationAndLogin,Disable login and registration options,0 or 1,No,0,dont_allow_registration_and_login
+dontAllowRegistration,Disable registration option,0 or 1,No,0,
+deployBristol,"When ""Bristol"" mode is enabled users must login and have access only to sets for which they have been granted read-level access.",0 or 1,No,0,deploy_bristol
+pawtucketRequiresLogin,Require all Pawtucket users to login for access.,0 or 1,No,0,pawtucket_requires_login

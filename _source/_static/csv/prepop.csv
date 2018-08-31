@@ -1,0 +1,14 @@
+Setting name,Type,Example,Description
+table,Valid CollectiveAccess table name,ca_objects,Defines what table this rule applies to
+restrictToTypes,optional list of valid items from the type list for table,"[artwork, image]",Optional type restriction for this rule
+mode,"One of addIfEmpty, overwrite, merge",addIfEmpty,Determines handling of existing values in target element. See flowchart below. addIfEmpty: set relationships only if none exist; overwrite: replace relationships; merge: add relationships that do not already exist
+target,"A valid bundle specifier for either a intrinsic field, labels or an attribute",[ca_objects.description],"Determines the prepopulate target. Note that if you want to target a List attribute, you have to provide a valid list item idno or id for that list as value!"
+skipIfExpression,A valid expression,^ca_objects.object_status_new !~ /deaccessioned/,"Allows for rule based skipping of the rule. If the expression result is true, the rule is ignored for the current record."
+template,A valid template,^ca_objects.medium_container.medium ^ca_objects.medium_container.support,This defines the actual content that is injected into the targetelement. The display template is evaluated against the current record.
+context,"parent, children, or related",parent,parent = copy relationships from the parent; children = copy relationships from children; related = copy relationships from related records (Eg. if table = ca_objects and target = ca_entities copy all entity relationships from related objects)
+restrictToRelationshipTypes,Valid relationship type,author,"For use with ""context."" Use this setting to only copy relationships with the specified relationship type codes"
+excludeRelationshipTypes,Valid relationship type,creator,"For use with ""context."" Don't copy relationships with these specified relationship type codes"
+restrictToRelatedTypes,Valid record type,artwork,"For use with ""context."" Only copy relationships pointing to specified types."
+restrictToRelatedTypes,Valid record type,artwork,"For use with ""context."" Only copy relationships pointing to specified types."
+excludeRelatedTypes,Valid record type,archival,"For use with ""context."" Don't copy relationships pointing to specified types."
+currentOnly,1 or 0,0,"For use with ""context."" Only consider ""current"" relationships – Eg. current storage location"

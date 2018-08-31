@@ -1,0 +1,4 @@
+Setting,Description
+mapping,Mapping to be used for this type of related item. Has to be an existing mapping code.
+restrictToRelationshipTypes,Restrict selected related records by relationship types. Has to be a list or empty.
+restrictToTypes,Restrict selected related records by record types (e.g. entity type). Has to be a list or empty.

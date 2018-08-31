@@ -1,0 +1,28 @@
+Setting Name,Description
+hide_add_to_loan_controls,"Set to 1 if you want to to hide the ""Add to loan"" controls in this bundle placement. Defaults to 0"
+hide_update_location_controls,"Set to 1 if you want to to hide the ""Update Location"" controls in this bundle placement. Defaults to 0"
+useHierarchicalBrowser,Set to 1 if you want to provide an hierarchical browser when searching for an updated storage location
+locationTrackingMode,Sets method for tracking location of object within storage location hierarchy. Set to ca_storage_locations to use direct object-location references; set to ca_movements to use movement-based location tracking
+useAppConfDefaults,Set to 1 if you want to use the app.conf current_location_criteria settings. If you want to set specific settings for this bundle then set this to 0 and specify values for that various settings below
+ca_object_lots_showTypes,"Sets which object lots types appear in the use history stream. For all showTypes settings, repeat once for each type that should be included. Use the item idno i.e. <setting name=""ca_object_lots_showTypes"">purchase</setting>"
+ca_object_lots_#type#_dateElement,Sets the date field that is used to sort object lots of this type in the use history stream.
+ca_object_lots_#type#_color,"Sets the color for this type of object lot. Use hex colors with no pound sign, i.e. ""B1AAF2"""
+ca_object_lots_#type#_displayTemplate,Sets the template for metadata displayed for this type of object lot in the use history stream.
+ca_occurrences_showTypes,Sets which occurrence types appear in the use history stream.
+ca_occurrences_#type#_dateElement,Sets the date field that is used to sort this type of occurrence in the use history stream.
+ca_occurrences_#type#_color,"Sets the color for this type of occurrence. Use hex colors with no pound sign, i.e. ""B1AAF2"""
+ca_occurrences_#type#_displayTemplate,Sets the template for metadata displayed for this type of occurrence in the use history stream
+ca_movements_showTypes,Sets which movement types appear in the use history stream.
+ca_movements_#type#_dateElement,Sets the date field that is used to sort this type of movement in the use history stream.
+ca_movements_#type#_color,"Sets the color for this type of movement. Use hex colors with no pound sign, i.e. ""B1AAF2"""
+ca_movements_#type#_displayTemplate,Sets the template for metadata displayed for this type of movement in the use history stream
+ca_loans_showTypes,Sets which loan types appear in the use history stream.
+ca_loans_#type#_dateElement,Sets the date field that is used to sort this type of loan in the use history stream.
+ca_loans_#type#_color,"Sets the color for this type of loan. Use hex colors with no pound sign, i.e. ""B1AAF2"""
+ca_loans_#type#_displayTemplate,Sets the template for metadata displayed for this type of loan in the use history stream
+ca_storage_locations_showRelationshipTypes,Sets which related storage locations will appear.
+ca_storage_locations_color,"Sets the color for all storage locations types. Use hex colors with no pound sign, i.e. ""B1AAF2"""
+ca_storage_locations_displayTemplate,Sets the template for metadata displayed for storage locations of all types.
+showDeaccessionInformation,Sets whether or not Deaccessions are included in the stream. 1 = yes; 0 = no.
+deaccession_color,"Sets the color for deaccessions. Use hex colors with no pound sign, i.e. ""B1AAF2"""
+deaccession_displayTemplate,Sets the template for deaccessions.

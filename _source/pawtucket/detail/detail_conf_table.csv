@@ -1,0 +1,6 @@
+Setting,Description,Allowed values,Required?,Default,Synonyms
+detailTypes,"Dictionary of all detail pages available in this theme. Dictionary keys are short, unique codes for each available detail. Values are dictionaries of options for the detail, the format of which is defined below.",Dictionary,yes,none,
+allowObjectRepresentationDownload,"Controls whether download of representations on object detail pages are allowed, and to whom they are available.","anyone, logged_in, logged_in_privileged, never",no,never,allow_ca_objects_representation_download
+restrictObjectRepresentationDownloadToObjectTypes,Controls which types of object records allow downloads when the policy set in allowObjectRepresentationDownload enables downloads.,"A list of object types. 
+
+Ex. [books, maps, images]",no,none - all types allow downloads,allow_ca_objects_representation_download_types

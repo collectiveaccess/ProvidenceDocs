@@ -1,0 +1,15 @@
+Settings,Description,Default,Values
+dateRangeBoundaries,The range of dates that are accepted. Input dates outside the range will be rejected. Leave blank if you do not require restrictions.,,Accepted date/time expression
+fieldWidth,"Width, in characters, of the field when displayed in a user interface.",40,Integers greater than zero
+useDatePicker,Use this option if you want a calendar-based date picker to be available for date entry.,0 (not enabled),0 or 1
+default_text,Value to pre-populate a newly created attribute with.,,Accepted date/time expression
+mustNotBeBlank,"Use this option if this attribute value must be set to some value - if, in other words, it must not be blank.",0 (can be blank),0 or 1
+isLifespan,Use this option if this attribute value represents a persons lifespan. Lifespans are displayed in a slightly different format in many languages than standard dates.,0 (not enabled),0 or 1
+suggestExistingValues,Use this option if you want the attribute to suggest previously saved values as text. This option is only effective if the display height of the text entry is equal to 1.,0 (does not suggest text),0 or 1
+suggestExistingValueSort,If suggestion of existing values is enabled this option determines how returned values are sorted. Choose value to sort alphabetically. Choose most recently added to sort with most recently entered values first.,value,value or most recently added
+doesNotTakeLocale,Defines whether element take locale specification,1 (does not take locale specifications),0 or 1
+canBeUsedInSort,Use this option if this attribute value can be used for sorting of search results.,1 (used in sort),0 or 1
+canBeUsedInSearchForm,Use this option if the attribute value can be used in search forms,1 (used in search forms),0 or 1
+canBeUsedInDisplay,Use this option if the attribute value can be used for display in search results,1 (used for display),0 or 1
+displayTemplate,"Layout for value when used in a display. Element code tags prefixed with the ^ character, used to represent the value in the template. For example: <i>^my_element_code</i>.",,HTML
+displayDelimiter,Delimiter to use between multiple values,", (comma)",Text

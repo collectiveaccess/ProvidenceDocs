@@ -1,0 +1,6 @@
+Rule type,Description
+Mapping,Maps a data source column or table.field to a CollectiveAccess metadata element. Mappings can carry refineries (see below).
+SKIP,Use SKIP to ignore a data source column or table.field.
+Constant,Set a data source column or table.field to an arbitrary constant value. Include the chosen value in the Source column on the mapping spreadsheet. Matches on CollectiveAccess list item idno.
+Rule,"Performs actions during the import (such as skipping or setting data) based on conditional expressions. Made up of two parts: ""Rule triggers"" and ""Rule actions."""
+Setting,Sets preferences for the mapping (see below).

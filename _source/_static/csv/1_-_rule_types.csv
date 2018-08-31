@@ -1,0 +1,6 @@
+Rule type,Description
+Mapping,"Maps a CollectiveAccess data source to a target column number, XML element/attribute or MARC field."
+Constant,"Allows you to set an element in the target format (a CSV column or an XML element/attribute to a static/constant value. If this is set, the value is taken from the 6th column in the mapping sheet (""Source"")."
+RepeatMappings,"Allows repeating a list of existing mappings in a different context. If this is set, the comma-delimited list of mappings is taken from the 6th column (""Source""). See Data_Exporter#Mapping repitition."
+Setting,Sets preferences for the mapping (see below).
+Variable,"(Available for v1.5) Allows you, using all the available features of the exporter, to assign a value to a user-defined name for later usage. See Data_Exporter#Variables."
