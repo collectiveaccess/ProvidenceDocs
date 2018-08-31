@@ -1,7 +1,7 @@
 Search_indexing.conf
 ====================
 
-The search_indexing.conf file controls which data in your CollectiveAccess database is searchable, and how. Only data elements configured in search_indexing.conf are searchable. Note that configuration of CollectiveAccess' browse system is completely independent from search. It is possible to search on data that are not browse-able, and browse on elements that are not indexed for search. 
+The search_indexing.conf file controls which data in your CollectiveAccess database is searchable, and how. Only data elements configured in search_indexing.conf are searchable. Note that configuration of CollectiveAccess' browse system is completely independent from search. It is possible to search on data that are not browse-able, and browse on elements that are not indexed for search.
 
 Organization
 ------------
@@ -23,7 +23,7 @@ At the top level, search_indexing.conf is structured as a series of blocks, one 
 	   ... indexing configuration for ca_occurrences records ...
 	},
 	...
-	
+
 Within each block is a sub-block for item fields as well as sub-blocks for related items and access points (aliases and short cuts for selected data elements or groups of elements). Content in related items may be indexed against the item. For example, you may have an object record indexed by its various fields (accession number, condition, appraised value) as well as by content in related entities (name of artist, nationality of artist), places (place of manufacture), storage location, and more. The object will be searchable by any of the fields for which it has been indexed. Indexing for each type of item is configured independently. You may have objects indexed with content taken from related entities, while omitting related object data from entity indexing, for instance.
 
 A typical ca_objects block might look like this:
@@ -38,7 +38,7 @@ A typical ca_objects block might look like this:
 				parent_id = {STORE, DONT_TOKENIZE, DONT_INCLUDE_IN_SEARCH_FORM },
 				source_id = {},
 				lot_id = {},
-				idno = { STORE, DONT_TOKENIZE, INDEX_AS_IDNO, BOOST = 100 },	
+				idno = { STORE, DONT_TOKENIZE, INDEX_AS_IDNO, BOOST = 100 },
 				type_id = { STORE, DONT_TOKENIZE },
 				source_id = { STORE, DONT_TOKENIZE },
 				hier_object_id = { STORE, DONT_TOKENIZE },
@@ -50,7 +50,7 @@ A typical ca_objects block might look like this:
 				deaccession_date = {},
 				circulation_status_id = { STORE, DONT_TOKENIZE }
 			},
-			# Index idno's of related objects 
+			# Index idno's of related objects
 			related = {
 				fields = {
 					idno = { STORE, DONT_TOKENIZE, INDEX_AS_IDNO, BOOST = 100 }
@@ -70,7 +70,7 @@ A typical ca_objects block might look like this:
 				fields = {
 					name = { BOOST = 100, INDEX_ANCESTORS, INDEX_ANCESTORS_START_AT_LEVEL = 0, INDEX_ANCESTORS_MAX_NUMBER_OF_LEVELS = 4, INDEX_ANCESTORS_AS_PATH_WITH_DELIMITER = . }
 				}
-			} 
+			}
 		},
 			# ------------------------------------
 		ca_objects_x_entities = {
@@ -93,7 +93,7 @@ A typical ca_objects block might look like this:
 		ca_entity_labels = {
 			tables = {
 				entities = {
-					ca_objects_x_entities = { }, 
+					ca_objects_x_entities = { },
 					ca_entities = {}
 				},
 				annotations = [ca_objects_x_object_representations, ca_object_representations, ca_representation_annotations, ca_representation_annotations_x_entities, ca_entities]
@@ -135,7 +135,7 @@ To index data elements that are part of the item itself create a sub-block whose
 			parent_id = {STORE, DONT_TOKENIZE, DONT_INCLUDE_IN_SEARCH_FORM },
 			source_id = {},
 			lot_id = {},
-			idno = { STORE, DONT_TOKENIZE, INDEX_AS_IDNO, BOOST = 100 },	
+			idno = { STORE, DONT_TOKENIZE, INDEX_AS_IDNO, BOOST = 100 },
 			type_id = { STORE, DONT_TOKENIZE },
 			source_id = { STORE, DONT_TOKENIZE },
 			hier_object_id = { STORE, DONT_TOKENIZE },
@@ -147,17 +147,17 @@ To index data elements that are part of the item itself create a sub-block whose
 			deaccession_date = {},
 			circulation_status_id = { STORE, DONT_TOKENIZE }
 		},
-		# Index idno's of related objects 
+		# Index idno's of related objects
 		related = {
 			fields = {
 				idno = { STORE, DONT_TOKENIZE, INDEX_AS_IDNO, BOOST = 100 }
 			}
 		}
 	},
-	
+
 The actual fields to index are included in a list with the field key. An additional related key is included, defining indexing for objects related to objects. This will be discussed in detail later.
 
-Each intrinsic field (non-repeating fields hardcoded in the CollectiveAccess database schema) to be indexed is listed individually, with options enclosed in the curly brackets ("{}"). For convenience all configurable metadata elements specific to your installation are indexed using the special _metadata field. This obviates the need for you to enumerate each metadata element individually. If you need to not index certain elements, you can specify individual elements to index using keys starting with ca_attribute_ followed by element codes (ex. metadata element "description" would be listed as "ca_attribute_description").
+Each intrinsic field (non-repeating fields hardcoded in the CollectiveAccess database schema) to be indexed is listed individually, with options enclosed in the curly brackets ("{}"). For convenience all configurable metadata elements specific to your installation are indexed using the special _metadata field. This obviates the need for you to enumerate each metadata element individually. If you need to not index certain elements, you can specify individual elements to index using keys starting with ca_attribute\_ followed by element codes (ex. metadata element "description" would be listed as "ca_attribute_description").
 
 Only data elements listed in this block, or inferred by the _metadata special field, will be indexed.
 
@@ -232,9 +232,9 @@ Labels are stored in the CollectiveAccess database as related records, and can b
 				fields = {
 					name = { BOOST = 100, INDEX_ANCESTORS, INDEX_ANCESTORS_START_AT_LEVEL = 0, INDEX_ANCESTORS_MAX_NUMBER_OF_LEVELS = 4, INDEX_ANCESTORS_AS_PATH_WITH_DELIMITER = .  }
 				}
-			} 
+			}
 		},
-		
+
 **Counting related items**
 
 The number of related items can be indexed using the _count special field. When placed in the sub-block for the related item (ca_entities in our example), counts will be indexed in total and by item type (eg. by entity type). When _count is placed in a sub-block for a relationship table, counts will be indexed in total and by relationship type. In our example this configuration indexes counts for related entities on the object, broken out by relationship type:
@@ -285,7 +285,7 @@ As of version 1.7.6 it is possible to restrict indexing by related item type usi
 				parent_id = {STORE, DONT_TOKENIZE, DONT_INCLUDE_IN_SEARCH_FORM },
 				source_id = {},
 				lot_id = {},
-				idno = { STORE, DONT_TOKENIZE, INDEX_AS_IDNO, BOOST = 100 },	
+				idno = { STORE, DONT_TOKENIZE, INDEX_AS_IDNO, BOOST = 100 },
 				type_id = { STORE, DONT_TOKENIZE },
 				source_id = { STORE, DONT_TOKENIZE },
 				hier_object_id = { STORE, DONT_TOKENIZE },
@@ -297,7 +297,7 @@ As of version 1.7.6 it is possible to restrict indexing by related item type usi
 				deaccession_date = {},
 				circulation_status_id = { STORE, DONT_TOKENIZE }
 			},
-			# Index idno's of related objects 
+			# Index idno's of related objects
 			related = {
 				fields = {
 					idno = { STORE, DONT_TOKENIZE, INDEX_AS_IDNO, BOOST = 100 }
@@ -310,13 +310,14 @@ The configuration for the self-relationship indexing is in bold. The fields are 
 As of version 1.7.4 you can also include a list of types to restrict related indexing to. If you wish, for example, to only index related objects of type "artwork" and "book" against other objects the relevant fragment of configuration might look like so:
 
 .. code-block:: none
-			# Index idno's of related objects 
-			related = {
-				types = [artwork, book],
-				fields = {
-					idno = { STORE, DONT_TOKENIZE, INDEX_AS_IDNO, BOOST = 100 }
-				}
-			}
+
+   # Index idno's of related objects
+   related = {
+      types = [artwork, book],
+      fields = {
+         idno = { STORE, DONT_TOKENIZE, INDEX_AS_IDNO, BOOST = 100 }
+      }
+   }
 
 **Indirect self-relationships**
 
@@ -371,7 +372,7 @@ Within the square brackets to the right of the fields equals sign, the attribute
 Now you can quickly search for materials anywhere in your system using the syntax:
 
 .. code-block:: none
-	
+
 	mat:stone
 
 It is also possible to create shortcuts that bundle several elements together. A search on the access point will search all of the included fields at the same time. Each attribute should be comma separated:
@@ -399,7 +400,7 @@ If your target element for a search shortcut is a container, make sure to includ
 
 .. code-block:: none
 
- 	fields = [ca_objects.description.description_source],	
+ 	fields = [ca_objects.description.description_source],
 
 **Search forms**
 
@@ -416,10 +417,3 @@ Note that all fields included in an access point must be included in the search 
 **Rebuilding the search index**
 
 Changes to search_indexing.conf take effect immediately for all subsequent indexing. Any items indexed prior to the change will not reflect the configuration modifications. To update the entire search index to reflect the new configuration, rebuild the index using "Rebuild search indices" web interface under Manage > Administrate > Maintenance; or reindex using the command-line caUtils rebuild-search-indices command
-
-
-
-
-
-
-

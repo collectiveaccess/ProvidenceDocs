@@ -45,8 +45,7 @@ Contents
    org/Relationships
    Interstitial Data <org/interstitial>
    Date and Time Formats <org/dateTime>
-   Measurement Input Formats <org/measurements>
-   
+
 .. toctree::
    :maxdepth: 2
    :caption: Configuring Providence
@@ -58,16 +57,16 @@ Contents
    User Interfaces <providence/interfaces>
    System Settings <providence/system>
    Identifiers <providence/identifiers>
-   
+
 .. toctree::
    :maxdepth: 2
    :caption: Configuration files
-   :titlesonly:  
+   :titlesonly:
 
    Configuration file syntax <configuration/configuration_file_syntax>
    App.conf <configuration/app>
    Authentication.conf <configuration/authentication>
-   Browse.conf <configuration/browse>    
+   Browse.conf <configuration/browse>
    DateTime.conf <configuration/datetime>
    External_Applications.conf <configuration/external_applications>
    Media_Display.conf <configuration/media_display>
@@ -127,7 +126,6 @@ Contents
    Supported File Formats <export/formats>
    Mappings <export/mappings>
    Running an Export <export/running>
-   OAI-PMH Provider <export/oaipmh_provider>
 
 .. toctree::
    :maxdepth: 2
