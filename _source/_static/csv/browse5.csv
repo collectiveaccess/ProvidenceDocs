@@ -1,0 +1,2 @@
+Facet key,Description,Mandatory?
+field,"The field in the item type being browsed to browse by (Eg. idno, extent)",Yes

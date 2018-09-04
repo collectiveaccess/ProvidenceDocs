@@ -48,26 +48,31 @@ Contents
 
 .. toctree::
    :maxdepth: 2
-   :caption: Configuring Providence (Front-End)
+   :caption: Configuring Providence
    :titlesonly:
 
    providence/Locales
    Lists and Authorities <providence/listsAuthorities>
    Metadata Elements <providence/metadata>
    User Interfaces <providence/interfaces>
-   Putting It All Together <providence/together>
-   Writing Your Own Installation Profile <providence/profiles>
    System Settings <providence/system>
    Identifiers <providence/identifiers>
-   
+
 .. toctree::
    :maxdepth: 2
    :caption: Configuration files
-   :titlesonly:  
+   :titlesonly:
 
-   App.conf <configuration/app>    
-   Browse.conf <configuration/browse>    
+   Configuration file syntax <configuration/configuration_file_syntax>
+   App.conf <configuration/app>
+   Authentication.conf <configuration/authentication>
+   Browse.conf <configuration/browse>
    DateTime.conf <configuration/datetime>
+   External_Applications.conf <configuration/external_applications>
+   Media_Display.conf <configuration/media_display>
+   Multipart id numbering.conf <configuration/multipart_id_numbering>
+   Search.conf <configuration/search>
+   Search indexing.conf <configuration/search_indexing>
    Authentication.conf <configuration/authentication>
    Prepopulate.conf <configuration/prepopulate>
 
@@ -80,18 +85,14 @@ Contents
    Syntax <searchBrowse/syntax>
    Indexing Options <searchBrowse/indexing>
    Search Engines <searchBrowse/engines>
-   Advanced Search Forms <searchBrowse/advanced>
    Query Builder <searchBrowse/query>
-   Browse Facets <searchBrowse/facets>
 
 .. toctree::
    :maxdepth: 2
    :caption: Reporting
    :titlesonly:
 
-   Using Displays <reporting/displays>
    Display Template Syntax <reporting/templates>
-   Exporting Search & Browse Results <reporting/export>
    PDF Output <reporting/pdfOut>
    Generating Labels <reporting/labels>
 
@@ -100,9 +101,7 @@ Contents
    :caption: Workflow
    :titlesonly:
 
-   Creating Sets <workflow/sets>
-   Status Tracking <workflow/status>
-   Access Status <workflow/access>
+
    Tracking Current Object Location <workflow/location>
    Maintaining Object Use History <workflow/history>
 

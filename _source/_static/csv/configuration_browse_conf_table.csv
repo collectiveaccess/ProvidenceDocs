@@ -1,0 +1,8 @@
+Facet key,Description,Mandatory?
+element_code,The element code of the metadata element to be browsed. Must have an attribute type of DateRange,Yes
+normalization,"Sets the method used to normalize date values. Supported values are days, months, years, decades, centuries.",Yes
+sort,"Sets the order in which to sort the returned dates. A value of 'DESC' will sort the dates in descending order (most recent first), which a value of 'ASC' will sort in ascending order (oldest first). The default if this is not specified is ascending order.",No
+minimum_date,"If set, the facet will only include dates that occur after the specified value. The value can be any valid date expression (eg. 1900, 12/7/1914, etc.).",No
+maximum_date,"If set, the facet will only include dates that occur before the specified value. The value can be any valid date expression (eg. 1900, 12/7/1914, etc.).",
+treat_before_dates_as_circa,"If set facet will treat after ""before xxxx"" dates as circa dates. Available from version 1.7.7",No
+treat_after_dates_as_circa,"If set facet will treat after ""after xxxx"" dates as circa dates. Available from version 1.7.7",No

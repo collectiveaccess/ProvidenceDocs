@@ -3,7 +3,7 @@ Primary Tables
 
 CollectiveAccess is structured around several primary tables with editors that can be enabled (or disabled) depending on project requirements. Distinct User Interfaces can be configured for each table, and within that, a single table can have multiple user interfaces restricted by Type (see Types).
 
-If you're not using certain editors in your system (you don't catalogue places for example), you can disable the menu items for them in the configuration file app.conf, by setting the various *_disable directives below to a non-zero value
+If you're not using certain editors in your system (you don't catalogue places for example), you can disable the menu items for them in the configuration file app.conf, by setting the various \*_disable directives below to a non-zero value
 
 Here's how it looks in app.conf:
 
@@ -30,7 +30,7 @@ Object records represent the items or assets in a collection, typically the phys
 
 Entities (ca_entities)
 ^^^^^^^^^^^^^^^^^^^^^^
-Entity records represent the authority file for specific people and organizations. When Entity records are created, relationships can be created between them and specific Object records (or any other Table) with fully customizable relationship types. For example, an Entity authority record for an individual could be related to an Object record as the creator of the Object, the photographer, donor, publisher, performer, or anything else. 
+Entity records represent the authority file for specific people and organizations. When Entity records are created, relationships can be created between them and specific Object records (or any other Table) with fully customizable relationship types. For example, an Entity authority record for an individual could be related to an Object record as the creator of the Object, the photographer, donor, publisher, performer, or anything else.
 
 Places (ca_places)
 ^^^^^^^^^^^^^^^^^^
@@ -70,4 +70,3 @@ Representations (ca_object_representations)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 This table captures the Media (images, video, audio, PDFs) that represents an Object. While Representations most often consist of just the media file itself, they can take additional cataloguing that is specific to the media file (and not necessarily to the Object the file depicts or represents). This allows the addition of captions, credits, access information, rights and reproduction restrictions or any other type of information on a Representation-specific basis, if needed.
-

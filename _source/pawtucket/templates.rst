@@ -30,14 +30,14 @@ Template (.tmpl) Files
 
 These files provide the HTML layout of a site page and include the triple-curly bracketed field placeholders that designate where user-editable text will be included. This layout can be very simple and just provide places for header and body text, or they can provide more structure and customizable fields. A simple example is provided below:
 
-::
+.. code-block:: none
 
-	<h1>{{{title}}}</h1>
-	<h3>{{{subtitle}}}</h3>
+   <h1>{{{title}}}</h1>
+   <h3>{{{subtitle}}}</h3>
 
-	<div class="bodytext">
-	    {{{bodytext}}}
-	</div>
+   <div class="bodytext">
+      {{{bodytext}}}
+   </div>
 
 template.conf
 -------------
@@ -45,8 +45,9 @@ template.conf
 This file controls how the user-editable fields defined in your templates (e.g. {{{title}}}) can be edited. This is a fairly short list of options that include the title, description, width and height of the editor that appears in the Providence site page editor. The full list of options is:
 
 .. csv-table::
+   :widths: auto
    :header-rows: 1
-   :url: https://docs.google.com/spreadsheets/d/e/2PACX-1vQpw6NLLaVZt__GO75ou9t_wVWStaF8ZPNri4LyJa69VIEVnprlUg58mye31VlVmQATQHGud_Wsss1b/pub?gid=0&single=true&output=csv
+   :file: ../_static/csv/pawtucket2sitepagestemplate.conf.csv
 
 A simple template.conf file will look like:
 
@@ -98,4 +99,4 @@ In your .tmpl files there are several special placeholders that perform specific
 
 .. csv-table::
    :header-rows: 1
-   :url: https://docs.google.com/spreadsheets/d/e/2PACX-1vRgCC7Y9Z0WG6aMB7LRYSUNukws9nO104IAcWidYr5GFwYzfHc1AwiP5i2x9vCMZ9HA4b57B0_P1y1r/pub?output=csv
+   :file: ../_static/csv/pawtucket2sitepagesspecialplaceholders.csv

@@ -26,6 +26,7 @@ The standard PHP packages shipped with this Linux distribution have two issues w
 
 The PHP Iconv module, which is required by CA, is not loaded by default. You can fix this by installing the PHP-iconv package using apt-get.
 The standard PHP package includes the Suhosin security patches for PHP. Suhosin is a great product, but it introduces some default constraints than can prevent CA from saving information entered into forms. To fix these issues edit the Suhosin configuration file in /etc/php5.d, setting the following directives to these values:
+
    - suhosin.post.max_name_length: 256
    - suhosin.request.max_varname_length: 256
    - suhosin.post.max_totalname_length: 5012

@@ -1,0 +1,3 @@
+Facet key,Description,Mandatory?
+field,"The field in the item type being browsed to browse by (Eg. type_id, item_status_id, access, status)",Yes
+display,The field to display in the facet. If not set the preferred label is displayed.,No

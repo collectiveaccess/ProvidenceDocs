@@ -14,7 +14,7 @@ Any intrinsic field (ie. a field that is always part of an item such as extent a
 .. csv-table::
    :widths: 12, 32
    :header-rows: 1
-   :url: https://docs.google.com/spreadsheets/d/e/2PACX-1vR0YHA8Fc_BKR4RGW5q9Ja6sZjPUEJJ1dlCW_Z6Ye4RHWv3nYCoXZdcISf-0tmdKVYtweEuOmAvsMry/pub?output=csv
+   :file: ../_static/csv/browse1.csv
 
 For each item type you want to be browse-able, you must define a top-level key with the item's table name (eg. ca_objects for objects) and a associative array value. The array must contain a facets key whose value is in turn an associative array defining each available browse facet for the item type. The keys of the facets array are arbitrary code name for the facets – it doesn't matter what they are so long as they are unique within the facet list. The values are yet another associative array which actually defines the characteristics of the facet.
 
@@ -30,28 +30,28 @@ For all types of facets the following configuration keys are defined:
 .. csv-table::
    :widths: 12, 32, 12
    :header-rows: 1
-   :url: https://docs.google.com/spreadsheets/d/e/2PACX-1vRB6m95RWarFXIxQnBYgH2lZANVoJrv_sxAgdDPXwdzTOzavQk8GvQoMY27parZ6DdPlcUvlmtlXNSI/pub?output=csv
+   :file: ../_static/csv/browse3.csv
 
 For facets of type **authority** these additional keys are defined:
 
 .. csv-table::
    :widths: 12, 32, 12
    :header-rows: 1
-   :url: https://docs.google.com/spreadsheets/d/e/2PACX-1vQQ7yF-f4_DatY6hzZoAfH6OD-AHvTBzjUb7ZhNeRF6p2QT2rBd-20GM5Lv4gpNVi9Ag-kf7zltEClp/pub?output=csv
+   :file: ../_static/csv/browse4.csv
 
 For facets of type **field** these additional keys are defined:
 
 .. csv-table::
    :widths: 12, 32, 12
    :header-rows: 1
-   :url: https://docs.google.com/spreadsheets/d/e/2PACX-1vSiBB-tw0ADqtfXbSSyeA9wwhCI-Zo_YGFk1paX1ybykmkhIIM-VvI_AKVkpscgXeFzWLnQgMq3kmue/pub?output=csv
+   :file: ../_static/csv/browse5.csv
 
 For facets of type **fieldList** these additional keys are defined:
 
 .. csv-table::
    :widths: 12, 32, 12
    :header-rows: 1
-   :url: https://docs.google.com/spreadsheets/d/e/2PACX-1vTT-jDxQrGE3egzckl3GhTNccRqIumOyWO7FGB7xpdewRue6CD0hF5AiSMN3G2KvN0VNAEVN0Banf8P/pub?output=csv
+   :file: ../_static/csv/browse6.csv
 
 For facets of type **normalizedDates** these additional keys are defined:
 
@@ -65,21 +65,21 @@ For facets of type **attribute** these additional keys are defined:
 .. csv-table::
    :widths: 12, 32, 12
    :header-rows: 1
-   :url: https://docs.google.com/spreadsheets/d/e/2PACX-1vTWizxmX9ZZQmjuJjJOBtw5Np9Bx8eXLNjLjWV6w_L66I7KmqzrwtAd7HwNwXX1augMgQrAgAm98f30/pub?output=csv
+   :file: ../_static/csv/browse8.csv
 
 For facets of type **label** these additional keys are defined:
 
 .. csv-table::
    :widths: 12, 32, 12
    :header-rows: 1
-   :url: https://docs.google.com/spreadsheets/d/e/2PACX-1vRHaeo8mKtR6EuSHHGx38ql2-cjGBvngy1t63Hf_TPRCp3vysE0BAY_NGnQrTZ4PWFXPxm2Vmp-extR/pub?output=csv
+   :file: ../_static/csv/browse9.csv
 
 For facets of type **has** these additional keys are defined:
 
 .. csv-table::
    :widths: 12, 32, 12
    :header-rows: 1
-   :url: https://docs.google.com/spreadsheets/d/e/2PACX-1vR0InzDnFtnZIZhe7O8WMew71I4-2y8VR_JnFGDM3yDsV9B0Gelu2HzjGhf6EvFE8sAvpNxWGFF1NxM/pub?output=csv
+   :file: ../_static/csv/browse10.csv
 
 For facets of type **dupeidno** these additional keys are defined:
 
@@ -138,14 +138,14 @@ A working browse.conf should look something like this:
 		facets = {
 			entity_facet = {
 				# 'type' can equal authority, attribute, fieldList, normalizedDates
-				type = authority,		
+				type = authority,
 				table = ca_entities,
 				relationship_table = ca_objects_x_entities,
 				restrict_to_types = [],
 				restrict_to_relationship_types = [],
 				sort_by = [surname, forname],
 				group_mode = alphabetical,
-			
+
 				indefinite_article = an,
 				label_singular = _(entity),
 				label_plural = _(entities)
@@ -158,7 +158,7 @@ A working browse.conf should look something like this:
 				restrict_to_relationship_types = [],
 				sort_by = [name],
 				group_mode = alphabetical,
-			
+
 				indefinite_article = a,
 				label_singular = _(place),
 				label_plural = _(places)
@@ -171,7 +171,7 @@ A working browse.conf should look something like this:
 				restrict_to_relationship_types = [],
 				sort_by = [name],
 				group_mode = alphabetical,
-			
+
 				indefinite_article = a,
 				label_singular = _(collection),
 				label_plural = _(collections)
@@ -185,7 +185,7 @@ A working browse.conf should look something like this:
 				restrict_to_relationship_types = [],
 				sort_by = [name],
 				group_mode = alphabetical,
-			
+
 				indefinite_article = an,
 				label_singular = _(occurrence),
 				label_plural = _(occurrences)
@@ -198,7 +198,7 @@ A working browse.conf should look something like this:
 				restrict_to_relationship_types = [],
 				sort_by = [name],
 				group_mode = alphabetical,
-			
+
 				indefinite_article = a,
 				label_singular = _(term),
 				label_plural = _(terms)
@@ -208,7 +208,7 @@ A working browse.conf should look something like this:
 				field = type_id,
 				sort_by = [name],
 				group_mode = alphabetical,
-			
+
 				indefinite_article = a,
 				label_singular = _(type),
 				label_plural = _(types)
@@ -216,10 +216,10 @@ A working browse.conf should look something like this:
 			object_subtype_facet = {
 				type = attribute,
 				element_code = object_subtypes,
-			
+
 				requires = type_facet,
 				group_mode = alphabetical,
-			
+
 				label_singular = _("Sub-Type"),
 				label_plural = _("Sub-Types")
 			},
@@ -228,7 +228,7 @@ A working browse.conf should look something like this:
 				field = status,
 				sort_by = [name],
 				group_mode = alphabetical,
-			
+
 				indefinite_article = a,
 				label_singular = _(status),
 				label_plural = _(statuses)
@@ -238,7 +238,7 @@ A working browse.conf should look something like this:
 				field = access,
 				sort_by = [name],
 				group_mode = alphabetical,
-			
+
 				indefinite_article = an,
 				label_singular = _(access status),
 				label_plural = _(access statuses)
@@ -251,7 +251,7 @@ A working browse.conf should look something like this:
 				normalization = years,
 				sort_by = [name],
 				group_mode = none,
-			
+
 				indefinite_article = a,
 				label_singular = _(year),
 				label_plural = _(years)
@@ -264,14 +264,14 @@ A working browse.conf should look something like this:
 		facets = {
 			entity_facet = {
 				# 'type' can equal authority, attribute, fieldList, normalizedDates
-				type = authority,		
+				type = authority,
 				table = ca_entities,
 				relationship_table = ca_object_lots_x_entities,
 				restrict_to_types = [],
 				restrict_to_relationship_types = [],
 				sort_by = [surname, forname],
 				group_mode = alphabetical,
-			
+
 				indefinite_article = an,
 				label_singular = _(entity),
 				label_plural = _(entities)
@@ -284,7 +284,7 @@ A working browse.conf should look something like this:
 				restrict_to_relationship_types = [],
 				sort_by = [name],
 				group_mode = alphabetical,
-			
+
 				indefinite_article = a,
 				label_singular = _(place),
 				label_plural = _(places)
@@ -297,7 +297,7 @@ A working browse.conf should look something like this:
 				restrict_to_relationship_types = [],
 				sort_by = [name],
 				group_mode = alphabetical,
-			
+
 				indefinite_article = a,
 				label_singular = _(collection),
 				label_plural = _(collections)
@@ -310,7 +310,7 @@ A working browse.conf should look something like this:
 				restrict_to_relationship_types = [],
 				sort_by = [name],
 				group_mode = alphabetical,
-			
+
 				indefinite_article = an,
 				label_singular = _(occurrence),
 				label_plural = _(occurrences)
@@ -323,7 +323,7 @@ A working browse.conf should look something like this:
 				restrict_to_relationship_types = [],
 				sort_by = [name],
 				group_mode = alphabetical,
-			
+
 				indefinite_article = a,
 				label_singular = _(term),
 				label_plural = _(terms)
@@ -333,7 +333,7 @@ A working browse.conf should look something like this:
 				field = type_id,
 				sort_by = [name],
 				group_mode = alphabetical,
-			
+
 				indefinite_article = a,
 				label_singular = _(type),
 				label_plural = _(types)
@@ -343,7 +343,7 @@ A working browse.conf should look something like this:
 				field = status,
 				sort_by = [name],
 				group_mode = alphabetical,
-			
+
 				indefinite_article = a,
 				label_singular = _(status),
 				label_plural = _(statuses)
@@ -353,7 +353,7 @@ A working browse.conf should look something like this:
 				field = access,
 				sort_by = [name],
 				group_mode = alphabetical,
-			
+
 				indefinite_article = an,
 				label_singular = _(access status),
 				label_plural = _(access statuses)
@@ -372,7 +372,7 @@ A working browse.conf should look something like this:
 				restrict_to_relationship_types = [],
 				sort_by = [name],
 				group_mode = alphabetical,
-			
+
 				indefinite_article = a,
 				label_singular = _(place),
 				label_plural = _(places)
@@ -385,7 +385,7 @@ A working browse.conf should look something like this:
 				restrict_to_relationship_types = [],
 				sort_by = [name],
 				group_mode = alphabetical,
-			
+
 				indefinite_article = an,
 				label_singular = _(occurrence),
 				label_plural = _(occurrences)
@@ -398,7 +398,7 @@ A working browse.conf should look something like this:
 				restrict_to_relationship_types = [],
 				sort_by = [name],
 				group_mode = alphabetical,
-			
+
 				indefinite_article = a,
 				label_singular = _(collection),
 				label_plural = _(collections)
@@ -411,7 +411,7 @@ A working browse.conf should look something like this:
 				restrict_to_relationship_types = [],
 				sort_by = [name],
 				group_mode = alphabetical,
-			
+
 				indefinite_article = a,
 				label_singular = _(term),
 				label_plural = _(terms)
@@ -421,7 +421,7 @@ A working browse.conf should look something like this:
 				field = type_id,
 				sort_by = [name],
 				group_mode = alphabetical,
-			
+
 				indefinite_article = a,
 				label_singular = _(type),
 				label_plural = _(types)
@@ -431,7 +431,7 @@ A working browse.conf should look something like this:
 				field = status,
 				sort_by = [name],
 				group_mode = alphabetical,
-			
+
 				indefinite_article = a,
 				label_singular = _(status),
 				label_plural = _(statuses)
@@ -441,7 +441,7 @@ A working browse.conf should look something like this:
 				field = access,
 				sort_by = [name],
 				group_mode = alphabetical,
-			
+
 				indefinite_article = an,
 				label_singular = _(access status),
 				label_plural = _(access statuses)
@@ -454,14 +454,14 @@ A working browse.conf should look something like this:
 		facets = {
 			entity_facet = {
 				# 'type' can equal authority, attribute, fieldList, normalizedDates
-				type = authority,		
+				type = authority,
 				table = ca_entities,
 				relationship_table = ca_entities_x_collections,
 				restrict_to_types = [],
 				restrict_to_relationship_types = [],
 				sort_by = [surname, forname],
 				group_mode = alphabetical,
-			
+
 				indefinite_article = an,
 				label_singular = _(entity),
 				label_plural = _(entities)
@@ -474,7 +474,7 @@ A working browse.conf should look something like this:
 				restrict_to_relationship_types = [],
 				sort_by = [name],
 				group_mode = alphabetical,
-			
+
 				indefinite_article = a,
 				label_singular = _(place),
 				label_plural = _(places)
@@ -487,7 +487,7 @@ A working browse.conf should look something like this:
 				restrict_to_relationship_types = [],
 				sort_by = [name],
 				group_mode = alphabetical,
-			
+
 				indefinite_article = an,
 				label_singular = _(occurrence),
 				label_plural = _(occurrences)
@@ -500,7 +500,7 @@ A working browse.conf should look something like this:
 				restrict_to_relationship_types = [],
 				sort_by = [name],
 				group_mode = alphabetical,
-			
+
 				indefinite_article = a,
 				label_singular = _(term),
 				label_plural = _(terms)
@@ -510,7 +510,7 @@ A working browse.conf should look something like this:
 				field = type_id,
 				sort_by = [name],
 				group_mode = alphabetical,
-			
+
 				indefinite_article = a,
 				label_singular = _(type),
 				label_plural = _(types)
@@ -520,7 +520,7 @@ A working browse.conf should look something like this:
 				field = status,
 				sort_by = [name],
 				group_mode = alphabetical,
-			
+
 				indefinite_article = a,
 				label_singular = _(status),
 				label_plural = _(statuses)
@@ -530,7 +530,7 @@ A working browse.conf should look something like this:
 				field = access,
 				sort_by = [name],
 				group_mode = alphabetical,
-			
+
 				indefinite_article = an,
 				label_singular = _(access status),
 				label_plural = _(access statuses)
@@ -544,14 +544,14 @@ A working browse.conf should look something like this:
 		facets = {
 			entity_facet = {
 				# 'type' can equal authority, attribute, fieldList, normalizedDates
-				type = authority,		
+				type = authority,
 				table = ca_entities,
 				relationship_table = ca_entities_x_places,
 				restrict_to_types = [],
 				restrict_to_relationship_types = [],
 				sort_by = [surname, forname],
 				group_mode = alphabetical,
-			
+
 				indefinite_article = an,
 				label_singular = _(entity),
 				label_plural = _(entities)
@@ -564,7 +564,7 @@ A working browse.conf should look something like this:
 				restrict_to_relationship_types = [],
 				sort_by = [name],
 				group_mode = alphabetical,
-			
+
 				indefinite_article = a,
 				label_singular = _(object),
 				label_plural = _(objects)
@@ -577,7 +577,7 @@ A working browse.conf should look something like this:
 				restrict_to_relationship_types = [],
 				sort_by = [name],
 				group_mode = alphabetical,
-			
+
 				indefinite_article = an,
 				label_singular = _(occurrence),
 				label_plural = _(occurrences)
@@ -590,7 +590,7 @@ A working browse.conf should look something like this:
 				restrict_to_relationship_types = [],
 				sort_by = [name],
 				group_mode = alphabetical,
-			
+
 				indefinite_article = a,
 				label_singular = _(term),
 				label_plural = _(terms)
@@ -600,7 +600,7 @@ A working browse.conf should look something like this:
 				field = type_id,
 				sort_by = [name],
 				group_mode = alphabetical,
-			
+
 				indefinite_article = a,
 				label_singular = _(type),
 				label_plural = _(types)
@@ -610,7 +610,7 @@ A working browse.conf should look something like this:
 				field = status,
 				sort_by = [name],
 				group_mode = alphabetical,
-			
+
 				indefinite_article = a,
 				label_singular = _(status),
 				label_plural = _(statuses)
@@ -620,7 +620,7 @@ A working browse.conf should look something like this:
 				field = access,
 				sort_by = [name],
 				group_mode = alphabetical,
-			
+
 				indefinite_article = an,
 				label_singular = _(access status),
 				label_plural = _(access statuses)
@@ -633,7 +633,7 @@ A working browse.conf should look something like this:
 		facets = {
 			entity_facet = {
 				# 'type' can equal authority, attribute, fieldList, normalizedDates
-				type = authority,		
+				type = authority,
 				table = ca_entities,
 				type_restrictions = [exhibitions],   # if browse for occurrences is type-restricted then only display this facet when browsing for exhibitions
 
@@ -642,7 +642,7 @@ A working browse.conf should look something like this:
 				restrict_to_relationship_types = [],
 				sort_by = [surname, forname],
 				group_mode = alphabetical,
-			
+
 				indefinite_article = an,
 				label_singular = _(entity),
 				label_plural = _(entities)
@@ -655,7 +655,7 @@ A working browse.conf should look something like this:
 				restrict_to_relationship_types = [],
 				sort_by = [name],
 				group_mode = alphabetical,
-			
+
 				indefinite_article = a,
 				label_singular = _(object),
 				label_plural = _(objects)
@@ -668,7 +668,7 @@ A working browse.conf should look something like this:
 				restrict_to_relationship_types = [],
 				sort_by = [name],
 				group_mode = alphabetical,
-			
+
 				indefinite_article = a,
 				label_singular = _(term),
 				label_plural = _(terms)
@@ -678,7 +678,7 @@ A working browse.conf should look something like this:
 				field = type_id,
 				sort_by = [name],
 				group_mode = alphabetical,
-			
+
 				indefinite_article = a,
 				label_singular = _(type),
 				label_plural = _(types)
@@ -688,7 +688,7 @@ A working browse.conf should look something like this:
 				field = status,
 				sort_by = [name],
 				group_mode = alphabetical,
-			
+
 				indefinite_article = a,
 				label_singular = _(status),
 				label_plural = _(statuses)
@@ -698,7 +698,7 @@ A working browse.conf should look something like this:
 				field = access,
 				sort_by = [name],
 				group_mode = alphabetical,
-			
+
 				indefinite_article = an,
 				label_singular = _(access status),
 				label_plural = _(access statuses)
@@ -715,7 +715,7 @@ A working browse.conf should look something like this:
 				field = type_id,
 				sort_by = [name],
 				group_mode = alphabetical,
-			
+
 				indefinite_article = a,
 				label_singular = _(type),
 				label_plural = _(types)
@@ -725,7 +725,7 @@ A working browse.conf should look something like this:
 				field = status,
 				sort_by = [name],
 				group_mode = alphabetical,
-			
+
 				indefinite_article = a,
 				label_singular = _(status),
 				label_plural = _(statuses)
