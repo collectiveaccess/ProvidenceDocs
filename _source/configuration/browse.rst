@@ -23,7 +23,7 @@ Each facet has a type and some (but not all) of the facet definition keys are de
 .. csv-table::
    :widths: 12, 32
    :header-rows: 1
-   :file: configuration_browse_conf_supported_facets_table.csv
+   :file: ../_static/csv/configuration_browse_conf_supported_facets_table.csv
 
 For all types of facets the following configuration keys are defined:
 
@@ -58,7 +58,7 @@ For facets of type **normalizedDates** these additional keys are defined:
 .. csv-table::
    :widths: 12, 32, 12
    :header-rows: 1
-   :file: configuration_browse_conf_normalizedDates_table.csv
+   :file: ../_static/csv/configuration_browse_conf_normalizedDates_table.csv
 
 For facets of type **attribute** these additional keys are defined:
 
@@ -86,30 +86,30 @@ For facets of type **dupeidno** these additional keys are defined:
 .. csv-table::
    :widths: 12, 32, 12
    :header-rows: 1
-   :file: configuration_browse_conf_dupeidno_table.csv
-   
+   :file: ../_static/csv/configuration_browse_conf_dupeidno_table.csv
+
 For facets of type **location** these additional keys are defined:
 
 .. csv-table::
    :widths: 12, 32, 12
    :header-rows: 1
-   :file: configuration_browse_conf_location_table.csv
-   
+   :file: ../_static/csv/configuration_browse_conf_locations_table.csv
+
 
 For facets of type **violations** these additional keys are defined:
 
 .. csv-table::
    :widths: 12, 32, 12
    :header-rows: 1
-   :file: configuration_browse_conf_violations_table.csv
+   :file: ../_static/csv/configuration_browse_conf_violations_table.csv
 
 For facets of type **checkouts** these additional keys are defined:
 
 .. csv-table::
    :widths: 12, 32, 12
    :header-rows: 1
-   :file: configuration_browse_conf_checkouts_table.csv
-   
+   :file: ../_static/csv/configuration_browse_conf_checkouts_table.csv
+
 Browse results when no criteria are defined
 -------------------------------------------
 By default the browse will not return results if you attempt to execute a browse with no criteria defined. In principle, a criteria-less browse should return all possible results – every item in your database. However, for most data sets such a result set would be of limited use and slow to render. In most CA Providence and Pawtucket implementations, a special "start browsing" display is used when no criteria are defined.
