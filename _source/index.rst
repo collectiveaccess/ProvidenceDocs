@@ -65,6 +65,7 @@ Contents
    :caption: Configuration files
    :titlesonly:  
 
+   App.conf <configuration/app>    
    Browse.conf <configuration/browse>    
    DateTime.conf <configuration/datetime>
    Authentication.conf <configuration/authentication>

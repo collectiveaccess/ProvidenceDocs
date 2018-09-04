@@ -23,7 +23,7 @@ Each facet has a type and some (but not all) of the facet definition keys are de
 .. csv-table::
    :widths: 12, 32
    :header-rows: 1
-   :url: https://docs.google.com/spreadsheets/d/e/2PACX-1vTCGNO5pEKjTdT9CFuPYkIK03uvbdB4f5kkK1SxB4-6LXEdTP6XzRPtToj6w791El3-4nmemPFyH6v5/pub?output=csv
+   :file: configuration_browse_conf_supported_facets_table.csv
 
 For all types of facets the following configuration keys are defined:
 
@@ -58,7 +58,7 @@ For facets of type **normalizedDates** these additional keys are defined:
 .. csv-table::
    :widths: 12, 32, 12
    :header-rows: 1
-   :file: configuration_browse_conf_table.csv
+   :file: configuration_browse_conf_normalizedDates_table.csv
 
 For facets of type **attribute** these additional keys are defined:
 
@@ -81,6 +81,35 @@ For facets of type **has** these additional keys are defined:
    :header-rows: 1
    :url: https://docs.google.com/spreadsheets/d/e/2PACX-1vR0InzDnFtnZIZhe7O8WMew71I4-2y8VR_JnFGDM3yDsV9B0Gelu2HzjGhf6EvFE8sAvpNxWGFF1NxM/pub?output=csv
 
+For facets of type **dupeidno** these additional keys are defined:
+
+.. csv-table::
+   :widths: 12, 32, 12
+   :header-rows: 1
+   :file: configuration_browse_conf_dupeidno_table.csv
+   
+For facets of type **location** these additional keys are defined:
+
+.. csv-table::
+   :widths: 12, 32, 12
+   :header-rows: 1
+   :file: configuration_browse_conf_location_table.csv
+   
+
+For facets of type **violations** these additional keys are defined:
+
+.. csv-table::
+   :widths: 12, 32, 12
+   :header-rows: 1
+   :file: configuration_browse_conf_violations_table.csv
+
+For facets of type **checkouts** these additional keys are defined:
+
+.. csv-table::
+   :widths: 12, 32, 12
+   :header-rows: 1
+   :file: configuration_browse_conf_checkouts_table.csv
+   
 Browse results when no criteria are defined
 -------------------------------------------
 By default the browse will not return results if you attempt to execute a browse with no criteria defined. In principle, a criteria-less browse should return all possible results – every item in your database. However, for most data sets such a result set would be of limited use and slow to render. In most CA Providence and Pawtucket implementations, a special "start browsing" display is used when no criteria are defined.
