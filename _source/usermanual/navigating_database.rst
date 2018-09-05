@@ -1,5 +1,8 @@
 Accessing and Navigating the Database
 =====================================
+
+.. contents::
+   :local:   
 		
 CollectiveAccess is a web-based platform that may be accessed from any current web browser. (Chrome, Firefox, Safari or Internet Explorer 10 or better). Multiple users can work in the database simultaneously without worrying about overwriting each other’s work or creating incompatible versions of collections data.
 

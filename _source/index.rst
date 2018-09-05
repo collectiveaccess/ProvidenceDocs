@@ -39,7 +39,6 @@ Contents
    :titlesonly:
 
    Primary Tables <org/records>
-   Types <org/types>
    Intrinsics, Identifiers and Labels <org/intIDLabel>
    Metadata Elements <org/metadata>
    org/Relationships
@@ -171,3 +170,5 @@ Contents
    Accessing and Navigating the Database <usermanual/navigating_database>   
    Creating Records <usermanual/creating_records> 
    Searching and browsing <usermanual/find> 
+   Manage and Site Administration <usermanual/manage> 
+   User Interface Administration <usermanual/user_interface_administration> 

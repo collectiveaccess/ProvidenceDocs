@@ -1,6 +1,9 @@
 Creating New Records
 ====================
 
+.. contents::
+   :local:
+   
 New
 ---
 

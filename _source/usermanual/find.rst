@@ -1,6 +1,9 @@
 Find - Searching and Browsing
 =============================
-					
+
+.. contents::
+   :local:
+   					
 In addition to the QuickSearch, there are three other ways to locate records, each providing a higher degree of precision than the QuickSearch: The basic search, the advanced search, and the browse. All three are accessed from the Find menu in the Global Navigation.
 
 Basic Search
