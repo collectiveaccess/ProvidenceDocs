@@ -55,7 +55,7 @@ The controls at the top of the inspector allow you to navigate through the resul
 Displayed under the results are the record type, name, accession number, and current location (if applicable and catalogued) of the record you are currently editing
 
 **Watch List Icon** 
-Clicking this icon adds the selected record to your watch list, which can be accessed by selecting Manage > My watched items from the Global Navigation Bar. The icon turns red when active.
+Clicking this icon adds the selected record to your watch list, which can be accessed by selecting *Manage > My watched items* from the Global Navigation Bar. The icon turns red when active.
 			
 **Change Type Icon**
 This tool allows you to change the record’s “type.” If, for example, you mistakenly created a “Audio” record when you meant to create a “Video” record, you can change the type here without having to delete and re-create the record. Take care using this feature. Changing the record type will cause information in all fields that are not applicable to the new type to be discarded. This action cannot be undone!
@@ -78,7 +78,7 @@ A few of the most common Data Types are:
 
 - **Text** – Many metadata elements in the system are simply free text, meaning you can enter any kind of character. Some fields may have Rich Text Editing enabled, which means the field allows text formatting, including bold, italics and underlines.
 
-- **List** – Other fields, such as drop-down menus and checklists, are populated by predefined Lists, which are managed under Manage > Lists & Vocabularies. 
+- **List** – Other fields, such as drop-down menus and checklists, are populated by predefined Lists, which are managed under *Manage > Lists & Vocabularies*. 
 
 - **Date Range** – Accepts any valid date or date range. Dates and date ranges may be entered in a variety of formats. For example, October 25, 2017 may be entered as “October 25, 2017”, “10/25/2017”, “25 October 2017”, “2017-10-25” and more. Broader, inexact dates may also be entered: “October 2017”, “10/2017”, “2017”, “2010s”, “21th century”. Ranges are entered as two dates (exact or inexact) separated with a hyphen: “March 2000 - October 2017”.
 

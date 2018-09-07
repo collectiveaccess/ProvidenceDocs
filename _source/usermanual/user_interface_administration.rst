@@ -7,7 +7,7 @@ User Interface Administration
 User Interface Configuration
 ----------------------------
 
-There are several configuration options that can be set system wide or for individual users that can improve cataloging efficiency for complex editing interfaces. These configuration options are set via Manage > Administration> User Interfaces. If your account does not have access to administration configuration please contact your system administrator.
+There are several configuration options that can be set system wide or for individual users that can improve cataloging efficiency for complex editing interfaces. These configuration options are set via *Manage > Administration> User Interfaces*. If your account does not have access to administration configuration please contact your system administrator.
 
 **Creating User Interfaces**
 It is possible to make multiple User Interfaces for record types that are geared to specific cataloging tasks or users’ working style. For example, if a cataloger is responsible for entering data in only a small subset of metadata elements for a record, a new User Interface can be configured with only those elements to support that specific workflow. 
@@ -60,4 +60,4 @@ Configure Help Text and Documentation Links for Metadata Elements: Help text and
    :alt: Help text on labels  
 *Fig 5.4: Element help text revealed on hover.  Information icon linked to URL in “Documentation URL” for the element*
 
-Text entered in the “Description” field and links entered in the “Documentation URL” field for metadata elements in Manage > Administration > Metadata Elements are available wherever the element is used in a User Interface. Text entered in the “Descriptive text for bundle” and “Documentation URL” fields in the configuration options for elements within a User Interface screen in Manage > Administration > User Interfaces will only appear for that specific User Interface and will override the Metadata Element description and documentation URL.
+Text entered in the “Description” field and links entered in the “Documentation URL” field for metadata elements in *Manage > Administration > Metadata Elements* are available wherever the element is used in a User Interface. Text entered in the “Descriptive text for bundle” and “Documentation URL” fields in the configuration options for elements within a User Interface screen in *Manage > Administration > User Interfaces* will only appear for that specific User Interface and will override the Metadata Element description and documentation URL.

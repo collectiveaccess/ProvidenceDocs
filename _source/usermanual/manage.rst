@@ -46,7 +46,7 @@ Users may enter contact information into their profile here.
 Watched Items
 -------------
 
-View and delete items from your watched items list. Items are added to the watched items list by clicking on the eye icon   in the item’s Inspector window. Reached through Manage > My Watched Items.
+View and delete items from your watched items list. Items are added to the watched items list by clicking on the eye icon   in the item’s Inspector window. Reached through *Manage > My Watched Items.*
 
 					
 Tools
@@ -89,7 +89,7 @@ For Summaries:
 To select a display to use on a record’s summary screen, use the drop-down box in the top right hand side of page. After selecting, the page will update automatically.
 					
 **Adding a New Display**				
-New displays can be created by selecting Manage > My displays from the Global Navigation and clicking the “New display” button.
+New displays can be created by selecting *Manage > My displays* from the Global Navigation and clicking the “New display” button.
 
 .. figure:: ../_static/images/4_4.png
    :name: Creating a new display
@@ -137,7 +137,7 @@ Search Tools
 ------------
 					
 **Search Forms**
-Just Like Displays, Advanced Search forms can be created and configured by the user. This can be used to create custom searches that cover only the fields you specify. To create a new search form, navigate to Manage > My Search Tools > Search, and then click on the “New Form” button. You can create forms for any primary table.
+Just Like Displays, Advanced Search forms can be created and configured by the user. This can be used to create custom searches that cover only the fields you specify. To create a new search form, navigate to *Manage > My Search Tools > Search*, and then click on the “New Form” button. You can create forms for any primary table.
 
 .. figure:: ../_static/images/4_6.png
    :name: Creating a new advanced search form
@@ -150,13 +150,13 @@ As with Displays, assign a name and code to your search form, and select whether
 Once the desired fields have been added, save the form. To test the search form, navigate to the appropriate find page and select the form from the drop-down, then enter search criteria and click on the “search” button. 
 
 **Saved Searches**
-Searches for any record can be saved by clicking the “Save Search” link in Basic Search forms or using the “Save search as” form within Advanced Search forms. You can view, delete and execute your saved searches in Manage > My Search Tools > Saved Searches.
+Searches for any record can be saved by clicking the “Save Search” link in Basic Search forms or using the “Save search as” form within Advanced Search forms. You can view, delete and execute your saved searches in *Manage > My Search Tools > Saved Searches*.
 
 
 User Generated Content
 ----------------------
 
-User generated content is tags and comments submitted through the CollectiveAccess front-end component, Pawtucket. These public contributions are reviewed and moderated by navigating to Manage > User Generated Content.
+User generated content is tags and comments submitted through the CollectiveAccess front-end component, Pawtucket. These public contributions are reviewed and moderated by navigating to *Manage > User Generated Content*.
 
 **Comments**
 Comments are accessed through the Moderate and Search tabs. If your system is configured to require moderation of user generated content before it is published to your Pawtucket-based front-end website, comments requiring moderation will be listed in the Moderate section. The comment, author, date and title of the record commented on are listed for review. Multiple comments can be selected using checkboxes and approved or deleted.
@@ -181,7 +181,7 @@ Lists and Vocabularies
 
 Many metadata elements and structural attributes of the data model are populated by Lists. Any drop-down menu or checklist has a corresponding list, and the definitions of record types (for Objects, Entities, etc.) are defined as lists with specific names. For example, the list of Object types in the system is defined in the “Object types” list.
 
-You can manage these lists by navigating to Manage > Lists & Vocabularies. More information on Lists and Vocabularies can be found here:
+You can manage these lists by navigating to *Manage > Lists & Vocabularies*. More information on Lists and Vocabularies can be found here:
 http://docs.collectiveaccess.org/wiki/Lists_and_Vocabularies			
 
 
@@ -194,10 +194,10 @@ http://docs.collectiveaccess.org/wiki/Data_Exporter
 
 Access Control
 --------------					
-To manage workflow and control access to data, all users have individual CollectiveAccess logins. Users with an administrative login may manage user accounts, using the access control tools reached through Manage > Access Control. These tools allow you to create user login accounts and assign specific roles to users, e.g., “cataloguer” or “researcher”. The roles, in turn, determine the scope and level of access a user has to the system. 
+To manage workflow and control access to data, all users have individual CollectiveAccess logins. Users with an administrative login may manage user accounts, using the access control tools reached through *Manage > Access Control*. These tools allow you to create user login accounts and assign specific roles to users, e.g., “cataloguer” or “researcher”. The roles, in turn, determine the scope and level of access a user has to the system. 
 
 **User Logins**
-To create a new user login, go to Manage > Access Control > User Logins. 
+To create a new user login, go to *Manage > Access Control > User Logins*. 
 
 .. figure:: ../_static/images/4_8.png
    :name: List of Full-access Users
@@ -217,9 +217,9 @@ You can specify settings for the new user via a form. Enter basic info about the
 
 Be sure to check the “account is activated?” checkbox. You may temporarily disable a login by unchecking this box at any time.
 
-The “Roles” and “Groups” select boxes list available roles and groups for the user. Each login should have one or more role assignments, such as “cataloguer” or “researcher.” The privileges these roles confer are defined in the Roles configuration available to administrators at Manage > Access Control > Roles. 
+The “Roles” and “Groups” select boxes list available roles and groups for the user. Each login should have one or more role assignments, such as “cataloguer” or “researcher.” The privileges these roles confer are defined in the Roles configuration available to administrators at *Manage > Access Control > Roles*. 
 
-Groups allow you to confer predefined combinations of roles to users, as well as bundle users together for the purpose of sharing forms, sets, and displays. A login does not necessarily have to be associated with a group, but if you wish to convey a predefined bundle of roles or share information within a specific project team, for example, you will want to define that group, add roles and populate it with users. System-wide groups may be managed by administrators at Manage > Access Control > Groups. Groups created by users for their own project may be managed at Manage > My Project Teams. User-created groups may not confer roles; their members retain only privileges given to them by administrators.
+Groups allow you to confer predefined combinations of roles to users, as well as bundle users together for the purpose of sharing forms, sets, and displays. A login does not necessarily have to be associated with a group, but if you wish to convey a predefined bundle of roles or share information within a specific project team, for example, you will want to define that group, add roles and populate it with users. System-wide groups may be managed by administrators at *Manage > Access Control > Groups*. Groups created by users for their own project may be managed at *Manage > My Project Teams*. User-created groups may not confer roles; their members retain only privileges given to them by administrators.
 User Groups
 To create user groups appearing on the “User Logins” page, navigate to “User Groups” using the left-hand side navigation. A screen will be displayed with existing user groups, which may be edited. To create new groups, use the “New group” button.
 
@@ -294,7 +294,7 @@ At *Manage > Pawtucket > Site Pages*, users will find a list of existing site pa
 When editing site pages, there is a combination of template specific and standard fields to enter content in. Fields starting with “Page metadata” are standard for all pages and allow you to assign content in the pages’ HTML meta tags. Additionally, the “Page metadata: URL path” is the url path to access the HTML page in your front-end Pawtucket installation. For this reason the URL path must be unique. Enter template specific content in the “Page Content” bundle and upload images in the “Page Media” bundle. Site pages must have their Access set to “Accessible to public” to be visible.
 
 **Global Values**
-Global values are editable text values that may be displayed in any view template in your Pawtucket theme. They are especially useful for managing semi-static text embedded in a web site, such as upcoming holiday hours or planned maintenance. You may edit global values by using the forms at Manage > Pawtucket > Global Values.
+Global values are editable text values that may be displayed in any view template in your Pawtucket theme. They are especially useful for managing semi-static text embedded in a web site, such as upcoming holiday hours or planned maintenance. You may edit global values by using the forms at *Manage > Pawtucket > Global Values*.
 
 
 Logs 
