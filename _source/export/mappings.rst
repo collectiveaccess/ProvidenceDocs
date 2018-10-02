@@ -18,9 +18,9 @@ Rule types
 The first column of the main mapping spreadsheet is called "Rule type". What you set here basically qualifies what this row does. Most of the rows will end up being of the "Mapping" type but there are several options available:
 
 .. csv-table::
-   :widths: auto
    :header-rows: 1
-   :file: ../_static/csv/1_-_rule_types.csv
+   :widths: 25, 75
+   :file: ../_static/csv/1_rule_types.csv
 
 Hierarchical mappings
 ---------------------
@@ -45,8 +45,8 @@ The XML format implementation allows valid XML element names as values for the "
 Say you have the following very simple part of a mapping sheet and you export a single object.
 
 .. csv-table::
-   :widths: auto
    :header-rows: 1
+   :widths: 20, 10, 10, 10, 20, 40
    :file: ../_static/csv/2_-_element_values.csv
 
 What you end up with as export for a given objects is something like the following:
@@ -67,7 +67,7 @@ In MARC mappings, the Element value is either a control field or a data field de
 Mapping items with data field definitions also shouldn't have any source definition or static data. The data resides in subfields, which should be separate mapping items with a hierarchical relationship (via Parent ID) to the field definition. For instance, you'd define an item for the data field "300/##". Suppose it had the ID 1. This field (like every data field) has a couple of subfields [1], namely a through g and 3, 6, 8 (leave out the $ character from the original documentation). Now create separate mapping items for each subfield you need, pull in the CA data you want using the 'Source' field in the mapping sheet and fill in the Parent ID "1", the identifier of the data field. Here's an example in table form (which may not make sense from a MARC standpoint but we're only trying to explain the format here, not the semantics of MARC fields):
 
 .. csv-table::
-   :widths: auto
+   :widths: 20, 10, 10, 10, 20, 40
    :header-rows: 1
    :file: ../_static/csv/3_-_marc_element_values.csv
 
@@ -90,7 +90,7 @@ The main (and for the moment only) use for variables are conditional mappings. S
 A good way to think of variables is that they are mappings that don't end up in the actual export. They respect the current context, the current place in the hierarchy, everything.
 
 .. csv-table::
-   :widths: auto
+   :widths: 20, 10, 10, 10, 20, 40
    :header-rows: 1
    :file: ../_static/csv/4_-_variables.csv
 
@@ -102,7 +102,7 @@ Settings
 These are configuration options that apply to the whole exporter mapping.
 
 .. csv-table::
-   :widths: auto
+   :widths: 15, 25, 40, 20
    :header-rows: 1
    :file: ../_static/csv/5_-_settings.csv
 
@@ -111,7 +111,7 @@ Options
 Each mapping item (i.e. a line in the mapping spreadsheet) can have its own settings as well. To set these settings, you can fill out the 6th column of the mapping sheet, called 'Options'. The options must be filled in in JavaScript Object Notation. If you set this value and it's not formatted properly, the mapping loading tool will throw an error. Here's a description of the available options:
 
 .. csv-table::
-   :widths: auto
+   :widths: 15, 25, 40, 20
    :header-rows: 1
    :file: ../_static/csv/6_-_options.csv
 
@@ -162,7 +162,7 @@ The 'RepeatMappings' rule type allows you to repeat a set list of mappings in a 
 If you create a RepeatMappings rule, the mapping loader expects a comma-delimited list of references to the 2nd column in the Mapping sheet. It also really only makes sense to create this type of rule if you change the context in the same step. A simple example could look like this:
 
 .. csv-table::
-   :widths: auto
+   :widths: 20, 10, 10, 10, 20, 40
    :header-rows: 1
    :file: ../_static/csv/7_-_mapping_repetitions.csv
 
@@ -245,7 +245,7 @@ RDF Mode configuration file options
 -----------------------------------
 
 .. csv-table::
-   :widths: auto
+   :widths: 25, 75
    :header-rows: 1
    :file: ../_static/csv/8_-_rdf_mode.csv
 
@@ -253,7 +253,7 @@ Node type definition options
 ----------------------------
 
 .. csv-table::
-   :widths: auto
+   :widths: 25, 75
    :header-rows: 1
    :file: ../_static/csv/9_-_node_options.csv
 
@@ -261,7 +261,7 @@ Node type definition options
 -----------------
 
 .. csv-table::
-   :widths: auto
+   :widths: 25, 75
    :header-rows: 1
    :file: ../_static/csv/10_-_related_options.csv
 
