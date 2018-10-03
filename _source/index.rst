@@ -122,9 +122,8 @@ Contents
    :caption: Export
    :titlesonly:
 
-   Supported File Formats <export/formats>
    Mappings <export/mappings>
-   Running an Export <export/running>
+   OAI-PMH Provider <export/oaipmh_provider>
 
 .. toctree::
    :maxdepth: 2
