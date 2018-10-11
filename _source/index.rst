@@ -156,7 +156,7 @@ Contents
    :caption: Reference
    :titlesonly:
 
-   reference/APIs
+   Web Services <reference/web_services> 
    reference/FAQs
    reference/Glossaries
    Prior Releases <reference/prior>
