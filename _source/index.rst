@@ -102,7 +102,9 @@ Contents
 
 
    Tracking Current Object Location <workflow/location>
-   Maintaining Object Use History <workflow/history>
+   Direct object-location tracking <workflow/direct>
+   Movement-based location tracking <workflow/movement>
+   Workflow-based location tracking <workflow/workflow>
 
 
 .. toctree::
