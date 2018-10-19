@@ -43,13 +43,13 @@ In app.conf, if you are using direct object-location location tracking:
 
    current_location_criteria = {
       ca_storage_locations = {
-         [relationship type] = {
+         relationship_type = {
             template = ^ca_storage_locations.hierarchy.preferred_labels%delimiter=_➜_
          }
       }
    }
 
-where [relationship type] is set to whatever you have object_storage_location_tracking_relationship_type in app.conf set to.
+where relationship_type is set to whatever you have object_storage_location_tracking_relationship_type in app.conf set to.
 
 Then in browse.conf add a facet definition like this for direct object-location tracking:
 
@@ -63,7 +63,7 @@ Then in browse.conf add a facet definition like this for direct object-location 
 
       display = {
          ca_storage_locations = {
-            [relationship type] = { template = ^ca_storage_locations.hierarchy.preferred_labels%delimiter=_➜_ (storage) }
+            relationship_type = { template = ^ca_storage_locations.hierarchy.preferred_labels%delimiter=_➜_ (storage) }
          }
       },
 
@@ -73,7 +73,7 @@ Then in browse.conf add a facet definition like this for direct object-location 
       label_plural = _("current location")
    }
 
-where [relationship type] is set to whatever you have object_storage_location_tracking_relationship_type in app.conf set to.
+where relationship_type is set to whatever you have object_storage_location_tracking_relationship_type in app.conf set to.
 
 
 Updating the cache

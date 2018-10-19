@@ -34,16 +34,17 @@ In app.conf, if you are using movement-based location tracking:
 
    current_location_criteria = {
       ca_movements = {
-         [movement type] = {
+         movement_type = {
             date = pickup_date,
             template = ^ca_storage_locations.hierarchy.preferred_labels%delimiter=_➜_
          }
       }
    }
 
-where [movement type] is a type of movement you want considered as indicating current location. You can list more than one type if needed.
+where movement_type is a type of movement you want considered as indicating current location. You can list more than one type if needed.
 
 Then in browse.conf add a facet definition like this for movement-based tracking:
+
 .. code-block:: none
 
    current_location = {
@@ -52,7 +53,7 @@ Then in browse.conf add a facet definition like this for movement-based tracking
       group_mode = none,
       display = {
          ca_movements = {
-            [movement type] = { template = ^ca_storage_locations.hierarchy.preferred_labels%delimiter=_➜_ (storage) }
+            movement_type = { template = ^ca_storage_locations.hierarchy.preferred_labels%delimiter=_➜_ (storage) }
          }
       },
       include_none_option = No location specified,
@@ -60,7 +61,7 @@ Then in browse.conf add a facet definition like this for movement-based tracking
       label_plural = _("current location")
    }
 
-where [movement type] is a type of movement you want considered as indicating current location. You can list more than one type if needed.
+where movement_type is a type of movement you want considered as indicating current location. You can list more than one type if needed.
 
 Updating the cache
 ------------------
