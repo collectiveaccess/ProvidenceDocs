@@ -50,12 +50,16 @@ Then in browse.conf add a facet definition like this for movement-based tracking
    current_location = {
       type = location,
       restrict_to_types = [],
+      table = ca_objects,
+      
       group_mode = none,
+      
       display = {
          ca_movements = {
             movement_type = { template = ^ca_storage_locations.hierarchy.preferred_labels%delimiter=_➜_ (storage) }
          }
       },
+      
       include_none_option = No location specified,
       label_singular = _("current location"),
       label_plural = _("current location")
