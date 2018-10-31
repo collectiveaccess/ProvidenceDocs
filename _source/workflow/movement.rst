@@ -3,9 +3,18 @@ Movement-based location tracking
 
 .. contents::
    :local:   
-   
+
+The third and perhaps most complex method of location tracking is Movement based. It should only be employed if you need to record complex data (beyond merely the date, location, and contents of a movement) about movements *themselves.* For example, information about a movement might include packing, shipping, and authorization information. The second criteria justifying movement-based location tracking would be if multiple objects are being moved in a single instance (For example, more than one item is shipped in a single box as part of an outgoing loan).   
+
+Before you can configure movement-based location tracking, you must enable the Movements table in app.conf and then create a User Interface for Movements that includes metadata elements for all that you wish to record about Movements.
+
+Provided you have a Movement editor configuration in place, configuring Movement-based location tracking is relatively straightforward and similar to Direct object-location tracking.
+    
 Configuration
 -------------
+
+Step 1
+^^^^^^
 Basic configuration of movement-based location tracking is done in app.conf using the following directives:
 
 .. csv-table::
@@ -13,7 +22,9 @@ Basic configuration of movement-based location tracking is done in app.conf usin
    :header-rows: 1
    :file: ../_static/csv/movement-based_settings.csv
 
-As with direct object-location tracking there are two bundles available to implement location tracking in your editing user interfaces. The ca_objects_location bundle displays the current location, location history and adds a control to change the current location in the object editor. The options are the same as for object-location tracking, but the locationTrackingMode option should be set to ca_movements.
+Step 2
+^^^^^^
+As with direct object-location tracking there are two bundles available to implement location tracking in your editing user interfaces. The **Current Location (ca_objects_location)** bundle displays the current location, location history and adds a control to change the current location in the object editor. The options are the same as for object-location tracking, but the locationTrackingMode option should be set to *ca_movements.*
 
 The location of an object will be updated when any of the following occur:
 
@@ -22,6 +33,15 @@ The location of an object will be updated when any of the following occur:
     3. A movement record is manually created, a storage location is set for it and objects added to it
 
 Note that changing the storage location of an existing movement will change the storage location for all objects associated with that movement but not the date. It will be as if the new location had been chosen on the movement date.
+
+Step 3
+^^^^^^
+In the Storage Location user interface, there is an available bundle named **Current contents of location (ca_storage_locations_contents)**. If added to the storage location editor, this will display a list of all objects currently resident in the storage location. It provides the following options, which can be set in your installation profile or in the web-based configuration UI:
+
+.. csv-table::
+   :widths: 25, 25, 50, 50, 25
+   :header-rows: 1
+   :file: ../_static/csv/settings_2.csv
 
 Browsing current location when using direct movement-based location tracking
 ----------------------------------------------------------------------------

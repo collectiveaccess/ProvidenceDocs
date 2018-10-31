@@ -7,30 +7,44 @@ Direct object-location tracking
 Configuration
 -------------
 
-Basic configuration of object-location tracking is done in app.conf using the following directives:
+Here are the steps necessary to configure direct object-location tracking. 
+
+Step 1
+^^^^^^
+The first requirement is to set the following directive in the app.conf configuration file.
 
 .. csv-table::
    :widths: 25, 75
    :header-rows: 1
    :file: ../_static/csv/direct_object-location_setting.csv
 
-There are two bundles available to implement location tracking in your editing user interfaces. The **ca_objects_location** bundle displays the current location, location history and adds a control to change the current location in the object editor.
+Step 2
+^^^^^^
+Once app.conf is configured with the above setting, add the **Current Location (ca_objects_location)** bundle to the user interface for Objects. This bundle displays the current location, location history and even adds a control to change the current location from within the bundle itself.
 
-The **ca_objects_location** bundle provides the following options when used with direct object-location tracking. These can be set in your installation profile or in the web-based configuration UI:
+The **Current Location (ca_objects_location)** bundle provides the following options when used with direct object-location tracking. These can be set in your installation profile or in the web-based configuration UI:
 
 .. csv-table::
    :widths: 25, 25, 75, 25, 25
    :header-rows: 1
    :file: ../_static/csv/settings_1.csv
 
-The **ca_storage_locations_contents** will display a list of all objects currently resident in a storage location. It provides the following options, which can be set in your installation profile or in the web-based configuration UI:
+.. note::
+
+	The "current" location of an object is based on the date and time that a user updates the location in CollectiveAccess. This date is stored in an internal 		metadata element called **Effective Date (effective_date)**. If you wish to *manually* enter the date that an object's location changed, you can create an 		Interstitial Editor between Objects and Storage Locations that includes Effective Date, and enter the date of movement here. You might be interested in this if, for instance, there is a lag between the actual physical movement of collection objects and the time when you are able to updated the location in CA. (e.g. you move an Artifact on a Monday but don't update the corresponding record in CollectiveAccess until Friday).
+
+Step 3
+^^^^^^
+In the Storage Location user interface, there is an available bundle named **Current contents of location (ca_storage_locations_contents)**. If added to the storage location editor, this will display a list of all objects currently resident in the storage location. It provides the following options, which can be set in your installation profile or in the web-based configuration UI:
 
 .. csv-table::
    :widths: 25, 25, 50, 50, 25
    :header-rows: 1
    :file: ../_static/csv/settings_2.csv
 
-Note that when using direct object-location tracking, a ca_storage_locations relationship bundle placed in an object editor will display all object-location links, past, present and future, in a single undifferentiated list and can be configured to allow users to add object-location links. The ca_objects relationship bundle placed in a storage location editor will behave similarly. In general, the ca_objects and ca_storage_locations relationship bundles should not be placed in the storage location and objects editors respectively when direct object-location tracking is in use.
+Note that when using direct object-location tracking, a ca_storage_locations relationship bundle placed in an object editor will display *all* object-location links, past, present and future, in a single undifferentiated list and can be configured to allow users to add object-location links. The ca_objects relationship bundle placed in a storage location editor will behave similarly. In general, the ca_objects and ca_storage_locations relationship bundles should not be placed in the storage location and objects editors respectively when direct object-location tracking is in use. 
+
+
 
 Browsing current location when using direct object-location tracking
 --------------------------------------------------------------------
@@ -49,7 +63,7 @@ In app.conf, if you are using direct object-location location tracking:
       }
    }
 
-where relationship_type is set to whatever you have object_storage_location_tracking_relationship_type in app.conf set to.
+where *relationship_type* is set to whatever you have *object_storage_location_tracking_relationship_type* in app.conf set to.
 
 Then in browse.conf add a facet definition like this for direct object-location tracking:
 
@@ -73,7 +87,7 @@ Then in browse.conf add a facet definition like this for direct object-location 
       label_plural = _("current location")
    }
 
-where relationship_type is set to whatever you have object_storage_location_tracking_relationship_type in app.conf set to.
+where *relationship_type* is set to whatever you have *object_storage_location_tracking_relationship_type* in app.conf set to.
 
 
 Updating the cache

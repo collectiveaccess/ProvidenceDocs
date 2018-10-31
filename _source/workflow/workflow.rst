@@ -7,10 +7,12 @@ Workflow-based location tracking
 Configuration
 -------------
 
-Unlike other location tracking options, which explicitly record location in a specific place in the database, workflow-based location tracking calculates the current location of an object by looking at a range of related records, comparing their dates, and selecting the most recently dated. What types of records are considered and which date elements in those records are used for comparison are entirely configurable.
+Unlike the other location tracking options, which only handle storage locations, workflow-based location tracking calculates the current location of an object by looking at a range of related records - including Loans and Occurrences - comparing their dates, and selecting the most recently dated. What types of records are considered and which date elements in those records are used for comparison are entirely configurable.
 
 Workflow-based location tracking can supplement direct object-location reference or movement-based tracking. That is, locations recorded with those two methods may be part of the mix of records workflow-based tracking considers when calculating the current location, but they don't have to be.
 
+Step 1
+^^^^^^
 Primary configuration is done in **app.conf** through the **current_location_criteria** directive. current_location_criteria is an associative array the keys of which are the primary types you want considered. Relevant primary types for location tracking are: ca_storage_locations, ca_loans, ca_movements, ca_object_lots and ca_occurrences. Each primary type has a sub-array the keys of which are sub-types (except for ca_storage_locations for which it is a relationship type). Each sub-type/relationship type in turn has an array of options. For example:
 
 .. code-block:: none
@@ -46,7 +48,7 @@ Primary configuration is done in **app.conf** through the **current_location_cri
       }
    }
 
-In this example, ca_movements is a primary type, shipping is a movement sub-type and date is an option for the shipping sub-type (and others as well) specifying what date element should be used to calculate this movement sub-types place in the object's history. (For the ca_storage_locations primary type in the example, related is an object-storage location relationship type, and template is an option of that relationship type).
+In this example, ca_movements is a primary table, while shipping is a movement type and date is an option for the shipping type (and others as well) specifying what date element should be used to calculate this movement types place in the object's history. (For the ca_storage_locations primary type in the example, related is an object-storage location relationship type, and template is an option of that relationship type).
 
 Note that display of deaccessions (managed via the ca_objects_deaccession editor bundle) in the object use history is controlled using the ca_objects primary type. If it is present in the configuration deaccessions will be shown, formatted using the supplied template and color, as in the example above.
 
@@ -57,9 +59,11 @@ Sub-type/relationship type options affect both the what is considered current an
    :header-rows: 1
    :file: ../_static/csv/workflow-based_options.csv
 
-This configuration will be used to display current location in the editor inspectors, when browsing on workflow-based current location and by default in the Object Use History (ca_objects_history) editor bundle.
+This configuration will be used to display current location in the editor inspectors, when browsing on workflow-based current location and by default in the **Object Use History (ca_objects_history) editor bundle.**
 
-The Object Use History bundle is used to display the current location as well as a detailed history of previous use. It is intended as a convenient means to show where an object is and has been, but can also be configured to show any set of related records by date. The bundle has a variety of settings to customize the layout and contents of the location stream. All of these can be set in the current_location_criteria bundle in app.conf, described previously, and used as defaults in the bundle. Let's take a look at an example:
+Step 2
+^^^^^^
+The **Object Use History (ca_objects_history) editor bundle** bundle is used to display the current location as well as a detailed history of previous use when using Workflow-based tracking (As opposed to **Current Location (ca_objects_location)** which is for Direct object-location tracking). It is intended as a convenient means to show where an object is and has been, but can also be configured to show any set of related records by date. The bundle has a variety of settings to customize the layout and contents of the location stream. All of these can be set in the current_location_criteria bundle in app.conf, described previously, and used as defaults in the bundle. Let's take a look at an example:
 
 
 In the bundle seen above the cataloguer has configured different colors and templates to showcase Accession, Loan, and Storage Location activity and data. Each block is automatically sorted by the date chosen through the bundle settings for that table. For example, Artwork loans are sorted on the "Loan Period" as seen via the dates on the far right-hand side. When a new relationship is created to any of the three configured tables a new segment will appear in the stream in the appropriate order based on date. In addition to the tables shown in the example, Occurrences, Movements, and Deaccessions can also be configured.
@@ -74,7 +78,7 @@ The contents of each block in the stream are entirely configurable using metadat
    <unit relativeTo="ca_entities" delimiter=", " restrictToRelationshipTypes="borrower">^ca_entities.preferred_labels</unit></unit>
 
 Configuring bundle-specific settings through an installation profile
-
+--------------------------------------------------------------------
 To add the Use History bundle to the installation profile, simply include the bundle placement and relevant settings on the appropriate UI screen. The use history settings defined in app.conf are taken as a system-wide universal, but defining the ca_objects_history setting in the profile allows for UI-specific customizations.
 
 .. code-block:: none
