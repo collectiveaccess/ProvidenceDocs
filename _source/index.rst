@@ -29,7 +29,7 @@ Contents
    :titlesonly:
 
    System Requirements <setup/systemReq>
-   Media Plugins <setup/media>
+   Backups <setup/backups>
    setup/Installation
    setup/Profiles
 

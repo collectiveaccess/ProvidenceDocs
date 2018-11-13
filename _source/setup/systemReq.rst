@@ -44,6 +44,68 @@ If setting up Apache, MySQL or PHP is daunting, you may want to consider pre-con
 .. _MAMP: http://www.mamp.info/
 .. _XAMPP: https://www.apachefriends.org/index.html
 
+Required and Suggested Software Packages By Distribution
+--------------------------------------------------------
+
+**CentOS 7**
+
+Some packages used by CollectiveAccess are available only from 3rd party repositories. Packages recommended here are from the following repositories:
+
+- Nux: http://li.nux.ro/download/nux/dextop/el7/x86_64/nux-dextop-release-0-5.el7.nux.noarch.rpm
+- Remi: http://rpms.remirepo.net/enterprise/remi-release-7.rpm
+- EPEL: https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+
+**Required:**
+	
+- mariadb-server		[Database server]
+- httpd				[Web server]
+- redis-server 			[Cache server]
+- php php-mcrypt php-cli php-gd php-curl php-mysqlnd php-zip php-fileinfo php-devel php-gmagick php-opcache php-process php-xml php-mbstring php-redis			[Runtime environment] (Remi, EPEL)
+
+**Suggested:**
+- GraphicsMagick-devel	[Image processing]
+- ghostscript-devel		
+- ffmpeg-devel			[Audio and video processing] (Nux)
+- libreoffice			[Microsoft Office file processing] (EPEL) 
+- dcraw				[RAW image format support] 
+- mediainfo			[Media metadata extraction] 
+- exiftool			[Media metadata extraction] 
+- xpdf				[Media metadata extraction] 
+
+When installing a tool for media metadata extraction, you need only install one, although having multiple installed will not cause issues.
+
+**Ubuntu 16.04**
+
+Some packages used by CollectiveAccess are available only from 3rd party repositories. Packages recommended here are from the following repositories:
+
+- ondrej/php: ppa:ondrej/php
+- PECL: https://pecl.php.net
+
+**Required:**
+
+- mysql-server 
+- apache2 
+- redis-server
+- php7.x libapache2-mod-php7.x php7.x-common php7.x-mbstring php7.x-xmlrpc php7.x-gd php7.x-xml php7.x-intl php7.x-mysql php7.x-cli php7.x-mcrypt php7.x-zip php7.x-curl php7.x-posix php7.x-dev php-pear php7.x-
+- pecl.php.net/gmagick-2.0.5RC1 [pecl install channel://pecl.php.net/gmagick-2.0.5RC1]
+
+**Suggested:**
+
+- graphicsmagick libgraphicsmagick-dev [Image processing]
+- ffmpeg 	[Audio and video processing]
+- ghostscript 	[PDF processing] 
+- libreoffice 	[Microsoft Office file processing]
+- dcraw		[RAW image format support] 
+- mediainfo 	[Media metadata extraction]
+- xpdf 		[Media metadata extraction]
+- exiftool	[Media metadata extraction]
+
+
+Directories
+-----------
+
+If you are running Apache on Linux, by default the root of your CollectiveAccess installation will likely be in **/var/www/html.**
+
 Software requirements for media processing
 ------------------------------------------
 Depending upon the types of media you intend to handle with CA you will also need to install various supporting software libraries and tools. None of these is absolutely required for CA to install and operate but without them specific types of media may not be supported (as noted below).
@@ -52,7 +114,6 @@ Depending upon the types of media you intend to handle with CA you will also nee
    :widths: 20, 20, 60
    :header-rows: 1
    :file: ../_static/csv/software_requirements.csv
-
 
 Most users will want at a minimum GraphicsMagick and ffmpeg installed on their server, and should install other packages as needed. For image processing you need only one of the following: GraphicsMagick, ImageMagick, libGD.
 
