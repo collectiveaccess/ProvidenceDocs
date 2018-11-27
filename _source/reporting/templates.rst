@@ -1,6 +1,9 @@
 Display Template Syntax
 =======================
 
+.. contents::
+   :local:
+   
 Display templates are used to format data from bundles (elements of metadata stored in CollectiveAccess) for display on screen, output into reports and presentation in search results. When no display template is defined CollectiveAccess defaults to displaying bundle data in the simplest possible way, typically as a semicolon-delimited list of values. For bundles comprised of a single value (Eg. a simple text metadata element) this is often enough. For complex bundles consisting of several discrete values – a mailing address for example – a template is usually required to adequately format the value. Other cases where bundle display templates are called for:
 
     - To define styling, such as headings, bold and italics around bundle elements.
@@ -106,7 +109,7 @@ Note that spaces are not allowed in options as they are used to separate placeho
 The following options may be used to format the text value of any placeholder:
 
 .. csv-table::
-   :widths: auto
+   :widths: 25, 75
    :header-rows: 1
    :file: ../_static/csv/placeholder_options.csv
 
@@ -201,7 +204,7 @@ Each unit shifts the primary by one relational "jump." Nesting <units> allows sh
 <unit> tags may take any of the following attributes:
 
 .. csv-table::
-   :widths: auto
+   :widths: 25, 75, 25
    :header-rows: 1
    :file: ../_static/csv/unit_attributes.csv
 
@@ -335,7 +338,7 @@ The parent and children modifiers work similarly to hierarchy but return the imm
 There are a number of placeholder options that can be used to modify how hierarchical data is displayed:
 
 .. csv-table::
-   :widths: auto
+   :widths: 25, 75, 25
    :header-rows: 1
    :file: ../_static/csv/hierarchical_placeholders.csv
 
@@ -375,6 +378,15 @@ Special placeholders
 There are a few placeholders that have special meanings for certain kinds of primary records:
 
 .. csv-table::
-   :widths: auto
+   :widths: 25, 75, 25
    :header-rows: 1
    :file: ../_static/csv/special_placeholders.csv
+   
+Splitting apart a date range into separate data points
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Single date values that are expressed as ranges (e.g. 2000-2018) can be parsed into separate data points for start and end dates. For example, if you wish to export to MS Excel and would like distinct columns for the first and last dates in the range. You can do so with the following syntax:
+
+.. code-block:: none
+
+	^ca_objects.your_date_element_code%start_as_iso8601=1
+	^ca_objects.your_date_element_code%end_as_iso8601=1
