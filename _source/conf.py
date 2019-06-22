@@ -51,7 +51,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'CollectiveAccess'
-copyright = u'2018, Whirl-i-Gig'
+copyright = u'2019, Whirl-i-Gig'
 author = u'Whirl-i-Gig'
 
 # The version info for the project you're documenting, acts as replacement for
