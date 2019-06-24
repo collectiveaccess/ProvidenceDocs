@@ -280,6 +280,8 @@ The <if> tag provides maximum control by using expressions to determine when con
 
 The rule attribute must be set to a valid expression, which can use any valid placeholder available in the template, and must be enclosed in escaped (prepended "\") quotes to ensure that it is evaluated correctly.
 
+Both <ifcount> and <ifdef> include blank values in their evaluation. From version 1.7.9 blank values may suppressed by setting the optional "omitBlanks" to a non-zero value. This is often useful when formatting data for display.  If "omitBlanks" is set, <ifcount> will return the number of non-blank values; <ifdef> will evaluate as true only if the bundle has at least one non-blank value. Note that <if> does not support the "omitBlanks" option. You must filter blank values in the expression.
+
 Even more conditional: the <case> tag
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Sometimes you need to to choose from one of several templates based upon varying criteria. For instance, when listing entities related to an object you might want to vary the text before the list with respect to the number of entities being listed. There are ways to do this with display templates, but the cleanest way is with a <case> tag:

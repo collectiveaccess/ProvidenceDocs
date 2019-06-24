@@ -121,6 +121,13 @@ There are a number of shorthand expressions for common dates. Examples below are
  20th century (century)
 
  19-- (AACR2 format century)
+ 
+Early/mid/late dates
+^^^^^^^^^^^^^^^^^^^^
+
+As of version 1.7.7 it is possible to qualify decade and century dates and date ranges with "early", "mid" and "late" modifiers. CollectiveAccess will interpret "early" centuries expressions as being between the start of the century and the 21st year. Eg. "Early 18th Century" will be stored as 1 January 1700 - 31 December 1720. "Late" dates are considered to be between the 81st year and the end of the century. Eg "Late 18th Century" will be stored as 1 January 1780 - 31 December 1799. "Mid 18th Century" will be stored as 1 January 1740 - 31 December 1760. For decades are treated similarly: "Early 1920s" is stored as 1 January 1920 - 31 December 1923. "Mid 1920s" is stored as 1 January 1923 to 31 December 1927. "Late 1920s" is stored as 1 January 1926 to 31 December 1929.
+
+The rules for mapping early, mid and late ranges to concrete dates are current built into the parser and cannot be changed. They may be made configurable in future versions.
 
 Uncertain dates
 ^^^^^^^^^^^^^^^

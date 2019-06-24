@@ -84,7 +84,6 @@ Contents
    Syntax <searchBrowse/syntax>
    Indexing Options <searchBrowse/indexing>
    Search Engines <searchBrowse/engines>
-   Query Builder <searchBrowse/query>
 
 .. toctree::
    :maxdepth: 2
@@ -113,7 +112,7 @@ Contents
    :caption: Import
    :titlesonly:
 
-   Basic Importer Tutorial <import/tutorial>
+   Importer Tutorial <import/tutorial>
    Supported File Formats <import/formats>
    Mappings <import/mappings>
    Running an Import <import/running>
