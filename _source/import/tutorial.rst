@@ -13,9 +13,9 @@ The tutorial is only intended to be a simple overview of basic import mapping pr
 
 To begin this tutorial, download the following three files.
 
-| `Sample mapping.xlsx <http://docs.collectiveaccess.org/images/c/ca/Sample_mapping.xlsx>`_
-| `Sample data.xlsx <http://docs.collectiveaccess.org/images/6/68/Sample_data.xlsx>`_
-| `Sample import profile.xml <http://docs.collectiveaccess.org/images/f/fc/Sample_import_profile.xml>`_
+| `Sample mapping.xlsx <../_static/_files/Sample_mapping.xlsx>`_
+| `Sample data.xlsx <../_static/_files/Sample_data.xlsx>`_
+| `Sample import profile.xml <../_static/_files/Sample_import_profile.xml>`_
 |
 
 At its simplest, the import mapping is essentially a schema crosswalk: for every data source you list, you declare a target "destination" for where the data should end up in CollectiveAccess. However, there are several additional rules and parameters you can set to ensure the "data reader" can correctly parse and process the data.
@@ -188,8 +188,8 @@ These fields can be useful for future reference if a mapping is intended to be u
 
 Once you have installed the sample profile configuration, you can load the sample mapping by navigating from the global navigtion menu to Import - Data and dragging the sample mapping file into the box labelled "Drag importer worksheets here to add or update".
 
-.. image:: ../../images/7/7f/Load_importer1.png
+.. image:: ../_static/images/Load_importer1.png
 
 Once the mapping is loaded, click on the icon to the right and you'll be able to upload the sample data on the following screen. From here, you can execute the data import!
 
-.. image:: ../../images/a/a9/Run_import1.png
+.. image:: ../_static/images/Run_import1.png

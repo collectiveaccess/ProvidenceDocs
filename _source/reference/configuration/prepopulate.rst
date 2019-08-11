@@ -22,7 +22,7 @@ The main part of the configuration is a list of rules under prepopulate_rules. B
 
          # mode determines handling of existing values in target element
          # can be overwrite, or addIfEmpty
-         # See the 'target' setting below and http://docs.collectiveaccess.org/wiki/Prepopulate
+         # See the 'target' setting below 
          mode = addIfEmpty,
 
          # What's the prepopulate target?
@@ -31,7 +31,6 @@ The main part of the configuration is a list of rules under prepopulate_rules. B
          # Note that if you want to target a List attribute, you have to
          # provide a valid list item idno or id for that list as value!
          #
-         # See http://docs.collectiveaccess.org/wiki/Prepopulate
          target = ca_objects.title_notes,
 
          # skip this rule if expression returns true
@@ -85,7 +84,7 @@ Example use of "context" configuration:
 Flowchart
 ---------
 
-.. figure:: ../_static/images/Prepopulate.jpg
+.. figure:: ../../_static/images/Prepopulate.jpg
    :name: prepopulate
-   :target: ../_static/images/Prepopulate.jpg
+   :target: ../../_static/images/Prepopulate.jpg
    :alt: Prepopulate flowchart

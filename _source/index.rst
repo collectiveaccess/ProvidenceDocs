@@ -127,7 +127,7 @@ Contents
    :caption: Reference
    :titlesonly:
 
-   reference/Configuration_files
+   reference/configurationFiles
    Web Services <reference/web_services> 
    reference/FAQs
    reference/Glossaries
