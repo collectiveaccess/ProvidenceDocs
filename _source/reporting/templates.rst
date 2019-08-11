@@ -204,7 +204,7 @@ Each unit shifts the primary by one relational "jump." Nesting <units> allows sh
 <unit> tags may take any of the following attributes:
 
 .. csv-table::
-   :widths: 25, 75, 25
+   :widths: 25, 25, 25, 25
    :header-rows: 1
    :file: ../_static/csv/unit_attributes.csv
 
@@ -380,7 +380,7 @@ Special placeholders
 There are a few placeholders that have special meanings for certain kinds of primary records:
 
 .. csv-table::
-   :widths: 25, 75, 25
+   :widths: 25, 75
    :header-rows: 1
    :file: ../_static/csv/special_placeholders.csv
    

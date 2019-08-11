@@ -38,13 +38,13 @@ Contents
    :caption: How CA Organizes Information
    :titlesonly:
 
+   Overview & Terminology <org/overview>
    Primary Tables <org/records>
    Intrinsics, Identifiers and Labels <org/intIDLabel>
    Metadata Elements <org/metadata>
-   org/Relationships
+   org/Relationships <org/relationships>
    Interstitial Data <org/interstitial>
-   Date and Time Formats <org/dateTime>
-
+   
 .. toctree::
    :maxdepth: 2
    :caption: Configuring Providence
@@ -59,21 +59,11 @@ Contents
 
 .. toctree::
    :maxdepth: 2
-   :caption: Configuration files
+   :caption: Working with data
    :titlesonly:
-
-   Configuration file syntax <configuration/configuration_file_syntax>
-   App.conf <configuration/app>
-   Authentication.conf <configuration/authentication>
-   Browse.conf <configuration/browse>
-   DateTime.conf <configuration/datetime>
-   External_Applications.conf <configuration/external_applications>
-   Media_Display.conf <configuration/media_display>
-   Multipart id numbering.conf <configuration/multipart_id_numbering>
-   Search.conf <configuration/search>
-   Search indexing.conf <configuration/search_indexing>
-   Authentication.conf <configuration/authentication>
-   Prepopulate.conf <configuration/prepopulate>
+   
+   Date and Time Formats <data/dateTime>
+   Measurements <data/measurements>
 
 .. toctree::
    :maxdepth: 2
@@ -99,13 +89,10 @@ Contents
    :caption: Workflow
    :titlesonly:
 
-
    Tracking Current Object Location <workflow/location>
    Direct object-location tracking <workflow/direct>
    Workflow-based location tracking <workflow/workflow>   
    Movement-based location tracking <workflow/movement>
-
-
 
 .. toctree::
    :maxdepth: 2
@@ -137,27 +124,10 @@ Contents
 
 .. toctree::
    :maxdepth: 2
-   :caption: Customizing Pawtucket
-   :titlesonly:
-
-   Introduction to Themes <pawtucket/intro>
-   General Configuration <pawtucket/general>
-   Media Display & Access <pawtucket/media>
-   Public Access Configurations <pawtucket/access>
-   Login & Registration <pawtucket/reg>
-   Homepage & Static Pages <pawtucket/static>
-   Site Pages & Templates <pawtucket/templates>
-   Search & Browse Pages and Settings <pawtucket/searchBrowse>
-   Detail Pages <pawtucket/detail>
-   Lightboxes & Galleries <pawtucket/lightbox>
-   Classrooms <pawtucket/classrooms>
-   Contact & Mail Templates <pawtucket/contact>
-
-.. toctree::
-   :maxdepth: 2
    :caption: Reference
    :titlesonly:
 
+   reference/Configuration_files
    Web Services <reference/web_services> 
    reference/FAQs
    reference/Glossaries
@@ -173,3 +143,22 @@ Contents
    Searching and browsing <usermanual/find> 
    Manage and Site Administration <usermanual/manage> 
    User Interface Administration <usermanual/user_interface_administration> 
+   
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Customizing Pawtucket
+   :titlesonly:
+
+   Introduction to Themes <pawtucket/intro>
+   General Configuration <pawtucket/general>
+   Media Display & Access <pawtucket/media>
+   Public Access Configurations <pawtucket/access>
+   Login & Registration <pawtucket/reg>
+   Homepage & Static Pages <pawtucket/static>
+   Site Pages & Templates <pawtucket/templates>
+   Search & Browse Pages and Settings <pawtucket/searchBrowse>
+   Detail Pages <pawtucket/detail>
+   Lightboxes & Galleries <pawtucket/lightbox>
+   Classrooms <pawtucket/classrooms>
+   Contact & Mail Templates <pawtucket/contact>
