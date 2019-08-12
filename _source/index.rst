@@ -42,7 +42,7 @@ Contents
    Primary Tables <org/records>
    Intrinsics, Identifiers and Labels <org/intIDLabel>
    Metadata Elements <org/metadata>
-   org/Relationships <org/relationships>
+   Relationships <org/relationships>
    Interstitial Data <org/interstitial>
    
 .. toctree::
@@ -121,13 +121,14 @@ Contents
 
    User Access Control <administration/control>
    Maintenance Functions <administration/maint>
+   Command line utilities <administration/caUtils>
 
 .. toctree::
    :maxdepth: 2
    :caption: Reference
    :titlesonly:
 
-   reference/configurationFiles
+   Configuration files <reference/configurationFiles>
    Web Services <reference/web_services> 
    reference/FAQs
    reference/Glossaries

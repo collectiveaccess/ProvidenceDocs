@@ -1,3 +1,5 @@
+.. _configuration_file_syntax:
+
 Configuration File Syntax
 =========================
 
