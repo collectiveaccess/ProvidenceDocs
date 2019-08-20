@@ -1,0 +1,10 @@
+﻿Name,Code,Description,Mandatory?,Default
+List code,list_code,The list identifier. Must be a unique alpha-numeric code without spaces or punctuation beyond underscores.,Yes,
+Is system list?,is_system_list,Flag indicating whether list is required to support application functionality (value set to 1) or is purely for cataloguing purposes (value is 0).,Yes,0
+Is hierarchical?,is_hierarchical,Flag indicating whether list is hierarchical (value set to 1) or flat (value is 0).,Yes,0
+Use as vocabulary?,use_as_vocabulary,Flag indicating whether list should be used in vocabulary (keyword) lookups (value set to 1) or not (value is 0).,Yes,0
+Default sort,default_sort,"Specifies the default method to employ to order items in this list. Takes a numeric value indicating the sort order:
+0 = Sort by list item label
+1 = Sort by list item rank
+2 = Sort by list item value
+3 = Sort by list item identifier",Yes,0

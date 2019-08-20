@@ -1,16 +1,18 @@
+.. _primary_tables:
+
 Primary Tables
 ==============
 
-CollectiveAccess is structured around several primary tables with editors that can be enabled (or disabled) depending on project requirements. Distinct User Interfaces can be configured for each table, and within that, a single table can have multiple user interfaces restricted by Type (see Types).
+CollectiveAccess is structured around several primary tables, with editors that can be enabled (or disabled) depending on project requirements. Distinct user interfaces can be configured for each table, and within that, a single table can have multiple user interfaces restricted by Type (see Types).
 
-If you're not using certain editors in your system (you don't catalogue places for example), you can disable the menu items for them in the configuration file app.conf, by setting the various \*_disable directives below to a non-zero value
+Editor that are not relevant for your system (you don't catalogue places for example) can be disabled in the configuration file app.conf, by setting the various \*_disable directives below to a non-zero value
 
 Here's how it looks in app.conf:
 
 .. code-block:: none
 
-	#Editor "disable" switches
-	#-------------------
+	# Editor "disable" switches
+	# -------------------
 	ca_objects_disable = 0
 	ca_entities_disable = 0
 	ca_places_disable = 0
@@ -26,47 +28,49 @@ Here's how it looks in app.conf:
 
 Objects (ca_objects)
 ^^^^^^^^^^^^^^^^^^^^
-Object records represent the items or assets in a collection, typically the physical or born-digital items you are managing. Objects can refer to anything - historical artifacts, photographs, film, video, documents, and artwork. Every object record is by definition, of a "Type." The types themselves can be customized to match your own cataloging requirements.
-
-Entities (ca_entities)
-^^^^^^^^^^^^^^^^^^^^^^
-Entity records represent the authority file for specific people and organizations. When Entity records are created, relationships can be created between them and specific Object records (or any other Table) with fully customizable relationship types. For example, an Entity authority record for an individual could be related to an Object record as the creator of the Object, the photographer, donor, publisher, performer, or anything else.
-
-Places (ca_places)
-^^^^^^^^^^^^^^^^^^
-Physical locations, geographic or otherwise. Places are inherently hierarchical allowing you to nest more specific Place records within broader ones. As with Entities, once a Place is created it can be related to any other kind of record.
-
-Occurrences (ca_occurrences)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Events or “things.” An Occurrence is a catch-all term used by CollectiveAccess to refer to contextual items that may require complex cataloguing but are not Entities, Places, Collections or Storage Locations. You can use Occurrences to support structured authorities for virtually any kind of item. Typically, Occurrences are used to support entries for historical events, exhibitions, works, productions, and bibliographies.
-
-Collections (ca_collections)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Collections contain a defined group of objects. Collections can represent physical collections, symbolic collections of items associated by some criteria, or any other arbitrary grouping. This table can also be used to manage formal archival processing and the creation of finding aids, by configuring the Collection User Interface to be compliant with the Describing Archives (DACS) content standard.
+Object records represent items or assets in a collection, typically the physical or born-digital items being managed. Every object record has a "type" that determines which fields are relevant for it. The list of types available in your system can be customized to match your specific cataloging requirements.
 
 Lots (ca_object_lots)
 ^^^^^^^^^^^^^^^^^^^^^
-Lots represent the accession or acquisition of one or more assets. The details and terms of a gift, purchase, or bequest are recorded here. This table is most commonly used by collecting institutions who may accession more than one unique item per Accession. At the Lot level, all of the registrarial information, such as the Deed of Gift, may be recorded, while individual cataloging of the accessioned items can remain at the Object level. And, as always, the Lot record can be related to each Object.
+Lots record the accession or acquisition of one or more objects. Lots are commonly used by collecting institutions who may accession more than one unique item per accession. Registrarial information, such as the Deed of Gift, may be recorded in a lot record while  cataloging for each accessioned object remains at the object level. 
+
+Entities (ca_entities)
+^^^^^^^^^^^^^^^^^^^^^^
+Entity records represent specific people and organizations. Relationships can be created between entity and object records (or any other records in any other table) with fully customizable relationship types. For example, an entity record for an individual could be related to an object record as the creator of the object, or the photographer, donor, publisher, performer, etc.
+
+Places (ca_places)
+^^^^^^^^^^^^^^^^^^
+Place records represent physical locations, geographic or otherwise. Places are inherently hierarchical allowing you to nest more specific place records within broader ones. As with entities, places can be related records in other tables. Places are typically used to model location authorities specific to your system. For cataloguing of common geographical place names consider using CollectiveAccess' built-in support for GoogleMaps, OpenStreetMap, GeoNames and/or the Getty Thesaurus of Geographic Names (TGN).
+
+Occurrences (ca_occurrences)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Occurrences are used to represent temporal concepts such as events, exhibition, productions or citations. 
+
+Collections (ca_collections)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Collections represent significant groupings of objects. They may refer to physical collections, symbolic collections of items associated by some criteria, or any other grouping. Collection records are often used to manage formal archival processing and the creation of finding aids, by configuring records to be compliant with the Describing Archives (DACS) content standard.
 
 Storage Locations (ca_storage_locations)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Physical locations where Objects are stored. Like Places, Storage Locations are hierarchical – you can nest Locations to allow notation at any level of specificity (building, room, cabinet, drawer). Each Storage Location can take arbitrarily complex cataloguing, including access restrictions, map coordinates and other information. Storage Locations can be linked to both Objects and Lots, either directly, or through Movements.
+Storage location records represent physical locations where objects may be located, displayed or stored. Like place records, storage locations are hierarchical and may be nested to allow notation location at various levels of specificity (building, room, cabinet, drawer, etc.). As with the other primary tables, each storage location may have arbitrarily rich cataloguing, including access restrictions, geographical coordinates, keywords and other information. 
 
 Loans (ca_loans)
 ^^^^^^^^^^^^^^^^
-Loans are used to track objects that are on loan to or from other institutions. The Loan table, like all other tables, is fully customizable, and can be used to track every aspect of either an incoming or outgoing loan's dates, shipping, and insurance information. Objects included in the Loan are related to the Loan record in the same manner as Collections, Entities, Lots, etc.
+Loan records record details of both incoming and outgoing loans of objects. Loan records, like those in all other tables, is fully customizable and can be used to track alls aspects of a loan, including dates, shipping, and insurance information. 
 
 Movements (ca_movements)
 ^^^^^^^^^^^^^^^^^^^^^^^^
-For more complex workflow needs, this table can be used to Movements of Objects (e.g., temporary locations, storage rehousing, transport for exhibition, etc). Used in conjunction with Location Tracking and Object Use History, Movements can enable a robust record of every movement event in an object's lifecycle.
-
-Tours (ca_tours)
-^^^^^^^^^^^^^^^^
-
-Tour Stops (ca_tour_stops)
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+For more complex location tracking needs, movement records can be used to record in precise detail movement of objects between storage locations, while on loan or while on exhibition. Used as part of a location tracking or use history policy, movements can provide a robust record of every movement event in an object's history.
 
 Representations (ca_object_representations)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Representations capture representative digital media (images, video, audio, PDFs) for objects. Representation records usually contain only just a media file, but can accommodate  additional cataloguing that is specific to the media file (not to the object the file depicts or represents) if desired. When used. representation metadata often includes captions, credits, access information, rights and reproduction restrictions.
 
-This table captures the Media (images, video, audio, PDFs) that represents an Object. While Representations most often consist of just the media file itself, they can take additional cataloguing that is specific to the media file (and not necessarily to the Object the file depicts or represents). This allows the addition of captions, credits, access information, rights and reproduction restrictions or any other type of information on a Representation-specific basis, if needed.
+Tours (ca_tours)
+^^^^^^^^^^^^^^^^
+Tour records capture information about on-site or online tours of objects, locations, collections or any other record in the database. 
+
+
+Tour Stops (ca_tour_stops)
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+Each tour record has any number of ordered "stops". Each tour stop contains metadata about the stop (descriptive text, geographic coordinates, etc.) as well as relationships to relevant objects, entities and more.
