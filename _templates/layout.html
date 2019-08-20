@@ -1,5 +1,6 @@
-{# layout.html #}
-{# Import the theme's layout. #}
 {% extends "!layout.html" %}
 
-{% set css_files = css_files + ['_static/table_override.css'] %}
+{%- block extrahead %} 
+<link rel="stylesheet" type="text/css" href="{{ pathto('_static/handsontable.full.min.css', 1) }}">
+<script src="{{ pathto('_static/handsontable.full.min.js', 1) }}"></script>
+{% endblock %}

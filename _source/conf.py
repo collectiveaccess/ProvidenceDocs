@@ -30,7 +30,7 @@
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'sphinx.ext.todo',
+    'sphinx.ext.todo', 'sphinxcontrib.excel_table'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -171,7 +171,7 @@ html_static_path = ['_static']
 # bottom, using the given strftime format.
 # The empty string is equivalent to '%b %d, %Y'.
 #
-# html_last_updated_fmt = None
+html_last_updated_fmt = "%b %d %Y"
 
 # If true, SmartyPants will be used to convert quotes and dashes to
 # typographically correct entities.

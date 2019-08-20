@@ -40,10 +40,7 @@ Contents
 
    Overview & Terminology <org/overview>
    Primary Tables <org/records>
-   Intrinsics, Identifiers and Labels <org/intIDLabel>
-   Metadata Elements <org/metadata>
-   Relationships <org/relationships>
-   Interstitial Data <org/interstitial>
+   Data bundles <org/bundles>
    
 .. toctree::
    :maxdepth: 2

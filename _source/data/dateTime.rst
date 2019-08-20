@@ -1,3 +1,5 @@
+.. _date_time:
+
 Date and Time Formats
 =====================
 
