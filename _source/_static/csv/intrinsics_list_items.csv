@@ -1,6 +1,6 @@
 ﻿Name,Code,Description,Mandatory?,Default
 Identifier,idno,The list item identifier. Must follow policy defined in configured numbering policy if app.conf setting require_valid_id_number_for_ca_list_items is set. Must be unique if  app.conf setting allow_duplicate_id_number_for_ca_list_items is not set. ,Depends upon numbering policy,
-Type,type_id,A value friom the list_item_types list indicating the type of the record. Stored as an internally generated numeric item_id. When setting this value in a data import or via an API call the item identifier may be used.,Yes,null
+Type,type_id,A value from the list_item_types list indicating the type of the record. Stored as an internally generated numeric item_id. When setting this value in a data import or via an API call the item identifier may be used.,Yes,null
 Parent,parent_id,Reference to parent record. Will be null if no parent is defined. When setting this value in a data import or via an API call the  identifier of the parent place may be used.,No,null
 List,list_id,"A reference to the list record (ca_lists) of which the list item is a part. Note that a list item is always part of a list. It cannot exist outside of a list. The raw database value contained list_id is an internally generated numeric list_id. However, when setting this intrinsic via an import mapping or API call you may also use the list's code.",No,
 Value,item_value,Value represented by list item. This is distinct from the identifier and used to convey a text or numeric quantity when required.,Yes,
