@@ -102,6 +102,30 @@ Examples of date ranges:
  6/5 .. 6/15/2007  (Note implicit year in first date)
 
  6/5 at 9am - 5pm (Note implicit date in current year with range of times)
+ 
+Unbounded dates
+^^^^^^^^^^^^^^^
+
+Date ranges where one end is unspecified can be expressed in various. ways. Ranges with a specified start date but no end date are considered to be ongoing and can be expressed in any of the following (using the example start date June 6 1944):
+
+  6/6/1944 to present
+
+  6/6/1944 - present
+
+  6/6/1944 .. present
+
+  after 6/6/1944
+
+  6/6/1944 -
+
+  6/6/1944 - ?
+  
+Date ranges where the end date is specified and the start date unspecified are considered to include ''any'' date prior to the end date. They may be specified using the formats:
+
+   before 6/6/1944
+
+   ? - 6/6/1944
+ 
 
 Special expressions
 ^^^^^^^^^^^^^^^^^^^
