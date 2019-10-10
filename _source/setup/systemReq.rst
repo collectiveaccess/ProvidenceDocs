@@ -17,7 +17,7 @@ The first step, before attempting an installation, is to verify that your server
 .. csv-table::
    :widths: 20, 80
    :header-rows: 1
-   :file: ../_static/csv/server_requirements.csv
+   :file: server_requirements.csv
 
 Core software requirements
 --------------------------
@@ -27,7 +27,7 @@ Providence requires three core open-source software packages be installed prior 
 .. csv-table::
    :widths: 20, 80
    :header-rows: 1
-   :file: ../_static/csv/software_packages.csv
+   :file: software_packages.csv
 
 .. _PHP: http://php.net/
 .. _Apache HTTPD version 2.0 or 2.2: http://httpd.apache.org/
@@ -113,7 +113,7 @@ Depending upon the types of media you intend to handle with CA you will also nee
 .. csv-table::
    :widths: 20, 20, 60
    :header-rows: 1
-   :file: ../_static/csv/software_requirements.csv
+   :file: software_requirements.csv
 
 Most users will want at a minimum GraphicsMagick and ffmpeg installed on their server, and should install other packages as needed. For image processing you need only one of the following: GraphicsMagick, ImageMagick, libGD.
 

@@ -1,3 +1,3 @@
 Facet key,Description,Mandatory?
-element_code,"The element code of the metadata element to be browsed. Only attributes of type List and Text are officially supported, but Numeric and Currency types tend to work well too. Other types may or may not work as you would like (but usually will).",Yes
+element_code,"The element code of the metadata element to be browsed. Only attributes of type List and Text are officially supported, but Numeric and Currency types tend to work well too. Other types may or may not work as you would like (but usually will). For container elements, use the sub-element's element code.",Yes
 suppress,A list of values to omit from the facet. If the metadata element is a list these should be list item_id's or idno's. For other element types use the label value.,No

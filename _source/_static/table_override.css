@@ -12,6 +12,8 @@
 .caption-text {
     color: #444;
 }
+.wy-menu .caption-text {
+color: #fff;}
 
 code.docutils.literal {
     color: black;
@@ -30,4 +32,7 @@ table.docutils td, .rst-content table.field-list td, .wy-table th, .rst-content 
 
 .wy-table td p, .rst-content table.docutils td p, .rst-content table.field-list td p {
     line-height: normal;
+    font-size: 10pt;
 }
+
+

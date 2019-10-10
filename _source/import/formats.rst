@@ -32,7 +32,7 @@ Common examples of xPath expressions are provided in the table below.
 .. csv-table::
    :widths: auto
    :header-rows: 1
-   :file: ../_static/csv/xpathexpamples.csv
+   :file: ../_static/csv/xpathexamples.csv
 
 MARCXML files can also be imported using the xPath syntax. Standard fields and indicators can be selected as Sources as follows:
 

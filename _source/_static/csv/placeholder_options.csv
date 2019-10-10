@@ -2,6 +2,7 @@ Placeholder,Description
 toUpper,Forces text to all upper case when set to a non-zero value.
 toLower,Forces text to all lower case when set to a non-zero value.
 makeFirstUpper,Make first character of text upper case when set to a non-zero value.
+useSingular,Converts label to singular when set to a non-zero value.
 trim,Trim white space from beginning and end of value.
 start,"Trim the beginning of the text such that it begins at the specified character; ex. ""This is a test"" with start=2 will be transformed to ""is is a test"""
 length,"Truncate the text to the specified number of characters. Can be used with the start option to extract sections of text, or alone to ensure text does not go beyond a maximum length."

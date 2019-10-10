@@ -20,8 +20,6 @@ Contents
    :caption: Introduction to CollectiveAccess
 
    What is CollectiveAccess? <intro/whatIs>
-   Who uses it? <intro/whoUses>
-   Why should I? <intro/why>
 
 .. toctree::
    :maxdepth: 2
@@ -31,36 +29,31 @@ Contents
    System Requirements <setup/systemReq>
    Backups <setup/backups>
    setup/Installation
-   setup/Profiles
+   Setup.php <setup/setup.php>
 
 .. toctree::
    :maxdepth: 2
-   :caption: How CA Organizes Information
+   :caption: Data Modelling in CA
    :titlesonly:
 
-   Overview & Terminology <org/overview>
-   Primary Tables <org/records>
-   Data bundles <org/bundles>
+   Introduction to Data in CA <dataModelling/introductionData>
+   Installation Profiles <dataModelling/Profiles>
+   Primary Tables <dataModelling/primaryTables>
+   Metadata Elements <dataModelling/metadata>
+   Relationships <dataModelling/relationships>
+   Interstitial Data <dataModelling/interstitial>
+   Lists and Authorities <dataModelling/listsAuthorities>
+   User Interfaces <dataModelling/interfaces>
+   Locales <dataModelling/Locales>
    
 .. toctree::
-   :maxdepth: 2
-   :caption: Configuring Providence
+   :maxdepth: 1
+   :caption: Providence Configuration
    :titlesonly:
 
-   providence/Locales
-   Lists and Authorities <providence/listsAuthorities>
-   Metadata Elements <providence/metadata>
-   User Interfaces <providence/interfaces>
-   System Settings <providence/system>
-   Identifiers <providence/identifiers>
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Working with data
-   :titlesonly:
-   
-   Date and Time Formats <data/dateTime>
-   Measurements <data/measurements>
+   Configuring Providence <providenceConfiguration/configuringProvidence>
+   Configuration File Syntax <providenceConfiguration/configuration_file_syntax>
+ 
 
 .. toctree::
    :maxdepth: 2
