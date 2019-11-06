@@ -27,7 +27,7 @@ Within each provider configuration you have a number of available settings. They
 .. csv-table::
    :header-rows: 1
    :widths: 25, 75, 25
-   :file: ../_static/csv/oaipmh_provider_settings.csv
+   :file: oaipmh_provider_settings.csv
 
 Format Definition
 -----------------
@@ -38,7 +38,7 @@ The key of the format definition is the so called `metadataPrefix <http://www.op
 .. csv-table::
    :header-rows: 1
    :widths: 25, 75, 25
-   :file: ../_static/csv/oaipmh_format_definition.csv
+   :file: oaipmh_format_definition.csv
 
 An example configuration with only one format (metadataPrefix: oai_dc) served by the provider could look like this:
 

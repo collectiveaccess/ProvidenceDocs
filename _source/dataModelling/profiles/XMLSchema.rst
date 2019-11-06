@@ -287,7 +287,7 @@ Each type restriction can take settings. Currently defined settings values are:
 .. csv-table::
    :widths: auto
    :header-rows: 1
-   :file: ../../_static/csv/xml_syntax_(restrictions).csv
+   :file: xml_syntax_(restrictions).csv
 
 User Interface Definitions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^

@@ -9,4 +9,4 @@ The media overlay is accessed by clicking through the representation from the In
 .. csv-table::
    :widths: 12, 32, 12
    :header-rows: 1
-   :url: https://docs.google.com/spreadsheets/d/e/2PACX-1vRiSPJjZG13xC03tDcATazTMdDKmaypBgbDVnSq-JQ7k_din7RiQtxGLp3s_0hTvhRpyAQ9knwnsZMD/pub?output=csv
+   :file: media_display.csv 

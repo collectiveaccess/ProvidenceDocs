@@ -6,4 +6,4 @@ Standards-compliant profiles available "out-of-the-box". You can always configur
 .. csv-table::
    :widths: auto
    :header-rows: 1
-   :file: ../../_static/csv/metadata_standards.csv
+   :file: metadata_standards.csv

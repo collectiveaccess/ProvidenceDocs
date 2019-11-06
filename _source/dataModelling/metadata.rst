@@ -5,6 +5,7 @@ Metadata Elements
    :maxdepth: 1
 
    metadata/AttributeTypeSettings
+   metadata/informationServices
    metadata/measurements
    metadata/dateTime
 
@@ -14,4 +15,4 @@ Attribute types represent all of the different varieties of fields supported by 
 .. csv-table::
    :widths: auto
    :header: "Type code", "Description", "Settings"
-   :file: ../_static/csv/AttributeTypes.csv
+   :file: AttributeTypes.csv

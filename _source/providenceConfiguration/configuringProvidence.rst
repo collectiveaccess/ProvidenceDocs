@@ -65,7 +65,7 @@ Providence has many configuration options beyond the initial setup through insta
    Assets.conf <developer/assets.conf>
    Attribute_Types.conf <developer/attribute_types.conf>
    Datamodel.conf <developer/datamodel.conf>
-   File_Volumnes.conf <developer/file_volumes.conf>
+   File_Volumes.conf <developer/file_volumes.conf>
    Find_Navigation.conf <developer/find_navigation.conf>
    Media_Volumes.conf <developer/media_volumes.conf>
    Monitor.conf <developer/monitor.conf>

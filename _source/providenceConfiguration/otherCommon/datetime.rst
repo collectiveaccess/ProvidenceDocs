@@ -24,7 +24,7 @@ Output options for date/times
 .. csv-table::
    :widths: 12, 32, 12
    :header-rows: 1
-   :file: ../../_static/csv/datetime_output.csv
+   :file: datetime_output.csv
 
 
 

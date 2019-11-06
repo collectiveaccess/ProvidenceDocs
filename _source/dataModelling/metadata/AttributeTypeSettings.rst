@@ -11,7 +11,7 @@ Unlike all other attribute types, containers do not represent data values. Rathe
 .. csv-table::
    :widths: auto
    :header-rows: 1
-   :file: ../../_static/csv/container_settings.csv
+   :file: container_settings.csv
 
 Attribute settings: Text
 ------------------------
@@ -19,7 +19,7 @@ Attribute settings: Text
 .. csv-table::
    :widths: auto
    :header-rows: 1
-   :file: ../../_static/csv/text_settings.csv
+   :file: text_settings.csv
 
 Attribute settings: DateRange
 -----------------------------
@@ -27,7 +27,7 @@ Attribute settings: DateRange
 .. csv-table::
    :widths: auto
    :header-rows: 1
-   :file: ../../_static/csv/daterange_settings.csv
+   :file: daterange_settings.csv
 
 Attribute settings: Lists
 -------------------------
@@ -35,7 +35,7 @@ Attribute settings: Lists
 .. csv-table::
    :widths: auto
    :header-rows: 1
-   :file: ../../_static/csv/list_settings.csv
+   :file: list_settings.csv
 
 Attribute settings: Geocode
 ---------------------------
@@ -59,7 +59,7 @@ You can add layers that include rectified maps by creating serve-able tiles usin
 .. csv-table::
    :widths: auto
    :header-rows: 1
-   :file: ../../_static/csv/geocode_settings.csv
+   :file: geocode_settings.csv
 
 Attribute settings: Url
 -----------------------
@@ -69,7 +69,7 @@ Accepts a properly formatted URL value.
 .. csv-table::
    :widths: auto
    :header-rows: 1
-   :file: ../../_static/csv/url_settings.csv
+   :file: url_settings.csv
 
 Attribute settings: Currency
 ----------------------------
@@ -79,7 +79,7 @@ Accepts a currency value composed of a currency specifier and a decimal number.
 .. csv-table::
    :widths: auto
    :header-rows: 1
-   :file: ../../_static/csv/currency_settings.csv
+   :file: currency_settings.csv
 
 Attribute settings: Length
 ---------------------------
@@ -89,7 +89,7 @@ Accepts length measurements in metric, English and typographical points units.
 .. csv-table::
    :widths: auto
    :header-rows: 1
-   :file: ../../_static/csv/length_settings.csv
+   :file: length_settings.csv
 
 Attribute settings: Weight
 ---------------------------
@@ -99,7 +99,7 @@ Accepts weight measurements in metric and English units.
 .. csv-table::
    :widths: auto
    :header-rows: 1
-   :file: ../../_static/csv/weight_settings.csv
+   :file: weight_settings.csv
 
 Attribute settings: TimeCode
 ----------------------------
@@ -109,7 +109,7 @@ Accepts time offsets in a number of time code formats.
 .. csv-table::
    :widths: auto
    :header-rows: 1
-   :file: ../../_static/csv/timecode_settings.csv
+   :file: timecode_settings.csv
 
 Attribute settings: Integer
 ---------------------------
@@ -119,7 +119,7 @@ Accepts a properly formatted integer value.
 .. csv-table::
    :widths: auto
    :header-rows: 1
-   :file: ../../_static/csv/integer_settings.csv
+   :file: integer_settings.csv
 
 Attribute settings: Numeric
 ---------------------------
@@ -129,7 +129,7 @@ Accepts numeric values and strings consisting of optional sign, any number of di
 .. csv-table::
    :widths: auto
    :header-rows: 1
-   :file: ../../_static/csv/numeric_settings.csv
+   :file: numeric_settings.csv
 
 Attribute settings: Numeric
 ---------------------------
@@ -139,7 +139,7 @@ Accepts numeric values and strings consisting of optional sign, any number of di
 .. csv-table::
    :widths: auto
    :header-rows: 1
-   :file: ../../_static/csv/numeric_settings.csv
+   :file: numeric_settings.csv
 
 Attribute settings: LCSH
 ------------------------
@@ -149,7 +149,7 @@ Library of Congress Subject Heading values.
 .. csv-table::
    :widths: auto
    :header-rows: 1
-   :file: ../../_static/csv/lcsh_settings.csv
+   :file: lcsh_settings.csv
 
 Attribute settings: GeoNames
 ----------------------------
@@ -159,7 +159,7 @@ Represents one or more latitude/longitude coordinates
 .. csv-table::
    :widths: auto
    :header-rows: 1
-   :file: ../../_static/csv/geonames_settings.csv
+   :file: geonames_settings.csv
 
 Attribute settings: Files
 -------------------------
@@ -169,7 +169,7 @@ Uploaded file
 .. csv-table::
    :widths: auto
    :header-rows: 1
-   :file: ../../_static/csv/file_settings.csv
+   :file: file_settings.csv
 
 Attribute settings: Media
 -------------------------
@@ -179,7 +179,7 @@ Uploaded media (image, sound video).
 .. csv-table::
    :widths: auto
    :header-rows: 1
-   :file: ../../_static/csv/media_settings.csv
+   :file: media_settings.csv
 
 Attribute settings: Taxonomy
 ----------------------------
@@ -187,7 +187,7 @@ Attribute settings: Taxonomy
 .. csv-table::
    :widths: auto
    :header-rows: 1
-   :file: ../../_static/csv/taxonomy_settings.csv
+   :file: taxonomy_settings.csv
 
 Attribute settings: Entities
 ----------------------------
@@ -195,4 +195,4 @@ Attribute settings: Entities
 .. csv-table::
    :widths: auto
    :header-rows: 1
-   :file: ../../_static/csv/entities_settings.csv
+   :file: entities_settings.csv

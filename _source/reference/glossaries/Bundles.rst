@@ -15,7 +15,7 @@ Below is a break down of the bundle classes and the properties that are particul
 .. csv-table::
    :widths: auto
    :header-rows: 1
-   :file: ../../_static/csv/bundle_types.csv
+   :file: bundle_types.csv
 
 User interface Settings
 -----------------------
@@ -25,14 +25,14 @@ There are several settings that can be used to configure all bundles, regardless
 .. csv-table::
    :widths: auto
    :header-rows: 1
-   :file: ../../_static/csv/user_interface_bundles.csv
+   :file: user_interface_bundles.csv
 
 However, there are type-specific settings as well, outlined below.
 
 .. csv-table::
    :widths: auto
    :header-rows: 1
-   :file: ../../_static/csv/user_interface_-_specific.csv
+   :file: user_interface_-_specific.csv
 
 Here's an example of how some of the settings above would look at the code-level in an xml profile:
 
@@ -57,21 +57,21 @@ Global display settings:
 .. csv-table::
    :widths: auto
    :header-rows: 1
-   :file: ../../_static/csv/global.csv
+   :file: global.csv
 
 Bundle display settings for all types:
 
 .. csv-table::
    :widths: auto
    :header-rows: 1
-   :file: ../../_static/csv/all_types.csv
+   :file: all_types.csv
 
 Type-specific bundle display settings:
 
 .. csv-table::
    :widths: auto
    :header-rows: 1
-   :file: ../../_static/csv/type-specific.csv
+   :file: type-specific.csv
 
 Search Form Settings
 --------------------
@@ -80,4 +80,4 @@ Regardless of type, bundles can take the follow setting when they are used in se
 .. csv-table::
    :widths: auto
    :header-rows: 1
-   :file: ../../_static/csv/search_form_settings.csv
+   :file: search_form_settings.csv

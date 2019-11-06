@@ -1,2 +1,0 @@
-Lightboxes & Galleries
-======================

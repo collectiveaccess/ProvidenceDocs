@@ -14,7 +14,7 @@ Any intrinsic field (ie. a field that is always part of an item such as extent a
 .. csv-table::
    :widths: auto
    :header-rows: 1
-   :file: ../../_static/csv/browse1.csv
+   :file: browse1.csv
 
 For each item type you want to be browse-able, you must define a top-level key with the item's table name (eg. ca_objects for objects) and a associative array value. The array must contain a facets key whose value is in turn an associative array defining each available browse facet for the item type. The keys of the facets array are arbitrary code name for the facets – it doesn't matter what they are so long as they are unique within the facet list. The values are yet another associative array which actually defines the characteristics of the facet.
 
@@ -23,77 +23,77 @@ Each facet has a type and some (but not all) of the facet definition keys are de
 .. csv-table::
    :widths: auto
    :header-rows: 1
-   :file: ../../_static/csv/configuration_browse_conf_supported_facets_table.csv
+   :file: configuration_browse_conf_supported_facets_table.csv
 
 For all types of facets the following configuration keys are defined:
 
 .. csv-table::
    :widths: auto
    :header-rows: 1
-   :file: ../../_static/csv/browse3.csv
+   :file: browse3.csv
 
 For facets of type **authority** these additional keys are defined:
 
 .. csv-table::
    :widths: auto
    :header-rows: 1
-   :file: ../../_static/csv/browse4.csv
+   :file: browse4.csv
 
 For facets of type **field** these additional keys are defined:
 
 .. csv-table::
    :widths: auto
    :header-rows: 1
-   :file: ../../_static/csv/browse5.csv
+   :file: browse5.csv
 
 For facets of type **fieldList** these additional keys are defined:
 
 .. csv-table::
    :widths: auto
    :header-rows: 1
-   :file: ../../_static/csv/browse6.csv
+   :file: browse6.csv
 
 For facets of type **normalizedDates** these additional keys are defined:
 
 .. csv-table::
    :widths: auto
    :header-rows: 1
-   :file: ../../_static/csv/configuration_browse_conf_normalizedDates_table.csv
+   :file: configuration_browse_conf_normalizedDates_table.csv
 
 For facets of type **attribute** these additional keys are defined:
 
 .. csv-table::
    :widths: auto
    :header-rows: 1
-   :file: ../../_static/csv/browse8.csv
+   :file: browse8.csv
 
 For facets of type **label** these additional keys are defined:
 
 .. csv-table::
    :widths: auto
    :header-rows: 1
-   :file: ../../_static/csv/browse9.csv
+   :file: browse9.csv
 
 For facets of type **has** these additional keys are defined:
 
 .. csv-table::
    :widths: auto
    :header-rows: 1
-   :file: ../../_static/csv/browse10.csv
+   :file: browse10.csv
 
 For facets of type **dupeidno** these additional keys are defined:
 
 .. csv-table::
    :widths: auto
    :header-rows: 1
-   :file: ../../_static/csv/configuration_browse_conf_dupeidno_table.csv
+   :file: configuration_browse_conf_dupeidno_table.csv
 
 For facets of type **location** these additional keys are defined:
 
 .. csv-table::
    :widths: auto
    :header-rows: 1
-   :file: ../../_static/csv/configuration_browse_conf_locations_table.csv
+   :file: configuration_browse_conf_locations_table.csv
 
 
 For facets of type **violations** these additional keys are defined:
@@ -101,14 +101,14 @@ For facets of type **violations** these additional keys are defined:
 .. csv-table::
    :widths: auto
    :header-rows: 1
-   :file: ../../_static/csv/configuration_browse_conf_violations_table.csv
+   :file: configuration_browse_conf_violations_table.csv
 
 For facets of type **checkouts** these additional keys are defined:
 
 .. csv-table::
    :widths: auto
    :header-rows: 1
-   :file: ../../_static/csv/configuration_browse_conf_checkouts_table.csv
+   :file: configuration_browse_conf_checkouts_table.csv
 
 Browse results when no criteria are defined
 -------------------------------------------

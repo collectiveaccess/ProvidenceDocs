@@ -30,7 +30,7 @@ Valid input formats
 .. csv-table::
    :widths: auto
    :header-rows: 0
-   :file: ../_static/csv/valid_input_formats.csv
+   :file: valid_input_formats.csv
 
 For numeric dates (eg. 6/7/2007) multiple delimiters are supported. For example, in the US localization the following dates are all valid and equivalent:
 
@@ -55,7 +55,7 @@ You can specify a time for any date by following the date with a time expression
 .. csv-table::
    :widths: auto
    :header-rows: 0
-   :file: ../_static/csv/dates_with_times.csv
+   :file: dates_with_times.csv
 
 If you omit the time then a time is assumed depending upon whether the date is the beginning, end or both of a date range. For dates at the beginning of a range, the default time is 00:00:00 (midnight). For dates at the end of a range the default time is 11:59:59pm. This means that if you input a date without a time the entire day is encompassed.
 

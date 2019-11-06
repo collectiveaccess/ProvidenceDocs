@@ -15,7 +15,7 @@ Libraries, Museum, and Archives
 .. csv-table::
    :widths: auto
    :header-rows: 1
-   :file: ../../_static/csv/lams.csv
+   :file: lams.csv
 
 Consortiums
 -----------
@@ -23,7 +23,7 @@ Consortiums
 .. csv-table::
    :widths: auto
    :header-rows: 1
-   :file: ../../_static/csv/consortiums.csv
+   :file: consortiums.csv
 
 Institutional archives
 ----------------------
@@ -31,7 +31,7 @@ Institutional archives
 .. csv-table::
    :widths: auto
    :header-rows: 1
-   :file: ../../_static/csv/institutional_archives.csv
+   :file: institutional_archives.csv
 
 Performing Arts
 ---------------
@@ -39,7 +39,7 @@ Performing Arts
 .. csv-table::
    :widths: auto
    :header-rows: 1
-   :file: ../../_static/csv/performing_arts.csv
+   :file: performing_arts.csv
 
 Art galleries
 -------------
@@ -47,7 +47,7 @@ Art galleries
 .. csv-table::
    :widths: auto
    :header-rows: 1
-   :file: ../../_static/csv/art_galleries.csv
+   :file: art_galleries.csv
 
 Moving Images
 -------------
@@ -55,7 +55,7 @@ Moving Images
 .. csv-table::
    :widths: auto
    :header-rows: 1
-   :file: ../../_static/csv/moving_images.csv
+   :file: moving_images.csv
 
 Paleontology
 ------------
@@ -63,4 +63,4 @@ Paleontology
 .. csv-table::
    :widths: auto
    :header-rows: 1
-   :file: ../../_static/csv/paleontology.csv
+   :file: paleontology.csv

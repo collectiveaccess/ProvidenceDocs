@@ -25,7 +25,7 @@ The overall settings, including the name, the format of the input data and other
 .. csv-table::
    :widths: auto
    :header-rows: 1
-   :file: ../_static/csv/mappingsettings.csv
+   :file: mappingsettings.csv
 
 Rules
 -----
@@ -35,7 +35,7 @@ Each row in the mapping must have a rule defined that determins how the importer
 .. csv-table::
    :widths: auto
    :header-rows: 1
-   :file: ../_static/csv/importerrules.csv
+   :file: importerrules.csv
 
 Source
 ------

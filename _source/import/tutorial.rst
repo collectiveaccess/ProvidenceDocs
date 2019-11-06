@@ -50,7 +50,7 @@ In our example mapping, we have set the name to Sample Mapping and code to sampl
 .. csv-table::
    :widths: auto
    :header-rows: 1
-   :file: ../_static/csv/import_settings.csv
+   :file: import_settings.csv
 
 Finally, you will notice that the source data contains a header in the first line, indicating what each column represents. Since we don't want to actually import this line as data, we'll set numInitialRowsToSkip to 1, meaning the data importer will skip the first line of the source data document.
 
@@ -162,7 +162,7 @@ In our entitySplitter example, we'll be using the most basic and commonly used r
 .. csv-table::
    :widths: auto
    :header-rows: 1
-   :file: ../_static/csv/refineryparameters.csv
+   :file: refineryparameters.csv
 .. _import_original:
 
 9. Original values/Replacement values (Columns 8 & 9)

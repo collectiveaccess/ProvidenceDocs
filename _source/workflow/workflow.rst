@@ -57,7 +57,7 @@ Sub-type/relationship type options affect both the what is considered current an
 .. csv-table::
    :widths: 25, 50, 50
    :header-rows: 1
-   :file: ../_static/csv/workflow-based_options.csv
+   :file: workflow-based_options.csv
 
 This configuration will be used to display current location in the editor inspectors, when browsing on workflow-based current location and by default in the **Object Use History (ca_objects_history) editor bundle.**
 
@@ -98,7 +98,7 @@ Note that there is no dateElement setting for storage locations. Storage locatio
 .. csv-table::
    :widths: 25, 75
    :header-rows: 1
-   :file: ../_static/csv/bundle_specific_settings.csv
+   :file: bundle_specific_settings.csv
 
 Browsing by current location
 ----------------------------
@@ -140,7 +140,7 @@ The collapse, display, maximumBrowseDepth and include_none_option directives are
 .. csv-table::
    :widths: 25, 75, 25
    :header-rows: 1
-   :file: ../_static/csv/browse_directive.csv
+   :file: browse_directive.csv
 
 Updating the cache
 ------------------

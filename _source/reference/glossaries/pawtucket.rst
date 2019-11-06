@@ -1,2 +1,0 @@
-Pawtucket Helper Functions
-==========================

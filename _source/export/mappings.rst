@@ -20,7 +20,7 @@ The first column of the main mapping spreadsheet is called "Rule type". What you
 .. csv-table::
    :header-rows: 1
    :widths: 25, 75
-   :file: ../_static/csv/1_rule_types.csv
+   :file: 1_rule_types.csv
 
 Hierarchical mappings
 ---------------------
@@ -47,7 +47,7 @@ Say you have the following very simple part of a mapping sheet and you export a 
 .. csv-table::
    :header-rows: 1
    :widths: 20, 10, 10, 10, 20, 40
-   :file: ../_static/csv/2_-_element_values.csv
+   :file: 2_-_element_values.csv
 
 What you end up with as export for a given objects is something like the following:
 
@@ -69,7 +69,7 @@ Mapping items with data field definitions also shouldn't have any source definit
 .. csv-table::
    :widths: 20, 10, 10, 10, 20, 40
    :header-rows: 1
-   :file: ../_static/csv/3_-_marc_element_values.csv
+   :file: 3_-_marc_element_values.csv
 
 An example export for a single object looks like this then. Note that we selected the 'readable' format for the MARC exporter, more info on format-specific settings are below.
 
@@ -92,7 +92,7 @@ A good way to think of variables is that they are mappings that don't end up in 
 .. csv-table::
    :widths: 20, 10, 10, 10, 20, 40
    :header-rows: 1
-   :file: ../_static/csv/4_-_variables.csv
+   :file: 4_-_variables.csv
 
 We use the "type" variable in the skipIfExpression setting for the top_secret mapping. For more info on this setting, see the setting description below.
 
@@ -104,7 +104,7 @@ These are configuration options that apply to the whole exporter mapping.
 .. csv-table::
    :widths: 15, 25, 40, 20
    :header-rows: 1
-   :file: ../_static/csv/5_-_settings.csv
+   :file: 5_-_settings.csv
 
 Options
 -------
@@ -113,7 +113,7 @@ Each mapping item (i.e. a line in the mapping spreadsheet) can have its own sett
 .. csv-table::
    :widths: 15, 25, 40, 20
    :header-rows: 1
-   :file: ../_static/csv/6_-_options.csv
+   :file: 6_-_options.csv
 
 Below is a properly formatted example in JSON that uses some of these options:
 
@@ -164,7 +164,7 @@ If you create a RepeatMappings rule, the mapping loader expects a comma-delimite
 .. csv-table::
    :widths: 20, 10, 10, 10, 20, 40
    :header-rows: 1
-   :file: ../_static/csv/7_-_mapping_repetitions.csv
+   :file: 7_-_mapping_repetitions.csv
 
 In this case, the 'child' element would be repeated for each hierarchy child of the exported item because of the context switch and for each of those children, the exporter would add the label and idno elements.
 
@@ -247,7 +247,7 @@ RDF Mode configuration file options
 .. csv-table::
    :widths: 25, 75
    :header-rows: 1
-   :file: ../_static/csv/8_-_rdf_mode.csv
+   :file: 8_-_rdf_mode.csv
 
 Node type definition options
 ----------------------------
@@ -255,7 +255,7 @@ Node type definition options
 .. csv-table::
    :widths: 25, 75
    :header-rows: 1
-   :file: ../_static/csv/9_-_node_options.csv
+   :file: 9_-_node_options.csv
 
 'related' options
 -----------------
@@ -263,7 +263,7 @@ Node type definition options
 .. csv-table::
    :widths: 25, 75
    :header-rows: 1
-   :file: ../_static/csv/10_-_related_options.csv
+   :file: 10_-_related_options.csv
 
 Misc Setting and Options
 ------------------------

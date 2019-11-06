@@ -1,14 +1,19 @@
-Web Services
-============
+..  _informationServices:
 
-CollectiveAccess supports several external web services as metadata attached to CollectiveAccess records. It does this by performing a lookup operation at the remote service and then allowing you to pick a value from a results list. It then stores some core information about the referenced piece of data and a reference (URI) to the original resource. InformationService and LCHS are *metadata elements types* that allow these web services to be configured as fields in the User Interface.
+Information Services
+====================
+
+CollectiveAccess supports several external information services to attached metadata to CollectiveAccess records. It does this by performing a lookup operation at the remote service and then allowing you to pick a value from a results list. It stores core information about the referenced piece of data and a reference (URI) to the original resource. 
+To configure metadata fields in the user interface, select the InformationService or LCSH *metadata element type*.
 
 InformationService is also a plugin API that makes it easy to add support for other external services. The exact information stored locally differs from plugin to plugin. 
 
-Available plugins
-------------------
 
-**LCSH**
+Available plugins
+^^^^^^^^^^^^^^^^^
+
+LCSH
+----
 	- `LC subject headings <http://id.loc.gov/authorities/subjects.html>`_
 	- `LC Name Authority file <http://id.loc.gov/authorities/names.html>`_	
 	- `LC subject headings for children <http://id.loc.gov/authorities/childrensSubjects.html>`_
@@ -25,7 +30,8 @@ Available plugins
 	- `ISO639-2 Languages <http://id.loc.gov/vocabulary/iso639-2.html>`_
 	- `ISO639-5 Languages <http://id.loc.gov/vocabulary/iso639-5.html>`_
 
-**InformationService**
+InformationService
+------------------
 	- `AAT <http://vocab.getty.edu>`_
 	- `ALA-National Species List <https://api.ala.org.au/apps>`_
 	- `CollectiveAccess <https://github.com/collectiveaccess>`_
@@ -37,10 +43,14 @@ Available plugins
 	- `ULAN <http://vocab.getty.edu/>`_
 	- `VIAF <https://www.oclc.org/developer/develop/web-services/viaf.en.html>`_
 	- `Wikipedia <https://www.mediawiki.org/wiki/API:Web_APIs_hub>`_
+		test what it looks like to add information underneath a bullet point.
 	- `WorldCat <https://www.oclc.org/developer/develop/web-services/worldcat-search-api.en.html>`_
 	
+	
+
+
 Implementing new plugins
-------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 InformationService implementations reside in *app/lib/core/Plugins/InformationService* and should implement `IWLPlugInformationService <https://github.com/collectiveaccess/providence/blob/master/app/lib/core/Plugins/IWLPlugInformationService.php>`_ and extend `BaseInformationServicePlugin <https://github.com/collectiveaccess/providence/blob/master/app/lib/core/Plugins/InformationService/BaseInformationServicePlugin.php>`_. The class name must be "WLPlugInformationService<Service>" and the file name "<Service>.php".
 

@@ -198,7 +198,7 @@ Each type key has as its value an associative list specifying the format. The fo
 .. csv-table::
    :widths: 12, 32, 12, 12
    :header-rows: 1
-   :file: ../../_static/csv/multipartid_conf_general_settings.csv
+   :file: multipartid_conf_general_settings.csv
 
 The keys of the *element* associative list are element names. These names are only used for reference during configuration and to name HTML form elements and are not presented to the user. They should use only alphanumeric characters and underscores. Do not include spaces or punctuation in the names.
 
@@ -207,7 +207,7 @@ The value for each element name in the elements list is another associative list
 .. csv-table::
    :widths: 12, 32
    :header-rows: 1
-   :file: ../../_static/csv/multipartid_conf_types.csv
+   :file: multipartid_conf_types.csv
 
 Beyond type, there are a number of other settings that can be set for an element. Some are common to all element types and others are specific to certain types.
 
@@ -216,14 +216,14 @@ Settings applicable to all types of elements are:
 .. csv-table::
    :widths: 12, 32
    :header-rows: 1
-   :file: ../../_static/csv/multipartid_conf_field_settings.csv
+   :file: multipartid_conf_field_settings.csv
 
 Type-specific settings are:
 
 .. csv-table::
    :widths: 12, 12, 32
    :header-rows: 1
-   :file: ../../_static/csv/multipartid_conf_setting_options.csv
+   :file: multipartid_conf_setting_options.csv
 
 Problems with SERIAL elements
 -----------------------------

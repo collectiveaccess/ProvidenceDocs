@@ -20,7 +20,7 @@ Basic configuration of movement-based location tracking is done in app.conf usin
 .. csv-table::
    :widths: 25, 75
    :header-rows: 1
-   :file: ../_static/csv/movement-based_settings.csv
+   :file: movement-based_settings.csv
 
 Step 2
 ^^^^^^
@@ -41,7 +41,7 @@ In the Storage Location user interface, there is an available bundle named **Cur
 .. csv-table::
    :widths: 25, 25, 50, 50, 25
    :header-rows: 1
-   :file: ../_static/csv/settings_2.csv
+   :file: settings_2.csv
 
 Browsing current location when using direct movement-based location tracking
 ----------------------------------------------------------------------------

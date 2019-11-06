@@ -14,4 +14,4 @@ The following entries may be defined in this configuration file. Note that there
 .. csv-table::
    :widths: 12, 32, 12
    :header-rows: 1
-   :url: https://docs.google.com/spreadsheets/d/e/2PACX-1vSBEX9qGr8xqc1FHNzNFmEvh171IkBdntxE__d8wlLYShpuvc-vg7XLgDDoAhybFOO6pFK3BIymMM2l/pub?output=csv
+   :file: External_applications.csv

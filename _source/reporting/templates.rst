@@ -111,7 +111,7 @@ The following options may be used to format the text value of any placeholder:
 .. csv-table::
    :widths: 25, 75
    :header-rows: 1
-   :file: ../_static/csv/placeholder_options.csv
+   :file: placeholder_options.csv
 
 For simple true/false options such as toUpper you may omit the "=" and value. These two templates are the same:
 
@@ -206,7 +206,7 @@ Each unit shifts the primary by one relational "jump." Nesting <units> allows sh
 .. csv-table::
    :widths: 25, 25, 25, 25
    :header-rows: 1
-   :file: ../_static/csv/unit_attributes.csv
+   :file: unit_attributes.csv
 
 The <unit> tag presents many opportunities for complex display formatting which are explained in more detail, along with examples, here.
 
@@ -342,7 +342,7 @@ There are a number of placeholder options that can be used to modify how hierarc
 .. csv-table::
    :widths: 25, 75, 25
    :header-rows: 1
-   :file: ../_static/csv/hierarchical_placeholders.csv
+   :file: hierarchical_placeholders.csv
 
 Making links to other records
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -382,7 +382,7 @@ There are a few placeholders that have special meanings for certain kinds of pri
 .. csv-table::
    :widths: 25, 75
    :header-rows: 1
-   :file: ../_static/csv/special_placeholders.csv
+   :file: special_placeholders.csv
    
 Splitting apart a date range into separate data points
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

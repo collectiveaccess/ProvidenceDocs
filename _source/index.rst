@@ -91,7 +91,7 @@ Contents
 
    Importer Tutorial <import/tutorial>
    Supported File Formats <import/formats>
-   Mappings <import/mappings>
+   Import Mapping <import/mappings>
    Running an Import <import/running>
    WorldCat <import/worldcat>
    Getty Vocabularies <import/getty>
@@ -118,9 +118,6 @@ Contents
    :caption: Reference
    :titlesonly:
 
-   Configuration files <reference/configurationFiles>
-   Web Services <reference/web_services> 
-   reference/FAQs
    reference/Glossaries
    Prior Releases <reference/prior>
    
@@ -135,21 +132,3 @@ Contents
    Manage and Site Administration <usermanual/manage> 
    User Interface Administration <usermanual/user_interface_administration> 
    
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Customizing Pawtucket
-   :titlesonly:
-
-   Introduction to Themes <pawtucket/intro>
-   General Configuration <pawtucket/general>
-   Media Display & Access <pawtucket/media>
-   Public Access Configurations <pawtucket/access>
-   Login & Registration <pawtucket/reg>
-   Homepage & Static Pages <pawtucket/static>
-   Site Pages & Templates <pawtucket/templates>
-   Search & Browse Pages and Settings <pawtucket/searchBrowse>
-   Detail Pages <pawtucket/detail>
-   Lightboxes & Galleries <pawtucket/lightbox>
-   Classrooms <pawtucket/classrooms>
-   Contact & Mail Templates <pawtucket/contact>

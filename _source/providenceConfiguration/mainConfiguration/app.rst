@@ -382,7 +382,7 @@ settings are:
 .. csv-table::
    :widths: auto
    :header-rows: 1
-   :file: ../_static/csv/configuration_app_conf_hierarchies_table.csv
+   :file: configuration_app_conf_hierarchies_table.csv
 
 "alwaysShow" is the default.
 

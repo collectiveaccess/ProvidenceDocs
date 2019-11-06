@@ -16,7 +16,7 @@ The first requirement is to set the following directive in the app.conf configur
 .. csv-table::
    :widths: 25, 75
    :header-rows: 1
-   :file: ../_static/csv/direct_object-location_setting.csv
+   :file: direct_object-location_setting.csv
 
 Step 2
 ^^^^^^
@@ -27,7 +27,7 @@ The **Current Location (ca_objects_location)** bundle provides the following opt
 .. csv-table::
    :widths: 25, 25, 75, 25, 25
    :header-rows: 1
-   :file: ../_static/csv/settings_1.csv
+   :file: settings_1.csv
 
 .. note::
 
@@ -40,7 +40,7 @@ In the Storage Location user interface, there is an available bundle named **Cur
 .. csv-table::
    :widths: 25, 25, 50, 50, 25
    :header-rows: 1
-   :file: ../_static/csv/settings_2.csv
+   :file: settings_2.csv
 
 Note that when using direct object-location tracking, a ca_storage_locations relationship bundle placed in an object editor will display *all* object-location links, past, present and future, in a single undifferentiated list and can be configured to allow users to add object-location links. The ca_objects relationship bundle placed in a storage location editor will behave similarly. In general, the ca_objects and ca_storage_locations relationship bundles should not be placed in the storage location and objects editors respectively when direct object-location tracking is in use. 
 
