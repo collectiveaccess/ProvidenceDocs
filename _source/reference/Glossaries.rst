@@ -7,5 +7,4 @@ Glossaries
 
    API Endpoints & Methods <glossaries/endpoints>
    Bundles <glossaries/Bundles>
-   Display Templates <glossaries/templates>
    Supported Media Formats <glossaries/SupportedMedia>

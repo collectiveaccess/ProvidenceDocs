@@ -1,285 +1,212 @@
-Mappings
-========
+Import Mappings
+===============
 
 .. contents::
    :local:
+   
+   
+.. toctree::
+   :maxdepth: 1
+   :caption: Sub-pages
 
+   mappings/builders
+   mappings/splitters
+   mappings/mappingOptions
+   mappings/formats
+   
+   
 Introduction
 ------------
+Users can map and migrate data directly from the command line or the Providence user interface (under "Import > Data") into a Providence installation, mapping to the installation profile. An *import mapping* is a spreadsheet that defines how data is imported into CollectiveAccess. There are many settings and options in the import mapping. This documentation is organized by column, with a description of the function of each column along with the available settings for that column.
 
-An import mapping is a spreadsheet that defines how data is imported into CollectiveAccess. A basic introduction to writing and running an import mapping is provided in our :doc:`tutorial`. This page provides a detailed look at the available settings and options available through the import mapping. It is organized by column (again, see the tutorial for a simpler breakdown of the available columns), with a description of the function of each column along with the available settings for that column.
+Import mappings operate under two basic assumption about your data: that each row in a data set corresponds to a single record and that each column corresponds to a single metadata element. The exception to these rules is an option called treatAsIdentifiersForMultipleRows that will explode a single row into multiple records. This is very useful if you have a data source that references common metadata shared by many pre-existing records in a single row. See the Options section for more details: http://manual.collectiveaccess.org/import/tutorial.html#options-column-5.
 
-Import Mappings operate under two basic assumption about your data:
-1. That each row in a data set corresponds to a single record
-2. That each column corresponds to a single metadata element.
 
-.. note::
+Running a data import involves seven basic steps:
 
-   This is not universal. In general most mappings will follow the one row one record principle, but they can support an option called treatAsIdentifiersForMultipleRows that will explode a single row into multiple records. This is very useful if, say, you're doing a merge_on_idno (more on that below) and you have a data source that references common metadata shared by many pre-existing records in a single row.
+1. Create an import mapping document (in Excel or Google Sheets) that will serve as a crosswalk between source data and the destination in CollectiveAccess.
+2. Create a backup of the database by executing a data dump *before running the import*.
+3. Run the import from either the command line or the graphical user interface.
+4. Check the data in CollectiveAccess and look for errors or points of inconsistencies.
+5. Revise your mapping accordingly.
+6. Load the data dump so that the system returns to its pre-import state.
+7. Run the import again. 
 
-Settings
---------
 
-The overall settings, including the name, the format of the input data and other import settings are defined here. This section can be placed at the top or bottom of a mapping spreadsheet with the setting in the first column and the provided parameter in the second. It functions separately from the main, column defined, body of the import mapping.
+Sample Mapping
+--------------
+
+.. image:: ../_static/images/Sample_Mapping.png
+   
+Download these files to see how the Sample Mapping applies to the Sample Data within the Sample Profile. Note that you can upload these to Google Drive and import both import mappings and source data via Google Drive. 
+
+| `Sample mapping.xlsx <../_static/_files/Sample_mapping.xlsx>`_
+| `Sample data.xlsx <../_static/_files/Sample_data.xlsx>`_
+| `Sample import profile.xml <../_static/_files/Sample_import_profile.xml>`_
+
+Supported Data Input Formats
+----------------------------
+
+Data can be in: Exif, MODS, RDF, Vernon, FMPDSOResult, MediaBin, ResourceSpace, WordpressRSS, CSVDelimited, FMPXMLResult, MySQL, SimpleXML, WorldCat, CollectiveAccess (CA-to-CA imports), Inmagic, Omeka, TEI, iDigBio, EAD, MARC, PBCoreInst, TabDelimited, Excel, MARCXML, PastPerfectXML, ULAN
+
+A full description of the supported import formats and how they may be referenced is available in the in the :doc:`mappings/formats` page.
+
+Creating a Mapping
+------------------
+Settings 
+````````
+
+Start from the sample worksheet provided above. Settings include the importer name, format of the input data, Collective Access table to import to, and more. This section can be placed at the top or bottom of a mapping spreadsheet with the setting in the first column and parameter in the second. It functions separately from the main column-defined body of the import mapping.
 
 .. csv-table::
-   :widths: auto
+   :widths: 20, 40, 20, 20
    :header-rows: 1
    :file: mappingsettings.csv
 
-Rules
------
+Rule Types (Column 1)
+`````````````````````
 
-Each row in the mapping must have a rule defined that determins how the importer will treat the record. Available rules are:
+Each row in the mapping must have a rule defined that determines how the importer will treat the record. Available rules are:
 
 .. csv-table::
    :widths: auto
    :header-rows: 1
    :file: importerrules.csv
 
-Source
-------
+Source  (Column 2)
+```````````````````
 
-The Source column is used to set precisely which element from the data source is to be mapped or skipped. You can also set a constant data value, rather than a mapping, by setting the rule type to "Constant" and the Source column as the value or list item idno from your CollectiveAccess configuration.
+The source column sets which column from the data source is to be mapped or skipped. You can also set a constant data value, rather than a mapping, by setting the rule type to "constant" and the source column as the value or list item idno from your CollectiveAccess configuration.
 
-Supported import formats are:
+An explanation of the most common sources is below. A full description of the supported import formats and how they may be referenced is available in the in the :doc:`mappings/formats` page.
 
-Currently: XLSX, XLS, MYSQL, Filemaker XML, Inmagic XML, PastPerfect XML, Vernon XML, TEI XML, PBCore XML, RDF, ULAN-linked data, MARC, MARCXML, Omeka, EXIF, CollectiveAccess (for migrations from one system to another), WorldCat, TabDelimited, and CSVDelimited.
+==============  ================================================================================ 
+Type  			Method for setting the source column                                                                       
+==============  ================================================================================  
+Spreadsheets    You must convert column letters to numbers. For example, if you want to map Column B of an Excel spreadsheet, you list the Source as 2. (A = 1, B = 2, C = 3, and so on.) Column B of your source data would be pulled. If on the other hand, you wish to skip this column, you would set the Rule Type to Skip and the source value to 2.
+XML  			Set the Source column to the name of the XML tag, proceeded with a forward slash (i.e. /Sponsoring_Department or /inm:ContactName)
+XPath			XPath is a query language for selecting nodes and computing values from an XML document. It is supported for "Source" specification when importing XML. W3C offers a basic tutorial for writing XPath expressions.
+MARC			Like other XML formats, the Source value for MARC XML fields and indicators can be expressed using XPATH. 
+FMPXML/RESULT	FileMakerPro XMLRESULT. A few things to note here due to inclusion of invalid characters in field names in certain databases (i.e. ArtBase). See Supported File Formats for rules for Source Field name rules.                                     
+==============  ================================================================================ 
 
-Planned imminently: OAI-PMH/DC
+.. note::  Excel Tip: Translating A, B, C... to 1, 2, 3... can be time-consuming. Excel’s preferences allow you to change columns to display numerically rather than alphabetically. Go to Excel Preferences and select “General.” Click “Use R1C1 reference style.” This will display the column values as numbers.
 
-A full description of the supported import formats and how they may be referenced is available in the :doc:`formats` page.
+**Special sources**
 
-CA_table.element
-----------------
+A few special sources are available regardless of the format of the data being imported. These values can be useful for disambiguating the sources of data within CollectiveAccess after import.
+     
+Sometimes it’s important to know, for example, which row from an Excel data set a record came from because there’s not enough other data to disambiguate for testing, etc. “Special sources” addresses this by letting you map _row_ to somewhere like internal notes. To do this you include _row_ instead of a number in the source column of your mapping.
+     
+==============  ================================================================================
+Source          Description                                                                       
+==============  ================================================================================
+__row__         The number of the row being imported.  
+__source__      The name of the file being imported. For files imported through the web interface this will be a server-side temporary filename, not the original name of the file.
+__filename__    The original name of the file, when available. If the original name of the file is not available (because the uploading web browser did not report it, for instance) then the value for __source__ is returned.
+__filepath__    The full path on the server to the file being imported.                                           
+==============  ================================================================================
 
-This column declares the destination where the data identified in the Source column will be mapped to in CollectiveAccess. If you are setting the Source to Skip, of course, you do not need to complete this step. If you are mapping data or applying a constant value, you do need to set the destination. This is accomplished by writing the ca_table.element_code.
+CA_table.element (Column 3)
+```````````````````````````
 
-CA Table corresponds to the CollectiveAccess basic tables, while element_code is simply the unique code you assigned to a particular metadata element in your CA configuration.
+This column declares the metadata element in the “table” set in `Settings`_ where the data in the source column will be mapped to in CollectiveAccess. If you are setting the source to Skip you do not need to complete this step. If you are mapping data or applying a constant value, you need to set the destination by adding the ca_table.element_code in this column.
 
-For example, to map a Title column from your source data into CollectiveAccess, you may wish to set the CA table.element as:
+CA_table corresponds to the CollectiveAccess basic tables, while element_code is the unique code you assigned to a metadata element in your CA configuration, or an intrinstic field in CA. For example, to map a Title column from your source data into CollectiveAccess, set the CA table.element as ``ca_objects.preferred_labels``
 
-``ca_objects.preferred_labels``
 
-This would map the data from your Source declaration to the Title field in an Object record in CollectiveAccess.
+**Mapping to Containers** 
 
-Group
------
+A Container is a metadata element that contains sub-elements. In order to import to specific sub-elements within a Container, you must cite the element codes for both the Container and the code for the sub-element: ``ca_table.container_code.element_code``.
 
-In many cases, distinct lines in a data set will map into their corresponding metadata elements that happen to be bundled together inside of a single container. For example, a common container is Date, wherein there are actually two metadata elements - one for the date itself, and the other a drop-down menu to declare the date's type (Date Created, Date Accessioned, etc.)
+Example: a Date field might actually be a container with two sub-elements: a date range field for the date itself, and a date type drop-down menu to qualify the date. In this case, we would import the date from our source data as:
 
-Let's say in your source data there is one column that contains date values, while the next column over contains the date types.
+.. code-block:: none
 
-If the corresponding metadata elements in CA are bundled into a container, you must tell this to the mapping document by placing these Source elements into a group. Otherwise, the date value would be mapped to one container, while the date type would be mapped to another container (and each would be missing their counterpart!)
+	ca_objects.date.date_value 
+	ca_objects.date.date_type
 
-Declaring a Group is simple. Just assign a name to each line that is to be mapped into a single container.
+To map the two of these into the same container, use groups. See more in  `Group (Column 4)`_ .
 
-If Source "2" is mapping to ca_objects_date.date_value, and Source "3" is mapping to ca_objects_date.date_type, then simply give each line the group name "Date." This will tell the mapping that these two lines are going to a single container - and won't create a whole new container for each.
+**Mapping to Related Tables**
 
-Refineries
-----------
+Data will often contain references to related tables, such as related entities, related lots, related collections, related storage locations, and so on. In order to import data of one table (like ca_objects) while also creating and related records of other tables (like ca_entities), you will need to use refineries.
 
-Frequently the data being imported into CollectiveAccess does not exactly match the fields available, or some data should have a relationship to one or more other records in CollectiveAccess. Refineries manage this complexity by providing tools that can **Split**, **Make**, **Join**, **Get** and **Build** the data, transforming it according to a provided set of rules. These roles these tools play are:
+When your mapping includes references to a table outside the table set in the “table” Settings, you usually just need to cite the table name in this column (example: ca_entities). Then set the details in the refineries column. The exception to this is when you are creating Lot records. In this case, you set the ca_table.element_code to ca_objects.lot_id.
+
+
+Group (Column 4)
+`````````````````
+
+In many cases, data will map into corresponding metadata elements bundled together in a container. To continue the example above, a common container is Date, where there are actually two metadata elements - one for the date itself, and another the date's type (Date Created, Date Accessioned, etc.). Let's say in your source data there is one column that contains date values, while the next column over contains the date types.
+
+Declaring a Group is simple. Just assign a name to each line in mapping column 4 that is to be mapped into a single container.
+
+If Source "2" is mapping to ca_objects_date.date_value, and Source "3" is mapping to ca_objects.date.date_type, give each line the group name "Date" This will tell the mapping that these two lines are going to a single container - and won't create a whole new container for each. Any word will work, it just has to be the same for each element that goes into the container. 
+
+
+Options (Column 5)
+```````````````````
+
+Options can be used to set a variety of conditions on the import, process data that needs clean-up, or format data with templates. This example shows some of the more commonly used options. See the complete list of options: :doc:`mappings/mappingOptions` 
+
+==============  ================================================================================  =======================  =======================================
+Type of Option  Description                                                                       Parameter notes          Example for "Options" column of mapping
+==============  ================================================================================  =======================  =======================================
+skipIfEmpty     If the data value corresponding to this mapping is empty, skip the mapping line.  set to a non-zero value  {"skipIfEmpty": 1}
+delimiter       Delimiter to split repeating values on.                                           delimiter value          {"delimiter": ";"}
+==============  ================================================================================  =======================  =======================================
+
+In the example above, multiple subject values in the same cell that are separated by semi-colons. By setting the delimiter option in the mapping, you are ensuring that these subject values get parsed and imported to discrete instances of the Subject field. Without the delimiter option, the entire string would end up a single instance of the Subject field.
+
+
+
+Refineries (Column 6-7)
+```````````````````````
+
+Refineries fall into one of 5 camps: Splitters, Makers, Joiners, Getters and Builders. Each framework is designed to take a specific data format and transform it via a specific behavior as it is imported into CollectiveAccess. See the Refineries page for a complete list of refineries: https://docs.collectiveaccess.org/wiki/Data_Importer#Refineries
 
 Splitters
-^^^^^^^^^
+'''''''''
 
-Splitter refineries can either create records or match data to existing records (following a mapping’s existingRecordPolicy) or break a single string of source data into several metadata elements in CollectiveAccess. Splitters for relationships are used when several parameters are required, such as setting a record type and setting a relationship type. Using the entitySplitter, a name in a single location (i.e. column) in a data source can be parsed (into first, middle, last, prefix, suffix, et al.) within the new record. Similarly the measurementSplitter breaks up, for example, a list of dimensions into to a CollectiveAccess container of sub-elements. “Splitter” also implies that multiple data elements, delimited in a single location, can be “split” into unique records related to the imported record.
+Splitter refineries can either create records, match data to existing records (following a mapping's existingRecordPolicy) or break a single string of source data into several metadata elements in CollectiveAccess. Splitters for relationships are used when several parameters are required, such as setting a record type and setting a relationship type. Using the entitySplitter, a name in a single location (i.e. column) in a data source can be parsed (into first, middle, last, prefix, suffix, et al.) within the new record. Similarly the measurementSplitter breaks up, for example, a list of dimensions into to a CollectiveAccess container of sub-elements. "Splitter" also implies that multiple data elements, delimited in a single location, can be "split" into unique records related to the imported record. See the :doc:`mappings/splitters` page for a complete list of splitters. 
 
-===============================  =================================================================================================================================================================================================
-Splitter                         Refinery Options
-===============================  =================================================================================================================================================================================================
-collectionSplitter               :term:`attributes <attributes>`, :term:`collectionType <collectionType>`, :term:`collectionTypeDefault <collectionTypeDefault>`, :term:`delimiter <delimiter>`, :term:`dontCreate <dontCreate>`, :term:`ignoreParent <ignoreParent>`
-entitySplitter                   :term:`attributes <attributes>`, :term:`delimiter <delimiter>`, :term:`displayNameFormat <displayNameFormat>`, :term:`dontCreate <dontCreate>`, :term:`entityType <entityType>`, :term:`entityTypeDefault <entityTypeDefault>`, :term:`ignoreParent <ignoreParent>`
-listItemSplitter                 :term:`attributes <attributes>`, :term:`delimiter <delimiter>`, :term:`dontCreate <dontCreate>`, :term:`ignoreParent <ignoreParent>`
-loanSplitter                     :term:`attributes <attributes>`, :term:`delimiter <delimiter>`, :term:`dontCreate <dontCreate>`, :term:`ignoreParent <ignoreParent>`
-measurementsSplitter             :term:`attributes <attributes>`, :term:`delimiter <delimiter>`, :term:`elements <elements>`
-movementSplitter                 :term:`attributes <attributes>`, :term:`dontCreate <dontCreate>`, :term:`ignoreParent <ignoreParent>`
-placeSplitter                    :term:`attributes <attributes>`, :term:`dontCreate <dontCreate>`, :term:`ignoreParent <ignoreParent>`
-objectSplitter                   :term:`attributes <attributes>`, :term:`dontCreate <dontCreate>`, :term:`ignoreParent <ignoreParent>`
-objectLotsSplitter               :term:`attributes <attributes>`, :term:`dontCreate <dontCreate>`, :term:`ignoreParent <ignoreParent>`
-occurrenceSplitter               :term:`attributes <attributes>`, :term:`dontCreate <dontCreate>`, :term:`ignoreParent <ignoreParent>`
-tourStopSplitter                 :term:`attributes <attributes>`, :term:`dontCreate <dontCreate>`, :term:`ignoreParent <ignoreParent>`
-===============================  =================================================================================================================================================================================================
+Makers
+''''''
 
-.. glossary::
+Maker refineries are used to create CollectiveAccess tour/tour stop, object lot/object and list/list item pairings. These relationships are different than other CollectiveAccess relationships for two reasons. Firstly, they don't carry relationship types. Secondly, these relationships are always single to multiple: a tour can have many tour stops, but a tour stop can never belong to more than one tour. Similarly an object can never belong to more than one lot. List items belong to one and only one list. The Maker refinery is used for these specific cases where "relationshipType" and other parameters are unnecessary.
 
-   attributes
-      Sets or maps metadata for the entity record by referencing the metadataElement code and the location in the data source where the data values can be found
+Joiners
+'''''''
 
-      See below for additonal ``attribute`` settings for the entitySplitter and objectRepresentationSplitter
+In some ways Joiners are the opposite of Splitters. An entityJoiner refinery is used when two or more parts of a name (located in different areas of the data source) need to be conjoined into a single record. The dateJoiner makes a single range out of two or more elements in the data source.
 
-      **Example**
+Getters
+'''''''
 
-      .. code-block:: none
+Getters are designed specifically for MYSQL data mappings. These refineries map the repeating source data through the linking table to the correct CollectiveAccess elements.
 
-         {"attributes": {
-            "address": {
-               "address1": "^24",
-               "address2": "^25",
-               "city": "^26",
-               "stateprovince": "^27",
-               "postalcode": "^28",
-               "country": "^29"
-            }
-         }
-		 }
+Builders
+''''''''
 
-      **entitySplitter Additional Properties**
+Builders create an upper hierarchy above the to-be-imported data. Note that Splitters also create upper hierarchies with the parent parameter, but they do so above records related to the imported data. For example, let's say you were importing ca_collections and wanted to map a "Series" and "Sub-series" above imported "File" data. You'd use the collectionHierarchyBuilder refinery. However, if you were importing ca_objects and wanted to relate a "File" while building an upper hierarchy of "Series" and "Sub-series" you would use the collectionSplitter and the parent parameter.
+ADD NEW PAGE W/ TABLES FOR: COLLECTIONHIERARCHYBUILDER (DOCS), COLLECTIONINDENTEDHIERARCHYBUILDER (NEW), ENTITYHIERARCHYBUILDER (DOCS), PLACEHIERARCHYBUILDER (DOCS), OBJECTHIERARCHYBUILDER (DOCS), OCCURRENCEHIERARCHYBUILDER (DOCS), LISTITEMHIERARCHYBUILDER (DOCS), LISTITEMINDENTIEDHIERARCHYBUILDER (DOCS), STORAGELOCATIONHIERARCHYBUILDER (DOCS)
 
-      To map source data to idnos in an entitySplitter, see the 'attributes' parameter above. An exception exists for when idnos are set to be auto-generated. To create auto-generated idnos within an entitySplitter, use the following syntax.
 
-      ``"attributes": {"idno":"%"}``
+Original values and Replacement values (Columns 8-9)
+`````````````````````````````````````````````````````
 
-      **objectRepresentationSplitter Additional Properties**
+In some cases, particularly when you are mapping to a list element, you may need the mapping to find certain values in your source data and replace them with new values upon import. In the Original Value column, you may state all values that you wish to have replaced. Then, in the Replacement Value column, set their replacements. You can add multiple values to a single cell, so long as the replacement value matched the original value line by line. Using the Original and Replacement columns is sufficient for transforming a small range of values. But for really large transformation dictionaries, use the option "transformValuesUsingWorksheet" instead: http://manual.collectiveaccess.org/import/mappings.html#transform-values-using-worksheet.
 
-      Sets the attributes for the object representation. "Media" sets the source of the media filename in the data, which is what will match on the actual media file in the import directory. Note: filenames in source data may or may not the include file extension, but source data must match filename exactly. Set the media filename to idno, using "idno". Additional attributes, such as the example, "internal_notes", can also be set here.
+Source Description & Notes (Columns 10 & 11)
+`````````````````````````````````````````````
 
-      .. code-block:: none
+These two columns are used to clarify the source and purpose of each line in the mapping and are optional. Source Description is generally a plain text label or name for the original source column to allow for easy reference to which fields are being mapped (or skipped) in the mapping. Notes provides a space to explain how and why a certain line is mapped in the manner that it is, for example, explaining why a certain value is being omitted or how an entity line is being split and related to the main record.
 
-         {"attributes":{
-            "media": "^1",
-            "internal_notes": "^2",
-            "idno": "^1"
-         }
-         }
+These fields can be useful for future reference if a mapping is intended to be used repeatedly to be sure that the selected mapping matches the source data.
 
-      *Applicable refineries*: collectionSplitter, entitySplitter, listItemSplitter, loanSplitter, measurementsSplitter, movementSplitter, placeSplitter, objectSplitter, objectLotsSplitter, occurrenceSplitter, tourStopSplitter
 
-   collectionType
-      Accepts a constant list item idno from the list collection_types or a reference to the location in the data source where the type can be found
+Importing data
+--------------
 
-      ``{"collectionType": "box"}``
-
-      *Applicable Refineries*: collectionSplitter
-
-   collectionTypeDefault
-      Sets the default collection type that will be used if none are defined or if the data source values do not match any values in the CollectiveAccess list collection_types
-
-      ``{"collectionTypeDefault":"series"}``
-
-      *Applicable Refineries*: collectionSplitter
-
-   delimiter
-      Sets the value of the delimiter to break on, separating data source values
-
-      ``{"delimiter": ";"}``
-
-      *Applicable Refineries*: collection Splitter, entitySplitter, listItemSplitter, loanSplitter, measurementsSplitter, movementSplitter, placeSplitter, objectSplitter, objectLotSplitter, objectRepresentationSplitter, occurrenceSplitter, tourStopSplitter
-
-   displayNameFormat
-      Allows you to format the output of the displayName. Options are: “surnameCommaForename” (forces display name to be surname, forename); “forenameCommaSurname” (forces display name to be forename, surname); “forenameSurname” (forces display name to be forename surname); “original” (is the same as leaving it blank; you just get display name set to the imported text). This option also supports an arbitrary format by using the sub-element codes in a template, i.e. “^surname, ^forename ^middlename”. Doesn't support full format templating with <unit> and <ifdef> tags, though.
-
-      ``{"displaynameFormat": "surnameCommaForename"}``
-
-   	  *Applicable Refineries*: entitySplitter
-
-   dontCreate
-      If set to true (or any non-zero value) the splitter will only do matching and will not create new records when matches are not found.
-
-      ``{"dontCreate": "1"}``
-
-      *Applicable Refineries*: collectionSplitter, entitySplitter, listItemSplitter, loanSplitter, movementSplitter, objectLotsSplitter, objectRepresentationSplitter, objectSplitter, occurrenceSplitter, placeSplitter, tourStopSplitter
-
-   elements
-      Maps the components of the dimensions to specific metadata elements
-
-      .. code-block:: none
-
-         {"elements": [
-            {
-               "quantityElement": "measurementWidth",
-               "typeElement": "measurementsType",
-               "type": "width"
-            },
-            {
-               "quantityElement": "measurementHeight",
-               "typeElement": "measurementsType2",
-               "type": "height"
-            }
-         ]}
-
-      Note: the typeElement and type sub-components are optional and should only be used in measurement containers that include a type drop-down.
-
-      *Applicable Refineries*: measurementsSplitter
-
-   entityType
-      Accepts a constant list item idno from the list entity_types or a reference to the location in the data source where the type can be found
-
-      ``{"entityType": "person"}``
-
-      *Applicable Refineries*: entitySplitter
-
-   entityTypeDefault
-      Sets the default entity type that will be used if none are defined or if the data source values do not match any values in the CollectiveAccess list entity_types
-
-      ``{"entityTypeDefault":"individual"}``
-
-      *Applicable Refineries:* entitySplitter
-
-   ignoreParent
-      For use with collection hierarchies. When set to true this parameter allows global match across the entire hierarchy, regardless of parent_id. Use this parameter with datasets that include values to be merged into existing hierarchies but that do not include parent information. Paired with matchOn it's possible to merge the values using only name or idno, without any need for hierarchy info. Not ideal for situations where multiple matches can not be disambiguated with the information available.
-
-      ``{"ignoreParent": "1"}``
-
-      *Applicable Refineries*: collectionSplitter, entitySplitter, listItemSplitter, loanSplitter, movementSplitter, objectLotsSplitter, objectSplitter, occurrenceSplitter, placeSplitter, tourStopSplitter
-
-   interstitial
-      Sets or maps metadata for the interstitial movementRelationship record by referencing the metadataElement code and the location in the data source where the data values can be found.
-
-      .. code-block:: none
-
-         {
-            "interstitial": {
-               "relationshipDate": "^4"
-            }
-         }
-
-      *Applicable Refineries*: collectionSplitter, entitySplitter, listItemSplitter, loanSplitter, movementSplitter, objectLotsSplitter, objectSplitter, occurrenceSplitter, placeSplitter, tourStopSplitter
-
-   list
-      Enter the list_code for the list that the item should be added to. This is mandatory - if you forget to set it or set it to a list_code that doesn't exist the mapping will fail.)
-
-      ``{"list": "list_code"}``
-
-      *Applicable Refineries*: listItemSplitter
-
-   listItemType
-      Accepts a constant list item idno from the list or a reference to the location in the data source where the type can be found.
-
-      ``{"listItemType": "concept"}``
-
-      *Applicable Refineries*: listItemSplitter
-
-   listItemTypeDefault
-      Sets the default list item type that will be used if none are defined or if the data source values do not match any values in the CollectiveAccess list list_item_types
-
-      ``{"listItemTypeDefault":"concept"}``
-
-      *Applicable Refineries*: listItemSplitter
-
-   loanType
-      Accepts a constant list item from the list loan_types
-
-      ``{"loanType":"out"}``
-
-      *Applicable Refineries*: loanSplitter
-
-   loanTypeDefault
-      Sets the default loan type that will be used if none are defined or if the data source values do not match any values in the CollectiveAccess list loan_types.
-
-      ``{"loanTypeDefault":"in"}``
-
-      *Applicable Refineries*: loanSplitter
-
-   matchOn
-      From version 1.5. Defines exactly how the splitter will establish matches with pre-existing records. You can set the splitter to match on idno, or labels. You can also include both labels and idno in the matchOn parameter, and it will try multiple matches in the order specified.
-
-      "``{""matchOn"": [""labels"", ""idno""]}`` -Will try to match on labels first, then idno.
-
-``{""matchOn"": [""idno"", ""labels""]}`` - Will do the opposite, first idno and then labels.
-
-You can also limit matching by doing one or the other. Eg:
-{""matchOn"": ""idno""]} will only match on idno.
-
-{""matchOn"": [""^ca_collections.your_custom_code""]} will match on a custom metadata element in the collection record. Use the syntax ^ca_collections.metadataElement code."
+Once the import mapping is complete, you are ready to run the import. See the  :doc:`running` page.

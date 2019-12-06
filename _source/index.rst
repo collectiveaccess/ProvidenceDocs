@@ -89,8 +89,6 @@ Contents
    :caption: Import
    :titlesonly:
 
-   Importer Tutorial <import/tutorial>
-   Supported File Formats <import/formats>
    Import Mapping <import/mappings>
    Running an Import <import/running>
    WorldCat <import/worldcat>
