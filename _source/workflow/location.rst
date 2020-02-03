@@ -141,4 +141,4 @@ Updating the cache
 
 For performance reasons, the current location of the object is cached in the database and used when browsing. Since current location values are calculated based upon the settings in the app.conf change in configuration will likely invalidate the cached data. To regenerate the cache and ensure accurate browse results be sure to run the following caUtils command on the command line:
 
-``reload-current-values-for-history-tracking-policies``
+``caUtils reload-current-values-for-history-tracking-policies``
