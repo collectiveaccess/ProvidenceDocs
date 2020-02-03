@@ -1,3 +1,4 @@
+.. _app_conf:
 app.conf
 ========
 

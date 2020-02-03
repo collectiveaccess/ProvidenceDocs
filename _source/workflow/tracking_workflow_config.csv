@@ -1,0 +1,12 @@
+Entry name,Description,Mandatory?
+date,A bundle specified referring to the date metadata element containing the date values used to order related entries in the chronology.,Yes
+dateMode,"When set to ""dateless"" chronology will display relevant entries in the order in which they were added to CollectiveAccess, most recently added first. If omitted any value other than ""dateless"", entries will be sorted by their configured date values.",No
+template,"Display template used to format data for the related record in the chronology. The template will be evaluated relative to the relationship between the object and related record, allowing inclusion of both interstitial (relationship-based) and related-record metadata.",Yes
+setInterstitialElementsOnAdd,A list of interstitial fields to allow the user to set when creating a relationship from within the chronology,No
+sortDirection,"Direction to order items in the chronology. Default is ""DESC"" (descending, or most recent first). Use ""ASC"" to force display with most recent last.",No
+useDatePicker,Set to non-zero value to enable date picker user interface on date metadata elements.,No
+trackingRelationshipType,Relationship type to use by default for tables within the policy when creating relationships.,No
+restrictToRelationshipTypes,List of relationship types to limit display to in the chronology output.,No
+color,Color to use for color-coding in the chronology.,No
+includeFromChildren,"If set, data from child records are included in the chronology.",No
+childTemplate,"If includeFromChildren is set, childTemplate is a display template used to format data from sub-records.",No
