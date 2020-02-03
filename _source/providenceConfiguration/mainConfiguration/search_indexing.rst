@@ -1,3 +1,5 @@
+.. _search_indexing_conf:
+
 Search_indexing.conf
 ====================
 

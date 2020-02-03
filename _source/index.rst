@@ -80,9 +80,6 @@ Contents
    :titlesonly:
 
    Tracking Current Object Location <workflow/location>
-   Direct object-location tracking <workflow/direct>
-   Workflow-based location tracking <workflow/workflow>   
-   Movement-based location tracking <workflow/movement>
 
 .. toctree::
    :maxdepth: 2

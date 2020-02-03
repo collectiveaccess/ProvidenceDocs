@@ -108,33 +108,184 @@ Other, optional keys in per-type configuration configuration include ``color`` (
 The chronology bundle
 ---------------------  
 
-xxx
+You can display a chronology of values for a policy in the editing user interface using the ``history_tracking_chronology`` bundle.
+
+.. image:: images/chronology.png
+    :width: 600px
+
+The bundle is designed to provide a centralized control panel for managing current location, and includes tools to update location with new loans, movements, occurrences, storage locations, collections and entities. It also offers tools to remove existing relationships and edit interstitial (relationship-specific) data. These tools may be disabled if required. 
+
+It displays related locations, occurrences, loans, movements, etc. in chronological order, with the most recent first (although this can be changed). Information from each related record can be formatted using display templates. By default all settings are taken from the policy configuration, but can be overriden by values specific to placements of the bundle in the user interface.
+
+At a minimum when adding a chronology bundle to the editing user interface you must specify a policy. There are many other options which can be set in the an :ref:`installation profile <installation_profiles>` if desired. Available options include:
+
+.. csv-table::
+   :widths: 20, 60, 10, 10
+   :header-rows: 1
+   :file: chronology_bundle_options.csv
+
 
 The current contents bundle
 ---------------------------
 
-xxx
+The current contents bundle (``history_tracking_current_contents``) enables display of all items that currently have a given record as their current value. It is typically used on storage location records to display a list of objects currently resident in that location. 
+
+The following options are available to set in an :ref:`installation profile <installation_profiles>`:
+
+.. csv-table::
+   :widths: 20, 60, 10, 10
+   :header-rows: 1
+   :file: current_contents_bundle_options.csv
    
 Inspector display
 -----------------
 
-inspector_home_location_display_template (app.conf)
+.. image:: images/inspector.png
+    :width: 250px
+    :align: right
+    
+You can display the current value of a history tracking policy in the editor "inspector" (the information panel on the upper left-hand corner of the editor interface). You can set the policy to use on a per-table and/or per-type basis using the ``inspector_tracking_displays`` entry in app.conf. 
+
+::
+
+	inspector_tracking_displays = {
+		ca_objects = {
+			__default__ = {
+				policy = current_location,
+				label = _(Current location)
+			}
+		}
+	}
+
+    
+Each entry within ``inspector_tracking_displays`` is a table name. Each table in turn has a list of types (and/or the catch-all ``__default__`` type that matches type not explicitly configured). Each type has two entries: ``policy`` (the policy to use) and ``label`` (A label placed above the current value). In the example above the current value for the "current_location" policy is displayed when editing objects of all types.
+
+A typical inspector with this configuration would appear as show in the screen image on the right.
+
+
 
 
 Display in templates
 --------------------
 
-xxx
+Current value information may be included in :ref:`display templates <display_templates>` using the following tags:
 
-Searching and browsing on current values
-----------------------------------------
+.. csv-table::
+   :widths: 35, 65
+   :header-rows: 1
+   :file: location_display_tags.csv
 
-xxx
+Searching on current values
+---------------------------
+
+Current values can be indexed for search on a per-table, per-policy basis. Any value in the related table can be indexed, enabling one to search, for example, on the description of current loans only for objects. Typically only basic values such as name and identifier are indexed as current values, allowing for searches on storage location names, loan recipients, etc.
+
+To set up current value indexing you will need to insert new directives into your :ref:`search_indexing.conf <search_indexing_conf>` file. For each related table block to be indexed add a new ``current_values`` entry. Within this entry add entries for each policy. Within the policy entry add field indexing entries in the same format as used for regular indexing.
+
+The example below is a fragment from the ``ca_objects`` indexing configuration. Note the added ``current_values`` blocks. ``current_location`` refers to a policy configured in app.conf.
+
+.. code-block:: none
+
+	# ------------------------------------
+	ca_storage_locations = {
+		tables = {
+			places = [ca_objects_x_storage_locations],
+		},
+		fields = {
+			location_id = { DONT_INCLUDE_IN_SEARCH_FORM },
+			idno = { STORE, DONT_TOKENIZE, INDEX_AS_IDNO, BOOST = 100 }
+		},
+		current_values = {
+		    current_location = {
+			    idno = { STORE, DONT_TOKENIZE, INDEX_AS_IDNO, BOOST = 100 }
+			}
+		}
+	},
+	# ------------------------------------
+	ca_storage_location_labels = {
+		tables = {
+			places = [ca_objects_x_storage_locations, ca_storage_locations]
+		},
+		fields = {
+			location_id = { DONT_INCLUDE_IN_SEARCH_FORM },
+			name = { INDEX_ANCESTORS, INDEX_ANCESTORS_START_AT_LEVEL = 0, INDEX_ANCESTORS_MAX_NUMBER_OF_LEVELS = 10, INDEX_ANCESTORS_AS_PATH_WITH_DELIMITER = .}
+		},
+		current_values = {
+		    current_location = {
+			    name = { }
+			}
+		}
+	},
+	# ------------------------------------
+
+
+In this example both the "idno" intrinsic field (part of ca_storage_locations) and the "name" intrinsic field in storage location preferred labels (the ca_storage_location_labels table) are indexed for objects as current values. 
+
+To search on current values use the built-in "current_values" access point. Eg. to find all records with current value "Cellar" in any field search on ```current_values:Celler```. To limit the search to a specific policy use the access point "current_values.<policy code>". Eg. ```current_values.current_location:Cellar```. To search on a specific policy and field use "current_values.<policy_code>.<field code>". The field code used must be indexed for the search to return results.
+
+These same access point formats can be used when configuring advanced search forms.
+
+
+Browsing on current values
+--------------------------
+
+To browse on current location add a facet to :ref:`browse.conf <browse_conf>` of type "current_value":
+
+.. code-block:: none
+
+	current_location = {
+			type = current_value,
+			restrict_to_types = [],
+			policy = current_location,
+			
+			display = {
+				ca_storage_locations = {
+					__default__ = { template = ^ca_storage_locations.hierarchy.preferred_labels.name%delimiter=_&gt;_ }
+				}
+			},
+			
+			include_none_option = No location specified,
+			
+			label_singular = _("current location"),
+			label_plural = _("current locations")
+		},
+
+Current value-specific settings include ``policy``, which must be set and ``display``, which customizes display of current values within the browse. If not defined formatting from the policy is used.
+
+The ``collapse`` facet option controls which sorts of current values are collapsed into general headings rather than displayed individually. Keys of the entry are table names and type separated with a slash (“/”). Values are text with which to represent the collapsed group in the browse facet. For example, to collapse all occurrences of type “exhibition” into a single facet value labeled “On loan” use: 
+
+.. code-block:: none
+
+	collapse = {
+		ca_occurrences/exhibition = On loan
+	} 
+
+Selecting “On loan” would return all objects where the current location is any exhibition. Without the collapse setting, each exhibition would be listed individually.
+
 
 Home locations
 --------------
 
-xxx
+As of version 1.7.9 it is possible to set a "home" location for an object. The home location is its typical storage location. If set, both the chronology (``history_tracking_chronology``) and contents (``history_tracking_current_contents``) bundles can include options to return objects to their home locations, noting the change in the chronology.
+
+Home location can be set by clicking the small house icon in the object editor inspector panel. A hierarchy browser will appear from which you can select the home location.
+
+.. image:: images/set_home_location.png
+    :width: 600px
+
+To display the home location in the inspector panel set the ``inspector_home_location_display_template`` entry in app.conf to show the desired storage location fields and formatting. The ``home_location_display_template`` entry defines a template for formatting the home location in display templates and in the hierarchy browser.
+
+A reasonable configuration for these entries, displaying the selected home location prefixed by its parent location is:
+
+.. code-block:: none
+
+	inspector_home_location_display_template = "<unit relativeTo='ca_storage_locations.hierarchy' delimiter=' ➜ '>^ca_storage_locations.preferred_labels.name</unit>"
+	home_location_display_template = <l><inspector_home_location_display_template></l>
+
+The ``inspector_home_location_display_template`` sets the format in the above example. The ``home_location_display_template`` takes that format and surrounds it with <l> tags to make it a clickable link.
+
+Home locations can be output in display templates for objects using the tag ```^ca_objects.home_location_value```. The value returned by this tag will be formatted according to the template format in the app.conf ``home_location_display_template`` entry.
+
 
 Updating the cache
 ------------------
@@ -142,3 +293,5 @@ Updating the cache
 For performance reasons, the current location of the object is cached in the database and used when browsing. Since current location values are calculated based upon the settings in the app.conf change in configuration will likely invalidate the cached data. To regenerate the cache and ensure accurate browse results be sure to run the following caUtils command on the command line:
 
 ``caUtils reload-current-values-for-history-tracking-policies``
+
+If your current value browse is returning unexpected results it is recommended to run the command, which may resolve the issue.

@@ -1,5 +1,0 @@
-App.conf Setting Name,Description
-movement_storage_location_tracking_relationship_type,A single relationship type (identified by alphanumeric type code) used to indicate a movement storage location. Must be set to a valid movement-storage location relationship type.
-movement_object_tracking_relationship_type,A single relationship type (identified by alphanumeric type code) used to link an object to a movement for tracking purposes. Must be set to a valid object-movement relationship type.
-movement_storage_location_date_element,"The movement DateRange metadata element that stores the date the movement was executed. This is the date the movement was actually performed, not the date the record was created. Use the alphanumeric metadata element code without the table name. For example, if the element is ca_movements.date_of_move set this to date_of_move"
-record_movement_information_when_moving_storage_location,If set a movement record will be generated for all objects currently in the storage location when the location itself is moved within the location hierarchy

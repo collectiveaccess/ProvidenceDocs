@@ -1,0 +1,5 @@
+﻿Entry name,Description,Mandatory?,Default value
+policy,The code of history tracking policy to use for display.,Yes,None
+list_format,"Format of display. May be set to either ""bubbles"" (small stacked entries) or ""list"" (a list view of items).",No,bubbles
+colorItem,Background color to use on items.,No,#FFFFFF
+displayTemplate,A display template to use for each item displayed,No,The preferred label of the related item

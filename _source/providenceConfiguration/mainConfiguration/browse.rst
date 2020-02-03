@@ -1,3 +1,4 @@
+.. _browse_conf:
 Browse.conf
 ===========
 

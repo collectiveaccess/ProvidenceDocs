@@ -1,0 +1,24 @@
+﻿Entry name,Description,Mandatory?,Default value
+policy,The code of history tracking policy to display.,Yes,None
+displayMode,"Format of display. May be set to either ""chronology"" (chronological view of history) or ""tabs"" (tabbed display with current value and history separated). Most history management options are only available when using the chronology display mode.",No,chronology
+dateMode,"Determines method used to order the chronology. May be set to either ""use_dates"" (sort by date as configured) or ""dateless"" (sort by order entered). ""dateless"" is typically used as a fallback when legacy location data lacks specific dates.",No,use_dates
+useAppConfDefaults,Use policy defaults as configured in app.conf when set to a non-zero value. Setting to zero allows override of many options.,No,1
+sortDirection,"Direction to order items in the chronology. Default is ""DESC"" (descending, or most recent first). Use ""ASC"" to force display with most recent last.",No,DESC
+currentValueColor,"Background color code for current value used when displayMode is ""tabs""",No,#EEEEEE
+futureValueColor,"Background color code for future values used when displayMode is ""tabs""",No,#EEEEEE
+pastValueColor,"Background color code for historical values used when displayMode is ""tabs""",No,#EEEEEE
+hide_include_child_history_controls,History of children of related records can be included on demand. Set to a non-zero value to hide the tool to control this feature.,No,0
+hide_add_to_loan_controls,Set to a non-zero value to hide the tool for adding loans to the chronology.,No,0
+hide_add_to_movement_controls,Set to a non-zero value to hide the tool for adding movements to the chronology.,No,0
+hide_update_location_controls,Set to a non-zero value to hide the tool for adding storage locations to the chronology.,No,0
+hide_return_to_home_location_controls,Set to a non-zero value to hide the tool for returning an object to its home location,No,0
+hide_add_to_occurrence_controls,Set to a non-zero value to hide the tool for adding occurrences to the chronology.,No,0
+add_to_occurrence_types,"A list of occurrence types to offer ""add to chronology"" options for. Values must be valid occurrence type codes.",No,0
+hide_add_to_collection_controls,Set to a non-zero value to hide the tool for adding collections to the chronology.,No,0
+add_to_collection_types,"A list of collection types to offer ""add to chronology"" options for. Values must be valid collection type codes.",No,0
+hide_add_to_entity_controls,Set to a non-zero value to hide the tool for adding entities to the chronology.,No,0
+add_to_entity_types,"A list of entity types to offer ""add to chronology"" options for. Values must be valid entity type codes.",No,0
+hide_add_to_object_controls,Set to a non-zero value to hide the tool for adding objects to the chronology.,No,0
+useHierarchicalBrowser,Set to a non-zero value to offer a hierarchcy browser when selecting storage locations. If not set a type-ahead lookup will be used.,No,0
+hide_value_interstitial_edit,Set to a non-zero value to hide tools for editing interstitial data on relationships displayed in the chronology.,No,0
+hide_value_delete,Set to a non-zero value to hide the tool from deleting  items from the chronology,No,0
