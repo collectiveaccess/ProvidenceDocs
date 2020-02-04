@@ -4,14 +4,14 @@ System Requirements
 What is Providence?
 -------------------
 
-**Providence** is the core of CollectiveAccess. It includes a schema modeling framework, a database, a media system framework capable of manipulating and converting digital images, video, audio and documents, and a web-based user interface application for cataloguing, searching and managing your collections. If you are starting out with CollectiveAccess, **Providence** is the first (and most important) component you need to install. All other CollectiveAccess components are add-ons to Providence and require a functional Providence installation.
+**Providence** is the core of CollectiveAccess. It includes a data modeling framework, a database, a media handling framework capable of manipulating and converting digital images, video, audio and documents, and a web-based user interface application for cataloguing, searching and managing your collections. If you are starting out with CollectiveAccess, **Providence** is the first (and most important) component you need to install. All other CollectiveAccess components are add-ons to Providence and require a functional Providence installation.
 
 Getting Started
 -------------------
 
-Providence is a web-based application that runs on a designated server computer. Users access the server from their own computers over a network using standard :ref:`web browser software <Supported_web_browsers>`. As with any web-based application, Providence is designed to be accessed via the internet, enabling collaborative cataloguing of collections by widely dispersed teams. However, you do **not** have to make your Providence installation accessible on the internet. It will function just as well on a local network with no internet connectivity, or even on a single machine with no network connectivity at all. Who gets to access your system is entirely up to you and your network administrator.
+Providence is a web-based application that runs on a server. Users access the server from their own computers over a network using standard web browser software. As with any web-based application, Providence is designed to be accessed via the internet, enabling collaborative cataloguing of collections by widely dispersed teams. However, you do **not** have to make your Providence installation accessible on the internet. It will function just as well on a local network with no internet connectivity, or even on a single machine with no network connectivity at all. Who gets to access your system is entirely up to you.
 
-The first step, before attempting an installation, is to verify that your server meets the basic requirements for running Providence:
+Before attempting an installation verify that your server meets the basic requirements for running Providence:
 
 
 .. csv-table::
@@ -29,19 +29,17 @@ Providence requires three core open-source software packages be installed prior 
    :header-rows: 1
    :file: software_packages.csv
 
-.. _PHP: http://php.net/
-.. _Apache HTTPD version 2.0 or 2.2: http://httpd.apache.org/
-.. _MySQL: http://dev.mysql.com/
+.. _PHP: https://php.net/
+.. _Apache or nginx: https://httpd.apache.org/ or https://nginx.org
+.. _MySQL: https://dev.mysql.com/
 
-All of these should be available as pre-compiled packages for most Linux distributions and as installer packages for Windows. Apache and PHP come standard with recent versions of Mac OS X (desktop and server versions) - you should not have to install them yourself. MySQL comes standard with Mac OS X Server but not desktop, so you will have to install MySQL yourself if you are using the desktop version of Mac OS X. For Macs, `Brew`_ is a highly recommended way to get all of CA's prerequisites up and running.
-
-A step-by-step recipe for installing Apache, PHP, ImageMagick and MySQL on a Windows host is also available on this wiki.
+All of these should be available as pre-compiled packages for most Linux distributions and as installer packages for Windows. For Macs, `Brew`_ is a highly recommended way to get all of CA's prerequisites quickly up and running.
 
 If setting up Apache, MySQL or PHP is daunting, you may want to consider pre-configured Apache/MySQL/PHP environments available for Windows and Macintosh such as `MAMP`_ and `XAMPP`_. These can greatly simplify setup of CollectiveAccess and its' requirements and are useful tools for experimentation and prototyping. They are not recommended for hosting live systems, however.
 
 
-.. _Brew: http://brew.sh/
-.. _MAMP: http://www.mamp.info/
+.. _Brew: https://brew.sh/
+.. _MAMP: https://www.mamp.info/
 .. _XAMPP: https://www.apachefriends.org/index.html
 
 Required and Suggested Software Packages By Distribution
@@ -104,7 +102,7 @@ Some packages used by CollectiveAccess are available only from 3rd party reposit
 Directories
 -----------
 
-If you are running Apache on Linux, by default the root of your CollectiveAccess installation will likely be in **/var/www/html.**
+If you are running Apache on Linux, the root of your CollectiveAccess installation will usually be located in **/var/www/html.**
 
 Software requirements for media processing
 ------------------------------------------
@@ -120,9 +118,11 @@ Most users will want at a minimum GraphicsMagick and ffmpeg installed on their s
 PHP extensions for media processing (optional)
 ----------------------------------------------
 
-CA supports two different mechanisms to employ GraphicsMagick or ImageMagick. The preferred option is a PHP extensions that, when installed, provide a fast and efficient way for PHP applications such as CA to access GraphicsMagick or ImageMagick functionality. The option option invokes the GraphicsMagick or ImageMagick command-line program directly without any PHP extension.
+CA supports two different mechanisms to employ GraphicsMagick or ImageMagick. The preferred option is a PHP extensions that, when installed, provide a fast and efficient way for PHP applications such as CA to access GraphicsMagick or ImageMagick functionality. Alternatively GraphicsMagick or ImageMagick can be invoked as a command-line program directly without any PHP extension.
 
-In general you should try to use a PHP extension rather than the command-line mechanism. The extensions provide **much** better performance. Unfortunately, the extensions have proven to be unstable in some environments and can be difficult to install on non-Linux systems (and in particular Windows). If you are running the PHP GMagick (for GraphicsMagick) or IMagick (for ImageMagick) extension and are seeing segmentation faults or incorrect image encoding such as blank images you should remove the extension, let the command-line mechanism take over and see if that improves things.
+In general you should try to use a PHP extension rather than the command-line mechanism. The extensions provide **much** better performance. Unfortunately, the extensions have proven to be unstable in some environments and can be difficult to install on Windows systems. If you are running the PHP GMagick (for GraphicsMagick) or IMagick (for ImageMagick) extension and are seeing segmentation faults or incorrect image encoding such as blank images you should remove the extension, let the command-line mechanism take over and see if that improves things.
+
+.. note:: GraphicsMagick version 1.3.32 and better break certain functions in the PHP GMagick extension API and cause all media processing to fail in CollectiveAccess in versions prior to 1.7.9. Upgrade to the current version of CollectiveAccess if you are seeing failed processing with later versions of GraphicsMagick from 1.3.32.
 
 Both `Gmagick`_ and `Imagick`_ are available in the PHP PECL repository and often available as packages for various operating systems. They should be easy to install on Unix-y operating systems like Linux and Mac OS X. Installation on Windows is a waking nightmare.
 
@@ -133,27 +133,27 @@ Both `Gmagick`_ and `Imagick`_ are available in the PHP PECL repository and ofte
 Configuring PHP prior to installation
 -------------------------------------
 
-Once you have the core software requirements installed on your server you're almost ready to install CA. But first you will need to take a look at your PHP configuration file and possibly adjust a few options.
+With the core software requirements installed on your server examine the newly installed PHP configuration file. A few settings may need adjustment.
 
 Your PHP configuration file is usually named php.ini. On Linux systems the php.ini file is often in /etc/php.ini or /usr/local/lib/php.ini. If you cannot locate your php.ini file, look for its location in the output of phpinfo(), either by running the PHP command line interpreter with the -i option (eg. **php -i**) or running a PHP script that looks like this: **<?php phpinfo(); ?>**  The output from phpinfo() will include the precise location of the php.ini file used to configure PHP.
 
-Once you've found your php.ini file open it up and verify and, if necessary, change the following values:
+Once you've found your php.ini file  verify and, if necessary, change the following values:
 
 1. *post_max_size* - sets maximum size a POST-style HTTP request can be. The default value is 8 megabytes. If you are uploading large media files (and most CollectiveAccess users are) you will need to raise this to a value larger than the largest file size you are likely to encounter.
-2. *upload_max_filesize* - sets the maximum size of an uploaded file. Set this to a slightly smaller value that that set for post_max_size.
+2. *upload_max_filesize* - sets the maximum size of an uploaded file. Set this to a the same large value set for post_max_size.
 3. *memory_limit*  - sets the maximum amount of memory a PHP script may consume. The default is 128 megabytes which should be enough for many systems, unless you are (a) uploading large images (b) reindexing the search index of a large database or (c) importing data. Even if you have not received memory limit exceeded errors, you may want to increase this limit to 196 or 256 megabytes.
 4. *display_errors* - determines whether errors are printed to the screen or not. In some installation this is set to "off" by default. While this is a good security decision for public-facing systems, it can make debugging installation problems difficult. It is therefore suggested that while installing and testing CA you set this option to "On"
 
-Installing Providence (finally!)
---------------------------------
+Installing Providence 
+---------------------
 
-Now that you've got all the requirements in place it's time to set up CollectiveAccess. You will need to perform the following steps:
+To install CollectiveAccess Providence perform the following steps:
 
 1. Set up an empty MySQL database for your installation. Give the database a name and create a login for it with full read/write access. Note the login information - you'll need it later. You can use the MySQL command line or web-based tools like phpMyAdmin to create the database and login.
-2. Copy the contents of the CollectiveAccess software distribution to the root of the web server instance in which your installation will run. You can obtain the latest release version from our `download page`_. If you are to obtain CollectiveAccess from the project's GitHub repository then run the following command from the parent of the directory into which you want to install CA:
+2. Copy the contents of the CollectiveAccess software distribution to the root of the web server instance in which your installation will run. You can obtain the latest release version from our `download page`_. If you wish to obtain CollectiveAccess from the project's GitHub repository run the following command from the parent of the directory into which you want to install CA:
    ``git clone https://github.com/collectiveaccess/providence.git providence`` where the trailing "providence" is the name of the directory you want your installation to be in. `Git will create the directory for you`_.
 3. Copy the setup.php-dist file (in the root directory of the CA distribution) to a file named setup.php. Edit setup.php, changing the various directory paths and database login parameters to reflect your server setup.
-4. Make sure the permissions on the ``app/tmp``, ``vendor/ezyang/htmlpurifier/library/HTMLPurifier/DefinitionCache`` and ``media`` directories are such that the web server can write to them. In the next step, the web-based installer will need the access to create directories for uploaded media, and to generate cached files. In most hosted environments these permissions will already be set correctly.
+4. Make sure the permissions on the ``app/tmp``, ``app/log``, ``vendor/ezyang/htmlpurifier/library/HTMLPurifier/DefinitionCache`` and ``media`` directories are such that the web server can write to them. In the next step, the web-based installer will need the access to create directories for uploaded media, and to generate cached files. In most hosted environments these permissions will already be set correctly.
 5. In a web browser navigate to the web-based installer. If the URL for your installation server is ``http://www.myCollectiveaccessSite.org`` then the URL to the installer is ``http://www.myCollectiveaccessSite.org/install``. Enter your email address and select the installation profile (a profile is a set of pre-configured values for your system) that best fits your needs. Then click on the "begin" button. If you don't see a profile suitable for your project you may want to ask on the `support forum`_ or look at our `list of contributed profiles`_.
 6. The installer will give you login information for your newly installed system when installation is complete. Be sure to note this information in a safe place!
 
@@ -168,21 +168,21 @@ Optional post installation tasks
 Set up for background encoding of media
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-By default, CollectiveAccess will process all uploaded media immediately upon receipt. For large media files this can make the user's browser in unresponsive for an extended period of time while CA performs large and complex media conversions. If you expect that you will be uploading many large media files you can enable background processing of media by setting the __CA_QUEUE_ENABLED__ setting to 1 in your **setup.php** (it is off by default).
+By default, CollectiveAccess will process all uploaded media immediately at time of upload. For large media files this can make the user's browser in unresponsive for an extended period of time while CA performs large and complex media conversions. If you expect to be uploading many large media files you can enable background processing of media by setting the __CA_QUEUE_ENABLED__ setting to 1 in your **setup.php** (it is off by default).
 
-Once background processing is enabled, all media files exceeding a specific size will be queued for later processing. Small sizes will still be run "while you wait" unless you modify the media processing configuration. To actually process the images in the queue you must run the script **support/utils/processTaskQueue.php** This script is typically run from a **crontab** (in Unix-like operating systems, at least) with the hostname of your install as the first parameter. The hostname is needed in case you are running several instances of CA within the same install. If you are only running a single instance (just about everyone is) then you can just pass "default" as the parameter.
+Once background processing is enabled, all media files exceeding a specific size will be queued for later processing. Small sizes will still be run "while you wait" unless you modify the media processing configuration. To actually process the images in the queue you must run the script **support/bin/caUtils process-task-queue**. This script is typically run from a **crontab** (in Unix-like operating systems, at least).
 
-You can run the **processTaskQueue.php** script as often as you want. Only a single instance of the script is allowed to run at any given time, so you need not worry about out-of-control queue processing scripts running simultaneously and depleting server resources. Note that the **processTaskQueue.php** should *always* be run under a user with write-access to the CA media directory.
+You can run the queue processing script as often as you want. Only a single instance of the script is allowed to run at any given time, so you need not worry about out-of-control queue processing scripts running simultaneously and depleting server resources. Note that the queue processing script should *always* be run under a user with write-access to the CA media directory.
 
 What to do if something goes wrong?
 -----------------------------------
 
 .. tip::
 
-   If your CollectiveAccess installation fails, the first thing to do is look at the error messages, if any. If you receive a blank white screen odds are error messages are being suppressed in your PHP php.ini configuration file. Try changing the **display_errors** option to "On" and then attempt to reinstall.
+   If your CollectiveAccess installation fails, the first thing to do is examine error messages on screen or in the log (written to the app/log directory). If you receive a blank white screen odds are error messages are being suppressed in your PHP php.ini configuration file. Try changing the **display_errors** option to "On" and then attempt to reinstall.
 
 
-If you are totally stumped after reviewing the error messages and logs, ask us for help! You can post your questions on the CA support `forum`_. Please include a full description of your problem as well as the operating system you are running, the version of CA you are running, the text of any error messages, the output of phpinfo() and the output of the CA "configuration check" (available in the "Manage" menu under "System Configuration") - assuming you are able to log in. We will try our best to resolve your problems quickly.
+If you are totally stumped after reviewing the error messages and logs you can find help on the online support `forum`_. Please include a full description of your problem as well as the operating system you are running, the version of CA you are running, the text of any error messages, the output of phpinfo() and the output of the CA "Configuration Check" (available in the "Manage" menu under "System Configuration") - assuming you are able to log in. We will try our best to resolve your problems quickly.
 
 You may also want to look at our list of OS specific :ref:`Installation <installation_guide>` notes.
 

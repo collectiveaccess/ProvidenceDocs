@@ -1,1 +1,4 @@
-Software Package,NotesWebserver,Apache version 2.4  or NGINX 1.14 or later are recommended.MYSQL Database,"Versions 5.5, 5.6 or 5.7 are supported. MySQL 8.0 is not yet supported. Make sure your MySQL installation supports InnoDB tables. CollectiveAccess requires InnoDB support to function properly."PHP programming language,"PHP version 5.6 or better is required. PHP 7.0 or later is strongly recommended. Note that the current version of CollectiveAccess, 1.7, will be the last to support PHP 5.6."
+Software Package,Notes
+Webserver,Apache version 2.4  or NGINX 1.14 or later are recommended.
+MYSQL Database,"Versions 5.5, 5.6, 5.7 and 8.0 are supported."
+PHP programming language,"PHP version 7.0 or better is required. PHP 7.2 or later is strongly recommended. Note that the CollectiveAccess, 1.7.7 is the last version to support PHP 5.6."
