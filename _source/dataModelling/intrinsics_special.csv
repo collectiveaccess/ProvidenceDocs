@@ -1,0 +1,31 @@
+﻿Code,Description,Applies to,Examples
+created,"Date/time record was created. Returns date/time formatted using system defaults for display. Optional subfields may be specified to obtain the date/time in different formats, and information about the user that created the record. Subfields include:
+
+user = the creator's user name
+fname = the creator's first name
+lname = the creator's last name
+email = the creator's email address
+timestamp = the creation date/time as a Unix timestamp",Any record,"ca_objects.created (returns date/time as display text)
+ca_objects.created.timestamp (returns date/time as Unix timestamp)
+ca_objects.created.email (returns the email of the user who created the record)"
+lastModified,"Date/time record was last modified. Returns date/time formatted using system defaults for display. Optional subfields may be specified to obtain the date/time in different formats, and information about the user that last modified the record. Subfields include:
+
+user = the user name of the user who last modified the reocrd
+fname = the last modifier's first name
+lname = the last modifier's last name
+email = the last modifier's email address
+timestamp = the last modification date/time as a Unix timestamp",Any record,"ca_objects.lastModified (returns date/time of last modification as display text)
+ca_objects.lastModified.timestamp (returns date/time of last modification as Unix timestamp)
+ca_objects.lastModified.email (returns the email of the user who last modified the record)"
+_guid,A globally unique identifier (GUID) for the record. This is the same GUID value used to track records across replicated systems. (Available from version 1.7.9),Any record,ca_objects.guid
+history_tracking_current_value,Current value for history tracking policy. Policy used is the default policy unless overridden by passing the a policy option value on the tag.,Any record for which a current value tracking policy is defined,"ca_objects.history_tracking_current_value (current value for object default policy)
+ca_objects.history_tracking_current_value%policy=provenance (current value for object record using ""provenance"" policy)"
+history_tracking_current_date,Date of current value for history tracking policy. Policy used is the default policy unless overridden by passing the a policy option value on the tag.,Any record for which a current value tracking policy is defined,"ca_objects.history_tracking_current_date (current value cate for object default policy)
+ca_objects.history_tracking_current_date%policy=provenance (current value date for object record using ""provenance"" policy)"
+history_tracking_current_contents,Values of all records that use this record as their current value. Policy used is the default policy unless overridden by passing the a policy option value on the tag.,Any record which is used by at least one current value tracking policy,"ca_storage_locations.history_tracking_current_contents (all values that use this location record as their current value for any default policy)
+ca_storage_locations.history_tracking_current_contents%policy=current_location (all records using this location record as their curent value using the ""current_location"" policy)"
+submitted_by_user,"Name and email of user who submitted the record using the Pawtucket ""contribute"" form feature. By default the user's first and last name, followed by email address are returned. The return value may be controlled by passing a ""display_template"" tag option. The display template is evaluated relative to the ca_users record.","ca_objects, ca_entities, ca_places, ca_occurrences, ca_collections, ca_object_lots, ca_loans, ca_movements, ca_storage_locations, ca_object_representations","ca_objects.submitted_by_user (Returns <first name> <last name> (<email>))
+ca_objects.submitted_by_user%display_template=^ca_users.email (Returns email address alone)"
+submission_group,"The group the user was in when the record was submitted using the Pawtucket ""contribute"" form feature. By default the group name followed by group code is returned. The return value may be controlled by passing a ""display_template"" tag option. The display template is evaluated relative to the ca_user_groups record.","ca_objects, ca_entities, ca_places, ca_occurrences, ca_collections, ca_object_lots, ca_loans, ca_movements, ca_storage_locations, ca_object_representations","ca_objects.submission_group (Returns <group name> (<group code>))
+ca_objects.submission_group%display_template=^ca_user_groups.codel (Returns group code alone)"
+,,,
