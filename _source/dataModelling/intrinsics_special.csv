@@ -10,14 +10,14 @@ ca_objects.created.timestamp (returns date/time as Unix timestamp)
 ca_objects.created.email (returns the email of the user who created the record)"
 lastModified,"Date/time record was last modified. Returns date/time formatted using system defaults for display. Optional subfields may be specified to obtain the date/time in different formats, and information about the user that last modified the record. Subfields include:
 
-user = the user name of the user who last modified the reocrd
+user = the user name of the user who last modified the record
 fname = the last modifier's first name
 lname = the last modifier's last name
 email = the last modifier's email address
 timestamp = the last modification date/time as a Unix timestamp",Any record,"ca_objects.lastModified (returns date/time of last modification as display text)
 ca_objects.lastModified.timestamp (returns date/time of last modification as Unix timestamp)
 ca_objects.lastModified.email (returns the email of the user who last modified the record)"
-_guid,A globally unique identifier (GUID) for the record. This is the same GUID value used to track records across replicated systems. (Available from version 1.7.9),Any record,ca_objects.guid
+_guid,A globally unique identifier (GUID) for the record. This is the same GUID value used to track records across replicated systems. (Available from version 1.7.9),Any ford,ca_objects.guid
 history_tracking_current_value,Current value for history tracking policy. Policy used is the default policy unless overridden by passing the a policy option value on the tag.,Any record for which a current value tracking policy is defined,"ca_objects.history_tracking_current_value (current value for object default policy)
 ca_objects.history_tracking_current_value%policy=provenance (current value for object record using ""provenance"" policy)"
 history_tracking_current_date,Date of current value for history tracking policy. Policy used is the default policy unless overridden by passing the a policy option value on the tag.,Any record for which a current value tracking policy is defined,"ca_objects.history_tracking_current_date (current value cate for object default policy)
