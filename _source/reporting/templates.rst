@@ -272,7 +272,7 @@ To only show content when the count is a specific number set both min and max to
 
 ``<ifcount code="ca_entities.related" min="1" max="1">Related entity: ^ca_entities.preferred_labels.displayname</ifcount>``
 
-The <if> tag provides maximum control by using expressions to determine when content is displayed. For example, to output the display only if "current" is selected from the type drop-down in a repeating credit line container:
+The <if> tag provides maximum control by using :ref:`expressions <expressions>` to determine when content is displayed. For example, to output the display only if "current" is selected from the type drop-down in a repeating credit line container:
 
 .. code-block:: none
 
@@ -301,9 +301,9 @@ Because <case> tags stop evaluating as soon as they find a template with output 
 
 Expressions
 ^^^^^^^^^^^
-It's also possible to output the result of expressions as-is. A use case for this is making certain statistics about your metadata searchable. For instance, you could use Prepopulate to always keep the current number of entity relationships for your objects in a hidden (but searchable and sortable) field.
+It's also possible to output the result of :ref:`expressions <expressions>` as-is. A use case for this is making certain statistics about your metadata searchable. For instance, you could use Prepopulate to always keep the current number of entity relationships for your objects in a hidden (but searchable and sortable) field.
 
-Usage of the expression tag is simple: Anything inside the tag is treated as expression (see expressions for more info). You can use your typical caret-prefixed bundle placeholders and even unit tags. Unit tags get evaluated/replaced first when CollectiveAccess runs display templates, so you can use the result of a unit tag in your expression. Here are a few basic examples:
+Usage of the expression tag is simple: Anything inside the tag is treated as an :ref:`expression <expressions>`. You can use your typical caret-prefixed bundle placeholders and even unit tags. Unit tags get evaluated/replaced first when CollectiveAccess runs display templates, so you can use the result of a unit tag in your expression. Here are a few basic examples:
 
 ``<expression>5 + 4</expression>``
 ``<expression>length(^ca_objects.preferred_labels)</expression>``

@@ -12,7 +12,7 @@ Rules allow you to set record-level conditionals in your mapping with target act
 
 Rules rely on a two part operation outlined in the import mapping. The first component is is called "Rule triggers" and it is an expression statement that results in a quantity that is evaluated by the data importer. The second defines "rule actions" that are performed based on the outcome of the expression.
 
-Let's walk through an example. For an in depth look at writing "Rule triggers" via Expressions, read more here.
+Let's walk through an example. (See also the in-depth description of :ref:`expressions <expressions>`).
 
 For our example, we are going to skip all records with the phrase "do not use" in the description. To do so we write an expression to match "do not use" in the required field, and then set the action to execute when the expression is true to be "SKIP." For the sake of this example we're importing an Excel spreadsheet and the description is in column 5:
 
