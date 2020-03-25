@@ -1,0 +1,6 @@
+﻿Option,Description,Notes,Example
+skipIfEmpty,Skip the mapping If the corresponding data value is empty.,,"{""skipIfEmpty"": 1}"
+delimiter,Delimiter to split repeating values on.  ,,"{""delimiter"": "";""}"
+skipIfExpression,"Skip mapping if expression evaluates to true. All data in the current row is available during expression evaluation. By default,  data is the ""raw"" and source data. To use data rewritten by replacement values and applyRegularExpressions in your expression evaluation, set the _useRawValuesWhenTestingExpression_ to false.",,"{""skipIfExpression"": ""^14 =~ /kitten/""}"
+skipRowIfExpression,Skip data row if expression evaluates to true. Data available during evaluation is subject to the same rules as in _skipIfExpression_.,,"{""skipRowIfExpression"": ""wc(^14) > 10""}"
+useRawValuesWhenTestingExpression,"Determines whether data used during evaluation of expressions in _skipIfExpression_ and _skipRowIfExpression_ is raw, unaltered source data and data transformed using any replacement values and/or regular expressions defined for the mapping. The default value is true. Set to false to use transformed data. (Available from version 1.7.9)",,"{""useRawValuesWhenTestingExpression"": false}"

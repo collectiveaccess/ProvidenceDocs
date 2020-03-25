@@ -104,7 +104,8 @@ Source          Description
 __row__         The number of the row being imported.  
 __source__      The name of the file being imported. For files imported through the web interface this will be a server-side temporary filename, not the original name of the file.
 __filename__    The original name of the file, when available. If the original name of the file is not available (because the uploading web browser did not report it, for instance) then the value for __source__ is returned.
-__filepath__    The full path on the server to the file being imported.                                           
+__filepath__    The full path on the server to the file being imported.   
+__now__         The current date and time. (Available from version 1.7.9).                                        
 ==============  ================================================================================
 
 CA_table.element (Column 3)
@@ -150,12 +151,11 @@ Options (Column 5)
 
 Options can be used to set a variety of conditions on the import, process data that needs clean-up, or format data with templates. This example shows some of the more commonly used options. See the complete list of options: :doc:`mappings/mappingOptions` 
 
-==============  ================================================================================  =======================  =======================================
-Type of Option  Description                                                                       Parameter notes          Example for "Options" column of mapping
-==============  ================================================================================  =======================  =======================================
-skipIfEmpty     If the data value corresponding to this mapping is empty, skip the mapping line.  set to a non-zero value  {"skipIfEmpty": 1}
-delimiter       Delimiter to split repeating values on.                                           delimiter value          {"delimiter": ";"}
-==============  ================================================================================  =======================  =======================================
+.. csv-table::
+   :widths: 15, 40, 20, 25
+   :header-rows: 1
+   :file: mappingoptions.csv
+
 
 In the example above, multiple subject values in the same cell that are separated by semi-colons. By setting the delimiter option in the mapping, you are ensuring that these subject values get parsed and imported to discrete instances of the Subject field. Without the delimiter option, the entire string would end up a single instance of the Subject field.
 
