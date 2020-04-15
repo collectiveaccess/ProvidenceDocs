@@ -1,0 +1,15 @@
+﻿Placeholder,Description,Options,Examples
+^ca_object_representations.transcription_count,Number of user-generated transcriptions attached to the representation.,,1
+^ca_object_representations.page_count,Number of pages in a multipage document. Will be null when not applicable.,,10
+^ca_object_representations.preview_count,Number of previews available for a multipage document ot timebased media. Will be null when not applicable. This is a synonym for page_count,,10
+^ca_object_representations.media_dimensions,"Pixel dimensions for the media, formatted for display.",version = version to use. Default is original.,1024p x 2048p
+^ca_object_representations.media_duration,"Duration of timebased media, formatted for display.","durationFormat = Sets format of duration. Use ""delimited"" for delimited format, ""hms"" for hours/minutes/seconds, ""hm"" for hours/minutes and ""seconds"" for output in seconds. Default is ""hms"".
+version = version to use. Default is original.",1h 24m 10s
+^ca_object_representations.media_class,"General type of originally uploaded media. Possible values are ""image"", ""video"", ""audio"", and ""document"".",,image
+^ca_object_representations.media_format,"Format of originally uploaded media, for display. ",,"JPEG, TIFF"
+^ca_object_representations.media_filesize,"File size of media, formatted for display.",version = version to use. Default is original.,43.2mb
+^ca_object_representations.media_colorspace,"Colorspace of media, formatted for display.",version = version to use. Default is original.,"RGB, CMYK"
+^ca_object_representations.media_resolution,"Pixel resolution of media, formatted for display. May not be available for all file formats",version = version to use. Default is original.,300ppi
+^ca_object_representations.media_bitdepth,"Bit depth of media, formatted for display. May not be available for all file formats. ",version = version to use. Default is original.,8bpp
+^ca_object_representations.media_center_x,X-coordinate of user-set center crop point for image media. Coordinate is a decimal fraction of the width of the image.,,0.43
+^ca_object_representations.media_center_y,Y-coordinate of user-set center crop point for image media. Coordinate is a decimal fraction of the width of the image.,,0.22
