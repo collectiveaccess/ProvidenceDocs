@@ -388,7 +388,7 @@ There are a few placeholders that have special meanings for certain kinds of pri
 As of version 1.7.9 there are also several special placeholders available for object representations that return pre-formatted media-specific metadata. These are typically used to format display text in lists of object representations:
 
 .. csv-table::
-   :widths: 25, 75
+   :widths: 20, 40, 20, 20
    :header-rows: 1
    :file: object_representation_special_placeholders.csv
 
