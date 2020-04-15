@@ -83,13 +83,13 @@ Clicking the “Add widget” button will list all available widgets for inclusi
 
 - **Records by Status** – Lists records that have been assigned a chosen status. Change the settings to choose which status to display, the type of record and how many you wish to see.
 
-- **Saved Searches** – Displays shortcut links that allow you to quickly run saved searches.
+- **Saved Searches** – Displays shortcut links that allow you to quickly run saved searches. See manual entry for `Set Tools <https://manual.collectiveaccess.org/usermanual/manage.html#search-tools>`_.
 
-- **Search by Set** – Displays the objects in a chosen Set.
+- **Search by Set** – Displays the objects in a chosen Set. See manual entry for `My Sets <https://manual.collectiveaccess.org/usermanual/manage.html#my-sets>`_.
 
 - **Processing Status** – Displays the status of any media processing.
 
-- **Your Watched Items** – Lists the items currently being watched and the recent changes made to each record.
+- **Your Watched Items** – Lists the items currently being watched and the recent changes made to each record. See manual entry for `Watched Items <https://manual.collectiveaccess.org/usermanual/manage.html#watched-items>`_.
 
 **Settings Information Icon**				
 While in edit mode any widget on your dashboard may be customized by clicking on the settings information icon (in the upper right corner of each Widget). For instance, in the Recent Changes widget, you can control how far back in time the change list goes as well as the type of records for which changes will be tracked.
@@ -110,14 +110,16 @@ The “New” menu contains options for creating new records. Use this menu to c
 **Find**
 The “Find” menu provides discovery tools specific to each record type (unlike the QuickSearch, described below, which targets all types of records). Three kinds of discovery tools are available:
 
-- **Basic Search** – a simple text search box that, by default, searches all fields in a single record type. If desired, additional qualifiers, wildcards and booleans may be added for finer control of your search.
+- **Basic Search** – a simple text search box that, by default, searches all fields in a single record type.
 
-- **Advanced Search** – a search on specific fields using purpose built search forms. You can select from a range of standard search forms, or specify your own forms for reuse and sharing with other users.
+- **Advanced Search** – a search on specific fields using purpose built search forms.
 
-- **Browse** – allows you to browse records using lists of values in specific fields. Multiple field values may be selected in sequence to rapidly refine returned results. 
+- **Browse** – allows you to browse records using lists of existing values in specific fields.
+
+See the manual page `Searching and Browsing <https://manual.collectiveaccess.org/usermanual/find.html>`_. 
 
 **Manage**
-The “Manage” menu includes a variety of options to manage your CollectiveAccess preferences and tools. Options to manage personal search forms, reports and sets of records are available in this menu. System administrators will find tools for managing user logins and system setup in this menu. User generated content submitted through Pawtucket-based front-end commenting and tagging tools and content managed front-end pages are also managed here.
+The “Manage” menu includes a variety of options to manage your CollectiveAccess preferences and tools. Options to manage personal search forms, reports and sets of records are available in this menu. System administrators will find tools for managing user logins and system setup in this menu. User generated content submitted through Pawtucket-based front-end commenting and tagging tools and content managed front-end pages are also managed here. See the manual page `Manage and Site Administration <https://manual.collectiveaccess.org/usermanual/manage.html#>`_
 
 **Import**
 The “Import” menu contains options for importing media and metadata from external sources. Additionally, a media import tool is available for the batch ingest of images and time-based material.
@@ -126,4 +128,4 @@ The “Import” menu contains options for importing media and metadata from ext
 The “History” menu provides a list of recently viewed and edited records. It will only appear in the Global Navigation bar after you have searched for and viewed records in the system.
 					
 **QuickSearch**					
-Always available in the upper right-hand corner of the browser window, the QuickSearch is the simplest and most convenient search tool in CollectiveAccess. It will cast a wide net for terms entered into it, searching across all fields in all tables of records. Results are displayed in a table format.
+Always available in the upper right-hand corner of the browser window, the QuickSearch is the simplest and most convenient search tool in CollectiveAccess. It will cast a wide net for terms entered into it, searching across all fields in all tables of records.

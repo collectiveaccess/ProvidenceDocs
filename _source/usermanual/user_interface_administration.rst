@@ -7,26 +7,33 @@ User Interface Administration
 User Interface Configuration
 ----------------------------
 
-There are several configuration options that can be set system wide or for individual users that can improve cataloging efficiency for complex editing interfaces. These configuration options are set via *Manage > Administration> User Interfaces*. If your account does not have access to administration configuration please contact your system administrator.
+There are several configuration options that can be set system wide or for individual users that can improve cataloging efficiency for editing interfaces. 
+These configuration options are set via *Manage > Administration> User Interfaces*. If your account does not have access to administration configuration please contact your system administrator. Individual users can select the User Interface they prefer in *Manage > My Preferences > Editing*.
 
-**Creating User Interfaces**
-It is possible to make multiple User Interfaces for record types that are geared to specific cataloging tasks or users’ working style. For example, if a cataloger is responsible for entering data in only a small subset of metadata elements for a record, a new User Interface can be configured with only those elements to support that specific workflow. 
 
-When creating User Interfaces, access to User Interfaces and User Interface screens can be set at the individual, group and role level to limit availability to subsets of users. Individual users can select the User Interface they prefer in *Manage > My Preferences > Editing*. 
-
-Similarly, users can select User Interfaces for use in Quick Add forms in *Manage > My Preferences > Quick Add*. Creating custom User Interfaces for Quick Add screens can be very useful for ensuring a core subset of information is entered during the Quick Add process.
- 
 .. figure:: ../_static/images/5_1A.png
    :name: Preferred User Interface
    :target: ../_static/images/5_1A.png
    :alt: Preferred User Interface
 
+
+      
+*Fig 5.1a: Selecting preferred user interface for record types in Manage > My Preferences > Editing and 
+
+**Creating User Interfaces**
+
+It is possible to make multiple Editor Screen Interfaces for record types that are geared to specific cataloging tasks or users’ working style (see the manual entry for `Editor Screens <https://manual.collectiveaccess.org/usermanual/creating_records.html#editor-screens>`_). For example, if a cataloger is responsible for entering data in only a small subset of metadata elements for a record, a new User Interface can be configured with only those elements to support that specific workflow. 
+
+When creating User Interfaces, access to User Interfaces and User Interface screens can be set at the account, group and role level to limit availability to subsets of users (see the manual entry for `Access Control <https://manual.collectiveaccess.org/usermanual/manage.html#access-control>`_). 
+
+Similarly, users can select User Interfaces for use in Quick Add forms in *Manage > My Preferences > Quick Add*. Creating custom User Interfaces for Quick Add screens can be very useful for ensuring a core subset of information is entered during the Quick Add process. See the manual entry for `Relationships <https://manual.collectiveaccess.org/usermanual/creating_records.html#relationships>`_ for more information on Quick Add.
+ 
 .. figure:: ../_static/images/5_1B.png
    :name: Preferred User Interface for Quick Add
    :target: ../_static/images/5_1B.png
    :alt: Preferred User Interface for Quick Add
-      
-*Fig 5.1: Selecting preferred user interface for record types in Manage > My Preferences > Editing and Manage > My Preferences > Quick Add*
+   
+*Fig 5.1b: Manage > My Preferences > Quick Add*
 
 **Configuring Metadata Elements in User Interfaces**
 To adjust the configuration of a metadata element within a User Interface, first edit a User Interface and select the screen the metadata element appears on. Access metadata element configuration options by clicking the information icon   alongside element names in the list of “Elements to display on this screen”. Settings are specific to the placement of the element within the current User Interface and will not apply to all placements of the element throughout the system.  

@@ -5,7 +5,35 @@ Builders
 
 .. contents::
    :local:
-   
-Needed Tables
-`````````````
-for: COLLECTIONHIERARCHYBUILDER (DOCS), COLLECTIONINDENTEDHIERARCHYBUILDER (NEW), ENTITYHIERARCHYBUILDER (DOCS), PLACEHIERARCHYBUILDER (DOCS), OBJECTHIERARCHYBUILDER (DOCS), OCCURRENCEHIERARCHYBUILDER (DOCS), LISTITEMHIERARCHYBUILDER (DOCS), LISTITEMINDENTIEDHIERARCHYBUILDER (DOCS), STORAGELOCATIONHIERARCHYBUILDER (DOCS)
+
+
+CollectionHierarchyBuilder 
+``````````````````````````
+
+DOCS at https://docs.collectiveaccess.org/wiki/Data_Importer#Refineries
+
+CollectionIndentedHierarchyBuilder 
+````````````````````````````````````
+
+NEW, built for Apollo collections import in 2019 for Alex, Seth to document
+
+EntityHierarchyBuilder 
+``````````````````````````
+
+PlaceHierarchyBuilder 
+``````````````````````````
+
+ObjectHierarchyBuilder 
+``````````````````````````
+
+OccurrenceHierarchyBuilder 
+``````````````````````````
+
+ListItemHierarchyBuilder 
+``````````````````````````
+
+ListItemIndentedHierarchyBuilder 
+```````````````````````````````````````
+
+StorageLocationHierarchyBuilder 
+```````````````````````````````````````

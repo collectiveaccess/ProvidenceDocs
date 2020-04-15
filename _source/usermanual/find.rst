@@ -4,7 +4,11 @@ Find - Searching and Browsing
 .. contents::
    :local:
    					
-In addition to the QuickSearch, there are three other ways to locate records, each providing a higher degree of precision than the QuickSearch: The basic search, the advanced search, and the browse. All three are accessed from the Find menu in the Global Navigation.
+
+Quick Search
+------------
+Always available in the upper right-hand corner of the browser window, the QuickSearch is the simplest and most convenient search tool in CollectiveAccess. It will cast a wide net for terms entered into it, searching across all fields in all tables of records.
+
 
 Basic Search
 ------------
@@ -32,9 +36,22 @@ The Advanced Search allows users to define custom search forms, consisting of sp
 *Fig 3.2: Example of an advanced search form*
 
 
-Advanced search forms are created through *Manage > My search tools > Search forms*. 
+Advanced search forms are created through *Manage > My search tools > Search forms*. See the manual entry for `Advanced Search Forms <https://manual.collectiveaccess.org/usermanual/manage.html#advanced-search-forms>`_ for instructions.
 
+
+
+Search Syntax
+---------------
+
+**Searching for blank values:** As of version 1.4, Advanced Search finds records with no content in a specific field. The following example will return all records with no value for a field: ``[BLANK]``.
+
+**Wildcards:** 
+The asterisk ("*") is used as a wildcard character. That is, it matches any text if used on its own. Wildcards may also be used at the end of a word, to match words that start your search term. For example: ``wri*``.
 					
+**Searching on creation and modification dates** In Quick Search and Basic Search, you can search on the creation and modification dates of records using the special created and modified access points together with a valid date/time expression. For example, to find everything created on April 12, 2012 you can search using:``created:"4/12/2012"``.
+
+You can limit the returned items to those created or modified by a specific user by adding a valid user name after the access point. For example, to find things modified by user "catherine" on April 2012 you can search using: ``modified.catherine:"4/2012"``.
+
 Browse
 ------
 					
@@ -47,7 +64,7 @@ The Browse allows you to generate and refine results by filtering on specific at
 *Fig 3.3: Browse menu for Objects*
 			
 
-Working with Results
+Working with Search Results
 --------------------
 
 Once you have generated results using any of the available search tools, there are several options available to control how the data is displayed, refined, edited and exported.
@@ -59,12 +76,13 @@ Once you have generated results using any of the available search tools, there a
 *Fig 3.4: Search result tools: Export tools, Refine results, Display Options (respectively)*
 
 
-**Display Options**
+Display Options 
+````````
 
-.. figure:: ../_static/images/3_5.png
-   :name: Display options
-   :target: ../_static/images/3_5.png
-   :alt: Display options
+.. figure:: ../_static/images/4_2.png
+   :name: Choosing a display in search results
+   :target: ../_static/images/4_2.png
+   :alt: Choosing a display in search results
 *Fig 3.5: Display Options*
 			
 Click on the display options icon to view all settings to control how search results are displayed.	
@@ -99,9 +117,11 @@ Click on the display options icon to view all settings to control how search res
 *Fig 3.8: List display*
 
 
-**Display:** choose which metadata Display to use to view your search results. Displays allow you to precisely control the fields and formatting displayed in search results or on a Summary page. Once you create custom displays and configure the search results or record summaries, you may batch-edit data in spreadsheet format or export the data as tab or comma delimited files, an Excel spreadsheet or as a PDF. Through their ability to define both fields and precise formatting of field data, displays form the backbone of CollectiveAccess’ reporting system. Once defined, any search or browse result set can be piped through a display and into on-screen, printable or shareable output. 					
+**Display:** choose which metadata Display to use to view your search results. For details on creating custom displays, see the manual entry for `Displays <https://manual.collectiveaccess.org/usermanual/manage.html#displays>`_.			
 
-**Export Tools**					
+
+Export Tools
+````````				
 Export tools allow you to export the results of a search or browse – with any configured Display – to a variety of formats, including tab and comma delimited, Microsoft Word and Excel, or PDF.
 
 
@@ -112,7 +132,8 @@ Export tools allow you to export the results of a search or browse – with any 
 *Fig 3.9: Export tools*
 
 			
-**Refine Results**					
+Refine Results
+````````				
 Refine controls enable filtering of search results using the same controls used for browsing. It is essentially no different from the Browse, except that you can run a full text search first and then use the browse facets to further refine the results of the full text search.
 
 .. figure:: ../_static/images/3_10.png
@@ -122,7 +143,8 @@ Refine controls enable filtering of search results using the same controls used 
 *Fig 3.10: Refine results*
 
 
-**Edit in Spreadsheet**
+Edit in Spreadsheet
+````````
 Spreadsheet mode looks similar to the List mode, but allows you to apply edits directly to most fields in the listed records without leaving the search results screen.
 
 
@@ -132,8 +154,9 @@ Spreadsheet mode looks similar to the List mode, but allows you to apply edits d
    :alt: Edit in spreadsheet	 
 *Fig 3.11: Edit in spreadsheet button*
 
-**Set Tools**
-Sets, explained in greater detail below, are ordered, ad-hoc groupings of a single type of record defined by users for a practical purpose (e.g., a working checklist for an upcoming exhibition, or a set of records that need to be completed). Sets are distinct from Collection records in that they are typically temporary groupings and meant for workflow, while Collection records are archival or curatorial in nature and intended to record collection-level cataloging. An additional use of Sets is for grouping records for batch editing en masse using the Batch Editor.
+Set Tools
+````````
+Sets are ordered, ad-hoc groupings of a single type of record defined by users for a practical purpose (e.g., a working checklist for an upcoming exhibition, a selection of records to publish on a website, or a set of records that need editing). Sets are temporary groupings meant to facilitate cataloguing workflows including batch editing and for reporting. The placement of records within a set does not replace cataloguing. Catalogue by entering values in metadata fields for long-term documentation. Sets should be carefully maintained because they can quickly clutter the sets module. Be sure to delete sets after batch editing. 
 
  
 .. figure:: ../_static/images/3_12.png
@@ -142,14 +165,29 @@ Sets, explained in greater detail below, are ordered, ad-hoc groupings of a sing
    :alt: Set Tools 
 *Fig 3.12: Set Tools	You can create Sets directly from results using Set Tools.*
 
-**Create set:** Allows naming and creation of a set consisting of either a) the entire search results or b) only those checked.
+**Create Set:** Click on Set Tools in Basic Search to expand the Set Tools options. Name the Set in the Create Set box and make a selection for a) the entire search results or b) only those checked.
 
-**Open set for batch editing:** Opens the set in the Batch Editor for applying global edits.
+**Open Set for batch editing:** Opens the set in the Batch Editor for applying global edits. For information on batch editing see the manual entry for `Batch Edit <https://manual.collectiveaccess.org/usermanual/manage.html#batch-edit>`_.
 
-**Add checked to Set:** Allows addition of records to pre-existing Sets, by checking them off and selecting “Add checked to Set.”
+**Add checked to Set:** Allows addition of records to pre-existing Sets, by checking records and selecting “Add checked to Set.” Check the top-most checkbox to check all records on the current page.
 
-**Visualization**
-Provides visualization options for data when available. Options include maps to visualize records with georeference coordinates and timelines based upon entered dates.	 
+**Find records in Set:** Once at least one set has been created, you can find records in a set by selecting the set from the "Search by Set" menu in the upper left corner of Basic Search and clicking the arrow.
+
+**Manage Sets:** Go to Manage> My Sets> User Sets to review, edit, add and delete all sets. See the manual entry for `My Sets <https://manual.collectiveaccess.org/usermanual/manage.html#my-sets>`_.
+
+Save Searches
+````````
+Searches can be saved by clicking the “Save Search” link in Basic Search (upper right corner) forms or using the “Save search as” (bottom right corner of form) within Advanced Search forms.
+
+**Perform Saved Search:** Perform a saved search by selecting the search from the "Saved Searches" menu in the upper left corner of Basic Search and clicking the arrow.
+
+***Manage Saved Searches*** You can view, delete and perform all your saved searches in Manage > My Search Tools > Saved Searches.
+
+
+
+Visualization
+````````
+Provides visualization options for data when configured for your system. Options include maps to visualize records with georeference coordinates and timelines based upon entered dates.	 
 
 .. figure:: ../_static/images/3_13.png
    :name: Visualization Tools
@@ -162,6 +200,7 @@ Provides visualization options for data when available. Options include maps to 
    :target: ../_static/images/3_14A.png
    :alt: Map 
 *Map*
+
 
 .. figure:: ../_static/images/3_14B.png
    :name: Timeline

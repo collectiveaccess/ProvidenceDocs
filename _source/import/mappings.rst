@@ -9,6 +9,8 @@ Import Mappings
    :maxdepth: 1
    :caption: Sub-pages
 
+   mappings/rules
+   mappings/refineries
    mappings/builders
    mappings/splitters
    mappings/mappingOptions
@@ -164,7 +166,7 @@ In the example above, multiple subject values in the same cell that are separate
 Refineries (Column 6-7)
 ```````````````````````
 
-Refineries fall into one of 5 camps: Splitters, Makers, Joiners, Getters and Builders. Each framework is designed to take a specific data format and transform it via a specific behavior as it is imported into CollectiveAccess. See the Refineries page for a complete list of refineries: https://docs.collectiveaccess.org/wiki/Data_Importer#Refineries
+Refineries fall into one of 5 camps: Splitters, Makers, Joiners, Getters and Builders. Each framework is designed to take a specific data format and transform it via a specific behavior as it is imported into CollectiveAccess. See the Refineries page for a complete list of refineries: :doc:`mappings/refineries`  
 
 Splitters
 '''''''''
@@ -189,8 +191,7 @@ Getters are designed specifically for MYSQL data mappings. These refineries map 
 Builders
 ''''''''
 
-Builders create an upper hierarchy above the to-be-imported data. Note that Splitters also create upper hierarchies with the parent parameter, but they do so above records related to the imported data. For example, let's say you were importing ca_collections and wanted to map a "Series" and "Sub-series" above imported "File" data. You'd use the collectionHierarchyBuilder refinery. However, if you were importing ca_objects and wanted to relate a "File" while building an upper hierarchy of "Series" and "Sub-series" you would use the collectionSplitter and the parent parameter.
-ADD NEW PAGE W/ TABLES FOR: COLLECTIONHIERARCHYBUILDER (DOCS), COLLECTIONINDENTEDHIERARCHYBUILDER (NEW), ENTITYHIERARCHYBUILDER (DOCS), PLACEHIERARCHYBUILDER (DOCS), OBJECTHIERARCHYBUILDER (DOCS), OCCURRENCEHIERARCHYBUILDER (DOCS), LISTITEMHIERARCHYBUILDER (DOCS), LISTITEMINDENTIEDHIERARCHYBUILDER (DOCS), STORAGELOCATIONHIERARCHYBUILDER (DOCS)
+Builders create an upper hierarchy above the to-be-imported data. Note that Splitters also create upper hierarchies with the parent parameter, but they do so above records related to the imported data. For example, let's say you were importing ca_collections and wanted to map a "Series" and "Sub-series" above imported "File" data. You'd use the collectionHierarchyBuilder refinery. However, if you were importing ca_objects and wanted to relate a "File" while building an upper hierarchy of "Series" and "Sub-series" you would use the collectionSplitter and the parent parameter. See the Builders page for a complete list of builders: :doc:`mappings/builders` 
 
 
 Original values and Replacement values (Columns 8-9)

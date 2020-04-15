@@ -10,7 +10,7 @@ Options allow you to set additional formatting and conditionals on data during i
 Option: applyRegularExpressions
 '''''''''''''''''''''''''''''''
 
-This option allows the user to effectively rewrite messy and problematic source data using Perl compatible regular expressions as supported in the PHP programming language. Let's say you are mapping duration data to a TimeCode element, and the source data syntax is invalid.
+This option allows the user to effectively rewrite messy and problematic source data using Perl compatible regular expressions as supported in the PHP programming language. Let's say you are mapping duration data to a TimeCode element, and the source data syntax is invalid. See the :doc:`mappings/regex` page for useful regular expressions.
      
      Invalid timecode format:
      ``7.30.``

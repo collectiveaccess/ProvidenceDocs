@@ -1,11 +1,11 @@
-Creating New Records
+Creating And Editing Records
 ====================
 
 .. contents::
    :local:
    
-New
----
+Create a New Record
+--------------
 
 To create a new record in CollectiveAccess hover over the *New* menu and a list of available tables will appear (Objects, Entities, Locations, etc.). Hover over a particular table to see the available types within that table. Every record in CollectiveAccess is of a particular type and belongs to a particular table. 
 
@@ -15,7 +15,7 @@ To create a new record in CollectiveAccess hover over the *New* menu and a list 
    :alt: New record
 *Fig 2.1: Creating a new object*
 
-When you create a new record, CollectiveAccess will take you to the Editor for the particular table and record type. Enter basic data about the record, such as the Title and Identifier and click on the Save button. After saving the new record additional left-hand navigation tabs, or Screens, will become available, as will the Inspector panel, a compact display of useful record information and navigation.
+When you create a new record, CollectiveAccess will take you to the Editor for the particular table and record type. Enter basic data about the record, such as the Title and Identifier and click on the Save button. After saving the new record additional left-hand navigation tabs, or Screens, will become available.
 
 .. figure:: ../_static/images/2_2.png
    :name: Edit
@@ -33,8 +33,26 @@ The user interface for each editor is divided into several screens, each of whic
 - Georeference
 - Relationships
 - Administrative information
-- Summary
-- Log
+
+In order for changes to be committed to the database, every edit to a record must be saved by clicking the Save button at the top or bottom of the editor screen.
+
+To do batch editing, first create a set (See the manual entry for `Set Tools <https://manual.collectiveaccess.org/usermanual/find.html#set-tools>`_) and then follow the instructions in the `Batch Edit <https://manual.collectiveaccess.org/usermanual/manage.html#batch-edit>`_ manual entry.
+
+To create custom editor screens, see the manual section for `User Interface Configuration <https://manual.collectiveaccess.org/usermanual/user_interface_administration.html#user-interface-configuration>`_.
+
+Record Summary
+````````
+Record summaries are read-only screens that give an overview of a record in a concise format. They can be downloaded as a record detail report by clicking the PDF icon in the upper right corner of the summary form.
+
+To select a display to use on a record’s summary screen, use the drop-down box in the top right hand side of page. After selecting, the page will update automatically.
+
+See the manual entry `Displays <https://manual.collectiveaccess.org/usermanual/manage.html#displays>`_ to set up custom displays for record summaries.
+
+.. figure:: ../_static/images/4_3.png
+   :name: Choosing a display in summary
+   :target: ../_static/images/4_3.png
+   :alt: Choosing a display in summary  
+*Fig 4.3: Choosing a display for use with the summary screen*
 
 
 Inspector
@@ -58,10 +76,10 @@ Displayed under the results are the record type, name, accession number, and cur
 Clicking this icon adds the selected record to your watch list, which can be accessed by selecting *Manage > My watched items* from the Global Navigation Bar. The icon turns red when active.
 			
 **Change Type Icon**
-This tool allows you to change the record’s “type.” If, for example, you mistakenly created a “Audio” record when you meant to create a “Video” record, you can change the type here without having to delete and re-create the record. Take care using this feature. Changing the record type will cause information in all fields that are not applicable to the new type to be discarded. This action cannot be undone!
+If enabled, this tool allows you to change the record’s “type”. If, for example, you mistakenly created a “Audio” record when you meant to create a “Video” record, you can change the type here without having to delete and re-create the record. Take care using this feature. Changing the record type will cause information in all fields that are not applicable to the new type to be discarded. This action cannot be undone!
 
 **Duplicate Icon** 
-This tool allows you to duplicate a record. Duplication can be useful in cases where you are tasked with creating several records with similar metadata. You can control precisely what kind of record data are duplicated (metadata, relationships, media) using the duplication settings under My Preferences.
+This tool allows you to duplicate a record. Duplication can be useful in cases where you are tasked with creating several records with similar metadata. You can control precisely what kind of record data are duplicated (metadata, relationships, media) using the duplication settings under My Preferences > Duplication.
 
 **Less/More Info Icon** 				
 This tool collapses or expands the Inspector window to include more information, such as record creation and update times, as well as any Sets the object record may belong to.
@@ -86,7 +104,7 @@ A few of the most common Data Types are:
 
 - **Container** – Bundles together several sub-fields into a single data value. Complex articulated fields built from the types described above can be created using Containers. 
 
-A complete list of data types can be found here: http://docs.collectiveaccess.org/wiki/Attribute_Types
+
 
 Relationships
 -------------
@@ -107,7 +125,8 @@ One of the key aspects of CollectiveAccess is the ability to create relationship
 
 A relationship bundle works differently from a metadata element. When you enter a name into a relationship bundle, a type-ahead search is performed on the system. If the search finds matches, you’ll be prompted to select one and add the relationship. (Fig. 2.4) 
 
-If no match is found, you’ll be prompted with the option to create a new record with the entered name. (Fig 2.5) If you select the create option, the Quick Add window will appear, and you will be able to create the record without having to leave the record currently being worked on. Unless a custom User Interface has been configured, the Quick Add pop-up editor is identical to the User Interface displayed when creating a new record through the New Global Navigation dropdown, but packaged in a pop-up window. (Fig 2.6) See section 5.1 User Interface Configuration for more on configuring custom User Interfaces for use in Quick Add pop-up editors.
+**Quick Add**
+If the Quick Add feature is enabled for a relationship, you’ll be prompted to create a new record with the entered value if no match is found. (Fig 2.5) If you select the create option, the Quick Add window will appear, and you will be able to create the record without having to leave the record currently being worked on.
 
 .. figure:: ../_static/images/2_6.png
    :name: Quick add editor
@@ -132,9 +151,11 @@ It is possible to catalog metadata on relationships.  For example, an Effective 
 Media Representations
 ---------------------
 				
-To attach a media file, click the “choose file” button and navigate to the location of the file on your computer, and then press “open”. A series of drop-down menus allow you to choose the Type, Status, Access – whether the file will be viewable on the public website – and whether or not you would like the file to be the “primary” representation of the record. The primary representation is the media that should be used to illustrate the record in situations where only a single representation can be used, such as in search results. If you would like to upload more files, click the “add representation” button and repeat. When you are done adding files, click the save button.
+To attach a media file, click "add representation", then click “choose file” and navigate to the location of the file on your computer, and then press “open”. 
+
+Check one “primary” representation for the record. The primary representation is the media that should be used to illustrate the record in situations where only a single representation can be used, such as in search results. If you would like to upload more files, click the “add representation” button and repeat. When you are done adding files, click the save button.
 					
-The database system will automatically resize uploaded media to various standardized sizes; for this reason it is best to use the highest quality image, video or document files available.
+For previewing purposes, the database system will automatically resize uploaded media to various standardized sizes. The original, full size image will be stored in the database and is available for download from the system. For this reason it is best to upload the highest quality image, video or document files available.
 					
 After you have added media to the record, it will appear on the media page as well as in the Inspector window in the upper left of the page (Fig. 2.3). Clicking on an image in either place will launch the Media Viewer, which allows you to pan, zoom, and cycle through images, play video or view documents, as well as download them at various sizes. The media viewer can be closed by pressing the “x” button in the lower-right hand corner of the Viewer or by using the escape key.
 
@@ -171,9 +192,9 @@ Deleting Records
 Records in CollectiveAccess can be deleted. Users have the authority to delete records or are prohibited from deleting records based on their Access Role. For users with the proper permissions, deleting a record is as simple as clicking the Delete button to the right of the Save and Cancel buttons. Users will be prompted with a warning prompt (Really delete?) and also prompted with an option to transfer any references the record may have.
 
 **Delete & Transfer**
-CollectiveAccess gives users the option to transfer a record’s references to another record before deleting it. This can be a very useful tool in situations where, for example, two entity records were created for the same person. Perhaps one was erroneously named “Dave Smith” while the correct authority is “David Smith.” You need to remove the duplicative, incorrect Entity but unfortunately “Dave Smith” has been related to many object records. Rather than painstakingly adding the object relationships to “David Smith” by hand, you can simply transfer the relationships from “Dave Smith” to “David Smith” upon the deletion of “Dave Smith”.
+CollectiveAccess gives users the option to merge records by transfering a record’s references to another record before deleting it. This can be a very useful tool in situations where, for example, two entity records were created for the same person. Perhaps one was erroneously named “Dave Smith” while the correct authority is “David Smith.” You need to remove the duplicative, incorrect Entity but unfortunately “Dave Smith” has been related to many object records. Rather than painstakingly adding the object relationships to “David Smith” by hand, you can simply transfer the relationships from “Dave Smith” to “David Smith” upon the deletion of “Dave Smith”.
 
 When you delete a record that is referenced in other records, you will see a prompt that tells you how many times that particular record is referenced. You have the option to remove all references or transfer references. Under the latter prompt you will find a search bar that will allow you to search for the appropriate record to transfer the relationships to.
 
 **Batch Delete**
-It is possible to delete multiple records at once using Sets in conjunction with the Batch Editor. To do this, the user’s access role must be enabled to allow Set and Batch editing (see section 4.6 on Sets and the Batch Editor). In short, any set of records can be opened in the batch editor. When you click the “More options” link in the Inspector window of the batch editor, you’ll find a prompt to delete all of the records in the set. Be careful with this feature!
+It is possible to delete multiple records at once using Sets in conjunction with the Batch Editor. To do this, the user’s access role must be enabled to allow Set and Batch editing. See the manual entry for `Set Tools <https://manual.collectiveaccess.org/usermanual/find.html#set-tools>`_. In short, any set of records can be opened in the batch editor. When you click the “More options” link in the Inspector window of the batch editor, you’ll find a prompt to delete all of the records in the set. Be careful with this feature!
