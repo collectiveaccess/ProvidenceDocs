@@ -117,14 +117,3 @@ Contents
    reference/Glossaries
    Prior Releases <reference/prior>
    
-.. toctree::
-   :maxdepth: 2
-   :caption: User manual
-   :titlesonly:
-
-   Accessing and Navigating the Database <usermanual/navigating_database>   
-   Creating Records <usermanual/creating_records> 
-   Searching and browsing <usermanual/find> 
-   Manage and Site Administration <usermanual/manage> 
-   User Interface Administration <usermanual/user_interface_administration> 
-   
