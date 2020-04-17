@@ -113,7 +113,7 @@ Contents
    :caption: Reference
    :titlesonly:
 
+   reference/Settings
    Expressions <reference/expressions>
    reference/Glossaries
-   Prior Releases <reference/prior>
    
