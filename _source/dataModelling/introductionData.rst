@@ -1,4 +1,4 @@
-Introduction to Data in Collective Access
+Introduction to Data in CollectiveAccess
 =========================================
 
 .. contents::
@@ -34,7 +34,7 @@ link two records to each other. Relationships are always bi-directional. If an o
 Installation Profiles
 ``````````````````````
 
-Installation profiles are the XML documents that create your data model and set up your database. Every Collective Access instance must have an installation profile. Many options are pre-loaded, but typically you need to customize one for your needs.  Read more: :doc:`Installation Profiles <Profiles>`
+Installation profiles are the XML documents that create your data model and set up your database. Every CollectiveAccess instance must have an installation profile. Many options are pre-loaded, but typically you need to customize one for your needs.  Read more: :doc:`Installation Profiles <Profiles>`
 
 Primary Tables
 ``````````````

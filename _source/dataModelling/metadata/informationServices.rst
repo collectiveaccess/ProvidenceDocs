@@ -75,7 +75,7 @@ Information Services Plugins
 ##########################################################
 	This plugin allows you to reference records in remote CollectiveAccess instances. Available settings are as follows: 
 		
-.. csv-table:: Collective Access Information Service
+.. csv-table:: CollectiveAccess Information Service
    :header: "Setting Name", "Description", "Example"
    :widths: 20, 20, 20
   		

@@ -13,7 +13,7 @@ See below for examples of splitters in an import mapping:
 
 CA table.element
 `````````````````
-Enter the splitter in the Refinery column of the import mapping. Enter the Collective Access table as shown in the chart below.
+Enter the splitter in the Refinery column of the import mapping. Enter the CollectiveAccess table as shown in the chart below.
 
 ===============================  ====================================
 CA table.element                 Refinery                                                       

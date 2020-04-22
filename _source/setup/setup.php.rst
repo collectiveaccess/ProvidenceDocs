@@ -5,7 +5,7 @@ Setup.php
    :local:
 
 In the main directory of your Providence install, there is a file called *setup.php.dist*. Make a copy of this file and rename it *setup.php*. 
-For your Collective Access system to work, you MUST add values for your **database server hostname, user name, password, database, and administrative e-email**. You also set the site's timezone in setup.php. Most other settings can be left alone.
+For your CollectiveAccess system to work, you MUST add values for your **database server hostname, user name, password, database, and administrative e-email**. You also set the site's timezone in setup.php. Most other settings can be left alone.
 
 Database server host name 
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -120,7 +120,7 @@ If the Apache mod_rewrite module is available on your server you may set this to
 
 	define("__CA_USE_CLEAN_URLS__", 0);
 
-App Names for Multiple Collective Access Systems
+App Names for Multiple CollectiveAccess Systems
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 If you are running more than one instance of CollectiveAccess on the same server make sure each instance has its own unique __CA_APP_NAME__ setting.  __CA_APP_NAME__ must include letters, numbers and underscores only - no spaces or punctuation!
 
