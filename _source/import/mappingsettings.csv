@@ -1,15 +1,27 @@
-Setting,Description,Parameter notes,Example,,
-name,Human readable name of the mapping,Arbitrary text,My mapping,,
-code,Alphanumeric code of the mapping,"Arbitrary, no special characters or spaces",my_mapping,,
-inputFormats,"Sets types of source data. Values are format codes defined by DataReader plugins. You can specify multiple formats with semicolons. If you omit this setting, the mapping is assumed to be valid for any data type, which is unlikely.",file type,XLSX,,
-table,Sets the table for the imported data,Corresponds to the CollectiveAccess basic tables,ca_objects,,
-type,"Type to set all imported records to. If import includes a mapping to type_id, that will be privileged and the type setting will be ignored.",CollectiveAccess list item idno,posters,,
-numInitialRowsToSkip,The number of rows at the top of the data set to skip. Use this setting to skip over column headers in spreadsheets and similar data.,numeric value,2,,
-existingRecordPolicy,Determines how existing records in CollectiveAccess system are checked and handled. Also determines how records created by the mapping are merged.,none; skip_on_idno; merge_on_idno; overwrite_on_idno; skip_on_preferred_labels; merge_on_preferred_labels; overwrite_on_preferred_labels; skip_on_idno_and_preferred_labels; merge_on_idno_and_preferred_labels; overwrite_on_idno_and_preferred_labels; merge_on_idno_with_replace; merge_on_preferred_labels_with_replace; merge_on_idno_and_preferred_labels_with_replace,none,,
-errorPolicy,"Determines how errors are handled for the import. ""Stop"" will halt the entire import on any error.",ignore; stop,ignore,,
-archiveMapping,Set to yes to save the mapping spreadsheet; no to delete it from the server after import,yes; no,yes,,
-"archiveDataSets,Set to yes to save the data spreadsheet or no to delete it from the server after import,yes; no,yes
-basePath,For XML input formats only", basePath contains an XPath expression to supply a set of XML nodes treated, for import purposes," as individual records. Many XML formats require the basePath setting for data import.""",XML tags,/text/body/div
-environment,"Allows you to define a source expression that will be evaluated outside of basePath. Whatever value is in this source can be stored inside a variable. This variable can be used as a source in the mapping itself, allowing the user to retrieve the value in a mapping otherwise evaluated inside of basePath.",environment | 2 | myVariable,"Any source value. (E.g. ^2, /TEI/teiHeader/title)",,
-errorPolicy,"Determines how errors are handled for the import. ""Stop"" will halt the entire import on any error.",ignore; stop,ignore,,
-locale,Set locale for all imported data. If not set the system's default locale is used.,"DEFAULT or locale code (ex. en_US, de_DE, fr_CA)",DEFAULT,,
+Setting,Description,Parameter notes,Example
+name,Human readable name of the mapping,Arbitrary text,My mapping
+code,Alphanumeric code of the mapping,"Arbitrary, no special characters or spaces",my_mapping
+inputFormats,"Sets types of source data. Values are format codes defined by DataReader plugins. You can specify multiple formats with semicolons. If you omit this setting, the mapping is assumed to be valid for any data type, which is unlikely.",file type,XLSX
+table,Sets the table for the imported data,Corresponds to the CollectiveAccess basic tables,ca_objects
+type,"Type to set all imported records to. If import includes a mapping to type_id, that will be privileged and the type setting will be ignored.",CollectiveAccess list item idno,posters
+numInitialRowsToSkip,The number of rows at the top of the data set to skip. Use this setting to skip over column headers in spreadsheets and similar data.,numeric value,2
+existingRecordPolicy,Determines how existing records in CollectiveAccess system are checked and handled. Also determines how records created by the mapping are merged.,"none
+skip_on_idno 
+merge_on_idno
+overwrite_on_idno 
+skip_on_preferred_labels
+merge_on_preferred_labels; overwrite_on_preferred_labels skip_on_idno_and_preferred_labels
+merge_on_idno_and_preferred_labels
+overwrite_on_idno_and_preferred_labels merge_on_idno_with_replace
+merge_on_preferred_labels_with_replace
+merge_on_idno_and_preferred_labels_with_replace",none
+ignoreTypeForExistingRecordPolicy,If set record type will be ignored when looking for existing records as specified by the existing records policy.,"0 or 1
+",0
+mergeOnly,If set data will only be merged with existing records using the existing records policy and no new records will be created. Available from version 1.7.9.,"0 or 1
+",0
+environment,"Allows you to define a source expression that will be evaluated outside of basePath. Whatever value is in this source can be stored inside a variable. This variable can be used as a source in the mapping itself, allowing the user to retrieve the value in a mapping otherwise evaluated inside of basePath.",environment | 2 | myVariable,"Any source value. (E.g. ^2, /TEI/teiHeader/title)"
+errorPolicy,"Determines how errors are handled for the import. ""Stop"" will halt the entire import on any error.",ignore; stop,ignore
+locale,Set locale for all imported data. If not set the system's default locale is used.,"DEFAULT or locale code (ex. en_US, de_DE, fr_CA)",DEFAULT
+dontDoImport,If set then the mapping will be evaluated but no rows actually imported. This can be useful when you want to run a refinery over the rows of a data set but not actually perform the primary import. ,"0 or 1
+",0
+basePath,"For XML data formats, an XPath expression selecting nodes to be treated as individual records. If left blank, each XML document will be treated as a single record.",Must be a valid Xpath expression,/export

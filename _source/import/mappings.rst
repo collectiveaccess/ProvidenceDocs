@@ -59,10 +59,10 @@ Creating a Mapping
 Settings 
 ````````
 
-Start from the sample worksheet provided above. Settings include the importer name, format of the input data, Collective Access table to import to, and more. This section can be placed at the top or bottom of a mapping spreadsheet with the setting in the first column and parameter in the second. It functions separately from the main column-defined body of the import mapping.
+Start from the sample worksheet provided above. Settings include the importer name, format of the input data, CollectiveAccess table to import to, and more. This section can be placed at the top or bottom of a mapping spreadsheet with the setting in the first column and parameter in the second. It functions separately from the main column-defined body of the import mapping.
 
 .. csv-table::
-   :widths: 15, 25, 15, 15, 15, 15
+   :widths: 20, 40, 20, 20
    :header-rows: 1
    :file: mappingsettings.csv
 
