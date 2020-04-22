@@ -7,17 +7,23 @@ type,"Set the Type of record to set all imported records to. If you are importin
 numInitialRowsToSkip,The number of rows at the top of the data set to skip. Use this setting to skip over column headers in spreadsheets and similar data.,numeric value,1
 existingRecordPolicy,"Determines how existing records in the CollectiveAccess system are checked for and handled for the mapping. Also determines how records created by the mapping are merged with other instances (idno and/or preferred label) in the data source. 
 
-(In CollectiveAccess, the primary ID field is ""idno"" and the title/name field of each record is ""preferred_label"".)","none; 
-skip_on_idno; 
-merge_on_idno; 
-overwrite_on_idno; 
-skip_on_preferred_labels; 
-merge_on_preferred_labels; overwrite_on_preferred_labels; skip_on_idno_and_preferred_labels;
-merge_on_idno_a-
-nd_preferred_labels;
-overwrite_on_id-
-no_and_preferred_labels; merge_on_idno_with_replace;
-merge_on_preferre-
-d_labels_with_replace;
-merge_on_idno_and_preferre-
-d_labels_with_replace",none
+(In CollectiveAccess, the primary ID field is ""idno"" and the title/name field of each record is ""preferred_label"".)","none
+skip_on_idno 
+merge_on_idno
+overwrite_on_idno 
+skip_on_preferred_labels
+merge_on_preferred_labels; overwrite_on_preferred_labels skip_on_idno_and_preferred_labels
+merge_on_idno_and_preferred_labels
+overwrite_on_idno_and_preferred_labels merge_on_idno_with_replace
+merge_on_preferred_labels_with_replace
+merge_on_idno_and_preferred_labels_with_replace",none
+ignoreTypeForExistingRecordPolicy,If set record type will be ignored when looking for existing records as specified by the existing records policy.,"0 or 1
+",0
+mergeOnly,If set data will only be merged with existing records using the existing records policy and no new records will be created. Available from version 1.7.9.,"0 or 1
+",0
+dontDoImport,If set then the mapping will be evaluated but no rows actually imported. This can be useful when you want to run a refinery over the rows of a data set but not actually perform the primary import. ,"0 or 1
+",0
+basePath,"For XML data formats, an XPath expression selecting nodes to be treated as individual records. If left blank, each XML document will be treated as a single record.",Must be a valid Xpath expression,/export
+locale,"Sets the locale used for all imported data. Leave empty or omit to use the system default locale. Otherwise set it to a valid locale code (Ex. en_US, es_MX, fr_CA).",Must be a valid ISO locale code.,en_US
+errorPolicy,"Determines how errors are handled for the import.  Options are to ignore the error, stop the import when an error is encountered and to receive a prompt when the error is encountered. Default is to ignore.","ignore
+stop",ignore
