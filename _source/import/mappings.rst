@@ -1,3 +1,4 @@
+.. _import_mappings:
 Import Mappings
 ===============
 

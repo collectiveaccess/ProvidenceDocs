@@ -90,6 +90,7 @@ Contents
    Running an Import <import/running>
    WorldCat <import/worldcat>
    Getty Vocabularies <import/getty>
+   Media embedded metadata <import/mediaembeddedmetadata>
 
 .. toctree::
    :maxdepth: 2

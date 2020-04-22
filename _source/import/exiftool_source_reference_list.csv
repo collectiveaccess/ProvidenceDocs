@@ -1,0 +1,23 @@
+﻿EXIF Group,EXIF Field,Importer source reference,Notes
+IPTC,Caption-Abstract,/IPTC/Caption-Abstract,
+IPTC,Writer-Editor,/IPTC/Writer-Editor,
+IPTC,Credit,/IPTC/Credit,
+IPTC,Source,/IPTC/Source,
+IPTC,ObjectName,/IPTC/ObjectName,
+IPTC,Keywords,/IPTC/Keywords,
+IPTC,CopyrightNotice,/IPTC/CopyrightNotice,
+XMP-dc,Format,/XMP-dc/Format,
+XMP-dc,Description,/XMP-dc/Description,
+XMP-dc,Subject,/XMP-dc/Subject,
+XMP-dc,Title,/XMP-dc/Title,
+XMP-dc,Rights,/XMP-dc/Rights,
+ICC_Profile,ProfileDescription,/ICC_Profile/ProfileDescription,Name of color profile
+File,FileType,/File/FileType,
+File,MIMEType,/File/MIMEType,
+IFD0,ImageWidth,/IFD0/ImageWidth,
+IFD0,ImageHeight,/IFD0ImageHeight,
+IFD0,Compression,/IFD0/Compression,Compression used
+IFD0,Make,/IFD0/Make,Manufacturer of digitiztion device
+IFD0,Model,/IFD0/Model,Model of digitization device
+IFD0,Software,/IFD0/Software,Software used to generate file
+IFD0,Orientation,/IFD0/Orientation,"Orientation of image, as reported by device"

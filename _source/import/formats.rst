@@ -1,3 +1,4 @@
+.. _import_formats:
 Supported File Formats
 ======================
 

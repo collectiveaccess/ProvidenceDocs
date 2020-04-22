@@ -1673,13 +1673,36 @@ you need it, so here it is :-)
 	ca_loans_allow_relationships_to_existing_representations = 0
 	ca_movements_allow_relationships_to_existing_representations = 0
 
-If you have OpenCV (http://www.opencv.org) and PHP-facedetect (http://www.xarg.org/project/php-facedetect/) installed
-on your server and want CA to try and crop images to include faces set this to a non-zero value. Note that detection
-can slow image processing significantly and isn't 100% accurate.
+
+Embedded metadata extraction
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+CA can extract and import metadata embedded in upload media using external applications such as MediaInfo and
+ExifTool and installation-specific data import mappings. The following options control user 
+interaction and logging for media embedded metadata import.
+
+Users can select the import mapping they wish to use at the time of upload in the editing
+and batch media importer interfaces when ``allow_user_selection_of_embedded_metadata_extraction_mapping`` is set to
+a non-zero value. 
+
+When allowing user selection of mappings, ``allow_user_embedded_metadata_extraction_mapping_null_option`` can be set to
+include a "no import" option. Setting this option to zero effectively forces import of embedded metadata in all cases.
+
+If it often desirable to have CA automatically select import mappings based upon the format of the uploaded file. 
+The ``embedded_metadata_extraction_mapping_defaults`` setting can be used to map media file MIME types to mappings. MIME types may be
+specific (Ex. image/tiff for TIFF format images) or cover entire classes using wildcards (Ex. image/* for images of any type).
 
 .. code-block:: none
+	embedded_metadata_extraction_mapping_defaults = {
+		video/* = example_mediainfo_mapping,
+		image/* = example_exif_tool_mapping,
+		application/pdf = pdf_metadata_import
+	}
+	
+The values are the right side of the map must be valid data import mapping codes, as defined in the ``code`` setting of a mapping worksheet.
 
-	enable_face_detection_for_images = 0
+How much information is logged when performing an embedded metadata import can be controlled using the ``embedded_metadata_extraction_mapping_log_level``
+setting. Valid values are DEBUG, NOTICE, INFO, WARN, ERR, CRIT and ALERT, where DEBUG logs the most (sometimes too much) information, and levels beyond ERR log only
+the most critical errors. It is generally best to leave this setting on DEBUG when testing and use NOTICE or INFO if DEBUG is providing too much information.
 
 Video preview frame generation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
