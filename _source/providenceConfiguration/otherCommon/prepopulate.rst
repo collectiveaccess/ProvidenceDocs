@@ -63,7 +63,7 @@ This rule applies to object records (see the ``table`` setting) of type "artwork
 Replicating relationships and containers
 ----------------------------------------
 
-Most rules generate a text value using ``template`` and copy it to the ``target``, subject to optional restrictions (``mode``, ``skipIfExpression, ``restrictToTypes``, etc). It is also possible to replicate relationships in Prepopulate using the ``context`` directive. In this case, ``target`` is the type of relationship to replicate and ``context`` defines the source of the relationship. Possible contexts are "related", "parent" or "children". 
+Most rules generate a text value using ``template`` and copy it to the ``target``, subject to optional restrictions (``mode``, ``skipIfExpression``, ``restrictToTypes``, etc). It is also possible to replicate relationships in Prepopulate using the ``context`` directive. In this case, ``target`` is the type of relationship to replicate and ``context`` defines the source of the relationship. Possible contexts are "related", "parent" or "children". 
 
 An example configuration for replicating relationships using ``context`` follows:
 
