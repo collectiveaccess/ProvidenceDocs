@@ -1,14 +1,37 @@
-Setting name,Type,Example,Description
-table,Valid CollectiveAccess table name,ca_objects,Defines what table this rule applies to
-restrictToTypes,optional list of valid items from the type list for table,"[artwork, image]",Optional type restriction for this rule
-mode,"One of addIfEmpty, overwrite, merge",addIfEmpty,Determines handling of existing values in target element. See flowchart below. addIfEmpty: set relationships only if none exist; overwrite: replace relationships; merge: add relationships that do not already exist
-target,"A valid bundle specifier for either a intrinsic field, labels or an attribute",[ca_objects.description],"Determines the prepopulate target. Note that if you want to target a List attribute, you have to provide a valid list item idno or id for that list as value!"
-skipIfExpression,A valid expression,^ca_objects.object_status_new !~ /deaccessioned/,"Allows for rule based skipping of the rule. If the expression result is true, the rule is ignored for the current record."
-template,A valid template,^ca_objects.medium_container.medium ^ca_objects.medium_container.support,This defines the actual content that is injected into the targetelement. The display template is evaluated against the current record.
-context,"parent, children, or related",parent,parent = copy relationships from the parent; children = copy relationships from children; related = copy relationships from related records (Eg. if table = ca_objects and target = ca_entities copy all entity relationships from related objects)
-restrictToRelationshipTypes,Valid relationship type,author,"For use with ""context."" Use this setting to only copy relationships with the specified relationship type codes"
-excludeRelationshipTypes,Valid relationship type,creator,"For use with ""context."" Don't copy relationships with these specified relationship type codes"
-restrictToRelatedTypes,Valid record type,artwork,"For use with ""context."" Only copy relationships pointing to specified types."
-restrictToRelatedTypes,Valid record type,artwork,"For use with ""context."" Only copy relationships pointing to specified types."
-excludeRelatedTypes,Valid record type,archival,"For use with ""context."" Don't copy relationships pointing to specified types."
-currentOnly,1 or 0,0,"For use with ""context."" Only consider ""current"" relationships – Eg. current storage location"
+Setting name,Description,Valid values,Example
+table,Defines what table the rule applies to. Required.,Any :ref:`primary table <primary_tables>`,ca_objects
+restrictToTypes,Optional list of types to restrict rule to.,Any valid type for the table.,"[artwork, image]"
+mode,"Required setting controlling how and if rule is applied when the target contains existing values. See flowchart below. Options are:
+
+addIfEmpty: set value only if none already exists
+
+overwrite: replace existing values; if the value to be set in the target is empty existing values will be removed but not replaced
+
+overwriteifset: replace existing values only if the value to be set to a non-empty value
+
+merge: add values that do not already exist","One of addIfEmpty, overwrite, overwriteifset, merge",addIfEmpty
+target,"Specifies the metadata element that the rule will set values for. The target must be part of the record being edited. The value set is defined by the template or source directives.
+
+Note that if when targetting a List metadata element, you must provide a valid list item idno or numeric item_id as the value.","A valid bundle specifier for either a intrinsic field, labels or an metadata element",[ca_objects.description]
+template,"A display template defining the value to be set in the target. The display template is evaluated against the current record and can incorporate any value accessible to the currently edited record, including related records and hierarchical values. Required, unless the rule is targeting a container metadata element with a full copy of another container in which case ``source`` must be set.",A valid :ref:`display template <display_templates>`.,^ca_objects.medium_container.medium ^ca_objects.medium_container.support
+source,"Rules using ``template``  set only a single text value in the target. When prepopulating container metadata elements with values another instance of the container in a related record (Ex. replicating a container in a parent record to a child record) ``source`` may be used to specify the instance to copy from. Sub-element codes are assumed to match exactly, so on its own ``source`` is only useful for copying containers from related or hierarchical parent or child records. It is possible to selectively copy elements from different containers using source in conjunction with the ``sourceMap`` directive.. Available from version 1.7.9.",A valid bundle specifier for a container metadata element.,ca_objects.dimensions
+sourceMap,"A dictionary mapping sub-element codes in a source container (specified by the ``source`` directive) to sub-element codes in the target container. Only values defined in the dictionary will be copied to the target. SourceMap can be used to  copy values betwen differently structured containers or, by omitting sub-elements, to selectively copy data between two instances of the same container. Available from version 1.7.9.",A dictionary container keys set to source container sub-element codes and values set to target sub-element codes.,"{
+			edition_display_dimensions = edition_display_dimensions,
+			edition_dimensions_height = edition_dimensions_height,
+			edition_dimensions_width = edition_dimensions_width,
+			edition_dimension_types = edition_dimension_types,
+			edition_dimensions_notes = edition_dimensions_notes
+		}"
+skipIfExpression,"An optional expression that controls if the rule is applied. The expression is evaluated relative to the currently edited record. If the result is true, the rule will not be applied for the current record.",A valid :ref:`expression <expressions>`,^ca_objects.object_status_new !~ /deaccessioned/
+context,"Controls how relationships are prepopulated.  Options include
+
+parent = copy relationships from the parent record
+
+children = copy relationships from child records
+
+related = copy relationships from related records (Eg. if table = ca_objects and target = ca_entities copy all entity relationships from related objects)","parent, children, or related",parent
+restrictToRelationshipTypes,When ``context`` directive is set  this setting can be employed to constrain replication of relationships to only include specific relationship type codes,A list of valid relationship types,"[author, editor]"
+excludeRelationshipTypes,When ``context`` directive is set  this setting can be employed to constrain replication of relationships to exclude specific relationship type codes,A list of valid relationship types,[creator]
+restrictToRelatedTypes,When ``context`` directive is set  this setting can be employed to constrain replication of relationships to only include related records with the specified types.,A list of valid types,[artwork]
+excludeRelatedTypes,When ``context`` directive is set  this setting can be employed to constrain the replication to  exclude related records with the specified types.,A list of valid types,"[ephemera, books]"
+currentOnly,"When the ``context`` directive is set, only consider ""current"" relationships for replication. Eg. current storage locations",1 or 0,0
