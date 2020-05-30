@@ -44,6 +44,7 @@ Contents
    Interstitial Data <dataModelling/interstitial>
    Lists and Authorities <dataModelling/listsAuthorities>
    User Interfaces <dataModelling/interfaces>
+   Data Dictionary <dataModelling/dataDictionary>
    Locales <dataModelling/Locales>
    
 .. toctree::
@@ -99,6 +100,7 @@ Contents
 
    Mappings <export/mappings>
    OAI-PMH Provider <export/oaipmh_provider>
+   External export <export/external>
 
 .. toctree::
    :maxdepth: 2
