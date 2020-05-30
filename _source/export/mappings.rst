@@ -1,3 +1,4 @@
+.. _export_mappings:
 Export Mappings
 ===============
 

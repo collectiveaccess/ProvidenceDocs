@@ -41,6 +41,13 @@ replaceWith: If a match is found, it will be replaced with whatever is contained
 In this example, the first regular expression matches <number>.<number> and replaces it with <number>:<number>. In other words, "7.30." becomes "7:30.". The [0-9]+ string matches sequences of 1 or more numbers. Since they’re in parenthesis they can be “back referenced” into the replaceWith part using the \\1 and \\2 placeholders. The second regular expression matches any character that is not a number or a colon (the first one having reformatted any period between numbers as a colon) and replaces it with nothing – removing it in other words. This regular expression takes care of the erroneous period at the end of the invalid data."7:30." is transformed into "7:30" - a valid TimeCode input.
 
      .. note:: The only deviation from the standard regular expressions language are the backslashes. Wherever you would use a single backslash in a regular expression, you need to use two in our mapping because JSON treats backslashes specially and demands that a literal ``\`` be encoded as ``\\``
+    
+
+Option: prefix
+'''''''''''''''''''''''''''''''
+
+Option: suffix
+'''''''''''''''''''''''''''''''
 
 
 Transform Values Using Worksheet
