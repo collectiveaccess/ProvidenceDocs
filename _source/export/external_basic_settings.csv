@@ -1,0 +1,6 @@
+﻿Setting,Description,Example value
+label,"The name of the target, for display.",CTDA MODS export
+enabled,Indicates if the target should be processed or not. Set to 0 to disable the target or 1 to enable.,1
+table,Defines the table this target exports records from.,ca_objects
+restrictToTypes,"An optional list of one or more types for the export `table`. If set, only records with the specified types will be exported.","[books, documents]"
+checkAccess,"An optional list of one or more access values to filter record on. If set, only records with the specified access values will be exported","[1] (export only records with an access status of ""1"", which is typically used to indicate the record is public)"
