@@ -18,7 +18,7 @@ omitIfEmpty,"Completely ignores this mapping if the selector doesn't return any 
 omitIfNotEmpty,Omit this item and all its children if this CollectiveAccess bundle specifier returns a non-empty result. This is useful if you want to specify fallback-sections in your export mapping that are only used if certain data is not available.,Valid bundle specifier,"""omitIfNotEmpty"": ""ca_objects.description"""
 omitIfNoChildren,Omit this item if no child items will be contained within it. This option allows you to make the appearance of a container item contingent upon the existance of content within the container. NOTE: This option is available from version 1.7.9.,0 or 1,"""omitIfNoChildren"": ""1"""
 convertCodesToDisplayText,"If set, id values refering to foreign keys are returned as preferred label text in the current locale.",0 or 1,"""convertCodesToDisplayText"": 1"
-convertCodesToIdno,"(from v1.6.1) If set, id values refering to foreign keys are returned as idno.",0 or 1,"""convertCodesToIdno"": 1"
+convertCodesToIdno,"If set, id values refering to foreign keys are returned as idno. (Available from version 1.6.1) ",0 or 1,"""convertCodesToIdno"": 1"
 returnIdno,"If set, idnos are returned for List attribute values instead of primary key values. Should not be combined with convertCodesToDisplayText, as it overrides it and can produce unwanted results. Only applies to List attribute values!",0 or 1,"""returnIdno"": 1"
 skipIfExpression,"If the expression yields true, skip the mapping for the data. Note that all user-set variables are available under their identifiers.",arbitrary text,"{ ""skipIfExpression"" : ""^foo!~/49/"" }"
 start_as_iso8601,"If you exporting a range of dates, and wish for the start and end dates to be split and exported to separate elements, use this setting to grab the ""start"" date.",0 or 1,"{ ""start_as_iso8601"" : 1 }"
@@ -26,3 +26,4 @@ end_as_iso8601,"If you exporting a range of dates, and wish for the start and en
 timeOmit,"By default, start_as_iso8601 and end_as_iso8601 will produced the timestamp as well as the date. To omit the time, use timeOmit.",0 or 1,"{ ""timeOmit"": 1 }"
 dontReturnValueIfOnSameDayAsStart,This setting will ensure that the end_as_iso8601 will be skipped on single dates (where there is no end date).,0 or 1,"{ ""dontReturnValueIfOnSameDayAsStart"" : 1 }"
 sort,Sorts the values returned for a context switch on these fields. Only valid when context is set to a related table. Must always be a list.,List of valid field names for related table,"""sort"" : [ ""ca_entities.preferred_labels.surname"" ]"
+stripTags,Removes HTML and XML tags from output. (Available from version 1.7.9),0 or 1,"{""stripTags"":1}"
