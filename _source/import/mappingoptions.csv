@@ -35,6 +35,12 @@ skipRowIfExpression,Skip data row if expression evaluates to true. Data availabl
 skipGroupIfExpression,Skip mappings in the current group if expression evaluates to true. Data available during evaluation is subject to the same rules as in _skipIfExpression_.,,"{""skipGroupIfExpression"": ""wc(^14) > 10""}"
 skipIfDataPresent,Skip mapping if data is already present in CollectiveAccess.,Available from version 1.7.9,
 skipIfNoReplacementValue,Skip mapping if the value does not have a replacement value defined.,Available from version 1.7.9,
+skipWhenEmpty,Skip mapping when any of the listed placeholder values are empty.,Available from version 1.7.9,"{""skipWhenEmpty"": [""^15"", ""^16"", ""^17""]}"
+skipWhenAllEmpty,Skip mapping when all of the listed placeholder values are empty.,Available from version 1.7.9,"{""skipWhenAllEmpty"": [""^15"", ""^16"", ""^17""]}"
+skipGroupWhenEmpty,Skip group when any of the listed placeholder values are empty.,Available from version 1.7.9,"{""skipGroupWhenAllEmpty"": [""^15"", ""^16"", ""^17""]}"
+skipGroupWhenAllEmpty,Skip group when all of the listed placeholder values are empty.,Available from version 1.7.9,"{""skipGroupWhenAllEmpty"": [""^15"", ""^16"", ""^17""]}"
+skipRowWhenEmpty,Skip row when any of the listed placeholder values are empty.,Available from version 1.7.9,"{""skipRowWhenAllEmpty"": [""^15"", ""^16"", ""^17""]}"
+skipRowWhenAllEmpty,Skip row when all of the listed placeholder values are empty.,Available from version 1.7.9,"{""skipRowWhenAllEmpty"": [""^15"", ""^16"", ""^17""]}"
 useRawValuesWhenTestingExpression,"Determines whether data used during evaluation of expressions in _skipIfExpression_,  _skipRowIfExpression_ and similar is raw, unaltered source data or data transformed using  replacement values and/or regular expressions defined for the mapping. The default value is true – use unaltered data. Set to false to use transformed data. (Available from version 1.7.9)",Available from version 1.7.9,"{""useRawValuesWhenTestingExpression"": false}"
 maxLength,Defines maximum length of data to import. Data will be truncated to the specified length if the import value exceeds that length.,,
 relationshipType,A relationship type to use when linking to a related record.,The relationship type code is used. This option is only used when directly mapping to a related item without the use of a splitter.,
