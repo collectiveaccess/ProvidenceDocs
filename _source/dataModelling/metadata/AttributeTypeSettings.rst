@@ -42,7 +42,7 @@ Attribute settings: Geocode
 
 The Geocode attribute type represents one or more coordinates (latitude/longitude pairs) indicating the location of an item (collection object, geographic place, storage location or whatever else you want to place on a map).
 
-Coordinates can be entered as decimal latitude/longitude pairs (ex. 40.321,-74.55) or in degrees-minutes-seconds format (ex. 40� 23' 10N, 74� 30' 5W). Multiple latitude/longitude coordinates should be separated with semicolons (";"). `UTM <https://en.wikipedia.org/wiki/Universal_Transverse_Mercator_coordinate_system>`_ format coordinates is also supported.
+Coordinates can be entered as decimal latitude/longitude pairs (ex. 40.321,-74.55) or in degrees-minutes-seconds format (ex. 40 23' 10N, 74 30' 5W). Multiple latitude/longitude coordinates should be separated with semicolons (";"). `UTM <https://en.wikipedia.org/wiki/Universal_Transverse_Mercator_coordinate_system>`_ format coordinates is also supported.
 
 Non-coordinate entries are converted to coordinates using the Google Maps Geocoding service, which works well for most full and partial addresses worldwide. To unambiguously distinguish coordinate data from address data to be geocoded, it is strongly suggested that coordinate lists be enclosed in square brackets (ex. [40.321,-74.55; 41.321,-74.55;41.321,-75.55;40.321,-75.55;40.321,-74.55].
 
