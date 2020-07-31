@@ -8,7 +8,7 @@ canBeUsedInSearchForm,Use this option if the attribute value can be used in sear
 canBeUsedInDisplay,Use this option if the attribute value can be used for display in search results.,1 (used for display),0 or 1
 displayTemplate,"Layout for value when used in a display. Element code tags prefixed with the ^ character, used to represent the value in the template. For example: <i>^my_element_code</i>.",,HTML
 displayDelimiter,Delimiter to use between multiple values.,", (comma)",Text
-showHexValueText,Display the hex value of the selected color below the color chip.,0 (donÕt show),0 or 1
-showRGBValueText,Display the RGB value of the selected color below the color chip.,0 (donÕt show),0 or 1
+showHexValueText,Display the hex value of the selected color below the color chip.,0 (donâ€™t show),0 or 1
+showRGBValueText,Display the RGB value of the selected color below the color chip.,0 (donâ€™t show),0 or 1
 default_text,Default color value.,,Hex color value (Ex. FFCC33)
 allowDuplicateValues,Allow duplicate values to be attached to a record.,0 (don't allow duplicates),0 or 1
