@@ -196,3 +196,23 @@ Attribute settings: Entities
    :widths: auto
    :header-rows: 1
    :file: entities_settings.csv
+
+Attribute settings: Color
+---------------------------
+
+Stores color values. User interface typically provides a color picker. Values are stored internally as RGB hex color values.
+
+.. csv-table::
+   :widths: auto
+   :header-rows: 1
+   :file: color_settings.csv
+   
+Attribute settings: File size
+---------------------------
+
+Accepts digital file size values with commonly used suffixes: B, KB, KiB, MB, MiB, GB, GiB, TB, Tib, PB and PiB. Available from version 1.7.9.
+
+.. csv-table::
+   :widths: auto
+   :header-rows: 1
+   :file: filesize_settings.csv
