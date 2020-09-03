@@ -23,7 +23,10 @@ Targets are defined in the `external_exports.conf` configuration file. Each targ
    :widths: 30, 45, 25
    :file: external_basic_settings.csv
    
-   
+Detailed configuration is contained in three blocks:
+
+* `triggers` defines the criteria that will trigger export of a record to this target.
+* `output` defines the data to be exported  
 
 
 .. code-block:: none
@@ -35,15 +38,7 @@ Targets are defined in the `external_exports.conf` configuration file. Each targ
 		
 			table = ca_objects,
 			checkAccess = [1],
-		
-			destination = {
-				type = sFTP,
-				hostname = my-sftp-server@example.net,
-				user = my_user,
-				password = my_password,
-				path = "path/to/where/packages/are/uploaded"
-			},
-		
+			
 			triggers = {
 				lastModified = {
 					from_log_timestamp = 4/1/2020,
@@ -51,7 +46,7 @@ Targets are defined in the `external_exports.conf` configuration file. Each targ
 					#query = cooking
 				}
 			},
-		
+			
 			output = {
 				format = BagIT,
 				name = "EXPORT_^ca_objects.idno",
@@ -74,6 +69,14 @@ Targets are defined in the `external_exports.conf` configuration file. Each targ
 					file_list_template = "^ca_objects.idno, ^filename, ^filesize_for_display, ^mimetype",
 					file_list_delimiter = ";"
 				}
+			},
+			
+			destination = {
+				type = sFTP,
+				hostname = my-sftp-server@example.net,
+				user = my_user,
+				password = my_password,
+				path = "path/to/where/packages/are/uploaded"
 			}
 		}
 	}

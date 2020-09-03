@@ -95,6 +95,13 @@ For facets of type **location** these additional keys are defined:
    :widths: auto
    :header-rows: 1
    :file: configuration_browse_conf_locations_table.csv
+   
+For facets of type **inHomeLocation** these additional keys are defined:
+
+.. csv-table::
+   :widths: auto
+   :header-rows: 1
+   :file: configuration_browse_conf_inhomelocation_table.csv
 
 
 For facets of type **violations** these additional keys are defined:
