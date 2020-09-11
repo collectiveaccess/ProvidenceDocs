@@ -91,7 +91,7 @@ The "IN" operator
 
 .. code-block:: none
 
-	"Seth" IN ("Julia", "Allison", "Sophie", "Maria", "Angie", "Seth")
+	"Seth" IN ["Julia", "Allison", "Sophie", "Maria", "Angie", "Seth"]
 
 returns `true` while
 
