@@ -7,7 +7,9 @@ type,"Set the Type of record to set all imported records to. If you are importin
 numInitialRowsToSkip,The number of rows at the top of the data set to skip. Use this setting to skip over column headers in spreadsheets and similar data.,numeric value,1
 existingRecordPolicy,"Determines how existing records in the CollectiveAccess system are checked for and handled for the mapping. Also determines how records created by the mapping are merged with other instances (idno and/or preferred label) in the data source. 
 
-(In CollectiveAccess, the primary ID field is ""idno"" and the title/name field of each record is ""preferred_label"".)","none
+(In CollectiveAccess, the primary ID field is ""idno"" and the title/name field of each record is ""preferred_label"".)
+
+From version 1.7.9 options to skip, merge or overwrite on internal CollectiveAccess record ids is also supported via the *_on_id options. These options can be useful when re-importing data previously exported from a CollectiveAccess instance.","none
 skip_on_idno 
 merge_on_idno
 overwrite_on_idno 
@@ -16,7 +18,11 @@ merge_on_preferred_labels; overwrite_on_preferred_labels skip_on_idno_and_prefer
 merge_on_idno_and_preferred_labels
 overwrite_on_idno_and_preferred_labels merge_on_idno_with_replace
 merge_on_preferred_labels_with_replace
-merge_on_idno_and_preferred_labels_with_replace",none
+merge_on_idno_and_preferred_labels_with_replace
+skip_on_id
+merge_on_id
+merge_on_id_with_replace
+overwrite_on_id",none
 ignoreTypeForExistingRecordPolicy,If set record type will be ignored when looking for existing records as specified by the existing records policy.,"0 or 1
 ",0
 mergeOnly,If set data will only be merged with existing records using the existing records policy and no new records will be created. Available from version 1.7.9.,"0 or 1
