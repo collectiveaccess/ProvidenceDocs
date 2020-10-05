@@ -57,3 +57,5 @@ mediaPrefix,Path to import directory containing files references for media or fi
 matchType,Determines how file names are compared to the match value. ,"Valid values are STARTS, ENDS, CONTAINS and EXACT. (Default is EXACT).",
 matchMode,"Determines whether to search on file names, enclosing directory names or both. ","Valid values are DIRECTORY_NAME, FILE_AND_DIRECTORY_NAMES and FILE_NAME. (Default is FILE_NAME).",
 errorPolicy,"Determines how errors are handled for the mapping.  Options are to ignore the error, stop the import when an error is encountered and to receive a prompt when the error is encountered.",Valid values are _ignore_ and _stop_.,
+add,"Always add values after existing ones even if existing record policy mandates replacement (Eg. merge_on_idno_with_replace, Etc.)",Available from version 1.7.9,
+replace,"Always replace values, removing existing, ones even if existing record policy does not mandate replacement (Eg. is not merge_on_idno_with_replace, Etc.).",Available from version 1.7.9,
