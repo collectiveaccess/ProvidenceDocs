@@ -64,7 +64,7 @@ Start from the sample worksheet provided above. Settings include the importer na
 .. csv-table::
    :widths: 20, 40, 20, 20
    :header-rows: 1
-   :file: mappingsettings.csv
+   :file: import_settings.csv
 
 Rule Types (Column 1)
 `````````````````````

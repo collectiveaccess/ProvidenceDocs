@@ -14,7 +14,11 @@ merge_on_preferred_labels; overwrite_on_preferred_labels skip_on_idno_and_prefer
 merge_on_idno_and_preferred_labels
 overwrite_on_idno_and_preferred_labels merge_on_idno_with_replace
 merge_on_preferred_labels_with_replace
-merge_on_idno_and_preferred_labels_with_replace",none
+merge_on_idno_and_preferred_labels_with_replace
+skip_on_id
+merge_on_id
+merge_on_id_with_replace
+overwrite_on_id",none
 ignoreTypeForExistingRecordPolicy,If set record type will be ignored when looking for existing records as specified by the existing records policy.,"0 or 1
 ",0
 mergeOnly,If set data will only be merged with existing records using the existing records policy and no new records will be created. Available from version 1.7.9.,"0 or 1
