@@ -216,3 +216,4 @@ Accepts digital file size values with commonly used suffixes: B, KB, KiB, MB, Mi
    :widths: auto
    :header-rows: 1
    :file: filesize_settings.csv
+   
