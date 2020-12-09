@@ -30,7 +30,7 @@
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'sphinx.ext.todo', 'sphinxcontrib.excel_table'
+    'sphinx.ext.todo', 'sphinxcontrib.excel_table', 'sphinx.ext.autosectionlabel'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -431,3 +431,5 @@ epub_exclude_files = ['search.html']
 def setup(app):
     app.add_stylesheet('custom_theme.css')
     app.add_stylesheet('table_override.css')
+
+autosectionlabel_prefix_document=True
