@@ -20,16 +20,16 @@ CA table.element                 Refinery
 ===============================  ====================================
 ca_collections                   collectionSplitter               
 ca_entities                      entitySplitter
-ca_                              listItemSplitter
-ca_                              loanSplitter                     
-ca_                              measurementsSplitter             
-ca_                              movementSplitter                
-ca_                              placeSplitter                    
+ca_list_items                    listItemSplitter
+ca_loans                         loanSplitter
+NO TABLE                         measurementsSplitter
+ca_movements                     movementSplitter
+ca_places                        placeSplitter
 ca_objects                       objectSplitter                   
 ca_objects.lot_id                objectLotsSplitter               
-ca_                              occurrenceSplitter               
-ca_                              tourStopSplitter                
-ca_                              storageLocationSplitter          
+ca_ocurrences                    occurrenceSplitter
+ca_tour_stops                    tourStopSplitter
+ca_storage_locations             storageLocationSplitter
 ===============================  ====================================
 
 Refinery Options

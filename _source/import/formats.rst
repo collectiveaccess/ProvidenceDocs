@@ -1,4 +1,5 @@
 .. _import_formats:
+
 Supported File Formats
 ======================
 
@@ -36,6 +37,7 @@ Common examples of xPath expressions are provided in the table below.
    :file: xpathexamples.csv
 
 MARCXML files can also be imported using the xPath syntax. Standard fields and indicators can be selected as Sources as follows:
+
 
 .. csv-table::
    :widths: auto

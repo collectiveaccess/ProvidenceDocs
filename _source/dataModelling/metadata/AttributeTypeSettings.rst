@@ -131,16 +131,6 @@ Accepts numeric values and strings consisting of optional sign, any number of di
    :header-rows: 1
    :file: numeric_settings.csv
 
-Attribute settings: Numeric
----------------------------
-
-Accepts numeric values and strings consisting of optional sign, any number of digits, optional decimal part and optional exponential part.
-
-.. csv-table::
-   :widths: auto
-   :header-rows: 1
-   :file: numeric_settings.csv
-
 Attribute settings: LCSH
 ------------------------
 
@@ -208,7 +198,7 @@ Stores color values. User interface typically provides a color picker. Values ar
    :file: color_settings.csv
    
 Attribute settings: File size
----------------------------
+-----------------------------
 
 Accepts digital file size values with commonly used suffixes: B, KB, KiB, MB, MiB, GB, GiB, TB, Tib, PB and PiB. Available from version 1.7.9.
 

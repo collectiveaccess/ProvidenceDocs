@@ -1,7 +1,7 @@
 Settings,Description,Default,Values
 fieldWidth,"Width, in characters, of the field when displayed in a user interface.",70,Integers greater than zero
 fieldHeight,"Height, in characters, of the field when displayed in a user interface.",2,Integers greater than zero
-mustNotBeBlank,"Use this option if this attribute value must be set to some value - if, in other words, it must not be blank.",0 (can be blank),0 or 1
+mustNotBeBlank,"Use this option if this attribute value must be set to some value, if, in other words, it must not be blank.",0 (can be blank),0 or 1
 doesNotTakeLocale,Defines whether element takes locale specification.,1 (does not take locale specifications),0 or 1
 canBeUsedInSort,Use this option if this attribute value can be used for sorting of search results.,0 (not used in sort),0 or 1
 canBeUsedInSearchForm,Use this option if the attribute value can be used in search forms.,1 (used in search forms),0 or 1

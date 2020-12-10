@@ -96,7 +96,7 @@ Within the ``policies`` section are keys for each configured policy. In the exam
 
 ``Elements`` defines the various types of data tracked by the policy. Each key is a :ref:`table <primary_tables>` name. Within each table block are entries for types. The special ``__default__`` type is used to match any type not explicitly listed for the table. In the example the configuration for storage locations (ca_storage_locations) applies to all types of locations. The ca_occurrences entry includes a configuration specifically for occurrences of type "exhibition", and a default configuration for all other types.
 
-Each per-type configuration must include entries for ``date`` and ``template``. ``date`` is a bundle specifier for a date field in either the related table or the relationship to that table. The value in the specified field will be used to determine where in the chronology of tracked values each related record is placed. In the example, the object-location relationship ``effective_date`` intrinsic field is used to track locations, which the occurrence ``exhibition_date`` metadata element is used to place exhibitions in time. ``template`` is a :ref:`display template <display_templates>` employed to format data for the related record in the chronology. The template will be evaluated relative to the relationship between the object and related record, allowing inclusion of both interstitial (relationship-based) and related-record metadata. In the example the template for loans includes data from both the related loan record as well as the object-loan relationship.
+Each per-type configuration must include entries for ``date`` and ``template``. ``date`` is a bundle specifier for a date field in either the related table or the relationship to that table. The value in the specified field will be used to determine where in the chronology of tracked values each related record is placed. In the example, the object-location relationship ``effective_date`` intrinsic field is used to track locations, which the occurrence ``exhibition_date`` metadata element is used to place exhibitions in time. ``template`` is a :ref:`display template <reporting/templates:Display Template Syntax>` employed to format data for the related record in the chronology. The template will be evaluated relative to the relationship between the object and related record, allowing inclusion of both interstitial (relationship-based) and related-record metadata. In the example the template for loans includes data from both the related loan record as well as the object-loan relationship.
 
 Other, optional keys in per-type configuration configuration include ``color`` (chronology color-coding), ``restrictToRelationshipTypes`` (a list of relationship types to limit chronology display to), ``setInterstitialElementsOnAdd`` (a list of interstitial fields to allow the user to set when creating a relationship from within the chronology). The full list of possible entries is:
 
@@ -168,7 +168,7 @@ A typical inspector with this configuration would appear as show in the screen i
 Display in templates
 --------------------
 
-Current value information may be included in :ref:`display templates <display_templates>` using the following tags:
+Current value information may be included in :ref:`display templates <reporting/templates:Display Template Syntax>` using the following tags:
 
 .. csv-table::
    :widths: 35, 65

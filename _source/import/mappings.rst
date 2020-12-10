@@ -1,11 +1,12 @@
 .. _import_mappings:
+
 Import Mappings
 ===============
 
 .. contents::
    :local:
-   
-   
+
+
 .. toctree::
    :maxdepth: 1
    :caption: Sub-pages
@@ -16,19 +17,34 @@ Import Mappings
    mappings/splitters
    mappings/mappingOptions
    mappings/formats
-   
-   
+
+
 Introduction
 ------------
-Users can map and migrate data directly from the command line or the Providence user interface (under "Import > Data") into a Providence installation, mapping to the installation profile. An *import mapping* is a spreadsheet that defines how data is imported into CollectiveAccess. There are many settings and options in the import mapping. This documentation is organized by column, with a description of the function of each column along with the available settings for that column.
 
-Import mappings operate under two basic assumption about your data: that each row in a data set corresponds to a single record and that each column corresponds to a single metadata element. The exception to these rules is an option called treatAsIdentifiersForMultipleRows that will explode a single row into multiple records. This is very useful if you have a data source that references common metadata shared by many pre-existing records in a single row. See the Options section for more details: http://manual.collectiveaccess.org/import/tutorial.html#options-column-5.
+Users can map and migrate data directly from the command line or the Providence
+user interface (under "Import > Data") into a Providence installation, mapping
+to the installation profile. An *import mapping* is a spreadsheet that defines
+how data is imported into CollectiveAccess. There are many settings and
+options in the import mapping. This documentation is organized by column,
+with a description of the function of each column along with the available
+settings for that column.
+
+Import mappings operate under two basic assumption about your data:
+that each row in a data set corresponds to a single record and that each
+column corresponds to a single metadata element. The exception to these
+rules is an option called treatAsIdentifiersForMultipleRows that will explode
+a single row into multiple records. This is very useful if you have a data
+source that references common metadata shared by many pre-existing records
+in a single row. See the Options section for more details:
+`<http://manual.collectiveaccess.org/import/tutorial.html#options-column-5>`_.
 
 
 Running a data import involves seven basic steps:
 
-1. Create an import mapping document (in Excel or Google Sheets) that will serve as a crosswalk between source data and the destination in CollectiveAccess.
-2. Create a backup of the database by executing a data dump *before running the import*.
+1. Create an import mapping document (in Excel or Google Sheets) that will serve
+   as a crosswalk between source data and the destination in CollectiveAccess.
+2. Create a backup of the database by executing a data dump *before running the import* .
 3. Run the import from either the command line or the graphical user interface.
 4. Check the data in CollectiveAccess and look for errors or points of inconsistencies.
 5. Revise your mapping accordingly.
@@ -40,7 +56,7 @@ Sample Mapping
 --------------
 
 .. image:: ../_static/images/Sample_Mapping.png
-   
+
 Download these files to see how the Sample Mapping applies to the Sample Data within the Sample Profile. Note that you can upload these to Google Drive and import both import mappings and source data via Google Drive. 
 
 | `Sample mapping.xlsx <../_static/_files/Sample_mapping.xlsx>`_
@@ -50,26 +66,35 @@ Download these files to see how the Sample Mapping applies to the Sample Data wi
 Supported Data Input Formats
 ----------------------------
 
-Data can be in: Exif, MODS, RDF, Vernon, FMPDSOResult, MediaBin, ResourceSpace, WordpressRSS, CSVDelimited, FMPXMLResult, MySQL, SimpleXML, WorldCat, CollectiveAccess (CA-to-CA imports), Inmagic, Omeka, TEI, iDigBio, EAD, MARC, PBCoreInst, TabDelimited, Excel, MARCXML, PastPerfectXML, ULAN
+Data can be in: Exif, MODS, RDF, Vernon, FMPDSOResult, MediaBin, ResourceSpace,
+WordpressRSS, CSVDelimited, FMPXMLResult, MySQL, SimpleXML, WorldCat,
+CollectiveAccess (CA-to-CA imports), Inmagic, Omeka, TEI, iDigBio, EAD, MARC,
+PBCoreInst, TabDelimited, Excel, MARCXML, PastPerfectXML, ULAN
 
-A full description of the supported import formats and how they may be referenced is available in the in the :doc:`mappings/formats` page.
+A full description of the supported import formats and how they may be
+referenced is available in the in the :doc:`mappings/formats` page.
 
 Creating a Mapping
 ------------------
+
 Settings 
 ````````
 
-Start from the sample worksheet provided above. Settings include the importer name, format of the input data, CollectiveAccess table to import to, and more. This section can be placed at the top or bottom of a mapping spreadsheet with the setting in the first column and parameter in the second. It functions separately from the main column-defined body of the import mapping.
+Start from the sample worksheet provided above. Settings include the importer
+name, format of the input data, CollectiveAccess table to import to, and more.
+This section can be placed at the top or bottom of a mapping spreadsheet with
+the setting in the first column and parameter in the second. It functions
+separately from the main column-defined body of the import mapping.
 
 .. csv-table::
-   :widths: 20, 40, 20, 20
    :header-rows: 1
    :file: import_settings.csv
 
 Rule Types (Column 1)
 `````````````````````
 
-Each row in the mapping must have a rule defined that determines how the importer will treat the record. Available rules are:
+Each row in the mapping must have a rule defined that determines how the importer
+will treat the record. Available rules are:
 
 .. csv-table::
    :widths: auto
@@ -93,7 +118,12 @@ MARC			Like other XML formats, the Source value for MARC XML fields and indicato
 FMPXML/RESULT	FileMakerPro XMLRESULT. A few things to note here due to inclusion of invalid characters in field names in certain databases (i.e. ArtBase). See Supported File Formats for rules for Source Field name rules.                                     
 ==============  ================================================================================ 
 
-.. note::  Excel Tip: Translating A, B, C... to 1, 2, 3... can be time-consuming. Excel’s preferences allow you to change columns to display numerically rather than alphabetically. Go to Excel Preferences and select “General.” Click “Use R1C1 reference style.” This will display the column values as numbers.
+.. note::
+
+  Excel Tip: Translating A, B, C... to 1, 2, 3... can be time-consuming.
+  Excel’s preferences allow you to change columns to display numerically rather than
+  alphabetically. Go to Excel Preferences and select "General."
+  Click "Use R1C1 reference style." This will display the column values as numbers.
 
 **Special sources**
 
@@ -101,15 +131,15 @@ A few special sources are available regardless of the format of the data being i
      
 Sometimes it’s important to know, for example, which row from an Excel data set a record came from because there’s not enough other data to disambiguate for testing, etc. “Special sources” addresses this by letting you map _row_ to somewhere like internal notes. To do this you include _row_ instead of a number in the source column of your mapping.
      
-==============  ================================================================================
-Source          Description                                                                       
-==============  ================================================================================
-__row__         The number of the row being imported.  
-__source__      The name of the file being imported. For files imported through the web interface this will be a server-side temporary filename, not the original name of the file.
-__filename__    The original name of the file, when available. If the original name of the file is not available (because the uploading web browser did not report it, for instance) then the value for __source__ is returned.
-__filepath__    The full path on the server to the file being imported.   
-__now__         The current date and time. (Available from version 1.7.9).                                        
-==============  ================================================================================
+================    ================================================================================
+Source              Description
+================    ================================================================================
+``__row__``         The number of the row being imported.
+``__source__``      The name of the file being imported. For files imported through the web interface this will be a server-side temporary filename, not the original name of the file.
+``__filename__``    The original name of the file, when available. If the original name of the file is not available (because the uploading web browser did not report it, for instance) then the value for __source__ is returned.
+``__filepath__``    The full path on the server to the file being imported.
+``__now__``         The current date and time. (Available from version 1.7.9).
+================    ================================================================================
 
 CA_table.element (Column 3)
 ```````````````````````````
@@ -127,8 +157,8 @@ Example: a Date field might actually be a container with two sub-elements: a dat
 
 .. code-block:: none
 
-	ca_objects.date.date_value 
-	ca_objects.date.date_type
+    ca_objects.date.date_value
+    ca_objects.date.date_type
 
 To map the two of these into the same container, use groups. See more in  `Group (Column 4)`_ .
 
@@ -167,7 +197,10 @@ In the example above, multiple subject values in the same cell that are separate
 Refineries (Column 6-7)
 ```````````````````````
 
-Refineries fall into one of 5 camps: Splitters, Makers, Joiners, Getters and Builders. Each framework is designed to take a specific data format and transform it via a specific behavior as it is imported into CollectiveAccess. See the Refineries page for a complete list of refineries: :doc:`mappings/refineries`  
+Refineries fall into one of 5 camps: Splitters, Makers, Joiners, Getters and Builders.
+Each framework is designed to take a specific data format and transform it via a
+specific behavior as it is imported into CollectiveAccess. See the Refineries page
+for a complete list of refineries: :doc:`mappings/refineries`
 
 Splitters
 '''''''''
