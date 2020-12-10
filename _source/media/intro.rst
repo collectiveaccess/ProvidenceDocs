@@ -7,6 +7,7 @@ Introduction to Media Management
 * :ref:`Media volumes <providenceConfiguration/developer/media_volumes.conf:Media_volumes.conf>`
 * :ref:`Media mirroring <media/media_mirroring:Media Mirroring>`
 * :ref:`Media processing <providenceConfiguration/mainConfiguration/media_processing.conf:Media_processing.conf>`
+* :ref:`Media watermarking <media/media_watermarking:Media Watermarking>`
 * Media display
 * Media metadata
 * Media embedded metadata
