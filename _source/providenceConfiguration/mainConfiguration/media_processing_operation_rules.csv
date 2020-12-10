@@ -1,0 +1,148 @@
+Operation,Description,Example
+ANNOTATE,"Add annotations to a media file. Note that annotation requires an
+alpha channel. If none is available, an all opaque alpha channel is
+implicitedly created. Not available for GD image plugin.
+
+Parameters are:
+
+* position: a list of values from ``north``, ``north_west``, ``north_east``, ``south``, ``south_east``, ``south_west``, ``center``.
+* text: the annotation text. You should escape single quote chars in the text.
+* inset: position of text inside the frame.
+* font: set the font of the text. Available fonts vary from system to system.
+* size: Point size for the font.
+* color: color for the background. accepts a color name, a hex color, or a numerical RGB, RGBA, HSL, HSLA, CMYK, or CMYKA specification, for example,
+  ``blue``, ``#ddddff``, ``rgb(255,255,255)``.
+
+",".. code-block:: text
+
+  ANNOTATE {
+    position = south_east,
+    text = ""Annotation"",
+    inset = 10,
+    font = Arial,
+    size = 16,
+    color = blue
+  }"
+CROP,"Crop the file. Params:
+
+* ``width``: target width of the file.
+* ``height``: target height of the file.
+* ``x``: horizontal offset.
+* ``y``: vertical offset.",".. code-block:: text
+
+  CROP {
+    width = 100,
+    height = 100,
+    x = 10,
+    y = 10
+  }"
+FLIP,"Reflect the scanlines in the vertical or horizontal direction.
+The image will be mirrored upside-down or left-right. Set direction to
+``vertical`` or ``horizontal``",".. code-block:: text
+
+  FLIP { direction = vertical }
+"
+ROTATE,"Rotate the file. Parameters:
+
+* ``angle``: angle in degrees.",".. code-block:: text
+
+  ROTATE { angle = 30 }
+"
+SCALE,"Scale the file. Configure the following params:
+
+* ``antialiasing``: boolean to activate anti-aliasing.
+* ``width``: new width of the file. It is optional, but one of height or width should be
+  provided.
+* ``height``: new height of the file. It is optional, but one of height or width should be
+  provided.
+* ``mode``: Scaling mode
+
+  - ``width``: Scale proportionally to width.
+  - ``height``: Scale proportionally to height.
+  - ``bounding_box``: Scale proportionally and keep largest dimension inside the bounding box.
+  - ``fill_box``: Scale proportionally and stretch shortest dimension to fill all the box.
+
+* ``crop_from``: it is a position field, which is only used in fill_box mode. Not available for GMagick.
+* ``trim_edges``: remove edges, it allows a percentage value. Not available for GMagick.
+
+",".. code-block:: text
+
+  # Limit higher dimension to 240px
+  SCALE = {
+    width = 240,
+    height = 240,
+    mode = bounding_box,
+    antialiasing = 0.5
+  }
+  
+  # 200px Square thumbnails
+  SCALE = {
+    width = 200,
+    height = 200,
+    mode = fill_box,
+    crop_from = center,
+    antialiasing = 0.5
+  }
+"
+SET,"Set properties on the media processing handler. Available values are:
+
+   * ``antialiasing``
+   * ``colorspace``
+   * ``gamma``
+   * ``height``
+   * ``layer_ratio``
+   * ``layers``
+   * ``mimetype``
+   * ``no_upsampling``
+   * ``output_layer``
+   * ``quality``
+   * ``reference-black``
+   * ``reference-white``
+   * ``tile_height``
+   * ``tile_mimetype``
+   * ``tile_width``
+   * ``tiles``
+   * ``typename``
+   * ``version``
+   * ``width``
+
+",".. code-block:: text
+
+  SET = {
+    quality = 75,
+    format = image/jpeg
+  }"
+WATERMARK,"
+.. _media_processing_rule_watermarking:
+
+Add a watermark to a media file. Parameters are:
+
+* ``image``: Absolute path to your watermark image.
+  Note that this MUST be the absolute path to the watermark image.
+  If you put it in your 'app' directory you can use preexisting macros
+  set in ``global.conf``, such as ``<ca_app_dir>``, to avoid hardcoding in path info.
+  Eg. if you have the watermark image at ``/web/ca/app/watermarks/mymark.png`` you
+  can configure it here as ``<ca_app_dir>/watermarks/mymark.png``. There is no default value.
+* ``width``: Width of watermark in pixels.
+  Default value is 50% of the width of the image being processed.
+* ``height``: Height of watermark in pixels.
+  Default value is 50% of the height of the image being processed
+* ``position``: Location of watermark on processed image;
+  allowable values will place the watermark on the corners (eg. ``north_west``
+  is the upper-left-hand corner), the center on top or bottom (``north`` or ``south``)
+  or in the center of the image (``center``). Available values are
+  ``north``, ``north_west``, ``north_east``, ``south``, ``south_east``,
+  ``south_west``, ``center``.
+* ``opacity``: Determines transparency of watermark image.
+  Use a value between 0 and 1. 0=completely transparent; 1.0=completely opaque.
+  Default value is 0.5
+
+",".. code-block:: text
+
+  WATERMARK = {
+    image = <ca_app_dir>/watermark.png,
+    width = 72,
+    height = 85,
+    position = south_east,
+    opacity = 0.4
+  },"

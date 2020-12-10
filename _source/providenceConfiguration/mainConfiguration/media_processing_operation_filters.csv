@@ -1,0 +1,35 @@
+Filter,Description,Example
+DESPECKLE,"Reduce the speckles within an image. No parameters.",".. code-block:: text
+
+  DESPECKLE { }"
+MEDIAN,"Apply a median filter to the image.",".. code-block:: text
+
+  MEDIAN { radius = 2 }
+"
+SHARPEN,"Use a Gaussian operator of the given radius and standard deviation (sigma).",".. code-block:: text
+
+  SHARPEN {
+    radius = 2,
+    sigma = 0.33
+  }
+"
+UNSHARPEN_MASK,"
+This filter sharpens an image. The image is convolved with a Gaussian operator of the
+given radius and standard deviation (sigma).
+For reasonable results, radius should be larger than sigma.
+Use a radius of 0 to have the method select a suitable radius.
+
+The parameters are:
+
+* **radius**: The radius of the Gaussian, in pixels, not counting the center pixel (default 0).
+* **sigma**: The standard deviation of the Gaussian, in pixels (default 1.0).
+* **amount**: The fraction of the difference between the original and the blur image that is added back into the original (default 1.0).
+* **threshold**: The threshold, as a fraction of QuantumRange, needed to apply the difference amount (default 0.05).
+",".. code-block:: text
+
+  UNSHARPEN_MASK {
+    radius = 1,
+    sigma = 0.98,
+    amount = 1,
+    threshold = 0.08
+  }"
