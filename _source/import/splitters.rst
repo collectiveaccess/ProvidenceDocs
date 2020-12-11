@@ -1,3 +1,7 @@
+..
+  TODO: Merge this file with import/mappings/splitters.rst
+
+
 Splitters
 =========
 .. contents::
