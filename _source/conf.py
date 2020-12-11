@@ -29,6 +29,8 @@
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
+from datetime import date
+
 extensions = [
     'sphinx.ext.todo', 'sphinxcontrib.excel_table', 'sphinx.ext.autosectionlabel'
 ]
@@ -51,7 +53,8 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'CollectiveAccess'
-copyright = u'2019, Whirl-i-Gig'
+year = date.today().year
+copyright = f'{year}, Whirl-i-Gig'
 author = u'Whirl-i-Gig'
 
 # The version info for the project you're documenting, acts as replacement for
