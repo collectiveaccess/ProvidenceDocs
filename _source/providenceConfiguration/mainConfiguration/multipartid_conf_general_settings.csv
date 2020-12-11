@@ -1,22 +1,24 @@
 Key,Description,Example value,Mandatory?
-separator,The value to be displayed between elements in the user interface for the format. If you want your elements to be merged end to end with no space or separator character(s) then leave this blank.,"separator = ,",Yes
-dont_inherit_from_parent_collection,"In some archival configurations of CollectiveAccess a cross-table hierarchy is used to link object-level records to the collections they are a part of. By default these child records inherit their parent id number. This is often  desired behavior. Other times, for example when a SERIAL configuration is set for object idnos, it's not and has  potential to create duplicate id numbers. In these cases dont_inherit_from_parent_collection can be used to prevent object children from inheriting collection idnos that are duplicative. Note this only impacts cross-table hierarchies (doesn't impact other relationships or hierarchies within a single table).",dont_inherit_from_parent_collection = 1,No
-elements,An associative list of elements and the parameters for each. Elements will be output when constructing an ID number or user interface in the same order they appear in the list. At least one element must be declared for the format to be valid.,"elements = {
-                                code = {
-                                        type = LIST,
-                                        values = [PER, ORG, GRP],
-                                        default = ORG,
-                                        width = 6,
-                                        description = Entity code,
-                                        editable = 1        
-                                },
-                                num = {
-                                        type = SERIAL,
-                                        width = 8,
-                                        description = Entity number,
-                                        editable = 1
-                                }
-                        }",Yes
-sort_order,"By default an ID number will sort on its constituent elements in the order they are defined in the elementslist. If you need to have the elements of an ID number display in one order but sort in another, you can set the order used for sorting here. The value should be a simple non-associative list with the element keys in the order to use for sorting. If you want sorting to use the same order as display, you should simply omit sort_order","sort_order = [num, code]",No
-allow_extra_elements,"An existing ID number value may include more elements than are currently configured. This can happen when configuration is changed, invalidating numbers created under earlier configurations, or if values are imported from other data sources that don't conform to current standards. For these numbers CollectiveAccess can either (a) ignore the additional parts, truncating the number at the configured number of parts or (b) add ""extra"" elements for these numbers, preserving the additional parts. No matter which option is chosen  a number with extra parts is still considered invalid. To tolerate numbers with extra parts set this option to a non-zero value. To truncate set this option to 0. If omitted the default is to allow extra elements. (Available from version 1.6)",allow_extra_elements = 1,No
-extra_element_width,"Width of any ""extra"" elements in editing forms, in characters. Defaults to 10 if not set. (Available from version 1.6)",extra_element_width = 4,No
+separator,The value to be displayed between elements in the user interface for the format. If you want your elements to be merged end to end with no space or separator character(s) then leave this blank.,"``separator = ,``",Yes
+dont_inherit_from_parent_collection,"In some archival configurations of CollectiveAccess a cross-table hierarchy is used to link object-level records to the collections they are a part of. By default these child records inherit their parent id number. This is often  desired behavior. Other times, for example when a SERIAL configuration is set for object idnos, it's not and has  potential to create duplicate id numbers. In these cases dont_inherit_from_parent_collection can be used to prevent object children from inheriting collection idnos that are duplicative. Note this only impacts cross-table hierarchies (doesn't impact other relationships or hierarchies within a single table).","``dont_inherit_from_parent_collection = 1``",No
+elements,An associative list of elements and the parameters for each. Elements will be output when constructing an ID number or user interface in the same order they appear in the list. At least one element must be declared for the format to be valid.,".. code-block:: text
+
+  elements = {
+      code = {
+         type = LIST,
+         values = [PER, ORG, GRP],
+         default = ORG,
+         width = 6,
+         description = Entity code,
+         editable = 1
+      },
+      num = {
+         type = SERIAL,
+         width = 8,
+         description = Entity number,
+         editable = 1
+      }
+  }",Yes
+sort_order,"By default an ID number will sort on its constituent elements in the order they are defined in the elements list. If you need to have the elements of an ID number display in one order but sort in another, you can set the order used for sorting here. The value should be a simple non-associative list with the element keys in the order to use for sorting. If you want sorting to use the same order as display, you should simply omit sort_order","``sort_order = [num, code]``",No
+allow_extra_elements,"An existing ID number value may include more elements than are currently configured. This can happen when configuration is changed, invalidating numbers created under earlier configurations, or if values are imported from other data sources that don't conform to current standards. For these numbers CollectiveAccess can either (a) ignore the additional parts, truncating the number at the configured number of parts or (b) add ""extra"" elements for these numbers, preserving the additional parts. No matter which option is chosen  a number with extra parts is still considered invalid. To tolerate numbers with extra parts set this option to a non-zero value. To truncate set this option to 0. If omitted the default is to allow extra elements. (Available from version 1.6)","``allow_extra_elements = 1``",No
+extra_element_width,"Width of any ""extra"" elements in editing forms, in characters. Defaults to 10 if not set. (Available from version 1.6)","``extra_element_width = 4``",No

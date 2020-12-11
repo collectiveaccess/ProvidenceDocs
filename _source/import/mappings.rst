@@ -17,6 +17,7 @@ Import Mappings
    mappings/splitters
    mappings/mappingOptions
    mappings/formats
+   mappings/regex
 
 
 Introduction
