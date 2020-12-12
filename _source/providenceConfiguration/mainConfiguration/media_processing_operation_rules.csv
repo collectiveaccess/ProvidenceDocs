@@ -72,7 +72,7 @@ SCALE,"Scale the file. Configure the following params:
     width = 240,
     height = 240,
     mode = bounding_box,
-    antialiasing = 0.5
+    antialiasing = 0
   }
   
   # 200px Square thumbnails
@@ -81,7 +81,7 @@ SCALE,"Scale the file. Configure the following params:
     height = 200,
     mode = fill_box,
     crop_from = center,
-    antialiasing = 0.5
+    antialiasing = 0
   }
 "
 SET,"Set properties on the media processing handler. Available values are:

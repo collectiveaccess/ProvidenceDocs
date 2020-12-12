@@ -38,7 +38,7 @@ You should add WATERMARK rule with the appropriate values to each version you wa
 
     rule_small_image = {
         SCALE = {
-             width = 240, height = 240, mode = bounding_box, antialiasing = 0.5
+             width = 240, height = 240, mode = bounding_box
         },
         WATERMARK = {
              image = <ca_app_dir>/watermarks/my_watermark_logo.png,

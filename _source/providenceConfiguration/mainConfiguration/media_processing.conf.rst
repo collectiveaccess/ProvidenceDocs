@@ -120,13 +120,13 @@ This is an example of a media processing file:
         # ---------------------------------------------------------
         rule_thumbnail_image = {
             SCALE = {
-                width = 120, height = 120, mode = bounding_box, antialiasing = 0.5
+                width = 120, height = 120, mode = bounding_box, antialiasing = 0
             },
             SET = {quality = 75, format = image/jpeg}
         },
         rule_preview_image = {
             SCALE = {
-                width = 180, height = 180, mode = bounding_box, antialiasing = 0.5
+                width = 180, height = 180, mode = bounding_box, antialiasing = 0
             },
             SET = {quality = 75, format = image/jpeg}
         },
