@@ -429,7 +429,13 @@ epub_exclude_files = ['search.html']
 # epub_use_index = True
 
 def setup(app):
-    app.add_stylesheet('custom_theme.css')
-    app.add_stylesheet('table_override.css')
+    app.add_css_file('custom_theme.css')
+    app.add_css_file('table_override.css')
 
-autosectionlabel_prefix_document=True
+
+# -- Options for autosectionlabel --------------------------------------------
+# Only generate automatic section labels for document titles
+# autosectionlabel_maxdepth = 1
+
+# Prefix each section label with the name of the document it is in
+autosectionlabel_prefix_document = True
