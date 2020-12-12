@@ -1,4 +1,5 @@
 .. _browse_conf:
+
 Browse.conf
 ===========
 
@@ -17,7 +18,7 @@ Any intrinsic field (ie. a field that is always part of an item such as extent a
    :header-rows: 1
    :file: browse1.csv
 
-For each item type you want to be browse-able, you must define a top-level key with the item's table name (eg. ca_objects for objects) and a associative array value. The array must contain a facets key whose value is in turn an associative array defining each available browse facet for the item type. The keys of the facets array are arbitrary code name for the facets – it doesn't matter what they are so long as they are unique within the facet list. The values are yet another associative array which actually defines the characteristics of the facet.
+For each item type you want to be browse-able, you must define a top-level key with the item's table name (eg. ca_objects for objects) and as associative array value. The array must contain a facets key whose value is in turn an associative array defining each available browse facet for the item type. The keys of the facets array are arbitrary code name for the facets, it doesn't matter what they are so long as they are unique within the facet list. The values are yet another associative array which actually defines the characteristics of the facet.
 
 Each facet has a type and some (but not all) of the facet definition keys are dependent upon this type. The follow types of facets are currently supported:
 
@@ -95,7 +96,7 @@ For facets of type **location** these additional keys are defined:
    :widths: auto
    :header-rows: 1
    :file: configuration_browse_conf_locations_table.csv
-   
+
 For facets of type **inHomeLocation** these additional keys are defined:
 
 .. csv-table::
