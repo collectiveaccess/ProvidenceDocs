@@ -1,5 +1,5 @@
 Imports,Description,XML example,Mapping source syntax (XPATH)
-245 - Title Statement,Mapping source for MARC data field 245 subfield a.,".. code-block:: none
+"245 \- Title Statement",Mapping source for MARC data field 245 subfield a.,".. code-block:: none
 
    <datafield ind1=""1"" ind2=""4"" tag=""245"">
       <subfield code=""a"">The human factor /</subfield>
@@ -7,7 +7,7 @@ Imports,Description,XML example,Mapping source syntax (XPATH)
 001- Control Number,Mapping source for MARC control field 001,".. code-block:: none
 
    <controlfield tag=""001"">3780733</controlfield>",``/controlfield[@tag='001']``
-100 - Main Entry: Personal Name,Mapping source for MARC data field 100 subfield a.,".. code-block:: none
+100 \- Main Entry: Personal Name,Mapping source for MARC data field 100 subfield a.,".. code-block:: none
 
    <datafield ind1=""1"" ind2="" "" tag=""100"">
       <subfield code=""a"">Greene, Graham,</subfield>

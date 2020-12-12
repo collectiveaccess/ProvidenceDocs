@@ -1,6 +1,8 @@
 .. _external_exports:
+
 External Export Framework
 =========================
+
 .. note:: This feature is available from CollectiveAccess version 1.7.9.
 
 CollectiveAccess can interact with other external systems, including digital preservation and data backup platforms, using the external export framework. The framework provides a pipeline for assembly, packaging and transmission of CollectiveAccess-managed metadata and media to other applications. A variety of standard formats and protocols are supported and may be mixed and matched to facilitate interoperation.
@@ -31,55 +33,55 @@ Detailed configuration is contained in three blocks:
 
 .. code-block:: none
 
-	targets = {
-		mods_export_to_sftp_server = {
-			label = MODS export,
-			enabled = 1,
-		
-			table = ca_objects,
-			checkAccess = [1],
-			
-			triggers = {
-				lastModified = {
-					from_log_timestamp = 4/1/2020,
-					#from_log_id = 20000,
-					#query = cooking
-				}
-			},
-			
-			output = {
-				format = BagIT,
-				name = "EXPORT_^ca_objects.idno",
-				content = {
-					mods.xml = {
-						type = export,
-						exporter = mods_exporter_with_guid
-					},
-					. = {
-						type = file,
-						files = {
-							ca_object_representations.media.original = {
-								delimiter = .,
-								components = {^original_filename }
-							}
-						}
-					}
-				},
-				options = {
-					file_list_template = "^ca_objects.idno, ^filename, ^filesize_for_display, ^mimetype",
-					file_list_delimiter = ";"
-				}
-			},
-			
-			destination = {
-				type = sFTP,
-				hostname = my-sftp-server@example.net,
-				user = my_user,
-				password = my_password,
-				path = "path/to/where/packages/are/uploaded"
-			}
-		}
-	}
+    targets = {
+        mods_export_to_sftp_server = {
+            label = MODS export,
+            enabled = 1,
+
+            table = ca_objects,
+            checkAccess = [1],
+
+            triggers = {
+                lastModified = {
+                    from_log_timestamp = 4/1/2020,
+                    #from_log_id = 20000,
+                    #query = cooking
+                }
+            },
+
+            output = {
+                format = BagIT,
+                name = "EXPORT_^ca_objects.idno",
+                content = {
+                    mods.xml = {
+                        type = export,
+                        exporter = mods_exporter_with_guid
+                    },
+                    . = {
+                        type = file,
+                        files = {
+                            ca_object_representations.media.original = {
+                                delimiter = .,
+                                components = {^original_filename }
+                            }
+                        }
+                    }
+                },
+                options = {
+                    file_list_template = "^ca_objects.idno, ^filename, ^filesize_for_display, ^mimetype",
+                    file_list_delimiter = ";"
+                }
+            },
+
+            destination = {
+                type = sFTP,
+                hostname = my-sftp-server@example.net,
+                user = my_user,
+                password = my_password,
+                path = "path/to/where/packages/are/uploaded"
+            }
+        }
+    }
 
 
 Running an export

@@ -1,19 +1,25 @@
 ﻿Option,Description,Notes,Example
-delimiter,Delimiter to split repeating values on.  ,,"{""delimiter"": "";""}"
-hierarchicalDelimiter,"Delimiter to use when formatting hierarchical paths. This option is only supported by sources that have a notion of related data and relationship types, most notably (and for now only) the CollectiveAccessDataReader.",,"{""hierarchicalDelimiter: "" ➜ ""}"
-formatWithTemplate,"Display template to format value with prior to import. Placeholder tags may be used to incorporate data into the template. Tags always start with a ""^"" (caret) character. For column-based import formats like Excel and CSV the column number is used to reference data. For XML formats an XPath expression is used. While templates are tied to the specific source data element being mapped, they can reference any element in the import data set. For example, in an import from an Excel file, the template used while mapping column 2 (tag ^2 in the template) may also use tags for any other column. ","There is no requirement that a template include a tag for the column being mapped. The template can reference any element  in the current row, without restriction.","{""formatWithTemplate"": ""Column 1: ^1; Column 4: ^4""}"
-applyRegularExpressions,"Rewrite source data using a list of Perl compatible regular expressions as supported in the PHP programming language. Each item in the list is an entry with two keys: ""match"" (the regular expression) and ""replaceWith"" (a replacement value for matches). ""replaceWith"" may include numbered back references in the form \\n where n is the index of the regular expression parenthetical match group. ","""applyWithRegularExpressions"" will modify the data value being mapped for both import and comparison. Options that test values, such as ""skipIfValue"", will use the modified value unless  _useRawValuesWhenTestingExpression_ is set.","{
-   ""applyRegularExpressions"": [
-       {
-           ""match"": ""([0-9]+)\\.([0-9]+)"",
-            ""replaceWith"": ""\\1:\\2""
-       },
-        {
-           ""match"": ""[^0-9:]+"",
-           ""replaceWith"": """"
-       }
-    ]
-}"
+delimiter,Delimiter to split repeating values on.  ,,"``{""delimiter"": "";""}``"
+hierarchicalDelimiter,"Delimiter to use when formatting hierarchical paths. This option is only supported by sources that have a notion of related data and relationship types, most notably (and for now only) the CollectiveAccessDataReader.",,"``{""hierarchicalDelimiter: "" ➜ ""}``"
+formatWithTemplate,"Display template to format value with prior to import. Placeholder tags may be used to incorporate data into the template. Tags always start with a ""^"" (caret) character. For column-based import formats like Excel and CSV the column number is used to reference data. For XML formats an XPath expression is used. While templates are tied to the specific source data element being mapped, they can reference any element in the import data set. For example, in an import from an Excel file, the template used while mapping column 2 (tag ^2 in the template) may also use tags for any other column. ","There is no requirement that a template include a tag for the column being mapped. The template can reference any element  in the current row, without restriction.","
+.. code-block:: text
+
+  {""formatWithTemplate"":
+       ""Column 1: ^1; Column 4: ^4""}"
+applyRegularExpressions,"Rewrite source data using a list of Perl compatible regular expressions as supported in the PHP programming language. Each item in the list is an entry with two keys: ""match"" (the regular expression) and ""replaceWith"" (a replacement value for matches). ""replaceWith"" may include numbered back references in the form \\n where n is the index of the regular expression parenthetical match group. ","""applyWithRegularExpressions"" will modify the data value being mapped for both import and comparison. Options that test values, such as ""skipIfValue"", will use the modified value unless  _useRawValuesWhenTestingExpression_ is set.",".. code-block:: text
+
+  {
+     ""applyRegularExpressions"": [
+         {
+             ""match"": ""([0-9]+)\\.([0-9]+)"",
+              ""replaceWith"": ""\\1:\\2""
+         },
+          {
+             ""match"": ""[^0-9:]+"",
+             ""replaceWith"": """"
+         }
+      ]
+  }"
 prefix,Text to prepend to value prior to import.,"From version 1.7.9 placeholder tags may be used to incorporate import data into the prefix. In previous versions, only static text was supported.",
 suffix,Text to append to value prior to import.,"From version 1.7.9 placeholder tags may be used to incorporate import data into the suffix. In previous versions, only static text was supported.",
 default,Value to use if data source value is empty.,,
@@ -21,7 +27,7 @@ restrictToTypes,Restricts the the mapping to only records of the designated type
 filterEmptyValues,Remove empty values from values before attempting to import.,"When importing repeating values, all values are imported, even blanks. Setting this option filters out any value that is zero-length.",
 filterToTypes,Restricts the mapping to pull only records related with the designated types from the source. ,"This option is only supported by sources that have a notion of related data and types, most notably (and for now only) the CollectiveAccessDataReader.",
 filterToRelationshipTypes,Restricts the mapping to pull only records related with the designated relationship types from the source. ,"This option is only supported by sources that have a notion of related data and relationship types, most notably (and for now only) the CollectiveAccessDataReader.",
-skipIfEmpty,Skip the mapping If the data value being mapped is empty.,,"{""skipIfEmpty"": 1}"
+skipIfEmpty,Skip the mapping If the data value being mapped is empty.,,"``{""skipIfEmpty"": 1}``"
 skipRowIfEmpty,Skip the current data row if the data value being mapped is empty.,,
 skipGroupIfEmpty,Skip all mappings in the current group if the data value being mapped is empty.,,
 skipIfValue,Skip the mapping If the data value being mapped is equal to any of the specified values. ,Comparisons are case-sensitive.,"{""skipIfValue"": [""alpha"", ""gamma""]}"

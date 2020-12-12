@@ -33,163 +33,171 @@ The following sample multipart_id_numbering.conf configuration is for an organiz
 
 .. code-block:: none
 
-	formats = {
-		ca_objects = {
-	# This is a default numbering format for object type for which a format has not been explicitly specified
-			__default__ = {
-				separator = .,
-	# sorting of id numbers will be in reverse of display order (eg. if display is 2011.52.1, sort will be on 1.52.2001); remove sort_order altogether if you want sort to consider elements in display order
+    formats = {
+        ca_objects = {
+        # This is a default numbering format for object type for which a format
+        # has not been explicitly specified
+            __default__ = {
+                separator = .,
+                # sorting of id numbers will be in reverse of display order
+                # (eg. if display is 2011.52.1, sort will be on 1.52.2001);
+                # remove sort_order altogether if you want sort to consider
+                # elements in display order
 
-				sort_order = [item_num, lot_num, acc_year],
+                sort_order = [item_num, lot_num, acc_year],
 
-				elements = {
-					acc_year = {
-						type = YEAR,
-						width = 6,
-						description = Year,
+                elements = {
+                    acc_year = {
+                        type = YEAR,
+                        width = 6,
+                        description = Year,
 
-						editable = 1
-					},
-					lot_num = {
-						type = NUMERIC,
-						width = 6,
-						description = Lot number,
+                        editable = 1
+                    },
+                    lot_num = {
+                        type = NUMERIC,
+                        width = 6,
+                        description = Lot number,
 
-						editable = 1
-					},
-					item_num = {
-						type = SERIAL,
-						width = 6,
-						description = Item number,
+                        editable = 1
+                    },
+                    item_num = {
+                        type = SERIAL,
+                        width = 6,
+                        description = Item number,
 
-						editable = 1
-					}
-				}
-			},
-	# Here's a specialized number format for objects of type "video" (where "video" is the idno of the object_type)
-			video = {
-				separator = .,
+                        editable = 1
+                    }
+                }
+            },
+            # Here's a specialized number format for objects of type "video"
+            # (where "video" is the idno of the object_type)
+            video = {
+                separator = .,
 
-				elements = {
-					acc_year = {
-						type = YEAR,
-						width = 6,
-						description = Year,
+                elements = {
+                    acc_year = {
+                        type = YEAR,
+                        width = 6,
+                        description = Year,
 
-						editable = 1
-					},
-					typecode = {
-						type = LIST,
-						values = [8MM, DV, BETASP],
-						default = ORG,
-						width = 6,
-						description = Type code,
-						editable = 1
-					},
-					item_num = {
-						type = SERIAL,
-						width = 6,
-						description = Item number,
+                        editable = 1
+                    },
+                    typecode = {
+                        type = LIST,
+                        values = [8MM, DV, BETASP],
+                        default = ORG,
+                        width = 6,
+                        description = Type code,
+                        editable = 1
+                    },
+                    item_num = {
+                        type = SERIAL,
+                        width = 6,
+                        description = Item number,
 
-						editable = 1
-					}
-				}
-			}
-		},
+                        editable = 1
+                    }
+                }
+            }
+        },
 
-		ca_object_lots = {
-			__default__ = {
-				separator = .,
+        ca_object_lots = {
+            __default__ = {
+                separator = .,
 
-				elements = {
-					acc_year = {
-						type = YEAR,
-						width = 6,
-						description = Year,
+                elements = {
+                    acc_year = {
+                        type = YEAR,
+                        width = 6,
+                        description = Year,
 
-						editable = 1
-					},
-					lot_num = {
-						type = SERIAL,
-						width = 6,
-						description = Lot number,
+                        editable = 1
+                    },
+                    lot_num = {
+                        type = SERIAL,
+                        width = 6,
+                        description = Lot number,
 
-						editable = 1
-					}
-				}
-			}
-		},
+                        editable = 1
+                    }
+                }
+            }
+        },
 
-		ca_entities = {
-			__default__ = {
-				separator = .,
+        ca_entities = {
+            __default__ = {
+                separator = .,
 
-				elements = {
-					code = {
-						type = LIST,
-						values = [PER, ORG, GRP],
-						default = ORG,
-						width = 6,
-						description = Entity code,
-						editable = 1
-					},
-					num = {
-						type = SERIAL,
-						width = 8,
-						description = Entity number,
-						editable = 1
-					}
-				}
-			}
-		},
-		ca_places = {
-			__default__ = {
-	# Note the blank separator -- the comma is part of the config file, not the separator value
-				separator = ,
+                elements = {
+                    code = {
+                        type = LIST,
+                        values = [PER, ORG, GRP],
+                        default = ORG,
+                        width = 6,
+                        description = Entity code,
+                        editable = 1
+                    },
+                    num = {
+                        type = SERIAL,
+                        width = 8,
+                        description = Entity number,
+                        editable = 1
+                    }
+                }
+            }
+        },
+        ca_places = {
+            __default__ = {
+                # Note the blank separator -- the comma is part of the config
+                # file, not the separator value
+                separator = ,
 
-				elements = {
-					num = {
-						type = SERIAL,
-						width = 8,
-						description = Place number,
-						editable = 0
-					}
-				}
-			}
-		},
+                elements = {
+                    num = {
+                        type = SERIAL,
+                        width = 8,
+                        description = Place number,
+                        editable = 0
+                    }
+                }
+            }
+        },
 
-		ca_collections = {
-			__default__ = {
-	# Note the blank separator -- the comma is part of the config file, not the separator value
-				separator = ,
+        ca_collections = {
+            __default__ = {
+                # Note the blank separator -- the comma is part of the config
+                # file, not the separator value
+                separator = ,
 
-				elements = {
-					num = {
-						type = SERIAL,
-						width = 8,
-						description = Collection number,
-						editable = 0
-					}
-				}
-			}
-		},
+                elements = {
+                    num = {
+                        type = SERIAL,
+                        width = 8,
+                        description = Collection number,
+                        editable = 0
+                    }
+                }
+            }
+        },
 
-		ca_occurrences = {
-			__default__ = {
-	# Note the blank separator -- the comma is part of the config file, not the separator value
-				separator = ,
+        ca_occurrences = {
+            __default__ = {
+                # Note the blank separator -- the comma is part of the config
+                # file, not the separator value
+                separator = ,
 
-				elements = {
-					num = {
-						type = SERIAL,
-						width = 8,
-						description = ID number,
-						editable = 0
-					}
-				}
-			}
-		}
-	}
+                elements = {
+                    num = {
+                        type = SERIAL,
+                        width = 8,
+                        description = ID number,
+                        editable = 0
+                    }
+                }
+            }
+        }
+    }
 
 All formats in the configuration file are located in an associative list named *formats* The keys of this list are table names for which format are specified. Each table name key has as its value an associative list keyed on type. Use the special *__default__* type to specify a format for use with any type not declared with a specific format. 
 

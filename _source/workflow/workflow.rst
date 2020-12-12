@@ -7,7 +7,7 @@ Workflow-based location tracking
 Configuration
 -------------
 
-Unlike the other location tracking options, which only handle storage locations, workflow-based location tracking calculates the current location of an object by looking at a range of related records - including Loans and Occurrences - comparing their dates, and selecting the most recently dated. What types of records are considered and which date elements in those records are used for comparison are entirely configurable.
+Unlike the other location tracking options, which only handle storage locations, workflow-based location tracking calculates the current location of an object by looking at a range of related records, including Loans and Occurrences, comparing their dates, and selecting the most recently dated. What types of records are considered and which date elements in those records are used for comparison are entirely configurable.
 
 Workflow-based location tracking can supplement direct object-location reference or movement-based tracking. That is, locations recorded with those two methods may be part of the mix of records workflow-based tracking considers when calculating the current location, but they don't have to be.
 

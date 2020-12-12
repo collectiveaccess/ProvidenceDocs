@@ -29,8 +29,10 @@
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
+from datetime import date
+
 extensions = [
-    'sphinx.ext.todo', 'sphinxcontrib.excel_table'
+    'sphinx.ext.todo', 'sphinxcontrib.excel_table', 'sphinx.ext.autosectionlabel'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -51,7 +53,8 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'CollectiveAccess'
-copyright = u'2019, Whirl-i-Gig'
+year = date.today().year
+copyright = f'{year}, Whirl-i-Gig'
 author = u'Whirl-i-Gig'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -114,7 +117,6 @@ pygments_style = 'sphinx'
 
 # If true, `todo` and `todoList` produce output, else they produce nothing.
 todo_include_todos = True
-
 
 # -- Options for HTML output ----------------------------------------------
 
@@ -244,21 +246,21 @@ htmlhelp_basename = 'CollectiveAccessdoc'
 # -- Options for LaTeX output ---------------------------------------------
 
 latex_elements = {
-     # The paper size ('letterpaper' or 'a4paper').
-     #
-     # 'papersize': 'letterpaper',
+    # The paper size ('letterpaper' or 'a4paper').
+    #
+    # 'papersize': 'letterpaper',
 
-     # The font size ('10pt', '11pt' or '12pt').
-     #
-     # 'pointsize': '10pt',
+    # The font size ('10pt', '11pt' or '12pt').
+    #
+    # 'pointsize': '10pt',
 
-     # Additional stuff for the LaTeX preamble.
-     #
-     # 'preamble': '',
+    # Additional stuff for the LaTeX preamble.
+    #
+    # 'preamble': '',
 
-     # Latex figure (float) alignment
-     #
-     # 'figure_align': 'htbp',
+    # Latex figure (float) alignment
+    #
+    # 'figure_align': 'htbp',
 }
 
 # Grouping the document tree into LaTeX files. List of tuples
@@ -400,6 +402,7 @@ epub_copyright = copyright
 # A list of files that should not be packed into the epub file.
 epub_exclude_files = ['search.html']
 
+
 # The depth of the table of contents in toc.ncx.
 #
 # epub_tocdepth = 3
@@ -429,5 +432,13 @@ epub_exclude_files = ['search.html']
 # epub_use_index = True
 
 def setup(app):
-    app.add_stylesheet('custom_theme.css')
-    app.add_stylesheet('table_override.css')
+    app.add_css_file('custom_theme.css')
+    app.add_css_file('table_override.css')
+
+
+# -- Options for autosectionlabel --------------------------------------------
+# Only generate automatic section labels for document titles
+# autosectionlabel_maxdepth = 1
+
+# Prefix each section label with the name of the document it is in
+autosectionlabel_prefix_document = True
