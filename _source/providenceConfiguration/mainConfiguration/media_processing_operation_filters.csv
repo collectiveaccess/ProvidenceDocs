@@ -2,15 +2,32 @@ Filter,Description,Example
 DESPECKLE,"Reduce the speckles within an image. No parameters.",".. code-block:: text
 
   DESPECKLE { }"
-MEDIAN,"Apply a median filter to the image.",".. code-block:: text
+MEDIAN,"Apply a median filter to the image, of the given radius.",".. code-block:: text
 
   MEDIAN { radius = 2 }
 "
-SHARPEN,"Use a Gaussian operator of the given radius and standard deviation (sigma).",".. code-block:: text
+SHARPEN,"Use a Gaussian operator of the given radius and standard deviation (sigma).
+For reasonable results, radius should be larger than sigma.
+Use a radius of 0 to have the method select a suitable radius.
+
+The parameters are:
+
+* **radius**: The radius of the Gaussian, in pixels, not counting the center pixel (default 0).
+* **sigma**: The standard deviation of the Gaussian, in pixels (default 1.0).
+  It can be any floating point value from 0.1, for practically no sharpening, to
+3 or more for sever sharpening. 0.5 to 1.0 is rather good.
+
+The larger the sigma the more it sharpens.
+
+* ``sharpen 0x.4``: 	very small
+* ``sharpen 0x1.0``:	about one pixel size sharpen
+* ``sharpen 0x3.0``:	probably getting too large
+
+",".. code-block:: text
 
   SHARPEN {
-    radius = 2,
-    sigma = 0.33
+    radius = 0,
+    sigma = 0.63
   }
 "
 UNSHARPEN_MASK,"
@@ -28,8 +45,8 @@ The parameters are:
 ",".. code-block:: text
 
   UNSHARPEN_MASK {
-    radius = 1,
-    sigma = 0.98,
-    amount = 1,
-    threshold = 0.08
+    radius = 0,
+    sigma = 0.45,
+    amount = 1.5,
+    threshold = 0
   }"

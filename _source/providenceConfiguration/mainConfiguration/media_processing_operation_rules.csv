@@ -51,9 +51,9 @@ ROTATE,"Rotate the file. Parameters:
 SCALE,"Scale the file. Configure the following params:
 
 * ``antialiasing``: boolean to activate anti-aliasing.
-* ``width``: new width of the file. It is optional, but one of height or width should be
+* ``width``: new width of the file. It is optional, but one of height or width must be
   provided.
-* ``height``: new height of the file. It is optional, but one of height or width should be
+* ``height``: new height of the file. It is optional, but one of height or width must be
   provided.
 * ``mode``: Scaling mode
 

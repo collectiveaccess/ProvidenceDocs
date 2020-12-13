@@ -40,7 +40,7 @@ one for each type of item to be processed:
 
 For each table, there is an associative array, with the following keys:
 
-* :ref:`MEDIA_ACCEPT <providenceConfiguration/mainConfiguration/media_processing.conf:MEDIA_ACCEPT>`: Relates mimetypes and media types.
+* :ref:`MEDIA_ACCEPT <providenceConfiguration/mainConfiguration/media_processing.conf:MEDIA_ACCEPT>`: Relates mimetypes and media types. Each type of media (Ex. ``image``) may have multiple mimetypes associated with it.
 * :ref:`MEDIA_TYPES <providenceConfiguration/mainConfiguration/media_processing.conf:MEDIA_TYPES>`: Describes queueing and available representation versions in different sizes and flavours.
 * :ref:`MEDIA_TRANSFORMATION_RULES <providenceConfiguration/mainConfiguration/media_processing.conf:MEDIA_TRANSFORMATION_RULES>`: Describes the rules to apply to transform a representation file.
 
@@ -142,7 +142,7 @@ This is an example of a media processing file:
 MEDIA_ACCEPT
 ************
 
-One entry per mimetype.
+One entry per mimetype. Each type of media (Ex. ``image``) may have multiple mimetypes associated with it.
 
 .. code-block:: text
 

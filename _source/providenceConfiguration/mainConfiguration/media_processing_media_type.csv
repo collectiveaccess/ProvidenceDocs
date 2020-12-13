@@ -1,7 +1,9 @@
 Key,Description,Example
-QUEUE,Queue to deliver the media type to,"``QUEUE = mediaproc``"
+QUEUE,"Queue to deliver the media type to. Only ``mediaproc`` is supported currently.","``QUEUE = mediaproc``"
 QUEUED_MESSAGE,Message to show on queue listing,"``QUEUED_MESSAGE = _('Image is being processed')``"
-QUEUE_USING_VERSION,Version to use when queueing,"``QUEUE_USING_VERSION = original``"
+QUEUE_USING_VERSION,"Version to use when queueing.
+Note here that you have to specify a version here that is not set to QUEUE,
+and that you'd almost always want to be using ``original`` (a.k.a. the uploaded file).","``QUEUE_USING_VERSION = original``"
 MEDIA_VIEW_DEFAULT_VERSION,"Name of the media version that should be used as the default for display for the specified mimetype.
 
 * This is only a suggestion \- it's the version to display in the absence of any overriding value provided by the user.","``MEDIA_VIEW_DEFAULT_VERSION = tilepic``"

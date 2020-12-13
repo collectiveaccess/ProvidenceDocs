@@ -6,14 +6,17 @@ CollectiveAccess can automatically add a visible watermark to image derivatives.
 Requirements
 ------------
 
-Watermarking is only supported for image formats processed by the ImageMagick and IMagick media processing plugins. Watermarking is not supported with GD. If you are having trouble getting watermarking to work make sure your system is actually using ImageMagick/IMagick.
+Watermarking is only supported for image formats processed by the ImageMagick, GraphicsMagick
+Gmagick, and IMagick media processing plugins. Watermarking is not supported
+with GD. If you are having trouble getting watermarking to work make sure your
+system is actually using a supported media processing plugin.
 
 Getting started
 ---------------
 
 Watermarking works by superimposing your watermark image over the image being processed. You can specify the location, size and transparency for the watermark, which gives you some control over how obviously visible the watermark is. If you need to mark images in a way that is detectable but not distracting then a small mostly transparent logo in a corner of the image is probably sufficient. If you want to render images completely unusable for anything but sample purposes a relatively opaque watermark the size of the image itself may be called for.
 
-How the watermark image is defined will greatly affect how well it performs. An effective watermark will be detectable no matter what the image it sits on looks like. As you can imagine, if your watermark image is black text and you superimpose it on a dark region it won't be very noticeable. In practice, simple black text or logo watermarks will be virtually undetectable to all viewer, including you, on dark backgrounds.
+How the watermark image is defined will greatly affect how well it performs. An effective watermark will be detectable no matter what the image it sits on looks like. As you can imagine, if your watermark image is black text and you superimpose it on a dark region it won't be very noticeable. In practice, simple black text or logo watermarks will be virtually undetectable to all viewers, including you, on dark backgrounds.
 
 To ensure visibility on all backgrounds make sure your watermark image contains both black and white. One effective technique is to take a simple black outline of text or a logo (or both) and give it a white "halo." If you have access to Photoshop you can do this easily by:
 
@@ -26,7 +29,7 @@ To ensure visibility on all backgrounds make sure your watermark image contains 
 Configuration
 -------------
 
-Once you have your watermark image ready, the next step is to configure CollectiveAccess to use it. To do so you must media the media_processing.conf configuration file in app/conf.
+Once you have your watermark image ready, the next step is to configure CollectiveAccess to use it. To do so you must edit the media_processing.conf configuration file in app/conf.
 
 You can add watermarking to specific derivatives (or "versions" as they are referred to in the configuration file) by adding a WATERMARK rule to their processing rules.
 
@@ -51,6 +54,5 @@ See :ref:`Watermarking configuration <media_processing_rule_watermarking>` for d
 
 .. note::
 
-   WATERMARKing is not applied to tilepic version of the images, since this
-   is a format not easy to be 'stolen' in itself.
+   WATERMARKing is not supported for ``tilepic`` versions of  images.
 

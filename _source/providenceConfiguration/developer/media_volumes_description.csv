@@ -1,9 +1,9 @@
 Key,Description,Example
 hostname,Hostname,<site_hostname>
-protocol,"Protocol (ftp, http[s], gopher, etc.)",<site_protocol>
+protocol,"Protocol (ftp, http[s], etc.)",<site_protocol>
 urlPath,"Base path for exposing the media on this volume",<ca_media_url_root>/images
 absolutePath,"Absolute filesystem path for the volume",<ca_media_root_dir>/images
 writeable,"A flag to indicate if the volume is writeable or not",1
 description,"Description of the volume",Images
-accessUsingMirror,"TBD",
+accessUsingMirror,"Name of mirror to serve media from, when available. If the specified mirror does not yet have the required media, the local copy will be served.",
 mirrors,"An associative array of available mirrors. Content will be copied to each of them",
