@@ -1,14 +1,17 @@
 .. _export_mappings:
+
 Export Mappings
 ===============
 
 
 Supported output formats
 ------------------------
+
 Currently: XML, MARC21, CSV
 
 Creating a mapping
 ------------------
+
 To create a mapping, first download the Excel-based export mapping template available here (File:Data Export Mapping template.xlsx). Once all of the mappings and settings have been entered into the template it can be loaded directly into CollectiveAccess (see Running an export below). The mapping is automatically checked using format-specific rules before it is added so if your mapping has any errors or ambiguities, the mapping loader will let you know.
 
 Creating the mapping is a very dependent on the format you want to export. Specific notes and examples can be found in the section about element values and formats.
@@ -25,10 +28,12 @@ The first column of the main mapping spreadsheet is called "Rule type". What you
 
 Hierarchical mappings
 ---------------------
+
 Some export formats support hierarchical relationships between mapping items. For XML this is a very core concept. To create a hierarchy, simply assign a number to a mapping in the 2nd column of the Mapping sheet and then reference that number in other rows (i.e. for other items) in the 3rd row, which is typically named "Parent ID". The second item will then become a direct child if the first one. In theory, those hierarchies can be nested very deep but in practice the format implementations may apply restrictions.
 
 Source
 ------
+
 The value for the 5th column in the mapping sheet can be any CollectiveAccess bundle specifier. See API:Getting_Data#Bundle_specifiers for details. This usually specifies the actual data that is pulled into this item. Can be set to arbitrary text for items with static content or be left empty for items without content (e.g. wrapping elements in XML or empty columns in CSV).
 
 Note that if the context for the current mapping is changed, there are a couple of special keys available for the source column. For more information see the description for the "context" option in the table below.
@@ -82,6 +87,7 @@ An example export for a single object looks like this then. Note that we selecte
 
 Variables
 ---------
+
 This feature allows you, using all the available features of the exporter, to assign a value to a user-defined identifier for later usage. The value can be anything you can pull from the database. The '''identifier''' should '''only contain alphanumeric text, dashes and underscores'''. Otherwise the mapping spreadsheet will fail to load. For example: type, my_variable, some-value, somethingCamelCase.
 
 The identifier (essentially the name) that you assign to the variable goes into the element column. Since variable don't end up in the export, this column has no other use. Below is a simple example.
@@ -121,10 +127,10 @@ Below is a properly formatted example in JSON that uses some of these options:
 .. code-block:: none
 
    {
-	   "default" : "No value",
-	   "delimiter" : ";",
-	   "maxLength" : 80,
-	   "filterByRegExp" : "[A-Z]+"
+       "default" : "No value",
+       "delimiter" : ";",
+       "maxLength" : 80,
+       "filterByRegExp" : "[A-Z]+"
    }
 
 Processing order
@@ -221,19 +227,19 @@ Here is a minimal example that uses all the available features:
 
    nodes = {
       my_images = {
-	     mapping = object_mapping,
-		    restrictBySearch = "access:1",
-		    related = {
-			   concepts = {
-			      restrictToRelationshipTypes = [depicts],
-				  mapping = concept_mapping,
-			   },
-			   agents = {
-				  restrictToTypes = [person],
-				  mapping = agent_mapping,
-			   },
-		   }
-	   },
+         mapping = object_mapping,
+            restrictBySearch = "access:1",
+            related = {
+               concepts = {
+                  restrictToRelationshipTypes = [depicts],
+                  mapping = concept_mapping,
+               },
+               agents = {
+                  restrictToTypes = [person],
+                  mapping = agent_mapping,
+               },
+           }
+       },
    }
 
 While processing this configuration, the exporter essentially builds one big list of records and corresponding mappings to export. There are no duplicates in this list, if object_id 23 is selected by two different node type definitions or by multiple related definitions, it is still only exported once, using the mapping provided by the first definition.

@@ -1,4 +1,4 @@
-Facet key,Description,Mandatory?
-restrict_to_types,An optional list of types - for the item you are browsing by - to restrict the facet to. The types can be internal item_ids for the types or ca_list_item.idno values (eg. list item codes set by the installation profile). This key lets you set up facets that only browse a subset of a given authority: only places of type 'river' for instance.,No
-exclude_types,An optional list of types to exclude from the facet. The types can be internal item_ids for the types or ca_list_item.idno values (eg. list item codes set by the installation profile). This key lets you set up facets that only browse a subset of a given authority: all places with type other than 'river' for instance.,No
-policy,The current value tracking policy to use. If not specifed the default policy is used.,
+"Facet key",Description,"Mandatory?"
+restrict_to_types,"An optional list of types *for the item you are browsing by* to restrict the facet to. The types can be internal item_ids for the types or ca_list_item.idno values (eg. list item codes set by the installation profile). This key lets you set up facets that only browse a subset of a given authority: only places of type 'river' for instance.",No
+exclude_types,"An optional list of types to exclude from the facet. The types can be internal item_ids for the types or ca_list_item.idno values (eg. list item codes set by the installation profile). This key lets you set up facets that only browse a subset of a given authority: all places with type other than 'river' for instance.",No
+policy,"The current value tracking policy to use. If not specified the default policy is used.",

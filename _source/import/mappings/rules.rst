@@ -6,8 +6,8 @@ Rules
 .. contents::
    :local:
    
-Rules
-```````````
+Rule description
+`````````````````
 Rules allow you to set record-level conditionals in your mapping with target actions triggered by true or false outcomes. With Rules, you can manipulate the migration of specific data and/or set metadata based on expression statements. For example, let's say you want to skip a record if a certain element in your data source is exactly equal to a specific value. Rules allows you to set a target action, such as "SKIP," when a match is triggered.
 
 Rules rely on a two part operation outlined in the import mapping. The first component is is called "Rule triggers" and it is an expression statement that results in a quantity that is evaluated by the data importer. The second defines "rule actions" that are performed based on the outcome of the expression.
@@ -18,7 +18,7 @@ For our example, we are going to skip all records with the phrase "do not use" i
 
 This is how the rule should look in the import mapping:
 
-.. image:: ../_static/images/Rules_Mapping.png
+.. image:: ../../_static/images/Rules_Mapping.png
 
 
 Set "Rule" as your rule type and add the following to the Rule triggers column:
@@ -48,9 +48,11 @@ else			The value to inject into the source data under the target name when the t
 
 An action list with a single SET action looks like this:
 
-[{
- "action": "SET",
- "target": "inventory_yn_value",
- "value": "yes",
- "else": "no"
-}]
+.. code-block:: text
+   
+   [{
+    "action": "SET",
+    "target": "inventory_yn_value",
+    "value": "yes",
+    "else": "no"
+   }]

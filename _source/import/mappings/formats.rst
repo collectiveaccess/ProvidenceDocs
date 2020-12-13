@@ -1,3 +1,5 @@
+.. _import_formats:
+
 Supported File Formats
 ======================
 
@@ -32,14 +34,14 @@ Common examples of xPath expressions are provided in the table below.
 .. csv-table::
    :widths: auto
    :header-rows: 1
-   :file: xpathexamples.csv
+   :file: ../xpathexamples.csv
 
 MARCXML files can also be imported using the xPath syntax. Standard fields and indicators can be selected as Sources as follows:
 
 .. csv-table::
    :widths: auto
    :header-rows: 1
-   :file: marcxmlfields.csv
+   :file: ../marcxmlfields.csv
 
 FileMakerPro XMLRESULT files generally follow the XML and xPath conventions described above but require some special formatting considerations due to inclusion of invalid characters in field names in certain databases (i.e. ArtBase). Source field names in the mapping must follow these rules:
 
@@ -94,7 +96,7 @@ As this import format is used frequently in conjunction with media import, two m
 .. csv-table::
    :widths: auto
    :header-rows: 1
-   :file: exifaddtloptions.csv
+   :file: ../exifaddtloptions.csv
 
 RDF
 ^^^

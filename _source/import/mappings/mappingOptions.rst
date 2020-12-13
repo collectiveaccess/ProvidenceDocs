@@ -10,7 +10,7 @@ Options allow you to set additional formatting and conditionals on data during i
 Option: applyRegularExpressions
 '''''''''''''''''''''''''''''''
 
-This option allows the user to effectively rewrite messy and problematic source data using Perl compatible regular expressions as supported in the PHP programming language. Let's say you are mapping duration data to a TimeCode element, and the source data syntax is invalid. See the :doc:`mappings/regex` page for useful regular expressions.
+This option allows the user to effectively rewrite messy and problematic source data using Perl compatible regular expressions as supported in the PHP programming language. Let's say you are mapping duration data to a TimeCode element, and the source data syntax is invalid. See the :doc:`regex` page for useful regular expressions.
      
      Invalid timecode format:
      ``7.30.``
@@ -53,7 +53,7 @@ Option: suffix
 Transform Values Using Worksheet
 ''''''''''''''''''''''''''''''''
 
-Using `Original values and Replacement values (Columns 8-9)`_ is sufficient for transforming a small range of values. But for large transformation dictionaries, use the option "transformValuesUsingWorksheet" instead. You can use this option to reference a list of values in a separate worksheet within the mapping document. The formatting of the sheet should place original values in the first column, and replacement values in the second column.
+Using `Original values and Replacement values (Columns 8-9) <import/mappings:Original values and Replacement values (Columns 8-9)>` is sufficient for transforming a small range of values. But for large transformation dictionaries, use the option "transformValuesUsingWorksheet" instead. You can use this option to reference a list of values in a separate worksheet within the mapping document. The formatting of the sheet should place original values in the first column, and replacement values in the second column.
 
 When this option is set, any values in the "original values" and "replacement values" columns of the mapping worksheet are ignored, even if the "transformValuesUsingWorksheet" worksheet is empty or does not exist. You refer to the sheet by name:
 

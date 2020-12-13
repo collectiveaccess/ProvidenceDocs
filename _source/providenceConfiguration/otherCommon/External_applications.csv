@@ -1,4 +1,4 @@
-Entry,Description,Typical value (not default - just an example in Unix path format)
+Entry,Description,Typical value (not default: just an example in Unix path format)
 ghostscript_app,"Path to Ghostscript binary (""gs"" command) used to generate page images from PDF files",/usr/local/bin/gs
 ffmpeg_app,Path to ffmpeg binary used to convert video and audio media,/usr/local/bin/ffmpeg
 qt-faststart_app,Path to [ttp://ffmpeg.mplayerhq.hu qt-faststart] binary used to hint h.264/MPEG-4 video for streaming. qt-faststart is part of ffmpeg and located in the tools/ directory in the source tree.,/usr/local/bin/qt-faststart

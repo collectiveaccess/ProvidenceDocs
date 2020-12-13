@@ -46,7 +46,8 @@ Contents
    User Interfaces <dataModelling/interfaces>
    Data Dictionary <dataModelling/dataDictionary>
    Locales <dataModelling/Locales>
-   
+   Labels <dataModelling/labels>
+
 .. toctree::
    :maxdepth: 1
    :caption: Providence Configuration
@@ -86,10 +87,11 @@ Contents
 
 .. toctree::
    :maxdepth: 2
-   :caption: Workflow
+   :caption: Tracking objects
    :titlesonly:
 
    Tracking Current Object Location <workflow/location>
+   Workflow-based Location Tracking <workflow/workflow>
 
 .. toctree::
    :maxdepth: 2
@@ -97,6 +99,7 @@ Contents
    :titlesonly:
 
    Import Mapping <import/mappings>
+   Import Tutorial <import/tutorial>
    Running an Import <import/running>
    WorldCat <import/worldcat>
    Getty Vocabularies <import/getty>

@@ -1,4 +1,5 @@
 .. _display_templates:
+
 Display Template Syntax
 =======================
 

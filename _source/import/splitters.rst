@@ -1,5 +1,9 @@
+..
+  TODO: Merge this file with import/mappings/splitters.rst
+
+
 Splitters
-========
+=========
 .. contents::
    :local:
 
@@ -7,7 +11,7 @@ Splitters
 Splitter refineries can either create records or match data to existing records (following a mapping’s existingRecordPolicy) or break a single string of source data into several metadata elements in CollectiveAccess. Splitters for relationships are used when several parameters are required, such as setting a record type and setting a relationship type. Using the entitySplitter, a name in a single location (i.e. column) in a data source can be parsed (into first, middle, last, prefix, suffix, et al.) within the new record. Similarly the measurementSplitter breaks up, for example, a list of dimensions into to a CollectiveAccess container of sub-elements. “Splitter” also implies that multiple data elements, delimited in a single location, can be “split” into unique records related to the imported record.
 
 Refinery Options
-------------
+----------------
 
 ===============================  =================================================================================================================================================================================================
 Splitter                         Refinery Options
@@ -111,7 +115,7 @@ delimiter
       *Applicable Refineries*: collection Splitter, entitySplitter, listItemSplitter, loanSplitter, measurementsSplitter, movementSplitter, placeSplitter, objectSplitter, objectLotSplitter, objectRepresentationSplitter, occurrenceSplitter, tourStopSplitter
 
 displayNameFormat
-`````````````
+`````````````````
       Allows you to format the output of the displayName. Options are: “surnameCommaForename” (forces display name to be surname, forename); “forenameCommaSurname” (forces display name to be forename, surname); “forenameSurname” (forces display name to be forename surname); “original” (is the same as leaving it blank; you just get display name set to the imported text). This option also supports an arbitrary format by using the sub-element codes in a template, i.e. “^surname, ^forename ^middlename”. Doesn't support full format templating with <unit> and <ifdef> tags, though.
 
       ``{"displaynameFormat": "surnameCommaForename"}``
