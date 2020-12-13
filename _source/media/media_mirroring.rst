@@ -19,8 +19,7 @@ CollectiveAccess supports mirroring via FTP ("File Transfer Protocol"). FTP is a
    The media mirroring system is very old. It was actually part of the 0.5x code
    base and was originally intended to move files to Adobe Flash Streaming Server.
 
-   At the time everyone still used FTP to move files. Now, you'd never do that.
-   It's obsolete and should be removed.
+   At the time everyone still used FTP to move files.
 
 Additionally, CA can be configured to automatically use a mirror to serve media internally, if one is available. In this case when a media file is first uploaded it will be served from the local location. Once mirroring is complete (for large files or limited bandwidth connections, this can take a while) CA will automatically shift over to using the mirror.
 
