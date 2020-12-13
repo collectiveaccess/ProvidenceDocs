@@ -1,0 +1,34 @@
+Key,Description,Example
+QUEUE,"Queue to deliver the media type to. Only ``mediaproc`` is supported currently.","``QUEUE = mediaproc``"
+QUEUED_MESSAGE,Message to show on queue listing,"``QUEUED_MESSAGE = _('Image is being processed')``"
+QUEUE_USING_VERSION,"Version to use when queueing.
+Note here that you have to specify a version here that is not set to QUEUE,
+and that you'd almost always want to be using ``original`` (a.k.a. the uploaded file).","``QUEUE_USING_VERSION = original``"
+MEDIA_VIEW_DEFAULT_VERSION,"Name of the media version that should be used as the default for display for the specified mimetype.
+
+* This is only a suggestion \- it's the version to display in the absence of any overriding value provided by the user.","``MEDIA_VIEW_DEFAULT_VERSION = tilepic``"
+MEDIA_PREVIEW_DEFAULT_VERSION,"Default version to display as a preview for the given field based upon the currently loaded row","``MEDIA_PREVIEW_DEFAULT_VERSION = small``"
+VERSIONS,"Versions describe different representation versions. See :ref:`providenceConfiguration/mainConfiguration/media_processing.conf:VERSIONS` for further details",".. code-block:: none
+
+  VERSIONS = {
+    thumbnail = {
+        RULE = rule_thumbnail_image,
+        VOLUME = images,
+        QUEUE_WHEN_FILE_LARGER_THAN = 1000000
+    },
+    preview = {
+        RULE = rule_preview_image,
+        VOLUME = images,
+        QUEUE_WHEN_FILE_LARGER_THAN = 1000000
+    },
+    original 	= {
+        RULE = rule_original_image,
+        VOLUME = images,
+        QUEUE_WHEN_FILE_LARGER_THAN = 1000000
+    },
+    tilepic 	= {
+        RULE = rule_tilepic_image,
+        VOLUME = tilepics,
+        QUEUE_WHEN_FILE_LARGER_THAN = 1000000
+    }
+  }"

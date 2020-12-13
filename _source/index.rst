@@ -69,6 +69,15 @@ Contents
 
 .. toctree::
    :maxdepth: 2
+   :caption: Media
+   :titlesonly:
+
+   Intro to Media <media/intro>
+   Media Mirroring <media/media_mirroring>
+
+
+.. toctree::
+   :maxdepth: 2
    :caption: Reporting
    :titlesonly:
 
