@@ -73,6 +73,7 @@ Contents
    :titlesonly:
 
    Display Template Syntax <reporting/templates>
+   Template Unit Syntax <reporting/template_unit>
    PDF Output <reporting/pdfOut>
    Generating Labels <reporting/labels>
 

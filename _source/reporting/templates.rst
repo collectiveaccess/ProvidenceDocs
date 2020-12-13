@@ -210,7 +210,7 @@ Each unit shifts the primary by one relational "jump." Nesting <units> allows sh
    :header-rows: 1
    :file: unit_attributes.csv
 
-The <unit> tag presents many opportunities for complex display formatting which are explained in more detail, along with examples, here.
+The <unit> tag presents many opportunities for complex display formatting which are explained in more detail, along with examples, :ref:`here <template_unit>`.
 
 You can limit the number of values returned from a <unit> operating on a repeating value using the start and limit unit attributes described previously. You can display text indicating how many values were not shown using the <whenunitomits> tag following a <unit>. For example, to show the first 5 related entities and then a message with the total number:
 
