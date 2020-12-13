@@ -15,6 +15,13 @@ You want to make real-time backups of your media.
 
 CollectiveAccess supports mirroring via FTP ("File Transfer Protocol"). FTP is a standard for moving files between servers on the Internet. When FTP mirroring is enabled, every time you upload a new media file the file and its derivatives will be automatically copied using FTP to one or more remote servers. The copying happens in the background so you need not wait for the file transfers to complete before continuing your work. Files of any size (subject to disk space limitations of the mirror servers, of course) may be mirrored.
 
+.. note::
+   The media mirroring system is very old. It was actually part of the 0.5x code
+   base and was originally intended to move files to Adobe Flash Streaming Server.
+
+   At the time everyone still used FTP to move files. Now, you'd never do that.
+   It's obsolete and should be removed.
+
 Additionally, CA can be configured to automatically use a mirror to serve media internally, if one is available. In this case when a media file is first uploaded it will be served from the local location. Once mirroring is complete (for large files or limited bandwidth connections, this can take a while) CA will automatically shift over to using the mirror.
 
 Note that the CA mirroring system will automatically remove media from mirrors if they are removed from the local system. This prevents waste of disk space on mirror servers. You should not rely upon mirrors for backups of accidentally deleted files. Use a traditional data backup solution instead.
