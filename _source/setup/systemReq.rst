@@ -44,6 +44,31 @@ If setting up Apache, MySQL or PHP is daunting, you may want to consider pre-con
 
 Required and Suggested Software Packages By Distribution
 --------------------------------------------------------
+**CentOS 8**
+
+Some packages used by CollectiveAccess are available only from 3rd party repositories. Packages recommended here are from the following repositories:
+
+- RPMFusion: https://download1.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-8.noarch.rpm
+- Remi: https://rpms.remirepo.net/enterprise/remi-release-8.rpm
+- EPEL: https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+
+**Required:**
+	
+- mariadb-server		[Database server]
+- httpd					[Web server]
+- redis 				[Cache server]
+- php:remi-7.4 php-cli php-gd php-curl php-mysqlnd php-zip php-fileinfo php-gmagick php-opcache php-process php-xml php-mbstring php-redis			[Runtime environment] (Remi, EPEL)
+
+**Suggested:**
+- GraphicsMagick-devel	[Image processing]
+- ghostscript-devel		
+- ffmpeg			[Audio and video processing] (Nux)
+- libreoffice			[Microsoft Office file processing] (EPEL) 
+- dcraw				[RAW image format support] 
+- mediainfo			[Media metadata extraction] 
+- perl-Image-ExifTool			[Media metadata extraction] 
+- xpdf				[Media metadata extraction] 
+
 
 **CentOS 7**
 
@@ -56,23 +81,23 @@ Some packages used by CollectiveAccess are available only from 3rd party reposit
 **Required:**
 	
 - mariadb-server		[Database server]
-- httpd				[Web server]
-- redis-server 			[Cache server]
-- php php-mcrypt php-cli php-gd php-curl php-mysqlnd php-zip php-fileinfo php-devel php-gmagick php-opcache php-process php-xml php-mbstring php-redis			[Runtime environment] (Remi, EPEL)
+- httpd					[Web server]
+- redis 				[Cache server]
+- php php-pecl-mcrypt php-cli php-gd php-curl php-mysqlnd php-zip php-fileinfo php-devel php-gmagick php-opcache php-process php-xml php-mbstring php-redis			[Runtime environment] (Remi, EPEL)
 
 **Suggested:**
 - GraphicsMagick-devel	[Image processing]
 - ghostscript-devel		
-- ffmpeg-devel			[Audio and video processing] (Nux)
+- ffmpeg			[Audio and video processing] (Nux)
 - libreoffice			[Microsoft Office file processing] (EPEL) 
 - dcraw				[RAW image format support] 
 - mediainfo			[Media metadata extraction] 
-- exiftool			[Media metadata extraction] 
+- perl-Image-Exifool [Media metadata extraction] 
 - xpdf				[Media metadata extraction] 
 
-When installing a tool for media metadata extraction, you need only install one, although having multiple installed will not cause issues.
+Each metadata extraction tool is useful for specific types of media. MediaInfo provides the most information when used with audio/video files. ExifTool is best with images. 
 
-**Ubuntu 16.04**
+**Ubuntu 18.04, 20.04**
 
 Some packages used by CollectiveAccess are available only from 3rd party repositories. Packages recommended here are from the following repositories:
 
