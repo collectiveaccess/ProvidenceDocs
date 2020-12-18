@@ -1,0 +1,10 @@
+Directive,Description,Example
+method,"How the files are to be mirrored. Only FTP is currently supported.	ftp (must be lowercase)",ftp
+hostname,"The hostname of the server to while the files will be mirrored.",ftp.mymirror.com
+username,"The username to use when logging into the mirror server.	(Ask your server administrator if you are unsure)",user
+password,"The password to use when logging into the mirror server.	(Ask your server administator if you are unsure)",password
+directory,"The directory into which to upload the mirrored media files. In general this should be an absolute path, but depending upon how your FTP login is setup it may be a relative path. (As your server administrator if you are unsure)","/usr/local/ftp/ca/images"
+passive,"If set to '1' (the number one) then passive FTP connections are used. Passive connections are usually required if you are behind a firewall.","1"
+accessProtocol,"The protocol to use in URLs that reference media on this mirror server. For simple web-served media like images this will usually be http or https. For streaming media this may be http, rtsp or rtmp.","http"
+accessHostname,"The hostname to use in URLs that reference media on this mirror server. This is often, but not necessarily, the same as the hostname directive.","www.mymirror.com"
+accessUrlPath,"The URL path (the part after the hostname) used to reference media on this mirror server. This is often, but not necessarily, the subset of the path set in the directory directive that is relative to a web server root.","/ca/images"
