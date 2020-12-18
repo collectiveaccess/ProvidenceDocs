@@ -33,7 +33,7 @@ Greater than/less than operators only work with numeric values. Equal and not eq
 Boolean comparison
 ##################
 
-As of version 1.7.9 values representing boolean `true` and `false` are available for use in comparisons. These allow you to more easily test the return value of an expression of function using the bare, unquoted word "true" or "false". For example, this expression:
+As of version 1.8 values representing boolean `true` and `false` are available for use in comparisons. These allow you to more easily test the return value of an expression of function using the bare, unquoted word "true" or "false". For example, this expression:
 
 .. code-block:: none
 
@@ -78,7 +78,7 @@ is false because 5 is not greater than 10, and both expressions need to be true 
 is true because "seth" = "seth" is true and only one needs to be true for logical OR to return true
 
 
-.. note:: Prior to version 1.7.9 logical operators were required to be upper-case only. Both upper and lower-case operators are now allowed.
+.. note:: Prior to version 1.8 logical operators were required to be upper-case only. Both upper and lower-case operators are now allowed.
 
 Additional comparison operators
 -------------------------------

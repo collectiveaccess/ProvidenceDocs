@@ -9,7 +9,7 @@ The Prepopulate plugin provides a system for automatically setting data in recor
 
 Prepopulate applies configured rules to records as they are edited. Rule typically define a ``target`` to set a value for and a :ref:`display template <reporting/templates:Display Template Syntax>` with which to generate the value. Templates are evaluated relative to the record being edited so all values accessible with respect to that record, including related records and parent and child records in hierarchies are available to the template.  Rules may be constrained to apply to specific tables and, optionally, record types. Application of rules can be made contingent upon evaluation of an :doc:`../../reference/expressions` (which can also reference all  values accessible to the edited record) or the current status of the target metadata element.
 
-It is also possible to configure rules that replicate relationships between records. As of version 1.7.9, Prepopulate may be configured to replicate between records container metadata elements in whole or in part.
+It is also possible to configure rules that replicate relationships between records. As of version 1.8, Prepopulate may be configured to replicate between records container metadata elements in whole or in part.
 
 Basic Setup
 -----------

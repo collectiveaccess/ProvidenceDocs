@@ -235,6 +235,6 @@ Type-specific settings are:
 
 Problems with SERIAL elements
 -----------------------------
-To generate unique values for SERIAL elements the plug-in must query your CollectiveAccess database. If the database operation fails you may see the word 'ERR' instead of the expected numeric value. In versions prior to 1.7.9 the underlying database table and fields used to derive the next number in sequence had to be manually configured for each SERIAL element using the *table*, *field* and *sort_field* settings. If you are running an older version and receive an ERR value verify that the table, field and sort_field element settings are set correctly. 
+To generate unique values for SERIAL elements the plug-in must query your CollectiveAccess database. If the database operation fails you may see the word 'ERR' instead of the expected numeric value. In versions prior to 1.8 the underlying database table and fields used to derive the next number in sequence had to be manually configured for each SERIAL element using the *table*, *field* and *sort_field* settings. If you are running an older version and receive an ERR value verify that the table, field and sort_field element settings are set correctly. 
 
 The automatically issued SERIAL values should always be one more than the largest extant value in your database. If you are getting values that are less than the maximum try *reloading sort values*, using the option under the administrative *Maintenance* menu or the command line :ref:`caUtils <ca_utils>` command using the *rebuild-sort-values* option.

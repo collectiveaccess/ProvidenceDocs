@@ -7,7 +7,7 @@ allowedSorts,Defines which bundles may be used to interactively sort the list of
 disableSorts,Controls whether sorting controls for related records are displayed. Set to a non-zero value to disable sorting. By default sorting controls are displayed.,"0,1",
 sort,Bundle to use to sort the list of related records on initial load. Omit to use the natural sort order a specified by the user via drag-and-drop.,Any valid sortable intrinsic or metadata element bundle.,
 sortDirection,The direction of the sort on initial load. Use ASC for ascending and DESC or descending. Default is ASC.,ASC or DESC,
-showCount,Controls whether the count of related records is shown in the bundle title bar. Default is 0 (no count). Set to a non-zero value to display the count.,"0,1",Available as of version 1.7.9
+showCount,Controls whether the count of related records is shown in the bundle title bar. Default is 0 (no count). Set to a non-zero value to display the count.,"0,1",Available as of version 1.8
 dontShowDeleteButton,Controls whether a delete button is show for each related record. Default is 0 (show delete button). Set to a non-zero value to remove delete buttons.,"0,1",
 minRelationshipsPerRow,"Minimum number of related records. If set to a non-zero value it will not be possible to delete relationships once the minimum is reached. If set to zero, or omitted, no minumum is enforced. Default is 0.",Any integer >= 0 ,
 maxRelationshipsPerRow,"Maximum number of related records. If set to a non-zero value it will not be possible to add relationships once the maximum is reached. If set to zero, or omitted, no maximum is enforced. Default is 0.",Any integer >= 0 ,

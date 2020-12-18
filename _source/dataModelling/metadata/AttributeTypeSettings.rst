@@ -200,7 +200,7 @@ Stores color values. User interface typically provides a color picker. Values ar
 Attribute settings: File size
 -----------------------------
 
-Accepts digital file size values with commonly used suffixes: B, KB, KiB, MB, MiB, GB, GiB, TB, Tib, PB and PiB. Available from version 1.7.9.
+Accepts digital file size values with commonly used suffixes: B, KB, KiB, MB, MiB, GB, GiB, TB, Tib, PB and PiB. Available from version 1.8.
 
 .. csv-table::
    :widths: auto

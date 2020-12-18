@@ -147,7 +147,7 @@ CA supports two different mechanisms to employ GraphicsMagick or ImageMagick. Th
 
 In general you should try to use a PHP extension rather than the command-line mechanism. The extensions provide **much** better performance. Unfortunately, the extensions have proven to be unstable in some environments and can be difficult to install on Windows systems. If you are running the PHP GMagick (for GraphicsMagick) or IMagick (for ImageMagick) extension and are seeing segmentation faults or incorrect image encoding such as blank images you should remove the extension, let the command-line mechanism take over and see if that improves things.
 
-.. note:: GraphicsMagick version 1.3.32 and better break certain functions in the PHP GMagick extension API and cause all media processing to fail in CollectiveAccess in versions prior to 1.7.9. Upgrade to the current version of CollectiveAccess if you are seeing failed processing with later versions of GraphicsMagick from 1.3.32.
+.. note:: GraphicsMagick version 1.3.32 and better break certain functions in the PHP GMagick extension API and cause all media processing to fail in CollectiveAccess in versions prior to 1.8. Upgrade to the current version of CollectiveAccess if you are seeing failed processing with later versions of GraphicsMagick from 1.3.32.
 
 Both `Gmagick`_ and `Imagick`_ are available in the PHP PECL repository and often available as packages for various operating systems. They should be easy to install on Unix-y operating systems like Linux and Mac OS X. Installation on Windows is a waking nightmare.
 

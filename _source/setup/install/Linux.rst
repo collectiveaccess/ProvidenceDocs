@@ -68,7 +68,7 @@ https://linuxize.com/post/how-to-configure-and-manage-firewall-on-centos-8/
 
 Test: try accessing your server ip in a web browser on another machine on the same subnet, you should see the nginx test page
 
-4. Install PHP 7.4.13 (along with 1.7.9 required extensions)
+4. Install PHP 7.4.13 (along with 1.8 required extensions)
 
 	a. sudo yum install php php-pecl-mcrypt php-cli php-gd php-curl php-mysqlnd php-zip php-fileinfo php-devel php-gmagick php-opcache php-process php-xml php-mbstring php-redis
 	b. sudo systemctl enable --now php-fpm

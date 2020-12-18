@@ -5,7 +5,7 @@ Tracking current object location
    :local:   
    
    
-.. note:: The system for location tracking was completely rebuilt for version 1.7.9 with a new, more general, configuration format and additional features. Older configurations should work as before, but the configuration options described below should be used for new setups. To maintain compatibility with future releases consider updating your existing configuration to use the current options.
+.. note:: The system for location tracking was completely rebuilt for version 1.8 with a new, more general, configuration format and additional features. Older configurations should work as before, but the configuration options described below should be used for new setups. To maintain compatibility with future releases consider updating your existing configuration to use the current options.
 
 
 Overview
@@ -19,7 +19,7 @@ This arrangement has the advantage of simplicity but comes with serious drawback
 * Removing previous locations and only recording only a single, current location will make for a simpler and easier to manage display, but means no location history is maintained. For most users, losing location history data is unacceptable.
 * Only storage location records may be used to record location. If an object is on loan or exhibition workarounds must be employed, such as dummy "On loan" and "On exhibition" storage locations records.
 
-The history value tracking system (available as of CollectiveAccess version 1.7.9) provides a flexible way to track object locations over time. It can also be used to track other time-varying information such as provenance and current collection. The system employs tracking *policies* to maintain chronologies based upon one or more data elements, and can return full histories as well as current values for any type of record. Tracking of location is the focus in this discussion, but the approaches described here may be applied to other types of time-varying information.
+The history value tracking system (available as of CollectiveAccess version 1.8) provides a flexible way to track object locations over time. It can also be used to track other time-varying information such as provenance and current collection. The system employs tracking *policies* to maintain chronologies based upon one or more data elements, and can return full histories as well as current values for any type of record. Tracking of location is the focus in this discussion, but the approaches described here may be applied to other types of time-varying information.
 
 Tracking approaches
 -------------------
@@ -266,7 +266,7 @@ Selecting “On loan” would return all objects where the current location is a
 Home locations
 --------------
 
-As of version 1.7.9 it is possible to set a "home" location for an object. The home location is its typical storage location. If set, both the chronology (``history_tracking_chronology``) and contents (``history_tracking_current_contents``) bundles can include options to return objects to their home locations, noting the change in the chronology.
+As of version 1.8 it is possible to set a "home" location for an object. The home location is its typical storage location. If set, both the chronology (``history_tracking_chronology``) and contents (``history_tracking_current_contents``) bundles can include options to return objects to their home locations, noting the change in the chronology.
 
 Home location can be set by clicking the small house icon in the object editor inspector panel. A hierarchy browser will appear from which you can select the home location.
 

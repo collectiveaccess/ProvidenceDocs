@@ -282,7 +282,7 @@ The <if> tag provides maximum control by using :ref:`expressions <expressions>` 
 
 The rule attribute must be set to a valid expression, which can use any valid placeholder available in the template, and must be enclosed in escaped (prepended "\") quotes to ensure that it is evaluated correctly.
 
-Both <ifcount> and <ifdef> include blank values in their evaluation. From version 1.7.9 blank values may suppressed by setting the optional "omitBlanks" to a non-zero value. This is often useful when formatting data for display.  If "omitBlanks" is set, <ifcount> will return the number of non-blank values; <ifdef> will evaluate as true only if the bundle has at least one non-blank value. Note that <if> does not support the "omitBlanks" option. You must filter blank values in the expression.
+Both <ifcount> and <ifdef> include blank values in their evaluation. From version 1.8 blank values may suppressed by setting the optional "omitBlanks" to a non-zero value. This is often useful when formatting data for display.  If "omitBlanks" is set, <ifcount> will return the number of non-blank values; <ifdef> will evaluate as true only if the bundle has at least one non-blank value. Note that <if> does not support the "omitBlanks" option. You must filter blank values in the expression.
 
 Even more conditional: the <case> tag
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -386,7 +386,7 @@ There are a few placeholders that have special meanings for certain kinds of pri
    :header-rows: 1
    :file: general_special_placeholders.csv
    
-As of version 1.7.9 there are also several special placeholders available for object representations that return pre-formatted media-specific metadata. These are typically used to format display text in lists of object representations:
+As of version 1.8 there are also several special placeholders available for object representations that return pre-formatted media-specific metadata. These are typically used to format display text in lists of object representations:
 
 .. csv-table::
    :widths: 20, 40, 20, 20

@@ -9,7 +9,7 @@ existingRecordPolicy,"Determines how existing records in the CollectiveAccess sy
 
 (In CollectiveAccess, the primary ID field is ""idno"" and the title/name field of each record is ""preferred_label"".)
 
-From version 1.7.9 options to skip, merge or overwrite on internal CollectiveAccess record ids is also supported via
+From version 1.8 options to skip, merge or overwrite on internal CollectiveAccess record ids is also supported via
 the \*_on_id options. These options can be useful when re-importing data previously exported from a CollectiveAccess instance.
 
 .. code-block:: text
@@ -33,7 +33,7 @@ the \*_on_id options. These options can be useful when re-importing data previou
   overwrite_on_id
 ","",none
 ignoreTypeForExistingRecordPolicy,If set record type will be ignored when looking for existing records as specified by the existing records policy.,"0 or 1",0
-mergeOnly,If set data will only be merged with existing records using the existing records policy and no new records will be created. Available from version 1.7.9.,"0 or 1",0
+mergeOnly,If set data will only be merged with existing records using the existing records policy and no new records will be created. Available from version 1.8.,"0 or 1",0
 dontDoImport,If set then the mapping will be evaluated but no rows actually imported. This can be useful when you want to run a refinery over the rows of a data set but not actually perform the primary import. ,"0 or 1",0
 basePath,"For XML data formats, an XPath expression selecting nodes to be treated as individual records. If left blank, each XML document will be treated as a single record.",Must be a valid Xpath expression,/export
 locale,"Sets the locale used for all imported data. Leave empty or omit to use the system default locale. Otherwise set it to a valid locale code (Ex. en_US, es_MX, fr_CA).",Must be a valid ISO locale code.,en_US

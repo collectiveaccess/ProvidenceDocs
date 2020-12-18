@@ -10,4 +10,4 @@ dupeidno,Allows browsing for records with identifiers that are duplicated by at 
 location,"Allows browsing for records on current location, as defined in the current location policy configuration (current_location_criteria in app.conf)."
 violations,Allows browsing for records that are in violation of rules in the metadata dictionary. (Note that the metadata dictionary is currently an undocumented feature with no configuration UI).
 checkouts,Allows browsing for objects based upon checkout status set by the library check in/out module.
-inHomeLocation,"Allows browsing for objects based upon whether they are currently in their home location or not, as defined in the current location policy configuration (current_location_criteria in app.conf). (Available from version 1.7.9)"
+inHomeLocation,"Allows browsing for objects based upon whether they are currently in their home location or not, as defined in the current location policy configuration (current_location_criteria in app.conf). (Available from version 1.8)"

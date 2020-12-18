@@ -23,7 +23,7 @@ Bundle: ca_object_representations
 
 The ``ca_object_representations`` bundle provides the primary interface for associating uploaded media representations with other records. For all CollectiveAccess versions functionality includes upload and preview of individual media, limited editing and display of representation metadata, drag and drop ordering, download and more.
 
-As of CollectiveAccess version 1.7.9 an expanded interface is available that offers batch upload of media files, greatly expanded metadata editing and display and improved incremental loading and performance. Both the old "CLASSIC" interface and the new expanded interface ("NEW_UI") are supported in version 1.7.9. In future versions support for the "CLASSIC" interface may be dropped.
+As of CollectiveAccess version 1.8 an expanded interface is available that offers batch upload of media files, greatly expanded metadata editing and display and improved incremental loading and performance. Both the old "CLASSIC" interface and the new expanded interface ("NEW_UI") are supported in version 1.8. In future versions support for the "CLASSIC" interface may be dropped.
 
 
 .. csv-table::
