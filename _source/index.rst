@@ -122,6 +122,7 @@ Contents
    User Access Control <administration/control>
    Maintenance Functions <administration/maint>
    Command line utilities <administration/caUtils>
+   Translation <administration/translation>
 
 .. toctree::
    :maxdepth: 2
