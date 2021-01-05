@@ -38,6 +38,7 @@ Debian 10 Buster
 		phpenmod gmagick
 		/etc/init.d/php7.3-fpm restart
 		/etc/init.d/apache2 restart
+		apt install mysql-server
 
 
 
