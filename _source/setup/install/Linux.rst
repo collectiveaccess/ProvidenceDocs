@@ -24,6 +24,22 @@ Ubuntu 18.04LTS
 
 To come
 
+Debian 10 Buster
+---------------------
+
+.. code:: bash
+
+		apt install redis-server
+		apt install apache2  php libapache2-mod-fcgid php-fpm php-mbstring php-xmlrpc php-gd php-xml php-intl php-mysql php-cli  php-zip php-curl php-common php-dev php-pear  php-pecl-http php-redis libapache2-mod-php
+		apt install git screen
+		apt install graphicsmagick  ghostscript libgraphicsmagick-dev xpdf dcraw  ffmpeg exiftool libreoffice
+		pecl install channel://pecl.php.net/gmagick-2.0.5RC1
+		echo "extension=gmagick.so" > /etc/php/7.3/mods-available/gmagick.ini
+		phpenmod gmagick
+		/etc/init.d/php7.3-fpm restart
+		/etc/init.d/apache2 restart
+
+
 
 Red Hat Enterprise Linux/CentOS
 *******************************
@@ -120,7 +136,7 @@ Add below to Nginx virtual host directive (line 58 on default conf) - sudo nano 
 
 and then  sudo nano /etc/nginx/default.d/php.conf :
 
-.. code:: 
+.. code::
 
 	# pass the PHP scripts to FastCGI server
 	#
