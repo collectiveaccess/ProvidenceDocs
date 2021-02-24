@@ -86,25 +86,31 @@ SCALE,"Scale the file. Configure the following params:
 "
 SET,"Set properties on the media processing handler. Available values are:
 
-   * ``antialiasing``
-   * ``colorspace``
-   * ``gamma``
-   * ``height``
-   * ``layer_ratio``
-   * ``layers``
-   * ``mimetype``
-   * ``no_upsampling``
-   * ``output_layer``
-   * ``quality``
-   * ``reference-black``
-   * ``reference-white``
-   * ``tile_height``
-   * ``tile_mimetype``
-   * ``tile_width``
-   * ``tiles``
-   * ``typename``
-   * ``version``
-   * ``width``
+* ``antialiasing``
+* ``colorspace``
+* ``gamma``
+* ``height``
+* ``layer_ratio``
+* ``layers``
+* ``mimetype``
+* ``no_upsampling``
+* ``output_layer``
+* ``quality``
+* ``reference-black``
+* ``reference-white``
+* ``tile_height``
+* ``tile_mimetype``
+* ``tile_width``
+* ``tiles``
+* ``typename``
+* ``version``
+* ``width``
+* ``compress``: Available for format ``application/pdf``. Available values are: 
+
+  - ``screen``: selects low-resolution output similar to the Acrobat Distiller (up to version X) Screen Optimized setting.
+  - ``ebook`` selects medium-resolution output similar to the Acrobat Distiller (up to version X) eBook setting.
+  - ``prepress`` selects output similar to Acrobat Distiller Prepress Optimized (up to version X) setting.
+  - ``default`` selects output intended to be useful across a wide variety of uses, possibly at the expense of a larger output file.
 
 ",".. code-block:: text
 

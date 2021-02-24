@@ -16,12 +16,11 @@ Locale-related information is stored into three places within CA:
 * Configuration specifying how date/time expressions are parsed and presented for a given locale are stored in *app/lib/core/Parsers/TimeExpressionParser* When creating a new locale it is best to clone an existing locale file and alter it to suit the new locale.
 * CA uses Zend_Locale (from the `Zend Framework <http://framework.zend.com/>`_) to manage other localization data (number formats, country and language names and the like). The data is stored in *app/lib/core/Zend/Locale/Data* in files using standard locale codes.
 
-**How locales are selected** 
+**How locales are selected**
 
 
 Each CA user may select a preferred locale for their user interface; the list of locales is limited to those for which a user interface translation exists in *app/locale*. The selected locale is used not only for the user interface but also, when possible, for displayed content. That is, CA will always try to display catalogued data in the user's preferred UI locale. If catalogue data is not available in the user's selected language then CA will attempt to display the data using one of the system default locales, as set in the global.conf configuration file. The default locales will be used in order of listing until catalogue data is found. If no catalogue data exists for the default locales, the CA will display data in whatever locale *does* exist.
 
-**Translating CA into a new language** 
+**Translating CA into a new language**
 
-
-For information on how to translate CA into a language for which a translation does not yet exist see the the page on creating Translations.
+For information on how to translate CA into a language for which a translation does not yet exist see the the page on creating :ref:`Translations <administration/translation:Translation>`.
