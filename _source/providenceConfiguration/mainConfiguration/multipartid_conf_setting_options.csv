@@ -3,7 +3,11 @@ LIST,values,"List of allowable values for the element. Used to validate input an
 ,default,Default value for element
 SERIAL,child_only,Set to restrict element for use only on records with a parent.
 ,zeropad_to_length,"If set to a non-zero value, the sequence number is left-padded with zeros until its length is equal to the value. For example, if set to 4, the sequence number 17 would be output as 0017. The zero padding length does not affect sequence numbers longer in length than the specified value. Thus, for example, if zeropad_to_length is set to 3, the sequence value 7114 would be output as-is."
-,sequence_by_type,"If set to a non-zero value sequences are calculated by type. That is, each individual record type within the table gets its own number sequence. By default the numbering sequence is shared amongst all types. For most primary types (objects for example) you'll generally want a single set of numbers for all types. Sometimes, most commonly for occurrences, you may prefer that each type have its own sequence. (available from v1.5)"
+,sequence_by_type,"For a __default__ type, if sequence_by_type is set to a non-zero value separate numeric sequences will be maintained for each type within the table. If not set (the default) a single sequence is shared across all types. For example, if the objects table is configured with types for paintings, drawings and sculptures, the default behavior would be to number all objects sequentially regardless of types (Eg. 1, 2, 3 ...). If sequence_by_type is set, then each type will be numbered sequentially, with numbers duplicating across types. (Eg. Paintings numbered 1, 2, 3 ...; drawings numbered 1, 2, 3 ...; Etc.).
+
+You can specify the separate sequences by maintained for some, but not all, types within a table, by setting sequence_by_type on type-specific configuration entries.
+
+From version 1.8, it is possible to specify that selected types share a single sequence by setting the sequence_by_type option to a list of types that participate in the sequence. When calculating next in sequence numbering, values from all participating types will be considered."
 ,minimum_value,"A non-zero number to use as the initial value for the sequence. Ex. if set to 20000 then the first record created with be numbered 20000, the second 20001 and so on. (available from v1.7)"
 CONSTANT,value,Value of constant. This must be specified.
 FREE,minimum_length,"Minimum allowable length, in characters, of element value."
