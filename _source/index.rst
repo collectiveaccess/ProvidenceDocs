@@ -1,12 +1,10 @@
-.. CollectiveAccess documentation master file, created by
+.. CollectiveAccess documentation master file created by
    sphinx-quickstart on Tue Jul 19 20:31:05 2016.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
 
 
-===========================
-Welcome To CollectiveAccess
-===========================
+==============================
+CollectiveAccess Setup and Use
+==============================
 
 
 CollectiveAccess is open-source collections management and presentation software designed for museums, archives, and special collections also increasingly used by libraries, corporations and non-profits. It is designed to handle large, heterogeneous collections that have complex cataloguing requirements and require support for a variety of metadata standards and media formats. CollectiveAccess is a collaboration between Whirl-i-Gig and partner institutions in North America and Europe with projects in 5 continents. The software is freely available under the open source GNU Public License, meaning it’s not only free to download and use but that users are encouraged to share and distribute code.
@@ -43,18 +41,17 @@ Contents
    Relationships <dataModelling/relationships>
    Interstitial Data <dataModelling/interstitial>
    Lists and Authorities <dataModelling/listsAuthorities>
-   User Interfaces <dataModelling/interfaces>
    Data Dictionary <dataModelling/dataDictionary>
    Locales <dataModelling/Locales>
    Labels <dataModelling/labels>
 
 .. toctree::
    :maxdepth: 1
-   :caption: Providence Configuration
+   :caption: Configuration
    :titlesonly:
 
-   Configuring Providence <providenceConfiguration/configuringProvidence>
-   Configuration File Syntax <providenceConfiguration/configuration_file_syntax>
+   Overview <configuration/configuringProvidence>
+   Configuration File Syntax <configuration/configuration_file_syntax>
  
 
 .. toctree::
@@ -62,10 +59,22 @@ Contents
    :caption: Search & Browse
    :titlesonly:
 
-   Intro to Search Pages <searchBrowse/intro>
-   Syntax <searchBrowse/syntax>
+   Overview <searchBrowse/intro>
+   Search Syntax <searchBrowse/syntax>
+   Search Forms <searchBrowse/forms>
+   Search Builder <searchBrowse/builder>
+   Browse <searchBrowse/browse>
    Indexing Options <searchBrowse/indexing>
    Search Engines <searchBrowse/engines>
+   
+.. toctree::
+   :maxdepth: 2
+   :caption: Editing
+   :titlesonly:
+
+   Overview <editing/intro>
+   User interfaces <editing/interfaces>
+   Batch editing <editing/batch>
 
 .. toctree::
    :maxdepth: 2
@@ -74,6 +83,8 @@ Contents
 
    Intro to Media <media/intro>
    Media Mirroring <media/media_mirroring>
+   Batch import <media/batch>
+   Background processing <media/background.rst>
 
 
 .. toctree::
@@ -81,17 +92,22 @@ Contents
    :caption: Reporting
    :titlesonly:
 
+   Displays <reporting/displays>
    Display Template Syntax <reporting/templates>
+   Expressions <reporting/expressions>
    PDF Output <reporting/pdfOut>
    Generating Labels <reporting/labels>
+   Barcodes <reporting/barcodes>
 
 .. toctree::
    :maxdepth: 2
-   :caption: Tracking objects
+   :caption: Workflow
    :titlesonly:
 
-   Tracking Current Object Location <workflow/location>
-   Workflow-based Location Tracking <workflow/workflow>
+   Tracking location <workflow/location>
+   Alerts <workflow/alerts>
+   Sets <workflow/sets>
+   
 
 .. toctree::
    :maxdepth: 2
@@ -103,6 +119,7 @@ Contents
    Running an Import <import/running>
    WorldCat <import/worldcat>
    Getty Vocabularies <import/getty>
+   Chenhall Nomenclature <import/chenhall>
    Media embedded metadata <import/mediaembeddedmetadata>
 
 .. toctree::
@@ -122,7 +139,17 @@ Contents
    User Access Control <administration/control>
    Maintenance Functions <administration/maint>
    Command line utilities <administration/caUtils>
-   Translation <administration/translation>
+   
+.. toctree::
+   :maxdepth: 2
+   :caption: Developer
+   :titlesonly:
+
+   Overview <developer/intro>
+   Translation <developer/translation>
+   Web APIs <developer/web_api>
+   Internal APIs <developer/internal_api>
+   Plugins <developer/plugins>
 
 .. toctree::
    :maxdepth: 2
@@ -130,6 +157,5 @@ Contents
    :titlesonly:
 
    reference/Settings
-   Expressions <reference/expressions>
    reference/Glossaries
    
