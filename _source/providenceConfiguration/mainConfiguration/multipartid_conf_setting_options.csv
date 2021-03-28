@@ -8,6 +8,7 @@ SERIAL,child_only,Set to restrict element for use only on records with a parent.
 You can specify the separate sequences by maintained for some, but not all, types within a table, by setting sequence_by_type on type-specific configuration entries.
 
 From version 1.8, it is possible to specify that selected types share a single sequence by setting the sequence_by_type option to a list of types that participate in the sequence. When calculating next in sequence numbering, values from all participating types will be considered."
+,dont_include_subtypes,"Controls whether sub-types are automatically included in types lists specified for the sequence_by_type option. If set, only types explicitly referenced in the setting value will be included. Default is to expand the list to include sub types. (avaialble from v1.8)"
 ,minimum_value,"A non-zero number to use as the initial value for the sequence. Ex. if set to 20000 then the first record created with be numbered 20000, the second 20001 and so on. (available from v1.7)"
 CONSTANT,value,Value of constant. This must be specified.
 FREE,minimum_length,"Minimum allowable length, in characters, of element value."
