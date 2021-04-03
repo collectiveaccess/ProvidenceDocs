@@ -106,7 +106,7 @@ You will need to close the Terminal window and open a new one for the path chang
 
 If you don't want MySQL starting up automatically every time you boot your machine you can start it up on demand using `brew services run mysql`
 
-Next we install various packages to support processing of media: ffmpeg (audio/video), Ghostscript (PDFs), GraphicsMagick (mages), mediainfo (metadata extraction and xpdf (content extraction from PDFs):
+Next we install various packages to support processing of media: ffmpeg (audio/video), Ghostscript (PDFs), GraphicsMagick (images), mediainfo (metadata extraction and xpdf (content extraction from PDFs):
 
 .. code::
 
@@ -132,7 +132,7 @@ Then "clone" the Providence application code from GitHub:
 
     git clone https://github.com/collectiveaccess/providence.git ca
 
-If you prefer to download a release, place the release ZIP or tgz file downloaded from https://github.com/collectiveaccess/providence/releases into /usr/local/var/www and uncompress it. Then rename the resulting directory (named something like `providence-1.7.8`) to `ca`.
+If you prefer to download a release, place the release ZIP or tgz file downloaded from https://github.com/collectiveaccess/providence/releases into /usr/local/var/www and uncompress it. Then rename the resulting directory (named something like `providence-1.7.11`) to `ca`.
 
 In the Terminal change directory into the `ca` application directory and copy the `setup.php-dist` file to `setup.php`. This file contains basic configuration for Providence. The "-dist" version is simply a template. The `setup.php` copy will need to be customized for your installation:
 

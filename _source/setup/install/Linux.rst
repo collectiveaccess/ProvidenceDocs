@@ -1,6 +1,14 @@
 Installing on Linux
 ===================
 
+CollectiveAccess should run on any distribution of Linux. Detailed instructions are provided for two popular distributions:
+
+
+* :ref:`Ubuntu 20.04 LTS <install_ubuntu_20_04>`
+* :ref:`CentOS 8 LTS <install_centos8>`
+
+User provided instruction notes for additional Linux distributions are shown below. Please post improvements to these notes on the `Support Forum <https://support.collectiveaccess.org>`_.
+
 Ubuntu
 ******
 
@@ -18,11 +26,6 @@ Packages:
 	add-apt-repository ppa:ondrej/php
 	apt install -y php7.2 libapache2-mod-php7.2 php7.2-common php7.2-mbstring php7.2-xmlrpc php7.2-gd php7.2-xml php7.2-intl php7.2-mysql php7.2-cli  php7.2-zip php7.2-curl php7.2-posix php7.2-dev php-pear php7.2-redis php7.2-gmagick php7.2-gmp
 
-
-Ubuntu 18.04LTS
----------------
-
-To come
 
 Debian 10 Buster
 ---------------------
