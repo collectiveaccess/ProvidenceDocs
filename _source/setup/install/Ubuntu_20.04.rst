@@ -6,13 +6,13 @@ CollectiveAccess relies on a number of open-source software packages to run such
 
 To start bring up a command line terminal on your Ubuntu system. Many of the commands required for installation must be run as the root (administrative) user. You can either log in as the root user, or (preferably) run the commands using `sudo`, which executes commands as the root user for authorized users. We assume use of `sudo` and include it whenever it is required.
 
-First, we install a web server. These instructions assume use of Apache. You can also install `nginx <https://www.nginx.com>`_, a popular alternative to Apache if desired, although the web-server specific configuration will differ from that described here. To install Apache enter in your terminal: 
+First, we install a web server. These instructions assume use of Apache. You can also install `nginx <https://www.nginx.com>`_, a popular alternative to Apache if desired, although the web-server specific configuration will differ from that described here. To install Apache enter in the terminal: 
 
 .. code:: bash
 
    sudo apt install -y apache
 
-Next, set Apache to start itself automatically every time you reboot the server:
+Next, set Apache to start itself automatically every time the server is rebooted:
 
 .. code:: bash
 
@@ -55,7 +55,7 @@ Next search for `upload_max_filesize` and change it to a value larger than the l
 	
 	As with `memory_limit` this setting is a maximum. It does not actually allocate resources.
 
-Finally, search for `post_max_size` and set it to a slightly larger value than `upload_max_filesize`. Of `upload_max_filesize` is set to "750m", for example, you may elect to set `post_max_size` to "800m".
+Finally, search for `post_max_size` and set it to a slightly larger value than `upload_max_filesize`. If `upload_max_filesize` is set to "750m", for example, you may elect to set `post_max_size` to "800m".
 
 By default PHP will not display runtime errors on screen. If you're experiencing blank white screens, odds are a PHP error occurred but it's not being displayed. To enable on-screen error displays search for `display_errors` and set its value to "On". On-screen PHP error display can be useful for debugging, but it is adviseable to leave message display off in a production system.
 
@@ -69,7 +69,7 @@ Once you're done editing `php.ini` restart the web server, allowing your edits t
 	
 	You can also change the `display_errors` setting by adding the following PHP code to your `setup.php` file: `ini_set('display_errors', 'On');`. Setting `display_errors` in `setup.php` does not require a web server restart, making it very convenient when debugging.
 
-Now let's install MySQL. CollectiveAccess works with version 5.7 or newer. To install version most current version, version 8.0:
+Now let's install MySQL. CollectiveAccess works with version 5.7 or newer. To install the most current version, version 8.0:
 
 .. code::
 
@@ -90,7 +90,7 @@ Next we install various packages to support data caching and processing of media
    apt install -y ghostscript libgraphicsmagick1-dev libpoppler-dev dcraw redis-server ffmpeg libimage-exiftool-perl libreoffice mediainfo 
 
 
-Now we are ready to install the CollectiveAccess `Providence` back-end cataloguing application. The web server we installed earlier uses `/var/www/html` for documents by default (the "web server root" directory). We are going to place CollectiveAccess here, in a subdirectory named `ca`. A URL for this directory will be http://<your server ip>/ca. 
+Now we are ready to install the CollectiveAccess `Providence` back-end cataloguing application. The web server we installed earlier uses `/var/www/html` for documents by default (the "web server root" directory). We are going to place CollectiveAccess here, in a subdirectory named `ca`. The URL for this directory will be http://<your server ip>/ca. 
 
 .. tip::
 
@@ -118,7 +118,7 @@ Then "clone" the Providence application code from GitHub:
 
 If you prefer to download a release, place the `release ZIP or tgz file <https://github.com/collectiveaccess/providence/releases>`_ into /var/www/html and uncompress it. Then rename the resulting directory (named something like `providence-1.7.11`) to `ca`.
 
-In your terminal change directory into the `ca` application directory and copy the `setup.php-dist` file to `setup.php`. This file contains basic configuration for Providence. The "-dist" version is simply a template. The `setup.php` copy will need to be customized for your installation:
+In the terminal change directory into the `ca` application directory and copy the `setup.php-dist` file to `setup.php`. This file contains basic configuration for Providence. The "-dist" version is simply a template. The `setup.php` copy will need to be customized for your installation:
 
 .. code::
 
@@ -129,7 +129,7 @@ Edit `setup.php`, changing settings to suit. At a minimum you will need to edit 
 
 By default apt installs the MySQL database server with an all-access, password-less administrative account named `root`. It's generally insecure to leave this account password-less, but in a testing environment this may not matter. If you decide to use the root account, set `__CA_DB_USER__` to "root", leave `__CA_DB_PASSWORD__` blank and set `__CA_DB_DATABASE__` to the name you'll use for your database. For this example, we'll assume the database is to be named `my_archive`.
 
-MySQL can support multiple databases in a single installation, so the `my_archive` database must be created explicitly. Log into mysql in your terminal using the `mysql` command (assuming you haven't set a password for the root account):
+MySQL can support multiple databases in a single installation, so the `my_archive` database must be created explicitly. Log into mysql in the terminal using the `mysql` command (assuming you haven't set a password for the root account):
 
 .. code::
 

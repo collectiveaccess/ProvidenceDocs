@@ -1,36 +1,54 @@
 .. _install_centos8:
-Installing on CentOS 8
-=======================
+Installing on CentOS 8 and Red Hat Enterprise Linux 8
+=====================================================
 
-CollectiveAccess relies on a number of open-source software packages to run such as MySQL (database server), PHP (programming lanaguage) and Apache or nginx (web server), to name just a few. These required packages, all of which are standard parts of the Ubuntu distribution, can be installed using the standard `yum` package manager. 
+.. note::
 
-To start bring up a command line terminal on your Ubuntu system. Many of the commands required for installation must be run as the root (administrative) user. You can either log in as the root user, or (preferably) run the commands using `sudo`, which executes commands as the root user for authorized users. We assume use of `sudo` and include it whenever it is required.
+	CentOS is a free, community-supported Linux distribution that is functionally compatible with its upstream source, Red Hat Enterprise Linux. For purposes of CollectiveAccess installation they are identical. The instructions provided here should work for either CentOS or Red Hat Enterprise Linux.
 
-First, we install a web server. These instructions assume use of Apache. You can also install `nginx <https://www.nginx.com>`_, a popular alternative to Apache if desired, although the web-server specific configuration will differ from that described here. To install Apache enter in your terminal: 
+CollectiveAccess relies on a number of open-source software packages to run such as MySQL (database server), PHP (programming lanaguage) and Apache or nginx (web server), to name just a few. These required packages, all of which are standard parts of the CentOS distribution, can be installed using the `dnf` package manager. 
 
-.. code:: bash
+To start bring up a command line terminal on your CentOS system. Many of the commands required for installation must be run as the root (administrative) user. You can either log in as the root user, or (preferably) run the commands using `sudo`, which executes commands as the root user for authorized users. We assume use of `sudo` and include it whenever it is required.
 
-   sudo yum install -y apache
-
-Next, set Apache to start itself automatically every time you reboot the server:
+First we install a web server. These instructions assume use of Apache. You can also install `nginx <https://www.nginx.com>`_, a popular alternative to Apache if desired, although the web-server specific configuration will differ from that described here. To install Apache enter in the terminal: 
 
 .. code:: bash
 
-   sudo systemctl enable apache2.service
+   sudo dnf -y install httpd
+
+Next, set Apache to start itself automatically every time the server is rebooted:
+
+.. code:: bash
+
+   sudo systemctl enable httpd
 
 and also to start running now:
 
 .. code:: bash
 
-   sudo systemctl start apache2.service
+   sudo systemctl start httpd
 
 You should now be able to connect to the web server by going to the URL `http://<ip address of your server>` in a web browser. An Apache welcome page should display. If unsure of your server's IP address, the `hostname -I` command will return it.
 
-Next install PHP version 7.4 and required extensions:
+Next install PHP version 7.4 and required extensions. CentOS 8 offers only PHP 7.2 and 7.3. An external repository is required for installation of PHP 7.4. We'll use the popular EPEL and REMI repositories to obtain the latest packages. To add the repositories:
+
+.. code:: bash
+	
+	sudo dnf -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+	sudo dnf -y install https://rpms.remirepo.net/enterprise/remi-release-8.rpm
+
+and then enable REMI:
 
 .. code:: bash
 
-    sudo yum install -y php libapache2-mod-php php-mbstring php-xmlrpc php-gd php-xml php-intl php-mysql php-cli php-zip php-curl php-posix php-dev php-pear php-redis php-gmagick php-gmp 
+	sudo dnf config-manager --set-enabled remi
+	sudo dnf -y module install php:remi-7.4
+	
+Now we can actually install PHP 7.4:
+
+.. code:: bash
+
+    sudo dnf -y install php php-cli php-common php-gd php-curl php-mysqlnd php-zip php-fileinfo php-gmagick php-opcache php-process php-xml php-mbstring php-redis
 
 Once the PHP installation process completes typing `php -v` in the terminal should return output similar to:
 
@@ -41,7 +59,7 @@ Once the PHP installation process completes typing `php -v` in the terminal shou
 	Zend Engine v3.4.0, Copyright (c) Zend Technologies
 		with Zend OPcache v7.4.3, Copyright (c), by Zend Technologies
 
-The default installation of PHP is configured with memory and file upload size limits that are often too low for typical use of CollectiveAccess. In particular, file uploads are limited to a maximum of 2mb, which is well below the media file sizes most users work with. To raise these limits edit the PHP configuration file at `/etc/php/7.4/apache2/php.ini`. 
+The default installation of PHP is configured with memory and file upload size limits that are often too low for typical use of CollectiveAccess. In particular, file uploads are limited to a maximum of 2mb, which is well below the media file sizes most users work with. To raise these limits edit the PHP configuration file at `/etc/php.ini`. 
 
 With the `php.ini` file open search for `memory_limit` and change it to "256m". If you are planning to upload very large media files (Eg. JPEGs > 10mb or TIFFs > 100mb) you may wish to set this value to "384m" or even "512m". 
 
@@ -55,7 +73,7 @@ Next search for `upload_max_filesize` and change it to a value larger than the l
 	
 	As with `memory_limit` this setting is a maximum. It does not actually allocate resources.
 
-Finally, search for `post_max_size` and set it to a slightly larger value than `upload_max_filesize`. Of `upload_max_filesize` is set to "750m", for example, you may elect to set `post_max_size` to "800m".
+Finally, search for `post_max_size` and set it to a slightly larger value than `upload_max_filesize`. If `upload_max_filesize` is set to "750m", for example, you may elect to set `post_max_size` to "800m".
 
 By default PHP will not display runtime errors on screen. If you're experiencing blank white screens, odds are a PHP error occurred but it's not being displayed. To enable on-screen error displays search for `display_errors` and set its value to "On". On-screen PHP error display can be useful for debugging, but it is adviseable to leave message display off in a production system.
 
@@ -63,38 +81,40 @@ Once you're done editing `php.ini` restart the web server, allowing your edits t
 
 .. code::
 
-    sudo systemctl restart apache
+    sudo systemctl restart httpd
 
 .. tip::
 	
 	You can also change the `display_errors` setting by adding the following PHP code to your `setup.php` file: `ini_set('display_errors', 'On');`. Setting `display_errors` in `setup.php` does not require a web server restart, making it very convenient when debugging.
 
-Now let's install MySQL. CollectiveAccess works with version 5.7 or newer. To install version most current version, version 8.0:
+Now let's install MySQL. CollectiveAccess works with version 5.7 or newer of MySQL, or equivalent versions of MariaDB. To install the most current version, version 8.0:
 
 .. code::
 
-   sudo yum install -y mysql-server
+   sudo dnf install -y mysql-server
 
 Then set MySQL to start now and automatically whenever the server reboots:
 
 .. code::
 
-    sudo systemctl start mysql
-    sudo systemctl enable mysql
+    sudo systemctl start mysqld
+    sudo systemctl enable mysqld
 
 
-Next we install various packages to support data caching and processing of media: ffmpeg (audio/video), Ghostscript (PDFs), GraphicsMagick (images), mediainfo (metadata extraction), ExifTool (metadata extraction), LibreOffice (Microsoft Word/Excel/PowerPoint), dcraw (RAW images), Poppler (content extraction from PDFs) and Redis (caching):
+Next we install various packages to support data caching and processing of media: ffmpeg (audio/video), Ghostscript (PDFs), GraphicsMagick (images), mediainfo (metadata extraction), dcraw (RAW images), Poppler (content extraction from PDFs) and Redis (caching):
 
 .. code::
 
-   yum install -y ghostscript libgraphicsmagick1-dev libpoppler-dev dcraw redis-server ffmpeg libimage-exiftool-perl libreoffice mediainfo 
+	sudo dnf -y install ffmpeg ghostscript dcraw mediainfo poppler redis GraphicsMagick  
+
+CentOS does not offer packages for LibreOffice (required to generate previews for Microsoft Word/Excel/PowerPoint files) and ExifTool (for metadata extraction from images). If you need the functionality provided by these applications you can install them manually using instructions provided on the `LibreOffice <https://www.libreoffice.org/>`_ and `ExifTool <https://exiftool.org>`_ web sites.
 
 
-Now we are ready to install the CollectiveAccess `Providence` back-end cataloguing application. The web server we installed earlier uses `/var/www/html` for documents by default (the "web server root" directory). We are going to place CollectiveAccess here, in a subdirectory named `ca`. A URL for this directory will be http://<your server ip>/ca. 
+Now we are ready to install the CollectiveAccess `Providence` back-end cataloguing application. The web server we installed earlier uses `/var/www/html` for documents by default (the "web server root" directory). We are going to place CollectiveAccess here, in a subdirectory named `ca`. The URL for this directory will be http://<your server ip>/ca. 
 
 .. tip::
 
-    You can use a different web server root directory for the application by editing `/etc/apache2/sites-available/000-default.conf`. Modify the line `DocumentRoot /var/www/html` to point to your chosen directory.
+    You can use a different web server root directory for the application by editing `/etc/httpd/conf/httpd.conf`. Modify the line `DocumentRoot /var/www/html` to point to your chosen directory.
 
 You may download a release from https://github.com/collectiveaccess/providence/releases, or install is with Git. Using a release in somewhat simpler to install, while using Git allows you to easily update files and switch to development versions of CollectiveAccess.
 
@@ -102,7 +122,7 @@ To install with Git, in the first make sure Git is installed:
 
 .. code::
 
-   yum install -y git
+   dnf install -y git
 
 Next change directory into the web server root directory.
 
@@ -118,7 +138,7 @@ Then "clone" the Providence application code from GitHub:
 
 If you prefer to download a release, place the `release ZIP or tgz file <https://github.com/collectiveaccess/providence/releases>`_ into /var/www/html and uncompress it. Then rename the resulting directory (named something like `providence-1.7.11`) to `ca`.
 
-In your terminal change directory into the `ca` application directory and copy the `setup.php-dist` file to `setup.php`. This file contains basic configuration for Providence. The "-dist" version is simply a template. The `setup.php` copy will need to be customized for your installation:
+In the terminal change directory into the `ca` application directory and copy the `setup.php-dist` file to `setup.php`. This file contains basic configuration for Providence. The "-dist" version is simply a template. The `setup.php` copy will need to be customized for your installation:
 
 .. code::
 
@@ -127,9 +147,9 @@ In your terminal change directory into the `ca` application directory and copy t
 
 Edit `setup.php`, changing settings to suit. At a minimum you will need to edit the database login settings `__CA_DB_USER__`, `__CA_DB_PASSWORD__`, `__CA_DB_DATABASE__`. You may want to edit other settings, which are described by notes within `setup.php`. You should also edit the `__CA_STACKTRACE_ON_EXCEPTION__` to be true. This will allow you to receive full error messages on screen if something goes wrong. You may also set `__CA_CACHE_BACKEND__` to "Redis" to use the Redis memory-based cache system. Redis is faster and more reliable than the default file-based caching system, but requires Redis to be running on the server.
 
-By default yum installs the MySQL database server with an all-access, password-less administrative account named `root`. It's generally insecure to leave this account password-less, but in a testing environment this may not matter. If you decide to use the root account, set `__CA_DB_USER__` to "root", leave `__CA_DB_PASSWORD__` blank and set `__CA_DB_DATABASE__` to the name you'll use for your database. For this example, we'll assume the database is to be named `my_archive`.
+By default dnf installs the MySQL database server with an all-access, password-less administrative account named `root`. It's generally insecure to leave this account password-less, but in a testing environment this may not matter. If you decide to use the root account, set `__CA_DB_USER__` to "root", leave `__CA_DB_PASSWORD__` blank and set `__CA_DB_DATABASE__` to the name you'll use for your database. For this example, we'll assume the database is to be named `my_archive`.
 
-MySQL can support multiple databases in a single installation, so the `my_archive` database must be created explicitly. Log into mysql in your terminal using the `mysql` command (assuming you haven't set a password for the root account):
+MySQL can support multiple databases in a single installation, so the `my_archive` database must be created explicitly. Log into mysql in the terminal using the `mysql` command (assuming you haven't set a password for the root account):
 
 .. code::
 
@@ -163,14 +183,14 @@ Go back to `setup.php` and enter your newly created MySQL login credentials into
 
 .. code::
 
-    sudo systemctl restart apache2.service
+    sudo systemctl restart httpd
 
-Certain directories in the installation must be writeable by the web server, within which CA runs. On Ubuntu, the web server runs as user `www-data`. Change the permissions on the `app/tmp`, `app/log`, `media` and `vendor` directories to be writeable by `www-data`:
+Certain directories in the installation must be writeable by the web server, within which CA runs. On CentOS, the web server runs as user `apache`. Change the permissions on the `app/tmp`, `app/log`, `media` and `vendor` directories to be writeable by `apache`:
 
 .. code::
 
     cd  /var/www/html/ca
-    sudo chown -R www-data app/tmp app/log media vendor
+    sudo chown -R apache app/tmp app/log media vendor
     sudo chmod -R 755 app/tmp app/log media vendor
 
 Navigate in a web browser to http://<your server ip>/ca. You should see this, or something similar:

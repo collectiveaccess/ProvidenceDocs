@@ -1,3 +1,4 @@
+.. _install_linux:
 Installing on Linux
 ===================
 
@@ -7,7 +8,7 @@ CollectiveAccess should run on any distribution of Linux. Detailed instructions 
 * :ref:`Ubuntu 20.04 LTS <install_ubuntu_20_04>`
 * :ref:`CentOS 8 LTS <install_centos8>`
 
-User provided instruction notes for additional Linux distributions are shown below. Please post improvements to these notes on the `Support Forum <https://support.collectiveaccess.org>`_.
+User provided instruction notes for additional Linux distributions are shown below. Please post improvements to these notes on the `Support Forum <https://support.collectiveaccess.org>`_!
 
 Ubuntu
 ******

@@ -1,3 +1,4 @@
+.. _install_macos:
 Installing on Mac OS
 ====================
 
