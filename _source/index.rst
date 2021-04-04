@@ -95,6 +95,7 @@ Contents
    Displays <reporting/displays>
    Display Template Syntax <reporting/templates>
    Expressions <reporting/expressions>
+   Template Unit Syntax <reporting/template_unit>
    PDF Output <reporting/pdfOut>
    Generating Labels <reporting/labels>
    Barcodes <reporting/barcodes>
