@@ -48,7 +48,7 @@ Now we can actually install PHP 7.4:
 
 .. code:: bash
 
-    sudo dnf -y install php php-cli php-common php-gd php-curl php-mysqlnd php-zip php-fileinfo php-gmagick php-opcache php-process php-xml php-mbstring php-redis
+    sudo dnf -y install php php-cli php-common php-gd php-curl php-mysqlnd php-zip php-fileinfo php-gmagick php-opcache php-process php-xml php-mbstring php-redis 
 
 Once the PHP installation process completes typing `php -v` in the terminal should return output similar to:
 
@@ -101,13 +101,13 @@ Then set MySQL to start now and automatically whenever the server reboots:
     sudo systemctl enable mysqld
 
 
-Next we install various packages to support data caching and processing of media: ffmpeg (audio/video), Ghostscript (PDFs), GraphicsMagick (images), mediainfo (metadata extraction), dcraw (RAW images), Poppler (content extraction from PDFs) and Redis (caching):
+Next we install various packages to support data caching and processing of media: ffmpeg (audio/video), Ghostscript (PDFs), GraphicsMagick (images), mediainfo (metadata extraction), ExifTool (metadata extraction), dcraw (RAW images), Poppler (content extraction from PDFs) and Redis (caching):
 
 .. code::
 
-	sudo dnf -y install ffmpeg ghostscript dcraw mediainfo poppler redis GraphicsMagick  
+	sudo dnf -y install ffmpeg ghostscript dcraw mediainfo poppler redis GraphicsMagick perl-Image-ExifTool
 
-CentOS does not offer packages for LibreOffice (required to generate previews for Microsoft Word/Excel/PowerPoint files) and ExifTool (for metadata extraction from images). If you need the functionality provided by these applications you can install them manually using instructions provided on the `LibreOffice <https://www.libreoffice.org/>`_ and `ExifTool <https://exiftool.org>`_ web sites.
+CentOS does not offer packages for LibreOffice, which is required to generate previews for Microsoft Word/Excel/PowerPoint files. If you need the functionality provided by this application you can install it manually using instructions provided on the `LibreOffice <https://www.libreoffice.org/>`_  web site.
 
 
 Now we are ready to install the CollectiveAccess `Providence` back-end cataloguing application. The web server we installed earlier uses `/var/www/html` for documents by default (the "web server root" directory). We are going to place CollectiveAccess here, in a subdirectory named `ca`. The URL for this directory will be http://<your server ip>/ca. 
