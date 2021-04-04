@@ -25,9 +25,9 @@ Contents
    :titlesonly:
 
    System Requirements <setup/systemReq>
-   Backups <setup/backups>
    setup/Installation
    Setup.php <setup/setup.php>
+   Backups <setup/backups>
 
 .. toctree::
    :maxdepth: 2
