@@ -1,3 +1,5 @@
+.. _prepopulate_config:
+
 Prepopulate.conf
 ================
 
