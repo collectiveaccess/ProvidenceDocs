@@ -7,7 +7,7 @@ A configuration file can contain any number of key-value pairs. Keys are simple 
 
 - **Scalar**: a string or number. Strings are always unquoted and may contain any character.
 - **List**: a list of strings or numbers separated by commas and enclosed in square brackets ([ and ]). A string must be enclosed in double quotes if it contains a comma. You may not place the double quote character in a list item. Lists are retrievable as indexed PHP arrays. Lists may not be nested.
-- **Associative array**: a list of key-value pairs. Both keys and values must be enclosed in double quotes if they contain commas. Neither may contain double quotes. Associative arrays are enclosed with curly brackets ({ and }). Separate keys from values with "=" Separate key-value pairs from each other using commas. Values may be strings, numbers or nested associative arrays. Associative arrays may be nested to any depth.
+- **Associative array**: a list of key-value pairs. Both keys and values must be enclosed in double quotes if they contain commas. Neither may contain double quotes. Associative arrays are enclosed with curly brackets ({ and }). Separate keys from values with "=" Separate key-value pairs from each other using commas. Values may be strings, numbers or nested associative arrays. Associative arrays may be nested to any depth. Backslashes need to be escaped by another backslash.
 - **Keys** are always separated from values by "=" You may place as many spaces as you like on either side of the "=" character. Both lists and associative array may span as many lines as necessary.
 
 Any line starting with a pound ("#") sign is considered a comment and ignored. It is ok to put leading spaces or tabs before a comment.
@@ -39,7 +39,8 @@ An example configuration file, illustrating all three value types is below:
 			 },
 			 description = {
 				  sortable = no,
-				  searchable = yes
+				  searchable = yes,
+				  regexp = "[\\d]+"
 			 }
 	   }
 	}

@@ -1,4 +1,10 @@
 Settings,Description,Default,Values
+minZoomLevel,Minimum allowable zoom level for map.,1,Between 0 and 18. Higher values indicate more magnification.
+maxZoomLevel,Maximum allowable zoom level for map.,16,Between 0 and 18. Higher values indicate more magnification.
+defaultZoomLevel,Default zoom level for map on load.,,Between 0 and 18. Higher values indicate more magnification.
+defaultLocation,"Default center location for newly opened maps. Set as decimal latitude and longitude values, separated by a comma.",,"<latitude>,<longitude>. Ex. 41.07691323466811,-72.33962884166552"
+autoDropPin,Automatically drop a pin at the location of geo-searches.,0,0 or 1
+pointsAreDirectional,Allow setting of directions for point locations.,0,0 or 1
 fieldWidth,"Width, in characters, of the field when displayed in a user interface.",70,Integers greater than zero
 fieldHeight,"Height, in characters, of the field when displayed in a user interface.",2,Integers greater than zero
 mustNotBeBlank,"Use this option if this attribute value must be set to some value, if, in other words, it must not be blank.",0 (can be blank),0 or 1

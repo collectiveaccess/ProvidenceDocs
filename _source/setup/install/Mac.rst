@@ -1,3 +1,4 @@
+.. _install_macos:
 Installing on Mac OS
 ====================
 
@@ -86,27 +87,27 @@ Close the current Terminal window and open a new one. Typing `php -v` in the Ter
     Copyright (c) 1997-2018 The PHP Group
     Zend Engine v3.1.0, Copyright (c) 1998-2018 Zend Technologies
 
-Now let's install MySQL. CollectiveAccess works with version 5.7. It is not yet compatible with version 8.0. To install version 5.7:
+Now let's install MySQL. CollectiveAccess works with version 5.7 or better. To install version 8.0:
 
 .. code::
 
-    brew install mysql@5.7
+    brew install mysql
 
 Then add the MySQL install to your command line path with:
 
 .. code::
 
-    echo 'export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"' >> ~/.bash_profile
+    echo 'export PATH="/usr/local/opt/mysql/bin:$PATH"' >> ~/.bash_profile
 
 You will need to close the Terminal window and open a new one for the path changes to take effect. Next start up MySQL, and configure it to restart automatically on reboot:
 
 .. code::
 
-    brew services start mysql@5.7
+    brew services start mysql
 
-If you don't want MySQL starting up automatically every time you boot your machine you can start it up on demand using `brew services run mysql@5.7`
+If you don't want MySQL starting up automatically every time you boot your machine you can start it up on demand using `brew services run mysql`
 
-Next we install various packages to support processing of media: ffmpeg (audio/video), Ghostscript (PDFs), GraphicsMagick (mages), mediainfo (metadata extraction and xpdf (content extraction from PDFs):
+Next we install various packages to support processing of media: ffmpeg (audio/video), Ghostscript (PDFs), GraphicsMagick (images), mediainfo (metadata extraction and xpdf (content extraction from PDFs):
 
 .. code::
 
@@ -132,7 +133,7 @@ Then "clone" the Providence application code from GitHub:
 
     git clone https://github.com/collectiveaccess/providence.git ca
 
-If you prefer to download a release, place the release ZIP or tgz file downloaded from https://github.com/collectiveaccess/providence/releases into /usr/local/var/www and uncompress it. Then rename the resulting directory (named something like `providence-1.7.8`) to `ca`.
+If you prefer to download a release, place the release ZIP or tgz file downloaded from https://github.com/collectiveaccess/providence/releases into /usr/local/var/www and uncompress it. Then rename the resulting directory (named something like `providence-1.7.11`) to `ca`.
 
 In the Terminal change directory into the `ca` application directory and copy the `setup.php-dist` file to `setup.php`. This file contains basic configuration for Providence. The "-dist" version is simply a template. The `setup.php` copy will need to be customized for your installation:
 

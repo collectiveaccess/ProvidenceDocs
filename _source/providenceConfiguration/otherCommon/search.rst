@@ -1,6 +1,9 @@
 Search.conf
 ===========
 
+Serching  can be enhanced using PCRE - Perl Compatible Regular Expressions. On https://www.php.net/manual/en/regexp.introduction.php you can find more syntax samples.
+
+
 Indexing Tokenizer Regex
 ------------------------
 This is the Regex character class used when indexing saved text; values matched will be used as token delimiters (in other words, the search expression will be broken into words wherever the matched characters are). Note that the default class, as displayed in the example below, starts with a caret ("^"), which has the effect of negating the class. In other words, the class defines what characters will not be treated a token delimiters.

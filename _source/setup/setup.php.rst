@@ -4,10 +4,10 @@ Setup.php
 .. contents::
    :local:
 
-In the main directory of your Providence install, there is a file called *setup.php.dist*. Make a copy of this file and rename it *setup.php*. 
+In the main directory of your Providence install, there is a file called *setup.php.dist*. Make a copy of this file and rename it *setup.php*.
 For your CollectiveAccess system to work, you MUST add values for your **database server hostname, user name, password, database, and administrative e-email**. You also set the site's timezone in setup.php. Most other settings can be left alone.
 
-Database server host name 
+Database server host name
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 This is often set to 'localhost'.
 
@@ -57,7 +57,7 @@ This value will be used on emails, on the login screen, in browser window titles
 
 Administrative Email
 ^^^^^^^^^^^^^^^^^^^^
-An e-mail must be set up at this stage to send error reports for system configuration issues. 
+An e-mail must be set up at this stage to send error reports for system configuration issues.
 
 .. code-block:: none
 
@@ -68,7 +68,7 @@ An e-mail must be set up at this stage to send error reports for system configur
 
 Outgoing email
 ^^^^^^^^^^^^^^
-For CollectiveAccess to be able to send email notifications __CA_SMTP_SERVER__ and __CA_SMTP_PORT__ must be set. If your outgoing (SMTP) mail server requires you to authenticate, configure your login and connection details in  __CA_SMTP_AUTH__, __CA_SMTP_USER__, __CA_SMTP_PASSWORD__ and __CA_SMTP_SSL__ 
+For CollectiveAccess to be able to send email notifications __CA_SMTP_SERVER__ and __CA_SMTP_PORT__ must be set. If your outgoing (SMTP) mail server requires you to authenticate, configure your login and connection details in  __CA_SMTP_AUTH__, __CA_SMTP_USER__, __CA_SMTP_PASSWORD__ and __CA_SMTP_SSL__
 
 .. code-block:: none
 
@@ -78,19 +78,19 @@ For CollectiveAccess to be able to send email notifications __CA_SMTP_SERVER__ a
 
 Timezone Setting
 ^^^^^^^^^^^^^^^^
-Set your preferred time zone here. The default is to use US Eastern Standard Time. A list of valid time zone settings is available at http://us3.php.net/manual/en/timezones.php. 
+Set your preferred time zone here. The default is to use US Eastern Standard Time. A list of valid time zone settings is available at http://us3.php.net/manual/en/timezones.php.
 
 .. note::
-	
-	When importing data, you should switch to value 'UTC' *before* import, or else dates may import incorrectly. 
+
+	When importing data, you should switch to value 'UTC' *before* import, or else dates may import incorrectly.
 
 .. code-block:: none
 
 	date_default_timezone_set('America/New_York');
-	
+
 Background Processing
 ^^^^^^^^^^^^^^^^^^^^^
-The task queue allows users to push potentially long running processes, such as processing of large video and image files into the background and continue working. Set this to a non-zero value if you want to use the task queue. Be sure to configure the task queue processing script to run (usually via CRON) if you set this option. 
+The task queue allows users to push potentially long running processes, such as processing of large video and image files into the background and continue working. Set this to a non-zero value if you want to use the task queue. Be sure to configure the task queue processing script to run (usually via CRON) if you set this option.
 
 .. code-block:: none
 
@@ -111,7 +111,7 @@ The default locale is used in situations where no locale is specifically set by 
 	if (!defined("__CA_DEFAULT_LOCALE__")) {
 		define("__CA_DEFAULT_LOCALE__", "en_US");
 	}
-	
+
 Clean URLs
 ^^^^^^^^^^
 If the Apache mod_rewrite module is available on your server you may set this to have Providence use "clean" urls – urls with the index.php handler omitted. Only set this if your web server includes mod_rewrite and it is enabled using the provided .htaccess file.
@@ -129,7 +129,7 @@ If you are running more than one instance of CollectiveAccess on the same server
 	if (!defined("__CA_APP_NAME__")) {
 		define("__CA_APP_NAME__", "your_name_here");
 	}
-	
+
 Google Maps Key
 ^^^^^^^^^^^^^^^
 Add your Google Maps key to use for mapping and geocoding feature (optional).
@@ -144,11 +144,17 @@ Caching
 ^^^^^^^
 The default file-based caching should work acceptably in many setups. Alternate schema may be used, including redis, sqlite, memcached or php APC. All require additional software be present on your server, and in general all will provide better performance than file-based caching.
 
-Options are: 'file', 'memcached', 'redis', 'apc' and 'sqlite'. Memcached, redis and apc require PHP extensions that are not part of the standard CollectiveAccess configuration check. If you do configure them here and your PHP installation doesn't have the required extension you may see critical errors. sqlite requires the PHP PDO extension and a working install of sqlite. This is not guaranteed to be present on your server, but often is.
+Redis is usually the best choice, it perform well and doesn't use tons of CPU when it fills, but is not always available on shared hostings.
+It's packaged for many Linux distributions, including RedHat/CentOS and Ubuntu so it's usually possible to get it installed on your server.
+
+Easy alternative is SQLite, which is usually available, but performance on many platforms is not wonderful.
+SQLite requires the PHP PDO extension and a working install of SQLite.
+
+Options are: 'file', 'memcached', 'redis', 'apc' and 'sqlite'. Memcached, redis and apc require PHP extensions that are not part of the standard CollectiveAccess configuration check. If you do configure them here and your PHP installation doesn't have the required extension you may see critical errors.
 
 .. code-block:: none
 
-	if (!defined('__CA_CACHE_BACKEND__')) { 
+	if (!defined('__CA_CACHE_BACKEND__')) {
 		define('__CA_CACHE_BACKEND__', 'file');
 	}
 
@@ -156,21 +162,21 @@ Options for the caching back-ends you may wish to set include:
 
 .. code-block:: none
 
-	 __CA_CACHE_FILEPATH__ = Path to on on disk location for storage of cached data 
+	 __CA_CACHE_FILEPATH__ = Path to on on disk location for storage of cached data
 	 __CA_CACHE_TTL__ = Cached data time-to-live (in seconds)
 	 __CA_MEMCACHED_HOST__ = Hostname of memcached server
 	 __CA_MEMCACHED_PORT__ = Port of memcached server
 	 __CA_REDIS_HOST__ = Hostname of redis server
 	 __CA_REDIS_PORT__ = Port of redis server
-	 __CA_REDIS_DB__ = redis database index (typically a number between 0 and 15) 
+	 __CA_REDIS_DB__ = redis database index (typically a number between 0 and 15)
 
 Overwrite Existing Installation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Overwriting an existing installation can be useful while a site is in development. Overwriting will completely destroy the database and anything in it, allowing you to pick a new installation profile and start over. **This option should be set back to false before delivering to a client.**
 
 .. code-block:: none
-	
-	# Note that in overwriting your database you will destroy *all* data in the database 
+
+	# Note that in overwriting your database you will destroy *all* data in the database
 	# including any non-CollectiveAccess tables. Use this option at your own risk!
 	if (!defined('__CA_ALLOW_INSTALLER_TO_OVERWRITE_EXISTING_INSTALLS__')) {
 		define('__CA_ALLOW_INSTALLER_TO_OVERWRITE_EXISTING_INSTALLS__', false);

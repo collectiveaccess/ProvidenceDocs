@@ -3,7 +3,7 @@
 External Export Framework
 =========================
 
-.. note:: This feature is available from CollectiveAccess version 1.7.9.
+.. note:: This feature is available from CollectiveAccess version 1.8.
 
 CollectiveAccess can interact with other external systems, including digital preservation and data backup platforms, using the external export framework. The framework provides a pipeline for assembly, packaging and transmission of CollectiveAccess-managed metadata and media to other applications. A variety of standard formats and protocols are supported and may be mixed and matched to facilitate interoperation.
 

@@ -20,8 +20,8 @@ applyRegularExpressions,"Rewrite source data using a list of Perl compatible reg
          }
       ]
   }"
-prefix,Text to prepend to value prior to import.,"From version 1.7.9 placeholder tags may be used to incorporate import data into the prefix. In previous versions, only static text was supported.",
-suffix,Text to append to value prior to import.,"From version 1.7.9 placeholder tags may be used to incorporate import data into the suffix. In previous versions, only static text was supported.",
+prefix,Text to prepend to value prior to import.,"From version 1.8 placeholder tags may be used to incorporate import data into the prefix. In previous versions, only static text was supported.",
+suffix,Text to append to value prior to import.,"From version 1.8 placeholder tags may be used to incorporate import data into the suffix. In previous versions, only static text was supported.",
 default,Value to use if data source value is empty.,,
 restrictToTypes,Restricts the the mapping to only records of the designated type.  For example the Duration field is only applicable to objects of the type moving_image and not photograph.,,"{""restrictToTypes"": [""moving_image"", ""audio""]}"
 filterEmptyValues,Remove empty values from values before attempting to import.,"When importing repeating values, all values are imported, even blanks. Setting this option filters out any value that is zero-length.",
@@ -39,15 +39,15 @@ skipGroupIfNotValue,Skip all mappings in the current group If the data value bei
 skipIfExpression,"Skip mapping if expression evaluates to true. All data in the current row is available for expression evaluation. By default,  data is the ""raw""  source data. To use data rewritten by replacement values and applyRegularExpressions in your expression evaluation, set the _useRawValuesWhenTestingExpression_ to false.",,"{""skipIfExpression"": ""^14 =~ /kitten/""}"
 skipRowIfExpression,Skip data row if expression evaluates to true. Data available during evaluation is subject to the same rules as in _skipIfExpression_.,,"{""skipRowIfExpression"": ""wc(^14) > 10""}"
 skipGroupIfExpression,Skip mappings in the current group if expression evaluates to true. Data available during evaluation is subject to the same rules as in _skipIfExpression_.,,"{""skipGroupIfExpression"": ""wc(^14) > 10""}"
-skipIfDataPresent,Skip mapping if data is already present in CollectiveAccess.,Available from version 1.7.9,
-skipIfNoReplacementValue,Skip mapping if the value does not have a replacement value defined.,Available from version 1.7.9,
-skipWhenEmpty,Skip mapping when any of the listed placeholder values are empty.,Available from version 1.7.9,"{""skipWhenEmpty"": [""^15"", ""^16"", ""^17""]}"
-skipWhenAllEmpty,Skip mapping when all of the listed placeholder values are empty.,Available from version 1.7.9,"{""skipWhenAllEmpty"": [""^15"", ""^16"", ""^17""]}"
-skipGroupWhenEmpty,Skip group when any of the listed placeholder values are empty.,Available from version 1.7.9,"{""skipGroupWhenAllEmpty"": [""^15"", ""^16"", ""^17""]}"
-skipGroupWhenAllEmpty,Skip group when all of the listed placeholder values are empty.,Available from version 1.7.9,"{""skipGroupWhenAllEmpty"": [""^15"", ""^16"", ""^17""]}"
-skipRowWhenEmpty,Skip row when any of the listed placeholder values are empty.,Available from version 1.7.9,"{""skipRowWhenAllEmpty"": [""^15"", ""^16"", ""^17""]}"
-skipRowWhenAllEmpty,Skip row when all of the listed placeholder values are empty.,Available from version 1.7.9,"{""skipRowWhenAllEmpty"": [""^15"", ""^16"", ""^17""]}"
-useRawValuesWhenTestingExpression,"Determines whether data used during evaluation of expressions in _skipIfExpression_,  _skipRowIfExpression_ and similar is raw, unaltered source data or data transformed using  replacement values and/or regular expressions defined for the mapping. The default value is true – use unaltered data. Set to false to use transformed data. (Available from version 1.7.9)",Available from version 1.7.9,"{""useRawValuesWhenTestingExpression"": false}"
+skipIfDataPresent,Skip mapping if data is already present in CollectiveAccess.,Available from version 1.8,
+skipIfNoReplacementValue,Skip mapping if the value does not have a replacement value defined.,Available from version 1.8,
+skipWhenEmpty,Skip mapping when any of the listed placeholder values are empty.,Available from version 1.8,"{""skipWhenEmpty"": [""^15"", ""^16"", ""^17""]}"
+skipWhenAllEmpty,Skip mapping when all of the listed placeholder values are empty.,Available from version 1.8,"{""skipWhenAllEmpty"": [""^15"", ""^16"", ""^17""]}"
+skipGroupWhenEmpty,Skip group when any of the listed placeholder values are empty.,Available from version 1.8,"{""skipGroupWhenAllEmpty"": [""^15"", ""^16"", ""^17""]}"
+skipGroupWhenAllEmpty,Skip group when all of the listed placeholder values are empty.,Available from version 1.8,"{""skipGroupWhenAllEmpty"": [""^15"", ""^16"", ""^17""]}"
+skipRowWhenEmpty,Skip row when any of the listed placeholder values are empty.,Available from version 1.8,"{""skipRowWhenAllEmpty"": [""^15"", ""^16"", ""^17""]}"
+skipRowWhenAllEmpty,Skip row when all of the listed placeholder values are empty.,Available from version 1.8,"{""skipRowWhenAllEmpty"": [""^15"", ""^16"", ""^17""]}"
+useRawValuesWhenTestingExpression,"Determines whether data used during evaluation of expressions in _skipIfExpression_,  _skipRowIfExpression_ and similar is raw, unaltered source data or data transformed using  replacement values and/or regular expressions defined for the mapping. The default value is true – use unaltered data. Set to false to use transformed data. (Available from version 1.8)",Available from version 1.8,"{""useRawValuesWhenTestingExpression"": false}"
 maxLength,Defines maximum length of data to import. Data will be truncated to the specified length if the import value exceeds that length.,,
 relationshipType,A relationship type to use when linking to a related record.,The relationship type code is used. This option is only used when directly mapping to a related item without the use of a splitter.,
 convertNewlinesToHTML,Convert newline characters in text to HTML &lt;BR/&gt; tags prior to import.,,
@@ -63,5 +63,5 @@ mediaPrefix,Path to import directory containing files references for media or fi
 matchType,Determines how file names are compared to the match value. ,"Valid values are STARTS, ENDS, CONTAINS and EXACT. (Default is EXACT).",
 matchMode,"Determines whether to search on file names, enclosing directory names or both. ","Valid values are DIRECTORY_NAME, FILE_AND_DIRECTORY_NAMES and FILE_NAME. (Default is FILE_NAME).",
 errorPolicy,"Determines how errors are handled for the mapping.  Options are to ignore the error, stop the import when an error is encountered and to receive a prompt when the error is encountered.",Valid values are _ignore_ and _stop_.,
-add,"Always add values after existing ones even if existing record policy mandates replacement (Eg. merge_on_idno_with_replace, Etc.)",Available from version 1.7.9,
-replace,"Always replace values, removing existing, ones even if existing record policy does not mandate replacement (Eg. is not merge_on_idno_with_replace, Etc.).",Available from version 1.7.9,
+add,"Always add values after existing ones even if existing record policy mandates replacement (Eg. merge_on_idno_with_replace, Etc.)",Available from version 1.8,
+replace,"Always replace values, removing existing, ones even if existing record policy does not mandate replacement (Eg. is not merge_on_idno_with_replace, Etc.).",Available from version 1.8,

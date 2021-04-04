@@ -160,7 +160,7 @@ Object Representations (ca_object_representations)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Representations capture representative digital media (images, video, audio, PDFs) for objects. Representation records usually contain only just a media file, but can accommodate  additional cataloguing that is specific to the media file (not to the object the file depicts or represents) if desired. When used. representation metadata often includes captions, credits, access information, rights and reproduction restrictions.
 
-Object representation intrinsics (ca_objects_representations)
+Object representation intrinsics (ca_object_representations)
 *************************************************************
 
 .. csv-table::
@@ -168,7 +168,7 @@ Object representation intrinsics (ca_objects_representations)
    :header-rows: 1
    :file: intrinsics_object_representations.csv
 
-`Note:` ca_objects_representations.preferred_labels.name is used by data mappings and display templates to reference the intrinsic name field in the ca_objects_representation_labels table
+`Note:` ca_object_representations.preferred_labels.name is used by data mappings and display templates to reference the intrinsic name field in the ca_object_representation_labels table
 
 Tours (ca_tours)
 ^^^^^^^^^^^^^^^^

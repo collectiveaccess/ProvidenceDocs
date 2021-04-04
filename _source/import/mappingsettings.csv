@@ -21,7 +21,7 @@ merge_on_id_with_replace
 overwrite_on_id",none
 ignoreTypeForExistingRecordPolicy,If set record type will be ignored when looking for existing records as specified by the existing records policy.,"0 or 1
 ",0
-mergeOnly,If set data will only be merged with existing records using the existing records policy and no new records will be created. Available from version 1.7.9.,"0 or 1
+mergeOnly,If set data will only be merged with existing records using the existing records policy and no new records will be created. Available from version 1.8.,"0 or 1
 ",0
 environment,"Allows you to define a source expression that will be evaluated outside of basePath. Whatever value is in this source can be stored inside a variable. This variable can be used as a source in the mapping itself, allowing the user to retrieve the value in a mapping otherwise evaluated inside of basePath.",environment | 2 | myVariable,"Any source value. (E.g. ^2, /TEI/teiHeader/title)"
 errorPolicy,"Determines how errors are handled for the import. ""Stop"" will halt the entire import on any error.",ignore; stop,ignore

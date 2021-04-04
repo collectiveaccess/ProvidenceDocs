@@ -1,3 +1,4 @@
+.. _install_windows:
 Installing on Windows
 =====================
 

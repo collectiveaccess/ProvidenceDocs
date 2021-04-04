@@ -28,4 +28,4 @@ Objects,Object value. Searches the CollectiveAccess object authority for given t
 ObjectLots,Object Lot value. Searches the CollectiveAccess object lot authority for given text and creates a typeless pseudo-relationship with the selected object lot (typeless). Can be restricted to a single object lot type.,Attribute settings: ObjectLot
 Floorplan,Implements an interactive floorplan user interface for place authority records,Attribute settings: Floorplan
 Color,Represents a color in standard RGB hex format (Ex. FFCC33). In the editing interface this data type is typically displayed with a color picker.,Attribute settings: Color
-Filesize,"Accepts digital file size values with commonly used suffixes (B, KB, KiB, MB, MiB, GB, GiB, TB, TiB, PB, PiB). Available from version 1.7.9.",Attribute settings: Filesize
+Filesize,"Accepts digital file size values with commonly used suffixes (B, KB, KiB, MB, MiB, GB, GiB, TB, TiB, PB, PiB). Available from version 1.8.",Attribute settings: Filesize

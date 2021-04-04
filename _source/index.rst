@@ -27,9 +27,9 @@ Contents
    :titlesonly:
 
    System Requirements <setup/systemReq>
-   Backups <setup/backups>
    setup/Installation
    Setup.php <setup/setup.php>
+   Backups <setup/backups>
 
 .. toctree::
    :maxdepth: 2
@@ -66,6 +66,15 @@ Contents
    Syntax <searchBrowse/syntax>
    Indexing Options <searchBrowse/indexing>
    Search Engines <searchBrowse/engines>
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Media
+   :titlesonly:
+
+   Intro to Media <media/intro>
+   Media Mirroring <media/media_mirroring>
+
 
 .. toctree::
    :maxdepth: 2
@@ -114,6 +123,7 @@ Contents
    User Access Control <administration/control>
    Maintenance Functions <administration/maint>
    Command line utilities <administration/caUtils>
+   Translation <administration/translation>
 
 .. toctree::
    :maxdepth: 2
