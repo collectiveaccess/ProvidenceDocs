@@ -1,0 +1,22 @@
+Entry name,Description,Mandatory?
+record_movement_information_when_moving_storage_location,Set to a non-zero value to require a movement record to be completed when a storage location is moved within the location hierarchy. The form used is the default screen for the default movement editor Ð the same screen used in the movements quick add editor.,No
+movement_storage_location_date_element,The element code for the movements record date metadata element to use as the effective date for te movement-location relationships. Required when movement based location tracking is used.,Yes
+original_storage_location_path_template,"A display template formatting the storage location for display. Values generated using this template capture the name (and usually the full hierarchical path) of a storage location at the time the relationship was created.  These historical values are used to ensure display of the original storage location placement within the location hierarchy for locations subsequently moved within the hierarchy. If omitted, a default template displaying the full hierarchical path to the location is used.",No
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,                        ,

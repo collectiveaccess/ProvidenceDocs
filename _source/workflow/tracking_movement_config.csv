@@ -1,0 +1,22 @@
+Entry name,Description,Mandatory?
+useRelated,A valid related table name. If set the first related item from the table will be logged as current value for purposes of browsing only. This option is typically used to allow browsing of objects by storage location when those storage locations are related via a movement record. ,No
+useRelatedRelationshipType,"A valid relationship type for relationships between the related table set in the ""useRelated"" option and the table for which current values are being tracked. This relationship type will be used to filter related records prior to logging a modified current value for browsing purposes. ",No
+originalLocationTrackingRelationshipType,"When logging movement of a location within the hierarchy, the relationship type to use to link the original (old) location to the movement record.",No
+newLocationTrackingRelationshipType,"When logging movement of a location within the hierarchy, the relationship type to use to link the new (destination) location to the movement record.",No
+subLocationTrackingRelationshipType,"When logging movement of a location within the hierarchy, the relationship type to use to link and sub-locations of the location to the movement record.",No
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,                        ,

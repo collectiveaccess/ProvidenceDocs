@@ -1,4 +1,0 @@
-Option Name,Description,Mandatory?
-"template","A display template evaluated relative to the related record when it is calculated to be current","No. Will default to displaying the preferred label of the record"
-"date","The code of the DateRange metadata element used when calculating current location.","Yes for all primary types except ca_storage_locations, for which date is derived from the object-storage location relationship."
-"color","A color to highlight entries of this type with. Should be six-digit hex color","No"
