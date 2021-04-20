@@ -4,19 +4,3 @@ useRelatedRelationshipType,"A valid relationship type for relationships between 
 originalLocationTrackingRelationshipType,"When logging movement of a location within the hierarchy, the relationship type to use to link the original (old) location to the movement record.",No
 newLocationTrackingRelationshipType,"When logging movement of a location within the hierarchy, the relationship type to use to link the new (destination) location to the movement record.",No
 subLocationTrackingRelationshipType,"When logging movement of a location within the hierarchy, the relationship type to use to link and sub-locations of the location to the movement record.",No
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,                        ,
