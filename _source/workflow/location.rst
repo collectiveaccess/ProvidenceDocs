@@ -207,6 +207,7 @@ When `record_movement_information_when_moving_storage_location` is set in `app.c
 Once a location's position within the hierarchy is changed the full hierarchical path to the location will reflect its current value wherever it is displayed. While generally desirable, display of the current path can be misleading in the chronology, as movements to the location made before its change of hierarchy location will display the current hierarchical path rather than the path at the time of the movement. The `app.conf` `original_storage_location_path_template` setting can be used to format an archived path for display in these cases. The template is evaluated relative to the location at the time of the movement and stored in the movement-location (`ca_movements_x_storage_locations`) relationship. It can be included in display templates using the special bundle specifier `ca_movements_x_storage_locations.original_path`. You should use this value to display original paths in chronologies when tracking location movement. An example configuration with movement-based location tracking the includes both direct and indirect movements:
 
 ::
+
 	history_tracking_policies = {
 		defaults = { 
 			ca_objects = current_location
