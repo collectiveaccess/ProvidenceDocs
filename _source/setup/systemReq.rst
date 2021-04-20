@@ -36,7 +36,7 @@ Providence requires three core open-source software packages be installed prior 
 
 All of these should be available as pre-compiled packages for most Linux distributions and as installer packages for Windows. For Macs, `Brew`_ is a highly recommended way to get all of CA's prerequisites quickly up and running.
 
-If setting up Apache, MySQL or PHP is daunting, you may want to consider pre-configured Apache/MySQL/PHP environments available for Windows and Macintosh such as `MAMP`_ and `XAMPP`_. These can greatly simplify setup of CollectiveAccess and its' requirements and are useful tools for experimentation and prototyping. They are not recommended for hosting live systems, however.
+If setting up Apache, MySQL or PHP is daunting, you may want to consider pre-configured Apache/MySQL/PHP environments available for Windows and Macintosh such as `MAMP`_ and `XAMPP`_. These can greatly simplify setup of CollectiveAccess and its requirements and are useful tools for experimentation and prototyping. They are not recommended for hosting live systems, however.
 
 
 .. _Brew: https://brew.sh/
