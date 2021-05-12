@@ -1,4 +1,4 @@
 Software Package,Notes
 Webserver,Apache version 2.4  or NGINX 1.14 or later are recommended.
 MYSQL Database,Versions 5.7 and 8.0 are supported. Equivalent versions of MariaDB will also work.
-PHP programming language,PHP version 7.0 or better is required. PHP 7.3 or later is strongly recommended. 
+PHP programming language,PHP version 7.2 or better is required. PHP 7.3 or 7.4 is strongly recommended. Note that PHP 8 is not yet supported, but will be soon.
