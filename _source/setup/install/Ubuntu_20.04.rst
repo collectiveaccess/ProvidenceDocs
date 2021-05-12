@@ -41,6 +41,8 @@ Once the PHP installation process completes typing `php -v` in the terminal shou
 	Zend Engine v3.4.0, Copyright (c) Zend Technologies
 		with Zend OPcache v7.4.3, Copyright (c), by Zend Technologies
 
+Note that PHP 8 is not yet supported.
+
 The default installation of PHP is configured with memory and file upload size limits that are often too low for typical use of CollectiveAccess. In particular, file uploads are limited to a maximum of 2mb, which is well below the media file sizes most users work with. To raise these limits edit the PHP configuration file at `/etc/php/7.4/apache2/php.ini`. 
 
 With the `php.ini` file open search for `memory_limit` and change it to "256m". If you are planning to upload very large media files (Eg. JPEGs > 10mb or TIFFs > 100mb) you may wish to set this value to "384m" or even "512m". 

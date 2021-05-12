@@ -87,6 +87,8 @@ Close the current Terminal window and open a new one. Typing `php -v` in the Ter
     Copyright (c) 1997-2018 The PHP Group
     Zend Engine v3.1.0, Copyright (c) 1998-2018 Zend Technologies
 
+Note that PHP 8 is not yet supported.
+
 Now let's install MySQL. CollectiveAccess works with version 5.7 or better. To install version 8.0:
 
 .. code::

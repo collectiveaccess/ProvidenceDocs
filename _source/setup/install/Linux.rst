@@ -110,6 +110,8 @@ Test: try accessing your server ip in a web browser on another machine on the sa
 4. Install PHP 7.4.13 (along with 1.8 required extensions)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+Note that PHP 8 is not yet supported.
+
 .. code:: bash
 
 	sudo yum install php php-pecl-mcrypt php-cli php-gd php-curl php-mysqlnd php-zip php-fileinfo php-devel php-gmagick php-opcache php-process php-xml php-mbstring php-redis
