@@ -142,7 +142,7 @@ Contents
    Command line utilities <administration/caUtils>
    
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    :caption: Developer
    :titlesonly:
 
