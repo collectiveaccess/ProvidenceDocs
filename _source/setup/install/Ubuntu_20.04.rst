@@ -10,7 +10,7 @@ First, we install a web server. These instructions assume use of Apache. You can
 
 .. code:: bash
 
-   sudo apt install -y apache
+   sudo apt install -y apache2
 
 Next, set Apache to start itself automatically every time the server is rebooted:
 
