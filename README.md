@@ -1,4 +1,4 @@
-=== CollectiveAccess documentation ===
+## CollectiveAccess documentation
 
 Content can be accesed on  https://manual.collectiveaccess.org/
 
