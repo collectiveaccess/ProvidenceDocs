@@ -543,6 +543,24 @@ Creating relationships
 		} 
 	} 
 	
+Returns:
+
+.. code-block:: Text
+
+	{
+		"ok": true,
+		"data": {
+			"addRelationship": {
+				"id": 1,
+				"idno": null,
+				"table": "ca_objects_x_entities",
+				"errors": [],
+				"warnings": []
+			}
+		}
+	}
+	
+	
 Browsing (endpoint name ``Browse``)
 -----------------------------------
 
