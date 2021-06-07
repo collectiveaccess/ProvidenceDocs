@@ -130,6 +130,7 @@ A typical ``search`` query might take the form:
 This query would return a result in this form:
 	
 .. code-block:: text
+	
 	{
     "ok": true,
     "data": {
