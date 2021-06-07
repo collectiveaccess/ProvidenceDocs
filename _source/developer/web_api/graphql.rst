@@ -514,6 +514,34 @@ To delete a record, pass the table and an identifier (CollectiveAccess ID value 
 	} 
 	
 The response will be in the same format as that used for ``add`` and ``edit`` mutations, but ``id`` and ``identifier`` will always be set to null.
+
+Creating relationships
+~~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: text
+
+	mutation { 
+		addRelationship(
+			subject: "ca_objects", 
+			target: "ca_entities", 
+			subjectIdentifier: "test.1", 
+			targetIdentifier:"51", 
+			relationshipType: "creator"
+		) { 
+			id, 
+			idno, 
+			table, 
+			errors {
+				code, 
+				message, 
+				bundle
+			}, 
+			warnings { 
+				message, 
+				bundle
+			}
+		} 
+	} 
 	
 Browsing (endpoint name ``Browse``)
 -----------------------------------
