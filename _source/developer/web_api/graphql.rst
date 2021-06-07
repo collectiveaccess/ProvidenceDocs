@@ -9,7 +9,7 @@ Intro here...
 URLs
 ----
 
-API access in provided through several endpoints, each implementing a category of functionality. The format for GraphQL service URLs is: ``<base-url>``/service/``<endpoint-name>``, where the base URL is the root URL for your CollectiveAccess install and endpoint is name of a service described below. If your CollectiveAccess system is at https://www.mysite.com, the URL for the authentication endpoint would be ``http://www.mysite.com/service/Auth``. 
+API access in provided through several endpoints, each implementing a category of functionality. The format for GraphQL service URLs is: ``<base-url>``/service/``<endpoint-name>``, where the base URL is the root URL for your CollectiveAccess install and endpoint is name of a service described below. If your CollectiveAccess system is at https://www.mysite.com, the URL for the authentication endpoint would be ``https://www.mysite.com/service/Auth``. 
 
 
 Authentication (endpoint name ``Auth``)
@@ -81,6 +81,8 @@ The response will be in the form:
 	
 where ``jwt`` is the replacement JWT access token to be used for subsequent API access.
 
+Once a JWT is obtained it must be included in each API request, either as a `bearer token <https://en.wikipedia.org/wiki/JSON_Web_Token#Use>`_ or as a query parameter named ``jwt``.
+
 JWT configuration options
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -93,12 +95,238 @@ The interval for which a JWT refresh token is valid can be controlled using the 
 Searching (endpoint name ``Search``)
 ------------------------------------
 
-To come
+The search service provides both full-text and field-level search facilities using two queries. The ``search`` query accepts a :ref:`Lucene-format search expression <search_syntax>` and returns results for the specified table. The returned data will include data specified by the ``bundles`` parameter. You can list any number of bundles, and include bundles in related tables. 
+
+A typical ``search`` query might take the form:
+
+.. code-block:: text
+
+	query { 
+		search(
+			table: "ca_objects", 
+			search: "Drop the Dips", 
+			bundles: ["ca_objects.idno", "ca_objects.preferred_labels.name", "ca_objects.description"],
+			start: 0,
+			limit: 10
+		) { 
+			table, 
+			search, 
+			count, 
+			results {
+				id, 
+				table, 
+				idno, 
+				bundles {
+					name, 
+					values { 
+						value, 
+						locale 
+					}
+				}
+			}
+		} 
+	} 
+	
+This query would return a result in this form:
+	
+.. code-block:: text
+	{
+    "ok": true,
+    "data": {
+        "search": {
+            "table": "ca_objects",
+            "search": "Drop the Dips",
+            "count": 1,
+            "results": [
+                {
+                    "id": 10,
+                    "table": "ca_objects",
+                    "idno": "test.1",
+                    "bundles": [
+                        {
+                            "name": "Object identifier",
+                            "values": [
+                                {
+                                    "value": "test.1",
+                                    "locale": null
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Name",
+                            "values": [
+                                {
+                                    "value": "My first record",
+                                    "locale": "en_US"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Description",
+                            "values": [
+                                {
+                                    "value": "Drop the Dips was a roller coaster in Coney Island, NY",
+                                    "locale": "en_US"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
+
+You can cap the number of records returned in a response using the ``limit`` parameter. If omitted all records will be returned. The ``start`` parameter can be used to offset the point from which results are returned. Together ``start`` and ``limit`` can be used to implement paging of search results.
+
+Returned results can be limited to specified record types setting the ``restrictToTypes`` option to a list of type codes. Eg.
+
+.. code-block:: text
+
+	query { 
+		search(
+			table: "ca_objects", 
+			search: "Drop the Dips", 
+			bundles: ["ca_objects.idno", "ca_objects.preferred_labels.name", "ca_objects.description"],
+			start: 0,
+			limit: 10,
+			restrictToTypes: ["artifact", "artwork"]
+		) { 
+			table, 
+			search, 
+			count, 
+			results {
+				id, 
+				table, 
+				idno, 
+				bundles {
+					name, 
+					values { 
+						value, 
+						locale 
+					}
+				}
+			}
+		} 
+	} 
+
+The ``find`` query offers field-specific searching. While the ``search`` query operates on a full-text index built on top of the database, ``find`` queries the underlying data directly, with minimal modification and expansion of your query.
+
+.. SERVICE DOCS FOR ``find`` TO COME
+
 
 Item-level data access (endpoint name ``Item``)
 -----------------------------------------------
 
-To come
+The Item service returns detailed data for a single record retrieved using either an internal CollectiveAccess ID value or the ``idno`` value of the record.
+
+To fetch a record pass the table, identifier and list of bundles to return in a ``get`` query:
+
+.. code-block:: text
+
+	query { 
+		get(
+			table: "ca_objects", 
+			identifier: "test.1", 
+			bundles: ["ca_objects.idno", "ca_objects.type_id", "ca_objects.preferred_labels.name", "ca_objects.nonpreferred_labels", "ca_objects.description"]
+    	) { 
+    		id, 
+    		table, 
+    		idno, 
+    		bundles { 
+    			name, 
+    			code, 
+    			dataType, 
+    			values { 
+    				locale, 
+    				value, 
+    				subvalues { 
+    					code, 
+    					value, 
+    					dataType
+    				} 
+    			}
+    		}
+    	}
+    }
+
+The query will return:
+
+.. code-block:: text
+	
+	{
+		"ok": true,
+		"data": {
+			"get": {
+				"id": 10,
+				"table": "ca_objects",
+				"idno": null,
+				"bundles": [
+					{
+						"name": "Object identifier",
+						"code": "ca_objects.idno",
+						"dataType": "Text",
+						"values": [
+							{
+								"locale": null,
+								"value": "test.1",
+								"subvalues": null
+							}
+						]
+					},
+					{
+						"name": "Type",
+						"code": "ca_objects.type_id",
+						"dataType": "Text",
+						"values": [
+							{
+								"locale": null,
+								"value": "artifact_item",
+								"subvalues": null
+							}
+						]
+					},
+					{
+						"name": "Name",
+						"code": "ca_objects.preferred_labels.name",
+						"dataType": null,
+						"values": [
+							{
+								"locale": "en_US",
+								"value": "My first record",
+								"subvalues": [
+									{
+										"code": "name",
+										"value": "My first record",
+										"dataType": "Text"
+									}
+								]
+							}
+						]
+					},
+					{
+						"name": "Description",
+						"code": "ca_objects.description",
+						"dataType": "Text",
+						"values": [
+							{
+								"locale": "en_US",
+								"value": "Drop the Dips was a roller coaster in Coney Island, NY",
+								"subvalues": [
+									{
+										"code": "description",
+										"value": "Drop the Dips was a roller coaster in Coney Island, NY",
+										"dataType": "Text"
+									}
+								]
+							}
+						]
+					}
+				]
+			}
+		}
+	}
+
 
 Editing (endpoint name ``Edit``)
 --------------------------------

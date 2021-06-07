@@ -1,3 +1,5 @@
+.. search_syntax:
+
 Search Syntax
 =============
 
