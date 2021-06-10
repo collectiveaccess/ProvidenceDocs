@@ -213,8 +213,51 @@ Returned results can be limited to specified record types setting the ``restrict
 
 The ``find`` query offers field-specific searching. While the ``search`` query operates on a full-text index built on top of the database, ``find`` queries the underlying data directly, with minimal modification and expansion of your query.
 
-.. SERVICE DOCS FOR ``find`` TO COME
+The ``find`` query takes most of the parameters used for `search` (`table`, `start`, `limit`, `bundles` and `restrictToTypes`), but uses the `criteria` parameter to specify field level search criteria in place of the `search` parameter. It returns data in the same format as `search`.
 
+.. code-block:: text
+
+	query { 
+		find(
+			limit: 10, 
+			start: 0, 
+			table: "ca_objects", 
+			criteria: [
+				{
+					name: "ca_objects.preferred_labels.name", 
+					operator: LIKE, 
+					value: "Lego*"
+				}
+			], 
+			bundles: ["ca_objects.idno", "ca_objects.preferred_labels.name", "ca_objects.description"]
+		) { 
+			table, 
+			search, 
+			count, 
+			results {
+				id, 
+				table, 
+				idno, 
+				bundles {
+					name, 
+					values { 
+						value, 
+						locale 
+					}
+				}
+			}
+		}
+	} 
+
+The `criteria` parameter is a list of field-level search criteria. Each criterion includes a bundle `name`, an operator and a value. Operators include `LT` (less than), `LTE` (less than or equal), `GR` (greater than), `GTE` (greater than or equal), `EQ` (equal), `LIKE` (matching with wildcards), `IN` (present in a list of `values`) and `NOT_IN` (not present in a list of `values`). A criterion using `IN`:
+
+.. code-block:: text
+
+	{
+		name: "ca_objects.idno", 
+		operator: IN, 
+		values: ["2020.22", "2020.55"]
+	}
 
 Item-level data access (endpoint name ``Item``)
 -----------------------------------------------
@@ -327,6 +370,119 @@ The query will return:
 			}
 		}
 	}
+	
+Including bundles referring to related tables will include relationship data in the item response. For example, adding `ca_entities` to the query would return:
+
+TODO: add note about ids
+
+
+Fetching relationships for an item
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Use the `getRelationships` query to fetch a list of relationships between an item and items in another table. You can filter the returned list to only include related items or relationships with specific types via the `restrictToTypes` and `restrictToRelationshipTypes` parameters.
+
+.. code-block:: text
+
+	query { 
+		getRelationships(
+			table: "ca_objects", 
+			identifier: "test.1", 
+			target:"ca_entities", 
+			bundles: [
+				"ca_entities.preferred_labels.displayname", "ca_entities.txt_biography"], restrictToRelationshipTypes: ["donor"]
+		) { 
+			id, 
+			table, 
+			idno, 
+			relationships { 
+				id, 
+				table, 
+				bundles { 
+					name, 
+					code, 
+					dataType, 
+					values { 
+						id, 
+						value_id, 
+						locale, 
+						value, 
+						subvalues { 
+							id, 
+							code, 
+							value, 
+							dataType
+						}
+					}
+				} 
+			} 
+		}
+	}
+
+returns:
+
+.. code-block:: text
+
+	{
+		"ok": true,
+		"data": {
+			"getRelationships": {
+				"id": 10,
+				"table": "ca_objects",
+				"idno": "test.1",
+				"relationships": [
+					{
+						"id": 11,
+						"table": "ca_objects_x_entities",
+						"bundles": [
+							{
+								"name": "Display name (from entities)",
+								"code": "ca_entities.preferred_labels.displayname",
+								"dataType": "Container",
+								"values": [
+									{
+										"id": 52,
+										"value_id": null,
+										"locale": "en_US",
+										"value": "Fay Abrams",
+										"subvalues": [
+											{
+												"id": null,
+												"code": "displayname",
+												"value": "Fay Abrams",
+												"dataType": "Container"
+											}
+										]
+									}
+								]
+							},
+							{
+								"name": "Biography (from entities)",
+								"code": "ca_entities.txt_biography",
+								"dataType": "Text",
+								"values": [
+									{
+										"id": 472,
+										"value_id": 856,
+										"locale": "en_US",
+										"value": "Hello there!",
+										"subvalues": [
+											{
+												"id": 856,
+												"code": "txt_biography",
+												"value": "Hello there!",
+												"dataType": "Text"
+											}
+										]
+									}
+								]
+							}
+						]
+					}
+				]
+			}
+		}
+	}
+
 
 
 Editing (endpoint name ``Edit``)
@@ -560,6 +716,89 @@ Returns:
 		}
 	}
 	
+Editing relationships
+~~~~~~~~~~~~~~~~~~~~~~	
+
+.. code-block:: text
+	mutation { 
+		editRelationship(
+			subject: "ca_objects", 
+			subjectIdentifier: "test.1", 
+			target:"ca_entities",
+			targetIdentifier: "55", 
+			relationshipType: "creator", 
+			bundles: [
+				{name: "effective_date", value: "1960"}, 
+				{name: "relationship_type", value: "creator"}, 
+				{name: "description", value: "hello world???", replace: true}
+			]) { 
+				id, 
+				table, 
+				idno, 
+				errors {
+					code, 
+					message, 
+					bundle
+				}, 
+				warnings { 
+					message, 
+					bundle
+				}
+			}
+		} 
+
+Deleting relationships
+~~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: text
+	mutation { 
+		deleteRelationship(
+			subject: "ca_objects", 
+			id: 1, 
+			target:"ca_entities"
+		) { 
+			id, 
+			table, 
+			idno, 
+			errors {
+				code, 
+				message, 
+				bundle
+			}, 
+			warnings { 
+				message, 
+				bundle
+			}
+		}
+	} 
+
+Deleting all relationships:
+~~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: text
+
+	mutation { 
+		deleteAllRelationships(
+			subject: "ca_objects", 
+			subjectIdentifier: "test.1", 
+			target:"ca_entities", 
+			relationshipType: "related"
+		) { 
+			id, 
+			table, 
+			idno, 
+			errors {
+				code, 
+				message, 
+				bundle
+			}, 
+			warnings { 
+				message, 
+				bundle
+			}
+		} 
+	} 
+	
 	
 Browsing (endpoint name ``Browse``)
 -----------------------------------
@@ -576,3 +815,59 @@ Configuration (endpoint name ``Config``)
 ----------------------------------------
 
 To come
+
+Utility (endpoint name ``Utility``)
+----------------------------------------
+
+The utility service offers miscellaneous queries for parsing and validating data. 
+
+The `splitEntityName` service exposes CollectiveAccess' internal entity name processing system, providing conversion of text names into field-level components compatible with CA's entity record label format.
+
+This query takes a text name and splits it into prefix, surname and forename. The `displaynameFormat` controls how the display text version is formatted. By default display text is the same as the input text, but can be normalized with to `surnameCommaForename`, `forenameCommaSurname`, `forenameSurname`, `forenamemiddlenamesurname`, or a display template.
+
+.. code-block:: Text
+	
+	query { 
+		splitEntityName(
+			name: "Mr. Seth Kaufman", 
+			displaynameFormat: "surnamecommaforename"
+		) { 
+				surname, 
+				forename, 
+				middlename, 
+				displayname, 
+				suffix, 
+				prefix  
+			}
+		} 
+	}
+
+The `parseDate` query parse text dates into a numeric interval and a normalized text representation. The interval can be returned in CA's internal "historic" floating point format, or as Unix timestamps. Note that Unix timestamps can only be created for dates on or after January 1, 1970. Historic values are used by default. Set the `format` parameter to "unix" to return Unix timestamps. The format of the normalized text date can be controlled using the `displayFormat` parameter. Possible values are `text` (localized text), `delimited` (a date in the format 1/1/2020), `iso8601`, `yearOnly` (only the year no matter how specific the input date is) and ymd (a date in the form 20200101). By default `text` is used. To set language of text sets pass the `locale` parameter, as in this query:
+	
+.. code-block:: text
+	
+	query { 
+		parseDate(
+			date: "january 1950", 
+			locale: "de_DE"
+		) { 
+			start, 
+			end, 
+			text  
+		} 
+	} 
+	
+which returns 
+
+.. code-block:: text
+
+	{
+    "ok": true,
+    "data": {
+        "parseDate": {
+            "start": 1950.0101,
+            "end": 1950.0131235959,
+            "text": "Januar 1950"
+        }
+    }
+}
