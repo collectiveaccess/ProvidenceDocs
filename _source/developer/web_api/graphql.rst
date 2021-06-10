@@ -720,6 +720,7 @@ Editing relationships
 ~~~~~~~~~~~~~~~~~~~~~~	
 
 .. code-block:: text
+	
 	mutation { 
 		editRelationship(
 			subject: "ca_objects", 
@@ -751,6 +752,7 @@ Deleting relationships
 ~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: text
+	
 	mutation { 
 		deleteRelationship(
 			subject: "ca_objects", 
