@@ -608,9 +608,9 @@ Similarly, for preferred and non-preferred labels that take multiple sub-values,
 		} 
 	} 
 
-For non-preferred labels, which take an option label ``type`` value, you may also pass ``type`` in the bundle specification. If it is omitted the default type will be used.
+For non-preferred labels, which take an option label `type` value, you may also pass ``type`` in the bundle specification. If it is omitted the default type will be used.
 
-Note that all bundles are assumed to be part of the table into which you are adding the record. A separate ``relationship`` mutation (not implemented yet) is used to manage relationships between records.
+Note that all bundles are assumed to be bound to the table to which you are adding the record. To manage relationships between records use the ``addRelationship``, ``editRelationship``, ``deleteRelationship`` and ``deleteAllRelationships`` `mutations <#creating-relationships>`_ described below.
 
 The ``add`` mutation can return the internal CollectiveAccess ``id`` value for the newly created record, the ``table`` of the record (always the same as the table parameter passed in the mutation), the idno value (which may be calculated using a server-side policy and differ from the passed value) and a list of errors and warnings that may have occurred during the add operation. Errors indicate failures and include a numeric error code, a descriptive message and the name of the bundle the error affects. Non-bundle-specific errors will have a bundle code of ``GENERAL``. Warnings are purely advisory and include a message and related bundle name.
 
@@ -670,6 +670,8 @@ To delete a record, pass the table and an identifier (CollectiveAccess ID value 
 	} 
 	
 The response will be in the same format as that used for ``add`` and ``edit`` mutations, but ``id`` and ``identifier`` will always be set to null.
+
+.. _creating_relationships:
 
 Creating relationships
 ~~~~~~~~~~~~~~~~~~~~~~
