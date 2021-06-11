@@ -213,7 +213,7 @@ Returned results can be limited to specified record types setting the ``restrict
 
 The ``find`` query offers field-specific searching. While the ``search`` query operates on a full-text index built on top of the database, ``find`` queries the underlying data directly, with minimal modification and expansion of your query.
 
-The ``find`` query takes most of the parameters used for `search` (`table`, `start`, `limit`, `bundles` and `restrictToTypes`), but uses the `criteria` parameter to specify field level search criteria in place of the `search` parameter. It returns data in the same format as `search`.
+The ``find`` query takes most of the parameters used for ``search`` (``table``, ``start``, ``limit``, ``bundles`` and ``restrictToTypes``), but uses the ``criteria`` parameter to specify field level search criteria in place of the ``search`` parameter. It returns data in the same format as ``search``.
 
 .. code-block:: text
 
@@ -249,7 +249,7 @@ The ``find`` query takes most of the parameters used for `search` (`table`, `sta
 		}
 	} 
 
-The `criteria` parameter is a list of field-level search criteria. Each criterion includes a bundle `name`, an operator and a value. Operators include `LT` (less than), `LTE` (less than or equal), `GR` (greater than), `GTE` (greater than or equal), `EQ` (equal), `LIKE` (matching with wildcards), `IN` (present in a list of `values`) and `NOT_IN` (not present in a list of `values`). A criterion using `IN`:
+The ``criteria`` parameter is a list of field-level search criteria. Each criterion includes a bundle ``name``, an operator and a value. Operators include ``LT`` (less than), ``LTE`` (less than or equal), ``GR`` (greater than), ``GTE`` (greater than or equal), ``EQ`` (equal), ``LIKE`` (matching with wildcards), ``BETWEEN`` (between two listed ``values``), ``IN`` (present in a list of ``values``) and ``NOT_IN`` (not present in a list of ``values``). A criterion using ``IN``:
 
 .. code-block:: text
 
@@ -379,7 +379,7 @@ TODO: add note about ids
 Fetching relationships for an item
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Use the `getRelationships` query to fetch a list of relationships between an item and items in another table. You can filter the returned list to only include related items or relationships with specific types via the `restrictToTypes` and `restrictToRelationshipTypes` parameters.
+Use the ``getRelationships`` query to fetch a list of relationships between an item and items in another table. You can filter the returned list to only include related items or relationships with specific types via the ``restrictToTypes`` and ``restrictToRelationshipTypes`` parameters.
 
 .. code-block:: text
 
@@ -823,9 +823,9 @@ Utility (endpoint name ``Utility``)
 
 The utility service offers miscellaneous queries for parsing and validating data. 
 
-The `splitEntityName` service exposes CollectiveAccess' internal entity name processing system, providing conversion of text names into field-level components compatible with CA's entity record label format.
+The ``splitEntityName`` service exposes CollectiveAccess' internal entity name processing system, providing conversion of text names into field-level components compatible with CA's entity record label format.
 
-This query takes a text name and splits it into prefix, surname and forename. The `displaynameFormat` controls how the display text version is formatted. By default display text is the same as the input text, but can be normalized with to `surnameCommaForename`, `forenameCommaSurname`, `forenameSurname`, `forenamemiddlenamesurname`, or a display template.
+This query takes a text name and splits it into prefix, surname and forename. The ``displaynameFormat`` controls how the display text version is formatted. By default display text is the same as the input text, but can be normalized with to ``surnameCommaForename``, ``forenameCommaSurname``, ``forenameSurname``, ``forenamemiddlenamesurname``, or a `display template <display_templates>`.
 
 .. code-block:: Text
 	
@@ -844,7 +844,7 @@ This query takes a text name and splits it into prefix, surname and forename. Th
 		} 
 	}
 
-The `parseDate` query parse text dates into a numeric interval and a normalized text representation. The interval can be returned in CA's internal "historic" floating point format, or as Unix timestamps. Note that Unix timestamps can only be created for dates on or after January 1, 1970. Historic values are used by default. Set the `format` parameter to "unix" to return Unix timestamps. The format of the normalized text date can be controlled using the `displayFormat` parameter. Possible values are `text` (localized text), `delimited` (a date in the format 1/1/2020), `iso8601`, `yearOnly` (only the year no matter how specific the input date is) and ymd (a date in the form 20200101). By default `text` is used. To set language of text sets pass the `locale` parameter, as in this query:
+The ``parseDate`` query parse text dates into a numeric interval and a normalized text representation. The interval can be returned in CA's internal "historic" floating point format, or as Unix timestamps. Note that Unix timestamps can only be created for dates on or after January 1, 1970. Historic values are used by default. Set the ``format`` parameter to "unix" to return Unix timestamps. The format of the normalized text date can be controlled using the ``displayFormat`` parameter. Possible values are ``text`` (localized text), ``delimited`` (a date in the format 1/1/2020), ``iso8601``, ``yearOnly`` (only the year no matter how specific the input date is) and ymd (a date in the form 20200101). By default ``text`` is used. To set language of text sets pass the ``locale`` parameter, as in this query:
 	
 .. code-block:: text
 	
