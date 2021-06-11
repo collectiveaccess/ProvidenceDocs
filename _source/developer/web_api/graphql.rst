@@ -825,7 +825,7 @@ The utility service offers miscellaneous queries for parsing and validating data
 
 The ``splitEntityName`` service exposes CollectiveAccess' internal entity name processing system, providing conversion of text names into field-level components compatible with CA's entity record label format.
 
-This query takes a text name and splits it into prefix, surname and forename. The ``displaynameFormat`` controls how the display text version is formatted. By default display text is the same as the input text, but can be normalized with to ``surnameCommaForename``, ``forenameCommaSurname``, ``forenameSurname``, ``forenamemiddlenamesurname``, or a `display template <display_templates>`.
+This query takes a text name and splits it into prefix, surname and forename. The ``displaynameFormat`` controls how the display text version is formatted. By default display text is the same as the input text, but can be normalized with to ``surnameCommaForename``, ``forenameCommaSurname``, ``forenameSurname``, ``forenamemiddlenamesurname``, or a :ref:`display template <display_templates>`.
 
 .. code-block:: Text
 	
