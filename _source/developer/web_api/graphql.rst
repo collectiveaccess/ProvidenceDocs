@@ -614,6 +614,58 @@ Note that all bundles are assumed to be bound to the table to which you are addi
 
 The ``add`` mutation can return the internal CollectiveAccess ``id`` value for the newly created record, the ``table`` of the record (always the same as the table parameter passed in the mutation), the idno value (which may be calculated using a server-side policy and differ from the passed value) and a list of errors and warnings that may have occurred during the add operation. Errors indicate failures and include a numeric error code, a descriptive message and the name of the bundle the error affects. Non-bundle-specific errors will have a bundle code of ``GENERAL``. Warnings are purely advisory and include a message and related bundle name.
 
+Multiple adds and hierarchies
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Multiple records may be created in single request using the ``records`` parameter. Each record includes an ``idno``, ``type`` and ``bundles`` list. The ``insertMode`` parameter controls how records are created. Setting ``insertMode`` to `FLAT` (the default) will create individual records. Setting ``insertMode`` to `HIERARCHICAL` will arrange the newly created records in a hierarchy, with the first listed record as the hierarchical root. This example will create three levels in the storage location hierarchy:
+
+.. code-block:: text
+
+	mutation {
+        add(
+			table: "ca_storage_locations",
+			insertMode: "HIERARCHICAL",
+			existingRecordPolicy:"IGNORE",
+			records:[{
+				idno: "s.1",
+				type: "building",
+				bundles: [
+					{ name: "preferred_labels", value: "Hibbens Hall", replace: true}
+				]
+			 },{
+				idno: "f.1",
+				type: "floor",
+				bundles: [
+					{ name: "preferred_labels", value: "Floor 1"}
+				]
+			 },{
+				idno: "r.123",
+				type: "room",
+				bundles: [
+					{ name: "preferred_labels", value: "Room 123"}
+				]
+			 } ]
+		) {
+			id,
+			table,
+			idno,
+			changed,
+			errors {code, message, bundle},
+			warnings { message, bundle}
+		}
+	}
+	
+The ``existingRecordPolicy`` parameter controls behavior when a record with the specified `idno` value is already present. 
+
+.. csv-table:: `existingRecordPolicy` values
+   :header: "Value", "Description"
+   :widths: 20, 20
+
+   "IGNORE", "Ignore existing records and attempt to create a new record."
+   "REPLACE", "Delete the existing record and insert a new record."
+   "MERGE", "Merge bundles into existing record. Essentially the same as editing the existing record."
+   "SKIP", "Skip add if record with idno already exists."
+
 Editing records
 ~~~~~~~~~~~~~~~~~~~~
 
@@ -649,6 +701,42 @@ An ``edit`` mutation that changes the ``idno``, replaces the description and rem
 
 Note that the response format is identical to that used for ``add``.
 
+Multiple edits
+~~~~~~~~~~~~~~
+
+Multiple records may be edited in single request using the ``records`` parameter. Each record includes an ``idno``, ``type`` and ``bundles`` list.  This example will edit the preferred labels of three objects in a single request:
+
+.. code-block:: text
+
+	mutation {
+        edit(
+			table: "ca_objects",
+			records:[{
+				identifier: "Test.400",
+				bundles: [
+					{ name: "preferred_labels", value: "My new title", replace: true}
+				]
+			 },{
+				identifier: "Test.401",
+				bundles: [
+					{ name: "preferred_labels", value: "Another new title", replace: true}
+				]
+			 },{
+				identifier: "Test.450",
+				bundles: [
+					{ name: "preferred_labels", value: "A third new title", replace: true}
+				]
+			 } ]
+		) {
+			id,
+			table,
+			idno,
+			changed,
+			errors {code, message, bundle},
+			warnings { message, bundle}
+		}
+	}
+
 Deleting records
 ~~~~~~~~~~~~~~~~~~~~
 
@@ -670,40 +758,6 @@ To delete a record, pass the table and an identifier (CollectiveAccess ID value 
 	} 
 	
 The response will be in the same format as that used for ``add`` and ``edit`` mutations, but ``id`` and ``identifier`` will always be set to null.
-
-Multiple adds and hierarchies
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Add multiple records records with a single call. By default each record is created separately. To create a hierarchy, with the first record as the hierarchical root, set the ``mode`` parameter to ``HIERARCHICAL``. This example will create two levels in the storage location hierarchy:
-
-.. code-block:: text
-
-	mutation {
-		addMultiple(
-			table: "ca_storage_locations",
-			mode: "HIERARCHICAL"
-			records:[{
-				idno: "s.1",
-				type: "building",
-				bundles: [
-					{ name: "preferred_labels", value: "Hibbens Hall"}
-				]
-			 },{
-				idno: "r.123",
-				type: "room",
-				bundles: [
-					{ name: "preferred_labels", value: "Room 123"}
-				]
-			 } ]
-		) {
-			id,
-			table,
-			idno,
-			errors {code, message, bundle},
-			warnings { message, bundle}
-		}
-	}
-
 
 .. _creating_relationships:
 
