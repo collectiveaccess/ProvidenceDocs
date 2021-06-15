@@ -671,6 +671,40 @@ To delete a record, pass the table and an identifier (CollectiveAccess ID value 
 	
 The response will be in the same format as that used for ``add`` and ``edit`` mutations, but ``id`` and ``identifier`` will always be set to null.
 
+Multiple adds and hierarchies
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Add multiple records records with a single call. By default each record is created separately. To create a hierarchy, with the first record as the hierarchical root, set the ``mode`` parameter to ``HIERARCHICAL``. This example will create two levels in the storage location hierarchy:
+
+.. code-block:: text
+
+	mutation {
+		addMultiple(
+			table: "ca_storage_locations",
+			mode: "HIERARCHICAL"
+			records:[{
+				idno: "s.1",
+				type: "building",
+				bundles: [
+					{ name: "preferred_labels", value: "Hibbens Hall"}
+				]
+			 },{
+				idno: "r.123",
+				type: "room",
+				bundles: [
+					{ name: "preferred_labels", value: "Room 123"}
+				]
+			 } ]
+		) {
+			id,
+			table,
+			idno,
+			errors {code, message, bundle},
+			warnings { message, bundle}
+		}
+	}
+
+
 .. _creating_relationships:
 
 Creating relationships
