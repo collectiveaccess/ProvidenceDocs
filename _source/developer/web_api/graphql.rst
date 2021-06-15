@@ -626,6 +626,7 @@ Multiple records may be created in single request using the ``records`` paramete
 			table: "ca_storage_locations",
 			insertMode: "HIERARCHICAL",
 			existingRecordPolicy:"IGNORE",
+			ignoreType: true,
 			records:[{
 				idno: "s.1",
 				type: "building",
@@ -665,6 +666,8 @@ The ``existingRecordPolicy`` parameter controls behavior when a record with the 
    "REPLACE", "Delete the existing record and insert a new record."
    "MERGE", "Merge bundles into existing record. Essentially the same as editing the existing record."
    "SKIP", "Skip add if record with idno already exists."
+   
+By default, existing records must match on both idno and type. The type matching requirement can be relaxed by passing the ``ignoreType`` option as in the previous example. 
 
 Editing records
 ~~~~~~~~~~~~~~~~~~~~
