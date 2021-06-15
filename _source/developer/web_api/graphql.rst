@@ -622,7 +622,7 @@ Multiple records may be created in single request using the ``records`` paramete
 .. code-block:: text
 
 	mutation {
-        add(
+		add(
 			table: "ca_storage_locations",
 			insertMode: "HIERARCHICAL",
 			existingRecordPolicy:"IGNORE",
@@ -924,7 +924,7 @@ This query takes a text name and splits it into prefix, surname and forename. Th
 	
 	query { 
 		splitEntityName(
-			name: "Mr. Seth Kaufman", 
+			name: "Mr. George Tilyou", 
 			displaynameFormat: "surnamecommaforename"
 		) { 
 				surname, 
