@@ -672,7 +672,7 @@ By default, existing records must match on both idno and type. The type matching
 Editing records
 ~~~~~~~~~~~~~~~~~~~~
 
-To edit an existing record, the ``edit`` mutation is used with the target record specified by ``table`` and ``identifier`` parameters. The ``identifier`` parameter may be either an internal CollectiveAccess ID value or the ``idno`` value of a record. Note that ``idno`` values are not guaranteed to be unique (although they typically are). If more than one record matches the identifier, the first match will be edited and additional matches ignored.
+To edit an existing record, the ``edit`` mutation is used with the target record specified by ``table`` and ``identifier`` parameters. The ``identifier`` parameter may be either an numeric internal CollectiveAccess ID value or the ``idno`` value of a record. Note that ``idno`` values are not guaranteed to be unique (although they typically are). If more than one record matches the identifier, the first match will be edited and additional matches ignored. If the supplied ``identifier`` is numeric it will be matched first as an internal ID, and subsequently as an ``idno`` if no internal ID is found. In cases where ``idno`` values solely contain digits, mismatches may occur. To force matching on internal ID or ``idno`` only use the ``id`` and ``idno`` parameters respectively, rather than ``identifier``.
 
 Edited values are specified in the ``bundles`` parameter, similar to the format used for adding with a few additions. By default each listed bundle will be appended to the record. For bundles supporting repeating values, this means the addition of values. For fields that limited or not repeatability, edits will fail once the limit is reached. To replace a value rather than append to it, a ``replace`` value set to ``true`` may be set in the bundle specification. If a value exists it will be replaced by the new value; if no value exists yet, the new value will be added. 
 
@@ -707,7 +707,7 @@ Note that the response format is identical to that used for ``add``.
 Multiple edits
 ~~~~~~~~~~~~~~
 
-Multiple records may be edited in single request using the ``records`` parameter. Each record includes an ``idno``, ``type`` and ``bundles`` list.  This example will edit the preferred labels of three objects in a single request:
+Multiple records may be edited in single request using the ``records`` parameter. Each record includes an ``identifier`` (or ``id`` or ``idno``), ``type`` and ``bundles`` list.  This example will edit the preferred labels of three objects in a single request:
 
 .. code-block:: text
 
@@ -762,6 +762,8 @@ To delete a record, pass the table and an identifier (CollectiveAccess ID value 
 	
 The response will be in the same format as that used for ``add`` and ``edit`` mutations, but ``id`` and ``identifier`` will always be set to null.
 
+As with edits, if the supplied ``identifier`` is numeric it will be matched first as an internal ID, and subsequently as an ``idno`` if no internal ID is found. In cases where ``idno`` values solely contain digits, mismatches may occur. To force matching on internal ID or ``idno`` only use the ``id`` and ``idno`` parameters respectively, rather than ``identifier``.
+
 .. _creating_relationships:
 
 Creating relationships
@@ -808,6 +810,8 @@ Returns:
 			}
 		}
 	}
+	
+If the supplied ``subjectIdentifier`` or ``targetIdentifier`` values are numeric they will be matched first as internal IDs, and subsequently as ``idno`` if no internal ID is found. In cases where ``idno`` values solely contain digits, mismatches may occur. To force matching on internal ID or ``idno`` only use the ``subjectId`` (or ``targetId``) and ``subjectIdno`` (or ``targetIdno``) parameters respectively, rather than ``subjectIdentifier`` and ``targetIdentifier``.
 	
 Editing relationships
 ~~~~~~~~~~~~~~~~~~~~~~	
