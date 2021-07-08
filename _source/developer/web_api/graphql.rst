@@ -667,6 +667,8 @@ The ``existingRecordPolicy`` parameter controls behavior when a record with the 
    "MERGE", "Merge bundles into existing record. Essentially the same as editing the existing record."
    "SKIP", "Skip add if record with idno already exists."
    
+If you do not set and existing record policy, `SKIP` is assumed.
+
 By default, existing records must match on both idno and type. The type matching requirement can be relaxed by passing the ``ignoreType`` option as in the previous example. 
 
 Editing records
@@ -907,20 +909,181 @@ To come
 Schema information (endpoint name ``Schema``)
 -------------------------------------------
 
-To come
+The schema service provides information regarding the range of records, record types, metadata elements and relationships configured for a CollectiveAccess system.
+
+The ``tables`` query returns a list of valid primary table name, on which search, browse, edit and other record-oriented service operate:
+
+.. code-block:: Text
+
+	query {
+		tables {
+		  tables {
+			name,
+			code,
+			types {
+			  name,
+			  code
+			}
+		  }
+		}
+	  }
+
+The query returns a list of tables, with display names, codes and a list of available types for each.
+
+The ``types`` query returns the same structure as the ``tables`` query, but for a single ``table``:
+
+.. code-block:: Text
+
+	  query {
+		types(table: "ca_objects") {
+			name,
+			code,
+			types {
+			  name,
+			  code
+			}
+		}
+	  }
+
+The response will be in the form:
+
+.. code-block:: Text
+
+	{
+		"ok": true,
+		"data": {
+			"types": {
+				"name": "objects",
+				"code": "ca_objects",
+				"types": [
+					{
+						"name": "Archival/Documentation",
+						"code": "archival_item"
+					},
+					{
+						"name": "Artifacts",
+						"code": "artifact_item"
+					},
+					{
+						"name": "Ebot",
+						"code": "ebot_item"
+					},
+					{
+						"name": "Ethnographic",
+						"code": "ethno_item"
+					},
+					{
+						"name": "Faunal",
+						"code": "faunal_item"
+					},
+					{
+						"name": "Images",
+						"code": "image_item"
+					},
+					{
+						"name": "Osteology",
+						"code": "osteology_item"
+					}
+				]
+			}
+		}
+	}
+
+The ``bundles`` query will return a list of all available data bundles, including codes, settings, help text and type restrictions for a given table, and optionally, a type:
+
+.. code-block:: Text
+
+	  query {
+		bundles(table: "ca_objects", type: "ebot_item") {
+		  bundles {
+			name,
+			code, 
+			description, 
+			type, 
+			dataType, 
+			list, 
+			typeRestrictions { 
+				name, 
+				type, 
+				minAttributesPerRow, 
+				maxAttributesPerRow
+			}, 
+			settings {
+				name, 
+				value
+			}, 
+			subelements { 
+				name, 
+				code, 
+				type, 
+				dataType, 
+				list, 
+				settings { 
+					name, 
+					value
+				}
+			}
+		  }
+		}
+	  }
+
+This query can be used to discover queryable and editable data elements from any record type in the CollectiveAccess system.
 
 
 Configuration (endpoint name ``Config``)
 ----------------------------------------
 
-To come
+The configuration service provides access to configuration file settings, as well as configuration for editing user interfaces, displays, metadata elements, relationship types, locales and the data dictionary.
+
+The ``configurationFile`` query provides access to any entry in a configuration file. The query requires the full name of the configuration file (including ``.conf`` extension) and the names of settings to be fetched in a ``keys`` list (single key values may be passed as a string in the ``key`` parameter). Return configuration values will be returned as encoded JSON along with ``type`` values indicating the structure of each value. ``ASSOC`` is used for associative array formatted values; ``LIST`` is used for lists of values, and ``SCALAR`` is returned for simple string values. A typical query to fetch values from the ``app.conf`` configuration file:
+
+.. code-block:: Text
+
+	  query {
+		configurationFile (file:"app.conf", keys: ["wysiwyg_editor_toolbar", "ca_loans_disable"]) {
+		  file, 
+		  values { 
+		  	key, 
+		  	type, 
+		  	value 
+		  }
+		}
+	  }
+
+would return:
+
+.. code-block:: Text
+
+	{
+		"ok": true,
+		"data": {
+			"configurationFile": {
+				"file": "app.conf",
+				"values": [
+					{
+						"key": "wysiwyg_editor_toolbar",
+						"type": "ASSOC",
+						"value": "{\"formatting\":[\"Bold\",\"Italic\",\"Underline\",\"Strike\",\"-\",\"Subscript\",\"Superscript\",\"Font\",\"FontSize\",\"TextColor\"],\"lists\":[\"-\",\"NumberedList\",\"BulletedList\",\"Outdent\",\"Indent\",\"Blockquote\"],\"links\":[\"Link\",\"Unlink\",\"Anchor\"],\"misc\":[\"SelectAll\",\"Undo\",\"Redo\",\"-\",\"Source\",\"Maximize\",\"Image\",\"CALink\"]}"
+					},
+					{
+						"key": "ca_loans_disable",
+						"type": "SCALAR",
+						"value": "\"0\""
+					}
+				]
+			}
+		}
+	}
+
+.. IMPORTANT::
+   Access to configuration file values using this GraphQL service requires authentication with an account having the ``can_access_configuration_files_via_graphql`` action privilege.
 
 Utility (endpoint name ``Utility``)
 ----------------------------------------
 
 The utility service offers miscellaneous queries for parsing and validating data. 
 
-The ``splitEntityName`` service exposes CollectiveAccess' internal entity name processing system, providing conversion of text names into field-level components compatible with CA's entity record label format.
+The ``splitEntityName`` query exposes CollectiveAccess' internal entity name processing system, providing conversion of text names into field-level components compatible with CA's entity record label format.
 
 This query takes a text name and splits it into prefix, surname and forename. The ``displaynameFormat`` controls how the display text version is formatted. By default display text is the same as the input text, but can be normalized with to ``surnameCommaForename``, ``forenameCommaSurname``, ``forenameSurname``, ``forenamemiddlenamesurname``, or a :ref:`display template <display_templates>`.
 
