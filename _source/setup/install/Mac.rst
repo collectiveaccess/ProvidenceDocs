@@ -72,12 +72,20 @@ and replace it with this:
 
 Restart the server with the Terminal command `sudo apachectl -k restart`. You should now have PHP enabled within your Apache web server.
 
-In order to use the PHP on the Terminal command line (which can be handy) you'll need to add the Homebrew PHP installation directory into your command PATH. Do this by entering in the Terminal:
+In order to use the PHP on the Terminal command line (which can be handy) you'll need to add the Homebrew PHP installation directory into your command PATH. If you're running the Bash shell enter in the Terminal:
 
 .. code:: bash
 
     echo 'export PATH="/usr/local/opt/php@7.4/bin:$PATH"' >> ~/.bash_profile
     echo 'export PATH="/usr/local/opt/php@7.4/sbin:$PATH"' >> ~/.bash_profile
+
+If you're running the ZSH shell (the new default shell since Mac OS 10.14 aka. Catalina):
+
+.. code:: bash
+
+    echo 'export PATH="/usr/local/opt/php@7.4/bin:$PATH"' >> ~/.zshrc
+    echo 'export PATH="/usr/local/opt/php@7.4/sbin:$PATH"' >> ~/.zshrc
+
 
 Close the current Terminal window and open a new one. Typing `php -v` in the Terminal should return output similar to:
 
