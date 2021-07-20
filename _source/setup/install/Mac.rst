@@ -38,17 +38,17 @@ You should now be able to connect to the web server on port 8080 (the default wh
 
     If you want to run Apache on the standard port 80 you'll need to open the Apache configuration file located at `/usr/local/etc/httpd/httpd.conf`, find the line `Listen 8080` and change it to `Listen 80`. Then restart the server with the Terminal command `sudo apachectl -k restart`
 
-Next install PHP version 7.2 running in the Terminal:
+Next install PHP version 7.4 running in the Terminal:
 
 .. code:: bash
 
-    brew install php@7.2
+    brew install php@7.4
 
 Then edit the Apache configuration file located at `/usr/local/etc/httpd/httpd.conf`, adding the line:
 
 .. code::
 
-    LoadModule php7_module /usr/local/opt/php@7.2/lib/httpd/modules/libphp7.so
+    LoadModule php7_module /usr/local/opt/php@7.4/lib/httpd/modules/libphp7.so
 
 Next, look for this configuration in the Apache configuration file:
 
@@ -76,16 +76,17 @@ In order to use the PHP on the Terminal command line (which can be handy) you'll
 
 .. code:: bash
 
-    echo 'export PATH="/usr/local/opt/php@7.2/bin:$PATH"' >> ~/.bash_profile
-    echo 'export PATH="/usr/local/opt/php@7.2/sbin:$PATH"' >> ~/.bash_profile
+    echo 'export PATH="/usr/local/opt/php@7.4/bin:$PATH"' >> ~/.bash_profile
+    echo 'export PATH="/usr/local/opt/php@7.4/sbin:$PATH"' >> ~/.bash_profile
 
 Close the current Terminal window and open a new one. Typing `php -v` in the Terminal should return output similar to:
 
 .. code::
 
-    PHP 7.1.23 (cli) (built: Feb 22 2019 22:08:13) ( NTS )
-    Copyright (c) 1997-2018 The PHP Group
-    Zend Engine v3.1.0, Copyright (c) 1998-2018 Zend Technologies
+	PHP 7.4.21 (cli) (built: Jul 12 2021 03:04:54) ( NTS )
+	Copyright (c) The PHP Group
+	Zend Engine v3.4.0, Copyright (c) Zend Technologies
+    with Zend OPcache v7.4.21, Copyright (c), by Zend Technologies
 
 Note that PHP 8 is not yet supported.
 
@@ -135,7 +136,7 @@ Then "clone" the Providence application code from GitHub:
 
     git clone https://github.com/collectiveaccess/providence.git ca
 
-If you prefer to download a release, place the release ZIP or tgz file downloaded from https://github.com/collectiveaccess/providence/releases into /usr/local/var/www and uncompress it. Then rename the resulting directory (named something like `providence-1.7.11`) to `ca`.
+If you prefer to download a release, place the release ZIP or tgz file downloaded from https://github.com/collectiveaccess/providence/releases into /usr/local/var/www and uncompress it. Then rename the resulting directory (named something like `providence-1.7.12`) to `ca`.
 
 In the Terminal change directory into the `ca` application directory and copy the `setup.php-dist` file to `setup.php`. This file contains basic configuration for Providence. The "-dist" version is simply a template. The `setup.php` copy will need to be customized for your installation:
 
