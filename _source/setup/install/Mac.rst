@@ -79,7 +79,7 @@ In order to use the PHP on the Terminal command line (which can be handy) you'll
     echo 'export PATH="/usr/local/opt/php@7.4/bin:$PATH"' >> ~/.bash_profile
     echo 'export PATH="/usr/local/opt/php@7.4/sbin:$PATH"' >> ~/.bash_profile
 
-If you're running the ZSH shell (the new default shell since Mac OS 10.14 aka. Catalina):
+If you're running the Zsh shell (the new default shell since Mac OS 10.14 aka. Catalina):
 
 .. code:: bash
 
@@ -104,11 +104,17 @@ Now let's install MySQL. CollectiveAccess works with version 5.7 or better. To i
 
     brew install mysql
 
-Then add the MySQL install to your command line path with:
+Then add the MySQL install to your command line path with (if you're running Bash):
 
 .. code::
 
     echo 'export PATH="/usr/local/opt/mysql/bin:$PATH"' >> ~/.bash_profile
+
+If you're running Zsh:
+
+.. code::
+
+    echo 'export PATH="/usr/local/opt/mysql/bin:$PATH"' >> ~/.zshrc
 
 You will need to close the Terminal window and open a new one for the path changes to take effect. Next start up MySQL, and configure it to restart automatically on reboot:
 
