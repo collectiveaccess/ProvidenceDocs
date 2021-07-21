@@ -766,6 +766,38 @@ The response will be in the same format as that used for ``add`` and ``edit`` mu
 
 As with edits, if the supplied ``identifier`` is numeric it will be matched first as an internal ID, and subsequently as an ``idno`` if no internal ID is found. In cases where ``idno`` values solely contain digits, mismatches may occur. To force matching on internal ID or ``idno`` only use the ``id`` and ``idno`` parameters respectively, rather than ``identifier``.
 
+To delete multiple records with in single request, pass a list of identifiers using the ``identifiers`` parameter. To force matching on internal ID or ``idno`` use the ``ids`` and ``idnos`` parameters respectively.
+
+
+Truncating tables
+~~~~~~~~~~~~~~~~~~~~
+
+When developing or debugging a data import process it is often useful to quickly delete some or all of the records in a table. The ``truncate`` mutation can remove all records in a table, or selected records based upon last modification date and/or record types. 
+
+This mutation would delete all entities of type ``ind` modified after July 21 2021 at 5pm:
+
+.. code-block:: text
+        mutation {
+            truncate(
+                    table: "ca_entities",
+                    date: "after 7/21/2021 @ 5pm",
+                    types: ["ind"], 
+                    fast: true
+            ) { 
+                    id
+                    table,
+                    idno,
+                    changed,
+                    errors {code, message, bundle},
+                    warnings { message, bundle}
+            }
+        }
+        
+The ``fast`` option will remove records as quickly as possible by skipping update of the change log and search index. When truncating tables with large numbers of records, this can result in significant time savings. For development systems, the lack of consistent change logging and indexing for deleted records is usually not an issue. The ``fast`` option should not be used in production systems.
+
+.. IMPORTANT::
+	Use of this GraphQL service requires authentication with an account having the ``can_truncate_tables_via_graphql`` action privilege.
+        
 .. _creating_relationships:
 
 Creating relationships
