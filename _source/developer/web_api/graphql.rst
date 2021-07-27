@@ -774,7 +774,7 @@ Truncating tables
 
 When developing or debugging a data import process it is often useful to quickly delete some or all of the records in a table. The ``truncate`` mutation can remove all records in a table, or selected records based upon last modification date and/or record types. 
 
-This mutation would delete all entities of type ``ind` modified after July 21 2021 at 5pm:
+This mutation would delete all entities of type ``ind`` modified after July 21 2021 at 5pm:
 
 .. code-block:: text
         mutation {
@@ -797,6 +797,24 @@ The ``fast`` option will remove records as quickly as possible by skipping updat
 
 .. IMPORTANT::
 	Use of this GraphQL service requires authentication with an account having the ``can_truncate_tables_via_graphql`` action privilege.
+	
+Specific lists may be truncated using the ``list`` parameter. The ``date`` and ``types`` parameter may be set to restrict which items in the list are removed. If ``list`` is set ``table`` is ignored:
+
+.. code-block:: text
+
+	    mutation {
+            truncate(
+                    list:"chemical_deterioration", fast: true
+            ) { 
+                    id
+                    table,
+                    idno,
+                    changed,
+                    errors {code, message, bundle},
+                    warnings { message, bundle}
+            }
+        }
+
         
 .. _creating_relationships:
 
