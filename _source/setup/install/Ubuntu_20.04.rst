@@ -89,7 +89,7 @@ Next we install various packages to support data caching and processing of media
 
 .. code::
 
-   apt install -y ghostscript libgraphicsmagick1-dev libpoppler-dev dcraw redis-server ffmpeg libimage-exiftool-perl libreoffice mediainfo 
+   apt install -y ghostscript libgraphicsmagick1-dev libpoppler-dev poppler-utils dcraw redis-server ffmpeg libimage-exiftool-perl libreoffice mediainfo 
 
 Now we are ready to install the CollectiveAccess `Providence` back-end cataloguing application. The web server we installed earlier uses `/var/www/html` for documents by default (the "web server root" directory). We are going to place CollectiveAccess here, in a subdirectory named `ca`. The URL for this directory will be http://<your server ip>/ca. 
 
