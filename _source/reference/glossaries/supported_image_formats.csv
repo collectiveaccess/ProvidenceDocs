@@ -12,3 +12,5 @@ DPX,"ImageMagick, IMagick, GraphicsMagick, Gmagick",Pixel values in non-Tilepic 
 OpenEXR,"ImageMagick, IMagick, GraphicsMagick, Gmagick",More information on this format can be found `here <http://openexr.com/>`_.
 QTVR (QuickTime VR),QuicktimeVR,"JPEG-format thumbnails are extracted; straight-QTVR is kept as ""original"" version. The QuicktimeVR plugin requires ffmpeg to be installed."
 Adobe DNG,"ImageMagick, IMagick, GraphicsMagick, Gmagick",
+BMP,"ImageMagick, IMagick, GraphicsMagick, Gmagick",
+HEIC,"ImageMagick, IMagick, Gmagick","Available from version 1.8. Gmagick support requires working ImageMagick installation (GraphicsMagick does not support the HEIC format at all). All back-ends require ImageMagick to be built with support for libheic. This is not available by default in most Linux distributions."

@@ -1,5 +1,6 @@
 Format,Media processing backend,Comments
-PDF,pdflib (optional); xPDF (optional),`PDFLib-Lite <http://www.pdflib.com/>`_ and the PDFLib PECL module will improve processing performance; CA will automatically use PDFLibLite if available. Otherwise the built-in (no installation necessary) Zend_PDF library will be used. CA can only generate thumbnail page images for display if `Ghostscript <http://pages.cs.wisc.edu/~ghost/>`_ is installed on your system. Can extract text from file for searchability if `xPDF <http://www.foolabs.com/xpdf/download.html>`_ is installed.
-Microsoft Word,AbiWord (optional); Libre Office (optional),Both .doc (< 2007 file format) and .docx (XML-based format) are supported. Can extract text from file for searchability if `AbiWordis <http://www.abisource.com/>`_ installed. Can generate page previews if LibreOffice is installed.
-Microsoft Powerpoint,Libre Office (optional),As of version 1.2 XML-based format is supported. Can generate page previews if LibreOffice is installed.
-Microsoft Excel,Libre Office (optional),As of version 1.2 XML-based format is supported. Can generate page previews if LibreOffice is installed.
+PDF,CA can only generate thumbnail page images for display if `Ghostscript <http://pages.cs.wisc.edu/~ghost/>`_ is installed on your system. Can extract text from file for searchability if `xPDF <http://www.foolabs.com/xpdf/download.html>`_ is installed.
+PS (Postscript),PDF,CA can only generate thumbnail page images for display if `Ghostscript <http://pages.cs.wisc.edu/~ghost/>`_ is installed on your system.
+Microsoft Word,Libre Office (optional),Both .doc (< 2007 file format) and .docx (XML-based format) are supported. Can generate page previews and extract text from file for searchability if LibreOffice is installed.
+Microsoft Powerpoint,Libre Office (optional),Can generate page previews if LibreOffice is installed.
+Microsoft Excel,Libre Office (optional),Can generate page previews if LibreOffice is installed.

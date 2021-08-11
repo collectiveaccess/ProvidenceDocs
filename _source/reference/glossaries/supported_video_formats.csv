@@ -5,5 +5,7 @@ QuickTime,ffmpeg,
 WindowsMedia,ffmpeg,
 FLV,ffmpeg,
 Ogg Theora,ffmpeg,
-AVI,ffmpeg,ffmpeg
-xvid,ffmpeg,Planned
+AVI,ffmpeg,
+Matroska (mkv),ffmpeg,
+DV,ffmpeg
+MPEG-2 TS (MP2T),ffmpeg
