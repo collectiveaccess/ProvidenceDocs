@@ -1,5 +1,5 @@
 Format,Media processing backend,Comments
-STL,mesh,`Standard Tesselation Language <https://en.wikipedia.org/wiki/STL_(file_format)>`_ for 3d models (geometry only; no textures). 
-PLY,mesh,`Polygon File Format <https://en.wikipedia.org/wiki/PLY_(file_format)>`_ for 3d models (geometry only; no textures)
-OBJ,mesh,`Wavefront OBJ <https://en.wikipedia.org/wiki/Wavefront_.obj_file>`_ for 3d models. For CollectiveAccess version 1.7.x only geometry is supported. From version 1.8 support for textures specified using .mtl "sidecar" files is provided.
-GLTF,mesh,`Graphics Language Transport Format <https://en.wikipedia.org/wiki/GlTF>`_ for 3d models. Available from version 1.8. Texture support is provided using "sidecar" files.
+STL,Mesh,`Standard Tesselation Language <https://en.wikipedia.org/wiki/STL_(file_format)>`_ for 3d models (geometry only; no textures). 
+PLY,Mesh,`Polygon File Format <https://en.wikipedia.org/wiki/PLY_(file_format)>`_ for 3d models (geometry only; no textures)
+OBJ,Mesh,`Wavefront OBJ <https://en.wikipedia.org/wiki/Wavefront_.obj_file>`_ for 3d models. For CollectiveAccess version 1.7.x only geometry is supported. From version 1.8 support for textures specified using .mtl "sidecar" files is provided.
+GLTF,Mesh,`Graphics Language Transport Format <https://en.wikipedia.org/wiki/GlTF>`_ for 3d models. Available from version 1.8. Texture support is provided using "sidecar" files.
