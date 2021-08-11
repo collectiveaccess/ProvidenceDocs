@@ -1,6 +1,6 @@
 Format,Media processing backend,Comments
-PDF,CA can only generate thumbnail page images for display if `Ghostscript <http://pages.cs.wisc.edu/~ghost/>`_ is installed on your system. Can extract text from file for searchability if `xPDF <http://www.foolabs.com/xpdf/download.html>`_ is installed.
-PS (Postscript),PDF,CA can only generate thumbnail page images for display if `Ghostscript <http://pages.cs.wisc.edu/~ghost/>`_ is installed on your system.
-Microsoft Word,Libre Office (optional),Both .doc (< 2007 file format) and .docx (XML-based format) are supported. Can generate page previews and extract text from file for searchability if LibreOffice is installed.
-Microsoft Powerpoint,Libre Office (optional),Can generate page previews if LibreOffice is installed.
-Microsoft Excel,Libre Office (optional),Can generate page previews if LibreOffice is installed.
+PDF,PDFWand,CA can only generate thumbnail page images for display if `Ghostscript <http://pages.cs.wisc.edu/~ghost/>`_ is installed on your system. Can extract text from file for searchability if `xPDF <http://www.foolabs.com/xpdf/download.html>`_ is installed.
+PS (Postscript),PDFWand,CA can only generate thumbnail page images for display if `Ghostscript <http://pages.cs.wisc.edu/~ghost/>`_ is installed on your system.
+Microsoft Word,Office,Both .doc (< 2007 file format) and .docx (XML-based format) are supported. Can generate page previews and extract text from file for searchability if LibreOffice is installed.
+Microsoft Powerpoint,Office,Can generate page previews if LibreOffice is installed.
+Microsoft Excel,Office,Can generate page previews if LibreOffice is installed.
