@@ -258,7 +258,69 @@ The ``criteria`` parameter is a list of field-level search criteria. Each criter
 		operator: IN, 
 		values: ["2020.22", "2020.55"]
 	}
+	
+When importing data using the API, it is often useful to perform bulk lookups on idno values, label values, or both. The ``exists`` query provides a simple, performant method to test for existence of records by idnos and labels. Three parameters are required: the ``table`` to search on, a list of ``idnos`` to search for and/or a list of ``labels`` to search on. Both ``idnos`` and ``labels`` maybe present in a single query. At a minimum, one must be present. For example:
 
+.. code-block:: text
+
+	query {
+        exists(
+                table: "ca_objects",
+                idnos: ["2011.10.01", "V2021.42.1"],
+                labels: ["Frame, Picture"]
+        ) {
+                table,
+                idnos { id, ids, value },
+                labels { id, ids, value }
+        }
+	}
+
+returns:
+
+.. code-block:: text
+
+	{
+		"ok": true,
+		"data": {
+			"exists": {
+				"table": "ca_objects",
+				"idnos": [
+					{
+						"id": 26246,
+						"ids": [
+							26246,
+							26247,
+							26248
+						],
+						"value": "2011.10.01"
+					},
+					{
+						"id": null,
+						"ids": null,
+						"value": "V2021.42.1"
+					}
+				],
+				"labels": [
+					{
+						"id": 22936,
+						"ids": [
+							22936,
+							22958,
+							22967,
+							22972,
+							23007,
+							23025
+						],
+						"value": "Frame, Picture"
+					}
+				]
+			}
+		}
+	}
+	
+The ``id`` return value contains the database id value for the first matched record. If a list of all matches is required, use the ``ids`` return value. The ``exists`` query will return `all` idno and label values, whether they exist in the database or not. Values without matches will return ``id`` and ``ids`` as null.
+
+	
 Item-level data access (endpoint name ``Item``)
 -----------------------------------------------
 
@@ -671,6 +733,47 @@ If you do not set and existing record policy, `SKIP` is assumed.
 
 By default, existing records must match on both idno and type. The type matching requirement can be relaxed by passing the ``ignoreType`` option as in the previous example. 
 
+Adding relationships to a new record
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Relationships may be established between an added record and existing records using the ``relationships`` list parameter. Each item in the relationships list contains keys for ``target`` (the table to relate to) and ``relationshipType`` (a valid relationship type code for the relationship to be created). The record to relate to must be specified using one of the following: ``targetId`` (the database ID of the record to relate to), ``targetIdno`` (the idno of the related record), or ``targetIdentifer`` (the idno or database ID). You may also set interstitial data on the relationship by passing an optional ``bundles`` parameter within a ``relationships`` item. For example:
+
+.. code-block:: text
+
+	mutation {
+		add(
+			table: "ca_objects",
+			idno: "2020.11.1",
+			type: "artifact",
+			bundles: [
+				{ name: "preferred_labels", value: "Thimble Folk"},
+				{ name: "description", value: "Highly collectible felt dolls."}
+			],
+			replaceRelationships: false,
+			relationships: [
+				{
+					target:"ca_entities",
+					targetIdentifier: "E.100",
+					relationshipType:"donor",
+					bundles: [
+						{ "effective_date": "1961 - 1965" }
+					]
+				}
+			]
+		) {
+			id,
+			table,
+			idno,
+			changed,
+			errors { code, message, bundle },
+			warnings { message, bundle }
+		}
+	}
+
+Any number of relationships may be added to a record in this way. If the ``add`` mutation is for a record that already exists in the database, relationships will be added to the existing record with relationships matching existing ones skipped. To force the relationships on existing records to conform those specified in the mutation set the ``replaceRelationships`` parameter to true (the default is false). This will cause all existing relationships to be removed before the relationships specified in the mutation are added.
+
+``relationships`` and ``replaceRelationships`` may be specified at the top level of the mutation when the mutation is for a single new record (as shown above). For multiple adds, the parameters must be specified for each record in the ``records`` list.
+
 Editing records
 ~~~~~~~~~~~~~~~~~~~~
 
@@ -705,6 +808,8 @@ An ``edit`` mutation that changes the ``idno``, replaces the description and rem
 	} 
 
 Note that the response format is identical to that used for ``add``.
+
+Relationships may be specified for edits in the same manner they are for the ``add`` mutation.
 
 Multiple edits
 ~~~~~~~~~~~~~~
