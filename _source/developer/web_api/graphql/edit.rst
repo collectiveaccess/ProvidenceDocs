@@ -187,6 +187,48 @@ If you do not set and existing record policy, `SKIP` is assumed.
 By default, existing records must match on both idno and type. The type matching requirement can be relaxed by passing the ``ignoreType`` option as in the previous example. 
 
 
+Adding relationships to a new record
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Relationships may be established between an added record and existing records using the ``relationships`` list parameter. Each item in the relationships list contains keys for ``target`` (the table to relate to) and ``relationshipType`` (a valid relationship type code for the relationship to be created). The record to relate to must be specified using one of the following: ``targetId`` (the database ID of the record to relate to), ``targetIdno`` (the idno of the related record), or ``targetIdentifer`` (the idno or database ID). You may also set interstitial data on the relationship by passing an optional ``bundles`` parameter within a ``relationships`` item. For example:
+
+.. code-block:: text
+
+	mutation {
+		add(
+			table: "ca_objects",
+			idno: "2020.11.1",
+			type: "artifact",
+			bundles: [
+				{ name: "preferred_labels", value: "Thimble Folk"},
+				{ name: "description", value: "Highly collectible felt dolls."}
+			],
+			replaceRelationships: false,
+			relationships: [
+				{
+					target:"ca_entities",
+					targetIdentifier: "E.100",
+					relationshipType:"donor",
+					bundles: [
+						{ "effective_date": "1961 - 1965" }
+					]
+				}
+			]
+		) {
+			id,
+			table,
+			idno,
+			changed,
+			errors { code, message, bundle },
+			warnings { message, bundle }
+		}
+	}
+
+Any number of relationships may be added to a record in this way. If the ``add`` mutation is for a record that already exists in the database, relationships will be added to the existing record with relationships matching existing ones skipped. To force the relationships on existing records to conform those specified in the mutation set the ``replaceRelationships`` parameter to true (the default is false). This will cause all existing relationships to be removed before the relationships specified in the mutation are added.
+
+``relationships`` and ``replaceRelationships`` may be specified at the top level of the mutation when the mutation is for a single new record (as shown above). For multiple adds, the parameters must be specified for each record in the ``records`` list.
+
+
 Matching using other fields
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -303,46 +345,6 @@ If only a name match is required, a somewhat simpler mutation using ``matchOn`` 
 .. IMPORTANT::
    In an ``add`` mutation, when a ``search``, ``find`` matches more than one record the first record found is considered the existing record. All other matches are discarded. For predictable results use criteria that will return unique matches. ``matchOn`` only matches using fields that are typically unique (idno and preferred labels), but will exhibit the same behavior should those fields include non-unique values.
 
-Adding relationships to a new record
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Relationships may be established between an added record and existing records using the ``relationships`` list parameter. Each item in the relationships list contains keys for ``target`` (the table to relate to) and ``relationshipType`` (a valid relationship type code for the relationship to be created). The record to relate to must be specified using one of the following: ``targetId`` (the database ID of the record to relate to), ``targetIdno`` (the idno of the related record), or ``targetIdentifer`` (the idno or database ID). You may also set interstitial data on the relationship by passing an optional ``bundles`` parameter within a ``relationships`` item. For example:
-
-.. code-block:: text
-
-	mutation {
-		add(
-			table: "ca_objects",
-			idno: "2020.11.1",
-			type: "artifact",
-			bundles: [
-				{ name: "preferred_labels", value: "Thimble Folk"},
-				{ name: "description", value: "Highly collectible felt dolls."}
-			],
-			replaceRelationships: false,
-			relationships: [
-				{
-					target:"ca_entities",
-					targetIdentifier: "E.100",
-					relationshipType:"donor",
-					bundles: [
-						{ "effective_date": "1961 - 1965" }
-					]
-				}
-			]
-		) {
-			id,
-			table,
-			idno,
-			changed,
-			errors { code, message, bundle },
-			warnings { message, bundle }
-		}
-	}
-
-Any number of relationships may be added to a record in this way. If the ``add`` mutation is for a record that already exists in the database, relationships will be added to the existing record with relationships matching existing ones skipped. To force the relationships on existing records to conform those specified in the mutation set the ``replaceRelationships`` parameter to true (the default is false). This will cause all existing relationships to be removed before the relationships specified in the mutation are added.
-
-``relationships`` and ``replaceRelationships`` may be specified at the top level of the mutation when the mutation is for a single new record (as shown above). For multiple adds, the parameters must be specified for each record in the ``records`` list.
 
 Editing records
 ~~~~~~~~~~~~~~~~~~~~
