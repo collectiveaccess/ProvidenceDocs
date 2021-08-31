@@ -108,7 +108,7 @@ Similarly, for preferred and non-preferred labels that take multiple sub-values,
 				{ name: "preferred_labels", values: [
 					{ name: "forename", value: "David" },
 					{ name: "surname", value: "Lowery" },
-					{ name: "middlename", "Alan" },
+					{ name: "middlename", value: "Alan" },
 					{ name: "prefix", value: "Mr" }
 				]},
 				{ name: "biography", value: "He was born in Brooklyn in 1914... etc etc"},
@@ -171,7 +171,7 @@ Multiple records may be created in single request using the ``records`` paramete
 		}
 	}
 	
-The ``existingRecordPolicy`` parameter controls behavior when a record with the specified `idno` value is already present. 
+The ``existingRecordPolicy`` parameter controls behavior when a record with the specified `idno` value (or other specified criteria, as described in the next section) is already present.
 
 .. csv-table:: `existingRecordPolicy` values
    :header: "Value", "Description"
@@ -185,6 +185,123 @@ The ``existingRecordPolicy`` parameter controls behavior when a record with the 
 If you do not set and existing record policy, `SKIP` is assumed.
 
 By default, existing records must match on both idno and type. The type matching requirement can be relaxed by passing the ``ignoreType`` option as in the previous example. 
+
+
+Matching using other fields
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Matching of existing records is typically done with ``idno`` values, but other data may be used as well. To toggle between matching on ``idno`` or preferred label use the ``matchOn`` parameter set to a list containing one or both of the values "idno" or "preferred_labels" in the order of precedence. Setting ``matchOn`` to 
+
+.. code-block:: text
+
+	matchOn: ["preferred_labels", "idno"]
+
+will result in matching on preferred labels, falling back to idno if there are no label matches. Setting a single value will result in matching on only the specified field.
+
+
+Arbitrary matching criteria may be specified using the ``match`` parameter. ``match`` offers two sub-parameters: ``search``` matches records using a query string; ``criteria`` matches records using field-level search criteria. The two sub-parameters are analogous to the ``search`` and ``find`` queries in the :ref:`search endpoint <developer_api_graphql_search>`, taking identical input and employing the same methods to locate matches. 
+
+``match`` and ``matchOn``` may be used in conjunction with ``existingRecordPolicy`` to implement useful data migration patterns that might otherwise require several separate queries and mutations. One common data migration pattern occurs when importing a data set that includes references to related records (a set of artworks with related artists, for example). In this case, one would process each object record in turn, creating related entity records for artists that don't already exist, and then establishing object-artist relationships. Without ``match`` or ``matchOn`` the process would require these steps:
+
+1. Create the object
+2. Perform a ``search`` query for each artist related to the object
+3. Create entity records for all artists that did not return a match
+4. Create relationships between the entities and newly created object
+
+By using an ``add`` mutation with ``relationships`` set to the relevant object, ``match`` > ``criteria`` set to the artist's name and an ``existingRecordPolicy`` of ``MERGE``, steps 2-4 can be consolidated into a single mutation that finds matching artist records based upon name, creates a new record for an artist if there are no matches, and then creates an object-artist relationship between the matched or newly created artist record. The mutation might look like this, if you wanted to match both name and lifedates:
+
+.. code-block:: text
+
+	mutation { 
+		add(
+			table: "ca_entities", 
+			idno: "E.%", 
+			type: "individual",
+			bundles: [
+				{ name: "preferred_labels", values: [
+					{ name: "forename", value: "David" },
+					{ name: "surname", value: "Lowery" },
+					{ name: "middlename", value: "Alan" },
+					{ name: "prefix", value: "Mr" }
+				]},
+				{ name: "biography", value: "He was born in Brooklyn in 1914... etc etc"},
+				{ name: "lifedates", value: "February 13, 1914 - March 6, 1981"}
+			],
+			existingRecordPolicy: "MERGE",
+			match: {
+				find: [
+					{
+						name: "ca_entities.preferred_labels.surname", 
+						operator: EQ, 
+						value: "Lowery"
+					},
+					{
+						name: "ca_entities.preferred_labels.forename", 
+						operator: EQ, 
+						value: "David"
+					},
+					{ 
+						name: "lifedates", 
+						operator: EQ, 
+						value: "February 13, 1914 - March 6, 1981"
+					}
+				]
+			},
+			relationships: [
+				{
+					target:"ca_objects",
+					targetIdentifier: "2021.004.001",
+					relationshipType:"donor"
+				}
+			]
+		) { 
+			id, 
+			table, 
+			idno, 
+			errors {code, message, bundle}, 
+			warnings { message, bundle}
+		} 
+	} 
+	
+If only a name match is required, a somewhat simpler mutation using ``matchOn`` might look like this;
+
+.. code-block:: text
+
+	mutation { 
+		add(
+			table: "ca_entities", 
+			idno: "E.%", 
+			type: "individual",
+			bundles: [
+				{ name: "preferred_labels", values: [
+					{ name: "forename", value: "David" },
+					{ name: "surname", value: "Lowery" },
+					{ name: "middlename", value: "Alan" },
+					{ name: "prefix", value: "Mr" }
+				]},
+				{ name: "biography", value: "He was born in Brooklyn in 1914... etc etc"},
+				{ name: "lifedates", value: "February 13, 1914 - March 6, 1981"}
+			],
+			existingRecordPolicy: "MERGE",
+			matchOn: ["preferred_labels"],
+			relationships: [
+				{
+					target:"ca_objects",
+					targetIdentifier: "2021.004.001",
+					relationshipType:"donor"
+				}
+			]
+		) { 
+			id, 
+			table, 
+			idno, 
+			errors {code, message, bundle}, 
+			warnings { message, bundle}
+		} 
+	} 
+
+.. IMPORTANT::
+   In an ``add`` mutation, when a ``search``, ``find`` matches more than one record the first record found is considered the existing record. All other matches are discarded. For predictable results use criteria that will return unique matches. ``matchOn`` only matches using fields that are typically unique (idno and preferred labels), but will exhibit the same behavior should those fields include non-unique values.
 
 Adding relationships to a new record
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
