@@ -4,8 +4,8 @@ Setup.php
 .. contents::
    :local:
 
-In the main directory of your Providence install, there is a file called *setup.php.dist*. Make a copy of this file and rename it *setup.php*.
-For your CollectiveAccess system to work, you MUST add values for your **database server hostname, user name, password, database, and administrative e-email**. You also set the site's timezone in setup.php. Most other settings can be left alone.
+In the main directory of your Providence install there is a file called *setup.php-dist*. Make a copy of this file and rename it to *setup.php*.
+For your CollectiveAccess system to work, you MUST add values for your **database server hostname, user name, password, database, and administrative e-email**. Other options, such as timezone, may also need to be modified.
 
 Database server host name
 ^^^^^^^^^^^^^^^^^^^^^^^^^
