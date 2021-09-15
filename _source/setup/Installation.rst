@@ -45,9 +45,9 @@ To install CollectiveAccess Providence perform the following steps:
 6. The installer will give you login information for your newly installed system when installation is complete. Be sure to note this information in a safe place!
 
 .. _Git will create the directory for you: http://git-scm.com
-.. _download page: http://www.collectiveaccess.org/download
+.. _download page: https://collectiveaccess.org/get-started/
 .. _list of contributed profiles: http://www.collectiveaccess.org/configuration
-.. _support forum : http://collectiveaccess.org/support/forum
+.. _support forum : https://support.collectiveaccess.org
 
 Optional post installation tasks
 --------------------------------
@@ -72,4 +72,4 @@ What to do if something goes wrong?
 If you are totally stumped after reviewing the error messages and logs you can find help on the online support `forum`_. Please include a full description of your problem as well as the operating system you are running, the version of CA you are running, the text of any error messages, the output of phpinfo() and the output of the CA "Configuration Check" (available in the "Manage" menu under "System Configuration") - assuming you are able to log in. We will try our best to resolve your problems quickly.
 
 
-.. _forum: http://www.collectiveaccess.org/support/forum
+.. _forum: https://support.collectiveaccess.org
