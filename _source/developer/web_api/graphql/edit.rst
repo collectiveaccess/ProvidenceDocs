@@ -26,8 +26,9 @@ The ``add`` mutation is used to create new records. To create a record three bit
 			id, 
 			table, 
 			identifier, 
-			errors {code, message, bundle}, 
-			warnings { message, bundle}
+			errors { idno, code, message, bundle },
+			warnings { idno, code, message, bundle },
+			info { idno, code, message, bundle }
 		} 
 	} 
  
@@ -53,8 +54,9 @@ The ``bundles`` parameter takes a list of bundle value specifications. Each spec
 			id, 
 			table, 
 			identifier, 
-			errors {code, message, bundle}, 
-			warnings { message, bundle}
+			errors { idno, code, message, bundle },
+			warnings { idno, code, message, bundle },
+			info { idno, code, message, bundle }
 		} 
 	} 
 
@@ -90,8 +92,9 @@ For container bundles – fields that contain sub-fields, set ``values`` for the
 			id, 
 			table, 
 			identifier, 
-			errors {code, message, bundle}, 
-			warnings { message, bundle}
+			errors { idno, code, message, bundle },
+			warnings { idno, code, message, bundle },
+			info { idno, code, message, bundle }
 		} 
 	} 
 
@@ -118,16 +121,17 @@ Similarly, for preferred and non-preferred labels that take multiple sub-values,
 			id, 
 			table, 
 			idno, 
-			errors {code, message, bundle}, 
-			warnings { message, bundle}
+			errors { idno, code, message, bundle },
+			warnings { idno, code, message, bundle },
+			info { idno, code, message, bundle }
 		} 
 	} 
 
 For non-preferred labels, which take an option label `type` value, you may also pass ``type`` in the bundle specification. If it is omitted the default type will be used.
 
-Note that all bundles are assumed to be bound to the table to which you are adding the record. To manage relationships between records use the ``addRelationship``, ``editRelationship``, ``deleteRelationship`` and ``deleteAllRelationships`` `mutations <#creating-relationships>`_ described below.
+Note that all bundles are assumed to be bound to the table to which you are adding the record. To manage relationships between records use the ``addRelationship``, ``editRelationship``, ``deleteRelationship`` and ``deleteAllRelationships`` `mutations <#creating-relationships>`_ described below. You may also create relationships within the ``add`` mutation using the ``relationships`` parameter described below.
 
-The ``add`` mutation can return the internal CollectiveAccess ``id`` value for the newly created record, the ``table`` of the record (always the same as the table parameter passed in the mutation), the idno value (which may be calculated using a server-side policy and differ from the passed value) and a list of errors and warnings that may have occurred during the add operation. Errors indicate failures and include a numeric error code, a descriptive message and the name of the bundle the error affects. Non-bundle-specific errors will have a bundle code of ``GENERAL``. Warnings are purely advisory and include a message and related bundle name.
+The ``add`` mutation can return the internal CollectiveAccess ``id`` value for the newly created record, the ``table`` of the record (always the same as the table parameter passed in the mutation), the idno value (which may be calculated using a server-side policy and differ from the passed value) and a list of errors, warnings and informational messages related to the add operation. Errors indicate failures and include an error code, the idno of the affected record, a descriptive message and the name of the bundle the error affects. Non-bundle-specific errors will have a bundle code of ``GENERAL``. Warnings indicate possible error conditions and issues, and are purely advisory. Informational messages (``info``) provide details about processing stages of the mutation, including how existing records may or may not have been matched, and if related records may have been created. Both ``warnings`` and ``info`` messages have a simliar structure to ``error``.
 
 Multiple adds and hierarchies
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -166,8 +170,9 @@ Multiple records may be created in single request using the ``records`` paramete
 			table,
 			idno,
 			changed,
-			errors {code, message, bundle},
-			warnings { message, bundle}
+			errors { idno, code, message, bundle },
+			warnings { idno, code, message, bundle },
+			info { idno, code, message, bundle }
 		}
 	}
 	
@@ -219,8 +224,9 @@ Relationships may be established between an added record and existing records us
 			table,
 			idno,
 			changed,
-			errors { code, message, bundle },
-			warnings { message, bundle }
+			errors { idno, code, message, bundle },
+			warnings { idno, code, message, bundle },
+			info { idno, code, message, bundle }
 		}
 	}
 
@@ -300,8 +306,9 @@ By using an ``add`` mutation with ``relationships`` set to the relevant object, 
 			id, 
 			table, 
 			idno, 
-			errors {code, message, bundle}, 
-			warnings { message, bundle}
+			errors { idno, code, message, bundle },
+			warnings { idno, code, message, bundle },
+			info { idno, code, message, bundle }
 		} 
 	} 
 	
@@ -337,8 +344,9 @@ If only a name match is required, a somewhat simpler mutation using ``matchOn`` 
 			id, 
 			table, 
 			idno, 
-			errors {code, message, bundle}, 
-			warnings { message, bundle}
+			errors { idno, code, message, bundle },
+			warnings { idno, code, message, bundle },
+			info { idno, code, message, bundle }
 		} 
 	} 
 
@@ -374,8 +382,9 @@ An ``edit`` mutation that changes the ``idno``, replaces the description and rem
 			id, 
 			table, 
 			idno, 
-			errors {code, message, bundle}, 
-			warnings { message, bundle}
+			errors { idno, code, message, bundle },
+			warnings { idno, code, message, bundle },
+			info { idno, code, message, bundle }
 		} 
 	} 
 
@@ -414,8 +423,9 @@ Multiple records may be edited in single request using the ``records`` parameter
 			table,
 			idno,
 			changed,
-			errors {code, message, bundle},
-			warnings { message, bundle}
+			errors { idno, code, message, bundle },
+			warnings { idno, code, message, bundle },
+			info { idno, code, message, bundle }
 		}
 	}
 
@@ -434,8 +444,9 @@ To delete a record, pass the table and an identifier (CollectiveAccess ID value 
 			id, 
 			table, 
 			identifier, 
-			errors {code, message, bundle}, 
-			warnings { message, bundle}
+			errors { idno, code, message, bundle },
+			warnings { idno, code, message, bundle },
+			info { idno, code, message, bundle }
 		}
 	} 
 	
@@ -465,8 +476,9 @@ This mutation would delete all entities of type ``ind`` modified after July 21 2
                     table,
                     idno,
                     changed,
-                    errors {code, message, bundle},
-                    warnings { message, bundle}
+					errors { idno, code, message, bundle },
+					warnings { idno, code, message, bundle },
+					info { idno, code, message, bundle }
             }
         }
         
@@ -487,8 +499,9 @@ Specific lists may be truncated using the ``list`` parameter. The ``date`` and `
                     table,
                     idno,
                     changed,
-                    errors {code, message, bundle},
-                    warnings { message, bundle}
+					errors { idno, code, message, bundle },
+					warnings { idno, code, message, bundle },
+					info { idno, code, message, bundle }
             }
         }
 
@@ -511,15 +524,9 @@ Creating relationships
 			id, 
 			idno, 
 			table, 
-			errors {
-				code, 
-				message, 
-				bundle
-			}, 
-			warnings { 
-				message, 
-				bundle
-			}
+			errors { idno, code, message, bundle },
+			warnings { idno, code, message, bundle },
+			info { idno, code, message, bundle }
 		} 
 	} 
 	
@@ -535,7 +542,8 @@ Returns:
 				"idno": null,
 				"table": "ca_objects_x_entities",
 				"errors": [],
-				"warnings": []
+				"warnings": [],
+				"idno": []
 			}
 		}
 	}
@@ -561,16 +569,10 @@ Editing relationships
 			]) { 
 				id, 
 				table, 
-				idno, 
-				errors {
-					code, 
-					message, 
-					bundle
-				}, 
-				warnings { 
-					message, 
-					bundle
-				}
+				idno, 				
+				errors { idno, code, message, bundle },
+				warnings { idno, code, message, bundle },
+				info { idno, code, message, bundle }
 			}
 		} 
 
@@ -588,15 +590,9 @@ Deleting relationships
 			id, 
 			table, 
 			idno, 
-			errors {
-				code, 
-				message, 
-				bundle
-			}, 
-			warnings { 
-				message, 
-				bundle
-			}
+			errors { idno, code, message, bundle },
+			warnings { idno, code, message, bundle },
+			info { idno, code, message, bundle }
 		}
 	} 
 
@@ -615,14 +611,8 @@ Deleting all relationships:
 			id, 
 			table, 
 			idno, 
-			errors {
-				code, 
-				message, 
-				bundle
-			}, 
-			warnings { 
-				message, 
-				bundle
-			}
+			errors { idno, code, message, bundle },
+			warnings { idno, code, message, bundle },
+			info { idno, code, message, bundle }
 		} 
 	} 
