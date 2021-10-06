@@ -1,6 +1,7 @@
 Key,Description,Example value,Mandatory?
 separator,The value to be displayed between elements in the user interface for the format. If you want your elements to be merged end to end with no space or separator character(s) then leave this blank.,"``separator = ,``",Yes
 dont_inherit_from_parent_collection,"In some archival configurations of CollectiveAccess a cross-table hierarchy is used to link object-level records to the collections they are a part of. By default these child records inherit their parent id number. This is often  desired behavior. Other times, for example when a SERIAL configuration is set for object idnos, it's not and has  potential to create duplicate id numbers. In these cases dont_inherit_from_parent_collection can be used to prevent object children from inheriting collection idnos that are duplicative. Note this only impacts cross-table hierarchies (doesn't impact other relationships or hierarchies within a single table).","``dont_inherit_from_parent_collection = 1``",No
+compare_against_values_in,"A list of tables beyond the format table to compare identifiers against when searching for duplicate values. This allows uniqueness of numbers to be enforced across tables if desired.","[ca_collections,ca_occurrences]",No
 elements,An associative list of elements and the parameters for each. Elements will be output when constructing an ID number or user interface in the same order they appear in the list. At least one element must be declared for the format to be valid.,".. code-block:: text
 
   elements = {
