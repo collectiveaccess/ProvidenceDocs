@@ -28,3 +28,14 @@ timeOmit,"By default, start_as_iso8601 and end_as_iso8601 will produced the time
 dontReturnValueIfOnSameDayAsStart,This setting will ensure that the end_as_iso8601 will be skipped on single dates (where there is no end date).,0 or 1,"{ ""dontReturnValueIfOnSameDayAsStart"" : 1 }"
 sort,Sorts the values returned for a context switch on these fields. Only valid when context is set to a related table. Must always be a list.,List of valid field names for related table,"""sort"" : [ ""ca_entities.preferred_labels.surname"" ]"
 stripTags,Removes HTML and XML tags from output. (Available from version 1.8),0 or 1,"{""stripTags"":1}"
+deduplicate,Remove duplicate values for an exported list with multiple values. (Available from version 1.8),,"{ ""deduplicate"": 1 }"
+appiyTransformations,"Transform values prior to export. A list of transformations may be specified, and each will be applied in order to the output of its predecessor. Each list entry is an object with a ""transform"" name and the options required by the transform.
+
+Available transforms:
+filesize = convert numeric filesizes (in bytes) to a scaled file size for display. Parameters are: ""decimals"" = number of decimal places to include in display value. 
+
+ (Available from version 1.8)",,"{
+	""applyTransformations"": [
+		{""transform"": ""filesize"", ""decimals"": 4 }
+	]
+}"
