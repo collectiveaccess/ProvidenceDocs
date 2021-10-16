@@ -34,7 +34,7 @@ storageLocationSplitter          :term:`attributes <attributes>`, :term:`dontCre
 
 attributes
 `````````````
-      Sets or maps metadata for the entity record by referencing the metadataElement code and the location in the data source where the data values can be found
+      Sets or maps metadata for newly created records by referencing the metadataElement code and the location in the data source where the data values can be found
 
       See below for additonal attribute settings for the entitySplitter and objectRepresentationSplitter
 
@@ -73,9 +73,8 @@ attributes
          }
          }
 
-      *Applicable refineries*: collectionSplitter, entitySplitter, listItemSplitter, loanSplitter, measurementsSplitter, movementSplitter, placeSplitter, objectSplitter, objectLotsSplitter, occurrenceSplitter, tourStopSplitter
 
-Type
+*Type
 `````````````
       Accepts a constant list item idno from the list (collection_types, object_types, entity_types, list_item_types, loan_types) or a reference to the location in the data source where the type can be found
 
@@ -88,10 +87,7 @@ Type
       ``{"loanType":"out"}``
 
 
-
-      *Applicable Refineries*: collectionSplitter, entitySplitter, listItemSplitter, loanSplitter
-
-TypeDefault
+*TypeDefault
 `````````````
       Sets the default type that will be used if none are defined or if the data source values do not match any values in the CollectiveAccess list types (collection_types, object_types, entity_types, list_item_types, loan_types).
 
@@ -103,9 +99,24 @@ TypeDefault
       
       ``{"listItemTypeDefault":"concept"}``
 
+      
+relationshipType
+````````````````
+	Specifies the relationship type to use for relationships created between related records matched or created by the splitter and the subject record.
+	Can be either a constant value or a reference to a location in the data source where the relationship type value can be found.
 
-      *Applicable Refineries*: collectionSplitter, entitySplitter, loanSplitter, listItemSplitter
+relationshipTypeDefault
+````````````````````````
+	Specifies a relationship type to use if relationshipType is not set. This is useful when relationshipType references a location in the data source that is not always set.
 
+extractRelationshipType
+````````````````````````
+	If set the splitter will attempt to extract relationship type from the data being split. By default it will consider text enclosed in parens as relationship type values. Set to "{}" or "[]" or look for text enclosed with those brackets instead. [Available from version 1.8]
+
+relationshipTypeDelimiter
+````````````````````````
+	If set splitter will use the relationship type value as a list of types with the specified delimiter. A relationship will be created between split records and the subject record for each relationship type in the list. [Available from version 1.8]
+	
 delimiter
 `````````````
       Sets the value of the delimiter to break on, separating data source values
@@ -130,8 +141,8 @@ dontCreate
 
       *Applicable Refineries*: collectionSplitter, entitySplitter, listItemSplitter, loanSplitter, movementSplitter, objectLotsSplitter, objectRepresentationSplitter, objectSplitter, occurrenceSplitter, placeSplitter, tourStopSplitter
 
-elements
-`````````````
+elements (for measurements splitter)
+`````````````````````````````````````
       Maps the components of the dimensions to specific metadata elements
 
       .. code-block:: none
