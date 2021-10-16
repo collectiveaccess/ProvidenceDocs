@@ -31,10 +31,11 @@ the \*_on_id options. These options can be useful when re-importing data previou
   merge_on_id
   merge_on_id_with_replace
   overwrite_on_id
-","",none
-ignoreTypeForExistingRecordPolicy,If set record type will be ignored when looking for existing records as specified by the existing records policy.,"0 or 1",0
-mergeOnly,If set data will only be merged with existing records using the existing records policy and no new records will be created. Available from version 1.8.,"0 or 1",0
-dontDoImport,If set then the mapping will be evaluated but no rows actually imported. This can be useful when you want to run a refinery over the rows of a data set but not actually perform the primary import. ,"0 or 1",0
+",,none
+ignoreTypeForExistingRecordPolicy,If set record type will be ignored when looking for existing records as specified by the existing records policy.,0 or 1,0
+omitPreferredLabelFieldsForExistingRecordPolicy,Comma or semicolon-delimited list of preferred label fields to omit when matching for existing records using preferred labels. Typically used with entity labels to remove specific subfields such as display name from consideration.,Typically used for entity labels to restrict fields used for matching.,displayname;middlename
+mergeOnly,If set data will only be merged with existing records using the existing records policy and no new records will be created. Available from version 1.8.,0 or 1,0
+dontDoImport,If set then the mapping will be evaluated but no rows actually imported. This can be useful when you want to run a refinery over the rows of a data set but not actually perform the primary import. ,0 or 1,0
 basePath,"For XML data formats, an XPath expression selecting nodes to be treated as individual records. If left blank, each XML document will be treated as a single record.",Must be a valid Xpath expression,/export
 locale,"Sets the locale used for all imported data. Leave empty or omit to use the system default locale. Otherwise set it to a valid locale code (Ex. en_US, es_MX, fr_CA).",Must be a valid ISO locale code.,en_US
 errorPolicy,"Determines how errors are handled for the import.  Options are to ignore the error, stop the import when an error is encountered and to receive a prompt when the error is encountered. Default is to ignore.","ignore
