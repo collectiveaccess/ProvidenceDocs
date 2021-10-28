@@ -168,11 +168,20 @@ elements (for measurements splitter)
 
 ignoreParent
 `````````````
-      For use with collection hierarchies. When set to true this parameter allows global match across the entire hierarchy, regardless of parent_id. Use this parameter with datasets that include values to be merged into existing hierarchies but that do not include parent information. Paired with matchOn it's possible to merge the values using only name or idno, without any need for hierarchy info. Not ideal for situations where multiple matches can not be disambiguated with the information available.
+      For use with hierarchies. When set to true this parameter allows global match across the entire hierarchy, regardless of parent_id. Use this parameter with datasets that include values to be merged into existing hierarchies but that do not include parent information. Paired with matchOn it's possible to merge the values using only name or idno, without any need for hierarchy info. Not ideal for situations where multiple matches can not be disambiguated with the information available.
 
       ``{"ignoreParent": "1"}``
 
       *Applicable Refineries*: collectionSplitter, entitySplitter, listItemSplitter, loanSplitter, movementSplitter, objectLotsSplitter, objectSplitter, occurrenceSplitter, placeSplitter, tourStopSplitter
+
+ignoreType
+`````````````
+      For use with hierarchies. Normally the splitter will only look for matching records with the same type as that in the import data. When set to true this parameter allows global matching across the entire hierarchy, ignoring record type. Use this parameter with datasets that include values to be merged into existing hierarchies where type may not be stated accurately or at all. Paired with matchOn it's possible to merge the values using only name or idno, without regard for type.  Note that in situations where multiple matches on idno or label occur across types, use of this option may lead to incorrectly imported data.
+
+      ``{"ignoreType": "1"}``
+
+      *Applicable Refineries*: objectSplitter, objectLotSplitter, objectRepresentationSplitter, entitySplitter, occurrenceHierarchyBuilder, loanSplitter, movementSplitter, placeSplitter, storageLocationSplitter, listItemSplitter, tourStopSplitter, listItemIndentedHierarchyBuilder, collectionHierarchyBuilder, placeHierarchyBuilder, collectionIndentedHierarchyBuilder, occurrenceHierarchyBuilder, storageLocationHierarchyBuilder, objectHierarchyBuilder, listItemHierarchyBuilder, entityHierarchyBuilder
+
 
 interstitial
 `````````````
