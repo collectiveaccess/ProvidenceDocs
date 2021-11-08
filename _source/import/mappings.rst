@@ -140,6 +140,7 @@ Source              Description
 ``__filename__``    The original name of the file, when available. If the original name of the file is not available (because the uploading web browser did not report it, for instance) then the value for __source__ is returned.
 ``__filepath__``    The full path on the server to the file being imported.
 ``__now__``         The current date and time. (Available from version 1.8).
+``__date__``		The current date (time is omitted). (Available from version 1.8).
 ================    ================================================================================
 
 CA_table.element (Column 3)
