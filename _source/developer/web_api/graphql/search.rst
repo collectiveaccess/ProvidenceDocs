@@ -167,19 +167,20 @@ The ``criteria`` parameter is a list of field-level search criteria. Each criter
 		values: ["2020.22", "2020.55"]
 	}
 	
-When importing data using the API, it is often useful to perform bulk lookups on idno values, label values, or both. The ``exists`` query provides a simple, performant method to test for existence of records by idnos and labels. Three parameters are required: the ``table`` to search on, a list of ``idnos`` to search for and/or a list of ``labels`` to search on. Both ``idnos`` and ``labels`` maybe present in a single query. At a minimum, one must be present. For example:
+When importing data using the API, it is often useful to perform bulk lookups on identifiers, labels and other values. The ``exists`` query provides a simple, performant method to test for existence of records having one more values in a specific location. Three parameters are required: the ``table`` and ``bundle`` to search on, and a list of ``values``. For example:
 
 .. code-block:: text
 
 	query {
         exists(
                 table: "ca_objects",
-                idnos: ["2011.10.01", "V2021.42.1"],
-                labels: ["Frame, Picture"]
+                bundle: "ca_objects.idno",
+                values: ["513En", "514En", "515En"]
         ) {
                 table,
-                idnos { id, ids, value },
-                labels { id, ids, value }
+                bundle,
+                map,
+                values { id, ids, value }
         }
 	}
 
@@ -192,38 +193,39 @@ returns:
 		"data": {
 			"exists": {
 				"table": "ca_objects",
-				"idnos": [
+				"bundle": "ca_objects.idno",
+				"map": "{\"513En\":\"39584\",\"514En\":\"39585\",\"515En\":\"39586\"}",
+				"values": [
 					{
-						"id": 26246,
+						"value": "513En",
+						"id": 3,
 						"ids": [
-							26246,
-							26247,
-							26248
-						],
-						"value": "2011.10.01"
+							39584
+						]
 					},
 					{
-						"id": null,
-						"ids": null,
-						"value": "V2021.42.1"
-					}
-				],
-				"labels": [
-					{
-						"id": 22936,
+						"value": "514En",
+						"id": 3,
 						"ids": [
-							22936,
-							22958,
-							22967,
-							22972,
-							23007,
-							23025
-						],
-						"value": "Frame, Picture"
+							39585
+						]
+					},
+					{
+						"value": "515En",
+						"id": 3,
+						"ids": [
+							39586
+						]
 					}
 				]
 			}
 		}
 	}
 	
-The ``id`` return value contains the database id value for the first matched record. If a list of all matches is required, use the ``ids`` return value. The ``exists`` query will return `all` idno and label values, whether they exist in the database or not. Values without matches will return ``id`` and ``ids`` as null.
+The ``bundle`` parameter must be a bundle on the queried table and can be specified in <table>.<bundle code> format or simply as a bundle code. In the example above, ``ca_objects.idno`` and ``idno`` are equivalent. The bundle can refer to any intrinsic, label or metadata element defined for the table. For labels, specify the bundle as ``<table>.preferred_labels`` for the label display value, or ``<table>.preferred_labels.<sub field>`` to query a specific field. For example, for entities setting ``bundle`` to ``ca_entities.preferred_labels`` (or ``ca_entities.preferred_labels.displayname``) will perform matching on the ``displayname`` field. Using  ``ca_entities.preferred_labels.surname`` will operate on the ``surname`` field in the table.
+
+The ``values`` return value contains a list of query values and the ids of record containing those values. Within each ``values`` list item the ``id`` value contains the database id value for the first matched record. For a list of all matches use the ``ids`` return value. 
+
+The ``exists`` query will return `all` values, whether they exist in the database or not. Values without matches will return ``id`` and ``ids`` as null.
+
+The ``map`` return value is a JSON-encoded lookup table of values and matching identifiers, with each key resolving to a list of matching record ids, or null if the key value doesn't exist in the database. This tablw can be used by calling applications to quickly determine by values which values are in use, and which records they resolve to.
