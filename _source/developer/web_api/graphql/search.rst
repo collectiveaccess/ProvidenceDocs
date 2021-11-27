@@ -119,6 +119,9 @@ Returned results can be limited to specified record types setting the ``restrict
 		} 
 	} 
 
+Field-level searches using the ``find`` query
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 The ``find`` query offers field-specific searching. While the ``search`` query operates on a full-text index built on top of the database, ``find`` queries the underlying data directly, with minimal modification and expansion of your query.
 
 The ``find`` query takes most of the parameters used for ``search`` (``table``, ``start``, ``limit``, ``bundles`` and ``restrictToTypes``), but uses the ``criteria`` parameter to specify field level search criteria in place of the ``search`` parameter. It returns data in the same format as ``search``.
@@ -167,21 +170,30 @@ The ``criteria`` parameter is a list of field-level search criteria. Each criter
 		values: ["2020.22", "2020.55"]
 	}
 	
-When importing data using the API, it is often useful to perform bulk lookups on identifiers, labels and other values. The ``exists`` query provides a simple, performant method to test for existence of records having one more values in a specific location. Three parameters are required: the ``table`` and ``bundle`` to search on, and a list of ``values``. For example:
+Record lookup by value using the ``exists`` query
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+When importing data using the API, it is often useful to perform bulk lookups on identifiers, labels and other values. The ``exists`` query provides a simple, performant method to test for existence of records having one more values in a specific location. Three parameters are required: the ``table`` and ``bundle`` to search on, and a list of ``values``. 
+
+
+.. IMPORTANT::
+	Use of this GraphQL service requires authentication with an account having the ``can_access_graphql_exists_search_service`` action privilege. For performance reasons the ``exists`` query bypasses type- and item-level access control, and may return data to which the authenticated service user would not normally have access. The ``can_access_graphql_exists_search_service`` privilege provides a means to restrict access to this service to only those accounts that absolutely require it.
+
+For example:
 
 .. code-block:: text
 
 	query {
-        exists(
-                table: "ca_objects",
-                bundle: "ca_objects.idno",
-                values: ["513En", "514En", "515En"]
-        ) {
-                table,
-                bundle,
-                map,
-                values { id, ids, value }
-        }
+		exists(
+			table: "ca_objects",
+			bundle: "ca_objects.idno",
+			values: ["513En", "514En", "515En"]
+		) {
+			table,
+			bundle,
+			map,
+			values { id, ids, value }
+		}
 	}
 
 returns:
@@ -198,21 +210,21 @@ returns:
 				"values": [
 					{
 						"value": "513En",
-						"id": 3,
+						"id": 39584,
 						"ids": [
 							39584
 						]
 					},
 					{
 						"value": "514En",
-						"id": 3,
+						"id": 39585,
 						"ids": [
 							39585
 						]
 					},
 					{
 						"value": "515En",
-						"id": 3,
+						"id": 39586,
 						"ids": [
 							39586
 						]
@@ -222,10 +234,12 @@ returns:
 		}
 	}
 	
-The ``bundle`` parameter must be a bundle on the queried table and can be specified in <table>.<bundle code> format or simply as a bundle code. In the example above, ``ca_objects.idno`` and ``idno`` are equivalent. The bundle can refer to any intrinsic, label or metadata element defined for the table. For labels, specify the bundle as ``<table>.preferred_labels`` for the label display value, or ``<table>.preferred_labels.<sub field>`` to query a specific field. For example, for entities setting ``bundle`` to ``ca_entities.preferred_labels`` (or ``ca_entities.preferred_labels.displayname``) will perform matching on the ``displayname`` field. Using  ``ca_entities.preferred_labels.surname`` will operate on the ``surname`` field in the table.
+The ``bundle`` parameter must be a bundle on the queried table and can be specified in <table>.<bundle code> format or simply as a bundle code. In the example above, ``ca_objects.idno`` and ``idno`` are equivalent. The bundle can refer to any intrinsic, label or metadata element defined for the table. For labels, specify the bundle as ``<table>.preferred_labels`` (or simplly ``preferred_labels``) for the label display value, or ``<table>.preferred_labels.<sub field>`` to query a specific field. For example, for entities setting ``bundle`` to ``ca_entities.preferred_labels`` (or ``ca_entities.preferred_labels.displayname``) will perform matching on the ``displayname`` field. Using  ``ca_entities.preferred_labels.surname`` will operate on the ``surname`` field in the table.
 
-The ``values`` return value contains a list of query values and the ids of record containing those values. Within each ``values`` list item the ``id`` value contains the database id value for the first matched record. For a list of all matches use the ``ids`` return value. 
+The ``values`` return value contains a list of query values and the ids of records containing those values. Within each ``values`` list item the ``id`` value contains the database id value for the first matched record. The ``ids`` return value contains a list of all matches. 
 
 The ``exists`` query will return `all` values, whether they exist in the database or not. Values without matches will return ``id`` and ``ids`` as null.
 
-The ``map`` return value is a JSON-encoded lookup table of values and matching identifiers, with each key resolving to a list of matching record ids, or null if the key value doesn't exist in the database. This tablw can be used by calling applications to quickly determine by values which values are in use, and which records they resolve to.
+The ``map`` return value is an alternative rendering of the ``values`` list as a JSON-encoded lookup table of values and matching identifiers. Each key in the lookup tables resolves to a list of matching record ids, or null if the key value doesn't exist in the database. This table can be used by calling applications to quickly determine by values which values are in use, and which records they resolve to.
+
+
