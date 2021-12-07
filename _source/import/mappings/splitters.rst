@@ -182,6 +182,9 @@ ignoreType
 
       *Applicable Refineries*: objectSplitter, objectLotSplitter, objectRepresentationSplitter, entitySplitter, occurrenceHierarchyBuilder, loanSplitter, movementSplitter, placeSplitter, storageLocationSplitter, listItemSplitter, tourStopSplitter, listItemIndentedHierarchyBuilder, collectionHierarchyBuilder, placeHierarchyBuilder, collectionIndentedHierarchyBuilder, occurrenceHierarchyBuilder, storageLocationHierarchyBuilder, objectHierarchyBuilder, listItemHierarchyBuilder, entityHierarchyBuilder
 
+isPrimary
+`````````````
+	  For use with the ``objectRepresentationSplitter``. When set the first identified representation will be marked primary. In import mappings with multiple uses of objectRepresentationSplitters this option allows for control over which representation is marked as primary. If not set, the first representation created will be marked as primary. (Option is available from version 1.8).
 
 interstitial
 `````````````
