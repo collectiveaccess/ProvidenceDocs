@@ -189,7 +189,7 @@ The ``existingRecordPolicy`` parameter controls behavior when a record with the 
    
 If you do not set and existing record policy, `SKIP` is assumed.
 
-By default, existing records must match on both idno and type. The type matching requirement can be relaxed by passing the ``ignoreType`` option as in the previous example. 
+By default, existing records must match on idno, type and parent (when using ``HIERARCHICAL`` insert mode). The type matching requirement can be relaxed by passing the ``ignoreType`` option as in the previous example. The parent matching requirement when in ``HIERARCHICAL`` insert mode can be relaxed by passing the ``ignoreParent`` option.
 
 
 Adding relationships to a new record
