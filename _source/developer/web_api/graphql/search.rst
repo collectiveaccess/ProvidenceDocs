@@ -3,7 +3,11 @@
 Searching (endpoint name ``Search``)
 ====================================
 
-The search service provides both full-text and field-level search facilities using two queries. The ``search`` query accepts a :ref:`Lucene-format search expression <search_syntax>` and returns results for the specified table. The returned data will include data specified by the ``bundles`` parameter. You can list any number of bundles, and include bundles in related tables. 
+The search service provides both full-text and field-level search facilities using two queries. The ``search`` query accepts a :ref:`Lucene-format search expression <search_syntax>` and returns results for the specified table. The returned data will include data specified by the ``bundles`` parameter. You can list any number of bundles, and include bundles in related tables. You may also specify :ref:`display templates <display_templates>`.
+
+.. tip::
+	
+	Display templates can be used to format arbitrarily complex data extracted from returned records, as well as directly and indirectly related records. They are evaluated relative to each returned record in the search result.
 
 A typical ``search`` query might take the form:
 
@@ -13,7 +17,7 @@ A typical ``search`` query might take the form:
 		search(
 			table: "ca_objects", 
 			search: "Drop the Dips", 
-			bundles: ["ca_objects.idno", "ca_objects.preferred_labels.name", "ca_objects.description"],
+			bundles: ["ca_objects.idno", "ca_objects.preferred_labels.name", "ca_objects.description", "<strong>[^ca_objects.type_id]</strong>: <unit relativeTo='ca_entities' delimiter='; '>^ca_entities.preferred_labels.surname, ^ca_entities.preferred_labels.forename</unit>"],
 			start: 0,
 			limit: 10
 		) { 
@@ -35,7 +39,7 @@ A typical ``search`` query might take the form:
 		} 
 	} 
 	
-This query would return a result in this form:
+Note that the last entry in the ``bundles`` list is a :ref:`display templates <display_templates>`. This query would return a result in this form:
 	
 .. code-block:: text
 	
@@ -75,6 +79,15 @@ This query would return a result in this form:
                             "values": [
                                 {
                                     "value": "Drop the Dips was a roller coaster in Coney Island, NY",
+                                    "locale": "en_US"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "<strong>[^ca_objects.type_id]</strong>: <unit relativeTo='ca_entities' delimiter='; '>^ca_entities.preferred_labels.surname, ^ca_entities.preferred_labels.forename</unit>",
+                            "values": [
+                                {
+                                    "value": "<strong>Postcard</strong>: Tilyou, George; Dundee, Elmer; Thompson, Fred",
                                     "locale": "en_US"
                                 }
                             ]

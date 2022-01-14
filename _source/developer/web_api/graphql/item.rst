@@ -5,15 +5,19 @@ Item-level data access (endpoint name ``Item``)
 
 The Item service returns detailed data for a single record retrieved using either an internal CollectiveAccess ID value or the ``idno`` value of the record.
 
-To fetch a record pass the table, identifier and list of bundles to return in a ``get`` query:
+To fetch a record pass the table, identifier and list of bundles to return in a ``get`` query. You can list any number of bundles, and include bundles in related tables. You may also specify :ref:`display templates <display_templates>`.
 
+.. tip::
+	
+	Display templates can be used to format arbitrarily complex data extracted from returned records, as well as directly and indirectly related records. They are evaluated relative to the specified item.
+	
 .. code-block:: text
 
 	query { 
 		get(
 			table: "ca_objects", 
 			identifier: "test.1", 
-			bundles: ["ca_objects.idno", "ca_objects.type_id", "ca_objects.preferred_labels.name", "ca_objects.nonpreferred_labels", "ca_objects.description"]
+			bundles: ["ca_objects.idno", "ca_objects.type_id", "ca_objects.preferred_labels.name", "ca_objects.nonpreferred_labels", "ca_objects.description", "<strong>[^ca_objects.type_id]</strong>: <unit relativeTo='ca_entities' delimiter='; '>^ca_entities.preferred_labels.surname, ^ca_entities.preferred_labels.forename</unit>"]
     	) { 
     		id, 
     		table, 
@@ -101,6 +105,25 @@ The query will return:
 									{
 										"code": "description",
 										"value": "Drop the Dips was a roller coaster in Coney Island, NY",
+										"dataType": "Text"
+									}
+								]
+							}
+						]
+					},
+					,
+					{
+						"name": "<strong>[^ca_objects.type_id]</strong>: <unit relativeTo='ca_entities' delimiter='; '>^ca_entities.preferred_labels.surname, ^ca_entities.preferred_labels.forename</unit>",
+						"code": "<strong>[^ca_objects.type_id]</strong>: <unit relativeTo='ca_entities' delimiter='; '>^ca_entities.preferred_labels.surname, ^ca_entities.preferred_labels.forename</unit>",
+						"dataType": "Text",
+						"values": [
+							{
+								"locale": "en_US",
+								"value": "<strong>Postcard</strong>: Tilyou, George; Dundee, Elmer; Thompson, Fred",
+								"subvalues": [
+									{
+										"code": "description",
+										"value": "<strong>Postcard</strong>: Tilyou, George; Dundee, Elmer; Thompson, Fred",
 										"dataType": "Text"
 									}
 								]
