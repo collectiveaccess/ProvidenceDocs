@@ -39,7 +39,7 @@ A typical ``search`` query might take the form:
 		} 
 	} 
 	
-Note that the last entry in the ``bundles`` list is a :ref:`display templates <display_templates>`. This query would return a result in this form:
+Note that the last entry in the ``bundles`` list is a :ref:`display template <display_templates>`. This query would return a result in this form:
 	
 .. code-block:: text
 	
