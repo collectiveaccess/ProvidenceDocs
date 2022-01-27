@@ -333,10 +333,10 @@ The ``<if>`` tag provides maximum control by using :ref:`expressions <expression
 
 .. code-block:: none
 
-    <unit relativeTo="ca_objects.credit_line"><if rule=\"^credit_type =~ /current/\">^ca_objects.credit_line.credit_text
+    <unit relativeTo="ca_objects.credit_line"><if rule="^credit_type =~ /current/">^ca_objects.credit_line.credit_text
     (^ca_objects.credit_line.credit_type)</if></unit>
 
-The ``rule`` attribute must be set to a valid expression, which can use any valid placeholder available in the template, and must be enclosed in escaped (prepended ``\"``) quotes to ensure that it is evaluated correctly.
+The ``rule`` attribute must be set to a valid expression, which can use any valid placeholder available in the template.
 
 Both ``<ifcount>`` and ``<ifdef>`` include blank values in their evaluation. From version 1.7.9 blank values may suppressed by setting the optional ``omitBlanks`` to a non-zero value. This is often useful when formatting data for display.  If ``omitBlanks`` is set, ``<ifcount>`` will return the number of non-blank values; ``<ifdef>`` will evaluate as true only if the bundle has at least one non-blank value. Note that ``<if>`` does not support the ``omitBlanks`` option. You must filter blank values in the expression.
 
