@@ -255,4 +255,7 @@ The ``exists`` query will return `all` values, whether they exist in the databas
 
 The ``map`` return value is an alternative rendering of the ``values`` list as a JSON-encoded lookup table of values and matching identifiers. Each key in the lookup tables resolves to a list of matching record ids, or null if the key value doesn't exist in the database. This table can be used by calling applications to quickly determine by values which values are in use, and which records they resolve to.
 
+Limiting results using access values
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+All primary records in CollectiveAccess include an ``access`` field to control visibility in public-facing contexts such as web sites and data feeds. Data in ``search`` and ``find`` queries can be limited by one or more access values using the ``checkAccess`` parameter, set to a list of integer access codes, as defined in the ``access_statuses`` list for the CollectiveAccess installation. By convention 0 indicates a private record, 1 a public record and 2 a record available in public interfaces to users with elevated privileges. However, these values may be vary across installations and should be verified before use. 
