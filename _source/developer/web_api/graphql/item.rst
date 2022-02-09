@@ -246,3 +246,8 @@ returns:
 			}
 		}
 	}
+	
+Limiting results using access values
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+All primary records in CollectiveAccess include an ``access`` field to control visibility in public-facing contexts such as web sites and data feeds. Data in the ``getRelationships`` query can be limited by one or more access values using the ``checkAccess`` parameter, set to a list of integer access codes, as defined in the ``access_statuses`` list for the CollectiveAccess installation. By convention 0 indicates a private record, 1 a public record and 2 a record available in public interfaces to users with elevated privileges. However, these values may be vary across installations and should be verified before use. 

@@ -249,6 +249,8 @@ returns:
 	
 The ``bundle`` parameter must be a bundle on the queried table and can be specified in <table>.<bundle code> format or simply as a bundle code. In the example above, ``ca_objects.idno`` and ``idno`` are equivalent. The bundle can refer to any intrinsic, label or metadata element defined for the table. For labels, specify the bundle as ``<table>.preferred_labels`` (or simplly ``preferred_labels``) for the label display value, or ``<table>.preferred_labels.<sub field>`` to query a specific field. For example, for entities setting ``bundle`` to ``ca_entities.preferred_labels`` (or ``ca_entities.preferred_labels.displayname``) will perform matching on the ``displayname`` field. Using  ``ca_entities.preferred_labels.surname`` will operate on the ``surname`` field in the table.
 
+The set of records checked by an ``exists`` query can be restricted to one or more types by setting the optional ``restrictToTypes`` parameter to a list of types fot the specified ``table``. If omitted, all types be included.
+
 The ``values`` return value contains a list of query values and the ids of records containing those values. Within each ``values`` list item the ``id`` value contains the database id value for the first matched record. The ``ids`` return value contains a list of all matches. 
 
 The ``exists`` query will return `all` values, whether they exist in the database or not. Values without matches will return ``id`` and ``ids`` as null.
