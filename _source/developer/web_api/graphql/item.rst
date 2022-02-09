@@ -247,6 +247,10 @@ returns:
 		}
 	}
 	
+.. tip::
+	
+	Value_id values are returned in the subvalues list for metadata elements. Valid_id's are unique numeric identifiers assigned automatically by CollectiveAccess for each individual metadata value attached to a record. These ids can be used to refer to a specific value for editing or deletion.
+	
 Limiting results using access values
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
