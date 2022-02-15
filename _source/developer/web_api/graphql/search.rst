@@ -199,13 +199,15 @@ For example:
 	query {
 		exists(
 			table: "ca_objects",
-			bundle: "ca_objects.idno",
-			values: ["513En", "514En", "515En"]
-		) {
+			restrictToTypes: ["artifact"],
+			bundle: "ca_objects.materials",
+			values: ["quartz"]
+		)
+		{
 			table,
 			bundle,
 			map,
-			values { id, ids, value }
+			values { id, ids, idno, idnos, value }
 		}
 	}
 
@@ -218,29 +220,23 @@ returns:
 		"data": {
 			"exists": {
 				"table": "ca_objects",
-				"bundle": "ca_objects.idno",
-				"map": "{\"513En\":\"39584\",\"514En\":\"39585\",\"515En\":\"39586\"}",
+				"bundle": "ca_objects.materials",
+				"map": "{\"quartz\":[{\"idno\":\"75.1.272\",\"id\":\"15793\"},{\"idno\":\"75.47.13\",\"id\":\"16044\"},{\"idno\":\"75.47.20\",\"id\":\"16049\"}]}",
 				"values": [
 					{
-						"value": "513En",
-						"id": 39584,
+						"id": 15793,
 						"ids": [
-							39584
-						]
-					},
-					{
-						"value": "514En",
-						"id": 39585,
-						"ids": [
-							39585
-						]
-					},
-					{
-						"value": "515En",
-						"id": 39586,
-						"ids": [
-							39586
-						]
+							15793,
+							16044,
+							16049
+						],
+						"idno": "75.1.272",
+						"idnos": [
+							"75.1.272",
+							"75.47.13",
+							"75.47.20"
+						],
+						"value": "quartz"
 					}
 				]
 			}
@@ -251,7 +247,7 @@ The ``bundle`` parameter must be a bundle on the queried table and can be specif
 
 The set of records checked by an ``exists`` query can be restricted to one or more types by setting the optional ``restrictToTypes`` parameter to a list of types fot the specified ``table``. If omitted, all types will be included.
 
-The ``values`` return value contains a list of query values and the ids of records containing those values. Within each ``values`` list item the ``id`` value contains the database id value for the first matched record. The ``ids`` return value contains a list of all matches. 
+The ``values`` return value contains a list of query values and the ids and idnos (identifiers) of records containing those values. Within each ``values`` list item the ``id`` value contains the database id value for the first matched record. The ``ids`` return value contains a list of all matches. Similarly, for identifiers ``idno`` contains the identifer for the first matched record while ``idnos`` contains the complete list of matching identifiers.
 
 The ``exists`` query will return `all` values, whether they exist in the database or not. Values without matches will return ``id`` and ``ids`` as null.
 
