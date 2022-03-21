@@ -23,5 +23,6 @@ Endpoints
    graphql/edit
    graphql/browse
    graphql/schema
+   graphql/metadataimport
    graphql/configuration
    graphql/utility
