@@ -2,11 +2,6 @@
 System Requirements
 ===================
 
-What is Providence?
--------------------
-
-**Providence** is the core of CollectiveAccess. It includes a data modeling framework, a database, a media handling framework capable of manipulating and converting digital images, video, audio and documents, and a web-based user interface application for cataloguing, searching and managing your collections. If you are starting out with CollectiveAccess, **Providence** is the first (and most important) component you need to install. All other CollectiveAccess components are add-ons to Providence and require a functional Providence installation.
-
 Getting Started
 -------------------
 

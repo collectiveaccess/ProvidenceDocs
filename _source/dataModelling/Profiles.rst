@@ -8,14 +8,13 @@ Profiles
    :maxdepth: 2
 
    profiles/MetadataStandards
-   profiles/ConfigurationLibrary
    profiles/XMLSchema
 
 
 Definition and Purpose of a Profile
 -----------------------------------
 
-A CollectiveAccess installation profile is an XML document that tells the software how to set up various aspects of Providence at the time of its installation. The profile enables you to configure nearly every aspect of the various cataloging interfaces in CollectiveAccess before you begin using the system. After installation, you can easily make additional changes using the tools in the "Manage" menu, but it's usually more efficient to set up your installation in such a way that it meets your requirements from the start. Installation profiles:
+An installation profile is a document that tells CollectiveAccess how to set up various aspects of the system at the time of its installation. The profile enables you to configure nearly every aspect of the various cataloging interfaces in CollectiveAccess before you begin using the system. After installation, you can easily make additional changes using the tools in the "Manage" menu, but it's usually more efficient to set up your installation in such a way that it meets your requirements from the start. Installation profiles:
 
    - Generate and define controlled vocabularies
    - Define and label metadata fields
@@ -32,7 +31,7 @@ Installation profiles "live" in the 'install/profiles/xml' folder located in the
 Creating a Profile
 ------------------
 
-Profiles are written using an xml-based syntax. Typically no profile is created from scratch, but rather users modify `existing profiles <https://github.com/collectiveaccess/providence/tree/master/install/profiles/xml>`_ to meet their needs. 
+Profiles are written using an XML-based syntax. Typically no profile is created from scratch, but rather users modify `existing profiles <https://github.com/collectiveaccess/providence/tree/master/install/profiles/xml>`_ to meet their needs. 
 
 Troubleshooting Profiles
 ------------------------
