@@ -10,4 +10,4 @@ To use WorldCat, either a valid OCLC Z39.50 `login <https://help.oclc.org/Metada
 
 Your PHP installation must have `cURL support <https://www.php.net/manual/en/book.curl.php>`_ to use the Web Search API. PHP must be built with `YAZ support <https://www.php.net/manual/en/book.yaz.php>`_ to use Z39.50. YAZ is available as a standard package on many Linux distributions and installation is generally straightforward. 
 
-Users who wish to incorporate WorldCat into a Collective Access system must have a subscription. To read more about installation, terms of use, and other supported external information services, please see `Information Services <https://manual.collectiveaccess.org/dataModelling/metadata/informationServices.html>`_. 
+Users who wish to incorporate WorldCat into a Collective Access system must have a subscription. To read more about installation, terms of use, and other supported external information services, please see `Information Services <https://manual.collectiveaccess.org/dataModelling/metadata/informationServices.html>`_.
