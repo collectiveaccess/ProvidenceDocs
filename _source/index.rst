@@ -23,22 +23,22 @@ Contents
    :maxdepth: 1
    :caption: Providence
    
-   Setup & Install <setup/index>
-   Data Modelling <dataModelling/index>
-   Configuration <configuration/index>
-   Search & Browse <searchBrowse/index>
-   Editing <editing/index>
-   Media <media/index>
-   Reporting <reporting/index>
-   Workflow <workflow/index>
-   Import <import/index>
-   Export <export/index>
-   Administration <administration/index>
-   Developer <developer/index>
-   Reference <reference/index>
+   Setup & Install <providence/setup/index>
+   Data Modelling <providence/dataModelling/index>
+   Configuration <providence/configuration/index>
+   Search & Browse <providence/searchBrowse/index>
+   Editing <providence/editing/index>
+   Media <providence/media/index>
+   Reporting <providence/reporting/index>
+   Workflow <providence/workflow/index>
+   Import <providence/import/index>
+   Export <providence/export/index>
+   Administration <providence/administration/index>
+   Developer <providence/developer/index>
+   Reference <providence/reference/index>
 
 .. toctree::
    :maxdepth: 1
    :caption: Pawtucket
    
-   Setup & Install <setup/index>
+   Setup & Install <pawtucket/setup/index>
