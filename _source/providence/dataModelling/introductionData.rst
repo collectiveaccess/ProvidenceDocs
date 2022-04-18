@@ -1,3 +1,5 @@
+.. intro_to_data:
+
 Introduction to Data in CollectiveAccess
 =========================================
 
