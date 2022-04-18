@@ -47,7 +47,7 @@ Once the PHP installation process completes typing `php -v` in the terminal shou
 	Zend Engine v3.4.0, Copyright (c) Zend Technologies
 		with Zend OPcache v7.4.28, Copyright (c), by Zend Technologies
 
-If it does not, run:
+If it does not return a 7.4 version, run:
 
 .. code::
 	
