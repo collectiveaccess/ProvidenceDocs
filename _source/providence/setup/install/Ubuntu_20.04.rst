@@ -26,7 +26,7 @@ and also to start running now:
 
 You should now be able to connect to the web server by going to the URL `http://<ip address of your server>` in a web browser. An Apache welcome page should display. If unsure of your server's IP address, the `hostname -I` command will return it.
 
-CollectiveAccess requires PHP version 7.4, which is avaialble in the "ondrej" PPA repository. Add this repository to your system using"
+CollectiveAccess requires PHP version 7.4, which is avaialble in the "ondrej" PPA repository. Add this repository to your system using:
 
 .. code:: bash
 	sudo apt -y install software-properties-common
