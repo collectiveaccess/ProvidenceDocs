@@ -15,7 +15,7 @@ Contents
 
 .. toctree::
    :maxdepth: 2
-   :caption: Introduction to CollectiveAccess
+   :caption: Introduction
 
    What is CollectiveAccess? <intro/whatIs>
 
