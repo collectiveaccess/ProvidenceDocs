@@ -26,22 +26,34 @@ and also to start running now:
 
 You should now be able to connect to the web server by going to the URL `http://<ip address of your server>` in a web browser. An Apache welcome page should display. If unsure of your server's IP address, the `hostname -I` command will return it.
 
+CollectiveAccess requires PHP version 7.4, which is avaialble in the "ondrej" PPA repository. Add this repository to your system using"
+
+.. code:: bash
+	sudo apt -y install software-properties-common
+	sudo add-apt-repository ppa:ondrej/php
+
 Next install PHP version 7.4 and required extensions:
 
 .. code:: bash
 
-    sudo apt install -y php libapache2-mod-php php-mbstring php-xmlrpc php-gd php-xml php-intl php-mysql php-cli php-zip php-curl php-posix php-dev php-pear php-redis php-gmagick php-gmp 
+    sudo apt install -y php libapache2-mod-php php7.4-mbstring php7.4-xmlrpc php7.4-gd php7.4-xml php7.4-intl php7.4-mysql php7.4-cli php7.4-zip php7.4-curl php7.4-posix php7.4-dev php7.4-redis php7.4-gmagick php7.4-gmp
 
 Once the PHP installation process completes typing `php -v` in the terminal should return output similar to:
-
+	
 .. code::
 
-	PHP 7.4.3 (cli) (built: Oct  6 2020 15:47:56) ( NTS )
+	PHP 7.4.28 (cli) (built: Feb 17 2022 16:06:35) ( NTS )
 	Copyright (c) The PHP Group
 	Zend Engine v3.4.0, Copyright (c) Zend Technologies
-		with Zend OPcache v7.4.3, Copyright (c), by Zend Technologies
+		with Zend OPcache v7.4.28, Copyright (c), by Zend Technologies
 
-Note that PHP 8 is not yet supported.
+If it does not, run:
+
+.. code::
+	
+	update-alternatives --config php
+
+and make sure PHP 7.4 is selected. Note that PHP 8 is not yet supported.
 
 The default installation of PHP is configured with memory and file upload size limits that are often too low for typical use of CollectiveAccess. In particular, file uploads are limited to a maximum of 2mb, which is well below the media file sizes most users work with. To raise these limits edit the PHP configuration file at `/etc/php/7.4/apache2/php.ini`. 
 
