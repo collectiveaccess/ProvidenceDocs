@@ -9,7 +9,7 @@ Any number of relationships can be created between a pair of records, and each r
 
 Relationships can be incorporated by defining relationships and relationship types within a **data import mapping.**
 
-.. note:: For instructions on creating an import mapping, downloading a starter template, and the necessary steps to incorporate related data, see `Import Mappings <https://manual.collectiveaccess.org/import/mappings.html>`_. 
+.. note::  For instructions on creating an import mapping, downloading a starter template, and the necessary steps to incorporate related data, see `Import Mappings <https://manual.collectiveaccess.org/import/mappings.html>`_. 
 
 Relationships in a mapping will be defined simultaneously in the `Refinery Column <https://manual.collectiveaccess.org/import/mappings.html>`_ and in the `Refinery Parameters Column <https://manual.collectiveaccess.org/import/mappings.html>`_. 
 
