@@ -10,8 +10,9 @@ Any number of relationships can be created between a pair of records, and each r
 
 Relationships can be incorporated by defining relationships and relationship types within a **data import mapping.**
 
-.. note::  
-    For instructions on creating an import mapping, downloading a starter template, and the necessary steps to incorporate related data, see `Import Mappings <https://manual.collectiveaccess.org/import/mappings.html>`_. 
+.. note::
+    For instructions on creating an import mapping, downloading a starter template, and the necessary steps to 
+    incorporate related data, see `Import Mappings <https://manual.collectiveaccess.org/import/mappings.html>`_. 
 
 Relationships in a mapping will be defined simultaneously in the `Refinery Column <https://manual.collectiveaccess.org/import/mappings.html>`_ and in the `Refinery Parameters Column <https://manual.collectiveaccess.org/import/mappings.html>`_. 
 
@@ -23,8 +24,11 @@ To view what relationship types are available in a system, go to Manage/Administ
 
 The full list of possible relationship types to be viewed within this list. Selecting a particular relationship (shown above in bold) will display all possible relationship types that are available within that specific relationship; a variety of relationship types are available to help best describe the data in any given database. 
 
-.. note:: 
-    If a data import requires related records, then refineries must be used. For more on how to implement these in an import mapping, and why, see `Refineries <https://manual.collectiveaccess.org/import/mappings/refineries.html?highlight=refineries>`_ and the `Import Mapping <https://manual.collectiveaccess.org/import/mappings.html>`_ page.
+.. note::
+    If a data import requires related records, then refineries must be used. 
+    For more on how to implement these in an import mapping, and why, see 
+    `Refineries <https://manual.collectiveaccess.org/import/mappings/refineries.html?highlight=refineries>`_ and the 
+    `Import Mapping <https://manual.collectiveaccess.org/import/mappings.html>`_ page.
 
 **Adding or Editing Relationships after Import**
 
