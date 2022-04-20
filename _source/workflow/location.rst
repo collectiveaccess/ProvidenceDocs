@@ -42,6 +42,9 @@ The same configuration format is used for both workflow and movement-based track
 
 	- **defaults** specifies which policy should be used by default for a given :ref:`table <primary_tables>`. You may define multiple policies per table and declare specific policies be used in various contexts such as user interface bundles. Default policies are a convenience that simplify configuration by declaring a standard policy to be used in most cases.
 
+Workflow-based location tracking
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 An example ``history_tracking_policies`` configuration for workflow-based location tracking is shown below:
 ::
 
