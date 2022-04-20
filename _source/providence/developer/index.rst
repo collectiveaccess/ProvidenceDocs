@@ -1,5 +1,5 @@
 ==============================
-Developer
+Providence developer guide
 ==============================
 
 .. toctree::
