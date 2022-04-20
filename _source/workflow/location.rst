@@ -397,12 +397,12 @@ These same access point formats may be used when configuring advanced search for
 Browsing on current values
 --------------------------
 
-To browse on current location add a facet to :ref:`browse.conf <browse_conf>` of type "currentValue":
+To browse on current location add a facet to :ref:`browse.conf <browse_conf>` of type "current_value":
 
 .. code-block:: none
 
 	current_location = {
-			type = currentValue,
+			type = current_value,
 			restrict_to_types = [],
 			policy = current_location,
 			
