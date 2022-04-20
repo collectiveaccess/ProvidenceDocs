@@ -1,6 +1,5 @@
 .. _search_builder:
 
-Search builder
+Search Builder
 =====================
-
-To come
+More to Come
