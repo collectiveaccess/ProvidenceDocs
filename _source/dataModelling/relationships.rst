@@ -18,7 +18,7 @@ Relationships in a mapping will be defined simultaneously in the `Refinery Colum
 
 **Relationships in the User Interface**
 
-To view what relationship types are available in a system, go to Manage/Administration/Relationship Types. A list will be displayed: 
+To view what relationship types are supported by CollectiveAccess, go to Manage/Administration/Relationship Types. A list will be displayed: 
 
 (Insert image here)
 
