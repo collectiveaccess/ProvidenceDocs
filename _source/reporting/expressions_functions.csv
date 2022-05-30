@@ -35,3 +35,4 @@ String <subject value>",,
 idnoUseCount,Return number of items a value is used as an identifier (idno) for a given table. ,"String <idno value>
 String <table> (optional, if omitted defaults to ""ca_objects"")",,
 dateIsRange,"Return true if date is a range rather than a single day, month or year. [available from version 1.8]",String <date expression>,boolean,dateIsRange(1950's)
+fromUnixtime."Convert Unix timestamp to ISO-8601 formatted date. [available from version 1.8]", "Integer <timestamp>", "ISO date",,
