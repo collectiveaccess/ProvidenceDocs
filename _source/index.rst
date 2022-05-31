@@ -52,6 +52,7 @@ Contents
 
    Overview <configuration/configuringProvidence>
    Configuration File Syntax <configuration/configuration_file_syntax>
+   Other customizations <configuration/customizing>
  
 
 .. toctree::
