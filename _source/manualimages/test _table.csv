@@ -1,0 +1,4 @@
+﻿Parameter,Description,Possible Values,Default
+image,Absolute path to the watermark image,"Note that this MUST be the absolute path to the weatermark image. If placed in the 'app' directory, use pre-existing macros set in global.conf, such as <ca_app_dir>, to avoid hardcoding in path info. Eg. if you have the watermark image at /web/ca/app/watermarks/mymark.png you can configure it here as <ca_app_dir>/watermarks/mymark.png",None; this must be defined
+test,test,test,test
+test,test,test,test
