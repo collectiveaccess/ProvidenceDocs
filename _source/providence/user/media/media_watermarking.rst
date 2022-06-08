@@ -31,7 +31,7 @@ The WATERMARK rule takes the following parameters:
 
 .. csv-table:: 
    :header-rows: 1
-   :file: test_table.csv
+   :file: imagewatermarkingtable1.csv
 
 Add a WATERMARK rule, with the appropriate values, to each version that will contain a watermark. A watermark configuration for the "small" version (default 240x240 pixel image) might look like this:
 

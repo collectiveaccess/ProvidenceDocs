@@ -1,0 +1,6 @@
+﻿Parameter,Description,Possible Values,Default,
+Image,Absolute path to the watermark,"Note that this must be the absolute path to the watermark image. If placed in 'app' directory, the pre-existing macros set in global.conf (such as <ca_ap_dir>) can be used to avoid hardcoding path information. E.g., if the watermark image is at web/ca/app/watermarks/mymark.png, you can configure it here as <ca_app_dir>/watermarks.mymark.png",None; this must be defined,
+Width,"Width of the watermark, in pixels",,50% of the width of the image being processed,
+Height,"Height of the watermark, in pixels ",,50% of the height of the image being processed,
+Position,"Location of the watermark on processed image; allowable values will place the watermark on the corners (e.g. ""north_west"" is the upper-left-hand corner), the center on the top or bottom (""north"" or ""south""), or in the center of the image (""center"")","north_east, north_west, north, south_east, south_west, south, center",south_west,
+Opacity,Determines transparency of the watermark image,"Use a value between 0 and 1, where 0 = completely transparent and 1 = completely opaque",0.5,
