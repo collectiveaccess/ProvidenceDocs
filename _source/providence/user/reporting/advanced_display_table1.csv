@@ -1,0 +1,9 @@
+﻿Function,Description
+^SUM,The values in the column for the entire result set will be added together
+^PAGESUM,The values in the column for the current result page will be added together
+^AVG,The values in the column for the entire result set will be averaged
+^PAGEAVG,The values in the column for the current result page will be averaged
+^MIN,The lowest value in the column for the entire result set will be displayed
+^PAGEMIN,The lowest value in the column for the current result page will be displayed
+^MAX,The highest value in the column for the entire result set will be displayed
+^PAGEMAX,The highest value in the column for the current result page will be displayed
