@@ -1,0 +1,5 @@
+﻿Setting,Description
+Set object status to ,"Set new, completed or editing in progress to the import target status. For example, ""Object status"" or ""Entity status"""
+Set object access to,Set import target access value to accessible to public or not accessible to public  
+Set representation status to,"Set new, completed, or editing in progress to the media representation's status"
+Set representation access to,Set media representation access value to accessible to public or not accessible to public 

@@ -1,0 +1,5 @@
+﻿Setting,Description
+Set object identifier to,"If creating new records, use this settign to manually set the target record's identifier"
+Set object identifier to file name,"This setting will take the media filename as the record identifier (idno). For example, my_image.jpg will be used as the identifier for the object record associated with this image"
+Set object idenfitier to file name without extension,"This will create or match on filename, but with the extension. In other words, my_image.jpg simply becomes my_image. This setting is particularly useful when matching on existing records that may have identifiers that match filenames, but do not include the file extensions"
+Set object identifier to directory and file name,"If this setting is used, idnos will be set using not only the filename, but also the import directory path. For example, if my_image.jpg is stored in a folder called ""Media,"" the record's idno becomes /Media/my_image.jpg"

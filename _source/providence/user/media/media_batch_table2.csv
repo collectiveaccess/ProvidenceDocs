@@ -1,0 +1,3 @@
+﻿Setting,Description
+Type used for newly created object,"This menu will be populated with the import target's type list. If the target is objects, you can select the specific object type here. The same is true for all other primary tables in CollectiveAccess. "
+Type used for newly created object representations,"Use this to set the media representation type. Default values are ""front"" and ""back"""

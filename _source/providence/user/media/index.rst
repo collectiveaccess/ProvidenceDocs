@@ -10,3 +10,4 @@ Media
    Media Mirroring <media_mirroring>
    Batch import <batch>
    Background processing <background.rst>
+   Media Watermarking <media_watermarking.rst>

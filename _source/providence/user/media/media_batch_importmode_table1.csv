@@ -1,0 +1,4 @@
+﻿Setting,Description
+"Import all media, matching with existing records where possible","This setting will match media with existing records in cases where the media filename matches the record's idno. In all other cases, new records will be generated for each media file"
+Import only media that can be matched with existing records,This setting will import only the media that can be matched with an existing record by finding matches between filename and record idno. All other media files will be skipped
+"Import all media, creating new records for each",This setting will import all media in the chosen directory filepath. Brand new records will be created for ecah media file
