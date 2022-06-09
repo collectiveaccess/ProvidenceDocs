@@ -1,0 +1,10 @@
+﻿Setting,Description,Example
+url,"Points to the URL where the CollectiveAccess system can be accessed from the replicator system. Note that the replicator will try to communicate with that system via the Web Service API, so point it to your Providence setup (which has the service.php), and not to Pawtucket",http://my.collection.example.org/admin/
+service_user,Name of the user the replicator is going to use to log into the Web Service API on this source system. Don't use an administrator account here; make an extra user account that can only access the Web Service API,api_user
+service_key,The password/key for the user that the replicator is logging in with on this source system,foobar
+from_log_id,"Optional. When set, the replicator will onl pull change log entries with a primary key (ca_change_log.log_id) greater than the value set here. This is useful if both sync source and target are starting out as exact copies but diverge from a given point in time. In that case, you want to start syncing at that point. The current change log ID can be viewed under Manage > Administration > Configuration Check",2179
+from_log_timestamp,"Same as above, except it can be a verbose date or time expression which is then parsed by CollectiveAccess TimeExpressionParser. This Setting overrides this",2016-03-28
+skipIfExpression,"Don't export log entries where one of the subjects matches the given expression. This is an array of table_name > expression mappings. You can use this, for instance, to only sync images to the target","skipIfExpression = {
+	ca_objects = ""^ca_objects.type_id !~ /image/"",
+}"
+push_media,Set this to 1 if you have firewall or networking restrictions like a firewall in place that would prevent pulling media from the target side via normal HTTP for each source. This enabled a protocol addition where media is pushed from the source(s) to the target(s) after the change log segment is generated and stashed there locally until the change log is processed. ,0 or 1 

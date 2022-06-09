@@ -1,0 +1,22 @@
+﻿Setting,Description,Example
+url,"Points to the URL where the CollectiveAccess system can be accessed from the replicator system. Note that the replicator will try to communicate with that system via Web Service API, so point it to your Providence setup (which has the service.php), and not to Pawtucket",http://my.collection.example.org/admin/
+service_user,Name the user the replicator is going to use to log into the Web Service API on this target system,
+service_key,Password or key for the user that the replicator is logging in with on this target system,
+setIntrinsics,"This can be set to a list of hashes that define what intrinsics to set on the target side, in addition to the data that comes from the source change log. It can be broken out by source system. This can be useful, for instance, if you're syncing multiple systems into one and want to tag or mark each record with its original source. 
+
+Each of these hashes has a system GUID as key. This is the unique identifier of the source system, which can be found on the Configuration Check screen under Manage > Administration. 
+
+If a record comes in from that GUID, the settings from that configuration block are applied. Below it's a list of tablename > fieldname > value mappings. There can also be a _default_ that always gets applied. Fields from the GUID-specific blocks will override fields set there. If no GUID matches, only the default block will be applied, if any. Note that this feature can only set intrinsics, at least for now.
+","setIntrinsics = {
+	__default__ = {
+		ca_objects = {
+			source_id = external
+		}
+	},
+	29f91051-3833-4e45-892e-7e833d9af4f0 = {
+		ca_objects = {
+			source_id = internal
+		}
+	}
+}"
+deduplicateAfterReplication,"If this is set to a list of tables, the replicator will run a single deduplication algorithm for these tables on the target system. This is done by computing a checksum for each record in the database and then merging records that have the same checksum. ","deduplicateAfterReplication = {ca_entities, ca_places}"

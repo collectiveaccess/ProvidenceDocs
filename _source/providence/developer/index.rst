@@ -13,3 +13,4 @@ Providence developer guide
    Writing Dashboard Widgets <writing_dash_widgets>
    Plugins <plugins>
    Update Installation Profile <update_installation_profile.rst>
+   Replication <Replication.rst>
