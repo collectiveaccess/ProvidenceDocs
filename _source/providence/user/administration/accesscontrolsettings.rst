@@ -9,7 +9,7 @@ To manage access control settings:
 
 1. Navigate to **Manage > Access Control**, where options for User Logins, User Groups, and Access Roles will be displayed to the far left of the screen: 
 
-.. image:: /manualimages/accesscontrolsettings1.png
+.. image:: accesscontrolsettings1.png
    :scale: 40% 
    :align: center
 
@@ -21,12 +21,12 @@ User Logins
 
 To define settings and other information pertaining to an individual user, select the **page icon.** |page|
 
-.. |page| image:: /manualimages/accesscontrolsettings2.png   
+.. |page| image:: accesscontrolsettings2.png   
           :scale: 40%
 
 To add a new user, select the **plus icon** next to **New user**. |plus|
 
-.. |plus| image:: /manualimages/accesscontrolsettings3.png
+.. |plus| image:: accesscontrolsettings3.png
           :scale: 40%
 
 
@@ -43,19 +43,19 @@ User Groups
 
 **User Groups** display what groups of users are available within any given system. Similarly to how individual users can be managed, user groups can be added and edited from this screen. 
 
-.. image:: /manualimages/accesscontrolsettings4.png
+.. image:: accesscontrolsettings4.png
    :scale: 40% 
    :align: center
 
 
 To edit a group, select the **page icon**. |page|
 
-.. |page| image:: /manualimages/accesscontrolsettings2.png   
+.. |page| image:: accesscontrolsettings2.png   
           :scale: 40%
 
 To add a new group of users, select the **plus icon**. |plus|
 
-.. |plus| image:: /manualimages/accesscontrolsettings3.png
+.. |plus| image:: accesscontrolsettings3.png
           :scale: 40%
 
 Groups lump various users together for the purpose of sharing forms, sets, and displays. A login does not necessarily have to be associated with a single group; however, to share specific information within a certain group of users, a group must be created and populated with those users. 
@@ -74,7 +74,7 @@ Access Roles can prevent certain users from deleting records, changing preferenc
 
 The Access Roles screen contains the name, unique code, and description of the roles available within a given system: 
 
-.. image:: /manualimages/accesscontrolsettings5.png
+.. image:: accesscontrolsettings5.png
    :scale: 50% 
    :align: center
 
@@ -90,7 +90,7 @@ Access settings can also be controlled on a record-by-record basis. Within a rec
 2. Navigate to the **Public Access** field. 
 3. Choose the options for this record from the drop-down menu. These include: Accessible for internal staff only, Accessible to public, and Not accessible to public. 
 
-.. image:: /manualimages/accesscontrolsettings6.png 
+.. image:: accesscontrolsettings6.png 
    :scale: 50% 
    :align: center
 
