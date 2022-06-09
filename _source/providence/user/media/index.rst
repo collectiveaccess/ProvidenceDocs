@@ -11,3 +11,4 @@ Media
    Batch import <batch>
    Background processing <background.rst>
    Media Watermarking <media_watermarking.rst>
+   Visualization Options <visualization_options.rst>
