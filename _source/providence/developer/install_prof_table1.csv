@@ -1,0 +1,6 @@
+﻿Command,Description
+--profile-name (-n),"Name of the profile to install (filename in profiles directory, minus the .xml extension)"
+--profile-directory (-p),Directory to get profile. This directory must contain the profile.xsd schema so that the installer can validate the installtion profile
+--debug (-d),Debug flag for installer
+--quiet (-q),Suppress progress messages
+--skip-roles (-s),"Skip Roles. Default is false, but if you have many roles and access control enabled, then install may take some time"
