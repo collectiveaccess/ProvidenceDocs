@@ -10,4 +10,5 @@ Providence developer guide
    Translation <translation>
    Web APIs <web_api>
    Internal APIs <internal_api>
+   Writing Dashboard Widgets <writing_dash_widgets>
    Plugins <plugins>
