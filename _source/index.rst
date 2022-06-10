@@ -25,6 +25,7 @@ Contents
    
    User guide <providence/user/index>
    Developer guide <providence/developer/index>
+   Cookbook Scenarios <cookbook.rst> 
 
 .. toctree::
    :maxdepth: 1
