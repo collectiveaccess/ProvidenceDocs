@@ -1,0 +1,3 @@
+﻿Setting,Description,Values
+show_empty_values,"If yes, all values will be displayed, whether there is content for them or not","1 (show empty) 
+0 (don't show)"
