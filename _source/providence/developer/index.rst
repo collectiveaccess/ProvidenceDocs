@@ -17,3 +17,4 @@ Providence developer guide
    Configuration Sync <config_sync.rst>
    Deduplication <deduplication.rst>
    Prepopulate <prepopulate.rst>
+   Pawtucket2: Plguin Hooks <plugin_hooks.rst>
