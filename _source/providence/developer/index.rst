@@ -14,3 +14,5 @@ Providence developer guide
    Plugins <plugins>
    Update Installation Profile <update_installation_profile.rst>
    Replication <Replication.rst>
+   Configuration Sync <config_sync.rst>
+   Deduplication <deduplication.rst>

@@ -1,0 +1,2 @@
+﻿Setting Name,Description,Example
+<ca_tablename>_dont_use_idno_in_checksums,"If set to one, the idno is excluded when computing the checksum for records from this table. This can be useful when two systems with automatically generated idnos (that will never line up) are being merged. Defaults to 0",ca_entities_dont_use_idno_in_checksums = 1
