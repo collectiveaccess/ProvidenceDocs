@@ -1,0 +1,19 @@
+﻿Setting Name,Type,Description,Example
+table,Valid CollectiveAccess table name,Defines what table this rule applies to,ca_objects
+restrictToTypes,Optional list of valid items from the type list for table,Optional type restriction for this rule,"[artwork, image] "
+mode,"One of addIfEmpty, overwrite, merge","Determines handling of existing values in target element. 
+addIfEmpty: set relationships only if none exist
+overwrite: replace relationships
+merge: add relationships that do not already exist",addIfEmpty
+target,"A valid bundle specifier for either an instrinsic field, labels, or an attribute","Determines the prepopulate target. Note that if you want to target a List attribute, you have to provide a valid list item idno or id for that list as value",[ca_objects.description]
+skipIfExpression,A valid expression,"Allows for rule based skipping of the rule. If the expression result is true, the rule is ignored for the current record",^ca_objects.object_status_new!~ /deaccessioned/
+template,A valid template,This defines the actual content that is injected into the target element. The display template is evaluated against the current record.,"^ca_objects.medium_container.menu
+^ca_objects.medium_container.support"
+context,"Parent, children, or related","parent: copy relationships from the parent
+children: copy relationships from children 
+related: copy relationships from related records (e.g., if table = ca_objects, and target = ca_entities, copy all entity relationships from related objects)",Parent
+restrictToRelationshipTypes,Valid relationship type,For use with context (above). Use this setting to only copy relationships with the specified relationship type codes,Author
+excludeRelationshipTypes,Valid relationship type,For use with context (above). Don't copy relationships with these specified relationship type codes,Creator
+restrictToRelatedTypes,Valid record type,For use with context (above). Only copy relationships pointing to specified types,Artwork
+excludeRelatedTypes,Valid record type,For use with context (above). Don't copy relationships pointing to specified types,Archival
+currentOnly,1 or 0,"For use with context (above). Only consider current relationships, such as current storage location",0
