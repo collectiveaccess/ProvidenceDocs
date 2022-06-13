@@ -25,3 +25,4 @@ Providence developer guide
    API: Getting Data and Methods of Access <api_getting_data.rst>
    Application Plugins <app_plugins.rst>
    Coding Standards <coding_standards.rst>
+   Content Caching Configuration <content_caching.rst>
