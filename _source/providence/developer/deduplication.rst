@@ -1,5 +1,5 @@
 Deduplication
---------------
+=============
 
 Deduplication, available as of CollectiveAccess version 1.7, is only available as a command line utility, and as part of the   `Replication protocol. 
 

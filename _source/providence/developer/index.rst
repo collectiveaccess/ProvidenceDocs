@@ -18,3 +18,4 @@ Providence developer guide
    Deduplication <deduplication.rst>
    Prepopulate <prepopulate.rst>
    Pawtucket2: Plguin Hooks <plugin_hooks.rst>
+   Dependent Field Visibility <dep_field.rst>
