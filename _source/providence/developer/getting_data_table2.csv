@@ -1,0 +1,12 @@
+﻿Option,Description
+returnAsArray,"If set to true value will be returned as an array with repeating values separated. The array is a simple interger-indexed array of values if returnAllLocales is false. If returnAllLocales is true then the returned array will be indexed first by interger index and then by locale_id, with values keyed on locale"
+returnAllLocales,If set to true then values for all locales will be returned rather than only in the current user's
+delimiter,Used to set the character(s) placed between repeating value when preparing for simple text output because returnAsArray is false. The seting has no effect when returnAsArray is false
+template,"Used to format output of get if specified. The template should be text with locations for output of values placed using element codes prefaced with a caret ^. For example, to format the description_text attribute in italic for output the template might look like this: ^description_text"
+restrictToRelationshipTypes,"A list of relationship type id's or type codes. If specified, when gettign related items, only those related to the item at hand by relationships with the specified types will be fetched"
+locale,"If set, get() will try to return values in the specified languages rather than the language of the current user. Note that this is only a suggestion. If no values in the specified language are available, then the value will be returned in whatever language is available"
+convertCodesToDisplayText,"By default get() will return list codes rather than item text suitable for display. If this is set to true, then list items will be returned as their ca_list_item_labels display value"
+convertLinkBreaks,"If set to true, will convert returns to <p> and <br/> HTML to ensure proper display"
+sort,"sort	An optional array of fields to sort by. Sorting is currently restricted to simple get()'s for related tables and can be done on returned fields only (intrinsic fields + label fields). If you are calling get on a ca_objects record, for example, to get a list of related entities, you can sort the returned values by surname like so:
+print $t_object->get('ca_entities', array('sort' => array('ca_entity_labels.surname'));
+Sorting is always in ascending order. You may sort on several fields if required."
