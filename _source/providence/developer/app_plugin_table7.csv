@@ -1,0 +1,14 @@
+﻿Hook Name,Description,Parameters
+BeforeUserSaveData,"Triggered just before primary user information (user name, password, email, name) are saved.","Param 1: an array with the following keys:
+user_id : the user_id of the user being edited.
+instance : An instance of the ca_users model for the user being edited."
+AfterUserSaveData,"Triggered just after primary user information (user name, password, email, name) are saved.","Param 1: an array with the following keys:
+user_id : the user_id of the user being edited.
+instance : An instance of the ca_users model for the user being edited."
+BeforeUserSavePrefs,Triggered just before user preferences are saved.,"Param 1: an array with the following keys:
+user_id : the user_id of the user being edited.
+instance : An instance of the ca_users model for the user being edited."
+AfterUserSavePrefs,Triggered just after user preferences are saved.,"Param 1: an array with the following keys:
+user_id : the user_id of the user being edited.
+instance : An instance of the ca_users model for the user being edited.
+modified_prefs: An array with keys set to the codes of preferences that have been modified by the save. Array values are true for each key."

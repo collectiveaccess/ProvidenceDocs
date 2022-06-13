@@ -1,0 +1,4 @@
+﻿Hook Name,Description,Parameters
+RegisterTaskQueuePluginDirectories,"Triggered when task queue is initialized. This hook given your plug-in the opportunity to insert its own task queue plugin directories into the list of paths the TaskQueue class looks in to load task handler plugins. This is useful when you need to post tasks onto the task queue that use a handler specific to your application plugin. Rather than putting part of your plugin - the task handler - in the main plugins directory at app/lib/core/Plugins/TaskQueueHandlers, you can keep them in a directory of your choosing within the your plug-in directory.","Param 1: an array with the following keys:
+handler_plugin_directories : the array of plugin directories. Your plugin should add its own directory paths to this array.
+instance : the current TaskQueue instance"

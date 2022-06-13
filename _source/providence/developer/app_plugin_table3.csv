@@ -1,0 +1,37 @@
+﻿Hook Name,Description,Parameters
+BeforeLabelInsert,Triggered before label is inserted when addLabel() is called. This hook gives you the opportunity to modify a label before it is recorded in the database.,"Param 1: an array with the following keys:
+id = the row_id of the item being edited. This is not the label_id! This is the primary key of the row to which the label is associated.
+table_num : the table number for the type of item being edited. This is not the number of the label table. It is the name of the table to which the label is associated.
+table_name : the name of the table for the type of item being edited. This is the name of the table associated with the label, not the label table itself.
+instance : an instance of the model corresponding to the item being saved, loaded with the current row
+label_instance : an instance of the model corresponding to the label being added, loaded with the label being created. Any changes you need to make to the label before it is written to the database should made to this model."
+AfterLabelInsert,Triggered after label is inserted when addLabel() is called. This hook lets your code run after a new label has been written to the database.,"Param 1: an array with the following keys:
+id = the row_id of the item being edited. This is not the label_id! This is the primary key of the row to which the label is associated.
+table_num : the table number for the type of item being edited. This is not the number of the label table. It is the name of the table to which the label is associated.
+table_name : the name of the table for the type of item being edited. This is the name of the table associated with the label, not the label table itself.
+instance : an instance of the model corresponding to the item being saved, loaded with the current row
+label_instance : an instance of the model corresponding to the label being inserted, loaded with the new label information. This model will reflect the label as written."
+BeforeLabelUpdate,Triggered before label is updated when editLabel() is called. This hook gives you the opportunity to modify a label before it is recorded in the database.,"Param 1: an array with the following keys:
+id = the row_id of the item being edited. This is not the label_id! This is the primary key of the row to which the label is associated.
+table_num : the table number for the type of item being edited. This is not the number of the label table. It is the name of the table to which the label is associated.
+table_name : the name of the table for the type of item being edited. This is the name of the table associated with the label, not the label table itself.
+instance : an instance of the model corresponding to the item being saved, loaded with the current row
+label_instance : an instance of the model corresponding to the label being saved, loaded with the label being edited. Any changes you need to make to the label before it is written to the database should made to this model."
+AfterLabelUpdate,Triggered after label is updated when editLabel() is called. This hook lets your code run after a label modification has been written to the database.,"Param 1: an array with the following keys:
+id = the row_id of the item being edited. This is not the label_id! This is the primary key of the row to which the label is associated.
+table_num : the table number for the type of item being edited. This is not the number of the label table. It is the name of the table to which the label is associated.
+table_name : the name of the table for the type of item being edited. This is the name of the table associated with the label, not the label table itself.
+instance : an instance of the model corresponding to the item being saved, loaded with the current row
+label_instance : an instance of the model corresponding to the label being saved, loaded with the label being edited. This model will reflect any changes made to the label."
+BeforeLabelDelete,Triggered before label is deleted when removeLabel() is called. This hook gives you the opportunity to note that a label is being deleted before the fact. It does not (currently) allow you to cancel the delete. ,"Param 1: an array with the following keys:
+id = the row_id of the item being edited. This is not the label_id! This is the primary key of the row to which the label is associated.
+table_num : the table number for the type of item being edited. This is not the number of the label table. It is the name of the table to which the label is associated.
+table_name : the name of the table for the type of item being edited. This is the name of the table associated with the label, not the label table itself.
+instance : an instance of the model corresponding to the item being saved, loaded with the current row
+label_instance : an instance of the model corresponding to the label being saved, loaded with the label being edited. Any changes you need to make to the label before it is written to the database should made to this model."
+AfterLabelDelete,Triggered after label is deleted when removeLabel() is called.,"Param 1: an array with the following keys:
+id = the row_id of the item being edited. This is not the label_id! This is the primary key of the row to which the label is associated.
+table_num : the table number for the type of item being edited. This is not the number of the label table. It is the name of the table to which the label is associated.
+table_name : the name of the table for the type of item being edited. This is the name of the table associated with the label, not the label table itself.
+instance : an instance of the model corresponding to the item being saved, loaded with the current row
+label_instance : an instance of the model corresponding to the label being saved, loaded with the label being edited. This model will reflect any changes made to the label."

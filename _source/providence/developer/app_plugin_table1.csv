@@ -1,0 +1,2 @@
+﻿Hook Name,Description,Parameter
+RenderMenuBar,Triggered when Providence is generating the top-level menu bar just prior to its being drawn on-screen. This hook gives your plug-in the opportunity to add its own menus or modify existing menus.,Param 1: the full top-level navigation array (structure as defined in the navigation.conf file) Your plug-in hook should modify this array as needed and return it

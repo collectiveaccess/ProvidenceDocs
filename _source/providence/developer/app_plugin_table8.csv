@@ -1,0 +1,12 @@
+﻿Hook Name,Description,Parameters
+CanHandleGetAsLinkTarget,Sets 'acceptsTarget' key in returned param array if the link target can be handled by the plugin,"Param 1: an array with the following keys:
+target : A link target as set in the returnAsLinkTarget option in get(). Your plugin should only set the 'acceptsTarget' key in the param array with true for targets it recognizes."
+GetAsLink,"Returns an HTML link to a specific record in a specific table as defined in the passed parameters. This allows the plugin to automatically generate links to itself or elsewhere when using the ""returnAsLink"" option in get()","Param 1: an array with the following keys:
+target : A link target as set in the returnAsLinkTarget option in get().
+request : The current request (an RequestHTTP object).
+content : Link text to display.
+table : The table that the link should point to.
+id : The primary key in the table that the link should point to.
+classname : A CSS class to apply to the link.
+additionalParameters : Any array of additional parameters to append to the link. Array keys are parameter names and array values are parameter values. May be null if there are no parameters set.
+options : An array of options. These are the same options that can be passed to the caEditorUrl() and caDetailUrl() helpers. May be null if there are no options set."

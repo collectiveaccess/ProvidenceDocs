@@ -23,3 +23,4 @@ Providence developer guide
    Addressing Data in Bundleable Models <bundleable_models.rst>
    API: Models and Tables <api_models.rst>
    API: Getting Data and Methods of Access <api_getting_data.rst>
+   Application Plugins <app_plugins.rst>

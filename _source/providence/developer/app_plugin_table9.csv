@@ -1,0 +1,4 @@
+﻿Hook Name,Description,Parameters
+hookPeriodicTask,"Triggered every time periodic tasks need to be run. This typically happens in conjunction with processing of the task queue by a Unix-style CRON job running the support/utils/processTaskQueue.php utility script, but can be triggered elsewhere. Your method implementing this hook should do whatever it needs, pulling data from configuration files, the network, filesystem, Etc. No parameters are passed by the application to your plugin via this hook.
+
+Note that there is no guarantee that invocations of your method will be evenly spaced or have a set minimum or maximum interval between invocations. If you need to restrict how often your method runs you will have to adjust the frequency with which periodic tasks are run (typically by modifying the CRON job that started the run) or implement logic in your plugin to keep track of invocations.	None",None

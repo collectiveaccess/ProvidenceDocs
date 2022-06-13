@@ -1,0 +1,32 @@
+﻿Hook Name,Description,Parameters
+EditItem,"Triggered when any bundle-able item (ca_objects, ca_entities), are opened for editing in Providence","Param 1: an array with the following keys:
+-id = the row_id of the item being edited
+-table_num: the table number for the type of item being edited
+-table_name: the name of the table for the type of item being edited
+-instance: an instance of the model corresponding to the item being edited, loaded with the current row"
+BeforeSaveItem,"Triggered just before any bundle-able item (ca_objects, ca_entities, et. al.) is saved in Providence. The new values from the form are not applied at this time. To modify data before saving it to the database use BeforeBundleInsert and BeforeBundleUpdate.","Param 1: an array with the following keys:
+id = the row_id of the item being edited
+table_num: the table number for the type of item being edited
+table_name:  the name of the table for the type of item being edited
+instance: an instance of the model corresponding to the item being saved, loaded with the current row"
+SaveItem,"Triggered after any bundle-able item (ca_objects, ca_entities, et. al.) is saved in Providence.","Param 1: an array with the following keys:
+id = the row_id of the item being edited
+table_num: the table number for the type of item being edited
+table_name: the name of the table for the type of item being edited
+instance: an instance of the model corresponding to the item being saved, loaded with the current row"
+BeforeDuplicateItem,"Triggered just before any bundle-able item (ca_objects, ca_entities, et. al.) is duplicated in Providence. This hook gives your plug-in the opportunity to make modifications to the item being duplicated prior to it being committed to the database.","Param 1: an array with the following keys:
+id = the row_id of the item being duplicated
+table_num : the table number for the type of item being duplicated
+table_name : the name of the table for the type of item being duplicated
+instance : an instance of the model corresponding to the item being duplicated, loaded with the current row"
+DuplicateItem,"Triggered after any bundle-able item (ca_objects, ca_entities, et. al.) is duplicated in Providence.","Param 1: an array with the following keys:
+id = the row_id of the item being duplicated
+table_num : the table number for the type of item being duplicated
+table_name : the name of the table for the type of item being duplicated
+instance : an instance of the model corresponding to the item being duplicated, loaded with the current row
+duplicate : an instance of the model corresponding to the newly created duplicate"
+DeleteItem,"Triggered when any bundle-able item (ca_objects, ca_entities, et. al.) are deleted by the Providence editor.","Param 1: an array with the following keys:
+id = the row_id of the item being edited
+table_num : the table number for the type of item being edited
+table_name : the name of the table for the type of item being edited
+instance : an instance of the model corresponding to the item being deleted, loaded with the current row"
