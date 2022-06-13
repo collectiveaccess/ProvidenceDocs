@@ -19,3 +19,4 @@ Providence developer guide
    Prepopulate <prepopulate.rst>
    Pawtucket2: Plguin Hooks <plugin_hooks.rst>
    Dependent Field Visibility <dep_field.rst>
+   Directory Layout <directory_layout.rst>
