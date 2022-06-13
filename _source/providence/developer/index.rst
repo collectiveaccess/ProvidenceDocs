@@ -20,3 +20,4 @@ Providence developer guide
    Pawtucket2: Plguin Hooks <plugin_hooks.rst>
    Dependent Field Visibility <dep_field.rst>
    Directory Layout <directory_layout.rst>
+   Addressing Data in Bundleable Models <bundleable_models.rst>
