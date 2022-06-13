@@ -21,3 +21,4 @@ Providence developer guide
    Dependent Field Visibility <dep_field.rst>
    Directory Layout <directory_layout.rst>
    Addressing Data in Bundleable Models <bundleable_models.rst>
+   API Models and Tables <api_models.rst>
