@@ -1,0 +1,6 @@
+﻿Feature,Icon,Description
+Sync Clock,,"The clock icon, or sync button, scrolls the clip carousel to show the currently playing clip. This is useful when the number of clips exceeds the width of your browser window"
+Title,,Clicking on a clip title from the carousel will move video/audio playback to the start of that clip
+Edit,,The edit icon opens the annotation for further editing
+Quick Delete,,"The ""x"" button deletes a clip without conformation (a quick delete)"
+Current Clip,,The currently playing clip will have a red border

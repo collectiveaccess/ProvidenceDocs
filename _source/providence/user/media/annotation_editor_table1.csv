@@ -1,0 +1,5 @@
+﻿Option,Description 
+New Clip,"Sets the start time code at the current playback time of the audio or video. It also sets the end time to 10 seconds later, which can be changed with the ""End""option. ""New Clip"" also enables the ""Start"" and ""End"" options to begin creating further annotations"
+Start,"This sets the ""in"" point (or beginning) of a new clip. Click as a video or audio is playing, or set the media player's horizontal scroll bar manually"
+End,"This sets the ""out"" point (or ending) of a new clip. Click as video or audio is playing, or set the media player's horizontal scroll bar manually. Once the clip is created, you may annotate by supplying metadata for the clip and Saving"
+Set end & Save,"For ""rapid"" annotating. This will set the ""out"" point, automatically save on annotation, and then set an ""in"" point at the previous ""out,"" to begin a new clip. This allows you to rapidly create clips as media is being played, for later annotating. Once clips are created, you can open them for editing from the  carousel at the top of the editor"
