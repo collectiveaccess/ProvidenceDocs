@@ -20,37 +20,23 @@ Import Mappings
    mappings/regex
 
 
-Introduction
+**Introduction**
 ------------
+In order to import data into CollectiveAccess, it is necessary to define exactly *how* and *where* the source data will be imported. This information, along with other settings and criteria, is defined in an **import mapping.** Data must be imported into CollectiveAccess using an import mapping. 
 
-Users can map and migrate data directly from the command line or the Providence
-user interface (under "Import > Data") into a Providence installation, mapping
-to the installation profile. An *import mapping* is a spreadsheet that defines
-how data is imported into CollectiveAccess. There are many settings and
-options in the import mapping. This documentation is organized by column,
-with a description of the function of each column along with the available
-settings for that column.
+An import mapping is a spreadsheet that defines how data is imported into CollectiveAccess. This spreadsheet acts as a crosswalk, detailing where data is coming from outside of CollectiveAccess, and where that same data will go in CollectiveAccess. There are many settings and options available in the import mapping to help organize and manipulate source data; these settings and options are described in more detail in the `Basic Data Import Tutorial <https://manual.collectiveaccess.org/import/tutorial.html>`_ page. 
 
-Import mappings operate under two basic assumption about your data:
-that each row in a data set corresponds to a single record and that each
-column corresponds to a single metadata element. The exception to these
-rules is an option called treatAsIdentifiersForMultipleRows that will explode
-a single row into multiple records. This is very useful if you have a data
-source that references common metadata shared by many pre-existing records
-in a single row. See the Options section for more details:
-`<http://manual.collectiveaccess.org/import/tutorial.html#options-column-5>`_.
+Import mappings operate under two basic assumptions about the data being imported: 
 
+1. Each **row** in a data set corresponds to a **single record.**
+2. Each **column** in a data set corresponds to a **single metadata element.**
 
-Running a data import involves seven basic steps:
+A row in an import mapping, for example, will contain all the important metadata about a single, specific record: title, date, location, and other metadata present in the source data. A column, on the other hand, will group present metadata elements together: all titles, all dates, all locations, and so on. 
 
-1. Create an import mapping document (in Excel or Google Sheets) that will serve
-   as a crosswalk between source data and the destination in CollectiveAccess.
-2. Create a backup of the database by executing a data dump *before running the import* .
-3. Run the import from either the command line or the graphical user interface.
-4. Check the data in CollectiveAccess and look for errors or points of inconsistencies.
-5. Revise your mapping accordingly.
-6. Load the data dump so that the system returns to its pre-import state.
-7. Run the import again. 
+.. note::
+
+  The exception to these rules is an option called treatAsIdentifiersForMultipleRows that will explode a single row into multiple records. This is very useful if you have a data source that references common metadata shared by many pre-existing records in a single row. See the `Basic Data Import Tutorial <https://manual.collectiveaccess.org/import/tutorial.html#options-column-5>`_ page for more details.
+
 
 
 Sample Mapping
@@ -67,16 +53,16 @@ Download these files to see how the Sample Mapping applies to the Sample Data wi
 Supported Data Input Formats
 ----------------------------
 
-Data can be in: Exif, MODS, RDF, Vernon, FMPDSOResult, MediaBin, ResourceSpace,
-WordpressRSS, CSVDelimited, FMPXMLResult, MySQL, SimpleXML, WorldCat,
+CollectiveAccess supports data in various formats for import: Exif, MODS, RDF, Vernon, FMPDSOResult, MediaBin, ResourceSpace, WordpressRSS, CSVDelimited, FMPXMLResult, MySQL, SimpleXML, WorldCat,
 CollectiveAccess (CA-to-CA imports), Inmagic, Omeka, TEI, iDigBio, EAD, MARC,
-PBCoreInst, TabDelimited, Excel, MARCXML, PastPerfectXML, ULAN
+PBCoreInst, TabDelimited, Excel, MARCXML, PastPerfectXML, ULAN.
 
-A full description of the supported import formats and how they may be
-referenced is available in the in the :doc:`mappings/formats` page.
+A full description of the supported import formats, and how they may be
+referenced, is available in the in the :doc:`mappings/formats` page.
 
 Creating a Mapping
 ------------------
+This section goes through the settings, rule types, and each column in an import mapping, and provides a description of the function of each column, along with the available settings for that column.
 
 Settings 
 ````````
@@ -241,9 +227,3 @@ Source Description & Notes (Columns 10 & 11)
 These two columns are used to clarify the source and purpose of each line in the mapping and are optional. Source Description is generally a plain text label or name for the original source column to allow for easy reference to which fields are being mapped (or skipped) in the mapping. Notes provides a space to explain how and why a certain line is mapped in the manner that it is, for example, explaining why a certain value is being omitted or how an entity line is being split and related to the main record.
 
 These fields can be useful for future reference if a mapping is intended to be used repeatedly to be sure that the selected mapping matches the source data.
-
-
-Importing data
---------------
-
-Once the import mapping is complete, you are ready to run the import. See the  :doc:`running` page.
