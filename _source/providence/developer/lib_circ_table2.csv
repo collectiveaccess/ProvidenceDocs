@@ -1,0 +1,22 @@
+﻿Bundle Name,Description
+checkout_id,Unique numeric identifier used by CollectiveAccess internally to identify this object checkout entry
+group_uuid,UUID for group checkout is part of
+object_id,The id of the object that was checked out
+user_id,The user who checked out the object
+created_on,Date/time the checkout entry was created
+checkout_date,Date/time the item was checked out
+due_date,Date/time the item is due to be returned
+return_date,Date/time the item was returned
+return_notes,Notes at return of object
+checkout_notes,Notes made at checkout time
+numOverdueCheckouts,Number of overdue checkouts
+overdueCheckoutUserList,User list for all overdue checkouts
+numCheckouts,Number of checked out items
+checkoutUserList,User list for all items checked out
+numCheckins,Number of checked in items
+numReservations,Number of reservations
+reservationUserList,User list for all reservations
+last_sent_coming_due_email,Date/time a coming due notice was last sent
+last_sent_overdue_email,Date/time an overdue notice was last sent
+last_reservation_available_email,Date/time a reservation available notice was last sent
+deleted,Indicates if the order is deleted or not

@@ -26,3 +26,4 @@ Providence developer guide
    Application Plugins <app_plugins.rst>
    Coding Standards <coding_standards.rst>
    Content Caching Configuration <content_caching.rst>
+   Library Circulation <lib_circ.rst>
