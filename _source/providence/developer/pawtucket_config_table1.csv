@@ -1,0 +1,14 @@
+﻿Option,Description,Values,Default
+disable_lightbox,Filter all user-entered text for possibly dangerous content such as javascript code. You should leave this on unless you know exactly why you don't need it.,"0=no, 1=yes",1
+dont_allow_registration_and_login,Locale code to use if user has not specified a preferred locale. Should be in standard 2-letter ISO-639 language - underscore - 2-letter ISO-3166-1 region code.,"Locale code, ex. fr_CA (Canadian French)",en_US
+don’t_approve_logins_on_registration,Filter all user-entered text for possibly dangerous content such as javascript code. You should leave this on unless you know exactly why you don't need it.,"0=no, 1=yes",1
+email_notification_for_new_registrations,ilter all user-entered text for possibly dangerous content such as javascript code. You should leave this on unless you know exactly why you don't need it.,"0=no, 1=yes",1
+dont_moderate_comments,Filter all user-entered text for possibly dangerous content such as javascript code. You should leave this on unless you know exactly why you don't need it.,"0=no, 1=yes",1
+dont_email_notification_for_new_comments,Filter all user-entered text for possibly dangerous content such as javascript code. You should leave this on unless you know exactly why you don't need it.,"0=no, 1=yes",1
+enable_bookmarks,Filter all user-entered text for possibly dangerous content such as javascript code. You should leave this on unless you know exactly why you don't need it.,"0=no, 1=yes",1
+media_overlay_titlebar_template,Display template used to format information text at bottom of media overlay. Template is evaluated relative to the item with which the media is associated.,Display template,If left blank preferred label + identifier of the item associated with the media is displayed.
+ca_users_lookup_settings,Filter all user-entered text for possibly dangerous content such as javascript code. You should leave this on unless you know exactly why you don't need it.,"0=no, 1=yes",1
+ca_users_lookup_delimiter,Filter all user-entered text for possibly dangerous content such as javascript code. You should leave this on unless you know exactly why you don't need it.,"0=no, 1=yes",1
+user_set_type,Filter all user-entered text for possibly dangerous content such as javascript code. You should leave this on unless you know exactly why you don't need it.,"0=no, 1=yes",1
+allow_ca_objects_representation_download,Filter all user-entered text for possibly dangerous content such as javascript code. You should leave this on unless you know exactly why you don't need it.,"0=no, 1=yes",1
+user_set_type,Filter all user-entered text for possibly dangerous content such as javascript code. You should leave this on unless you know exactly why you don't need it.,"0=no, 1=yes",1

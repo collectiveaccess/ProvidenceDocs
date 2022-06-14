@@ -27,3 +27,5 @@ Providence developer guide
    Coding Standards <coding_standards.rst>
    Content Caching Configuration <content_caching.rst>
    Library Circulation <lib_circ.rst>
+   Pawtucket2: Configuration <pawtucket_configuration.rst>
+   

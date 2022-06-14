@@ -1,0 +1,11 @@
+﻿Option,Description,Values,Default
+clean_urls,xxx,"0=no, 1=yes",1
+locale_default,Locale code to use if user has not specified a preferred locale. Should be in standard 2-letter ISO-639 language - underscore - 2-letter ISO-3166-1 region code.,"Locale code, ex. fr_CA (Canadian French)",en_US
+do_content_caching,xxx,xxx,
+content_cache_dir,xxx,xxx,
+"dont_enforce_access_settings	",xxx,xxx,
+public_access_settings,xxx,xxx,
+privileged_access_settings,xxx,xxx,
+privileged_networks,xxx,xxx,
+ui_locales,xxx,xxx,
+html_page_title,xxx,xxx,

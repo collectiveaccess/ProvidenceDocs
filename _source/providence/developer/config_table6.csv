@@ -1,0 +1,2 @@
+﻿Option,Description,Values,Default
+pdfExportTitle,Text to use as the file name of an export for download,Static text,If omitted text of the browse criteria are used.

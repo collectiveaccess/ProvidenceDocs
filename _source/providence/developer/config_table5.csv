@@ -1,0 +1,2 @@
+﻿Option,Description,Values,Default
+pdfExportTitle,Text to use as the file name of an export for download,Static text,If omitted the text of the search expression is used.

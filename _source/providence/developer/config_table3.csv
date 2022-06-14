@@ -1,0 +1,17 @@
+﻿Option,Description,Values,Default
+purify_all_text_input,Filter all user-entered text for possibly dangerous content such as javascript code. You should leave this on unless you know exactly why you don't need it.,"0=no, 1=yes",1
+minification,xxx,"Locale code, ex. fr_CA (Canadian French)",en_US
+auth_login_path,xxx,"Locale code, ex. fr_CA (Canadian French)",en_US
+password_reset_url,xxx,"Locale code, ex. fr_CA (Canadian French)",en_US
+auth_login_url,xxx,"Locale code, ex. fr_CA (Canadian French)",en_US
+auth_logout_url,xxx,"Locale code, ex. fr_CA (Canadian French)",en_US
+error_display_url,xxx,"Locale code, ex. fr_CA (Canadian French)",en_US
+default_action,xxx,"Locale code, ex. fr_CA (Canadian French)",en_US
+taskqueue_handlers,xxx,"Locale code, ex. fr_CA (Canadian French)",en_US
+taskqueue_handler_plugins,xxx,"Locale code, ex. fr_CA (Canadian French)",en_US
+taskqueue_tmp_directory,xxx,"Locale code, ex. fr_CA (Canadian French)",en_US
+default_bundle_access_level,xxx,"Locale code, ex. fr_CA (Canadian French)",en_US
+perform_type_access_checking,xxx,"Locale code, ex. fr_CA (Canadian French)",en_US
+default_type_access_level,xxx,"Locale code, ex. fr_CA (Canadian French)",en_US
+"perform_item_level_access_checking	",xxx,"Locale code, ex. fr_CA (Canadian French)",en_US
+default_item_access_level,xxx,"Locale code, ex. fr_CA (Canadian French)",en_US
