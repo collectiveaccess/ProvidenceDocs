@@ -62,3 +62,7 @@ lightbox.conf
 -------------
 
 Controls options for the optional lightbox interface.
+
+.. csv-table::
+   :header-rows: 1
+   :file: config_table7.csv
