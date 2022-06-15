@@ -1,0 +1,7 @@
+﻿Variable,Description,Example Values
+t_subject,A model instance for the item being displayed,
+display_id,The numeric id of the current display,
+base_path,The absolute server path to the directory containing the current view,
+t_display,An instance of the ca_bundle_displays model loaded with the current display,
+bundle_displays,An array of available displays,
+placements,"An array of placements in the currently loaded display. Array indices are display_id's, values are array of display configuration data	",

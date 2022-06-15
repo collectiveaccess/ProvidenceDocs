@@ -1,0 +1,9 @@
+﻿Name,Value,Description
+@marginLeft,Measurement,The distance from the left edge of the page to the left side of the first label
+@marginRight,Measurement,The distance from the right edge of the page to the right side of the first label
+@marginTop,Measurement,The distance from the top of the page to the top of the first label
+@marginBottom,Measurement,The distance from the bottom of the page to the bottom of the first label
+@horizontalGutter,Measurement,The distance between each row of labels
+@verticalGutter,Measurement,The distance between each column of labels
+@labelWidth,Measurement,The width of a label
+@labelHeight,Measurement,The height of a label

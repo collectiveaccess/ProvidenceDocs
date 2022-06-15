@@ -1,0 +1,14 @@
+﻿Name,Value,Description
+@name,Text,The name of the template. Will be used in the user interface to refer to the template. Must be unique with the context.
+@type,"One of: page, pageStart, pageEnd, fragment","Indicates the role of the file within the template. Files of @type ""page"" are treated as templates by CollectiveAccess. All others are treated as sub-components to be included by a ""page."" ""pageStart"" files should contain content to be output before the page, ""pageEnd"" should contain content to be output after the page. @type ""fragment"" indicates a file that will be included within the body of a page. NOTE: this option is available from version 1.7.6."
+@pageSize,"letter,legal,A4 (most common)","The full list is: 4a0, 2a0, a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, b0, b1, b2, b3, b4, b5, b6, b7, b8, b9, b10, c0, c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, ra0, ra1, ra2, ra3, ra4, sra0, sra1, sra2, sra3, sra4, letter, legal, ledger, tabloid, executive, folio, commerical #10 envelope, catalog #10 1/2 envelope, 8.5x11, 8.5x14, 11x17"
+@pageOrientation,"One of: letter, landscape",
+@tables,"ca_objects, ca_entities or any other primary type separated with commas, or * for all tables","Restricts the template to one or more tables. If restricted, CollectiveAccess will only use the template when dealing with records from the specified tables(s)."
+@restrictToTypes,type code for record,Limits which record type the template will be available for.
+@showOnlyIn,"List including any of the following, separated by commas: search_browse_thumbnail, search_browse_full, search_browse_list, editor_relationship_bundle",Restrict visibility of template to one or more specific areas in the user interface. The search_browse_* values restrict access to search/browse results with a given view selected (thumbnails/full/list). editor_relationship_bundle restricts the template to the list of export options displayed on relationship bundles in record editors. If @showOnlyIn is omitted the template will be visible in all relevant areas. NOTE: this option is available from version 1.7.6.
+,,
+,,
+,,
+,,
+,,
+,,

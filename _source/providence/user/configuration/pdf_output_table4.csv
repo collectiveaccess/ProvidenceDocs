@@ -1,0 +1,13 @@
+﻿Variable,Description,Example Values
+base_path,The absolute server path to the directory containing the current view,
+target,The table the results set is from,"ca_objects, ca_entities"
+result_context,An instance of ResultContext for the current find action,
+num_hits,The number of items in the result set,
+num_pages,The number of pages in the result set,
+"current_items_per_page	",The number of items per page,
+page,The current page number,
+result,An instance inheriting from SearchResult representing the result set,
+current_sort,The current sort field,
+current_sort_direction,The direction of the current sort,"ASC, DESC"
+t_subject,"An instance of the model representing the current result set, inheriting from BaseModel",
+bottom_line,An array with aggregate statistics (if configured),

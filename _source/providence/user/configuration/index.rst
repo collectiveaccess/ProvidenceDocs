@@ -8,3 +8,4 @@ Configuration
 
    Overview <configuringProvidence>
    Configuration File Syntax <configuration_file_syntax>
+   PDF Output <pdf_output.rst>

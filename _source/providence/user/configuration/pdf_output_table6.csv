@@ -1,0 +1,8 @@
+﻿Variable,Description,Example Values
+browse,An instance of BrowseEngine representing the current browse,
+criteria,An array of current browse criteria,
+available_facets,An array of available browse facets,
+available_facets_as_html_select,An HTML <select> tag with available facets,
+facets_with_content,An array of facets that have content to show,
+facet_info,"	An array with specification for all facets",
+browse_criteria,"Simplified array of current browse criteria for display, with keys set to facet label and values set to a delimited list of facet values",
