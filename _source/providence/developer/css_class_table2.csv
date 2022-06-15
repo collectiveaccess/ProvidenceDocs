@@ -1,0 +1,5 @@
+﻿Class,Notes
+detail,"All detail pages always have ""detail"" class."
+<table>,"Class indicating kind of detail being rendered. Will be one of: ca_objects, ca_entities, ca_places, ca_occurrences, ca_collections."
+<type>,Class indicating type of item being rendered in detail. Will be a valid object/entities/place/occurrence/collection type code for your installation. Ex. Document
+<name>,"The name of the detail being rendered, as configured in detail.conf. The value is the unique ""name"" code configured on the left side of the = in the detailTypes block."

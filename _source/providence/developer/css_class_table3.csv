@@ -1,0 +1,5 @@
+﻿Class,Notes
+browse,"All browse pages always have ""browse"" class."
+<table>,"Class indicating kind of item being browsed. Will be one of: ca_objects, ca_entities, ca_places, ca_occurrences, ca_collections."
+<name> ,"The name of the browse being rendered, as configured in browse.conf. The value is the unique ""name"" code configured on the left side of the = in the browseTypes block."
+<view>,"Class indicating the results view type. Will be one of: image, list, timeline, map."

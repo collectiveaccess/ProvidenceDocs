@@ -28,4 +28,4 @@ Providence developer guide
    Content Caching Configuration <content_caching.rst>
    Library Circulation <lib_circ.rst>
    Pawtucket2: Configuration <pawtucket_configuration.rst>
-   
+   Pawtucket2: CSS Page Classes <css_classes.rst>
