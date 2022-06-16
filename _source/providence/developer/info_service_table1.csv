@@ -1,0 +1,8 @@
+﻿Setting Name,Description,Example
+service,Set service setting to 'CollectiveAccess' to use this plugin,CollectiveAccess
+baseURL,URL used to query the information service,http://localhost/admin/
+table,valid CollectiveAccess table name,"	ca_entities"
+"user_name	",User name to authenticate with on remote system,"	webservice"
+password,Password to authenticate with on remote system,"	/"
+labelFormat,Display template to format query result labels with.,^ca_entities.preferred_labels
+"detailFormat	",Display template to format detailed information blocks with.,^ca_objects.preferred_labels (^ca_objects.idno)

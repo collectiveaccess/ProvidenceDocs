@@ -1,0 +1,3 @@
+﻿Setting Name,Description,Example
+service,Set service setting to 'Wikipedia' to use this plugin,Wikipedia
+lang,"2- or 3-letter language code for Wikipedia to use. Defaults to ""en"". See http://meta.wikimedia.org/wiki/List_of_Wikipedias",en

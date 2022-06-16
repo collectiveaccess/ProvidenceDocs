@@ -1,0 +1,11 @@
+﻿Setting Name,Description
+image_thumbnail,Image thumbnail URL
+image_thumbnail_width,Width of image thumbnail. Box is capped at 200px by 200px.
+"image_thumbnail_height	",Height of image thumbnail. Box is capped at 200px by 200px.
+image_viewer_url,(Valid for v1.5.1) URL for Wikipedia's full screen image viewer. Example here
+title,Title of the Wikipedia article
+pageid,Numeric page identifier
+fullurl,URL for the article
+canonicalurl,Canonical URL for the article
+extract,Extract of the article. This is usually a HTML representation of the full article!
+abstract,CollectiveAccess tries to extract the first paragraph from the full article representation above to provide a shorter abstract. This is usually the part of the article shown above the table of contents but the extraction might fail for poorly formatted articles.

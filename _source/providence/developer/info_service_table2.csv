@@ -1,0 +1,3 @@
+﻿Setting Name,Description,Example
+service,Set service setting to 'uBio' to use this plugin,uBio
+keyCode,uBio key code. See http://www.ubio.org/index.php?pagename=xml_services for details. Default is the ubio_keycode setting in app.conf,a1b2c3

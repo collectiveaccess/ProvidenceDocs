@@ -1,0 +1,25 @@
+﻿Setting Name,Description,Example
+search_text,"If set to 0 we use the luc:term field for searching, which only contains the terms/labels. If set to 1 we use the luc:text field instead, which can yield a lot more but erratic results. See http://vocab.getty.edu/doc/queries/#Exact-Match_Full_Text_Search_Query",1
+detail_view_info,"List of attributes to show in the extended information panel. Info has to be in literal form, but can be pulled through related nodes (see below). Note that full uris for both resources and literals have to be wrapped in < and >. See also# http://www.easyrdf.org/docs/property-paths (this is the library we use to traverse the graph). Available settings are:
+The label setting defines the label used for this field in the extended info panel. uri is an optional setting that allows pulling information through related RDF nodes. literal is a setting that should resolve to a RDF literal and defines the actual text that is pulled in for display. limit limits the number of related nodes that are processed. Crawling the RDF graph can get very slow for a large number of nodes. stripAfterLastComma lets you strip everything after (and including) the last comma in the individual literal string. This is useful for gvp:parentString where the top-most category is usually not very useful. invert is a setting handcrafted for gvp:parentString and inverts the hierarchy path so that it starts with the most generic node.
+
+Note that this data is only visible when you scroll down the extended info panel. It is not available for search or in bundle displays! See below for how to add data for search.","type = {
+	label = Type,
+	# use uri if you want to pull from a related node
+	uri = <http://vocab.getty.edu/ontology#placeTypePreferred>,
+	literal = <http://www.w3.org/2004/02/skos/core#prefLabel>,
+	limit = 1,
+},
+or
+
+parentString = {
+	label = Full path,
+	literal = <http://vocab.getty.edu/ontology#parentString>,
+	stripAfterLastComma = 1,
+	invert = 1,
+},"
+additional_indexing_info,"List of attributes to add to the search index (in addition to the display value). This allows you to use non-display information from the Getty services for search purposes. For instance, you might not want to display the full gvp:parentString for each related AAT keyword but you still want to search for the broader categories.
+Note that the syntax is virtually identical to the detail_view_info setting above, except for the absence of the label setting.","altLabels = {
+	uri = <http://www.w3.org/2008/05/skos-xl#altLabel>,
+	literal = <http://vocab.getty.edu/ontology#term>
+}"
