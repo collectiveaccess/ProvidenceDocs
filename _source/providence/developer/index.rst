@@ -10,6 +10,7 @@ Providence developer guide
    Translation <translation>
    Web APIs <web_api>
    Internal APIs <internal_api>
+   Web Service API <web_service_api.rst>
    Writing Dashboard Widgets <writing_dash_widgets.rst>
    Plugins <plugins>
    Update Installation Profile <update_installation_profile.rst>

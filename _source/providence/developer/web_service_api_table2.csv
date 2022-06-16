@@ -1,0 +1,3 @@
+﻿Option Key,Description
+hard,"Set to ""true"" (as JSON boolean value, not as string) if you want to use a ""real"" as opposed to the aforementioned ""soft delete""."
+delete_related,"Set to ""true"" (as JSON boolean value, not as string) if you want to delete related records as well. Use with caution!"
