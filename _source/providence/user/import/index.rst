@@ -7,7 +7,6 @@ Import
    :titlesonly:
 
    Introduction <introduction.rst>
-   Import Tutorial 1: Import Mapping Spreadsheet Column Overview <import_tutorial_1.rst>
    Import Mapping <mappings>
    Import Tutorial <tutorial>
    Running an Import <running>
@@ -15,3 +14,5 @@ Import
    Getty Vocabularies <getty>
    Chenhall Nomenclature <chenhall>
    Media embedded metadata <mediaembeddedmetadata>
+   Import Mapping Spreadsheet Column Overview <import_tutorial_1.rst>
+   Creating an Import Mapping <creating_tutorial2.rst>

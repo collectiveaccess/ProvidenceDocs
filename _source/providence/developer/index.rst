@@ -31,3 +31,4 @@ Providence developer guide
    Pawtucket2: Configuration <pawtucket_configuration.rst>
    Pawtucket2: CSS Page Classes <css_classes.rst>
    Access Restrictions Configuration <access_restrict_config.rst>
+   Displaying Units <display_units.rst>
