@@ -18,7 +18,8 @@ There are a few types of refineries commonly used in CollectiveAccess:
 
 For a comprehensive list of refineries, please see...
 
-**heading**
+Refinery Parameter
+------------------
 
 Refineries can't function properly without refinery parameters. Refinery parameters simply define the conditions for the refinery. An example is below. 
 
@@ -34,11 +35,10 @@ The refinery, **entitySplitter**, is telling CollectiveAccess that within the so
 The **refinery parameter** is further defining the refinery by stating the type of relationship that the source data should have and the type of entity that is being imported. In this example, the names apply to a single individual (the entityType) and the relationship to the objects is the relationshipType of "creator." 
 
 Once imported into CollectiveAccess, this refinery and its parameter that exists in the import mapping will look like:
-.. image:: screenshottest.jpg
-    :width: 1152px
-    :align: center
-    :height: 198px
-    :alt: alternate text
+
+.. image:: refparam1.png
+   :align: center
+   :scale: 50%
 
 Note that Refineries are optional. If source data does not require more complex elements, they are not needed in a mapping. However, Refineries are extremely useful in pre-defining these more complex elements which determine how data is inter-connected, and automatically importing data in the most straightforward, and logical, format. 
 
