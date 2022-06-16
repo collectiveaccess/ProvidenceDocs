@@ -20,3 +20,4 @@ Using QuickSearch runs a full-text query across the entire database, and organiz
 Browse filters results by primary table, with additional facets that narrow down a search query within the database. Browse is a method for viewing all records of a specific type, and allows sorting and filtering records based on designated attributes, which are configurable. 
 
 Browse is a search option in the local navigation bar under Find. Options for grouping search results will appear, and this selection will narrow any query. "Start Over" will erase any selected facets and begin a new Browse query. 
+
