@@ -30,3 +30,4 @@ Providence developer guide
    Library Circulation <lib_circ.rst>
    Pawtucket2: Configuration <pawtucket_configuration.rst>
    Pawtucket2: CSS Page Classes <css_classes.rst>
+   Access Restrictions Configuration <access_restrict_config.rst>
