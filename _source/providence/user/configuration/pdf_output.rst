@@ -121,6 +121,7 @@ Using View Variables
 The variables provided may be accessed via PHP code within the view by calling the view's setVar() method with the variable name. This code fragment will print out the current search phrase for search result views:
 
 .. code-block::
+
    <?php print $this->getVar('search'); ?>
 
 
@@ -132,6 +133,7 @@ Surrounding the name of the variable with sequences of three curly-braces will c
 In addition to variables, display templates may also be evaluated and output using the curly-brace syntax. For example:
 
 .. code-block:: 
+
    {{{Identifier is ^ca_objects.idno and titles is ^ca_objects.preferred_labels.name}}}
 
 would cause the text to be output with the ^-prefixed data specifications substituted with values.
@@ -144,6 +146,7 @@ A custom file name for downloaded PDFs can be generated from your view template 
 From CollectiveAccess Version 1.7.6, your template view can also specify the file name for the downloaded PDF by setting the "filename" view variable. Because this value is set using PHP code it can be set dynamically based upon report parameters, user settings or anything else you can access. View variables are set using the view's setVar() method with the variable name ("filename") and the desired filename:
 
 .. code-block:: 
+
    <?php print $this->setVar('filename', 'my_custom_report_file.pdf'); ?>
 
 If you don't set a file name a default name will be used.
@@ -156,6 +159,7 @@ Bar codes may be output in any view using the PHP caGenerateBarcode() helper fun
 For example:
 
 .. code-block:: 
+
    <?php $vs_path = caGenerateBarcode('$ps_identifier, array('checkValues' => $this->opa_check_values, 'type' => 'code128', 'height' => 12)); print "<img src='".$vs_path."'/>"; ?>
 
 For views that support curly-brace syntax, you may also pass a special barcode template in the format barcode:<type>:{size}:template. For example:
