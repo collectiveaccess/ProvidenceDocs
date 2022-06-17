@@ -33,3 +33,4 @@ Providence developer guide
    Access Restrictions Configuration <access_restrict_config.rst>
    Displaying Units <display_units.rst>
    Information Services <info_services.rst>
+   Cookbook: Installation Profiles <coobook_install_profiles.rst>
