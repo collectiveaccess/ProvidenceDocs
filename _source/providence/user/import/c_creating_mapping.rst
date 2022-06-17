@@ -182,14 +182,3 @@ Columns 10 and 11: Source Description and Notes
 Source Description and Notes are the final two columns included in an import mapping spreadsheet, and are optional. Used to clarify the source data and purpose of each line in the import mapping itself, these columns can be useful for keeping track of where exactly data in the import mapping is coming from. The Notes column provides a space to explain how and why a certain line is mapped in the manner that it is. Both columns allow for easy reference, and are particularly useful when multiple users are creating an import mapping. 
 
 These columns can be useful for future reference, if a mapping is intended to be used repeatedly. These columns also ensure that the mapping matches the source data.
-
-Import Reference Pages
-----------------------
-
-* Rules
-* Refineries
-* Existing Record Policies
-* Mapping Options
-* Regular Expressions
-* Containers
-* Original and Replacement Value Example
