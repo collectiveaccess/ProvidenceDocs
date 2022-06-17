@@ -148,10 +148,220 @@ If the idno has more than one component, you can use more than one "%" placehold
 Importing Multiple Relationship Types
 -------------------------------------
 
-Problem: 
-You want to define a relationship type in a refinery parameter, but there is more than one relationship type in your source data column. 
+**Problem**: You want to define a relationship type in a refinery parameter, but there is more than one relationship type in your source data column. 
 
-Solution: 
-Instead of writing {"relationshipType":"creator"} or something else that refers to a specific value in Column 6 of your import mapping, use {"relationshipType":"^1"}. The caret is followed by the number of the data source column from which you wish to draw relationship types (note: 1 is just an example), and will therefore include all types available in your source data column. 
+**Solution**: Instead of writing {"relationshipType":"creator"} or something else that refers to a specific value in Column 6 of your import mapping, use {"relationshipType":"^1"}. The caret is followed by the number of the data source column from which you wish to draw relationship types (note: 1 is just an example), and will therefore include all types available in your source data column. 
 
+Creating One Entity Record from Separate Data Source Columns
+------------------------------------------------------------
 
+**Problem**: An Entity's name is split up into two different columns in a source data spreadsheet, but you want to merge both columns to create a single Entity record in CollectiveAccess. 
+
+**Solution**: Use the entityJoiner refinery in your import mapping in Column 6, being sure to include full container paths in the attributes parameter (since you'll be creating a new record). Parameters include entityType, entityTypeDefault, forename, surname, other_forenames, middlename, display name, prefix, suffix, attributes, nonpreferred_labels, relationshipType, relationshipTypeDefault, and skipIfValue.
+
+Mapping Entities into a Container Field 
+---------------------------------------
+	
+**Problem**: Your source data contains information regarding condition reporting, and includes an Entity (the person who performed the last condition report). You want this Entity to be mapped into the same Condition field (Container) as other Condition information. 
+
+**Solution**: Create a Group in Column 4 of your import mapping spreadsheet for all fields that will go into the Condition container, for example, “condition,” including the Entity. 
+Use the entitySplitter Refinery in Column 6 of your import mapping spreadsheet. In Column 7, use the Refinery Parameter **{"entityType": "ind"}** to declare the Entity as an individual. You do not need to include a relationship type in this Refinery Parameter, as this Parameter is not creating a separate and related record for this Entity. 
+
+Building a Hierarchy Above Related Records
+------------------------------------------
+
+**Problem**: You're trying to import related Collections using the collectionSplitter Refinery in Column 6 of your import mapping, but you want to build a hierarchy above those records through a Refinery Parameter.
+
+**Solution**: Use the collectionSplitter refinery with the Refinery Parameter "Parents." This will build parent record levels above the record that is laterally related to the imported data. In other words, if you're importing items that are laterally related to files, and you then need to build a series above the files you're creating via the collectionSplitter, you would use the "parents" parameter. "Parents" includes several sub-parameters, including idno, name, type, attributes, and rules. 
+
+A Parents parameter may look like this:
+
+.. code-block::
+
+   {
+   "parents": [
+       {
+           "idno": "^/inm:SeriesNo",
+           "name": "^/inm:SeriesTitle",
+           "type": "series",
+           "attributes": { "ca_collections.description": "^7"}
+       },
+       {
+           "idno": "^/inm:CollectionNo",
+           "name": "^/inm:CollectionTitle",
+           "type": "collection",
+           "rules": [
+               {
+                   "trigger": "^/inm:Status = 'in progress'",
+                   "actions": [
+                       {
+                           "action": "SET",
+                           "target": "ca_collections.status",
+                           "value": "edit"
+                       }
+                   ]
+               }
+           ]
+       }
+   ]
+   }
+
+Building a Hierarchy with Variable Amount of Levels
+---------------------------------------------------
+
+**Problem**: You are importing Storage Locations from an Excel spreadsheet, formatted in a hierarchy spanning 5 separate columns (Building A | Floor 2 | Room A | Cabinet A9 | Drawer 29), while other times it's only 3 columns deep (Building A | Floor 3 | Open Storage Area). For the case of 3 columns you don't want to import 2 blank levels, but rather would like to treat "Open Storage Area" as the subject of the mapping (as Drawer 29 is for the 5 column example). The value of this approach (beyond handling the blank levels) is that the subject level will be the target of the general mapping. This allows for the mapping of other relationships (i.e. the objects stored at the location) to whatever the "lowest" level happens to be.
+
+**Solution**: Use the ParentAsSubject Option in Column 5 of your import mapping spreadsheet, along with a storageLocationHierarchyBuilder Refinery in column 6 of your import mapping spreadsheet. In this example, the last level before the first blank level will be the target for the objectSplitter. Make sure to map the storageLocationHierarchyBuilder to ca_storage_locations.parent_id, rather than just ca_storage_locations.
+
+Importing a Hierarchy Within a Collections Table (ca_collections)
+-----------------------------------------------------------------
+
+**Problem**: You want to build a Collections hierarchy when importing to the table ca_collections.
+
+**Solution**: Use the collectionHierarchyBuilder Refinery in column 6 of your import mapping with the Refinery Parameter "parents" in Column 7 of your import mapping. This will map parent levels above the imported data. It can be used to map more than one level, for example a series above a file, and a collection above a series, all at once. The parent parameter includes several sub-parameters, as you can see above, such as idno, name, type, attributes, and rules.
+
+For example:
+
+.. code-block::
+
+   {
+   "parents": [
+       {
+           "idno": "^/inm:SeriesNo",
+           "name": "^/inm:SeriesTitle",
+           "type": "series",
+           "attributes": { "ca_collections.description": "^7"}
+       },
+       {
+           "idno": "^/inm:CollectionNo",
+           "name": "^/inm:CollectionTitle",
+           "type": "collection",
+           "rules": [
+               {
+                   "trigger": "^/inm:Status = 'in progress'",
+                   "actions": [
+                       {
+                           "action": "SET",
+                           "target": "ca_collections.status",
+                           "value": "edit"
+                       }
+                   ]
+               }
+           ]
+       }
+   ]
+   }
+
+Using Rules
+-----------
+
+**Problem**: You want to conditionally skip data whenever a certain element appears in the data source. Any time a record's description says "do not use," for example, you want to skip that entire record, and not import it into CollectiveAccess.
+
+**Solution**: Use "Rules" to set an action that will be triggered by the presence of a certain value. To do this, use expression statements to create the trigger. For example, if you wish to skip a record containing the phrase "do not use," you must first create the expression statement that denotes "do not use" and indicates that it is to be found in the "description" source. In this case, you could use a regular expression operator for "do not use": =~/do not use/. This will return the text "do not use" as true. Then, to complete the expression statement, add the variable (let's say that "description" is column 5 in an excel spreadsheet). The expression would then be: (^5=~/do not use/). Once the rule trigger is set, you can set the resultant action - in this case, "SKIP." The rule, then would be:
+
+Rule Triggers: (^5=~/do not use/)
+Rule Action: SKIP
+
+Including Metadata in a Refinery Parameter
+------------------------------------------
+
+**Problem**: You are using an entitySplitter in Column 6 of your import mapping spreadsheet, and you want to use the Refinery Parameter to import address information about the Entity record you are creating. 
+
+**Solution**: Use the Refinery Parameter attributes, which is used when defining multiple aspects of a Container (in this case, Address), and use the source data column numbers for clarity. In Column 7, this would look like: 
+
+.. code-block::
+
+   "Attributes": {"address":{"address1":"^24", "address2":"^25","city":"^26", "stateprovince":"^27", "postalcode":"^28", "country":"^29"}}}
+
+Mapping Measurements from one Source to Separate Fields
+-------------------------------------------------------
+
+**Problem**: All of the data relating to dimensions located in your source data are in the same column, but you want to map them to separate dimension fields in CollectiveAccess.
+
+**Solution**: Use the measurementsSplitter Refinery in column 6 of your import mapping spreadsheet to divide the dimensions into fields of the dataType Length or Weight. Use the delimiter Refinery Parameter in column 7 of your import mapping to separate the measurement values on the delimiter used in the source data. Use "units" to specify the unit of measurement, use "elements" to map the components of the dimensions to their respective fields, and use "attributes" to include any other elements (such as a notes field) that may be in a measurements container.
+
+Setting a Unit Specifier for Mapping Dimensions
+-----------------------------------------------
+
+**Problem**: You are mapping dimensions data into CollectiveAccess, but the unit specifier (cm, in, ft, etc.) for these dimensions is not set within each data cell, but rather declared in the data column header in your source data. 
+
+**Solution**: Use the suffix formatting in the Option Column (Column 5) of your import mapping spreadsheet to set the unit specifier for all Dimensions in the source column:
+
+.. code-block::
+
+   {"suffix": "cm"}
+   {"suffix": "in"}
+
+Using a Hierarchical Delimiter for Storage Locations
+----------------------------------------------------
+
+**Problem**: The Storage Locations in your source data are expressed only with numbers, 4.2.1 where 4 indicates a room, 2 indicates a rack, and 1 indicates a cabinet.
+
+**Solution**: Use the storageLocationSplitter Refinery in Column 6 of your import mapping spreadsheet, with two key Refinery Parameters that work in tandem: "hierarchicalStorageLocationTypes" and "hierarchicalDelimiter." 
+The hierarchicalStorageLocationTypes adds labels to the numbers in order so that you know what they mean, and the hierarchicalDelimiter tells those labels where to go (as opposed to the regular "delimiter" parameter which would create new records on each delimiter.) In this example, the parameter would be expressed: 
+
+.. code-block::
+
+   {"hierarchicalStorageLocationTypes" : ["room", "rack", "cabinet"], "hierarchicalDelimiter":"."}
+
+Importing XML
+-------------
+
+**Problem**: You need to import data that is in an XML file format.
+
+**Solution**: As of CollectiveAccess Version 1.4, two XML formats are supported:
+FMPDSORESULT (Filemaker Pro XML data export format)
+InMagic XML (Export format for the InMagic archival application)
+
+If you're working with FMPDSORESULT or InMagic XML, set the mapping document's inputType to "FMPDSO" or "Inmagic" respectively and format your source data as /xml_tag in place of <xml_tag>.
+If you need to work with some other XML-based format, you'll need to develop a data reader plugin for it. For most formats you can start by copying the FMPDSORESULT plugin (in app/lib/ca/Import/DataReaders/FMPDSOResultReader.php) to a new file in app/lib/ca/Import/DataReaders/ with the name of the new format + "Reader.php" Then change the class name and specifics in the copy to align with your new format.
+
+Importing MARC
+--------------
+
+**Problem**: You are importing a MARC database, rather than XLSX or XLS.
+
+**Solution**: Set the mapping document's inputType to "MARC" and format your source data by MARC Rule and Subfield as "rule/subfield" (ex. 035/a) and ignore indicators, if you choose.
+If you do need to use MARC indicators, you append them after the sub-field and another '/'.
+
+Example:
+
+100/a (no indicators)
+100/a/x (indicator 1=x)
+100/a/xy (indicator 1=x; indicator 2=y)
+A concrete example:
+MARC:
+245 18$aThe ... annual report to the Governor.
+The Import mapping source would be:
+245/a/18 (as in rule/subfield/indicator1indicator2).
+
+Mapping a MARC element with multiple sub-fields
+-----------------------------------------------
+
+**Problem**: You want to map MARC elements into CollectiveAccess that contain multiple sub-fields. 
+
+**Solution**: Sub-fields are denoted by the "$" sign, which can be ignored in the mapping document. Use display formatting to map a MARC element with multiple sub-fields to a single metadata element.
+For example:
+245 10$aTrade Union Fellowship Program :$b[announcement].
+Here, the source is set to 245/a, and the following format is set in options:
+{"formatWithTemplate": "^245/a  ^245/b"}
+
+Importing Indented Hierarchical List Items
+------------------------------------------
+
+**Problem**: You are trying to import a hierarchical list from an Excel spreadsheet that uses indentations (empty cells) to display the hierarchy. 
+
+**Solution**: Use the listItemIndentedHierarchyBuilder Refinery in Column 6 of your import mapping spreadsheet. You can use this to import the list on its own, import as a vocabulary, or import as metadata attached to Objects. The Refinery Parameters for this refinery include "levels" (to indicate source columns), "levelTypes" (to define hierarchy levels), "mode" (either "returnData" or "processOnly"). An example in JSON for the sample above would be:
+
+.. code-block::
+
+   {"list": "categories", "levels":["^1", "^2", "^3"], "levelTypes":["concept", "concept", "concept"], "mode": "processOnly"}
+
+Values Importing Improperly from Excel
+--------------------------------------
+
+**Problem**: You're importing data from an Excel spreadsheet; the document looks normal, but when it's imported text fields seem to render as dates.
+
+**Solution**: There is hidden formatting in your Excel spreadsheet; this is a common problem and can be responsible for a variety of import errors. Open the file in Excel, select all cells, and then select "Clear -> Formats" from the "Edit" menu. Save, and import the new copy of the file.
+
+.. warning:: extra stuff here at bottom in old wiki
