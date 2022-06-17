@@ -1,5 +1,5 @@
-Basic Data Import Tutorial
-==========================
+Creating an Import Mapping: Tutorial
+====================================
 
 .. contents::
    :local:
@@ -7,20 +7,39 @@ Basic Data Import Tutorial
 Introduction
 ------------
 
-This tutorial will provide you with the very basics of writing a custom import mapping, using an example mapping document, sample data, and a basic profile configuration for Providence.
+The purpose of an import mapping is to define specifically *how* and *where* source data will be imported into CollectiveAccess. Data must be imported into CollectiveAccess using an import mapping. 
 
-The tutorial is only intended to be a simple overview of basic import mapping principles. For more exhaustive and complete documentation of the many various options and rules, please refer to the Data Importer page.
+An import mapping is a spreadsheet (XLSX or GoogleSheets) that defines how data is imported into CollectiveAccess. This spreadsheet acts as a crosswalk, detailing where data is coming from outside of CollectiveAccess, and where that same data will go in CollectiveAccess. For a tutorial using a Sample Import Mapping Spreadsheet and Sample Import Data, please see Putting it All Together: A First Import. 
 
-To begin this tutorial, download the following three files.
-
-| `Sample mapping.xlsx <../_static/_files/Sample_mapping.xlsx>`_
-| `Sample data.xlsx <../_static/_files/Sample_data.xlsx>`_
-| `Sample import profile.xml <../_static/_files/Sample_import_profile.xml>`_
-|
-
-At its simplest, the import mapping is essentially a schema crosswalk: for every data source you list, you declare a target "destination" for where the data should end up in CollectiveAccess. However, there are several additional rules and parameters you can set to ensure the "data reader" can correctly parse and process the data.
+Each import mapping spreadsheet contains a set of intrinsic columns. A comprehensive description and function of these columns will be described below. Each import mapping also contains specific, customized Settings. Unlike Putting it All Together: A First Import, this section will not use sample data or a sample spreadsheet to illustrate what the parts of an import mapping spreadsheet look like. Instead, tables will be used to list possible options and the functions of each aspect of the spreadsheet in more detail. 
 
 Here is a column-by-column explanation of each component of the import mapping document.
+
+Parts of an Import Mapping: Settings, Columns, and More
+-------------------------------------------------------
+
+Settings
+--------
+
+Every import mapping requires general settings. Settings include the importer name, data format of the source data (for a comprehensive list of supported file formats, please see xxx), the selected CollectiveAccess table, and more. This section can be placed at the top or bottom of a mapping spreadsheet. Although the Settings are integrated into the spreadsheet, they do function separately from the main column-defined body of the import mapping.
+
+.. note:: In Settings, the rule types in Column 1 must be set to “Settings.” 
+
+.. csv-table::
+   :widths: auto
+   :header-rows: 1
+   :file: import_settings.csv
+
+Columns
+-------
+
+Column 1: Rule Types
+^^^^^^^^^^^^^^^^^^^^
+
+
+
+
+
 
 .. _import_rule_types:
 

@@ -1,0 +1,6 @@
+﻿File Format,Source Format
+"Excel (XLSX), other spreadsheets","Column letters must be converted to numbers. Once this is done, Source values will be input as numbers: 1, 2, 3, and so on."
+XML,"Source values will be input as the verbatim name of the XML tag, preceded with a forward slash, /. "
+XPath,
+MARC,
+FMPXML/RESULT,

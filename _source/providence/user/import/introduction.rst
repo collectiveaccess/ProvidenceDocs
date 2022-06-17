@@ -6,7 +6,7 @@ Basic Concepts: What is an Import Mapping?
 
 In order to import data into CollectiveAccess, it is necessary to define exactly *how* and *where* the source data will be imported. This information, along with other settings and criteria, is defined in an **import mapping spreadsheet.**
 
-An import mapping spreadsheet (XLSX or GoogleSheets) defines how data is imported into CollectiveAccess. This spreadsheet acts as a crosswalk, detailing where data is coming from outside of CollectiveAccess (source), and where that same data will go once it is in CollectiveAccess (destination). There are many settings and options available in an import mapping to help organize and manipulate source data, and to ensure that data gets imported in a logical way, while also meeting a variety of user needs. These settings and options are described in more detail on the `Basic Data Import Tutorial <https://manual.collectiveaccess.org/import/tutorial.html>`_ page. 
+An import mapping spreadsheet (XLSX or GoogleSheets) defines how data is imported into CollectiveAccess. This spreadsheet acts as a crosswalk, detailing where data is coming from outside of CollectiveAccess (source), and where that same data will go once it is in CollectiveAccess (destination). There are many settings and options available in an import mapping to help organize and manipulate source data, and to ensure that data gets imported in a logical way, while also meeting a variety of user needs. These settings and options are described in more detail on the `Creating an Import Mapping: Overview <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/c_creating_mapping.html>`_ page. 
 
 Why use an Import Mapping?
 --------------------------
