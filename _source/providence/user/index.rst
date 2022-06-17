@@ -19,3 +19,4 @@ Providence user guide
    Administration <administration/index>
    Developer <developer/index>
    Reference <reference/index>
+   Cookbook <cookbook/index>

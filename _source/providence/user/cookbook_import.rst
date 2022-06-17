@@ -12,6 +12,36 @@ Click on a scenario below in the Contents to view problems and solutions. For mo
 Contents
 --------
 
+* `Mapping Related Object Lot Records`_
+* `Creating Object Lot Records in an Object Lots Table`_
+* `Mapping Entities to ca_entities Table`_
+* `Uploading an Import Mapping Spreadsheet via the User Interface in CollectiveAccess`_
+* `Importing a Constant Value`_
+* `Grouping Data Together into One Container Element`_
+* `Conditionally Skipping Data`_
+* `Formatting a Title`_
+* `Importing a List`_
+* `Importing to Yes/No Checkboxes`_
+* `Foreign Key Constraint in Object Lots`_
+* `Mapping Object Lot Identification Numbers`_
+* `Mapping Serial Identification Numbers from multipart_id_numbering.conf`_
+* `Importing Multiple Relationship Types`_
+* `Creating One Entity Record from Separate Data Source Columns`_
+* `Mapping Entities into a Container Field`_
+* `Building a Hierarchy Above Related Records`_
+* `Building a Hierarchy with Variable Amount of Levels`_
+* `Importing a Hierarchy Within a Collections Table (ca_collections)`_
+* `Using Rules`_
+* `Including Metadata in a Refinery Parameter`_
+* `Mapping Measurements from one Source to Separate Fields`_
+* `Setting a Unit Specifier for Mapping Dimensions`_
+* `Using a Hierarchical Delimiter for Storage Locations`_
+* `Importing XML`_
+* `Importing MARC`_
+* `Mapping a MARC element with multiple sub-fields`_
+* `Importing Indented Hierarchical List Items`_
+* `Values Importing Improperly from Excel`_
+
 Mapping Related Object Lot Records
 ---------------------------------- 
 
