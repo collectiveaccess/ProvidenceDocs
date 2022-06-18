@@ -31,8 +31,10 @@ Providence requires three core open-source software packages be installed prior 
    :file: software_packages.csv
 
 .. _PHP: https://php.net/
-.. _Apache or nginx: https://httpd.apache.org/ or https://nginx.org
+.. _Apache: https://httpd.apache.org/
+.. _nginx: https://httpd.apache.org/ or https://nginx.org
 .. _MySQL: https://dev.mysql.com/
+.. _MariaDB: https://mariadb.org/
 
 All of these should be available as pre-compiled packages for most Linux distributions and as installer packages for Windows. For Macs, `Brew`_ is a highly recommended way to get all of CA's prerequisites quickly up and running.
 
