@@ -1,9 +1,10 @@
-**Introduction to Search & Browse Types**
-=====================================
+**Introduction to Search & Browse Types
+=======================================
 
 There are three basic ways to search for records within CollectiveAccess: Find, Browse, and Quicksearch. Each method generates different results, ranging from general to more specific. Each of these methods also streamlines search queries in CollectiveAccess and generates accurate, and relevant, results.
 
-**Find**
+Find
+----
 
 Using Find enables a targeted search for records within a single primary table of metadata elements. The Find option is the second tab of the Global Navigation bar. Searching using Find generates results from Objects, Entities, Collections, or any other primary table that is supported by CollectiveAccess.
 
@@ -11,11 +12,13 @@ There are several filters provided that narrow down search results: sorting by r
 
 Within Find, options exist within each primary table which determines the scope of the search criteria: Basic, Advanced Search, Search Builder, and Browse. 
 
-**QuickSearch**
+QuickSearch
+-----------
 
 Using QuickSearch runs a full-text query across the entire database, and organizes results according to primary tables. QuickSearch is located at the top right of any CollectiveAccess user interface. The results provide a database-wide context for any search query. The top 100 results for a search query are displayed. QuickSearch will process queries with single words, numbers, or phrases. 
 
-**Browse**
+Browse
+------
 
 Browse filters results by primary table, with additional facets that narrow down a search query within the database. Browse is a method for viewing all records of a specific type, and allows sorting and filtering records based on designated attributes, which are configurable. 
 
