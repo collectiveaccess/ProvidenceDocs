@@ -7,7 +7,7 @@ This section is not an exhaustive, step-by-step guide for every possible option 
 
 Each scenario begins with a “problem,” describing a certain challenge or question that may occur during a data import, or, the creation of an import mapping spreadsheet. There is an accompanying “solution” provided for each problem, which outlines how to carry out the necessary steps to reach a specific outcome for a data import or import mapping spreadsheet. 
 
-Click on a scenario below in the Contents to view problems and solutions. For more support, please see the online Support Forum, Online Chat, Slack Channel for Developers, and Back- and Front-end GitHub Repositories. 
+Click on a scenario below in the Contents to view problems and solutions. For more support, please see the online `Support Forum <https://collectiveaccess.org/support/>`_, `Online Chat <https://gitter.im/collectiveaccess/support>`_, `Slack Channel for Developers <https://collectiveacc-uye7574.slack.com/join/signup#/domain-signup>`_, and `Back-end <https://github.com/collectiveaccess/providence>`_ and `Front-end <https://github.com/collectiveaccess/pawtucket2>`_ GitHub Repositories.  
 
 Contents
 --------
