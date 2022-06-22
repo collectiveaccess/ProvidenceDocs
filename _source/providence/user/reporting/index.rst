@@ -14,3 +14,4 @@ Reporting
    Generating Labels <labels>
    Barcodes <barcodes>
    Creating Reports <creating_reports.rst>
+   Display Templates Tutorial <display_template_tutorial.rst>
