@@ -11,3 +11,4 @@ Administration
    Maintenance Functions <maint>
    Command line utilities <caUtils>
    Color Coding the Inspector <colorcodinginspector.rst>
+   Inspector Display Flags <inspector_display_flags.rst>

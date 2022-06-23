@@ -9,14 +9,15 @@ Introduction
 
 The purpose of an import mapping is to define specifically *how* and *where* source data will be imported into CollectiveAccess. Data must be imported into CollectiveAccess using an import mapping. 
 
-An import mapping is a spreadsheet (XLSX or GoogleSheets) that defines how data is imported into CollectiveAccess. This spreadsheet acts as a crosswalk, detailing where data is coming from outside of CollectiveAccess, and where that same data will go in CollectiveAccess. For a tutorial using a Sample Import Mapping Spreadsheet and Sample Import Data, please see Putting it All Together: A First Import. 
+An import mapping is a spreadsheet (XLSX or GoogleSheets) that defines how data is imported into CollectiveAccess. This spreadsheet acts as a crosswalk, detailing where data is coming from outside of CollectiveAccess, and where that same data will go in CollectiveAccess. For a tutorial using the Sample Import Mapping Spreadsheet and Sample Import Data, please see `Tutorial: Import Mapping Spreadsheet <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/c_import_tutorial.html>`_. 
 
-Each import mapping spreadsheet contains a set of intrinsic columns. A comprehensive description and function of these columns will be described below. Each import mapping also contains specific, customized Settings. Unlike Putting it All Together: A First Import, this section will not use sample data or a sample spreadsheet to illustrate what the parts of an import mapping spreadsheet look like. Instead, tables will be used to list possible options and the functions of each aspect of the spreadsheet in more detail. 
+Each import mapping spreadsheet contains a set of intrinsic columns. A comprehensive description and function of these columns will be described below. Each import mapping also contains specific, customized Settings. This section will not use sample data or a sample spreadsheet to illustrate what the parts of an import mapping spreadsheet look like. Instead, tables will be used to list possible options and the functions of each aspect of the spreadsheet in more detail. 
 
-Here is a column-by-column explanation of each component of the import mapping document. To follow along with this tutorial, download the following two files: 
+Here is a column-by-column explanation of each component of the import mapping spreadsheet. To follow along with this tutorial, download the following two files: 
 
-Files here 
+:download:`Sample Import Mapping Spreadsheet <sample_mapping_tutorial.xlsx>`: The import mapping spreadsheet; a schema crosswalk. For every data source, a target “destination” in CollectiveAccess is defined. This file is in the supported file format of XLXS; therefore, columns and rows are numbered using 1, 2, 3, and so on. 
 
+:download:`Sample Import Data (Source Data) <sample_import_data_tutorial.xlsx>`: The sample source data. This sample data includes three records (one row = one record), with 10 examples of possible metadata fields (one column = one field). The sample data is in the supported file format of XLXS; therefore, columns and rows are numbered using 1, 2, 3, and so on. 
 
 Parts of an Import Mapping: Settings, Columns, and More
 -------------------------------------------------------

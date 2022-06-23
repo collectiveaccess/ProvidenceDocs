@@ -21,7 +21,7 @@ In order to batch-edit records, a set must be created and defined. For more on c
 Batch Editing Using Sets
 ------------------------
 
-Once a Set is established, a batch edit can be executed from the My Sets screen. Navigate to **Manage > My Sets**, and select the icon in the **# Items** |icon| column.
+Once a Set is established, a batch edit can be executed from the My Sets screen. Navigate to **Manage > My Sets**, and select the icon |icon| in the **# Items** column.
 
 .. |icon| image:: batchedit6.png
           :scale: 50% 

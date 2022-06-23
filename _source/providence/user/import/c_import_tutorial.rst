@@ -1,15 +1,18 @@
-Sample Import Mapping Spreadsheet: Column Overview
-==================================================
+Tutorial: Import Mapping Spreadsheet
+====================================
 
 To follow along with this tutorial, download the following three files:
 
-`Sample Import Mapping Spreadsheet <../_static/_files/sample_mapping_tutorial.xlsx>`_: The import mapping spreadsheet; a schema crosswalk. For every data source, a target “destination” in CollectiveAccess is defined. This file is in the supported file format of XLXS; therefore, columns and rows are numbered using 1, 2, 3, and so on. 
+:download:`Sample Import Mapping Spreadsheet <sample_mapping_tutorial.xlsx>`: The import mapping spreadsheet; a schema crosswalk. For every data source, a target “destination” in CollectiveAccess is defined. This file is in the supported file format of XLXS; therefore, columns and rows are numbered using 1, 2, 3, and so on. 
 
-`Sample Import Data (Source Data) <../_static/_files/sample_import_data_tutorial.xlsx>`_: The sample source data. This sample data includes three records (one row = one record), with 10 examples of possible metadata fields (one column = one field). The sample data is in the supported file format of XLXS; therefore, columns and rows are numbered using 1, 2, 3, and so on. 
+:download:`Sample Import Data (Source Data) <sample_import_data_tutorial.xlsx>`: The sample source data. This sample data includes three records (one row = one record), with 10 examples of possible metadata fields (one column = one field). The sample data is in the supported file format of XLXS; therefore, columns and rows are numbered using 1, 2, 3, and so on. 
 
-`Sample Installation Profile <../_static/_files/Sample_import_profile.xml>`_: The sample Providence installation profile. This profile, written in XML format, defines the aspects of the CollectiveAccess system, into which the example data is imported. The profile tells the software how to set up various aspects of Providence. For more on installation profiles in CollectiveAccess, please see `Profiles <https://manual.collectiveaccess.org/dataModelling/Profiles.html>`_. 
+:download:`Sample Installation Profile <Sample_import_profile.xml>`: The sample Providence installation profile. This profile, written in XML format, defines the aspects of the CollectiveAccess system, into which the example data is imported. The profile tells the software how to set up various aspects of Providence. For more on installation profiles in CollectiveAccess, please see `Profiles <https://manual.collectiveaccess.org/dataModelling/Profiles.html>`_. 
 
-Open the Sample Import Data (Source Data) and the Sample Import Mapping Spreadsheet. When opened, the Sample Import Data (Source Data) will look like this: 
+Import Mapping Spreadsheet: Column Overview
+-------------------------------------------
+
+Download and open the Sample Import Data (Source Data) and the Sample Import Mapping Spreadsheet. When opened, the Sample Import Data (Source Data) will look like this: 
 
 .. figure:: importtutorial1.png
    :align: center

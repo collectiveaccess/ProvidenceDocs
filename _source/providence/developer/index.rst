@@ -16,11 +16,12 @@ Providence developer guide
    Update Installation Profile <update_installation_profile.rst>
    Replication <Replication.rst>
    Configuration Sync <config_sync.rst>
+   Configuring Displays <config_displays.rst>
    Deduplication <deduplication.rst>
    Prepopulate <prepopulate.rst>
    Pawtucket2: Plguin Hooks <plugin_hooks.rst>
    Dependent Field Visibility <dep_field.rst>
-   Directory Layout <directory_layout.rst>
+   Pawtucket Directory Layout <directory_layout.rst>
    Addressing Data in Bundleable Models <bundleable_models.rst>
    API: Models and Tables <api_models.rst>
    API: Getting Data and Methods of Access <api_getting_data.rst>

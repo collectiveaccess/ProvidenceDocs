@@ -8,7 +8,7 @@ Import
 
    Introduction <introduction.rst>
    Creating an Import Mapping: Overview <c_creating_mapping.rst>
-   Tutorial: Import Mapping Spreadsheet <c_import_column_overview.rst>
+   Tutorial: Import Mapping Spreadsheet <c_import_tutorial.rst>
    Running an Import <running>
    WorldCat <worldcat>
    Getty Vocabularies <getty>

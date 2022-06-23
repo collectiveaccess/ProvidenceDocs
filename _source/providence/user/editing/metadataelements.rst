@@ -13,7 +13,7 @@ To create a new metadata element in the user interface:
 1. Navigate to **Manage > Administration**. 
 2. Select **Metadata Elements** from the sidebar. This displays a complete list of all of the metadata elements currently available in the system: 
 
-.. image: metadata2.png
+.. image:: metadata_el2.png
    :scale: 50%
    :align: center
 
@@ -22,9 +22,13 @@ To create a new metadata element in the user interface:
 .. |plus| image:: metadata1.png
           :scale: 50%
 
-.. image:: metadata3.png
+.. figure:: metadata3.png
    :scale: 50%
    :align: center
+
+   The Record for the new metadata element being created. 
+
+Fields to fill in for the new metadata element include:
 
 * **Labels**: Enter a Display Name for the new Metadata Element, and a description of the Metadata Element.
 * **Disambiguation Labels**: 

@@ -23,25 +23,25 @@ The export-profile utility now has an additional, optional parameter, **-t/--tim
 
 The parameter should be a Unix timestamp, typically a 10 digit number. Find the current unix time by running:
 
-.. code-block: none
+.. code-block:: php
 
    date +%s
 
 in a terminal. Dates can also be easily converted into timestamps:
 
-.. code-block: php
+.. code-block:: php
 
    date -d"2016-01-28T10:00" +%s
 
 Once the timestamp is converted, run the exporter like so:
 
-.. code-block: php
+.. code-block:: php
 
    support/bin/caUtils export-profile -t 1465287584
 
 To redirect the output to a file ~/foo.xml:
 
-.. code-block: php
+.. code-block:: php
 
    support/bin/caUtils export-profile -t 1465287584 -o ~/foo.xml
 
@@ -50,7 +50,7 @@ Exporting Via Web Service
 
 The same functionality is also available via web service:
 
-.. code-block: php
+.. code-block:: php
 
    curl -XGET 'http://administrator:dublincore@localhost/service.php/model/exportConfig?modifiedAfter=1465287584'
 
@@ -58,7 +58,7 @@ For a partial configuration either created by hand or via the export tools descr
 
 Put the partial profile in install/profiles/xml and then run: 
 
-.. code-block: php
+.. code-block:: php
 
    support/bin/caUtils update-installation-profile -n <name_of_your_profile>
 
@@ -78,7 +78,7 @@ Automatically Push or Replicate Configuration Changes to Another System
 
 If there are multiple systems running off the same configuration, the two above features together can automatically push configuration changes from one master system, to all other systems. This is another script in caUtils that can be used like this:
 
-.. code-block: php
+.. code-block:: php
 
    support/bin/caUtils push-config-changes -t http://yourclient/ -u configsync -p topsecret -s 1464870539
 
