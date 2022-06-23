@@ -175,13 +175,24 @@ To add screen-specific settings for relationships:
 .. |page| image:: uiadmin2.png  
           :scale: 40% 
 
-3. Scroll down to the **Screens** field in the Basic Info page. 
+3. Scroll down to the **Screens** field in the Basic Info page: 
+
+.. image:: screens.png
+   :scale: 50%
+   :align: center
+
+The number of screens available for editing depends on the user interface selected. 
 4. Select the **page icon** |page| to the right of the screen to be edited. 
 
 .. |page| image:: uiadmin2.png
           :scale: 40%
 
 5. Scroll down to the **Screen Content** field. 
+
+.. image:: screencontent.png
+   :scale: 50%
+   :align: center
+
 6. Select the **i** icon |icon| to edit the bundle. A smaller window will display various settings.
 
 .. |icon| image:: uiadmin8.png
