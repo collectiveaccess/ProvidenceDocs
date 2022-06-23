@@ -32,13 +32,13 @@ Move
 
 The Move function chooses a new location for a specific record within the hierarchy. The "Find" field appears here as well to help locate specific records: 
 
-.. image:: loc3.png
+.. image:: move.png
    :scale: 50%
    :algin: center
 
 To choose a new parent record, select the record’s title; it becomes bold and a message in red appears in the hierarchy bundle. Upon saving the page, the selected record will be moved to this new location:
 
-.. image:: loc4.png
+.. image:: move2.png
    :scale: 50%
    :algin: center
 
@@ -49,7 +49,7 @@ The Add function is a shortcut that creates a new child or sibling record relati
 
 To add a new child or sibling record, select the record type and whether the new record will be a child or sibling in the menu. Click the plus icon to create the new child or sibling record that appears after the current record’s title. Save any changes made before creating a new record.
 
-.. image:: loc5.png
+.. image:: add.png
    :scale: 50%
    :algin: center
 

@@ -167,7 +167,7 @@ Screen-Specific Settings For Relationships
 
 Relationships have additional screen-specific settings. These can be managed in the same place that screen-specific settings are managed. Note that these settings will *not* show up in all bundles, just those that specifically refer to Relationships.
 
-To do add screen-specific settings for relationships: 
+To add screen-specific settings for relationships: 
 
 1. Navigate to **Manage > Administration > User Interfaces**.
 2. Select the **page icon** |page| to select the user interface screen to edit. 

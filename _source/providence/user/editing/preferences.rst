@@ -140,8 +140,7 @@ Developer
 
 Developer preferences can be set to show more details about field bundle codes, template debuggers, and query details. 
 
-
-.. :image:: preferences10.png
+.. image:: preferences10.png
    :scale: 50%
    :align: center
 
