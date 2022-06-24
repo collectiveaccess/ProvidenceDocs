@@ -118,7 +118,7 @@ In CollectiveAccess, you can select a cataloging interface (See Figure 1) based 
 
 INSERT FIGURE 1
 
-For CollectiveAccess to function properly, 33 types of System Lists need to be present and defined for the Primary Types - objects, object events, lots, lot events, entities, places, occurrences, collections, storage locations, list items, object representations, object representation annotations and sets. All of the lists may be hierarchical, although most tend to be single-level in most cases.
+For CollectiveAccess to function properly, 13 types of System Lists need to be present and defined for the Primary Types - objects, object events, lots, lot events, entities, places, occurrences, collections, storage locations, list items, object representations, object representation annotations and sets. All of the lists may be hierarchical, although most tend to be single-level in most cases.
 
 Control (User) Lists
 ~~~~~~~~~~~~~~~~~~~~
@@ -166,7 +166,7 @@ Dublin Core actually has eight format types, but for the sake of this example, w
    - <list code> - "dc_format" is the unique code name for this list. Can not match any other list codes in the profile and can not contain spaces.
    - <labels> - lets you give the list a name in defined locales, in this case English with the human readable name Dublin Core Format. If you were writing the profile to support more than one locale you would add labels for each locale. (Don't worry if you don't define labels for all allowed locales. CollectiveAccess will fall back to other languages if a label is not available in the user's language).
    - hierarchical="0" - controls how data will display and be used in the editing user interface. If hierarchical is set to 1, then the list can be a multi-level hierarchy.
-   - system="0" - determines if the list is one of the 33 System Lists.
+   - system="0" - determines if the list is one of the 13 System Lists.
    - vocabulary="0" - controls if the list is treated as a controlled vocabulary included in vocabulary term searches.
    - item idno="application" - the unique code name for this list item
    - application, audio & example - are items in the list. Note that the key for each item must be unique within the list.
