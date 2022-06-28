@@ -26,8 +26,6 @@ For more on creating relationships within an import mapping, see the `Import Map
 To view what relationship types are available in a system, navigate in CollectiveAccess to Manage > Administration > Relationship Types. A list of relationships will be displayed, with their corresponding relationship types. 
 
 .. image:: Relationships1.png
-   :width: 1974px
-   :height: 998px
    :align: center
    :scale: 40% 
 
@@ -43,10 +41,32 @@ A variety of types are available to help best describe the data in any given dat
 
 Choose "Relationships" from the side navigation in any type of record in the database. This will display a page of all the possible relationships between record types available to use. 
 
-In order to state a relationship, a record or records must already exist in the database. For example, when relating an Object record to an Entity, there must already be a separate and existing record for that particular Entity. 
+.. image:: relationships2.png
+   :scale: 50%
+   :align: center
+
+In order to state a relationship, a record or records must already exist in the database. For example, when relating an Object record to an Entity, there must already be a separate and existing record for that particular Entity. Note that each available relationship in the Relationships tab contains an arrow icon |icon| which indicates a relationship can be searched and added from that field. 
+
+.. |icon| image:: downarrow.png
+            :scale: 50%
+
+To add a relationship to an existing record, simply begin typing into the field of any given relationship as needed. A drop-down list will appear that best matches the typed text, and will display a list to choose from. This list will also include an option to *Create* a record for the new relationship.
+
+.. image:: relationships3.png
+   :scale: 50%
+   :align: center
+
+Once the correct record to relate is identified, select it. An optional dropdown menu will appear to the right, where the relationship type can be clarified, if needed (for example, when relating Entities, shown below.)
+
+.. figure:: relationships4.png
+   :scale: 50%
+   :align: center
+
+   Relating an Entity.
+
+Save the changes made to the Relationships screen.
 
 It is also possible to create hierarchical relationships between records of various types.
-
 
 
 

@@ -57,6 +57,14 @@ Mapping The Original and Replacement Values
 
 Once the lists of original and replacement values are made, copy and paste the Original Values into Column 8 and the Replacement Values into Column 9 in the import mapping spreadsheet for the specific mapping the replacement values will apply to. Take care that each value list is contained in a single cell on the correct line. Values in the lists should correspond correctly on a line by line basis. 
 
-If you are directly entering Original and Replacement values into the import mapping spreadsheet, you can add additional lines within the cells containing each list using **alt + shift + enter** after each item to embed a newline within the cell. IOriginal values and Replacement values must match line by line in order for CollectiveAccess to apply them properly. 
+If you are directly entering Original and Replacement values into the import mapping spreadsheet, you can add additional lines within the cells containing each list using **alt + shift + enter** after each item to embed a newline within the cell. Original values and Replacement values must match line by line in order for CollectiveAccess to apply them properly. 
+
+.. figure:: orig.png
+   :scale: 50%
+   :align: center
+
+   The Original and Replacement Values for Acqusitions and Conditions in the import mapping spreadsheet; each value matches line by line.
+
+   
 
 
