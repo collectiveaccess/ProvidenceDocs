@@ -1,0 +1,5 @@
+﻿Option,Description
+General Information,The log for the data import will display general information about the data import. 
+Skip Message,"The log for the data import will display only Skip messages, meaning only places in the import that were skipped will be shown in the log."
+Existing Record Policy Messages,The log for the data import will only contain messages about Existing Record Policies.
+Relationship Creation Messages,The log for the data import will only contain messages about Relationships created during the data import. 

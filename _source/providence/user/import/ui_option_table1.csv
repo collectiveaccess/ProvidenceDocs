@@ -1,0 +1,6 @@
+﻿Option,Description
+Errors,All errors will display as the import progresses on the same screen where the import is running
+Warnings,Warning messages will display as the import progresses on the same screen where the import is running
+Alerts,Alerts wll display 
+Informational Messages,Informational messages will display
+Debugging Messages,Debugging messages will display

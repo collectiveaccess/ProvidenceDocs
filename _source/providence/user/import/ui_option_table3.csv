@@ -1,0 +1,2 @@
+﻿Option,Description
+Dry run,"The import will run and generate a log including errors and debugging messages, without actually creating any records in the system. A good way to test an import mapping spreadsheet, especially for larger data sets. "
