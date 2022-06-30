@@ -1,0 +1,5 @@
+﻿Type of Refinery Parameter,Parameter Notes,Example in an Import Mapping
+levels,List of sources for hierarchy levels,"""levels"":[""^1"", ""^2"", ""^3""]"
+levelTypes,List of types for hierarchy levels,"""levelTypes"":[""concept"", ""concept"", ""concept""]"
+list,Code of list to import items into,"""list"": ""categories"""
+mode,"Set to ""returnData"" to return the id of lowest item in the hierarchy to the importer; set to ""processOnly"" to create the list items in the hierarchy but not return values to the importer. Default is to process only.","""mode"": ""processOnly"""

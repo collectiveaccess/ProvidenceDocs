@@ -1,0 +1,50 @@
+﻿Type of Refinery Parameter,Parameter Notes,Example in an Import Mapping,
+parents,"Maps the parent levels that should be built or matched hierarchical above the imported data. The parent parameter has several sub-parameters including:
+
+idno: maps the level-specific idno
+
+name: maps the level-specific preferred_label
+
+type: maps the level-specific record type (must match the item idno exactly)
+
+attributes: maps the (optional) level-specific metadata. Includes the metadataElement code and the data source.
+
+rules: maps any (optional) level-specific rules .","{
+   ""parents"": [
+       {
+           ""idno"": ""^3"",
+           ""name"": ""^4"",
+           ""type"": ""event"",
+           ""attributes"": {
+               ""ca_occurrences.description"": ""^10""
+           }
+       },
+       {
+           ""idno"": ""^5"",
+           ""name"": ""^6"",
+           ""type"": ""event_series""
+       }
+   ]
+}",
+relationships,From version 1.5. A list of relationships using the relevant splitter refineries. The settings for this item reflect the settings used for the relevant splitter refinery. The only additional setting here is relatedTable which is a required value.," {
+  ""relationships"" : [
+   {
+    ""relatedTable"": ""ca_entities"",
+    ""type"" : ""ind"",
+    ""relationshipType"": ""creator"",
+    ""preferredLabel"": ""^7"",
+    ""attributes"" : {
+     ""notes"" : ""^10""
+    }
+   },
+   {
+    ""relatedTable"": ""ca_entities"",
+    ""type"" : ""org"",
+    ""relationshipType"": ""source"",
+    ""preferredLabels"" : [{""forename"": ""^5"", ""surname"":""^6""}],
+    ""attributes"" : {
+     ""phone"" : ""^33""
+    }
+   }
+  ]
+ }",

@@ -3,8 +3,13 @@
 Mapping Options
 ===============
 
-Options allow you to set additional formatting and conditionals on data during import. Some Options are designed to actually set parameters on the mapping behavior, such as the skip options. skipGroupIfEmpty, for example, allows you to prevent the import of certain fields, depending on the presence of data in another related field. Other Options simply format data, such as formatWithTemplate, suffix, and convertNewlinesToHTML. 
+Options allow you to set additional formatting and conditionals on data during import. Some Options are designed to actually set parameters on the mapping behavior, such as the skip options. **skipGroupIfEmpty**, for example, allows you to prevent the import of certain fields, depending on the presence of data in another related field. Other Options simply format data, such as **formatWithTemplate**, **suffix**, and **convertNewlinesToHTML**. 
 
+A full list of mapping options is listed below.
+
+.. csv-table::
+   :header-rows: 1
+   :file: mapping_options.csv
 
 
 Option: applyRegularExpressions
