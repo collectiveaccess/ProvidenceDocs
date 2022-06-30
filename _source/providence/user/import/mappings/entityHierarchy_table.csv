@@ -1,0 +1,24 @@
+﻿Refinery Parameter,Parameter Notes,Example in an Import Maping
+doNotParse,"From version 1.7. This setting will force the import to migrate an organization's name as is when using the ""entity_class"" = ORG setting. Otherwise parts of the name get lost in the parse.","{""doNotParse"": ""1""}"
+parents,"Maps the parent levels that should be built or matched hierarchically above the imported data. The parent parameter has several sub-parameters including:
+
+idno: maps the level-specific idno
+
+name: maps the level-specific preferred_label
+
+type: maps the level-specific record type (must match the item idno exactly)
+
+attributes: maps the (optional) level-specific metadata. Includes the metadataElement code and the data source.
+
+nonPreferredLabels: maps the level-specific nonpreferred_label
+
+rules: maps any (optional) level-specific rules.","{
+""parents"": [
+
+ {
+  ""idno"": ""^2"",
+  ""name"": ""^3"",
+  ""type"": ""org""
+ }
+]
+}"

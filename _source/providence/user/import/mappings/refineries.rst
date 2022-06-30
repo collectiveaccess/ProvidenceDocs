@@ -57,3 +57,66 @@ entitySplitter
 
 entityHierarchyBuilder
 ^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table::
+   :header-rows: 1
+   :file: entityHierarchy_Table.csv
+
+entityJoiner
+^^^^^^^^^^^^
+
+.. csv-table::
+   :header-rows: 1
+   :file: entityJoiner_table.csv
+
+collectionSplitter
+^^^^^^^^^^^^^^^^^^
+
+
+
+
+
+
+collectionHierarchySplitter
+
+placeSplitter
+
+placeHierarchyBuilder
+
+movementSplitter
+
+objectLotSplitter
+
+objectSplitter
+
+objectRepresentationSplitter
+
+objectHierarchyBuilder
+
+occurrenceSplitter
+
+occurrenceHierarchyBuilder
+
+listItemSplitter
+
+listItemHierarchyBuilder
+
+listItemIndentedHierarchyBuilder
+
+storageLocationSplitter
+
+storageLocationHierarchyBuilder
+
+storageLocationSplitter
+ 
+measurementSplitter
+
+tourStopSplitter
+
+tourMaker
+
+dateJoiner
+
+dateAccuracyJoiner
+
+ATRelatedGetter 
