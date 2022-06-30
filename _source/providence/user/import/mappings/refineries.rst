@@ -16,12 +16,16 @@ There are a few types of refineries commonly used in CollectiveAccess:
 
 * **Builders:** A Builder creates an upper hierarchy above the to-be-imported data. For more, see `Builders <https://manual.collectiveaccess.org/import/mappings/builders.html>`_. 
 
-For a comprehensive list of refineries, please see...
+For a comprehensive list of refineries, see the table below. 
+
+.. csv-table::
+   :header-rows: 1
+   :file: Refineries_Full_List.csv
 
 Refinery Parameter
 ------------------
 
-Refineries can't function properly without refinery parameters. Refinery parameters simply define the conditions for the refinery. An example is below. 
+Refineries can't function properly without refinery parameters. Refinery parameters simply define the conditions for the refinery. An example is below: 
 
 +---------+---------+-----------+-----------------------------------------+
 | entitySplitter    |{"relationshipType": "creator", "entityType": "ind"} |
@@ -42,3 +46,14 @@ Once imported into CollectiveAccess, this refinery and its parameter that exists
 
 Note that Refineries are optional. If source data does not require more complex elements, they are not needed in a mapping. However, Refineries are extremely useful in pre-defining these more complex elements which determine how data is inter-connected, and automatically importing data in the most straightforward, and logical, format. 
 
+For a comprehensive list of refinery parameters for each refinery, see the tables below. 
+
+entitySplitter
+^^^^^^^^^^^^^^
+
+.. csv-table::
+   :header-rows: 1
+   :file: entitySplitter_table.csv
+
+entityHierarchyBuilder
+^^^^^^^^^^^^^^^^^^^^^^
