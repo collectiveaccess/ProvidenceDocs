@@ -86,6 +86,18 @@ objectLotSplitter
    :header-rows: 1
    :file: refinery_parameter_objectlotSplitter.csv
 
+objectRepresentationSplitter
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table::
+   :header-rows: 1
+   :file: refinery_parameter_objectrepSplitter.csv
+
+occurrenceSplitter
+^^^^^^^^^^^^^^^^^^
+
+
+
 
 
 Builders
