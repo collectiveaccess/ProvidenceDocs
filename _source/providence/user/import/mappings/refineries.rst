@@ -127,15 +127,22 @@ loanSplitter
 measurementSplitter
 ^^^^^^^^^^^^^^^^^^^
 
+.. csv-table::
+   :header-rows: 1
+   :file: refinery_parameter_measurementSplitter.csv
+
+
 tourStopSplitter
 ^^^^^^^^^^^^^^^^
 
-include?
+.. csv-table::
+   :header-rows: 1
+   :file: refinery_parameter_tourStop.csv
 
 Builders
 --------
 
-Please see `Builders
+Please see `Builders <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/mappings/builders.html?highlight=builders>`_. 
 
 Joiners
 -------

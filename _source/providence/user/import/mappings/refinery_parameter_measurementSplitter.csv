@@ -1,0 +1,23 @@
+﻿Type of Refinery Parameter,Parameter Notes,Example
+delimiter,"Sets the value of the delimiter to break on, separating measurement values","{""delimiter"": ""x""}"
+units,Sets the value of the measurement unit,"{""units"": ""in""}"
+elements,Maps the components of the dimensions to specific metadata elements,"{
+   ""elements"": [
+       {
+           ""quantityElement"": ""measurementWidth"",
+           ""typeElement"": ""measurementsType"",
+           ""type"": ""width""
+       },
+       {
+           ""quantityElement"": ""measurementHeight"",
+           ""typeElement"": ""measurementsType2"",
+           ""type"": ""height""
+       }
+   ]
+}
+Note: the typeElement and type sub-components are optional and should only be used in measurement containers that include a type drop-down."
+attributes,Maps the other non-measurement elements that may be in the same container. Values here are set for all measurements being split.,"{
+   ""attributes"": {
+       ""notes"": ""^1""
+   }
+}"
