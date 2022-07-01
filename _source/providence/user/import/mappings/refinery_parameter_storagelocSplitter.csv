@@ -1,0 +1,89 @@
+﻿Type of Refinery Parameter,Parameter Notes,Example
+hierarchicalStorageLocationTypes,Sets the storage location types used to label each level in a numerically expressed hierarchy,"{
+   ""hierarchicalStorageLocationTypes"": [
+       ""room"",
+       ""rack"",
+       ""cabinet""
+   ]
+}"
+delimiter,"Sets the value of the delimiter to break on, separating data source values","{""delimiter"":"";""}"
+hierarchicalDelimiter,Specifies the delimiter to on which to break when designating hierarchicalStorageLocationTypes,
+parents,"Maps or builds the parent levels above the record laterally related to the imported data. The parent parameter has several sub-parameters including:
+
+idno: maps the level-specific idno
+
+name: maps the level-specific preferred_label
+
+type: maps the level-specific record type (must match the item idno exactly)
+
+attributes: maps the (optional) level-specific metadata. Includes the metadataElement code and the data source.
+
+rules: maps any (optional) level-specific rules .","{""hierarchicalDelimiter"":"".""}"
+nonPreferredLabels,List of non-preferred labels to apply to tour stops.,"{
+   ""parents"": [
+       {
+           ""idno"": ""^10"",
+           ""name"": ""^12"",
+           ""type"": ""cabinet"",
+           ""attributes"": { ""ca_storage_location.description"": ""^7""}
+       },
+       {
+           ""idno"": ""^14"",
+           ""name"": ""^16"",
+           ""type"": ""room"",
+           ""rules"": [
+               {
+                   ""trigger"": ""^18= 'in progress'"",
+                   ""actions"": [
+                       {
+                           ""action"": ""SET"",
+                           ""target"": ""ca_storage_locations.status"",
+                           ""value"": ""edit""
+                       }
+                   ]
+               }
+           ]
+       }
+   ]
+}"
+interstitial,Sets metadata for the Relationship record (between the target of the mapping and the related entity via the splitter),"{""nonPreferredLabels"":""^5""}"
+relationshipType,Accepts a constant type code for the relationship type or a reference to the location in the data source where the type can be found.,"{
+   ""interstitial"": {
+       ""relationshipDate"": ""^4""
+   }
+}"
+storageLocationType,Accepts a constant list item idno from the list storage_location_types or a reference to the location in the data source where the type can be found.,"{""relationshipType"":""home""}"
+attributes,Sets or maps metadata for the storage location record by referencing the metadataElement code and the location in the data source where the data values can be found.,"{""storageLocationType"":""room""}"
+relationshipTypeDefault,Sets the default relationship type that will be used if none are defined or if the data source values do not match any values in the CollectiveAccess system,"{""attributes"":{""storage_description"":""^7"", ""storage_dates"":""8""}}"
+storageLocationTypeDefault,"Sets the default storage location type that will be used if none are defined or if the data source values do not match any values in the CollectiveAccess list storage_location_types	{""storageLocationTypeDefault"":""permanent""}
+storageLocationSplitter	relationships	","{""relationshipTypeDefault"":""located""}"
+relationships,From version 1.5. A list of relationships using the relevant splitter refineries. The settings for this item reflect the settings used for the relevant splitter refinery. The only additional setting here is relatedTable which is a required value.,"{""storageLocationTypeDefault"":""permanent""}"
+matchOn,"From version 1.5. Defines exactly how the splitter will establish matches with pre-existing records. You can set the splitter to match on idno, or labels. You can also include both labels and idno in the matchOn parameter, and it will try multiple matches in the order specified.","{
+  ""relationships"" : [
+   {
+    ""relatedTable"": ""ca_entities"",
+    ""type"" : ""ind"",
+    ""relationshipType"": ""creator"",
+    ""preferredLabel"": ""^7"",
+    ""attributes"" : {
+     ""notes"" : ""^10""
+    }
+   },
+   {
+    ""relatedTable"": ""ca_entities"",
+    ""type"" : ""org"",
+    ""relationshipType"": ""source"",
+    ""preferredLabels"" : [{""forename"": ""^5"", ""surname"":""^6""}],
+    ""attributes"" : {
+     ""phone"" : ""^33""
+    }
+   }
+  ]
+ }"
+ignoreParent,"From version 1.5. When set to true this parameter allows global match across the entire hierarchy, regardless of parent_id. Use this parameter with datasets that include values to be merged into existing hierarchies but that do not include parent information. Paired with matchOn it's possible to merge the values using only name or idno, without any need for hierarchy info. Not ideal for situations where multiple matches can not be disambiguated with the information available.","{“matchOn”: [“labels”, “idno”]} -Will try to match on labels first, then idno.
+{“matchOn”: [“idno”, “labels”]} - Will do the opposite, first idno and then labels.
+You can also limit matching by doing one or the other. Eg:
+{“matchOn”: [“idno”]} will only match on idno.
+{""matchOn"": [""^ca_storage_locations.your_custom_code""]} will match on a custom metadata element in the location record. Use the syntax ^ca_storage_locations.metadataElement code."
+dontCreate,From version 1.5. If set to true (or any non-zero value) the splitter will only do matching and will not create new records when matches are not found.,"{""ignoreParent"": ""1""}"
+,,"{""dontCreate"": ""1""}"

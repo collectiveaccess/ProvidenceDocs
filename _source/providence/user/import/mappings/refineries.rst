@@ -109,10 +109,13 @@ listItemSplitter
    :header-rows: 1
    :file: refinery_parameter_listItemSplitter.csv
 
-
-
 storageLocationSplitter
 ^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table::
+   :header-rows: 1
+   :file: refinery_parameter_storagelocSplitter.csv
+
 
 loanSplitter
 ^^^^^^^^^^^^
