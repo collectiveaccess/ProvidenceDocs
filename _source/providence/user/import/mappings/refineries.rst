@@ -47,3 +47,32 @@ Once imported into CollectiveAccess, this refinery and its parameter that exists
 Note that Refineries are optional. If source data does not require more complex elements, they are not needed in a mapping. However, Refineries are extremely useful in pre-defining these more complex elements which determine how data is inter-connected, and automatically importing data in the most straightforward, and logical, format. 
 
 For a comprehensive list of refinery parameters for each refinery, see the tables below. 
+
+Splitters
+---------
+
+entitySplitter
+^^^^^^^^^^^^^^
+
+.. csv-table::
+   :header-rows: 1
+   :file: refinery_parameter_entitySplitter.csv
+
+
+
+
+
+
+
+
+
+
+
+Builders
+--------
+
+Please see `Builders
+
+Joiners
+-------
+
