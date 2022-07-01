@@ -48,6 +48,8 @@ Note that Refineries are optional. If source data does not require more complex 
 
 For a comprehensive list of refinery parameters for each refinery, see the tables below. 
 
+these come from: `<https://docs.collectiveaccess.org/wiki/Data_Importer>`_
+
 Splitters
 ---------
 
@@ -100,7 +102,28 @@ occurrenceSplitter
    :header-rows: 1
    :file: refinery_parameter_occurrenceSplitter.csv
 
+listItemSplitter
+^^^^^^^^^^^^^^^^
 
+.. csv-table::
+   :header-rows: 1
+   :file: refinery_parameter_listItemSplitter.csv
+
+
+
+storageLocationSplitter
+^^^^^^^^^^^^^^^^^^^^^^^
+
+loanSplitter
+^^^^^^^^^^^^
+
+measurementSplitter
+^^^^^^^^^^^^^^^^^^^
+
+tourStopSplitter
+^^^^^^^^^^^^^^^^
+
+include?
 
 Builders
 --------
@@ -116,3 +139,12 @@ entityJoiner
 .. csv-table::
    :header-rows: 1
    :file: refinery_parameter_entityJoiner.csv
+
+dateJoiner
+^^^^^^^^^^
+
+dateAccuracyJoiner
+^^^^^^^^^^^^^^^^^^
+
+include?
+
