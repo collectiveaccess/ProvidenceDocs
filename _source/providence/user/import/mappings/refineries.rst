@@ -76,3 +76,9 @@ Please see `Builders
 Joiners
 -------
 
+entityJoiner
+^^^^^^^^^^^^
+
+.. csv-table::
+   :header-rows: 1
+   :file: refinery_parameter_entityJoiner.csv

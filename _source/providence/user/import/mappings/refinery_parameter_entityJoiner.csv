@@ -1,0 +1,43 @@
+﻿Type of Refinery Parameter,Parameter Notes,Example
+entityType,Accepts a constant list item idno from the list entity_types or a reference to the location in the data source where the type can be found,"{""entityType"": ""person""}"
+entityTypeDefault,"Sets the default entity type that will be used if none are defined or if the data source values do not match any values in the CollectiveAccess list entity_types.	","{""entityTypeDefault"": ""person""}"
+forename,Accepts a constant value for the forename or a reference to the location in the data source where the forename can be found.,"{""forename"":""^3""}"
+surname,Accepts a constant value for the surname or a reference to the location in the data source where the surname can be found.,"{""surname"": ""^2""}"
+other_forenames,Accepts a constant value for the entity's other forenames or a reference to the location in the data source where the other forenames can be found.,"{""other_forenames"": ""^10""}"
+middlename,Accepts a constant value for the middlename or a reference to the location in the data source where the middlename can be found.,"{""surname"": ""^12""}"
+displayname,Accepts a constant value for the displayname or a reference to the location in the data source where the displayname can be found.,"{""displayname"": ""^14""}"
+prefix,Accepts a constant value for the prefix or a reference to the location in the data source where the prefix can be found.,"{""prefix"": ""^14""}"
+suffix,Accepts a constant value for the suffix or a reference to the location in the data source where the suffix can be found.,"{""suffix"": ""^14""}"
+attributes,Sets or maps metadata for the entity record by referencing the metadataElement code and the location in the data source where the data values can be found.,"{
+   ""attributes"": {
+       ""agentDateSet"": {
+           ""agentDate"": ""^12""
+       }
+   }
+}"
+nonpreferred_labels,List of non-preferred label values or references to locations in the data source where nonpreferred label values can be found. Use the split value for a label to indicate a value that should be split into entity label components before import.,"{
+   ""nonpreferred_labels"": [
+       {
+           ""forename"": ""^5"",
+           ""surname"": ""^6""
+       }
+   ]
+}
+OR
+{
+
+   ""nonpreferred_labels"": [
+       {
+           ""split"": ""^4""
+       }
+   ]
+}"
+relationshipType,Accepts a constant type code for the relationship type or a reference to the location in the data source where the type can be found,"{""relationshipType"": ""^10""}"
+relationshipTypeDefault,Sets the default relationship type that will be used if none are defined or if the data source values do not match any values in the CollectiveAccess system.,"{""relationshipTypeDefault"": ""author""}"
+skipIfValue,Skip if imported value is in the specified list of values.,"{""skipIfValue"": ""unknown""}"
+relatedEntities,"This allows you to create and/or relate additional entities to the entity being mapped. For example, if you are running an Object mapping and using an entityJoiner to generate related Individuals, but you also want to create entity records for each individual's affiliation, use this setting. ""Name"" is the name of the entity, which will be automatically split into pieces and imported. If you want to explicitly map pieces of a name (surname, forename) you can omit ""name"" and use ""forename"", ""middlename"", ""surname"", etc. ""type"", ""attributes,"" and ""relationshipType"" operate just as they would in a regular splitter.","{""relatedEntities"": [{""type"":""ind"", ""name"": ""^3"", ""attributes"":{}, ""relationshipType"":""related""}]}"
+interstitial,Sets metadata for the Relationship record (between the target of the mapping and the related entity via the splitter),"{
+   ""interstitial"": {
+       ""relationshipDate"": ""^4""
+   }
+}"
