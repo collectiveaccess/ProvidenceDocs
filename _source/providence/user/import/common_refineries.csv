@@ -1,0 +1,7 @@
+﻿Refinery,Description
+entitySplitter,"Creates an Entity Record or finds an exact match on Entity Name, and creates a relationship as defined in the import mapping. Breaks up parts of names, sets Entity type, and other parameters."
+entityJoiner,"Merges data from two or more source data columns to make a single entity record (when first and last Entity names are in two different columns, for example)."
+measurementSplitter,"Formats data values that are mapped to an element of the datatype Length or Weight. Will parse dimension expressions in the form dimension1/delimiter/dimension2, and so on"
+dateJoiner,Merges data from two or more source data columns to make a single data field in CollectiveAccess
+objectLotSplitter,"Creates an Object Lot Record or finds an exact match on name, and creates a relationship"
+storageLocationSplitter,"Creates a Storage Location Record or finds an exact match on name, and creates a relationship"

@@ -1,0 +1,9 @@
+﻿Option ,Description,Example
+delimiter,Splits repeating values on a defined delimiter. ,"{""delimiter"": "";""} or {""delimiter"": "",""}"
+formatWithTemplate,"Display template to format values with prior to import, using placeholder tags ""^"" to incorporate data into the template. For column-based import formats like Excel and CSV the column number is used to reference data. For XML formats an XPath expression is used. While templates are tied to the specific source data element being mapped, they can reference any element in the import data set.","{""formatWithTemplate"": ""Record Modified"": ""^2""}"
+prefix,Text to prepend to value prior to import.,"{""prefix"": ""Dr.""} or {""prefix"": ""^5""}"
+suffix,"Text to append to value prior to import. Placeholder tags ""^"" may be used to incorporate data into the suffix. ","{""suffix"": ""cm""} or {""suffix"": ""^5""}"
+skipIfEmpty,Skip the mapping If the data value being mapped is empty. This option is used for data that does not contain consistent values. ,"{""skipIfEmpty"": 1}"
+displaynameFormat,Transform label using options for formatting entity display names. Default is to use value as is.,"{""surnameCommaForename""}, {""forenameCommaSurname""} , {""forenameSurname""}"
+default,Value to use if data source value is empty.,"{""default"": ""none""}"
+convertNewlinesToHTML,Convert newline characters in text to HTML &lt;BR/&gt; tags prior to import.,

@@ -137,6 +137,12 @@ Row 8 of the import mapping spreadsheet corresponds to Source column 6 in the sa
 
 Using the **skipIfEmpty** option ensures that the empty value in this column does not get imported into the Collective Access system. Declaring the number one after the colon in the Option indicates that the cell will be skipped if empty (1= yes, 0= no). 
 
+For a list of common options used in an import mapping spreadsheet, see the table below. For a full list of mapping options, see `Mapping Options <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/mappings/mappingOptions.html?highlight=options>`_. 
+
+.. csv-table:: 
+   :header-rows: 1
+   :file: common_mapping_options.csv
+
 Column 6: Refinery
 ------------------
 
@@ -158,6 +164,13 @@ To create new, separate, and related records for Entities and Object Lots, Refin
 
 Columns 7 and 8 in the source data contain values for Creators and Accessions. Note that in the sample import mapping, all records are being imported as **ca_objects** records. But, these two columns do not reference object metadata. By using the Refinery **EntitySplitter** for column 7, separate and related Entity records are made from the Creators column. By using the Refinery **ObjectLotSplitter** for column 8, separate and related Object Lot records are made from the Accession column. 
 
+See the table below for a list of common refineries. For a full list of refineries, see `Refineries and Refinery Parameters <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/mappings/refineries.html?highlight=refineries>`_. 
+
+.. csv-table::
+   :header-rows: 1
+   :file: common_refineries.csv
+
+
 Column 7: Refinery Parameters
 -----------------------------
 
@@ -173,6 +186,11 @@ In the sample import mapping, the Refinery **EntitySplitter** indicates that sep
 
 The Refinery **ObjectLotSplitter** indicates that separate and related Object Lot Records will be created from the Accession column in the source data. The Refinery Parameter specifies that these Object Lot records will be displayed as “gifts,” and will contain the Accession Number from column 9 in the source data. 
 
+See the table below for a list of common refinery parameters. For a full list of refineries and refinery parameters, see `Refineries and Refinery Parameters <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/mappings/refineries.html?highlight=refineries>`_. 
+
+.. csv-table::
+   :header-rows: 1
+   :file: common_refinery_parameters.csv
 
 Column 8: Original Values
 -------------------------
@@ -195,7 +213,7 @@ In the sample import mapping, three values are present in row 12.
 
 However, these values do not exist in a predetermined list in CollectiveAccess. By using original and replacement values, upon import, these values are transformed from “orig” to “original,” from “repro” to “reproduction,” and from “dontknow” to “unknown,” so that these values can match on the list item code for any corresponding values in CollectiveAccess. This ensures important data is kept, but changes its formatting to match that in CollectiveAccess. 
 
-See the Import Reference Pages for more on Original and Replacement Values.
+For more on the use of Original and Replacement Values, see `Use of Original Value/Replacement Value Columns <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/orig_replace_example.html>`_. 
 
 Column 9: Replacement Values
 ----------------------------
