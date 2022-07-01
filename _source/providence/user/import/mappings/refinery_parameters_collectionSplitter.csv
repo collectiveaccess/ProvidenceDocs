@@ -1,0 +1,86 @@
+﻿Type of Refinery Parameter,Parameter Notes,Example
+delimiter,"Sets the value of the delimiter to break on, separating data source values","{""delimiter"": "";""}"
+relationshipType,"Accepts a constant type code for the relationship type or a reference to the location in the data source where the type can be found. Note (for object data): if the relationship type matches that set as the hierarchy control, the object will be pulled in as a ""child"" element in the collection hierarchy","{""relationshipType"": ""part_of""}"
+collectionType,Accepts a constant list item idno from the list collection_types or a reference to the location in the data source where the type can be found,"{""collectionType"": ""box""}"
+attributes,Sets or maps metadata for the collection record by referencing the metadataElement code and the location in the data source where the data values can be found,"{
+   ""attributes"": {
+       ""collectionDateSet"": {
+           ""collectionDate"": ""^12""
+       }
+   }
+}"
+relationshipTypeDefault,Sets the default relationship type that will be used if none are defined or if the data source values don't match any values in the CollectiveAccess system,"{""relationshipTypeDefault"":""part_of""}"
+collectionTypeDefault,Sets the default collection type that will be used if none are defined or if the data source values do not match any values in the CollectiveAccess list collection_types,"{""collectionTypeDefault"":""series""}"
+parents,"Maps or builds the parent levels above the record laterally related to the imported data. The parent parameter has several sub-parameters including:
+
+idno: maps the level-specific idno
+
+name: maps the level-specific preferred_label
+
+type: maps the level-specific record type (must match the item idno exactly)
+
+attributes: maps the (optional) level-specific metadata. Includes the metadataElement code and the data source.
+
+rules: maps any (optional) level-specific rules .","{
+   ""parents"": [
+       {
+           ""idno"": ""^/inm:SeriesNo"",
+           ""name"": ""^/inm:SeriesTitle"",
+           ""type"": ""series"",
+           ""attributes"": { ""ca_collections.description"": ""^7""}
+       },
+       {
+           ""idno"": ""^/inm:CollectionNo"",
+           ""name"": ""^/inm:CollectionTitle"",
+           ""type"": ""collection"",
+           ""rules"": [
+               {
+                   ""trigger"": ""^/inm:Status = 'in progress'"",
+                   ""actions"": [
+                       {
+                           ""action"": ""SET"",
+                           ""target"": ""ca_collections.status"",
+                           ""value"": ""edit""
+                       }
+                   ]
+               }
+           ]
+       }
+   ]
+}"
+nonPreferredLabels,List of non-preferred labels to apply to collections.,"""nonPreferredLabels"": ""^4"""
+interstitial,Sets or maps metadata for the interstitial movement Relationship record by referencing the metadataElement code and the location in the data source where the data values can be found.,"{
+   ""interstitial"": {
+       ""relationshipDate"": ""^4""
+   }
+}"
+skipIfValue,Skip if imported value is in the specified list of values.,"{""skipIfValue"": ""unknown""}"
+relationships,From version 1.5. A list of relationships using the relevant splitter refineries. The settings for this item reflect the settings used for the relevant splitter refinery. The only additional setting here is relatedTable which is a required value.,"{
+   ""relationships"" : [
+    {
+     ""relatedTable"": ""ca_entities"",
+     ""type"" : ""ind"",
+     ""relationshipType"": ""creator"",
+     ""preferredLabel"": ""^7"",
+     ""attributes"" : {
+      ""notes"" : ""^10""
+     }
+    },
+    {
+     ""relatedTable"": ""ca_entities"",
+     ""type"" : ""org"",
+     ""relationshipType"": ""source"",
+     ""preferredLabels"" : [{""forename"": ""^5"", ""surname"":""^6""}],
+     ""attributes"" : {
+      ""phone"" : ""^33""
+     }
+    }
+   ]
+  }"
+matchOn,"From version 1.5. Defines exactly how the splitter will establish matches with pre-existing records. You can set the splitter to match on idno, or labels. You can also include both labels and idno in the matchOn parameter, and it will try multiple matches in the order specified.","{""matchOn"": [""labels"", ""idno""]} -Will try to match on labels first, then idno.
+{""matchOn"": [""idno"", ""labels""]} - Will do the opposite, first idno and then labels.
+You can also limit matching by doing one or the other. Eg:
+{""matchOn"": ""idno""]} will only match on idno.
+{""matchOn"": [""^ca_collections.your_custom_code""]} will match on a custom metadata element in the collection record. Use the syntax ^ca_collections.metadataElement code."
+ignoreParent ,"From version 1.5. For use with collection hierarchies. When set to true this parameter allows global match across the entire hierarchy, regardless of parent_id. Use this parameter with datasets that include values to be merged into existing hierarchies but that do not include parent information. Paired with matchOn it's possible to merge the values using only name or idno, without any need for hierarchy info. Not ideal for situations where multiple matches can not be disambiguated with the information available.","{""ignoreParent"": ""1""}"
+dontCreate,From version 1.5. If set to true (or any non-zero value) the splitter will only do matching and will not create new records when matches are not found.,"{""dontCreate"": ""1""}"

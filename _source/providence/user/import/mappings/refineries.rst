@@ -58,13 +58,33 @@ entitySplitter
    :header-rows: 1
    :file: refinery_parameter_entitySplitter.csv
 
+collectionSplitter
+^^^^^^^^^^^^^^^^^^
 
+.. csv-table::
+   :header-rows: 1
+   :file: refinery_parameters_collectionSplitter.csv
 
+placeSplitter
+^^^^^^^^^^^^^
 
+.. csv-table::
+   :header-rows: 1
+   :file: refinery_parameter_placeSplitter.csv
 
+movementSplitter
+^^^^^^^^^^^^^^^^
 
+.. csv-table::
+   :header-rows: 1
+   :file: refinery_parameter_movementSplitter.csv
 
+objectLotSplitter
+^^^^^^^^^^^^^^^^^
 
+.. csv-table::
+   :header-rows: 1
+   :file: refinery_parameter_objectlotSplitter.csv
 
 
 
