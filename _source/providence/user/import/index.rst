@@ -15,6 +15,3 @@ Import
    Chenhall Nomenclature <chenhall>
    Media embedded metadata <mediaembeddedmetadata>
    Import Reference Pages <import_reference.rst>
-   Original and Replacement Value Example <orig_replace_example.rst>
-   Existing Record Policies <exist_rec_policy.rst>
-   Containers <containers.rst>

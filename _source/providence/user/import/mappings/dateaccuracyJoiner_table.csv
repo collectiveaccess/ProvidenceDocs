@@ -1,0 +1,9 @@
+﻿Type of Refinery Parameter,Parameter Notes,Example 
+accuracyField (required),"The field in which the date accuracy is stored (case-insensitive values are defined by accuracyValueDay, accuracyValueMonth and accuracyValueYear settings)","{""accuracyField"": ""14""}
+<= Where 14 is the column of the source data. Note that this does not get prefixed with the usual '^'."
+dateFormat,The format in which the input dates are expected. Defaults to 'Y-m-d' (2014-04-01). Values come from phpDateTime::createFromFormat(),"{""dateFormat"": ""j-M-Y""} <= Would parse 15-Feb-2009"
+accuracyValueday,The case-insensitive value in the accuracy field that indicates that the date is accurate to the day. Default value is 'day'.,"{""accuracyValueDay"": ""d""}"
+accuracyValueMonth,The case-insensitive value in the accuracy field that indicates that the date is accurate to the month. Default value is 'month'.,"{""accuracyValueMonth"": ""m""}"
+accuracyValueYear,The case-insensitive value in the accuracy field that indicates that the date is accurate to the year. Default value is 'year'.,"{""accuracyValueYear"": ""y""}"
+dateParseFailureReturnMode,"Defines what should be returned if the input date cannot be parsed, available values are ""null"" (the default) and ""original""","{""dateParseFailureReturnMode"": ""original""}"
+unknownAccuracyValueReturnMode,"Defines what should be returned if the value of the accuracy column is unknown, available values are ""null"", ""original"" and ""normalised"" (the default)","{""unknownAccuracyValueReturnMode"": ""null""}"

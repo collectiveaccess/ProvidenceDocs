@@ -164,5 +164,7 @@ dateJoiner
 dateAccuracyJoiner
 ^^^^^^^^^^^^^^^^^^
 
-include?
+.. csv-table::
+   :header-rows: 1
+   :file: dateaccuracyJoiner_table.csv
 
