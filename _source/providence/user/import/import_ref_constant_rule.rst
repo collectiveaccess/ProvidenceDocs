@@ -10,10 +10,25 @@ In the sample import mapping spreadsheet, the rule types **Mapping**, **SKIP**, 
 
 The use of Constant is arbitrary and will depend on the source data, what will be included in the import, and how. Constant sets an arbitrary constant value once the data is imported, usually within a `Container <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/containers.html>`_. As well as setting the Constant Rule Type in the Rule Type Column (Column 1 in an Import Mapping Spreadsheet), when using Constant, the Source Column (Column 2 in an Import Mapping Spreadsheet) must be set to a text value. Add the value to the Source Column, and the value will be set in the corresponding metadata element for every record that is imported. 
 
+When to Use Constant Rule Type
+------------------------------
+
+Knowing when to use Constant as a Rule Type is important, as it will affect how the data looks in CollectiveAccess. 
+
+The most common indicator of whether the Constant Rule Type should be used is if source data contains a column or columns describing the date type, measurement type, or other defined type descriptors  such as “created,” “overall,” or even “accessioned.”
+
+Another indicator is whether the Collective Access system itself contains a field or fields using drop-down values, where a set list of values is displayed, but needs to be selected through the import mapping spreadsheet. 
+
+For more on mapping to drop-down lists, see Mapping to a Drop-Down List. 
+
+An example of the use of the Rule Type Constant is available to view in `Tutorial: Import Mapping Spreadsheet <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/c_import_tutorial.html>`_ and in the sample mapping spreadsheet. Download the sample mapping spreadsheet and sample source data below.
+
+:download:`Sample Import Mapping Spreadsheet <sample_mapping_tutorial.xlsx>`
+
+:download:`Sample Import Data (Source Data) <sample_import_data_tutorial.xlsx>` 
+
 Example of Constant Rule Type: Dates
 ------------------------------------
-
-An example of the use of the Rule Type Constant is available to view in `Tutorial: Import Mapping Spreadsheet <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/import_ref_constant_rule.html?highlight=constant>`_ and in the sample mapping spreadsheet. Download the sample mapping spreadsheet here, and download the sample source data `here <sample_import_data_tutorial.xlsx>`. 
 
 .. figure:: constant_ex_1.png
    :scale: 50%
@@ -38,4 +53,24 @@ With the date itself being arbitrary, and Created being set for each date as def
 Example of Constant Rule Type: Measurements
 -------------------------------------------
 
-Example of Constant Rule Type: Acquisition
+Another scenario in which the Constant Rule Type could be used is with measurement fields. In CollectiveAccess, measurements are usually located within a Container; therefore, each measurement must be mapped to that particular element code, similarly to the Date example above. Often there is a measurement type drop-down, which should be set to a constant value. 
+
+Using the Constant rule Type to map measurements into CollectiveAccess would look like the following. 
+
+.. figure:: dimension_ex.png
+   :align: center
+   :scale: 50%
+
+   An example mapping of dimension fields, using the Constant Rule Type. 
+
+Once imported into CollectiveAccess, the dimension field would look like: 
+
+.. image:: dimension_ex_1.png
+   :scale: 50%
+   :align: center
+
+With the dimensions mapped to Height and Width values in the Dimensions Container, and the dimension type automatically set from the drop-down menu to overall. All three source columns are mapped to the Group “dimension,” ensuring that they appear in the Dimensions field in CollectiveAccess. 
+
+.. note:: The CollectiveAccess type codes and measurement values used in this example come from the CollectiveAccess Demonstration System. To turn on type codes in CollectiveAccess, navigate to **Manage > My Preferences > Developer**. Under **Show bundle codes**, select **Show**, and hit save. Bundle codes will now appear for every field in CollectiveAccess. 
+
+
