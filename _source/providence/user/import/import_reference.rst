@@ -4,7 +4,7 @@ Import Reference Pages
 Contents
 --------
 
-Below you will find 
+Below you will find useful reference pages relating to data imports in CollectiveAccess. 
 
 * `Rules <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/mappings/rules.html?highlight=rules#rule-description>`_
 * `Refineries and Refinery Parameters <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/mappings/refineries.html?highlight=refineries>`_ 
@@ -15,6 +15,5 @@ Below you will find
 * `Original and Replacement Value: Use <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/orig_replace_example.html>`_
 * `Data Importer (UI): Options for Importing <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/ui_import_options.html?highlight=ui>`_
 * `Using the Constant Rule Type in an Import Mapping Spreadsheet <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/import_ref_constant_rule.html?highlight=constant>`_
-* Mapping to Drop Down Values in an Import Mapping Spreadsheet
-* Imporing an Indented Hierarchy into CollectiveAccess 
+* Mapping to Drop Down Values in CollectiveAccess
 * `Interstitial Data <file:///Users/charlotteposever/Documents/ca_manual/providence/user/dataModelling/interstitial.html?highlight=interstitial>`_
