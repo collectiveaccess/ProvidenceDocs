@@ -4,12 +4,34 @@ Interstitial Data
 .. contents::
    :local:
    
-As of version 1.4, CollectiveAccess supports relationship records also known as "interstitial" records. This feature allows cataloguers to describe a relationship beyond simply selecting a relationship type. Let's say, for example, that you have two entities that were married for a period of time, and then got divorced. The relationship record allows you to add a date range, narrative text and/or other metadata elements of your choosing to the interstice between these two individuals. Relationship records are entirely optional, and in fact won't be accessible unless a user interface is defined for the them. Relationship records are not just limited to entities. Any two records can carry this interstitial description, so long as metadata and a user interface has been created. Other common examples of relationships that could require interstitial metadata include objects to places; objects to entities; entities to places, etc.
+As of version 1.4, CollectiveAccess supports relationship records also known as **interstitial** records. This feature allows cataloguers to describe a relationship beyond simply selecting a relationship type; additional metadata can be added that is relevant to the relationship, but does not affect the relationship permanently. 
 
+The term interstitial refers to a small screen that is attached to a relationship of any kind in CollectiveAccess where additional information specifically pertaining to that relationship can be stored. This screen represents the "small space" between any relationship where relevant data can be added. 
+
+Interstitial data is represented in CollectiveAccess by a paperclip icon |paperclip| that appears next to a given relationship.
+
+.. |paperclip| image:: paperclip.png
+          :scale: 50%
+
+.. image:: interstitial7.png
+   :scale: 50%
+   :align: center
+
+When is Interstitial Data Used? 
+-------------------------------
+
+Not every relationship in CollectiveAccess needs an interstitial feature. However, this function works well for relationships that change over time, or are impermanent. For example, two entities were married for a period of time, and then got divorced. With an interstitial relationship enabled, the relationship record can now add a date range, narrative text and/or other metadata elements of your choosing to the interstice between these two individuals, specifying the dates of the relationship, and any other necessary metadata. Any two records can carry this interstitial description, so long as metadata and a user interface has been created (see below). 
+
+Interstitial data also works well for an object located in a particular storage location or exhibit location for a certain period of time, that had a defined beginning and end. The object is no longer located there, but the time it spent there is important to the object’s history and should be included in the record. With an interstitial relationship enabled, the relationship record can now add a date range  to the interstice between these two records, specifying the dates of the relationship, and any other necessary metadata. 
+
+Other common examples of relationships that could require interstitial metadata include objects to entities; entities to places, and so on. 
+
+Note that Relationship records are entirely optional, and in fact won't be accessible unless a user interface is defined for the them. 
+ 
 Setting up relationship records in the installation profile
 -----------------------------------------------------------
 
-To create a metadata element with an interstitial type restriction in the profile requires adopting some of the syntax used for relationshipTable names. Here's how you would add the date range on an entity to entity relationship record:
+To create a metadata element with an interstitial type restriction in the profile requires adopting some of the syntax used for **relationshipTable** names. Here's how you would add the date range on an entity to entity relationship record:
 
    ::
 
@@ -59,28 +81,74 @@ After you've defined the metadata elements for your relationship record, you nee
             </screens>
           </userInterface>
           
-Note that these interstitial records are meant to be small and manageable, so only one screen per user interface is supported. If other screens are defined they simply won't appear.
+Note that these interstitial records are meant to be small and manageable, so only one screen per user interface is supported. If other screens are defined, they simply won't appear.
 
-Setting up relationship records through the graphical user interface
+Setting up Interstitial Relationship Records through the User Interface
 --------------------------------------------------------------------
 
-Setting up a relationship record through the GUI is essentially just like creating a user interface for any other type of record. It follows the same steps wherein a metadata element is created and then added to the user interface.
+Setting up a relationship record through the user interface is essentially just like creating a user interface for any other type of record (see `User Interface Administration <file:///Users/charlotteposever/Documents/ca_manual/providence/user/editing/interfaces.html#user-interface-administration>`_). It follows the same steps wherein a metadata element is created, and then added to the user interface.
 
-The key difference is what "Type restrictions" are chosen for the elements and what "type" is used to create the user interface.
+The key difference is what **Type restrictions** are chosen for the elements, and what **type** is used to create the user interface.
 
-IMAGE:
+Navigate to **Manage > Administration > User Interfaces**, where user interfaces can be added and edited. 
 
-The above metadata element will be used for an entity to entity relationship record.
+At the top of the screen, there is an option to add a new user interface for any type of table or relationship in CollectiveAccess. To add an interstitial user interface for an entity-entity relationship, select **entity-entity relationshi** from the drop-down menu: 
 
-IMAGE: New UI interface.png
+.. image:: interstitial2.png
+   :scale: 50%
+   :align: center
 
-The above user interface (created under Manage > Administration > User Interfaces) will be used for an object to storage location relationship record.
+Select the plus icon |icon| to add the new user interface for the relationship.
+
+.. |icon| image:: interstitial3.png
+          :scale: 50%
+
+Scroll down to the **Screens** field, and add a new screen. This new screen will be the screen within the relationship that displays the interstitial data. Here, it’s been called Interstitial: 
+
+.. image:: interstitial4.png
+   :scale: 50%
+   :align: center
+  
+Select the page icon |page| to add preferred labels, type restrictions, and screen content to the interstital data screen.
+
+.. |page| image:: page.png
+          :scale: 50%
+
+Adding metadata elements to the interstitial data screen is the same process as adding metadata elements to a user interface as outlined in `User Interface Administration <file:///Users/charlotteposever/Documents/ca_manual/providence/user/editing/interfaces.html#user-interface-configuration>`_. Navigate to **Screen content** to move the metadata elements onto the new screen.
+
+.. figure:: interstitial6.png
+   :scale: 50%
+   :align: center
+
+   Move the elements from left to right to display them on the interstitial data screen. 
 
 Editing Relationship Records
 ----------------------------
 
-Once your metadata elements and user interface editors have been configured, you will notice a small edit icon on relevant relationships after they've been save the first time:
+Once your metadata elements and user interface editors have been configured, you will notice a small paperclip icon on relevant relationships after they've been saved, or added, the first time:
 
-IMAGE: Paperclip.png
+.. image:: interstitial7.png
+   :scale: 50%
+   :align: center
 
-Clicking on the "E" will open the relationship record in an overlay.
+Selecting the paperclip icon will open the interstitial data screen. It will appear as an overlay:
+
+.. image:: interst8.png
+   :scale: 50%
+   :align: center
+
+Where interstitial data can be added, and saved. 
+
+Adding Interstitial Relationships to non-Entity Records
+-------------------------------------------------------
+
+As mentioned above, interstital data can be configured for any relationship in CollectiveAccess; it does not apply only to entity-entity relationships. 
+
+To configure interstitial screens for other types of relationships, navigate to **Manage > Administration > User Interfaces**. At the top of the page, select the element for which the new user interface will be created from a drop-down list.
+
+.. image:: interstitial9.png
+   :scale: 50%
+   :align: center
+
+Once the element is selected, follow the same steps outlined above. 
+

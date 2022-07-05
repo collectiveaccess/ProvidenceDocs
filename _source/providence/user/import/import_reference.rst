@@ -17,4 +17,4 @@ Below you will find
 * `Using the Constant Rule Type in an Import Mapping Spreadsheet <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/import_ref_constant_rule.html?highlight=constant>`_
 * Mapping to Drop Down Values in an Import Mapping Spreadsheet
 * Imporing an Indented Hierarchy into CollectiveAccess 
-* Interstitial Data 
+* `Interstitial Data <file:///Users/charlotteposever/Documents/ca_manual/providence/user/dataModelling/interstitial.html?highlight=interstitial>`_
