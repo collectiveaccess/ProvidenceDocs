@@ -1,7 +1,8 @@
 Running an Import
 =================
 
-**Running a Data Import**
+Running a Data Import
+---------------------
 
 There are two ways to import data into CollectiveAccess:
 
@@ -31,6 +32,7 @@ To run a data import in the terminal or through the CollectiveAccess user interf
 Steps for importing data from the terminal and importing data from the user interface in Collective Access will be explained below. These steps assume that source data is available in a supported file format, and that an import mapping spreadsheet has been created. 
 
 **Running an Import from the Terminal**
+---------------------------------------
 
 Follow the steps outlined below to generate a successful import from the terminal or command line. 
 
@@ -73,6 +75,7 @@ Follow the steps outlined below to generate a successful import from the termina
 7. **Repeat Steps 1-4**, until satisfied with the data import. 
 
 **Running an import from the User Interface** 
+---------------------------------------------
 
 Importing data through the user interface in CollectiveAccess is a great option for those unfamiliar with the command line, as it does not involve executing commands. Importing from the user interface simply involves uploading supported files; however, there are a few steps to follow. 
 
@@ -80,9 +83,22 @@ Importing data through the user interface in CollectiveAccess is a great option 
 
 Follow these steps below to run an import from the user interface in CollectiveAccess: 
 
-1. **Navigate to Import/Data**. The CollectiveAccess import feature will be displayed. 
-2. **Select the plus sign icon** in the top right corner. Selecting this icon will enable the import mapping spreadsheet to be dragged, or uploaded, into the user interface. 
+1. **Navigate to Import/Data**. The CollectiveAccess import feature will be displayed: 
+
+.. image:: running1.png
+   :scale: 50%
+   :align: center
+
+2. **Select the plus sign icon** |icon| in the top right corner. An area with "Drag importer worksheets here to add or update" will appear, where the import mapping spreadsheet to be dragged, or uploaded, into the user interface. 
+
+.. |icon| image:: running2.png
+          :scale: 50%
+
 3. **Drag or drop** the import mapping spreadsheet directly into the user interface, or add the Google Drive link to your import mapping. 
+
+.. image:: 
+
+
 4. **Select** the forward caret >. 
 5. **Have your source data available**. In addition to the import mapping spreadsheet, it will also be necessary to upload the specific source data set into the user interface during this process, by dragging or uploading from a location on a computer. Have this file (or files) available in a supported format. 
 6. **Upload** the source data. 
