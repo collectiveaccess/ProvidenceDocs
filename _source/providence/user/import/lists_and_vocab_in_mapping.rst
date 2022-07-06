@@ -54,12 +54,17 @@ For example, here are the Refinery and Refinery Parameters columns from the Samp
    :scale: 50% 
    :align: center
 
-Note that the **entitySplitter** refinery references both a **relationship type** and an **entity type.** Both of these types come from Lists and Vocabularies in the Collective Access system. 
+Note that the **entitySplitter** refinery references both a **relationship type** and an **entity type.** Both of these types come from Lists and Vocabularies in the Collective Access system. The objectLotSplitter will be discussed below. 
 
 Finding Entity Types
 ^^^^^^^^^^^^^^^^^^^^
 
-To define the **entityType** (**"ind"**), navigate to **Manage > Lists and Vocabularies.** Scroll down to **Entity Types**. 
+To determine which entityType to use in an import mapping spreadsheet: 
+
+1. Navigate to **Manage > Lists and Vocabularies.**
+2. Scroll down in the hierarchy to Entity Types. 
+3. Select the arrow icon > to open the terms list. 
+4. Select which type best describes the entity records being created.  
 
 .. image:: lists_mapping_8.png
    :scale: 50%
@@ -69,16 +74,48 @@ Two available options are listed for Entity Types defined in the system: Individ
 
 To define the **relationshipType**, see below.  
 
-Defining Object Lot Types
-^^^^^^^^^^^^^^^^^^^^^^^^^
+Finding Object Lot Types
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+Another common example where Lists and Vocabularies should be used while making an import mapping spreadsheet is for defining Object Lot Types. 
+
+For source data that contains lot records (accessions), and the mapping will create records and relationships for that source data, it is necessary to look at the Object Lot Types listed in Lists and Vocabularies to include the correct Lot type in the Refinery Parameter column of the import mapping spreadsheet. 
+
+Looking at the same two columns from the Sample Import Mapping Spreadsheet, an objectLotSplitter is used to create Lot records from the source data. 
+
+Note that the **objectLotSplitter** refinery references an **object lot type**. This type comes from Lists and Vocabularies in the Collective Access system. 
+
+.. image:: lists_mapping_7.png
+   :scale: 50% 
+   :align: center
+
+To determine which objectLotType to use in an import mapping spreadsheet: 
+
+1. Navigate to **Manage > Lists and Vocabularies.**
+2. Scroll down in the hierarchy to Object Lot Types. 
+3. Select the arrow icon > to open the terms list. 
+4. Select which type best describes the entity records being created.  
+
+.. image:: lists_mapping_9.png
+   :scale: 50%
+   :align: center
+
+In the example above, the **objectLotType** is defined as **"gift"**. By going to the Object Lot Types, list, two options are listed: Gift and Accessions. 
+
+Finding Relationship Types
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Defining relationship types in an import mapping is the same as defining other types (outlined above) in an import mapping. However, finding the list of relationship types for a given system is slightly different. 
+
+Navigate to **Manage > Administration > Relationship Types.** A full list of available relationship types will be listed in the hierarchy:
+
+.. image:: lists_mapping_10.png
+   :scale: 50%
+   :align: center
+
+Scroll down the hierarchy to choose the relationship that will be created in the import mapping. To do so, think about the relationship between the records being created and the import table found in the Settings of the import mapping spreadsheet. 
+
+For the entitySpliter example above, the relationshipType in the Refinery Parameter is **"creator."** By going to the Relationship Types hierarchy and choosing object-entity relationship 
 
 
-
-
-
-Defining Relationship Types
----------------------------
-
-The concept behind defining relationship types in an import mapping is the same as defining other types (outlined above) in an import mapping. However, finding the list of relationship types for a given system is slightly different. 
-
-Navigate to **Manage > Administration > Relationship Types.** 
+For more on Lists and Vocabularies, see 
