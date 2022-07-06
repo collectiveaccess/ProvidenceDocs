@@ -133,22 +133,42 @@ Once your metadata elements and user interface editors have been configured, you
 
 Selecting the paperclip icon will open the interstitial data screen. It will appear as an overlay:
 
-.. image:: interst8.png
+.. figure:: interst8.png
    :scale: 50%
    :align: center
 
-Where interstitial data can be added, and saved. 
+   The interstitial data screen for an entity-entity relationship in the CollectiveAccess Demonstration system. 
+
+Where interstitial data can be added, and saved. What fields appear on the interstitial screen will depend on what metadata elements were chosen. 
 
 Adding Interstitial Relationships to non-Entity Records
 -------------------------------------------------------
 
 As mentioned above, interstital data can be configured for any relationship in CollectiveAccess; it does not apply only to entity-entity relationships. 
 
-To configure interstitial screens for other types of relationships, navigate to **Manage > Administration > User Interfaces**. At the top of the page, select the element for which the new user interface will be created from a drop-down list.
+To configure interstitial screens for other types of relationships or elements, navigate to **Manage > Administration > User Interfaces**. At the top of the page, select the element for which the new user interface will be created from a drop-down list.
 
 .. image:: interstitial9.png
    :scale: 50%
    :align: center
 
-Once the element is selected, follow the same steps outlined above. 
+Scroll through this drop-down. Once the element is selected, follow the same steps outlined above. 
 
+Including Interstitial Data in an Import Mapping Spreadsheet
+------------------------------------------------------------
+
+As noted above, interstitial data screens can be added by configuring the installation profile (see `Installation Profiles <file:///Users/charlotteposever/Documents/ca_manual/providence/user/dataModelling/Profiles.html>`_ for more), and interstitial data itself can be manually added through the user interface. However, it is useful to know how to include interstitial data in an import mapping. 
+
+In `Refineries and Refinery Parameters <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/mappings/refineries.html?highlight=refineries>`_, Splitters, Joiners, and Builders can all use the **interstitial** refinery parameter. 
+
+As a refinery parameter, **interstitial** sets or maps metadata for the interstitial movement relationship record by referencing the metadataElement code and the location in the data source where the data values can be found. Its exact function differs for each type of refinery. 
+
+A general example of the Refinery column (left) and Refinery Parameters column (right) in an import mapping spreadsheet would look like: 
+
+.. image:: interstitial10.png
+   :scale: 50%
+   :align: center
+   
+Where the interstitial data is a date of a relationship, and is being pulled from the source data column 4. 
+
+Examples for all types of Refineries with Refinery Parameters are available to view `here <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/mappings/refineries.html?highlight=refineries>`_. 
