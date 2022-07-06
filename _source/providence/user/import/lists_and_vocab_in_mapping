@@ -1,0 +1,11 @@
+Using Lists and Vocabularies in an Import Mapping Spreadsheet
+=============================================================
+
+Lists and Vocabularies are important in determining a number of aspects about a data import. The Lists and Vocabularies in a CollectiveAccess system are often incorporated into an import mapping spreadsheet to define types of relationships, entities, dimensions, and other aspects that can help inform how best to structure the import mapping spreadsheet.
+
+To read more about adding Lists 
+
+To view the Lists and Vocabularies in a given CollectiveAccess system, navigate to **Manage > Lists and Vocabularies**. The Lists and Vocabularies hierarchy will be displayed: 
+
+.. image:: 
+

@@ -44,6 +44,7 @@ Records in the import mapping spreadsheet will be merged with any existing recor
 
 **merge_on_idno_and_preferred_labels**
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Records in the import mapping spreadsheet will be merged with any existing records in the CollectiveAccess system based on a shared record idno, or a record’s identifying number, and a shared preferred_label. 
 
 **merge_on_idno_with_preferred_labels_with_replace**
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

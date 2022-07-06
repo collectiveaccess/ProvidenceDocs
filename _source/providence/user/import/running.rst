@@ -17,6 +17,7 @@ Both options require an import mapping spreadsheet, and source data in a support
 .. note:: Remember to always back up your database before running an import, as you will likely have to tweak imports multiple times. 
 
 **Basic Steps for Running a Data Import** 
+-----------------------------------------
 
 To run a data import in the terminal or through the CollectiveAccess user interface, eight basic steps are involved: 
 
@@ -94,15 +95,16 @@ Follow these steps below to run an import from the user interface in CollectiveA
 .. |icon| image:: running2.png
           :scale: 50%
 
-3. **Drag or drop** the import mapping spreadsheet directly into the user interface, or add the Google Drive link to your import mapping. 
+3. **Drag or drop** the import mapping spreadsheet directly into the user interface, or add the Google Drive link to your import mapping.
 
-.. image:: 
+4. **Select** the forward caret |caret|. 
 
+.. |caret| image:: running3.png
+           :scale: 50%
 
-4. **Select** the forward caret >. 
 5. **Have your source data available**. In addition to the import mapping spreadsheet, it will also be necessary to upload the specific source data set into the user interface during this process, by dragging or uploading from a location on a computer. Have this file (or files) available in a supported format. 
 6. **Upload** the source data. 
-7. **Configure the necessary settings**. Select the Log Level and Testing Options. 
+7. **Configure the necessary settings**. Select the Log Level and Testing Options. For more, see `Data Importer (UI): Options for Importing <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/ui_import_options.html?highlight=ui>`_. 
 8. **Run the import** by selecting Execute Data Import. 
 9. **Revise** the mapping accordingly. 
 10. **Re-import**, repeating Steps 1-6.
