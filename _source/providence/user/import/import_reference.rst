@@ -17,5 +17,5 @@ Below you will find useful reference pages relating to data imports in Collectiv
 * `Using the Constant Rule Type in an Import Mapping Spreadsheet <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/import_ref_constant_rule.html?highlight=constant>`_
 * `Interstitial Data <file:///Users/charlotteposever/Documents/ca_manual/providence/user/dataModelling/interstitial.html?highlight=interstitial>`_
 * `Using Lists and Vocabularies in an Import Mapping Spreadsheet <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/lists_and_vocab_in_mapping.html?highlight=using+lists>`_
-* Mapping Object lots
+* `Mapping Object Lot Records in an Import Mapping Spreadsheet <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/mapping_object_lot_recs.html?highlight=mapping>`_
 * Mapping to Drop Down Values in CollectiveAccess
