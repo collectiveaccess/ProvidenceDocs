@@ -38,13 +38,9 @@ In order to create new and related lot records, the use of the objectLotSplitter
    :align: center
    :scale: 50%
 
-Within the Refinery Parameter, note that 
+Within the Refinery Parameter, note that attributes of the parameter contain references to object lot fields. 
 
 
-
-Note that with a Refinery Parameter that pulls from various fields related to the Lot records, only map the 
-
-ONLY map the lot #field to lot, then other fields normal, and pulled into it in refinery
 
 
 
