@@ -19,3 +19,5 @@ Below you will find useful reference pages relating to data imports in Collectiv
 * `Using Lists and Vocabularies in an Import Mapping Spreadsheet <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/lists_and_vocab_in_mapping.html?highlight=using+lists>`_
 * `Mapping Object Lot Records in an Import Mapping Spreadsheet <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/mapping_object_lot_recs.html?highlight=mapping>`_
 * Mapping to Drop Down Values in CollectiveAccess
+* `Mapping a Storage Location Hierarchy <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/mapping_storage_loc_hierarchy.html?highlight=storage+location+hierarchy>`_ 
+* Importing a Place Hierarchy 
