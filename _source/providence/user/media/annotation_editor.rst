@@ -1,33 +1,72 @@
 Annotation Editor
 =================
 
-The Annotation Editor allows users to create and annotate clips for audio and video. To open the Annotation Editor:
+The Annotation Editor allows users to create and annotate clips for audio and video. The Annotation Editor allows users to create and annotate clips for audio and video. These are useful for marking specific timestamps in an audio or video recording, and annotating with text.
 
-1. Navigate to any media record. 
-2. Select the **Media** screen: 
+The Annotation Editor allows users to create and annotate clips for audio and video. These are useful for marking timestamps, adn annotating with text. 
+
+The Annotation Editor is only available in CollectiveAccess for audio recordings, videos, or other audiovisual media. 
+
+Creating Annotations
+--------------------
+
+To open the Annotation Editor, navigate to any audio/video record. 
+
+Select the Media tab on the left side of the record’s screen: 
 
 .. image:: annotationeditor1.png
    :scale: 50%
    :align: center
 
-3. Within the Media representations filed, select **Annotations.** 
-4. **Create** annotations by selecting from the displayed options. 
+From this tab, a number of options are available to the right, within the Media representations field. From here, select **Annotations.**
 
-.. image:: annotationeditor2.png
-   :scale: 50%
+Another screen will be displayed: 
+
+.. image:: annotations_3.png  
    :align: center
 
-Creating Annotations
---------------------
+Note at the top left of the screen, there are **0 clips.** Once clips are created, they will appear at the top of the screen. 
 
-Use the options below to create clips, by setting "Start" and End" points for each annotation. Supply metadata for each annotation and then Save. Saved annotations will appear horizontally at the top of the editor in the carousel. From there they can be opened for further editing, or deleted.
+Creating Clips to Annotate 
+--------------------------
+
+Use the options below to create clips:
 
 .. csv-table:: 
    :header-rows: 1
    :file: annotation_editor_table1.csv
 
-Annotation Editor
------------------
+To create clips to annotate on the Annotation Editor screen, select **start** to the right of the plus icon. |plus|
+
+.. |plus| image:: start.png
+          :scale: 50%
+
+This will automatically play the audio or video. Select **end** to the right of the plus icon |end| to end the clip. 
+
+.. |end| image:: end.png
+          :scale: 50%
+
+This will set both start and endpoints for each annotated clip, whose timestmamps will appear in the metadata. Supply metadata for each annotation by filling out the fields to the right of the audio or video. 
+
+.. image:: annotator4.png
+   :align: center
+
+.. note:: Annotations will only become available once a start and endpoint has been selected. Then, the metadata can be customized and the annotated clip created and saved. 
+
+Once the start and endpoints, and metadata, have been selected and filled out, select **save annotation.** Saved annotations will appear horizontally at the top of the editor in the carousel. From there they can be opened for further editing, or deleted.
+
+.. image:: annotation5.png
+   :scale: 50%
+   :align: center
+
+Once all annotations are made and saved, select **close annotations** at the top right of the screen. 
+
+Viewing, Editing, or Deleting Annotations
+-----------------------------------------
+
+To view annotations that have been made, edit annotations, or delete annotations, 
+
+
 
 Like all editors in CollectiveAccess, the annotation form can be customized with any metadata elements or relationship bundles (to entities, places, etc.) The default configuration includes Title and Annotation Properties (Start and End time codes). To customize the form, go to Manage-Administration-User Interfaces and open the "representation annotations" editor. Follow the link for more information on UI customization.
 

@@ -38,7 +38,7 @@ In order to create new and related lot records, the use of the objectLotSplitter
    :align: center
    :scale: 50%
 
-Within the Refinery Parameter, note that attributes of the parameter contain references to object lot fields. 
+Within the Refinery Parameter, note that attributes of the parameter contain references to object lot fields in CollectiveAccess. 
 
 
 
