@@ -30,12 +30,6 @@ Note at the top left of the screen, there are **0 clips.** Once clips are create
 Creating Clips to Annotate 
 --------------------------
 
-Use the options below to create clips:
-
-.. csv-table:: 
-   :header-rows: 1
-   :file: annotation_editor_table1.csv
-
 To create clips to annotate on the Annotation Editor screen, select **start** to the right of the plus icon. |plus|
 
 .. |plus| image:: start.png
@@ -46,7 +40,7 @@ This will automatically play the audio or video. Select **end** to the right of 
 .. |end| image:: end.png
           :scale: 50%
 
-This will set both start and endpoints for each annotated clip, whose timestmamps will appear in the metadata. Supply metadata for each annotation by filling out the fields to the right of the audio or video. 
+This will set both start and endpoints for each annotated clip, whose timestmamps will appear in the metadata. Supply metadata for each annotation by filling out the fields to the right of the audio or video. Like all editors in CollectiveAccess, the annotation form can be customized with any metadata elements or relationship bundles (to entities, places, etc.) The default configuration includes Title and Annotation Properties (Start and End time codes). To customize the form, go to Manage-Administration-User Interfaces and open the "representation annotations" editor. Follow the link for more information on UI customization.
 
 .. image:: annotator4.png
    :align: center
@@ -61,19 +55,33 @@ Once the start and endpoints, and metadata, have been selected and filled out, s
 
 Once all annotations are made and saved, select **close annotations** at the top right of the screen. 
 
+All options for editing annotations are explained in the table below: 
+
+.. csv-table:: 
+   :header-rows: 1
+   :file: annotation_editor_table1.csv
+
 Viewing, Editing, or Deleting Annotations
 -----------------------------------------
 
-To view annotations that have been made, edit annotations, or delete annotations, 
+To view annotations that have been made, edit annotations, or delete annotations, navigate to the Annotation Editor screen. 
 
+.. image:: annotation6.png
+   :scale: 50%
+   :align: center
 
-
-Like all editors in CollectiveAccess, the annotation form can be customized with any metadata elements or relationship bundles (to entities, places, etc.) The default configuration includes Title and Annotation Properties (Start and End time codes). To customize the form, go to Manage-Administration-User Interfaces and open the "representation annotations" editor. Follow the link for more information on UI customization.
+Each annotation has a small page icon in the lower right corner. Select this icon to edit the annotation. 
 
 Clip Carousel
 -------------
 
-The image above is the clip carousel. Each feature of the carousel is explained in the table below.
+The clip carousel is the display of saved annotations that appears at the top of the screen. 
+
+.. image:: annotation7.png
+   :scale: 50%
+   :align: center
+
+Each feature of the carousel is explained in the table below.
 
 .. csv-table:: 
    :header-rows: 1
