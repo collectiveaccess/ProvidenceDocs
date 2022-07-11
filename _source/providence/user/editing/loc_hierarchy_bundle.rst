@@ -38,7 +38,7 @@ The Move function chooses a new location for a specific record within the hierar
 
 To choose a new parent record, select the record’s title; it becomes bold and a message in red appears in the hierarchy bundle. Upon saving the page, the selected record will be moved to this new location:
 
-.. image:: move2.png
+.. image:: move_2.png
    :scale: 50%
    :algin: center
 

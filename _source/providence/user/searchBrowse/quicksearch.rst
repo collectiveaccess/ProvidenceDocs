@@ -1,4 +1,6 @@
 QuickSearch
+===========
+
 Basic Search
 ===========
 
@@ -35,7 +37,7 @@ To narrow a search using the wildcard, simply enter part of the search term, and
    :scale: 50%
    :align: center
 
-
+In addition to the wildcard, valid searches can be single words, entire phrases, or numbers. 
 
 
 Basic Search Result Options
@@ -69,4 +71,21 @@ These options are available underneath the search bar.
 
 .. |display| image:: display_options.png
              :scale: 50%
+
+The examples above show the search results displayed as thumbnails. However, results can be displayed as a list as well: 
+
+.. image:: quicksearch_6.png
+   :scale: 50%
+   :align: center
+
+To do so, select the |display| icon. A small options window will be displayed:
+
+.. |display| image:: display_options.png
+             :scale: 50%
+
+.. image:: quicksearch_8.png
+   :scale: 50%
+   :align: center
+
+Under **Layout** select **list.** 
 
