@@ -1,7 +1,7 @@
-**Introduction to Search & Browse Types
-=======================================
+Introduction to Search & Browse Types
+=====================================
 
-There are three basic ways to search for records within CollectiveAccess: Find, Browse, and Quicksearch. Each method generates different results, ranging from general to more specific. Each of these methods also streamlines search queries in CollectiveAccess and generates accurate, and relevant, results.
+There are four basic ways to search for records within CollectiveAccess: Find, Browse, Quicksearch, and Advanced Search. Each method generates different results, ranging from general to more specific. Each of these methods also streamlines search queries in CollectiveAccess and generates accurate, and relevant, results.
 
 Find
 ----
@@ -12,11 +12,6 @@ There are several filters provided that narrow down search results: sorting by r
 
 Within Find, options exist within each primary table which determines the scope of the search criteria: Basic, Advanced Search, Search Builder, and Browse. 
 
-QuickSearch
------------
-
-Using QuickSearch runs a full-text query across the entire database, and organizes results according to primary tables. QuickSearch is located at the top right of any CollectiveAccess user interface. The results provide a database-wide context for any search query. The top 100 results for a search query are displayed. QuickSearch will process queries with single words, numbers, or phrases. 
-
 Browse
 ------
 
@@ -24,3 +19,14 @@ Browse filters results by primary table, with additional facets that narrow down
 
 Browse is a search option in the local navigation bar under Find. Options for grouping search results will appear, and this selection will narrow any query. "Start Over" will erase any selected facets and begin a new Browse query. 
 
+QuickSearch
+-----------
+
+Using QuickSearch runs a full-text query across the entire database, and organizes results according to primary tables. QuickSearch is located at the top right of any CollectiveAccess user interface. The results provide a database-wide context for any search query. The top 100 results for a search query are displayed. QuickSearch will process queries with single words, numbers, or phrases. 
+
+Advanced Search
+---------------
+
+Advanced Search is a query tool that allows searching on multiple fields across different tables, from a single form. CollectiveAccess Advanced Search Forms can be customized using the Advanced Search Form Builder, and there is no limit as to how many different forms can be used within the system.
+
+Advanced Search offers several different ways in which a result can be generated, searching on a Title, Object Identifier, Record Type, Access Setting, Display Name, or Record Status.

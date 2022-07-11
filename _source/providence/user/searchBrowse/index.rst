@@ -13,3 +13,4 @@ Search & Browse
    Browse <browse>
    Indexing Options <indexing>
    Search Engines <engines>
+   QuickSearch <quicksearch>
