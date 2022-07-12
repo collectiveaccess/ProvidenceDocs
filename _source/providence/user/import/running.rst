@@ -109,6 +109,17 @@ Follow these steps below to run an import from the user interface in CollectiveA
 9. **Revise** the mapping accordingly. 
 10. **Re-import**, repeating Steps 1-6.
 
+more images here
+
+Order of Import
+---------------
+
+For data with more than one import mapping spreadsheet (such as Objects, Entities, Lots, and so on), the order in which the mappings are imported is important. Note, however, that this will differ for each data set. 
+
+For some data sets, considering the order for import is less important, as related records are created from a single mapping. When this is not the case, the import order can determine if records are matched properly and will help avoid errors during import. 
+
+Depending on the data set, the order of import will also affect what the `Existing Record Policy <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/exist_rec_policy.html>`_ in the Settings of an import mapping spreadsheet is set to. 
+
 
 
    

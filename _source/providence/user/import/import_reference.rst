@@ -18,6 +18,6 @@ Below you will find useful reference pages relating to data imports in Collectiv
 * `Interstitial Data <file:///Users/charlotteposever/Documents/ca_manual/providence/user/dataModelling/interstitial.html?highlight=interstitial>`_
 * `Using Lists and Vocabularies in an Import Mapping Spreadsheet <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/lists_and_vocab_in_mapping.html?highlight=using+lists>`_
 * `Mapping Object Lot Records in an Import Mapping Spreadsheet <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/mapping_object_lot_recs.html?highlight=mapping>`_
-* Mapping to Drop Down Values in CollectiveAccess
+* `Mapping to Drop Down Values in CollectiveAccess <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/import_ref_dropdown.html?highlight=mapping+drop+down+value>`_
 * `Mapping a Storage Location Hierarchy <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/mapping_storage_loc_hierarchy.html?highlight=storage+location+hierarchy>`_ 
-* Importing a Place Hierarchy 
+* `Using Bundle Codes in an Import Mapping <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/import_ref_bundlecodes.html?highlight=bundle+code>`_
