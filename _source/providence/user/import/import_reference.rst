@@ -9,6 +9,7 @@ Below you will find useful reference pages relating to data imports in Collectiv
 * `Containers <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/containers.html>`_
 * `Data Importer: Options for Importing in the User Interface <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/ui_import_options.html?highlight=ui>`_
 * `Existing Record Policies <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/exist_rec_policy.html>`_
+* `Using formatWithTemplate in an Import Mapping Spreadsheet <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/import_ref_formatwithTemplate.html?highlight=using+format>`_ 
 * `Interstitial Data <file:///Users/charlotteposever/Documents/ca_manual/providence/user/dataModelling/interstitial.html?highlight=interstitial>`_
 * `Mapping Options <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/mappings/mappingOptions.html?highlight=options>`_
 * `Mapping Object Lot Records in an Import Mapping Spreadsheet <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/mapping_object_lot_recs.html?highlight=mapping>`_
