@@ -219,7 +219,9 @@ Builders create an upper hierarchy above the to-be-imported data. Note that Spli
 Original values and Replacement values (Columns 8-9)
 `````````````````````````````````````````````````````
 
-In some cases, particularly when you are mapping to a list element, you may need the mapping to find certain values in your source data and replace them with new values upon import. In the Original Value column, you may state all values that you wish to have replaced. Then, in the Replacement Value column, set their replacements. You can add multiple values to a single cell, so long as the replacement value matched the original value line by line. Using the Original and Replacement columns is sufficient for transforming a small range of values. But for really large transformation dictionaries, use the option "transformValuesUsingWorksheet" instead: http://manual.collectiveaccess.org/import/mappings.html#transform-values-using-worksheet.
+In some cases, particularly when you are mapping to a list element, you may need the mapping to find certain values in your source data and replace them with new values upon import. In the Original Value column, you may state all values that you wish to have replaced. Then, in the Replacement Value column, set their replacements. You can add multiple values to a single cell, so long as the replacement value matched the original value line by line. Using the Original and Replacement columns is sufficient for transforming a small range of values. But for really large transformation dictionaries, use the option  :ref:`transformValuesUsingWorksheet <transformValuesUsingWorksheet>` instead. 
+
+
 
 Source Description & Notes (Columns 10 & 11)
 `````````````````````````````````````````````
