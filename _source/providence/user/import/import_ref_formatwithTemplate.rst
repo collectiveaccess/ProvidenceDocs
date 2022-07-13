@@ -22,13 +22,17 @@ To do so, **formatWithTemplate** can be used in the Options column (column 5) of
 
 This would look like:
 
-**{"formatWithTemplate": "Technique Notes: ^11”}**
+.. code-block::
+   
+   {"formatWithTemplate": "Technique Notes: ^11”}
 
 Where “Technique Notes:” will be the text that appears verbatim in the Notes field in CollectiveAccess, while ^11 references the number of the Technique Notes column in the source data.  
 
 If some of these fields are empty in source data, simply add the skipIfEmpty option:
 
-**{“formatWithTemplate”: “Technique Notes: ^11”, “skipIfEmpty”: 1}**
+.. code-block:: 
+
+   {“formatWithTemplate”: “Technique Notes: ^11”, “skipIfEmpty”: 1}
 
 **“Technique Notes:”** will be the text that appears in the Notes field, while **^11** references the number of the Technique Notes column in the source data. The **skipIfEmpty** option ensures empty cells won’t be imported  for records that do not contain data in this field. 
 
@@ -36,7 +40,9 @@ Placeholder tags may be used to incorporate data into the template. Tags always 
 
 For XML formats, an XPath expression is used. That would look like:
 
-**{“formatWithTemplate”: “Technique: ^technique_notes”, “skipIfEmpty”: 1}**
+.. code-block::
+
+   {“formatWithTemplate”: “Technique Notes: ^technique_notes”, “skipIfEmpty”: 1}
 
 While templates are tied to the specific source data element being mapped, they can reference any element in the import data set. 
 
@@ -44,4 +50,24 @@ Combining Multiple Source Data Fields into a Single Notes Field
 ---------------------------------------------------------------
 
 For instances where multiple source data fields are being mapped to a single Notes field in Collective Access, formatWithTemplate can also be used. 
+
+.. image:: note_example.png
+   :scale: 50%
+   :align: center
+
+Where some fields have values, and others do not.
+
+To import all three of these Notes fields into a single Notes field in CollectiveAccess, use the formatWithTemplate, and separate the field values with **\n**. 
+
+.. code-block:: 
+   
+   {"formatWithTemplate": "Notes: ^12\nNotes2: ^13\nNotes3: ^14", "skipIfEmpty": 1}
+
+In a notes field in CollectiveAccess, one of these fields would look like:
+
+.. image:: field_notes_ex.png
+   :scale: 50%
+   :align: center
+
+
 
