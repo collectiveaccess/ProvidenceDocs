@@ -158,6 +158,8 @@ Use the ``getRelationships`` query to fetch a list of relationships between an i
 			id, 
 			table, 
 			idno, 
+			relationship_typename,
+			relationship_typecode,
 			relationships { 
 				id, 
 				table, 
@@ -193,6 +195,8 @@ returns:
 				"id": 10,
 				"table": "ca_objects",
 				"idno": "test.1",
+				"relationship_typename": "Donor",
+				"relationship_typecode": "donor",
 				"relationships": [
 					{
 						"id": 11,
