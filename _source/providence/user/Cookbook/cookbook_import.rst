@@ -43,6 +43,7 @@ Contents
 * `Values Importing Improperly from Excel`_
 * `Importing Entities from a Single Source Data Column without a Delimiter`_
 * `Importing Currency Values with Currency Symbols`_
+* `How to format Source Column for XML or FileMakerPro Data`_
 
 Mapping Related Object Lot Records
 ---------------------------------- 
@@ -426,3 +427,15 @@ Importing Currency Values with Currency Symbols
 .. code-block:: 
 
    {"prefix": "$"}
+
+How to format Source Column for XML or FileMakerPro Data
+--------------------------------------------------------
+
+**Problem:** You are importing source data from XML or a FileMakerPro database, and don’t know how to format the source column of the import mapping spreadsheet, since data isn’t in Excel.
+
+**Solution:** For either format, take the field name as it is in the source data, and put that into the Source column in your import mapping spreadsheet. Any special characters or spaces will be replaced by a _ underscore. For example, let’s say you’d like to map fields in XML or FileMakerPro titled “Medium” and “Medium Details.” In the Source column, this would look like:
+
+medium 
+
+medium_details
+
