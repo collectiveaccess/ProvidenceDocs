@@ -44,6 +44,7 @@ Contents
 * `Importing Entities from a Single Source Data Column without a Delimiter`_
 * `Importing Currency Values with Currency Symbols`_
 * `How to format Source Column for XML or FileMakerPro Data`_
+* `Measurement Values not Showing Up in CollectiveAccess`_
 
 Mapping Related Object Lot Records
 ---------------------------------- 
@@ -439,3 +440,9 @@ medium
 
 medium_details
 
+Measurement Values not Showing Up in CollectiveAccess
+-----------------------------------------------------
+
+**Problem:** You've mapped and imported your source data, but your measurement values are not showing up in the corresponding CollectiveAccess field. 
+
+**Solution:** 
