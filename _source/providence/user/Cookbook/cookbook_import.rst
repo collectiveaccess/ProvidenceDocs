@@ -41,6 +41,8 @@ Contents
 * `Mapping a MARC element with multiple sub-fields`_
 * `Importing Indented Hierarchical List Items`_
 * `Values Importing Improperly from Excel`_
+* `Importing Entities from a Single Source Data Column without a Delimiter`_
+* `Importing Currency Values with Currency Symbols`_
 
 Mapping Related Object Lot Records
 ---------------------------------- 
@@ -395,3 +397,32 @@ Values Importing Improperly from Excel
 **Solution**: There is hidden formatting in your Excel spreadsheet; this is a common problem and can be responsible for a variety of import errors. Open the file in Excel, select all cells, and then select "Clear -> Formats" from the "Edit" menu. Save, and import the new copy of the file.
 
 .. warning:: extra stuff here at bottom in old wiki
+
+
+Importing Entities from a Single Source Data Column
+---------------------------------------------------
+
+**Problem**: Your source data has entities in one column, separated by a comma (Example: Smith, John). 
+
+**Solution**: It’s possible in CollectiveAccess to import entities without using a splitter (depending on source data). In this case, in an import mapping spreadsheet, leave Column 6 (Refinery) empty, and use a Refinery Parameter in column 7 without a delimiter. This could look like:
+
+.. code-block::
+
+   {"relationshipType": "collector", "entityType": "ind"}
+
+Importing Entities from a Single Source Data Column without a Delimiter
+-----------------------------------------------------------------------
+
+**Problem**: Your source data has entities in one column, not separated by a comma (Example: John Smith). 
+
+
+Importing Currency Values with Currency Symbols
+-----------------------------------------------
+
+**Problem:** Your source data has currency values, for example, valuation values, that do not contain currency symbols. However, in CollectiveAccess, you'd like these values to automatically have the proper currency symbol preceding the numerical value listed in the data. 
+
+**Solution:** Map the currency value to the corresponding value in CollectiveAccess. In the Options Column (column 5) of the import mapping Spreadsheet, use the following option:
+
+.. code-block:: 
+
+   {"prefix": "$"}
