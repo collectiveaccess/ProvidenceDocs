@@ -38,12 +38,9 @@ The **Containing** dropdown contains a list of what types of records will be add
 
 4. **Name the set**. This is an arbitrary name given to the Set to distinguish it. A Set Code, Description, and access settings can be configured as well. Note that items cannot be added to a set until the title information for that set is saved.
 
-.. image:: sets3.jpg
-   :width: 1957px
-   :height: 1303px
+.. image:: sets3new.png
    :align: center
-   :scale: 40% 
-   
+   :scale: 50% 
    
 5. **Select Save** to save the new set. 
 
@@ -52,14 +49,22 @@ The **Containing** dropdown contains a list of what types of records will be add
  
 Records can only be added to as set after a new set has been created. To add records to a set:
  
- 1. Within the set's user interface, navigate to **Items.**
- 2. **Type** the name of records into the search drop-down. This search drop-down pulls records from across the primary table selected while creating the new set. 
+ 1. **Save** the new Set (see above).
+ 2. Within the set's user interface, navigate to **Items.**
+ 3. **Type** the name of records into the search drop-down. This search drop-down pulls records from across the primary table selected while creating the new set. 
 
-.. image:: sets4.jpg
-   :width: 2061px
-   :height: 602px
+.. image:: search_set.png
    :align: center
-   :scale: 40%
+   :scale: 50%
+
+4. **Select** the items that appear in the search drop-down to add them to the set. 
+
+.. image:: add_set.png
+   :scale: 50%
+   :align: center
+
+Set Options in the Inspector Window
+-----------------------------------
 
 
 **Sharing Sets**
