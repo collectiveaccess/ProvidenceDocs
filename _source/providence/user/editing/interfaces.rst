@@ -33,14 +33,25 @@ To edit a user interface:
           :scale: 40% 
 
 3. The **Basic Info** page of the selected user interface includes the as the name and code of the user interface, as well as a list of all of the screens within that interface. Fill in or change any necessary information about the selected user interface.
-4. Navigate to the **Screens** element on the Basic Info page. This is the tool for adding new elements, or fields, to the configuration.
+
+.. figure:: entity_editor_screen_ex.png
+   :scale: 50%
+   :align: center
+
+   Partial view of the Entity editor screen in **Manage > Administration > User Interfaces.** 
+
+4. Navigate to the **Screens** element on the Basic Info page. This is the tool for adding new elements, or fields, to the configuration. Note that each user interface will display different screens: 
+
+.. image:: entity_editor_screens.png
+   :scale: 50%
+   :align: center
+
 5. Select the plus icon |plus| to add a new screen. 
 
 .. |plus| image:: uiadmin3.png
           :scale: 40% 
-
 6. **Type in** the name for the new screen. 
-7. **Save** the changes at the bottom of the page; the new screen will appear in the Screens element on the Basic Info page. 
+7. **Save** the changes at the bottom of the page; the new screen will now appear in the Screens element on the Basic Info page. 
 
 Adding a Metadata Element to a Screen
 -------------------------------------
@@ -53,12 +64,20 @@ To add a metadata element to a screen within a user interface:
 .. |page| image:: uiadmin2.png
           :scale: 40% 
 
+.. image:: pages.png
+   :scale: 50%
+   :align: center
+
 3. Scroll down to the **Screens** field, and select the same **page icon.** |page|
 
 .. |page| image:: uiadmin2.png
           :scale: 40%
 
-4. **Scroll down** to a list with two columns called Screen Content, located on the Basic Info page:
+.. image:: entity_editor_screens.png
+   :scale: 50%
+   :align: center
+
+4. **Scroll down** to the Screen Content field, located on the Basic Info page:
 
 .. image:: uiadmin4.png
    :scale: 50% 

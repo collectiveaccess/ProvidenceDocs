@@ -7,16 +7,20 @@ Relationships, like other aspects of CollectiveAccess, are configurable. Therefo
 
 Any number of relationships can be created between a pair of records, and each relationship can optionally incorporate additional metadata elements, or interstitial data, within a record. This feature allows cataloguers to describe a relationship beyond simply selecting a relationship type. Any two records can carry this interstitial description, so long as metadata and a user interface has been created. Common examples of relationships that could require interstitial metadata include: objects to places; objects to entities; entities to places; or entities to entities. For more on interstitial relationships and examples, see `Interstitial Data <https://manual.collectiveaccess.org/dataModelling/interstitial.html>`_. 
 
+An example of a relationship, with the relationship types defined in parentheses, is shown below:
+
+.. image:: relationships_entities_ex.png
+   :scale: 50%
+   :align: center
+
 **Incorporating Relationships**
 -------------------------------
 
 Relationships can be incorporated and defined within a data import mapping prior to a data import. 
 
-For pre-determined relationships that will be imported as such, it is necessary to define the relationships and their corresponding types directly in the import mapping (for instructions on creating an import mapping, downloading a starter template, and the necessary steps to incorporate related data, see `Import Mappings <https://manual.collectiveaccess.org/import/mappings.html>`_). 
+For pre-determined relationships that will be imported as such, it is necessary to define the relationships and their corresponding types directly in the import mapping. For instructions on creating an import mapping, downloading a starter template, and the necessary steps to incorporate related data, see `Creating an Import Mapping: Overview <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/c_creating_mapping.html>`_. 
 
-Relationships in a mapping will be defined simultaneously in the `Refinery Column <https://manual.collectiveaccess.org/import/mappings.html>`_ and in the `Refinery Parameters column <https://manual.collectiveaccess.org/import/mappings.html>`_. 
-
-For more on creating relationships within an import mapping, see the `Import Mapping <https://manual.collectiveaccess.org/import/mappings.html>`_ and the `Import Tutorial <https://manual.collectiveaccess.org/import/tutorial.html>`_ pages. 
+Relationships in a mapping will be defined simultaneously in the `Refinery Column <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/c_creating_mapping.html#column-6-refinery>`_ and in the `Refinery Parameters column <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/c_creating_mapping.html#column-7-refinery-parameters>`_. 
 
 **Relationships in the User Interface**
 ---------------------------------------
@@ -32,7 +36,7 @@ Scrolling down on the left side of the list will enable the full list of possibl
 
 A variety of types are available to help best describe the data in any given database. 
 
-.. note:: If a data import requires related records, then refineries must be used to create relationships between data. For more, see the `Import Mapping <https://manual.collectiveaccess.org/import/mappings.html>`_ and the `Import Tutorial <https://manual.collectiveaccess.org/import/tutorial.html>`_ pages. 
+.. note:: If a data import requires related records, then refineries must be used to create relationships between data. For more, see the `Creating an Import Mapping: Overview <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/c_creating_mapping.html>`_, `Tutorial: Import Mapping Spreadsheet <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/c_import_tutorial.html>`_, and `Refineries and Refinery Parameters <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/mappings/refineries.html#import-mappings-refineries>`_. 
 
 **Adding or Editing Relationships after Import**
 ------------------------------------------------
