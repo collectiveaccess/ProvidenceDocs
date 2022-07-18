@@ -1,3 +1,5 @@
+.. _import_c_creatoing_mapping:
+
 Creating an Import Mapping: Overview
 ====================================
 

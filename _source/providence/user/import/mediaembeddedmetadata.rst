@@ -236,6 +236,8 @@ Typical ExifTool output with these options should resemble this example:
     }]
 
 
+.. _import_mediaembeddedmetadata:
+
 Creating mappings
 -----------------
 

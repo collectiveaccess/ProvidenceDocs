@@ -1,3 +1,5 @@
+.. _import_import_ref_constant_rule:
+
 Using the Constant Rule Type in an Import Mapping Spreadsheet
 =============================================================
 

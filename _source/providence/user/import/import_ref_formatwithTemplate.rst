@@ -1,3 +1,5 @@
+.. _import_import_ref_formatWithTemplate:
+
 Using formatWithTemplate in an Import Mapping Spreadsheet
 =========================================================
 

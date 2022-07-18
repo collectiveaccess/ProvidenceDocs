@@ -1,3 +1,5 @@
+.. _import_lists_and_vocab_in_mapping:
+
 Using Lists and Vocabularies in an Import Mapping Spreadsheet
 =============================================================
 

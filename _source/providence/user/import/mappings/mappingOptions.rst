@@ -1,4 +1,4 @@
-.. _mappingOptions:
+.. _import_mappings_mappingOptions:
 
 Mapping Options
 ===============

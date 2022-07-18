@@ -1,3 +1,5 @@
+.. _import_worldcat:
+
 **WorldCat**
 ========
 CollectiveAccess supports WorldCat as a bibliographic authority in any given system. `Worldcat <https://www.worldcat.org/>`_ is the world’s largest digital database of library content and operates as an OCLC. WorldCat houses publications from all over the world, and incorporates various editions, volumes, languages, and media relating to specific titles. Citations can be linked to records, and automated citations enhance retrieval in searches within CollectiveAccess. 

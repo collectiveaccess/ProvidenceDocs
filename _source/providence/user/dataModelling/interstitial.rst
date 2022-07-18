@@ -1,3 +1,5 @@
+.. _dataModelling_interstitial:
+
 Interstitial Data
 =================
 
@@ -84,7 +86,7 @@ After you've defined the metadata elements for your relationship record, you nee
 Note that these interstitial records are meant to be small and manageable, so only one screen per user interface is supported. If other screens are defined, they simply won't appear.
 
 Setting up Interstitial Relationship Records through the User Interface
---------------------------------------------------------------------
+-----------------------------------------------------------------------
 
 Setting up a relationship record through the user interface is essentially just like creating a user interface for any other type of record (see `User Interface Administration <file:///Users/charlotteposever/Documents/ca_manual/providence/user/editing/interfaces.html#user-interface-administration>`_). It follows the same steps wherein a metadata element is created, and then added to the user interface.
 

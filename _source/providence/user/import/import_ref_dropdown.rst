@@ -1,3 +1,5 @@
+.. _import_import_ref_dropdown:
+
 Mapping to Drop Down Values in CollectiveAccess
 ===============================================
 

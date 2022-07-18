@@ -1,3 +1,5 @@
+.. _import_getty:
+
 **Getty Vocabularies**
 ======================
 **Getty Art and Architecture Thesaurus (AAT)**
