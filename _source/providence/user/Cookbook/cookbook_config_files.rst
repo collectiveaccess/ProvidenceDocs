@@ -7,11 +7,14 @@ Each scenario begins with a “problem,” describing a certain challenge or que
 
 Click on a scenario below in the Contents to view problems and solutions. For more support, please see the online `Support Forum <https://collectiveaccess.org/support/>`_, `Online Chat <https://gitter.im/collectiveaccess/support>`_, `Slack Channel for Developers <https://collectiveacc-uye7574.slack.com/join/signup#/domain-signup>`_, and `Back-end <https://github.com/collectiveaccess/providence>`_ and `Front-end <https://github.com/collectiveaccess/pawtucket2>`_ GitHub Repositories.  
 
+See also: `Configuring Providence <file:///Users/charlotteposever/Documents/ca_manual/providence/user/configuration/configuringProvidence.html>`_. 
+
 Contents
 --------
 
 * `Browsing on a Metadata Element`_
-*
+* `Browsing on Related Authorities`__
+* `Changing Currency Settings`_
 
 Browsing on a Metadata Element 
 ------------------------------
@@ -91,4 +94,4 @@ On the other hand, if there are multiple Occurrence types, and you wish to restr
 Changing Currency Settings
 --------------------------
 
-
+More to come 
