@@ -1,3 +1,5 @@
+.. _import_chenhall:
+
 **Chenhall Nomenclature for Museum Cataloging**
 ===========================================
 CollectiveAccess supports `Chenhall Nomenclature for Museum Cataloging <https://www.nomenclature.info/apropos-about.app?lang=en#Heading-About>`_, a standardized vocabulary popular for use in museums and historical societies throughout English- and French-speaking North America. 

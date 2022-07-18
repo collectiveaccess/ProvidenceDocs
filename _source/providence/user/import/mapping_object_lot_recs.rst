@@ -1,3 +1,5 @@
+.. _import_mapping_object_lot_recs:
+
 Mapping Object Lot Records
 ==========================
 

@@ -1,3 +1,5 @@
+.. _import_create_mapping:
+
 Creating an Import Mapping: Tutorial
 ====================================
 

@@ -1,4 +1,4 @@
-.. _rules:
+.. _import_mappings_rules:
 
 Rules
 ========

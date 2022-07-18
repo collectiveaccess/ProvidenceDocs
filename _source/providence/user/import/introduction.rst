@@ -1,3 +1,5 @@
+.. _import_introduction:
+
 Importing Data in CollectiveAccess
 ==================================
 

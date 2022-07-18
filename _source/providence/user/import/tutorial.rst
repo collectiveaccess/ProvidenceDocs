@@ -1,3 +1,5 @@
+.. _import_tutorial.rst
+
 Creating an Import Mapping
 ==========================
 

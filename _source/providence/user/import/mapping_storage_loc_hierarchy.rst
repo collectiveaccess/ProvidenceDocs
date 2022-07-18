@@ -1,3 +1,5 @@
+.. _import_mapping_storage_loc_hierarchy:
+
 Mapping a Storage Location Hierarchy
 ====================================
 

@@ -1,4 +1,4 @@
-.. _import_formats:
+.. _import_mappings_formats:
 
 Supported File Formats
 ======================

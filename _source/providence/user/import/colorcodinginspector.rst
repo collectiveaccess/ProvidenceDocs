@@ -1,3 +1,5 @@
+.. _import_colorcodinginspector:
+
 **Color Coding the Inspector**
 ==============================
 

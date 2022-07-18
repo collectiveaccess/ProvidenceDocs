@@ -1,3 +1,5 @@
+.. _import_orig_replace_example:
+
 Use of Original Value/Replacement Value Columns in an Import Mapping 
 ====================================================================
 

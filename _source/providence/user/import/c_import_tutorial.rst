@@ -1,3 +1,5 @@
+.. _import_c_import_tutorial:
+
 Tutorial: Import Mapping Spreadsheet
 ====================================
 

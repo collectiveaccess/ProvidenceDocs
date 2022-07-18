@@ -1,3 +1,5 @@
+.. _import_mappings_refineries:
+
 **Refineries**
 ==============
 A refinery is a command that creates a record while simultaneously creating a relationship and relationship type associated with that same record. A refinery can also match on an existing record in a database, and create a relationship between that record and the source data. 

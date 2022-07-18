@@ -1,3 +1,5 @@
+.. _import_mappings_regex:
+
 Regular Expressions
 ===================
 
