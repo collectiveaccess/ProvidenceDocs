@@ -52,8 +52,8 @@ Batch Editing Sets Using Search Results
 Sets can also be quickly generated (and subsequently edited) based on a search term. For more information about searching and browsing, see Search and Browse. When you have completed your search and the results are displayed on the screen, choose “sets” from the options immediately above your search results (highlighted in red in the image below). Several tools for creating and batch-editing a set will be displayed. 
 
 * **Add checked to set** selects checked records from the search results and adds them to a pre-existing set. Beside each record in your results list you will see a checkbox. Records can be checked individually, or you may select (or de-select) all of them by clicking "toggle checked" (in small print below the "Add checked to set" option.)
-* **"Create set from results"** creates an entirely new set from the search results by selecting "Create."
-* **"Create set and batch edit results"** will create a new set that can be batch edited immediately. Select “Edit.” This last option directs to the batch editing screen. 
+* **Create set from results** creates an entirely new set from the search results by selecting "Create."
+* **Create set and batch edit results** will create a new set that can be batch edited immediately. Select “Edit.” This last option directs to the batch editing screen. 
 
 Other Batch Editing Features
 ----------------------------

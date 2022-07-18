@@ -1,7 +1,7 @@
 Deaccessions
 ============
 
-CollectiveAccess can track the deaccessioning process at the item-level, using the **Deaccession Status bundle**. This bundle can be found in the List of Metadata Elements. The Deaccession Status bundle can be placed anywhere in the object editor screen. 
+CollectiveAccess can track the deaccessioning process at the item-level, using the **Deaccession Status bundle**. This bundle can be found in the list of `Metadata Elements <file:///Users/charlotteposever/Documents/ca_manual/providence/user/dataModelling/metadata.html?highlight=metadata+elements>`_. The Deaccession Status bundle can be placed anywhere in the object editor screen. 
 
 .. note:: If you are writing a profile configuration in XML, the bundle code is **ca_objects_deaccession**. Items can only be deaccessioned if this bundle code is included in the installation profile. 
 

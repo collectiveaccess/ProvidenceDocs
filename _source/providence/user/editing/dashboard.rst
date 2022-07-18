@@ -5,7 +5,7 @@ CollectiveAccess provides a customizable **dashboard.** The dashboard is the hom
 
 The main function of the Dashboard is to display the widgets for your system. **Widgets** provide specialized functions, and serve as mini-applications within Providence. The number of widgets in the Dashboard is entirely configurable, and their arrangement is customizable to suit a variety of collections and workflows. Every CollectiveAccess system comes with a specific set of widgets; however, custom widgets can be created, and widgets can be added or taken away from any dashboard. 
 
-.. note:: Widgets can be written and created by any developer. For more on writing widgets, see 
+.. note:: Widgets can be written and created by any developer. For more on writing widgets, see `Writing Dashboard Widgets <file:///Users/charlotteposever/Documents/ca_manual/providence/developer/writing_dash_widgets.html?highlight=widget>`_. 
 
 Adding Widgets to the Dashboard
 -------------------------------

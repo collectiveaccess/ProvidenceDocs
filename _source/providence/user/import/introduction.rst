@@ -24,7 +24,7 @@ Import mappings operate under two basic assumptions about the data being importe
 
 A **row** in an import mapping spreadsheet contains all the metadata about a single, specific record: title, date, location, and other metadata that is present in the source data, and is arbitrary to the data set(s). A **column** groups these metadata elements together: all titles, all dates, all locations, and so on. This organization through rows and columns is a key aspect of creating an import mapping. 
 
-.. note:: The exception to these assumptions is an option called treatAsIdentifiersForMultipleRows that will explode a single row into multiple records. This is very useful if you have a data source that references common metadata shared by many pre-existing records in a single row. See the Options section for more details: http://manual.collectiveaccess.org/import/tutorial.html#options-column-5.
+.. note:: The exception to these assumptions is an option called treatAsIdentifiersForMultipleRows that will explode a single row into multiple records. This is very useful if you have a data source that references common metadata shared by many pre-existing records in a single row. See `Options <https://manual.collectiveaccess.org/import/tutorial.html#options-column-5>`_ for more details.
 
 .. note:: Excel Tip for Import Mapping Spreadsheets: Translating A, B, C… to 1, 2, 3… can be time-consuming. Excel’s preferences allow you to change columns to display numerically rather than alphabetically. Go to Excel Preferences and select “General.” Click “Use R1C1 reference style.” This will display the column values as numbers.
 

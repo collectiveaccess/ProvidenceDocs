@@ -68,7 +68,7 @@ How values go in the Source column depends on the file format of the source data
 
 A full description of the supported import formats and how they may be referenced in an import mapping is available in the Supported File Formats page.
 
-.. Note:: In the example we're using for this tutorial, the sample data is in Excel. However, you may need to import data that is in an XML format. XML sources are cited in xPath, which is the standard syntax for retrieving data encoded in XML. Documentation regarding xPath be found here.
+.. Note:: In the example we're using for this tutorial, the sample data is in Excel. However, you may need to import data that is in an XML format. XML sources are cited in xPath, which is the standard syntax for retrieving data encoded in XML. Documentation regarding xPath be found `here <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/mappings/formats.html?highlight=xpath?>`_.
 
 Our source data sample contains 10 columns of data, and each are listed in the mapping document under Source.
 
@@ -173,9 +173,9 @@ An import mapping can find values within source data and replace them with new v
 
 In our example, there is a list element called "Reproduction" with values for reproduction, original, and unknown. In our source data, however, you'll notice that the data input for these values are abbreviated (e.g "orig", "repro", and "dontknow"). By using original and replacement values, our mapping transforms "orig" to "original" and "repro" to "reproduction" so that they can match on the list item code for the corresponding values in CollectiveAccess.
 
-.. note:: Original Values and Replacement Values are ideal for smaller replacements. For large transformation dictionaries, use the Option “transformValuesUsingWorksheet” `http://manual.collectiveaccess.org/import/mappings.html#transform-values-using-worksheet`_.
+.. note:: Original Values and Replacement Values are ideal for smaller replacements. For large transformation dictionaries, use the Option :ref:`transformValuesUsingWorksheet <transformValuesUsingWorksheet>` 
 
-For an example of when to use these columns and how, please see 
+For an example of when to use these columns and how, please see `Using Original and Replacement Values in an Import Mapping <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/orig_replace_example.html#import-orig-replace-example?>`_. 
 
 .. _import_notes:
 

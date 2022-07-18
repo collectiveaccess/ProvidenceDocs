@@ -70,15 +70,20 @@ Set the formatting for the metadata that will display on each entry of the timel
 					title_template = ca_entities.preferred_labels.name,
 					description_template = ca_entities.biography
 Set screen size options.
-			}
-			}
-		},
-		options = {
-			width = 100%,
-			height = 100%
-		}
-	}
+
+.. code-block:: 
+
+   options = {
+
+   width = 100%, height = 100%
+
+   }
+
 }
+
+}
+
+
 
 The appearance of the timeline can be customized. For example, to color code a certain time period to see which objects fall into a certain era: 
 
