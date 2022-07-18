@@ -23,7 +23,7 @@ Both options require an import mapping spreadsheet, and source data in a support
 
 To run a data import in the terminal or through the CollectiveAccess user interface, eight basic steps are involved: 
 
-1. **Create an import mapping spreadsheet.** This can be made in Excel or in Google Sheets, and will serve as a crosswalk between source data and the destination in CollectiveAccess. This step is necessary for either manner in which an import will be executed. See ` Creating an Import Mapping <links here>`_ for instructions. 
+1. **Create an import mapping spreadsheet.** This can be made in Excel or in Google Sheets, and will serve as a crosswalk between source data and the destination in CollectiveAccess. This step is necessary for either manner in which an import will be executed. See :ref:`Creating an Import Mapping <links here>` for instructions. 
 2. **Create a backup of the database** by executing a data dump before running the import.
 3. **Run the import** from either the command line (terminal) or the graphical user interface in CollectiveAccess. 
 4. **Check the data** that has been imported in CollectiveAccess. Look for any errors or points of inconsistencies. Errors will usually show up in error messages during an import; however, it is necessary to conduct general quality checks in the system. 
@@ -106,7 +106,7 @@ Follow these steps below to run an import from the user interface in CollectiveA
 
 5. **Have your source data available**. In addition to the import mapping spreadsheet, it will also be necessary to upload the specific source data set into the user interface during this process, by dragging or uploading from a location on a computer. Have this file (or files) available in a supported format. 
 6. **Upload** the source data. 
-7. **Configure the necessary settings**. Select the Log Level and Testing Options. For more, see `Data Importer (UI): Options for Importing <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/ui_import_options.html?highlight=ui>`_. 
+7. **Configure the necessary settings**. Select the Log Level and Testing Options. For more, see :ref:`Data Importer (UI): Options for Importing <import_ui_import_options>`. 
 8. **Run the import** by selecting Execute Data Import. 
 9. **Revise** the mapping accordingly. 
 10. **Re-import**, repeating Steps 1-6.
@@ -120,7 +120,7 @@ For data with more than one import mapping spreadsheet (such as Objects, Entitie
 
 For some data sets, considering the order for import is less important, as related records are created from a single mapping. When this is not the case, the import order can determine if records are matched properly and will help avoid errors during import. 
 
-Depending on the data set, the order of import will also affect what the `Existing Record Policy <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/exist_rec_policy.html>`_ in the Settings of an import mapping spreadsheet is set to. 
+Depending on the data set, the order of import will also affect what the :ref:`Existing Record Policy <import_exist_rec_policy>` in the Settings of an import mapping spreadsheet is set to. 
 
 
 
