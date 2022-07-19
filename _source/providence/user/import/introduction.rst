@@ -33,7 +33,7 @@ Supported Data Input Formats
 
 Data can only be imported into CollectiveAccess in a supported data format. Supported data formats include: XLXS, Exif, MODS, RDF, Vernon, FMPDSOResult, MediaBin, ResourceSpace, WordpressRSS, CSVDelimited, FMPXMLResult, MySQL, SimpleXML, WorldCat, CollectiveAccess (CA-to-CA imports), Inmagic, Omeka, TEI, iDigBio, EAD, MARC, PBCoreInst, TabDelimited, Excel, MARCXML, PastPerfectXML, and ULAN. 
 
-A full description of the supported import formats, and how they may be referenced in an import mapping, is available in the Supported File Formats page.
+For more, see `Supported File Formats <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/mappings/formats.html?highlight=file+format>`_. 
 
 The following pages, A First Import Tutorial, and Running a Data Import, will walk the user through the different parts of an import mapping, how to create an import mapping, and finally, how to run an import mapping to import data. 
 

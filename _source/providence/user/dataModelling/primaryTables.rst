@@ -7,7 +7,7 @@ Primary Tables and Intrinsic Fields
    :local:
    :depth: 1
 
-CollectiveAccess is structured around several primary tables, with editors that can be enabled (or disabled) depending on project requirements. Each primary table has intrinsic bundles and its own set of preferred and non-preferred labels bundles. Distinct user interfaces can be configured for each table, and within that, a single table can have multiple user interfaces restricted by Type (see Types).
+CollectiveAccess is structured around several primary tables, with editors that can be enabled (or disabled) depending on project requirements. Each primary table has intrinsic bundles and its own set of preferred and non-preferred labels bundles. Distinct user interfaces can be configured for each table, and within that, a single table can have multiple user interfaces restricted by Type (see Types). 
 
 Editors that are not relevant for your system (you don't catalogue places for example) can be disabled in the configuration file app.conf, by setting the various \*_disable directives below to a non-zero value
 
@@ -196,7 +196,7 @@ Tour stop intrinsics (ca_tour_stops)
    :header-rows: 1
    :file: intrinsics_tour_stops.csv
 
-`Note:` ca_tour_stops.preferred_labels.name is used by data mappings and display templates to reference the intrinsic name field in the ca_tour_stop_labels table
+.. note:: ca_tour_stops.preferred_labels.name is used by data mappings and display templates to reference the intrinsic name field in the ca_tour_stop_labels table
 
 
 Label Tables
@@ -215,7 +215,7 @@ See label name fields below for table specific name fields.
 Label Table Intrinsics
 ^^^^^^^^^^^^^^^^^^^^^^
 
-Occassionally label table names and intrinsic fields need to be referenced directly, for example while configuring searching indexing.  Search indexing in `Search_indexing.conf <http://manual.collectiveaccess.org/providenceConfiguration/mainConfiguration/search_indexing.html>`_.
+Occassionally label table names and intrinsic fields need to be referenced directly, for example while configuring searching indexing.  Search indexing in `Search_indexing.conf <file:///Users/charlotteposever/Documents/ca_manual/providence/user/configuration/mainConfiguration/search_indexing.html>`_.
 
 .. note:: 
 	<table name>.preferred_labels.<name of intrinsic> is used by data mappings and display templates to reference the intrinsic _name_ field for preferred labels. The _<table name>.preferred_labels_ construct is simply an alias for the label table, filtered to return only those entries with the _is_preferred_  set. For example _ca_objects.preferred_labels.name_ and _ca_object_labels.name_ refer to the same thing, except that the _ca_object_labels.name_ version will return _all_ labels, while _ca_objects.preferred_labels.name_ will return only those marked as preferred. Similarly,  _<table name>.nonpreferred_labels.<name of intrinsic>_ will return all entries _not_ marked as preferred. Whether you use _ca_objects.preferred_labels.<name of intrinsic>_, ca_objects.nonpreferred_labels.<name of intrinsic>_ or _ca_object_labels.<name of intrinsic>_, the intrinsic names used are the same ones listed below.
@@ -254,7 +254,7 @@ Available for all label tables
    "Source", "source_info", ""
    "Locale", "locale_id", "Locale of the label."
 
-Note: ca_tour_labels and ca_tour_stop_labels do not contain type, source_info and is_preferred
+.. note:: ca_tour_labels and ca_tour_stop_labels do not contain type, source_info and is_preferred
 
 Label name fields
 *****************

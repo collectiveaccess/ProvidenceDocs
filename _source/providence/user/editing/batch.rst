@@ -49,7 +49,23 @@ Select “Execute Batch Edit" to save changes and make a batch edit.
 Batch Editing Sets Using Search Results
 ---------------------------------------
 
-Sets can also be quickly generated (and subsequently edited) based on a search term. For more information about searching and browsing, see Search and Browse. When you have completed your search and the results are displayed on the screen, choose “sets” from the options immediately above your search results (highlighted in red in the image below). Several tools for creating and batch-editing a set will be displayed. 
+Sets can also be quickly generated (and subsequently edited) based on a search term. For more information about searching and browsing, see `Search and Browse <file:///Users/charlotteposever/Documents/ca_manual/providence/user/searchBrowse/index.html?highlight=search+browse>`_. 
+
+Use the Browse function to search and find records to add to a Set. For example, Browsing for records that have media: 
+
+.. image:: browse_result_Set.png
+   :scale: 50%
+   :align: center
+
+When you have completed your search and the results are displayed on the screen, choose **Set Tools** from the left side of the screen. Several tools for creating and batch-editing a set will be displayed: 
+
+.. image:: set_tools.png
+   :scale: 50%
+   :align: center
+
+.. image:: create_set.png
+   :scale: 50%
+   :align: center
 
 * **Add checked to set** selects checked records from the search results and adds them to a pre-existing set. Beside each record in your results list you will see a checkbox. Records can be checked individually, or you may select (or de-select) all of them by clicking "toggle checked" (in small print below the "Add checked to set" option.)
 * **Create set from results** creates an entirely new set from the search results by selecting "Create."

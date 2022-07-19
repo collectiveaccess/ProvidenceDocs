@@ -10,7 +10,7 @@ General configuration of CollectiveAccess is controlled by the *app.conf* config
 
 Structure
 -----------
-To make editing app.conf a bit more manageable the file is broken up into several sections grouping related options: menus, disable switches, hierarchies, titles and identifiers, search, features, access control, styling, mapping, defaults, media, administration and esoterica (things you probably won't ever need to change). For sections where a separate configuration file is also available (Eg. search.conf and the search section) the app.conf section controls only high-level options, while the  file handles detailed configuration.
+To make editing **app.conf** a bit more manageable, the file is broken up into several sections grouping related options: menus, disable switches, hierarchies, titles and identifiers, search, features, access control, styling, mapping, defaults, media, administration and esoterica (things you probably won't ever need to change). For sections where a separate configuration file is also available (Eg. search.conf and the search section) the app.conf section controls only high-level options, while the  file handles detailed configuration.
 
 
 WHAT: This is the main application configuration file for Providence, designed so that users can easy manage various system-wide settings in one convenient location.
@@ -815,7 +815,7 @@ Defines options available in the toolbar
 Enable dependent field visibility feature
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-See here for more information: http://docs.collectiveaccess.org/wiki/Dependent_Field_Visibility
+See `Dependent Field Visibility <file:///Users/charlotteposever/Documents/ca_manual/providence/developer/dep_field.html?highlight=dependent+field+visibility>`_ for more information. 
 
 .. code-block:: none
 

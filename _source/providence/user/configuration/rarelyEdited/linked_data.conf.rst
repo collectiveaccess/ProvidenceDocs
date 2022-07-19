@@ -3,4 +3,8 @@
 Linked_data.conf
 ================
 
-Add table for Getty Information Services from this page: https://docs.collectiveaccess.org/wiki/Information_Services
+See `Information Services <file:///Users/charlotteposever/Documents/ca_manual/providence/user/dataModelling/metadata/informationServices.html?highlight=linked+data+services?>`_. 
+
+More to Come 
+------------
+

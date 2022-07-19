@@ -7,9 +7,20 @@ Relationships, like other aspects of CollectiveAccess, are configurable. Therefo
 
 Any number of relationships can be created between a pair of records, and each relationship can optionally incorporate additional metadata elements, or interstitial data, within a record. This feature allows cataloguers to describe a relationship beyond simply selecting a relationship type. Any two records can carry this interstitial description, so long as metadata and a user interface has been created. Common examples of relationships that could require interstitial metadata include: objects to places; objects to entities; entities to places; or entities to entities. For more on interstitial relationships and examples, see `Interstitial Data <https://manual.collectiveaccess.org/dataModelling/interstitial.html>`_. 
 
-An example of a relationship, with the relationship types defined in parentheses, is shown below:
+Relationships and Relationship Types
+------------------------------------
+
+An example of a Relationship, with the Relationship Types defined in parentheses, is shown below:
 
 .. image:: relationships_entities_ex.png
+   :scale: 50%
+   :align: center
+
+Each CollectiveAccess system has a defined list of relationships and Relationship Types. 
+
+To access and manage Relationships and Relationship Types,  by navigating to **Manage > Administration > Relationship Types.** The hierarchy will display:
+
+.. image:: relationship_hierarchy.png
    :scale: 50%
    :align: center
 
