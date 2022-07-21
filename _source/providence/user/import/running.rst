@@ -23,7 +23,7 @@ Both options require an import mapping spreadsheet, and source data in a support
 
 To run a data import in the terminal or through the CollectiveAccess user interface, eight basic steps are involved: 
 
-1. **Create an import mapping spreadsheet.** This can be made in Excel or in Google Sheets, and will serve as a crosswalk between source data and the destination in CollectiveAccess. This step is necessary for either manner in which an import will be executed. See :ref:`Creating an Import Mapping <links here>` for instructions. 
+1. **Create an import mapping spreadsheet.** This can be made in Excel or in Google Sheets, and will serve as a crosswalk between source data and the destination in CollectiveAccess. This step is necessary for either manner in which an import will be executed. See `Creating an Import Mapping <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/c_creating_mapping.html>`_ for complete instructions. 
 2. **Create a backup of the database** by executing a data dump before running the import.
 3. **Run the import** from either the command line (terminal) or the graphical user interface in CollectiveAccess. 
 4. **Check the data** that has been imported in CollectiveAccess. Look for any errors or points of inconsistencies. Errors will usually show up in error messages during an import; however, it is necessary to conduct general quality checks in the system. 
@@ -73,6 +73,7 @@ Follow the steps outlined below to generate a successful import from the termina
 6. **Modify the import** and rerun the utility if something has gone wrong. To modify your import and rerun the utility, simply restore your database:
 
 .. code-block:: php
+
    mysql -u#name -p#password project < ~/project_date.dump
 
 7. **Repeat Steps 1-4**, until satisfied with the data import. 
@@ -86,13 +87,13 @@ Importing data through the user interface in CollectiveAccess is a great option 
 
 Follow these steps below to run an import from the user interface in CollectiveAccess: 
 
-1. **Navigate to Import/Data**. The CollectiveAccess import feature will be displayed: 
+1. **Navigate to Import/Data** in CollectiveAccess. The CollectiveAccess import feature will be displayed: 
 
 .. image:: running1.png
    :scale: 50%
    :align: center
 
-2. **Select the plus sign icon** |icon| in the top right corner. An area with "Drag importer worksheets here to add or update" will appear, where the import mapping spreadsheet to be dragged, or uploaded, into the user interface. 
+2. **Select the plus sign icon** |icon| in the top right corner. An area with "Drag importer worksheets here to add or update" will appear, where the import mapping spreadsheet to be dragged, or uploaded, into the user interface. In addition, the worksheet can be loaded with a URl from GoogleDrive. 
 
 .. |icon| image:: running2.png
           :scale: 50%

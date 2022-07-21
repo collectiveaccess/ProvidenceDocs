@@ -1,5 +1,5 @@
-**Relationships**
-=================
+Relationships
+=============
 
 As a relational database, a core feature of CollectiveAccess is that it can create relationships between records of any type. A relationship’s most basic function is to link records together, creating a bi-directional connection between various kinds of records. Creating relationship records in a database is entirely optional, and in fact won't be accessible unless a user interface is defined for them. However, relationships are extremely useful in situating records within a greater network of interrelated data; they reflect the real-life connections between data. In CollectiveAccess, relationships are indicated using the bi-directional arrow ⇔. Relationships may be created between records in any primary table without restriction. 
 

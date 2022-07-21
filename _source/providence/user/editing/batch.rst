@@ -63,6 +63,8 @@ When you have completed your search and the results are displayed on the screen,
    :scale: 50%
    :align: center
 
+Selecting Set Tools will display the option to name the new Set, and to create the Set from all results shown, or, from selected (checked) results only. Also choose whether to open the set for batch editing. 
+
 .. image:: create_set.png
    :scale: 50%
    :align: center
