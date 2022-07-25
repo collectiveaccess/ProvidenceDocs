@@ -13,7 +13,7 @@ The purpose of an import mapping is to define specifically *how* and *where* sou
 
 An import mapping is a spreadsheet (XLSX or GoogleSheets) that defines how data is imported into CollectiveAccess. This spreadsheet acts as a crosswalk, detailing where data is coming from outside of CollectiveAccess, and where that same data will go in CollectiveAccess. For a tutorial using the Sample Import Mapping Spreadsheet and Sample Import Data, please see `Tutorial: Import Mapping Spreadsheet <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/c_import_tutorial.html>`_. 
 
-Each import mapping spreadsheet contains a set of intrinsic columns. A comprehensive description and function of these columns will be described below. Each import mapping also contains specific, customized Settings. This section will not use sample data or a sample spreadsheet to illustrate what the parts of an import mapping spreadsheet look like. Instead, tables will be used to list possible options and the functions of each aspect of the spreadsheet in more detail. 
+Each import mapping spreadsheet contains a set of intrinsic columns. A comprehensive description and function of these columns will be described below. Each import mapping also contains specific, customized Settings. Tables will be used to list possible options and the functions of each aspect of the spreadsheet in more detail. 
 
 Here is a column-by-column explanation of each component of the import mapping spreadsheet. To follow along with this tutorial, download the following two files: 
 
@@ -27,7 +27,7 @@ Parts of an Import Mapping: Settings, Columns, and More
 Settings
 --------
 
-Every import mapping requires general settings. Settings include the importer name, data format of the source data (for a comprehensive list of supported file formats, please see xxx), the selected CollectiveAccess table, and more. This section can be placed at the top or bottom of a mapping spreadsheet. Although the Settings are integrated into the spreadsheet, they do function separately from the main column-defined body of the import mapping.
+Every import mapping requires general settings. Settings include the importer name, data format of the source data (for a comprehensive list of supported file formats, please see `Supported File Formats <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/mappings/formats.html?highlight=file+format>`_), the selected CollectiveAccess table, and more. This section can be placed at the top or bottom of a mapping spreadsheet. Although the Settings are integrated into the spreadsheet, they do function separately from the main column-defined body of the import mapping.
 
 .. note:: In Settings, the rule types in Column 1 must be set to “Settings.” 
 
@@ -66,11 +66,9 @@ How values go in the Source column depends on the file format of the source data
    :header-rows: 1
    :file: source_table1.csv
 
-A full description of the supported import formats and how they may be referenced in an import mapping is available in the Supported File Formats page.
+A full description of the supported import formats and how they may be referenced in an import mapping is available in the `Supported File Formats <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/mappings/formats.html?highlight=file+format>`_ page.
 
 .. Note:: In the example we're using for this tutorial, the sample data is in Excel. However, you may need to import data that is in an XML format. XML sources are cited in xPath, which is the standard syntax for retrieving data encoded in XML. Documentation regarding xPath be found `here <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/mappings/formats.html?highlight=xpath?>`_.
-
-Our source data sample contains 10 columns of data, and each are listed in the mapping document under Source.
 
 Source data columns may also be referenced elsewhere in the import mapping (generally in the Options or Refinery columns described below) by prefixing the column number with a caret "^" (for example "^10"), which indicates to the mapping that the value from column 10 should be inserted.
 
@@ -81,23 +79,15 @@ This allows multiple columns to be combined by using the Options settings and is
 Column 3: CA table.element
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-As a crosswalk, the import mapping spreadsheet determines where data comes from outside of CollectiveAccess (source data), but it also determines where that data will go in CollectiveAccess. Similarly to how Column 2 defines the source data, Column 3 determines where that source data goes in CollectiveAccess, using various ca_table.element_codes. 
+As a crosswalk, the import mapping spreadsheet determines where data comes from outside of CollectiveAccess (source data), but it also determines where that data will go in CollectiveAccess. Similarly to how Column 2 defines the source data, Column 3 determines where that source data goes in CollectiveAccess, using various **ca_table.element_codes.**
 
-This column declares the bundle code or metadata element in CollectiveAccess that the source data will be mapped to. It is possible to view what metadata elements are available and their formatting directly in CollectiveAccess. To do so, Manage/My Preferences/Developer/Show Bundle Codes, and select a preference. Navigate back to any record’s page, and these codes will be displayed; these then can go directly into Column 3. To copy a bundle code, simply select it, and paste into the import mapping spreadsheet. 
+This column declares the bundle code or metadata element in CollectiveAccess that the source data will be mapped to. It is possible to view what metadata elements are available and their formatting directly in CollectiveAccess. To do so, navigate to **Manage > My Preferences > Developer > Show Bundle Codes**, and select a preference. Navigate back to any record’s page, and these codes will be displayed for each field; these then can go directly into Column 3. To copy a bundle code, simply select it, and paste into the import mapping spreadsheet. 
 
-When you are importing to simple free text, DateRange, Numeric, Currency, or other kinds of datatypes, ca_table.element code is about all you need.
+When you are importing to simple free text, DateRange, Numeric, Currency, or other kinds of datatypes, a **ca_table.element** code is all that is needed. 
 
-.. note:: When creating Lot records in an import mapping, set the ca_table.element_code to ca_objects.lot_id. 
+.. note:: When creating Lot records in an import mapping, set the **ca_table.element_code** to **ca_objects.lot_id**. 
 
-However, there are a few cases where some additional steps are involved.
-
-1. Mapping to Containers: A Container is a metadata element that contains sub-elements. In order to import to specific sub-elements within a Container, you must cite the element codes for both the Container itself, as well as the code for the sub-element that is your ultimate target.
-
-In our sample mapping, the Date import is an example of this. In the sample profile, you'll notice that the Date field is actually a container with two sub-elements: a date range field for the date itself, and a date type drop-down menu to qualify the date.
-
-Finally, all of the above is assuming that your data corresponds to the primary table of your import mapping. That is, you have object-level data importing to the object table.
-
-However, data will usually contain references to related tables, such as related entities, related lots, related collections, related storage locations, and so on.
+However, there are a few cases where some additional steps are involved. For more, see `Containers <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/containers.html#import-containers>`_ and `Using Bundle Codes in an Import Mapping <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/import_ref_bundlecodes.html#import-import-ref-bundlecodes>`_. 
 
 .. _import_group:
 

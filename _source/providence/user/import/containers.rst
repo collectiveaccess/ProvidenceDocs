@@ -31,6 +31,14 @@ Dimensions are another common Container in CollectiveAccess, as this field conta
 Containers in an Import Mapping Spreadsheet 
 -------------------------------------------
 
-Individual source data can be mapped directly to these sub-elements within a Container in an import mapping spreadsheet using Groups. For more on the function of Groups, how to use Groups in an import mapping, and how to map source data into specific Containers in CollectiveAccess, please see `Creating an Import Mapping: Overview <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/c_creating_mapping.html>`_ and `Tutorial: Import Mapping Spreadsheet <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/c_import_column_overview.html>`_. 
+Individual source data can be mapped directly to these sub-elements within a Container in an import mapping spreadsheet using Groups: 
+
+.. image:: container_mapping_ex.png
+   :scale: 50%
+   align: center
+
+Where both fields are mapped to their specific **ca_table_element.code**, and they are grouped together by the Group called "date." 
+
+For more on the function of Groups, how to use Groups in an import mapping, and how to map source data into specific Containers in CollectiveAccess, please see `Creating an Import Mapping: Overview <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/c_creating_mapping.html>`_ and `Tutorial: Import Mapping Spreadsheet <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/c_import_column_overview.html>`_. 
 
 
