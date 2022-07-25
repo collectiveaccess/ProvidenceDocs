@@ -96,11 +96,7 @@ Column 4: Group
 
 In many cases, data will map into corresponding metadata elements bundled together in a container. Declaring a Group in Column 4 of an import mapping is a simple way to ensure that all of your mappings to a Container actually end up in the same place. Group names are arbitrary; CollectiveAccess will recognize a group of any name for any number of metadata elements, as long as the name is consistent. 
 
-To create a group, assign the arbitrary group name to a line in the Group column. This will direct the mapping to place rows of data into a single container. 
-
-In the example mapping, we are mapping column 3 to ca_objects.date.date_value and using the constant rule to set ca_objects.date.date_type to "date created".
-
-To make sure both the Date itself and the date type end up in the same instance of the Date container, simply assign them to the same group in the fourth mapping column.
+To create a group, assign the arbitrary group name to a line in the Group column. This will direct the mapping to place rows of data into a single container. To make sure both the Date itself and the date type end up in the same instance of the Date container, simply assign them to the same group in the fourth mapping column.
 
 The name you assign the group is arbitrary, but it should be something that is recognizable to you. 
 
@@ -127,19 +123,15 @@ In the sample mapping, note the delimiter option set on our mapping to ca_object
 Column 6: Refinery
 ^^^^^^^^^^^^^^^^^^
 
-A refinery is designed to take a specific data format and transform it via a specific behavior as it is imported into CollectiveAccess. Refineries allow for greater complexity in data representation, and can be used to create separate but related records from the import spreadsheet. For more on Refineries, their definitions, types, and how to use them, see the Refineries page. 
+A refinery is designed to take a specific data format and transform it via a specific behavior as it is imported into CollectiveAccess. Refineries allow for greater complexity in data representation, and can be used to create separate but related records from the import spreadsheet. For more on Refineries, their definitions, types, and how to use them, see the `Refineries <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/mappings/refineries.html#import-mappings-refineries>`_ page. 
 
-If your data import requires related records, then you need to use refineries. 
+If a data import requires related records, then refineries must be used.  
 
-While you can get really complex with refinery parameters, at its most basic a refinery simply creates a record, or matches on an existing record, and creates a relationship between it and the record you are importing directly from the source data.
+While you can get really complex with refinery parameters, at its most basic, a refinery simply creates a record, or matches on an existing record, and creates a relationship between it and the record you are importing directly from the source data.
 
-In our example mapping, we are importing Images as ca_objects records. But using refineries, we are also creating and relating Entity records to those Object records.
+The **objectLotSplitter** requires a few extra settings, all of which are cited in our example mapping and detailed in `Mapping Object Lot Records in an Import Mapping Spreadsheet <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/mapping_object_lot_recs.html#import-mapping-object-lot-recs?>`_. 
 
-Our example uses an entitySplitter, but these same principles apply to the splitters for other tables: placeSplitter, collectionSplitter, and so on.
-
-The objectLotSplitter requires a few extra settings, all of which are cited in our example mapping.
-
-Lastly, Splitters aren't the only type of Refinery - they're just the most common. For a complete list of refineries, go here.
+Lastly, Splitters aren't the only type of Refinery - they're just the most common. A complete list of Refineries and Splitters can be seen `here <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/mappings/refineries.html#import-mappings-refineries>`_. 
 
 .. _import_parameters:
 
@@ -161,7 +153,7 @@ Columns 8 and 9: Original Values/Replacement Values
 
 An import mapping can find values within source data and replace them with new values upon import. This is a necessary step for data that does not match the list item code for corresponding values in CollectiveAccess. Values for the source data will be input in Column 8, while the values replacing those will be input in Column 9. Multiple values may be added to a single cell in an import mapping, so long as the replacement value matches the original value line by line.
 
-In our example, there is a list element called "Reproduction" with values for reproduction, original, and unknown. In our source data, however, you'll notice that the data input for these values are abbreviated (e.g "orig", "repro", and "dontknow"). By using original and replacement values, our mapping transforms "orig" to "original" and "repro" to "reproduction" so that they can match on the list item code for the corresponding values in CollectiveAccess.
+In our sample data, there is a list element called "Reproduction" with values for reproduction, original, and unknown. In our source data, however, you'll notice that the data input for these values are abbreviated (e.g "orig", "repro", and "dontknow"). By using original and replacement values, our mapping transforms "orig" to "original" and "repro" to "reproduction" so that they can match on the list item code for the corresponding values in CollectiveAccess.
 
 .. note:: Original Values and Replacement Values are ideal for smaller replacements. For large transformation dictionaries, use the Option :ref:`transformValuesUsingWorksheet <transformValuesUsingWorksheet>` 
 
