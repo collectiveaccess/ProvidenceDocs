@@ -57,7 +57,7 @@ Column 1: Rule Types
 
 Rule Types are the first column in an import mapping. The rules that are set in this column determine how each row in the mapping spreadsheet will be imported: the row can be mapped, meaning it will be imported; skipped, meaning the row will not be imported; can be set to a constant value; can be set to rule; or can be set to a setting. 
 
-Note: Only rule types corresponding to specific settings in the import mapping should be set to Setting. For rows that correspond to data, do not use this rule type. 
+.. note: Only rule types corresponding to specific settings in the import mapping should be set to Setting. For rows that correspond to data, do not use this rule type. 
 
 In the sample import mapping spreadsheet, the rule types Mapping, SKIP, and Constant are used. Since each column from the sample data corresponds to a single row in the import mapping spreadsheet, the same number of rule types must be set as there are columns of metadata. 
 
