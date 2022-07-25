@@ -152,9 +152,7 @@ Replacements
 
 While looking at the exporter mapping template you might have noticed that there's a second sheet called 'Replacements' in there. This can be used to assign replacements to each mapping item. The first column references the ID you set in the 2nd column of the mapping item table. The second column defines what is to be replaced. This again should be a PCRE-compatible regular expression without delimiters. The 3rd column defines what value should be inserted for the matched values. These conditions are applied to each matching value in the order they've been defined, i.e. if you have multiple replacements for the same mapping item, the incoming value is first passed through the first replacement, the result of this action is then passed in to the second replacement, and so on ...
 
-[Useful note for advanced users and PHP programmers]
-
-The values are passed through preg_replace, the 'pattern' being the 2nd column value (plus delimiters) and the 'replacement' being the value from the 3rd column. This allows you to do pretty nifty stuff, for instance rewriting dates:
+.. note:: **For advanced users and PHP programmers**, the values are passed through preg_replace, the 'pattern' being the 2nd column value (plus delimiters) and the 'replacement' being the value from the 3rd column. This allows you to do pretty nifty stuff, for instance rewriting dates:
 
 Search column:  (\w+) (\d+), (\d+)
 Replace column: $2 $1 $3
@@ -178,22 +176,29 @@ In this case, the 'child' element would be repeated for each hierarchy child of 
 Running an export
 -----------------
 
-The export can be executed through caUtils. To see all utilities ask for help after cd-ing into support
+The export can be executed through caUtils. To see all utilities ask for help after cd-ing into support. 
 
-cd /path_to_Providence/support
-bin/caUtils help
+.. code-block:: 
+
+   cd /path_to_Providence/support bin/caUtils help
 
 To get further details about the load-export-mapping utility:
 
-bin/caUtils help load-export-mapping
+.. code-block:: 
+
+   bin/caUtils help load-export-mapping
 
 To load the mapping:
 
-bin/caUtils load-export-mapping --file=~/my_export_mapping.xlsx
+.. code-block::
+
+   bin/caUtils load-export-mapping --file=~/my_export_mapping.xlsx
 
 Next you’ll be using the utility export-data. First, have a look at the help for the command to get familiar with the available options.
 
-bin/caUtils help export-data
+.. code-block:: 
+
+   bin/caUtils help export-data
 
 Essentially there are 3 export modes:
 
@@ -202,14 +207,18 @@ Essentially there are 3 export modes:
 
 Since the scope of a mapping is usually a single record, it's easy to use a mapping to export a record by its identifier. Suppose you have a ca_objects XML mapping with the code 'my_mapping'. To use this to export the ca_objects record with the primary key identifier (not the custom idno!) 550 to a new file ~/export.xml, you'd run this command:
 
-bin/caUtils export-data -m my_mapping -i 550 -f ~/export.xml
+.. code-block::
+
+   bin/caUtils export-data -m my_mapping -i 550 -f ~/export.xml
 
 2) Export a set of records found by custom search expression
 ------------------------------------------------------------
 
 In most real-world export projects you'll need to export a set of records or even all your records into a single file. The exporter utility allows this by letting you specify a search expression with the -s parameter that selects the set of records used for export. The records are simply exported sequentially in the order returned by the search engine. This sequence is wrapped in the wrap_before and wrap_after settings of the exporter, if set. If you want to export all your records, simply search for "*". This example exports all publicly accessible files to a file ~/export.xml:
 
-bin/caUtils export-data -m my_mapping -s "access:1" -f ~/export.xml
+.. code-block::
+
+   bin/caUtils export-data -m my_mapping -s "access:1" -f ~/export.xml
 
 3) Export a diverse set of records ("RDF mode")
 -----------------------------------------------

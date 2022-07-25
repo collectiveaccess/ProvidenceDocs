@@ -458,15 +458,15 @@ Putting It All Together
 
 To briefly summarize the components of installation profiles:
 
-   - `Locales <file:///Users/charlotteposever/Documents/ca_manual/providence/user/dataModelling/Locales.html?highlight=locale>`_ define languages for translations and these codes are used throughout the profile under "preferred_labels"
+   - Locales define languages for translations and these codes are used throughout the profile under "preferred_labels"
    - List Definitions create system lists, user lists and vocabularies.
      - System Lists determine the types of objects, entities, places, etc., that will display in your system and their sources. System types can also be used to restrict metadata element (attribute) sets to a specific type.
      - User Lists create simple controlled vocabularies. User lists are used in metadata element (attribute) sets to reference a specific list of types when the DataType "List" is used.
      - Vocabularies create multi-level controlled vocabularies, the terms of which can be related to other items for descriptive cataloguing.
-   - `Metadata Element (Attribute) Sets <file:///Users/charlotteposever/Documents/ca_manual/providence/user/dataModelling/metadata.html>`_ configure the look and function of data entry fields in your cataloging system. They must be defined by one of several AttributeTypes. Metadata Element (Attribute) Sets are referenced in Bundles to design Screens in User Interface Definitions.
-   - `User Interface Definitions <file:///Users/charlotteposever/Documents/ca_manual/providence/user/editing/interfaces.html>`_layout the cataloging navigation in Providence. These are divided into one or more screens, each of which contains one or more bundles.
-   - `Bundles <file:///Users/charlotteposever/Documents/ca_manual/providence/user/reference/glossaries/Bundles.html`_ are user interface elements that can be placed on each screen. They can be editable attributes of a specific metadata element set or editable database fields intrinsic to a specific item type. Or they can be user interface elements that allow cataloguers to establish relationships with other items, add and remove items from sets and manage an item's location in a larger hierarchy.
-   - `Relationships <file:///Users/charlotteposever/Documents/ca_manual/providence/user/dataModelling/relationships.html>`_ create the relational structure and language between items.
+   - Metadata Element (Attribute) Sets configure the look and function of data entry fields in your cataloging system. They must be defined by one of several AttributeTypes. Metadata Element (Attribute) Sets are referenced in Bundles to design Screens in User Interface Definitions.
+   - User Interface Definitions layout the cataloging navigation in Providence. These are divided into one or more screens, each of which contains one or more bundles.
+   - Bundles are user interface elements that can be placed on each screen. They can be editable attributes of a specific metadata element set or editable database fields intrinsic to a specific item type. Or they can be user interface elements that allow cataloguers to establish relationships with other items, add and remove items from sets and manage an item's location in a larger hierarchy.
+   - Relationships create the relational structure and language between items.
      - Relationship types qualify relationships
 
 Modifying an Existing Profile

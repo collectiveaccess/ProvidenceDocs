@@ -100,9 +100,9 @@ To create a group, assign the arbitrary group name to a line in the Group column
 
 In the example mapping, we are mapping column 3 to ca_objects.date.date_value and using the constant rule to set ca_objects.date.date_type to "date created".
 
-But without declaring both of these distinct mapping lines members of the same Group, you'd end up with one Date container instance with the Date itself, and another Date container instance with the Date Type! To make sure both the Date itself and the date type end up in the same instance of the Date container, simply assign them to the same group in the fourth mapping column.
+To make sure both the Date itself and the date type end up in the same instance of the Date container, simply assign them to the same group in the fourth mapping column.
 
-The name you assign the group is arbitrary, but it should be something that is recognizable to you. In our example, I've simply called the group "Date".
+The name you assign the group is arbitrary, but it should be something that is recognizable to you. 
 
 .. _import_options:
 
