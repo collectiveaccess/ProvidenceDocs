@@ -50,8 +50,6 @@ Note that Refineries are optional. If source data does not require more complex 
 
 For a comprehensive list of refinery parameters for each refinery, see the tables below. 
 
-these come from: `<https://docs.collectiveaccess.org/wiki/Data_Importer>`_
-
 Splitters
 ---------
 

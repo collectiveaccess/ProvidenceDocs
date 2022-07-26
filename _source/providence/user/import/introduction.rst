@@ -24,7 +24,7 @@ Import mappings operate under two basic assumptions about the data being importe
 
 A **row** in an import mapping spreadsheet contains all the metadata about a single, specific record: title, date, location, and other metadata that is present in the source data, and is arbitrary to the data set(s). A **column** groups these metadata elements together: all titles, all dates, all locations, and so on. This organization through rows and columns is a key aspect of creating an import mapping. 
 
-.. note:: The exception to these assumptions is an option called treatAsIdentifiersForMultipleRows that will explode a single row into multiple records. This is very useful if you have a data source that references common metadata shared by many pre-existing records in a single row. See `Options <https://manual.collectiveaccess.org/import/tutorial.html#options-column-5>`_ for more details.
+.. note:: The exception to these assumptions is an option called treatAsIdentifiersForMultipleRows that will explode a single row into multiple records. This is very useful if you have a data source that references common metadata shared by many pre-existing records in a single row. See `Mapping Options <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/mappingOptions.html>`_ for more details.
 
 .. note:: Excel Tip for Import Mapping Spreadsheets: Translating A, B, C… to 1, 2, 3… can be time-consuming. Excel’s preferences allow you to change columns to display numerically rather than alphabetically. Go to Excel Preferences and select “General.” Click “Use R1C1 reference style.” This will display the column values as numbers.
 
@@ -42,11 +42,11 @@ Sample Import Mapping Spreadsheet, Sample Source Data, and Sample Installation P
 
 To follow along with the tutorial, download the following three files: 
 
-`Sample Import Mapping Spreadsheet <../_static/_files/sample_mapping_tutorial.xlsx>`_: The import mapping spreadsheet; a schema crosswalk. For every data source, a target “destination” in CollectiveAccess is defined. This file is in the supported file format of XLXS; therefore, columns and rows are numbered using 1, 2, 3, and so on. 
+:download:`Sample Import Mapping Spreadsheet <sample_mapping_tutorial.xlsx>`: The import mapping spreadsheet; a schema crosswalk. For every data source, a target “destination” in CollectiveAccess is defined. This file is in the supported file format of XLXS; therefore, columns and rows are numbered using 1, 2, 3, and so on. 
 
-`Sample Import Data (Source Data) <../_static/_files/sample_import_data_tutorial.xlsx>`_: The sample source data. This sample data includes three records (one row = one record), with 10 examples of possible metadata fields (one column = one field). The sample data is in the supported file format of XLXS; therefore, columns and rows are numbered using 1, 2, 3, and so on. 
+:download:`Sample Import Data (Source Data) <sample_import_data_tutorial.xlsx>`: The sample source data. This sample data includes three records (one row = one record), with 10 examples of possible metadata fields (one column = one field). The sample data is in the supported file format of XLXS; therefore, columns and rows are numbered using 1, 2, 3, and so on. 
 
-`Sample Installation Profile <../_static/_files/Sample_import_profile.xml>`_: The sample Providence installation profile. This profile, written in XML format, defines the aspects of the CollectiveAccess system, into which the example data is imported. The profile tells the software how to set up various aspects of Providence. For more on installation profiles in CollectiveAccess, please see `Profiles <https://manual.collectiveaccess.org/dataModelling/Profiles.html>`_. 
+:download:`Sample Installation Profile <Sample_import_profile.xml>`: The sample Providence installation profile. This profile, written in XML format, defines the aspects of the CollectiveAccess system, into which the example data is imported. The profile tells the software how to set up various aspects of Providence. For more on installation profiles in CollectiveAccess, please see `Profiles <https://manual.collectiveaccess.org/dataModelling/Profiles.html>`_. 
 
 
 

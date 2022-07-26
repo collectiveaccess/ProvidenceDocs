@@ -24,7 +24,7 @@ Performing a Quick Installation of CollectiveAccess for Evaluation
 
 **Problem**: You want to install CollectiveAccess quickly, without worrying about server configuration, for evaluation purposes.
 
-**Solution**: Try the quick start installation package for Mac or Windows: http://collectiveaccess.org/download
+**Solution**: Try the quick start installation package for Mac or Windows: https://collectiveaccess.org/get-started/
 
 Meeting Basic Server Requirements
 ---------------------------------
@@ -53,7 +53,7 @@ Core Media processing software for type-specific media handling includes:
     -ffmpeg 
     -Ghostscript
     -and more, depending on media type
-	-See Software Requirements. 
+	-See `Software Requirements <file:///Users/charlotteposever/Documents/ca_manual/providence/user/setup/systemReq.html#system-requirements>`_. 
 
 Configuring PHP
 ---------------
@@ -78,7 +78,8 @@ git clone http://github.com/collectiveaccess/providence.git providence
 
 where the trailing "providence" is the name of the directory you want your installation to be in. Git will create the directory for you.
 
-Copy the setup.php-dist file (in the root directory of the CA distribution) to a file named setup.php. Edit setup.php, changing the various directory paths and database login parameters to reflect your server setup. Make sure the permissions on the app/tmp, app/lib/core/Parsers/htmlpurifier/standalone/HTMLPurifier/DefinitionCache and server root directories are such that the web server can write to them. In a web browser navigate to the web-based installer (http://www.myCollectiveaccessSite.org/install). Enter your email address and select the installation profile that best fits your needs. Then click on the "begin" button. For more, see Installing Providence.
+Copy the setup.php-dist file (in the root directory of the CA distribution) to a file named setup.php. Edit setup.php, changing the various directory paths and database login parameters to reflect your server setup. Make sure the permissions on the app/tmp, app/lib/core/Parsers/htmlpurifier/standalone/HTMLPurifier/DefinitionCache and server root directories are such that the web server can write to them. 
+In a web browser, navigate to the `README <https://github.com/collectiveaccess/providence/blob/master/README.md>`_. For more, see `Installation <https://manual.collectiveaccess.org/setup/Installation.html>`_. 
 
 Installing CollectiveAccess on Shared Servers
 ---------------------------------------------
@@ -99,5 +100,5 @@ Media Upload Issues on Shared Servers
 
 **Solution**: Take a look at Manage > Administration > Configuration Check. You may need to increase the values of some of the Suhosin configurations (PHP). On a shared server, you'll need to set this in the php.ini or phprc file.
 
-Also see Installing on Cheap Shared Servers. 
+Also see Installing on Cheap Shared Servers (above).  
 

@@ -51,7 +51,7 @@ Contents
 Mapping Related Object Lot Records
 ---------------------------------- 
 
-**Problem**: The source data (mapping to Objects Table, ca_objects) contains metadata pertaining to Object Lots (Accessions). To create separate and related Object Lot records from this metadata in an import mapping spreadsheet: 
+**Problem**: The source data (mapping to Objects Table, **ca_objects**) contains metadata pertaining to Object Lots (Accessions). To create separate and related Object Lot records from this metadata in an import mapping spreadsheet: 
 
 **Solution**: In Column 3 of the import mapping spreadsheet, map the source data column to ca_objects.lot_id. In Column 6, use the Refinery ObjectLotSplitter. In Column 7 use a Refinery Parameter to specify how the Object Lot records will be displayed in CollectiveAccess. For example, a Refinery Parameter could look like: 
 
@@ -72,13 +72,13 @@ Creating Object Lot Records in an Object Lots Table
 
 **Problem**: You have source data that contains information about Object Lots (Accessions), and would like to map these records to the Object Lots Table in CollectiveAccess in your import mapping spreadsheet, which will create Object Lot records. 
 
-**Solution**: Object Lots require more than just a label and a type. They also have a non-optional lot_status_id, a value taken from the "object lot statuses" list in CollectiveAccess. This must be set to a valid value or the lot will fail to insert. Set a constant value to ca_object_lots.lot_status_id. 
-ID Numbers for ca_object_lots don't map to the normal idno, but rather ca_object_lots.idno_stub.
+**Solution**: Object Lots require more than just a label and a type. They also have a non-optional **lot_status_id**, a value taken from the "object lot statuses" list in CollectiveAccess (**Manage > Lists & Vocabularies**). This must be set to a valid value or the lot will fail to insert. Set a constant value to **ca_object_lots.lot_status_id**. 
+ID Numbers for **ca_object_lots** don't map to the normal idno, but rather **ca_object_lots.idno_stub**.
 
 Mapping Entities to ca_entities Table 
 -------------------------------------
 
-**Problem**: You are running an import mapping with ca_entities as the target table. The source data for entity names is formatted as First Last (i.e. Jane Doe) with no delimiter separating the names. You would like to import this data as Entity records, requiring parsed first and last names. 
+**Problem**: You are running an import mapping with **ca_entities** as the target table. The source data for entity names is formatted as First Last (i.e. Jane Doe) with no delimiter separating the names. You would like to import this data as Entity records, requiring parsed first and last names. 
 
 **Solution**: Set Column 3 in your import mapping spreadsheet to ca_entities.preferred_labels. In Column 5 of your import mapping spreadsheet, set the Refinery to entitySplitter. In column 6 of your import mapping spreadsheet, set the Refinery Parameters to {"entityType": "entity_type", "skipIfValue": ["unknown"]}. 
 
@@ -87,7 +87,7 @@ Uploading an Import Mapping Spreadsheet via the User Interface in CollectiveAcce
 
 **Problem**: You have finished creating your import mapping spreadsheet, and have followed the steps to successfully import through the User Interface in CollectiveAccess. However, the worksheet will not upload. 
 
-**Solution**: You may have an improperly formatted JSON in your import mapping, which can be found in the Options Column and in the Refinery Parameters Column. Without valid code, the import mapping spreadsheet will not upload. You may have simply missed a necessary comma or bracket in your code. To quickly validate your JSON, go `here <jsonlint.com>`_.
+**Solution**: You may have an improperly formatted JSON in your import mapping, which can be found in the Options Column and in the Refinery Parameters Column. Without valid code, the import mapping spreadsheet will not upload. You may have simply missed a necessary comma or bracket in your code. To quickly validate your JSON, go `here <https://jsonlint.com/>`_.
 
 Importing a Constant Value 
 --------------------------
