@@ -44,7 +44,7 @@ Auto-Generated ID numbers are stuck
 
 **Problem**: Your auto-generated ID numbering system is stuck on a value that is already in use, or the numbers are not sorting or being generated properly.
 
-**Solution**: If you notice values such as titles and identifiers are sorting incorrectly, you may need to reload sort values from your data. The internal format of sort values can vary between versions of CollectiveAccess, causing erroneous sorting behavior after an upgrade. To rebuild sort values, navigate to Manage -> Administration -> Maintenance -> Rebuild Sort Values from the Global Navigation.
+**Solution**: If you notice values such as titles and identifiers are sorting incorrectly, you may need to reload sort values from your data. The internal format of sort values can vary between versions of CollectiveAccess, causing erroneous sorting behavior after an upgrade. To rebuild sort values, navigate to **Manage > Administration > Maintenance > Rebuild Sort Values** from the Global Navigation.
 
 Note that depending upon the size of your database, reloading sort values can take from a few minutes to an hour or more.
 
@@ -53,28 +53,29 @@ Using Summaries
 
 **Problem**: You want to use the "Summary" screen to view a record, but it seems to be blank.
 
-**Solution**: You must configure a display that includes all of the metadata you want to see summarized. To do this through the UI, navigate to Manage > My Displays. Then, to create a new display, choose the table for which the display is relevant, go to "Display List," and then drag and format the elements you wish to include. For tips on formatting, see Bundle Display Templates. Then, when you are in the Summary screen, you can choose the appropriate Display from the drop-down in the top-right corner.
+**Solution**: You must configure a display that includes all of the metadata you want to see summarized. To do this through the UI, navigate to **Manage > My Displays**. Then, to create a new display, choose the table for which the display is relevant, go to "Display List," and then drag and format the elements you wish to include. For tips on formatting, see `Bundle Display Templates <file:///Users/charlotteposever/Documents/ca_manual/providence/user/dataModelling/bundleSpecifiers.html?highlight=bundle+display+template>`_. Then, when you are in the Summary screen, you can choose the appropriate Display from the drop-down in the top-right corner.
 
 Including an ID Number (idno) in a Display
 -----------------------------------
 
 **Problem**: You want a display to include the field "Object ID," but you're not sure which bundle to use when you're setting the display up in "My Displays."
 
-**Solution**: Choose the bundle with the code "ca_objects.idno." Don't confuse this with ca_objects.object_id, which is the internal ordering that CollectiveAccess uses to number records, and is not the same thing as the Object Identifier that your organization uses. Note that If you're creating a display for Lots, use the bundle with the code "ca_objects.idno_stub."
+**Solution**: Choose the bundle with the code **ca_objects.idno.** Don't confuse this with **ca_objects.object_id**, which is the internal ordering that CollectiveAccess uses to number records, and is not the same thing as the Object Identifier that your organization uses. Note that If you're creating a display for Lots, use the bundle with the code **ca_objects.idno_stub.**
 
 Adding WYSIWYG Editor to Text Fields
 ------------------------------------
 
 **Problem**: You realized that you wanted a certain "description" field to have a rich-text editor after your installation profile was fully installed.
 
-**Solution**: Go to *Manage > Administration > Metadata Elements* and find the field in question. As long as it is a text field, there will be a checkbox entitled "use rich text editor." Check this and save.
+**Solution**: Go to **Manage > Administration > Metadata Elements** and find the field in question. As long as it is a text field, there will be a checkbox entitled "use rich text editor." Check this and save.
 
 Keeping Track of an Item's Changes
 ----------------------------------
 
 **Problem**: You're not finished working on an Object record, but you need to do some other work before you can return to it.
 
-**Solution**: Add the record to the "My Watched Items" list. In the Inspector Window of a record’s user interface, click on a small icon that looks like an eye.  The record will then be stored in the "My Watched Items" list, which is accessible through Manage > My Watched Items. Changes to the record will be tracked here.
+**Solution**: Add the record to the "My Watched Items" list. In the `Inspector Window <file:///Users/charlotteposever/Documents/ca_manual/providence/user/administration/colorcodinginspector.html?highlight=inspector+window>`_ of a record’s user interface, click on a small icon that looks like an eye.  The record will then be stored in the "My Watched Items" list, which is accessible through 
+**Manage > My Watched Items**. Changes to the record will be tracked here.
 
 Match a Batch Media Import through a Relationship
 -------------------------------------------------
@@ -95,7 +96,7 @@ Batch Deleting Records
 
 **Problem**: You want to batch delete a set of records.
 
-**Solution**: The easiest way to batch delete records is to add the target records to a set via search results. Opening the "sets" menu in the search results tool bar will give you controls to add multiple or single records at a time. Once your to-be-deleted set is complete you can open the batch under Manage > My sets. Click the multi-record icon and then chose "More options" in the record inspector on the upper left hand corner of the screen. There you will see options for batch delete.
+**Solution**: The easiest way to batch delete records is to add the target records to a set via search results. Opening the "sets" menu in the search results tool bar will give you controls to add multiple or single records at a time. Once your to-be-deleted set is complete you can open the batch under **Manage > My sets**. Click the multi-record icon and then chose "More options" in the record inspector on the upper left hand corner of the screen. There you will see options for batch delete.
 
 Searching on a Specific Metadata Element
 ----------------------------------------
@@ -149,14 +150,14 @@ Creating a "Researcher" Access Role
 
 **Problem**: You want certain users to log in as researchers with read-only capabilities.
 
-**Solution**: Navigate to Manage > Access Control > Access Roles > New Role. Set all relevant "Actions" to allow the user to view, but not edit, different tables. Then, create a login and password for your user under "User Logins," and make sure you click "Roles > Researcher" (or whatever you've named your read-only access role). Make sure that you have displays configured, because this is the only way that a read-only login will be able to view information (through the Summary screen).
+**Solution**: Navigate to **Manage > Access Control > Access Roles > New Role**. Set all relevant "Actions" to allow the user to view, but not edit, different tables. Then, create a login and password for your user under "User Logins," and make sure you click "Roles > Researcher" (or whatever you've named your read-only access role). Make sure that you have displays configured, because this is the only way that a read-only login will be able to view information (through the Summary screen).
 
 Disabling a User Login
 ----------------------
 
 **Problem**: A staff member has left your organization, and you want to deactivate their login without deleting all of their information for legacy purposes.
 
-**Solution**: Rather than deleting the login, go to Manage > Access Control > User logins, and navigate to the "User Class" drop-down. Choose "deleted."
+**Solution**: Rather than deleting the login, go to **Manage > Access Control > User logins**, and navigate to the "User Class" drop-down. Choose "deleted."
 
 Adding or Removing Elements from an Editor UI Doesn't "Stick"
 -------------------------------------------------------------
@@ -288,14 +289,14 @@ Creating a New Vocabulary Through the UI
 
 **Problem**: You've realized that in order to have a table of contents on your public website, you need to add a whole new vocabulary that you can use to tag Objects.
 
-**Solution**: Create a new list in Lists and Vocabularies, and then restrict the bundle ca_list_items to that list on your Object UI. Go to Manage > List and Vocabularies, and choose "add new list" from the top-right of your screen. Make sure you choose the option "use as Vocabulary." Add concepts to the list as described above. Then, go to **Manage > Administration > User Interfaces**. Choose the appropriate UI (in this case, Objects) and drag the ca_list_items (Related Vocabulary Terms) bundle from "Available editor elements" to "Elements to display on this screen." Edit the bundle to customize features such as the Vocabulary's label, and choose the appropriate list to restrict it to.
+**Solution**: Create a new list in Lists and Vocabularies, and then restrict the bundle ca_list_items to that list on your Object UI. Go to **Manage > Lists and Vocabularies**, and choose "add new list" from the top-right of your screen. Make sure you choose the option "use as Vocabulary." Add concepts to the list as described above. Then, go to **Manage > Administration > User Interfaces**. Choose the appropriate UI (in this case, Objects) and drag the ca_list_items (Related Vocabulary Terms) bundle from "Available editor elements" to "Elements to display on this screen." Edit the bundle to customize features such as the Vocabulary's label, and choose the appropriate list to restrict it to.
 
 Creating a New Metadata Element Through the UI
 ----------------------------------------------
 
 **Problem**: Your system is already all set-up and contains lots of records that you don't want to override, but you've realized you need to add a whole new field.
 
-**Solution**: Go to **Manage > Administration** and click "Metadata Elements" on the left-hand navigation. On the top-right, click the plus-sign labeled "new." Give your field a name, description (if necessary), and unique code. Choose the datatype - is it simple text? A date range? A container that will hold other elements? Then, depending on which type you choose, fill out the datatype-specific options (roll over each for a description). At the bottom of the screen, click "Add type restriction" to bind your new element to the appropriate table. Once all of this has been taken care of, you can add it to the appropriate user interface. Click on the "edit" icon to the right of your chosen interface, and scroll down to "Screens." Click the editing icon next to the appropriate screen (such as "Basic Info") and drag your new element bundle from the list of "Available editor elements'' to the list of "Elements to display on this screen."
+**Solution**: Go to **Manage > Administration** and click "Metadata Elements" on the left-hand navigation. On the top-right, click the plus-sign labeled "new." Give your field a name, description (if necessary), and unique code. Choose the datatype - is it simple text? A date range? A container that will hold other elements? Then, depending on which type you choose, fill out the datatype-specific options (roll over each for a description). At the bottom of the screen, click "Add type restriction" to bind your new element to the appropriate table. Once all of this has been taken care of, you can add it to the appropriate user interface. Click on the "edit" icon to the right of your chosen interface, and scroll down to "Screens." Click the editing icon next to the appropriate screen (such as "Basic Info") and drag your new element bundle from the list of "Available editor elements'' to the list of "Elements to display on this screen." See also `Configuring Metadata Elements <file:///Users/charlotteposever/Documents/ca_manual/providence/user/editing/metadataelements.html?highlight=metadata+elements>`_. 
 
 Downloading Search Results to Excel
 -----------------------------------

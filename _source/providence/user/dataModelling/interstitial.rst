@@ -116,7 +116,7 @@ Select the page icon |page| to add preferred labels, type restrictions, and scre
 .. |page| image:: page.png
           :scale: 50%
 
-Adding metadata elements to the interstitial data screen is the same process as adding metadata elements to a user interface as outlined in `User Interface Administration <file:///Users/charlotteposever/Documents/ca_manual/providence/user/editing/interfaces.html#user-interface-configuration>`_. Navigate to **Screen content** to move the metadata elements onto the new screen.
+Adding metadata elements to the interstitial data screen is the same process as adding metadata elements to a user interface as outlined in `User Interface Administration <file:///Users/charlotteposever/Documents/ca_manual/providence/user/editing/interfaces.html#user-interface-administration>`_. Navigate to **Screen content** to move the metadata elements onto the new screen.
 
 .. figure:: interstitial6.png
    :scale: 50%

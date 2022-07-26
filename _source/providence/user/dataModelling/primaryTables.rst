@@ -42,7 +42,7 @@ Object intrinsics (ca_objects)
    :header-rows: 1
    :file: intrinsics_objects.csv   	
 
-`Note:` ca_objects.preferred_labels.name is used by data mappings and display templates to reference the intrinsic name field in the ca_object_labels table
+.. note:: **ca_objects.preferred_labels.name** is used by data mappings and display templates to reference the intrinsic name field in the **ca_object_labels table**
 
 Object Lots (ca_object_lots)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -56,7 +56,7 @@ Object lot intrinsics (ca_object_lots)
    :header-rows: 1
    :file: intrinsics_object_lots.csv
 
-`Note:` ca_object_lots.preferred_labels.name is used by data mappings and display templates to reference the intrinsic name field in the ca_object_lot_labels table
+.. note:: **ca_objects.preferred_labels.name** is used by data mappings and display templates to reference the intrinsic name field in the **ca_object_labels table**
 
 Entities (ca_entities)
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -70,7 +70,7 @@ Entity intrinsics (ca_entities)
    :header-rows: 1
    :file: intrinsics_entities.csv
 
-`Note:` ca_entities.preferred_labels.displayname is used by data mappings and display templates to reference the intrinsic displayname field in the ca_entity_labels table.  See below :ref:`ca_entity_labels name fields <ca_entity_labels-name-fields>` for all ca_entity_labels name fields.
+.. note:: **ca_entities.preferred_labels.displayname** is used by data mappings and display templates to reference the intrinsic displayname field in the **ca_entity_labels table**.  See below :ref:`ca_entity_labels name fields <ca_entity_labels-name-fields>` for all **ca_entity_labels** name fields.
 
 Places (ca_places)
 ^^^^^^^^^^^^^^^^^^
@@ -84,7 +84,7 @@ Place intrinsics (ca_places)
    :header-rows: 1
    :file: intrinsics_places.csv
 
-`Note:` ca_places.preferred_labels.name is used by data mappings and display templates to reference the intrinsic name field in the ca_place_labels table
+.. note:: **ca_places.preferred_labels.name** is used by data mappings and display templates to reference the intrinsic name field in the **ca_place_labels** table
 
 Occurrences (ca_occurrences)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -98,13 +98,13 @@ Occurrence intrinsics (ca_occurrences)
    :header-rows: 1
    :file: intrinsics_occurrences.csv
 
-`Note:` ca_occurrences.preferred_labels.name is used by data mappings and display templates to reference the intrinsic name field in the ca_occurrence_labels table
+.. note:: **ca_occurrences.preferred_labels.name** is used by data mappings and display templates to reference the intrinsic name field in the **ca_occurrence_labels** table
 
 Collections (ca_collections)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Collections represent significant groupings of objects. They may refer to physical collections, symbolic collections of items associated by some criteria, or any other grouping. Collection records are often used to manage formal archival processing and the creation of finding aids, by configuring records to be compliant with the Describing Archives (DACS) content standard.
 
-`Note:` ca_collections.preferred_labels.name is used by data mappings and display templates to reference the intrinsic name field in the ca_collection_labels table
+.. note:: **ca_collections.preferred_labels.name** is used by data mappings and display templates to reference the intrinsic name field in the **ca_collection_labels table**
 
 Collection intrinsics (ca_collections)
 **************************************
@@ -126,7 +126,7 @@ Storage location intrinsics (ca_storage_locations)
    :header-rows: 1
    :file: intrinsics_storage_locations.csv
 
-`Note:` ca_storage_locations.preferred_labels.name is used by data mappings and display templates to reference the intrinsic name field in the ca_storage_location_labels table
+.. note:: **ca_storage_locations.preferred_labels.name** is used by data mappings and display templates to reference the intrinsic name field in the **ca_storage_location_labels** table
 
 Loans (ca_loans)
 ^^^^^^^^^^^^^^^^
@@ -140,7 +140,7 @@ Loan intrinsics (ca_loans)
    :header-rows: 1
    :file: intrinsics_loans.csv
 
-`Note:` ca_loans.preferred_labels.name is used by data mappings and display templates to reference the intrinsic name field in the ca_loan_labels table
+.. note:: **ca_loans.preferred_labels.name** is used by data mappings and display templates to reference the intrinsic name field in the **ca_loan_labels** table
 
 Movements (ca_movements)
 ^^^^^^^^^^^^^^^^^^^^^^^^
@@ -154,7 +154,7 @@ Movements intrinsics (ca_movements)
    :header-rows: 1
    :file: intrinsics_movements.csv
 
-`Note:` ca_movements.preferred_labels.name is used by data mappings and display templates to reference the intrinsic name field in the ca_movement_labels table
+.. note:: **ca_movements.preferred_labels.name** is used by data mappings and display templates to reference the intrinsic name field in the **ca_movement_labels** table
 
 Object Representations (ca_object_representations)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -168,7 +168,7 @@ Object representation intrinsics (ca_object_representations)
    :header-rows: 1
    :file: intrinsics_object_representations.csv
 
-`Note:` ca_object_representations.preferred_labels.name is used by data mappings and display templates to reference the intrinsic name field in the ca_object_representation_labels table
+.. note:: **ca_object_representations.preferred_labels.name** is used by data mappings and display templates to reference the intrinsic name field in the **ca_object_representation_labels** table
 
 Tours (ca_tours)
 ^^^^^^^^^^^^^^^^
@@ -182,7 +182,7 @@ Tour intrinsics (ca_tours)
    :header-rows: 1
    :file: intrinsics_tours.csv
 
-`Note:` ca_tours.preferred_labels.name is used by data mappings and display templates to reference the intrinsic name field in the ca_tour_labels table
+.. note:: **ca_tours.preferred_labels.name** is used by data mappings and display templates to reference the intrinsic name field in the **ca_tour_labels** table
 
 Tour Stops (ca_tour_stops)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -196,7 +196,7 @@ Tour stop intrinsics (ca_tour_stops)
    :header-rows: 1
    :file: intrinsics_tour_stops.csv
 
-.. note:: ca_tour_stops.preferred_labels.name is used by data mappings and display templates to reference the intrinsic name field in the ca_tour_stop_labels table
+.. note:: **ca_tour_stops.preferred_labels.name** is used by data mappings and display templates to reference the intrinsic name field in the **ca_tour_stop_labels** table
 
 
 Label Tables
@@ -254,7 +254,7 @@ Available for all label tables
    "Source", "source_info", ""
    "Locale", "locale_id", "Locale of the label."
 
-.. note:: ca_tour_labels and ca_tour_stop_labels do not contain type, source_info and is_preferred
+.. note:: **ca_tour_labels** and **ca_tour_stop_labels** do not contain type, source_info and is_preferred
 
 Label name fields
 *****************

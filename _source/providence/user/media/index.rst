@@ -12,3 +12,6 @@ Media
    Background processing <background.rst>
    Media Watermarking <media_watermarking.rst>
    Visualization Options <visualization_options.rst>
+   Floorplans <floorplans.rst>
+   Annotation Editor <annotation_editor.rst>
+   Media Embedded Metadata <media_embedded_metadata.rst>

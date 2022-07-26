@@ -1,0 +1,4 @@
+﻿Setting,Description
+Add imported media to Set,This setting is followed by a drop-down menu populated by the names of existing Sets. Use this setting to add all imported media to an existing Set. 
+Create Set,This setting creates a new Set and adds all imported media records. The setting includes a field to input the title of the new Set. This option is particularly useful if you plan on editing these records later using the Batch Editor tool.
+Do not associate imported media with a Set,Use this setting if none of the imported media should be associated with a Set. 
