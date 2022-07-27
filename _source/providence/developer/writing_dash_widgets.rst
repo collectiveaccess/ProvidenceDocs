@@ -1,6 +1,11 @@
 Writing Dashboard Widgets
 =========================
 
+* `Layout`_ 
+* `The Widget Class`_ 
+* `Rendering Widget Content`_ 
+* `The BaseWidget::$s_widget_settings Array`_ 
+
 Widgets are mini-applications that run within the dashboard in Providence. Users can select and freely arrange widgets on their dashboard to create a custom system management interface. 
 
 The functionality that is encapsulated in a widget is only limited by space – they must fit within a single dashboard column (approximately 350 pixels wide). While widgets will typically provide simple, focused functionality, they have full access to the CollectiveAccess database and programming APIs, as well as their own configuration files and views. Widgets can interact with other CollectiveAccess plugins and external systems. See the Dashboard for a list of widgets included in the standard installation of CA.
