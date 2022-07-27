@@ -30,15 +30,7 @@ Once custom displays are created and configured, several workflow options are av
 
 4. **Input** the basic information about the new Display. This information will look different depending on the selected record type: 
 
-.. image:: displays3.jpg
-   :width: 1302px
-   :height: 960px
-   :scale: 50%
-   :align: center
-   
-.. image:: displays4.jpg
-   :width: 1533px
-   :height: 720px
+.. image:: displays3.png
    :scale: 50%
    :align: center
 
@@ -49,8 +41,6 @@ Once custom displays are created and configured, several workflow options are av
 * **Type restrictions**: 
 * **User access**: 
 * **Group access**: 
-
-.. warning:: finish these 
 
 5. **Save** the options set for the new Display. 
 
