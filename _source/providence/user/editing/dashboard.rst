@@ -1,6 +1,11 @@
 Dashboard Configuration
 =======================
 
+* `Adding Widgets to the Dashboard`_
+* `Editing the Dashboard`_
+* `Widget Settings`_
+* `Removing Widgets from the Dashboard`_
+
 CollectiveAccess provides a customizable **dashboard.** The dashboard is the home screen that displays upon login to any back-end system (Providence). 
 
 The main function of the Dashboard is to display the widgets for your system. **Widgets** provide specialized functions, and serve as mini-applications within Providence. The number of widgets in the Dashboard is entirely configurable, and their arrangement is customizable to suit a variety of collections and workflows. Every CollectiveAccess system comes with a specific set of widgets; however, custom widgets can be created, and widgets can be added or taken away from any dashboard. 

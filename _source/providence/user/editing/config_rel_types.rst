@@ -1,6 +1,9 @@
 Configuring Relationship Types
 ==============================
 
+* `Viewing Available Relationship Types`_
+* `Creating Relationship Types`_
+
 All Relationships in CollectiveAccess are defined by Relationship Types. Relationship Types are configurable to suit a multitude of data needs. All relationships in CollectiveAccess are reciprocal. 
 
 Relationship Types can be managed via the CollectiveAccess user interface. Relationship Types can be created, and also viewed and edited, in the  user interface.
