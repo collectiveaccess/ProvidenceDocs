@@ -148,9 +148,8 @@ The following settings are available when configuring Prepopulate rules:
 Flowchart
 ---------
 
-Typical Prepopulate processes are diagrammed below. Note that the mode "overwriteifset" (which is not shown in the diagram) is identical to "overwrite" save that no overwrite is performed for empty values.
+Typical Prepopulate processes are diagrammed below. Note that the mode "overwriteifset" (which is not shown in the diagram) is identical to "overwrite," save that no overwrite is performed for empty values.
 
-.. figure:: ../../_static/images/Prepopulate.jpg
-   :name: prepopulate
-   :target: ../../_static/images/Prepopulate.jpg
-   :alt: Prepopulate flowchart
+.. image:: Prepopulate.jpg
+   :scale: 50%
+   :align: center
