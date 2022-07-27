@@ -29,7 +29,7 @@ Find Original Values
 
 The list of original values is the list of unique values within a given element/field/column in the source data. Methods to derive a list of unique values vary depending upon the data format. For example, to check for unique values within source data in Excel select the entire column whose unique values should be displayed. Navigate to **Data > Advanced**. The **Advanced Filter** will appear on screen; check **“Unique records only.”** This will display all unique values that are in the selected column. However, **do not** save the data in this format, as it will erase all other values. 
 
-Checking for unique values in a column or columns of data can help inform what kind of, and how many, original values and replacement values are needed in the import mapping. If the number of values to replace exceeds a few dozen, it is usually more convenient to break out the list into its own worksheet using the Option “transformValuesUsingWorksheet” http://manual.collectiveaccess.org/import/mappings.html#transform-values-using-worksheet, designed for large transformation dictionaries. 
+Checking for unique values in a column or columns of data can help inform what kind of, and how many, original values and replacement values are needed in the import mapping. If the number of values to replace exceeds a few dozen, it is usually more convenient to break out the list into its own worksheet using the Option `transformValuesUsingWorksheet <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/mappings/mappingOptions.html#transformvaluesusingworksheet>`_, designed for large transformation dictionaries. 
 
 Find Replacement Values
 -----------------------
