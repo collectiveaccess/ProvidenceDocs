@@ -3,6 +3,12 @@
 Sets
 =====================
 
+* `Creating New Sets`_ 
+* `Adding Records to a Set`_ 
+* `Set Options in the Inspector Window`_ 
+* `Sharing Sets`_
+* `Searching by Sets`_ 
+
 **Sets** are ordered groupings of any record type created by the user for a specific purpose. Sets are ad-hoc groups of records for internal features such as a working checklist for an upcoming exhibition, or a set of Entities for which biographical information is needed. Sets are typically temporary groupings, and thus not meant for collection-level cataloging.
 
 A **Set Item** is a record assigned to a Set. Set Items can take additional cataloging, allowing for the contextualization and annotation of records within an assigned Set. Sets can contain Set Items, where each record contains Set-specific captions and links. 

@@ -1,6 +1,12 @@
 Access Control Settings
 =======================
 
+* `User Logins`_ 
+* `User Groups`_ 
+* `Access Roles`_ 
+* `Record-Level Access`_ 
+* `Public Access Settings`_ 
+
 CollectiveAccess employs access control tools to ensure the safety of data and manage workflow. 
 
 Managing the settings for access control are purposefully only available to administrators. Administrators can create logins, determine which users have access to various parts of the site, and assign specific roles to users, such as “cataloguer” or “researcher.” These settings can all be managed in the user interface. 

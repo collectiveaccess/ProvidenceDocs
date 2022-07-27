@@ -2,7 +2,15 @@
 
 Displays
 =====================
-.. warning:: needs images to align, replace 2 old images. 
+
+* `Creating a New Display`_
+* `Add Contents to a Display`_
+* `Advanced Displays`_
+* `Filter Using Expression`_ 
+* `Bottom Line Format`_
+* `Functions Within Containers`_
+* `Currency Conversion`_
+* `Using Bottom Line Functions with Multiple Metadata Elements`_
 
 Displays, also known as bundle displays, specify exactly which fields from a record are displayed in search results or a Summary page in CollectiveAccess. These can be customized, from what fields are present in a record’s screen to how many times a field appears on that screen.
 

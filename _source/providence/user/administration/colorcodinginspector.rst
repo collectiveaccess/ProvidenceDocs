@@ -1,6 +1,11 @@
 **Color Coding the Inspector**
 ==============================
 
+* `Customizing the Editor Inspector`_ 
+* `Customizing Screens within the Editor`_ 
+* `Customizing the Inspector for Record Subtypes`_ 
+* `Inspector Window Features`_ 
+
 CollectiveAccess supports the customization of both the look and feel of any cataloging interface. Assigning custom colors and icons to the Inspector window of any record type or record subtype can streamline workflow, as well as ensure clear differentiation and generate easy-to-identify parts of any Editor screen. 
 
 .. figure:: colorcoding3.png
