@@ -9,14 +9,16 @@ Builders
 
 CollectionHierarchyBuilder 
 ``````````````````````````
-.. cv-table::
+.. csv-table::
    :header-rows: 1
    :file: collectionHierarchy_table.csv
 
 CollectionIndentedHierarchyBuilder 
 ````````````````````````````````````
+.. csv-table::
+   :header-rows: 1   
+   :file: indented_table.csv
 
-To Come
 
 EntityHierarchyBuilder 
 ``````````````````````````
