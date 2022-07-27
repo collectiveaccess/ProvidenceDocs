@@ -1,6 +1,10 @@
 Information Services
 ====================
 
+* `Configuration in an Installation Profile`_ 
+* `Available Plugins`_ 
+* `Implementing New Plugins`_ 
+
 InformationService is a metadata element type that allows for the referencing of external web services as metadata attached to CollectiveAccess records. InformationService is also a plugin API that makes it easy to add support for other external services. The exact information stored locally differs from plugin to plugin.
 
 This metadata element type references specific external web services by performing a lookup operation at the remote service, and then allowing the user to pick a value from a result list. Core information about the referenced piece of data and a reference (URI) to the original resource is then stored. 
