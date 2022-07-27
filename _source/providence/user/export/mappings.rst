@@ -12,7 +12,11 @@ Currently: XML, MARC21, CSV
 Creating a mapping
 ------------------
 
-To create a mapping, first download the Excel-based export mapping template available here `Data_Export_Mapping_template.xlsx <../_static/_files/Data_Export_Mapping_template.xlsx>`_. Once all of the mappings and settings have been entered into the template it can be loaded directly into CollectiveAccess (see Running an export below). The mapping is automatically checked using format-specific rules before it is added so if your mapping has any errors or ambiguities, the mapping loader will let you know.
+To create a mapping, first download the Excel-based export mapping template available here:
+
+:download:`Data Export Mapping Template <Data_Export_Mapping_template.xlsx>`
+
+Once all of the mappings and settings have been entered into the template it can be loaded directly into CollectiveAccess (see Running an export, below). The mapping is automatically checked using format-specific rules before it is added so if your mapping has any errors or ambiguities, the mapping loader will let you know.
 
 Creating the mapping is a very dependent on the format you want to export. Specific notes and examples can be found in the section about element values and formats.
 
