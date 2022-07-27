@@ -1,6 +1,16 @@
 Preferences
 ===========
 
+* `General`_
+* `Editing`_
+* `Batch Editing`_ 
+* `Quick Add`_
+* `Units of Measurement`_
+* `Duplication`_
+* `Quick Search`_ 
+* `User Profile`_ 
+* `Developer`_ 
+
 Every CollectiveAccess system has editable preferences to help manage, tailor, and streamline the cataloging processes available in a system. Preferences are key to any system as they determine how information is displayed. 
 
 To manage these preferences, navigate to **Manage > My Preferences**, where all preferences will be displayed: 

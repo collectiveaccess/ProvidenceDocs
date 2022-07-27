@@ -1,6 +1,9 @@
 Media Watermarking
 ==================
 
+* `Creating a Watermark`_
+* `Configuring a Watermark in CollectiveAccess`_ 
+
 .. warning:: needs rest of table 
 
 Watermarks are usually a transparent stamp, logo, or or signature that has been superimposed onto an existing image. Thus, they are considered part of an image, and cannot be easily removed (they can be cropped out or Photoshopped away). CollectiveAccess can automatically add a visible watermark to image derivatives. The watermark pattern is a graphic provided by the user; it can be a logo, text or anything else that can be expressed in a bitmap format. Watermarking is applied as derivatives are created. 

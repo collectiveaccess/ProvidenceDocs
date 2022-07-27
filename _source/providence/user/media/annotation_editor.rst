@@ -1,6 +1,11 @@
 Annotation Editor
 =================
 
+* `Creating Annotations`_ 
+* `Creating Clips to Annotate`_ 
+* `Viewing, Editing, or Deleting Annotations`_ 
+* `Clip Carousel`_ 
+
 The Annotation Editor allows users to create and annotate clips for audio and video. The Annotation Editor allows users to create and annotate clips for audio and video. These are useful for marking specific timestamps in an audio or video recording, and annotating with text.
 
 The Annotation Editor allows users to create and annotate clips for audio and video. These are useful for marking timestamps, adn annotating with text. 
