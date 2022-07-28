@@ -1,6 +1,9 @@
 API: Models and Tables
 ======================
 
+* `Model Classes`_ 
+* `Model Inheritance`_ 
+
 Each table in the CollectiveAccess database has a corresponding model class. Model classes provide functionality that eases reading, editing and writing data to its table, including:
 
 1. Insert, update and delete functions (you don't need to, and should not, write SQL for these operations)

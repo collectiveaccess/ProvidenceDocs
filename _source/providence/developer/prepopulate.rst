@@ -1,6 +1,10 @@
 Prepopulate
 ===========
 
+* `Setup`_ 
+* `Prepopulate Rule Settings`_ 
+* `Flowchart`_ 
+
 As of Collective Access version 1.5, Prepopulate automatically prepopulates fields in CollectiveAccess records based on Display Templates and Expressions.
 
 Setup

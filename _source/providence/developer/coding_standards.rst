@@ -1,6 +1,13 @@
 Coding Standards
 ================
 
+* `CSS Standards: Naming Conventions`_ 
+* `Indenting`_ 
+* `Avoid Inline Styles`_ 
+* `Coding Standards`_ 
+* `PHP`_ 
+* `JS`_ 
+
 CSS Standards: Naming Conventions
 ---------------------------------
 
@@ -38,7 +45,7 @@ Styles in CSS files should be as specific as possible. Try to avoid using a bare
 
 The most efficient way to style an element is by styling that type of element inside a container. If only one element needs to be styled in a special way, it should be assigned an id and styled using the id and preferably a container.
 
-From http://en.wikibooks.org/wiki/PHP_Programming/Coding_Standards#CSS_Standards, see link for examples.
+See this link for examples: http://en.wikibooks.org/wiki/PHP_Programming/Coding_Standards#CSS_Standards 
 
 Coding Standards
 ----------------
