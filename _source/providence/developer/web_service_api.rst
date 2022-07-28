@@ -1,6 +1,21 @@
 Web Service API
 ===============
 
+* `Global Parameters`_ 
+* `Searching`_ 
+* `Browsing`_ 
+* `Getting Item-Level Data`_ 
+* `Getting a Generic Summary`_ 
+* `Building Advanced Requests`_ 
+* `Getting Model Information`_ 
+* `Creating New Records`_ 
+* `A Complete Request`_ 
+* `Editing Records`_ 
+* `Deleting Records`_ 
+* `External Libraries`_ 
+* `PHP`_ 
+* `Ruby`_ 
+
 Collective Access provides a REST API (Representational State Transfer Application Programming Interface). Short of very few HTTP GET parameters, both the request parameters and the responses are encoded in JSON. 
 
 .. note:: Most of the query examples described below assume that curl is installed. 

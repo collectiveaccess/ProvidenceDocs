@@ -1,6 +1,14 @@
 CSS Page Classes
 ================
 
+* `Front Page`_ 
+* `Detail Pages`_ 
+* `Browse Pages`_ 
+* `Search Pages`_
+* `Multisearch`_
+* `List`_ 
+* `Login/Registration`_
+
 The content area of each page in a Pawtucket theme is wrapped in a tag with the CSS class *pageArea'*. This tag is emitted by the page header view (*pageFormat/pageHeader.php*). Other classes are added to this depending upon the page type and context. Use these classes to tailor the theme stylesheet. 
 
 Page- and context-specific classes are summarized below. Literal class names are shown as-is. Variable class names are in **<brackets>.**

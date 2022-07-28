@@ -1,6 +1,11 @@
 Access Restrictions Configuration: access_restrictions.conf
 ===========================================================
 
+* `Syntax`_ 
+* `Rules and Arrays`_
+* `Example Rules`_ 
+
+
 CollectiveAccess uses a Model-View-Controller structure that allows one to restrict access to each navigation module, controller or even controller action. Those restrictions are defined in access_restrictions.conf. The access_restrictions.conf configuration file is part of this structure 
 
 More here
