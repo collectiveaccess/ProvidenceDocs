@@ -1,6 +1,10 @@
 Embedding Media Metadata
 ========================
 
+* `Creating an Export Mapping`_
+* `Target table / Precedence`_ 
+* `Configuration`_
+
 CollectiveAccess allows embedding metadata from related records into downloaded media files. This is useful, for instance, to embed copyright or licensing information into an image file before it "leaves" a system.
 
 For this feature to function properly, exiftool must be installed, which is available through most Linux package managers, or via homebrew on Mac OS X. Make sure to point the exiftool_app setting in external_applications.conf to the right location.

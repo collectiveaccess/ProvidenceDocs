@@ -3,6 +3,16 @@
 Expressions
 ===========
 
+* `Comparison Operators`_
+* `Math Operators`_
+* `Logical Operators`_
+* `Additional Comparison Operators`_
+* `The "IN" Operator`_
+* `The =~ (regular expression) Operator`_
+* `Variables`_
+* `Functions`_
+* `Parentheses`_
+
 Expressions are statements evaluated by CollectiveAccess to a text, numeric or boolean (`true`/`false`) value. Expressions can be used to conditionally trigger (or not) elements of an import mapping or display template, where the boolean value returned determines what happens. Values may be generated through use of functions (described in more detail below), comparisons and mathematical operations.
 
 At its simplest an expression is a number or text quantity. These are examples of perfectly valid expressions:
@@ -14,7 +24,7 @@ You'll notice in the examples above that numbers are just numbers while text mus
 
 While single values are valid expressions, they're usually only useful when used in conjunction with `operators`. Operators are symbols that take two operands (values), perform some operation, and return a new value based upon the operands. There are several types of operators available in expressions:
 
-Comparison operators
+Comparison Operators
 --------------------
 
 Comparison operators compare two operands and return `true` or `false`. The most common operator is "=", which returns `true` if the operands are exactly the same, false if they are not. For example, "wood" = "wood" is `true` whereas "wood" = "cement" is not. In an import mapping it is possible to use the "=" operator to check if an input field is a certain value.  
@@ -30,7 +40,7 @@ Other comparison operators are:
 
 Greater than/less than operators only work with numeric values. Equal and not equal work with numbers or text.
 
-Boolean comparison
+Boolean Comparison
 ##################
 
 As of version 1.8 values representing boolean `true` and `false` are available for use in comparisons. These allow you to more easily test the return value of an expression of function using the bare, unquoted word "true" or "false". For example, this expression:
@@ -42,7 +52,7 @@ As of version 1.8 values representing boolean `true` and `false` are available f
 
 Would return `true` when dateIsRange() returns false, which is useful for importer actions and display templates where specific behaviors are triggered by true expressions.
 
-Math operators
+Math Operators
 --------------
 
 With expressions you can perform mathematical operations on numbers using +, -, * and /. These are addition, subtraction, multiplication and division respectively. The + operator also works on text, and will merge two text values together into a single run-on text value. For example:
@@ -59,7 +69,7 @@ will return the value `9`
 	
 will return the value `"Julia plus Allison"`
 
-Logical operators
+Logical Operators
 -----------------
 
 It is also possible to string together many expressions into a larger composite expression using the boolean logic operators "AND" and "OR". "AND" returns `true` if, and only if, both operands evaluates as `true`. "OR" returns `true` if, and only if, at least one operand evaluates as `true`. For example:
@@ -80,12 +90,12 @@ is true because "seth" = "seth" is true and only one needs to be true for logica
 
 .. note:: Prior to version 1.8 logical operators were required to be upper-case only. Both upper and lower-case operators are now allowed.
 
-Additional comparison operators
+Additional Comparison Operators
 -------------------------------
 
 The comparison operators shown above are useful but limited. There are a couple of additional ones that are really where the action is :-) They are:
 
-The "IN" operator
+The "IN" Operator
 -----------------
 "IN" lets you compare a value to a list of values. It returns true if ANY value in the list matches the value you are comparing. For example:
 
@@ -103,7 +113,7 @@ returns `false`.
 
 There is also a related "NOT IN" operator which will return `true` if the value is not in the list.
 
-The =~ (regular expression) operator
+The =~ (regular expression) Operator
 ------------------------------------
 
 You can compare a value against a regular expression using the =~ operator. Regular expressions are a very powerful and very flexible pattern matching syntax.  At its most basic a regular expression is a simple bit of text that is matched anywhere in the value being compared. For example:
