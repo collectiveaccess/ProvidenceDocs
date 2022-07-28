@@ -3,14 +3,35 @@
 Export Mappings
 ===============
 
+* `Supported Output Formats`_
+* `Creating an Export Mapping`_ 
+* `Rule Types`_
+* `Hierarchical Mappings`_
+* `Source`_ 
+* `Element Values and General Notes on Specific Formats`_ 
+* `XML Element Values`_
+* `MARC Element Values`_ 
+* `Variables`_ 
+* `Settings`_ 
+* `Options`_ 
+* `Processing Order`_ 
+* `Replacements`_ 
+* `Mapping Repetition`_ 
+* `Running an Export`_ 
+* `RDF Mode Configuration File Options`_ 
+* `Node Type Definition Options`_ 
+* `'Related' Options`_ 
+* `Miscellaneous Settings and Options`_ 
 
-Supported output formats
+
+
+Supported Output Formats
 ------------------------
 
 Currently: XML, MARC21, CSV
 
-Creating a mapping
-------------------
+Creating an Export Mapping
+--------------------------
 
 To create a mapping, first download the Excel-based export mapping template available here:
 
@@ -20,7 +41,7 @@ Once all of the mappings and settings have been entered into the template it can
 
 Creating the mapping is a very dependent on the format you want to export. Specific notes and examples can be found in the section about element values and formats.
 
-Rule types
+Rule Types
 ----------
 
 The first column of the main mapping spreadsheet is called "Rule type". What you set here basically qualifies what this row does. Most of the rows will end up being of the "Mapping" type but there are several options available:
@@ -30,7 +51,7 @@ The first column of the main mapping spreadsheet is called "Rule type". What you
    :widths: 25, 75
    :file: 1_rule_types.csv
 
-Hierarchical mappings
+Hierarchical Mappings
 ---------------------
 
 Some export formats support hierarchical relationships between mapping items. For XML this is a very core concept. To create a hierarchy, simply assign a number to a mapping in the 2nd column of the Mapping sheet and then reference that number in other rows (i.e. for other items) in the 3rd row, which is typically named "Parent ID". The second item will then become a direct child if the first one. In theory, those hierarchies can be nested very deep but in practice the format implementations may apply restrictions.
@@ -42,12 +63,12 @@ The value for the 5th column in the mapping sheet can be any CollectiveAccess bu
 
 Note that if the context for the current mapping is changed, there are a couple of special keys available for the source column. For more information see the description for the "context" option in the table below.
 
-Element values and general notes on specific formats
+Element Values and General Notes on Specific Formats
 ----------------------------------------------------
 
 The 4th column of the mapping sheet is named 'Element'. This is a very format-specific setting where you enter the name of the element you want to put your field data in. See below for a description of the formats.
 
-XML Element values
+XML Element Values
 ------------------
 
 The XML format implementation allows valid XML element names as values for the "Element" column. If you want to specify an XML attribute, prefix the name with an @. The attribute will then be appended to the hierarchy parent (which can't be another attribute). The mapping item hierarchy pretty much represents the XML tree that will be constructed from it.
@@ -67,7 +88,7 @@ What you end up with as export for a given objects is something like the followi
       <title>My very cool object</title>
    </object>
 
-MARC Element values
+MARC Element Values
 -------------------
 
 Let's start off by saying that MARC is a very old and very specific format. Creating MARC mappings can be a bit painful. Make yourself familiar with the format before you dive into the following description.
@@ -137,7 +158,7 @@ Below is a properly formatted example in JSON that uses some of these options:
        "filterByRegExp" : "[A-Z]+"
    }
 
-Processing order
+Processing Order
 ----------------
 
 In some cases the order in which the options and replacements (see next sub-section) are applied to each value can make a significant difference so it's important to note it here:
@@ -163,7 +184,7 @@ Replace column: $2 $1 $3
 value: April 15, 2003
 result: 15 April 2003
 
-Mapping repitition
+Mapping Repetition
 ------------------
 
 The 'RepeatMappings' rule type allows you to repeat a set list of mappings in a different context without actually defining them again. This is, for instance, very useful when creating EAD exports of hierarchical data where the basic structure is always the same (for archdesc, c01, c02, etc.) but the context changes. It's basically a shortcut that saves a lot of work in certain scenarios. Note that all hierarchy children of the listed items are repeated as well.
@@ -177,7 +198,7 @@ If you create a RepeatMappings rule, the mapping loader expects a comma-delimite
 
 In this case, the 'child' element would be repeated for each hierarchy child of the exported item because of the context switch and for each of those children, the exporter would add the label and idno elements.
 
-Running an export
+Running an Export
 -----------------
 
 The export can be executed through caUtils. To see all utilities ask for help after cd-ing into support. 
@@ -206,8 +227,8 @@ Next you’ll be using the utility export-data. First, have a look at the help f
 
 Essentially there are 3 export modes:
 
-1) Export a single record
--------------------------
+1) Export a Single Record
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Since the scope of a mapping is usually a single record, it's easy to use a mapping to export a record by its identifier. Suppose you have a ca_objects XML mapping with the code 'my_mapping'. To use this to export the ca_objects record with the primary key identifier (not the custom idno!) 550 to a new file ~/export.xml, you'd run this command:
 
@@ -215,8 +236,8 @@ Since the scope of a mapping is usually a single record, it's easy to use a mapp
 
    bin/caUtils export-data -m my_mapping -i 550 -f ~/export.xml
 
-2) Export a set of records found by custom search expression
-------------------------------------------------------------
+2) Export a Set of Records Found by Custom Search Expression
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 In most real-world export projects you'll need to export a set of records or even all your records into a single file. The exporter utility allows this by letting you specify a search expression with the -s parameter that selects the set of records used for export. The records are simply exported sequentially in the order returned by the search engine. This sequence is wrapped in the wrap_before and wrap_after settings of the exporter, if set. If you want to export all your records, simply search for "*". This example exports all publicly accessible files to a file ~/export.xml:
 
@@ -224,8 +245,8 @@ In most real-world export projects you'll need to export a set of records or eve
 
    bin/caUtils export-data -m my_mapping -s "access:1" -f ~/export.xml
 
-3) Export a diverse set of records ("RDF mode")
------------------------------------------------
+3) Export a Diverse Set of Records ("RDF mode")
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 [For advanced users] The error handling in this portion of the code is very poor so you're pretty much left on an island if something goes wrong.
 
@@ -261,7 +282,7 @@ Here is an example of how to run an RDF mode export:
 
 ``bin/caUtils export-data --rdf -c ~/rdf_mode.conf ~/export.xml``
 
-RDF Mode configuration file options
+RDF Mode Configuration File Options
 -----------------------------------
 
 .. csv-table::
@@ -269,7 +290,7 @@ RDF Mode configuration file options
    :header-rows: 1
    :file: 8_-_rdf_mode.csv
 
-Node type definition options
+Node Type Definition Options
 ----------------------------
 
 .. csv-table::
@@ -277,7 +298,7 @@ Node type definition options
    :header-rows: 1
    :file: 9_-_node_options.csv
 
-'related' options
+'Related' Options
 -----------------
 
 .. csv-table::
@@ -285,8 +306,8 @@ Node type definition options
    :header-rows: 1
    :file: 10_-_related_options.csv
 
-Misc Setting and Options
-------------------------
+Miscellaneous Settings and Options
+----------------------------------
 
 Exporting values from Information Services (e.g Library of Congress, Getty)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

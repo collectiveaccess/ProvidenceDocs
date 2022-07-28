@@ -5,7 +5,6 @@ Display Templates: Tutorial
 * `Configuring the Display of a Container Element`_
 * `Display Template: Tutorial`_ 
 * `Formatting Related Records on Related Records for Display`_ 
-* `Formatting Related Records on Related Records for Display`_ 
 
 To output information from your CollectiveAccess database, it is necessary to utilize display templates. Display templates are a critical element in the design of CollectiveAccess, affecting reports, search and browse result views, data export formats, the editing of interfaces, and finally, front-end Pawtucket views.
 
