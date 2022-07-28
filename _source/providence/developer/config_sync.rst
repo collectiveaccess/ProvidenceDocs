@@ -1,6 +1,12 @@
 Configuration Sync
 ==================
 
+* `Exporting Partial Configurations`_ 
+* `Exporting Via the Command Line`_ 
+* `Exporting Via Web Service`_ 
+* `How it Works`_ 
+* `Automatically Push or Replicate Configuration Changes to Another System`_ 
+
 A feature as of CollectiveAccess Version 1.6.2, **configuration sync** allows for the exporting and importing of partial profiles. These partial profiles can then be used to replicate configuration changes from one system to another, or to a package.
 
 Exporting Partial Configurations
