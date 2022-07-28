@@ -1,6 +1,12 @@
 User Access Control
 ===================
 
+* `Intrinsic Access Bundle`_ 
+* `Metadata-level Access Control`_ 
+* `Type-level Access Control`_ 
+* `Source-level Access Control`_ 
+* `Item-level Access Control`_ 
+
 There are many ways to grant and restrict access in CollectiveAccess using settings that can be enabled in the installation profile, including:
 
 * Intrinsic Access Bundle 
