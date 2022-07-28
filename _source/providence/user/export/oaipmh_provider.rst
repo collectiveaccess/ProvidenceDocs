@@ -5,6 +5,7 @@ OAI-PMH Provider
 * `Format Definition`_ 
 * `Testing Your Setup`_ 
 * `DPLA`_ 
+
 CollectiveAccess features an implementation of the `OAI Protocol for Metadata Harvesting <http://www.openarchives.org/pmh/>`_ that serves database records using virtually arbitrary XML-based formats. It supports all requests `defined in the protocol <http://www.openarchives.org/OAI/openarchivesprotocol.html#ProtocolMessages>`_ and is made possible through the Data_Exporter framework.
 
 In order to make your data available via OAI-PMH you first have to create at least one XML mapping for the data exporter. Data providers are required to provide at least `Dublin Core <https://en.wikipedia.org/wiki/Dublin_Core>`_ so we suggest you start with that. You can, however, provide any number of formats so long as you create the corresponding export mappings in CollectiveAccess.

@@ -7,7 +7,7 @@ Internal APIs
 * `Layout`_ 
 * `The Widget Class`_ 
 * `Rendering Widget Content`_ 
-* `The *BaseWidget::$s_widget_settings* Array`_ 
+* `The BaseWidget::$s_widget_settings Array`_ 
 
 Writing Dashboard Widgets
 -------------------------

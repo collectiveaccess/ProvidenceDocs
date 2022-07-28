@@ -11,7 +11,7 @@ API: Getting Data and Methods of Access
 * `Labels`_ 
 * `Attributes`_ 
 * `Related Items`_ 
-* `Transversing Hierarchical Items`_
+* `Transversing Hierarchical Items`_ 
 * `Getting Data from Model Instances and Search Results`_ 
 * `Getting Data from Direct Databse Queries using the Db Class`_
 
