@@ -3,6 +3,10 @@
 Overview
 =====================
 
+* `General-Use APIs`_
+* `APIs Providing More Specialized Access`_
+
+APIs Providing More Specialized Access
 .. toctree::
    :hidden:
    
@@ -12,13 +16,17 @@ Overview
    IIIF <web_api/iiif>
    OAI-PMH <web_api/oaipmh>
 
-CollectiveAccess offers several web-based APIs for data access and manipulation. Two are general-use APIs, providing access to much of CollectiveAccess' functionality including data access and editing, search and configuration:
+CollectiveAccess offers several web-based APIs for data access and manipulation. Two are general-use APIs, providing access to much of CollectiveAccess' functionality including data access and editing, search and configuration. 
+
+General-Use APIs
+----------------
 
 * :ref:`GraphQL API <developer_api_graphql>`: A `GraphQL <https://graphql.org>`_-based API first offered in CollectiveAccess version 1.8. This API provides a full range of services for reading and writing both catalogue data and system configuration, and is under active development. 
 
 * :ref:`JSON API (Legacy) <developer_api_json>`: A REST-style API returning JSON-encoded payloads for read and write operations. Available since version 1.3, this API is deprecated and will be removed in a future release. We recommend avoiding use of this API for new projects.
 
-Other APIs provide more specialized access:
+APIs Providing More Specialized Access:
+---------------------------------------
 
 * :ref:`"Simple" API <developer_api_simple>`: A read-only API that provides configurable endpoints returning pre-formatted data (using :ref:`display templates <display_templates>`) in flat JSON-encoded key value responses. Endpoints can be generated for search result sets or individual records referenced by ID.
 
