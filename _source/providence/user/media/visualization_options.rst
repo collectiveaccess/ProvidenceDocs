@@ -1,6 +1,9 @@
 Visualization Options
 =====================
 
+* `Maps`_
+* `Timelines`_
+
 ​​Collections with time or place-based data may benefit from the ability to see records represented on an interactive map or timeline. Visualization options allow a user to plot, search and browse results in a variety of ways based on contextual metadata (i.e. dates, or coordinates). Settings are handled in a configuration file called **visualization.conf**. Currently there are two visualization plugins supported: Maps and Timelines.
 
 Maps

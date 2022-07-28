@@ -1,6 +1,11 @@
 ElasticSearch
 =============
 
+* `About ElasticSearch`_
+* `Setup`_
+* `Interaction with the CollectiveAccess Providence Installer`_
+* `Operation`_
+
 `ElasticSearch <https://www.elastic.co/>`_ is a simple, fast and increasingly popular search engine.
 
 **Pros**: Performance and scalability are very good

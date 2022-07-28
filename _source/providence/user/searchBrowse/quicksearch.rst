@@ -1,6 +1,9 @@
 QuickSearch
 ===========
 
+* `Using QuickSearch`_
+* `Basic Search Result Options`_
+
 Basic Search
 ===========
 

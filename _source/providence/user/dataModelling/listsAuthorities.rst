@@ -1,7 +1,6 @@
 Lists & Authorities
 ===================
 
-   
 List item intrinsics (ca_list_items)
 ************************************
 

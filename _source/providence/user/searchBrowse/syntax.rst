@@ -3,17 +3,33 @@
 Search Syntax
 =============
 
+* `Fulltext Searches`_
+* `Limiting Your Search to a Specific Field`_
+* `Limiting Your Search to Specific Metadata Elements`_
+* `Limiting Searches to Specific Relationship Types`_
+* `Searching on Dates`_
+* `Searching on Lengths and Widths`_
+* `Searching on Numbers`_
+* `Searching on Currency`_
+* `Searching on Geographic Locations`_
+* `Searching for [BLANK] Values`_
+* `Access Points`_
+* `Boolean Combination`_
+* `Wildcards`_
+* `Searching on Creation and Modification Dates`_
+* `Searching on Counts`_
+
 No matter what back-end `search engine <file:///Users/charlotteposever/Documents/ca_manual/providence/user/searchBrowse/engines.html>`_ you configure CA with, the `Lucene search syntax`_ is always used to specify queries. This helps to provide a consistent experience for users across implementations and also leverages the Lucene syntax, which is well designed and widely adopted. Note that not all back-end engines support all aspects of the Lucene syntax. In general you can rely upon core functionality always being supported: text searches, field-level limiting, parenthetical grouping and booleans. Features such as boosting, fuzzy matching and range searches may not be available in all engines. 
 
 .. _Lucene search syntax: http://lucene.apache.org/core/2_9_4/queryparsersyntax.html
 .. _search engine: http://docs.collectiveaccess.org/sphinx/_build/html/searchBrowse/engines.html
 
-Fulltext searches
+Fulltext Searches
 -----------------
 
 To search across all indexed fields in the database (as defined in the search_indexing.conf configuration file) simply type in a word or words. Depending upon the engine, your input may be stemmed (suffixes removed before comparison with the index) to improve results. Most engines will only return results that contain all of the words specified, but some may employ logic to return seemingly relevant partial matches.
 
-Limiting your search to a specific field
+Limiting Your Search to a Specific Field
 ----------------------------------------
 
 If you wish to restrict your search to a specific field in the CA database, specify the table name and field separated by a dot, like this:
@@ -28,7 +44,7 @@ would return only objects whose label (eg. its title) contains the word rollerco
 
 Note that this applies only to "intrinsic" fields that are hardcoded into the CA database. That is, they are always present no matter how you have CA configured - although you may not be using them. There are only a few of this type of field in common usage: label fields (for ca_objects, ca_entities, etc.), idno identifier fields (for ca_objects, ca_entities, etc.), and the extent and extent_units fields (for ca_objects and ca_object_lots).
 
-Limiting your search to a specific metadata elements
+Limiting Your Search to Specific Metadata Elements
 ----------------------------------------------------
 
 Metadata elements are data fields specific to your installation. They may or may not exist in other installations. Searching on them is similar to searching on intrinsic fields:
@@ -39,7 +55,7 @@ You can see a list of all metadata elements (and their codes) available in your 
 
 In all engines you can perform text searches on any element. In some engines - specifically the MysqlFulltext engine that is the default engine upon installation - you can also perform specialized searches on certain types of elements. These searches are described in the following section.
 
-Limiting searches to specific relationship types
+Limiting Searches to Specific Relationship Types
 ------------------------------------------------
 
 By default, when searching on related content (Eg. search for objects using names of related entities) all relationships are considered. If you wish to limit your search to specific types of relationships append the relationship type code (or codes, separated by commas) following the field qualifier and a forward slash. For example this query:
@@ -49,12 +65,12 @@ By default, when searching on related content (Eg. search for objects using name
 when used to find objects will return all objects related to Cynthia Hopkins with a "depicts" relationship.
 
 
-Searching on dates
+Searching on Dates
 ------------------
 
 To search on a date or date range, simply restrict your search to a date range element and then search on the desired date, using one of the formats described on the date and time format page. You can use any supported format and any precision - the search engine will find any date (and optionally times) that overlap your search date range. Matching is by default very loose: items with any overlap will be returned. You can restrict matching to items with dates that are completely encompassed by your search date by prepending a "#" to your search data. Eg. "#May 10 2005"
 
-Searching on lengths and widths
+Searching on Lengths and Widths
 -------------------------------
 
 To search on a length or width, restrict your search to a length or width element and use the desired quantity with units specified. You must specify units - there is no default no matter what your "units of measurement" preference is set to (this preference governs display of measurements only). If you want to find items that match a measurement exactly simply search on the quantity. CA will convert the quantity to the required units for comparison, so even if an item was measured in inches, a metric search will find it - if the measurements match of course.
@@ -69,7 +85,7 @@ If you want to search for items within a range of measurements, specify the uppe
 
 would find all objects with a width between 12 and 24 inches (inclusive). Note that there is no space between "12" and "in" and "24" and "in"
 
-Searching on numbers
+Searching on Numbers
 --------------------
 
 Searching on numbers is very similar to searching on measurements, except that no units are necessary. To search on an integer or decimal value element restrict your search to the element and specify the number either singly or as a range. For example, to find objects with a user_ranking value of 5:
@@ -80,7 +96,7 @@ To find objects with user_ranking values between 1 and 5 (inclusive):
 
 ``ca_objects.user_ranking:[1 to 5]``
 
-Searching on currency
+Searching on Currency
 ---------------------
 
 Searching on currency is very similar to searching on numbers, except that a currency type is required. To search on an currency value element restrict your search to the element and specify the currency amount either singly or as a range. The amount should be prefixed with a three letter currency specified (eg. EUR for Euros, USD for US dollars) or one of the supports symbolic specifiers ($, ¥, £ and €). For example, to find objects with an appraisal_value value of $500:
@@ -108,7 +124,7 @@ To search the area within a specified radius of a point, use this kind of search
 
 As with the bounding box query, enclose the search expression in square brackets and quotes. The maximum distance from the point can be specified in any of the units of length supported by the "Length" attribute type. The above query will find anything geocoded as being within 5 kilometers of the specified point.
 
-Searching for blank values
+Searching for Blank Values
 --------------------------
 
 As of version 1.4 you may search for item that have no content in a specific field using the special [BLANK] search term. [BLANK] must be used in conjunction with field specification and must be enclosed in double quotes. The following example will return all objects lacking descriptions:
@@ -130,7 +146,7 @@ assuming that an access point like this was defined in search_indexing.conf:
 		fields = [ca_objects.description]
 	},
 
-Boolean combination
+Boolean Combination
 -------------------
 
 Search expressions can be combined using the standard boolean "AND" and "OR" operators. Simply join together your search expressions with the words AND and OR. For example the query
@@ -173,7 +189,7 @@ You can limit the returned items to those created or modified by a specific user
 
 Note that the user name is separated from the access point by a period ("."), and that the name of the user is their login user name, not their full name. Their login user name may be, but is not always, the user's email address.
 
-Searching on counts
+Searching on Counts
 -------------------
 
 As of version 1.7 it is possible to index the number of relationships and repeating per metadata element for search. For relationships, counts may be broken out by relationship type, related item type, or both. Count queries are useful for locating records without specific relationships (eg. find objects without entities related as artist) or with potential problems (eg. find objects with between 10 and 100 related entities).

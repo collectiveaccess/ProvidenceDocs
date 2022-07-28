@@ -1,6 +1,8 @@
 Media Mirroring
 ===============
 
+* `Mirroring media uploaded to CollectiveAccess via FTP`_
+* `Configuring Mirroring`_ 
 
 Mirroring media uploaded to CollectiveAccess via FTP
 ----------------------------------------------------
