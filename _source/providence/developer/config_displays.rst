@@ -1,6 +1,11 @@
 Configuring Displays
 ====================
 
+* `Codes for Displays`_ 
+* `Using Related Records`_ 
+* `Refining Displays`_
+* `Using Type Restrictions`_
+
 Displays allow users to access and view selected metadata in a summary-style format. They can be used to generate reports and provide information to users with read-only access. Displays can be configured through the user interface, but it is most efficient to go ahead and set them in the profile before installing.
 
 Codes for Displays
