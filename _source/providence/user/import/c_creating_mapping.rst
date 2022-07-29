@@ -155,7 +155,7 @@ An import mapping can find values within source data and replace them with new v
 
 In our sample data, there is a list element called "Reproduction" with values for reproduction, original, and unknown. In our source data, however, you'll notice that the data input for these values are abbreviated (e.g "orig", "repro", and "dontknow"). By using original and replacement values, our mapping transforms "orig" to "original" and "repro" to "reproduction" so that they can match on the list item code for the corresponding values in CollectiveAccess.
 
-.. note:: Original Values and Replacement Values are ideal for smaller replacements. For large transformation dictionaries, use the Option :ref:`transformValuesUsingWorksheet <transformValuesUsingWorksheet>` 
+.. note:: Original Values and Replacement Values are ideal for smaller replacements. For large transformation dictionaries, use the Option `transformValuesUsingWorksheet <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/mappings/mappingOptions.html?highlight=transformvaluesusingworksheet>`_. 
 
 For an example of when to use these columns and how, please see `Using Original and Replacement Values in an Import Mapping <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/orig_replace_example.html#import-orig-replace-example?>`_. 
 
