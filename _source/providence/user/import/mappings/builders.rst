@@ -3,9 +3,9 @@
 Builders
 ========
 
-.. contents::
-   :local:
+Builders are a type of Refinery used in an import mapping to create an upper hierarchy above the to-be-imported data. For a full list of available Builders to use in an import mapping spreadsheet, see the tables below. 
 
+The tables below offer examples of these Builders as they could be used in an import mapping. 
 
 CollectionHierarchyBuilder 
 ``````````````````````````
