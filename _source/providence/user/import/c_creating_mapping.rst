@@ -109,7 +109,7 @@ Column 5: Options
 
 Options can be used in an import mapping to set a variety of formatting choices and set conditions on the import itself. Options can also help process data that needs a clean-up, or can  format data with a variety of templates. Some Options are designed to set parameters on the import mapping behavior, such as preventing the import of certain fields. 
 
-Options are written in code. Within that code are specific terms for Options that function to manipulate the behavior of the source data. Current Options for import mappings are listed and described below:
+Options are written in code. Within that code are specific terms for Options that function to manipulate the behavior of the source data. Common Options for import mappings are listed and described below:
 
 ==============  ================================================================================  =======================  =======================================
 Type of Option  Description                                                                       Parameter notes          Example for "Options" column of mapping
@@ -118,7 +118,7 @@ skipIfEmpty     If the data value corresponding to this mapping is empty, skip t
 delimiter       Delimiter to split repeating values on.                                           delimiter value          {"delimiter": ";"}
 ==============  ================================================================================  =======================  =======================================
 
-In the sample mapping, note the delimiter option set on our mapping to ca_objects.subject. Now refer to the second record in our sample data. You'll notice that there are multiple subject values in the same cell that are separated by semi-colons. By setting the delimiter option in the mapping, you are ensuring that these subject values get parsed and imported to discrete instances of the Subject field. Without the delimiter option, the entire string would end up a single instance of the Subject field.
+Setting the delimiter option in the mapping ensures that values in the soruce data get parsed and imported to discrete instances of relevant fields. Without the delimiter option, the entire string would end up a single instance of the Subject field. For a full list of Options, see `Mapping Options <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/mappings/mappingOptions.html#import-mappings-mappingoptions>`_. 
 
 .. _import_refinery:
 
