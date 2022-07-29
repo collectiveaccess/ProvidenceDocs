@@ -17,6 +17,8 @@ Tutorial: Import Mapping Spreadsheet
 * `Column 10: Source Description`_ 
 * `Column 11: Notes`_
 
+This Tutorial goes through each step of an import mapping spreadsheet, using sample data, a sample spreadsheet, and a sample installtion profile. 
+
 To follow along with this tutorial, download the following three files:
 
 :download:`Sample Import Mapping Spreadsheet <sample_mapping_tutorial.xlsx>`: The import mapping spreadsheet; a schema crosswalk. For every data source, a target “destination” in CollectiveAccess is defined. This file is in the supported file format of XLXS; therefore, columns and rows are numbered using 1, 2, 3, and so on. 
@@ -24,6 +26,10 @@ To follow along with this tutorial, download the following three files:
 :download:`Sample Import Data (Source Data) <sample_import_data_tutorial.xlsx>`: The sample source data. This sample data includes three records (one row = one record), with 10 examples of possible metadata fields (one column = one field). The sample data is in the supported file format of XLXS; therefore, columns and rows are numbered using 1, 2, 3, and so on. 
 
 :download:`Sample Installation Profile <Sample_import_profile.xml>`: The sample Providence installation profile. This profile, written in XML format, defines the aspects of the CollectiveAccess system, into which the example data is imported. The profile tells the software how to set up various aspects of Providence. For more on installation profiles in CollectiveAccess, please see `Profiles <https://manual.collectiveaccess.org/dataModelling/Profiles.html>`_. 
+
+For a blank import mapping spreadsheet, download the following file: 
+
+:download:`Sample Import Mapping Spreadsheet Blank <sample_mapping_blank.xlsx>`
 
 Import Mapping Spreadsheet: Column Overview
 -------------------------------------------
