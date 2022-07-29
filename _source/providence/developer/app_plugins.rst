@@ -1,6 +1,20 @@
 Application Plugins
 ===================
 
+* `Usage`_ 
+* `Layout`_ 
+* `The Plugin Class`_ 
+* `Hooks`_ 
+* `Navigation`_ 
+* `Editing (Providence editors)`_
+* `Lableable Models (API-Level calls)`_ 
+* `Bundleable Models (API-Level calls)`_ 
+* `Authorization`_ 
+* `Task Queue`_ 
+* `User Login Editor`_ 
+* `Link Generation`_ 
+* `Periodic Tasks`_ 
+
 Application plugins are PHP classes that can be written to add specialized functionality to CollectiveAccess. Custom user interfaces, menu items, and screens are all added to a system with application plugins. 
 
 Each application plugin has its own directory in **app/plugins** which contains all of the code, views, graphics and configuration required for operation. At a minimum, every plugin has a **plugin class**. This class, a subclass of *BaseApplicationPlugin*, defines methods that "hook" various events that may occur during a user request. Plugin classes need only implement methods for the hooks they are interested in. Every time a user request is processed by CollectiveAccess and hookable events triggered, each plugin implementing a method for a given hook will be called.

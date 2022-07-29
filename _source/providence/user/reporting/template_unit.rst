@@ -108,7 +108,9 @@ How does this look in practice? Here's a display template that is used on the ob
 
 The result is a list of artwork titles, artist names and their statements for the works in the collection. Note that in the Falling Water example entity John Smith has two repeats of the statements container:
 
-.. image:: ../_static/images/RelativityDisplay.png
+.. image:: RelativityDisplay.png
+   :scale: 50%
+   :align: center
 
 Restricted indirect relationships
 ----------------------------------

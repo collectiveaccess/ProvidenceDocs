@@ -1,6 +1,11 @@
 **Color Coding the Inspector**
 ==============================
 
+* `Customizing the Editor Inspector`_ 
+* `Customizing Screens within the Editor`_ 
+* `Customizing the Inspector for Record Subtypes`_ 
+* `Inspector Window Features`_ 
+
 CollectiveAccess supports the customization of both the look and feel of any cataloging interface. Assigning custom colors and icons to the Inspector window of any record type or record subtype can streamline workflow, as well as ensure clear differentiation and generate easy-to-identify parts of any Editor screen. 
 
 .. figure:: colorcoding3.png
@@ -80,5 +85,41 @@ To customize the Inspector for the subtype **Paintings**:
 3. Scroll down to the **Color** field. Select the color-picker tool, and choose a color.
 4. Scroll down to the  **Icon** field. 
 5. Save the changes made to the Inspector. After saving the Editor, the icon will appear next to this field.
+
+Inspector Window Features
+-------------------------
+
+.. figure:: inspector_features_1.png
+   :scale: 50%
+   :align: center
+
+   The Inspector Window of a record in the CollectiveAccess Demonstration system. Note the icons below the record's image. 
+
+In addition to configuring the Inspector Window, the Window itself also contains five icons from which various features are enabled: 
+
+* |eye| Watch/Unwatch this Record. Selects Watched Items which appear in Manage/My Watched Items. To use a shortcut to view specific records, select the Eye icon, which then turns red.  
+
+.. |eye| image:: inspector_feature_2.png
+         :scale: 50%
+
+* |arrows| Change Record Type. Changes the record type, and discards any unnecessary metadata elements for the new type. This cannot be undone. 
+
+.. |arrows| image:: inspector_feature_3.png
+            :scale: 50%
+
+* |page| Duplicate this Record. Duplicates the record, with controls that specify what exactly to duplicate. 
+
+.. |page| image:: inspector_feature_4.png
+          :scale: 50%
+
+* |house| Set Home Location. Specifies a home location for the record, where the record is usually kept. 
+
+.. |house| image:: inspector_feature_5.png
+           :scale: 50%
+
+* |show| See More Information About this Record. Collapses or expands the information relating to the record’s edit history, visible in the Inspector panel. 
+
+.. |show| image:: inspector_feature_6.png
+          :scale: 50%
 
 

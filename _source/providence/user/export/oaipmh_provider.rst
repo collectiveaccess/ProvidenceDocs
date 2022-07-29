@@ -1,13 +1,18 @@
 OAI-PMH Provider
 ================
 
+* `oai_provider.conf Configuration`_ 
+* `Format Definition`_ 
+* `Testing Your Setup`_ 
+* `DPLA`_ 
+
 CollectiveAccess features an implementation of the `OAI Protocol for Metadata Harvesting <http://www.openarchives.org/pmh/>`_ that serves database records using virtually arbitrary XML-based formats. It supports all requests `defined in the protocol <http://www.openarchives.org/OAI/openarchivesprotocol.html#ProtocolMessages>`_ and is made possible through the Data_Exporter framework.
 
 In order to make your data available via OAI-PMH you first have to create at least one XML mapping for the data exporter. Data providers are required to provide at least `Dublin Core <https://en.wikipedia.org/wiki/Dublin_Core>`_ so we suggest you start with that. You can, however, provide any number of formats so long as you create the corresponding export mappings in CollectiveAccess.
 
 For now we assume that you created a mapping with the code 'oai_dc' that describes how your data is mapped to Dublin Core XML. 
 
-oai_provider.conf configuration
+oai_provider.conf Configuration
 -------------------------------
 
 This is the core configuration file for this feature. If you want to provide only one the Dublin Core mapping you just created, you're pretty much good to go with the stock configuration. Just fill in the mapping code. The interesting part of the configuration is under the 'providers' key. Here you can define an arbitrary number of endpoints where harvesters can go and gather your data. You could, for instance, define 1 endpoint for your object/item records and one for your collections. Each of those is a full-fledged standalone OAI-PMH provider accessible via the following URL pattern:
@@ -52,7 +57,7 @@ An example configuration with only one format (metadataPrefix: oai_dc) served by
 		}
 	},
 
-Testing your setup
+Testing Your Setup
 ------------------
 To explore your collection using the OAI-PMH provider you just set up, you can for instance use the `OAI Repository Explorer <http://re.cs.uct.ac.za/>`_ maintained by the University of Cape Town. This tool obviously only works if your provider is accessible online. You can also test the results by accessing provider via the following:
 

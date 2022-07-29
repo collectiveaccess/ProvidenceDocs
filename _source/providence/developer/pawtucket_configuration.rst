@@ -1,6 +1,12 @@
 Pawtucket2: Configuration
 =========================
 
+* `app.conf`_
+* `detail.conf`_ 
+* `search.conf`_
+* `browse.conf`_
+* `lightbox.conf`_ 
+
 Configuration files in Pawtucket2 include: 
 
 * app.conf

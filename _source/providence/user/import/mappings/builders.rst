@@ -9,17 +9,16 @@ Builders
 
 CollectionHierarchyBuilder 
 ``````````````````````````
-
-.. cv-table::
+.. csv-table::
    :header-rows: 1
    :file: collectionHierarchy_table.csv
 
-DOCS at https://docs.collectiveaccess.org/wiki/Data_Importer#Refineries
-
 CollectionIndentedHierarchyBuilder 
 ````````````````````````````````````
+.. csv-table::
+   :header-rows: 1   
+   :file: indented_table.csv
 
-NEW, built for Apollo collections import in 2019 for Alex, Seth to document
 
 EntityHierarchyBuilder 
 ``````````````````````````

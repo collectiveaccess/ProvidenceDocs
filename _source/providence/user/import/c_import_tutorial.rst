@@ -3,6 +3,20 @@
 Tutorial: Import Mapping Spreadsheet
 ====================================
 
+* `Import Mapping Spreadsheet: Column Overview`_ 
+* `Settings`_
+* `Column 1: Rule Types`_
+* `Column 2: Source`_
+* `Column 3: CA_table.element_code`_
+* `Column 4: Group`_
+* `Column 5: Options`_ 
+* `Column 6: Refinery`_ 
+* `Column 7: Refinery Parameters`_
+* `Column 8: Original Values`_ 
+* `Column 9: Replacement Values`_
+* `Column 10: Source Description`_ 
+* `Column 11: Notes`_
+
 To follow along with this tutorial, download the following three files:
 
 :download:`Sample Import Mapping Spreadsheet <sample_mapping_tutorial.xlsx>`: The import mapping spreadsheet; a schema crosswalk. For every data source, a target “destination” in CollectiveAccess is defined. This file is in the supported file format of XLXS; therefore, columns and rows are numbered using 1, 2, 3, and so on. 
@@ -57,7 +71,7 @@ Column 1: Rule Types
 
 Rule Types are the first column in an import mapping. The rules that are set in this column determine how each row in the mapping spreadsheet will be imported: the row can be mapped, meaning it will be imported; skipped, meaning the row will not be imported; can be set to a constant value; can be set to rule; or can be set to a setting. 
 
-Note: Only rule types corresponding to specific settings in the import mapping should be set to Setting. For rows that correspond to data, do not use this rule type. 
+.. note: Only rule types corresponding to specific settings in the import mapping should be set to Setting. For rows that correspond to data, do not use this rule type. 
 
 In the sample import mapping spreadsheet, the rule types Mapping, SKIP, and Constant are used. Since each column from the sample data corresponds to a single row in the import mapping spreadsheet, the same number of rule types must be set as there are columns of metadata. 
 

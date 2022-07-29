@@ -1,6 +1,12 @@
 User Access Control
 ===================
 
+* `Intrinsic Access Bundle`_ 
+* `Metadata-level Access Control`_ 
+* `Type-level Access Control`_ 
+* `Source-level Access Control`_ 
+* `Item-level Access Control`_ 
+
 There are many ways to grant and restrict access in CollectiveAccess using settings that can be enabled in the installation profile, including:
 
 * Intrinsic Access Bundle 
@@ -48,7 +54,7 @@ It's also possible to change the default values of the access drop-down by copyi
 **Metadata-level Access Control**
 ---------------------------------
 
-Use metadata-level access control to set specific metadata elements as "No Access" "Read-only access" or "Read/edit access" for different access roles in Providence. To alter the settings navigate to Manage > Access control > Access roles > Metadata.
+Use metadata-level access control to set specific metadata elements as "No Access" "Read-only access" or "Read/edit access" for different access roles in Providence. To alter the settings navigate to **Manage > Access control > Access roles > Metadata**.
 
 In the profile, use the following syntax:
 
@@ -69,7 +75,7 @@ In the profile, use the following syntax:
 **Type-level Access Control**
 -----------------------------
 
-To use type-level access control, set the following in Providence's **/app/conf/app.conf**:
+To use type-level access control, set the following in Providence's */app/conf/app.conf*:
 
 .. code-block:: php
 
@@ -106,7 +112,7 @@ In the profile, use the following syntax:
 **Source-level Access Control**
 -------------------------------
 
-To use source-level access control set the following in Providence's **/app/conf/app.conf*:
+To use source-level access control set the following in Providence's */app/conf/app.conf*:
 
 .. code-block:: php
 
@@ -123,7 +129,7 @@ To use source-level access control set the following in Providence's **/app/conf
 
    <!--T:27-->
    
-Once this checking is enabled, records with specific sources can be set as "No Access," "Read-only access," or "Read/edit access" for different access roles in Providence. To alter the settings navigate to Manage > Access Control > Access Roles. 
+Once this checking is enabled, records with specific sources can be set as "No Access," "Read-only access," or "Read/edit access" for different access roles in Providence. To alter the settings navigate to **Manage > Access Control > Access Roles**. 
 
 .. note:: Each record type must have a source list defined (i.e. "object_sources," "entity_sources," etc.) to use this access control type. The intrinsic bundle "source_id" can be placed on an editor form to allow cataloguers to select the relevant source for a record. When a default source is set for a specific access role, the source_id bundle is optional. The default will automatically set the source for that login.
 

@@ -1,7 +1,12 @@
 Deduplication
 =============
 
-Deduplication, available as of CollectiveAccess version 1.7, is only available as a command line utility, and as part of the   `Replication protocol. 
+* `Using Deduplication`_ 
+* `Configuration`_ 
+* `Implementation Details`_ 
+* `Computing the Checksum`_
+
+Deduplication, available as of CollectiveAccess version 1.7, is only available as a command line utility, and as part of the   `Replication <file:///Users/charlotteposever/Documents/ca_manual/providence/developer/Replication.html>`_ protocol. 
 
 Using Deduplication
 -------------------

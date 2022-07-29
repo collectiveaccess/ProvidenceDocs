@@ -1,6 +1,8 @@
 Configuring Metadata Elements
 =============================
 
+* `Creating a New Metadata Element`_
+
 Metadata elements can be created and edited through the CollectiveAccess interface. 
 
 .. note:: If you have not installed CollectiveAccess yet, or if you would like to install one of the available Metadata Standards, it may be preferable to configure Providence using Profiles. You can then make changes to your system by configuring Metadata Elements individually. For more detailed information about what Metadata Elements are and how they work, please visit API: Metadata Elements and Attributes.

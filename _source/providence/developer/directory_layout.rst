@@ -29,7 +29,7 @@ The Providence installation package is a single directory designed to be "droppa
 * **/themes:** contains the "views" defining what various parts of the Providence user interface look like. You can have multiple views defining different look-and-feels for the software. Each theme is contained in its own subdirectory. The standard Providence package ships with a single default theme contained in */themes/default.* Each theme contains multiple view directories.
 * **/viewers:** contains web-based viewing software for various types of media.
 
-It also contains the following files (not including informational README and licensing text files):
+It also contains the following files (not including informational README and licensing text files:
 
 * **index.php:** the "front controller" of the system; all requests go through this PHP script and are subsequently dispatched to action controllers in /app/controllers using information specified in the URL.
 * **setup.php-dist**: the distribution copy of the bootstrap configuration file used by the application to find its components and configuration files. The distribution copy is meant to be copied to *setup.php,* and modified to suit the installation.

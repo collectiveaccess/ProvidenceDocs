@@ -1,6 +1,9 @@
 QuickSearch
 ===========
 
+* `Using QuickSearch`_
+* `Basic Search Result Options`_
+
 Basic Search
 ===========
 
@@ -18,9 +21,9 @@ Using QuickSearch
    The QuickSearch bar in CollectiveAccess. 
 
 The Asterisk Wildcard: * 
-------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^
 
-As noted above, the results of a QuickSearch provide a database-wide context for any search query. Searching with *****, the asterisk wildcard, will bring up all results across all primary tables. 
+As noted above, the results of a QuickSearch provide a database-wide context for any search query. Searching with *****, the asterisk wildcard, will bring up the first 100 results across all primary tables. 
 
 .. image:: quicksearch_2.png
    :scale: 50%
@@ -31,14 +34,13 @@ Note that results are sorted by primary table. Each table displays 100 of the mo
 .. |full| image:: quicksearch_4.png 
           :scale: 50%
 
-To narrow a search using the wildcard, simply enter part of the search term, and replace the ending with the asterisk *. 
+To narrow a search using the wildcard, simply enter part of the search term, and replace the ending with the asterisk *****. 
 
 .. image:: quicksearch3.png
    :scale: 50%
    :align: center
 
 In addition to the wildcard, valid searches can be single words, entire phrases, or numbers. 
-
 
 Basic Search Result Options
 ---------------------------
@@ -87,5 +89,4 @@ To do so, select the |display| icon. A small options window will be displayed:
    :scale: 50%
    :align: center
 
-Under **Layout** select **list.** 
-
+Under **Layout**, select **list.** 

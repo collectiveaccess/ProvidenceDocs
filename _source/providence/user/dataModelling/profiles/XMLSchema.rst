@@ -116,7 +116,14 @@ System (Structure) Lists
 
 In CollectiveAccess, you can select a cataloging interface (See Figure 1) based on what type of object, entity, collection or other item you are cataloging. Various system lists define these types.
 
-INSERT FIGURE 1
+.. figure:: xml_schema_system_lists.png
+   :align: center
+   :scale: 50%
+
+   System lists as shown in the **Lists & Vocabularies** hierarchy. Note system lists are identified by |icon|.
+  
+.. |icon| image:: xml_schema_system_icon.png
+          :scale: 50%
 
 For CollectiveAccess to function properly, 33 types of System Lists need to be present and defined for the Primary Types - objects, object events, lots, lot events, entities, places, occurrences, collections, storage locations, list items, object representations, object representation annotations and sets. All of the lists may be hierarchical, although most tend to be single-level in most cases.
 
@@ -296,10 +303,14 @@ User interface definitions configure the layout of element sets within the catal
 
 Screens are used to group metadata attributes and create a desired cataloging workflow. Bundles are user interface elements that can be placed on each screen. They can be editable attributes of a specific element set or editable database fields intrinsic to a specific item type. Or they can be user interfaces that allow cataloguers to establish relationships with other items, add and remove items from sets and manage an item's location in a larger hierarchy. Bundles are so named because they are essentially black-boxes that encapsulate various functionality. You don't need to know how they implement this functionality. You need only place them where you want them to be.
 
-That user interfaces are just ordered arrangements of form elements and controls - bundles - makes them highly configurable. Perhaps you want only Title and ID on the first screen, Basic info, and additional data on the second screen, Additional info, and multimedia on the third, Media. In Figure 2 you can see the various tabs in the left side navigation in Providence. These tabs are actually defined as screens in the user interface definitions found in the installation profile. Note that the Summary and Log tabs seen below in Figure 2 are system screens that appear automatically. They allow you to display data and change logs associated with the record.
+That user interfaces are just ordered arrangements of form elements and controls - bundles - makes them highly configurable. Perhaps you want only Title and ID on the first screen, Basic info, and additional data on the second screen, Additional info, and multimedia on the third, Media. In Figure 2 you can see the various tabs in the left side navigation in Providence. These tabs are actually defined as screens in the user interface definitions found in the installation profile. Note that the Summary and Log tabs seen below are system screens that appear automatically. They allow you to display data and change logs associated with the record.
 
-Figure 2 :
-Left side nav.png
+.. figure:: xml_schema_tabs.png
+   :align: center
+   :scale: 50%
+
+   Side navigation tabs found under a record's Inspector Window. 
+
 
 To organize the data fields on each screen, you must first declare which interface you are working within with a unique code and table type. After the editor is defined, you can begin to create and fill up screens.
 

@@ -47,7 +47,7 @@ In an empty CollectiveAccess system (with no records imported), navigate to the 
 
 It’s necessary in a blank system to create a new test record and save it, so that all metadata screens will be available. If this is not done, only selected fields will display. 
 
-In a system with prior existing records, navigate to any record’s page. The CA table.element codes will be displayed to the right of each metadata field. 
+In a system with prior existing records, navigate to any record’s page. The CA table.element codes will be displayed to the right of each metadata field: 
 
 .. image:: bundle_codes_2.png
    :scale: 50%

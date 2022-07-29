@@ -13,7 +13,7 @@ Contents
 --------
 
 * `Browsing on a Metadata Element`_
-* `Browsing on Related Authorities`__
+* `Browsing on Related Authorities`_
 * `Changing Currency Settings`_
 
 Browsing on a Metadata Element 

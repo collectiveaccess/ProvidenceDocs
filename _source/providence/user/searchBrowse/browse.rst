@@ -3,6 +3,11 @@
 Browsing
 ========
 
+* `Browse Facets`_
+* `Browsing Using Facets`_
+* `Browsing with Multiple Facets`_
+* `Facets for Primary Tables`_
+
 The Find interface includes a Browse search utility accessible from any primary table available in the system. For example, by navigating to **Find > Objects**, the Browse utility for objects will display:
 
 .. image:: browse_1.png

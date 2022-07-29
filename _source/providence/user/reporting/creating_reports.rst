@@ -1,6 +1,12 @@
 Reports
 =======
 
+* `Reports from Search Results`_
+* `Export Tools`_ 
+* `Download Media for Reports`_ 
+* `Reports of a Single Record`_ 
+* `Reports from a Set`_
+
 Reports from Search Results
 ---------------------------
 

@@ -1,6 +1,15 @@
 Library Circulation
 ===================
 
+* `Set Up and Use`_ 
+* `Check in and Check out`_ 
+* `Restricting Checkout`_ 
+* `User Interface Tools`_ 
+* `Browse Tools`_ 
+* `Display Tools`_ 
+* `For Users (ca_users)`_ 
+* `For Checkouts (ca_object_checkouts)`_ 
+
 As of Collective Access Version 1.5, an optional Library Circulation module is included that supports a simple check in and check out workflow.
 
 Set Up and Use

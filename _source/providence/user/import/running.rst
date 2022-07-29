@@ -3,6 +3,12 @@
 Running an Import
 =================
 
+* `Running a Data Import`_ 
+* `Basic Steps for Running a Data Import`_ 
+* `Running an Import from the Terminal`_ 
+* `Running an Import from the User Interface`_ 
+* `Order of Import`_ 
+
 Running a Data Import
 ---------------------
 

@@ -33,12 +33,15 @@ Containers in an Import Mapping Spreadsheet
 
 Individual source data can be mapped directly to these sub-elements within a Container in an import mapping spreadsheet using Groups: 
 
-.. image:: container_mapping_ex.png
+.. figure:: container_mapping.png
    :scale: 50%
-   align: center
+   :align: center
+
+   Mapping two fields into a Container. 
 
 Where both fields are mapped to their specific **ca_table_element.code**, and they are grouped together by the Group called "date." 
 
 For more on the function of Groups, how to use Groups in an import mapping, and how to map source data into specific Containers in CollectiveAccess, please see `Creating an Import Mapping: Overview <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/c_creating_mapping.html>`_ and `Tutorial: Import Mapping Spreadsheet <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/c_import_column_overview.html>`_. 
 
+For more on the use of the Rule Type Constant, shown above, see `Using the Constant Rule Type in an Import Mapping Spreadsheet <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/import_ref_constant_rule.html#import-import-ref-constant-rule>`_. 
 

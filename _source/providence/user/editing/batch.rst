@@ -3,6 +3,10 @@
 Batch Editing
 =====================
 
+* `Batch Editing Using Sets`_
+* `Batch Editing Sets Using Search Results`_
+* `Other Batch Editing Features`_
+
 CollectiveAccess supports features for making uniform changes to batches of data, saving time and effort when editing records of any type. Batch Editing in CollectiveAccess organizes records into groups, which can then be edited simultaneously; a single edit can be applied to several records at once. Batch edits are commonly performed via Sets, groups of records that can be created to aid your work in a variety of ways. 
 
 Before beginning a Batch Edit, check the settings in Preferences. In most cases, the default setting is the best, or only, option available. However, in some cases, there are alternate settings which can limit the fields appearing on the batch editing screen. 

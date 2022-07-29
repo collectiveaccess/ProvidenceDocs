@@ -1,7 +1,14 @@
 Dependent Field Visibility
 ==========================
 
+* `Enabling Dependent Field Visibility`_
+* `Configuration in Profiles`_ 
+
+
 Available from CollectiveAccess Version 1.6, Dependent field visibility is a feature that allows for the hiding of certain Bundles from user interface screens, based on values selected for List metadata elements. Dependent field visibility is disabled by default. 
+
+Enabling Dependent Field Visibility
+-----------------------------------
 
 To enable, set the following in **app.conf**:
 
