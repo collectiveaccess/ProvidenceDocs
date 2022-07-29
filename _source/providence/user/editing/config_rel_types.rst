@@ -70,4 +70,4 @@ The Relationship Type Editor screen contains the following information to add to
 * **Sort Order**: Determines the order of the Relationship Types as they appear in a drop-down menu. 
 * **Location in Hierarchy**: The location of the relationship type in the Relationship Hierarchy. 
 
-.. note:: If you have not yet installed CollectiveAccess, you can configure Relationships using the installation profile. 
+.. note:: If you have not yet installed CollectiveAccess, you can configure Relationships using the `installation profile <file:///Users/charlotteposever/Documents/ca_manual/providence/user/dataModelling/Profiles.html>`_. 

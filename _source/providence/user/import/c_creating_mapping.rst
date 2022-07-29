@@ -142,7 +142,7 @@ Column 7: Refinery parameters
 
 Refinery parameters define the conditions for the refinery being used in the import mapping. Where a Refinery declares what data is being manipulated, the refinery parameter dictates how the data will be changed. 
 
-Refinery parameters are written in code, and require valid code to function properly in the import mapping. 
+Refinery parameters are written in code, and require valid code to function properly in the import mapping. Common Refinery parameters are listed below: 
 
 .. csv-table::
    :widths: auto
