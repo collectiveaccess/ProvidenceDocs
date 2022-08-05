@@ -86,12 +86,11 @@ A mapping for this hierarchy would use the parameter:
 	"storageLocationType": "building",
 	"hierarchicalDelimiter": ",",
 	"hierarchicalStorageLocationTypes": [
-       "floor",
-       "room",
-       "shelf"
-   ]
-    "relationshipType": "related",
-}
+		"room", "shelf", "box"
+	],
+
+	"relationshipType": "current_location"
+   }
 
 Where the most general **storageLocationType** is defined as **building** from the list of storageLocationTypes in the system; the **hierarchical delimiter** is set to separate the locations on the comma values from the source data, and a hierarchy is created, from general to more specific, based on the values in the data (floor, room, shelf), with the **relationshipType** set to a constant value of **related.**
 
@@ -111,7 +110,7 @@ To map `Interstitial Data <file:///Users/charlotteposever/Documents/ca_manual/pr
 	 "interstitial": {
        "relationshipDate": "^4"
    }
-}
+
 
 where the interstitial data is a referenced column of source data. 
 

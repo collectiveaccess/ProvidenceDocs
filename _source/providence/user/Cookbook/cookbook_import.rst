@@ -46,7 +46,8 @@ Contents
 * `Importing Entities from a Single Source Data Column without a Delimiter`_
 * `Importing Currency Values with Currency Symbols`_
 * `How to format Source Column for XML or FileMakerPro Data`_
-* `Measurement Values not Showing Up in CollectiveAccess`_
+* `Changing the Maximum Number of Field Characters`_
+* `Setting the Correct Type`_ 
 
 Mapping Related Object Lot Records
 ---------------------------------- 
@@ -442,9 +443,25 @@ medium
 
 medium_details
 
-Measurement Values not Showing Up in CollectiveAccess
------------------------------------------------------
+or 
 
-**Problem:** You've mapped and imported your source data, but your measurement values are not showing up in the corresponding CollectiveAccess field. 
+/medium
 
-**Solution:** 
+/medium_details
+
+Changing the Maximum Number of Field Characters
+-----------------------------------------------
+
+**Problem:** You've completed a data import but received the error: **[Field here] must be no more than 255 characters long.**
+
+**Solution:** A metadata element's maximum character count must be increased to fit the data being imported. To do so, navigate to **Manage > Administration > Metadata Elements.** The full list of available metadata elements will be displayed. Select the element that contains the error, and scroll down to **datatype specific options**, where the maximum (and minimum) character count can be viewed, and edited. 
+For more, please see `Configuring Metadata Elements <file:///Users/charlotteposever/Documents/ca_manual/providence/user/editing/metadataelements.html>`_. 
+
+Setting the Correct Type
+------------------------
+
+**Problem:** You've completed a data import but received the error: **Could not insert new record for object (type was DEFAULT_TYPE): A valid type must be specified.** 
+
+**Solution:** In the Settings section of the import mapping spreadsheet, a valid type was not set, referring to the type to set all imported records to. Some valid types include people, artifact, image, and artwork. These correspond to CollectiveAccess list item idnos. If you are importing Objects, what type are they? Photographs, Artifacts, Paintings, etc. This value needs to correspond to an existing value in the the **types list** (Manage > Lists and Vocabularies). For objects, the list is **object_types**. If the import includes a mapping to **type_id**, that will be privileged and the type setting will be ignored.
+For more, please see `Creating an Import Mapping: Overview`_. 
+
