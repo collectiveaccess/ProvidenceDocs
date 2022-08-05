@@ -39,7 +39,7 @@ Custom formats must generate a full, freestanding and well-formed HTML document.
 
 .. csv-table::
    :header-rows: 1
-   :file: pdf_output_table1.csv
+   :file: pdf_output_newtable1.csv
 
 For labels the following additional header entries defining the geometry of the label form are also required:
 
