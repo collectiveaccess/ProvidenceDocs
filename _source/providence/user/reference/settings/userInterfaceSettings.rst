@@ -10,7 +10,6 @@ Relationship bundles provide a user interface for managing relationships between
 Options available for all relationship bundles 
 ----------------------------------------------
 
-TODO: VERIFY THIS IS COMPLETE
 
 .. csv-table::
    :widths: 20, 40, 20, 20

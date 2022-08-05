@@ -118,8 +118,6 @@ Follow these steps below to run an import from the user interface in CollectiveA
 9. **Revise** the mapping accordingly. 
 10. **Re-import**, repeating Steps 1-6.
 
-more images here
-
 Order of Import
 ---------------
 
