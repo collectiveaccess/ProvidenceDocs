@@ -85,10 +85,3 @@ The clip carousel is the display of saved annotations that appears at the top of
 .. image:: annotation7.png
    :scale: 50%
    :align: center
-
-Each feature of the carousel is explained in the table below.
-
-.. csv-table:: 
-   :header-rows: 1
-   :file: annotation_editor_table2.csv
-
