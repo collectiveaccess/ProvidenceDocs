@@ -48,6 +48,9 @@ Contents
 * `How to format Source Column for XML or FileMakerPro Data`_
 * `Changing the Maximum Number of Field Characters`_
 * `Setting the Correct Type`_ 
+* `Date and Time Format Errors`_
+* `Importing a Storage Location Hierarchy`_ 
+* `Creating Interstitial Data`_ 
 
 Mapping Related Object Lot Records
 ---------------------------------- 
@@ -473,3 +476,46 @@ Date and Time Format Errors
 **Solution:** CollectiveAccess accepts a variety of date formats. However, in order for dates to import properly, an accepted format must be used. If a date is not formatted correctly, the date will simply not be imported. 
 To ensure that dates are formatted according to CA standards, please see `Date and Time Formats <file:///Users/charlotteposever/Documents/ca_manual/providence/user/dataModelling/metadata/dateTime.html?highlight=date>`_. 
 
+Importing a Storage Location Hierarchy
+--------------------------------------
+
+**Problem:** You have a hierarchy of storage locations in your sample data that includes rooms, shelves and boxes. You’d like to import storage locations as a hierarchy in CA. 
+
+
+**Solution:** In Column 6 of your import mapping spreadsheet, use a **storageLocationSplitter.** In Column 7, use the refinery hierarchicalDelimiter: 
+
+.. code-block::
+
+   {
+     "storageLocationType": "building",
+     "hierarchicalDelimiter": ",",
+     "hierarchicalStorageLocationTypes": [
+             "room", "shelf", "box"
+     ],
+
+     "relationshipType": "current_location"
+   }
+
+Where the storageLocationType is from the types list in CollectiveAccess, the hierarchicalStorageLocationTypes are taken from the types list in CollectiveAccess, and the relationshipType is taken from the relationship types list in CollectiveAccess. For more see `Mapping a Storage Location Hierarchy <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/mapping_storage_loc_hierarchy.html#import-mapping-storage-loc-hierarchy>`_. 
+
+Creating Interstitial Data 
+--------------------------
+
+**Problem:** You have objects in your source data that were in a particular storage location, but are now in a different location. You’d like to account for the time they were in another location within the object record. 
+
+**Solution:** Use interstitial data to capture this information that will live within the relationship between the object and a storage location created from the import mapping. To do so requires using the **interstitial** Refinery Parameter. Place this parameter within the other parameters for the storage location: 
+
+.. code-block:: 
+
+   {
+	"storageLocationType": "building",
+	"hierarchicalDelimiter": ",",
+	"hierarchicalStorageLocationTypes": [
+		"room", "shelf", "box"
+	],
+   "interstitial":{"effective_date": "1/1/2020"},
+
+	"relationshipType": "historic_location"
+   }
+
+For more, see `Interstitial Data <file:///Users/charlotteposever/Documents/ca_manual/providence/user/dataModelling/interstitial.html#datamodelling-interstitial>`_. 
