@@ -465,3 +465,11 @@ Setting the Correct Type
 **Solution:** In the Settings section of the import mapping spreadsheet, a valid type was not set, referring to the type to set all imported records to. Some valid types include people, artifact, image, and artwork. These correspond to CollectiveAccess list item idnos. If you are importing Objects, what type are they? Photographs, Artifacts, Paintings, etc. This value needs to correspond to an existing value in the the **types list** (Manage > Lists and Vocabularies). For objects, the list is **object_types**. If the import includes a mapping to **type_id**, that will be privileged and the type setting will be ignored.
 For more, please see `Creating an Import Mapping: Overview`_. 
 
+Date and Time Format Errors
+---------------------------
+
+**Problem:** You’ve completed a data import, but received the error: **[accession number] Failed to add value for date; values were _source =; Circa. 1940: Date of Object (From, To) is invalid.** 
+
+**Solution:** CollectiveAccess accepts a variety of date formats. However, in order for dates to import properly, an accepted format must be used. If a date is not formatted correctly, the date will simply not be imported. 
+To ensure that dates are formatted according to CA standards, please see `Date and Time Formats <file:///Users/charlotteposever/Documents/ca_manual/providence/user/dataModelling/metadata/dateTime.html?highlight=date>`_. 
+
