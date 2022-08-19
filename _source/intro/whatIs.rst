@@ -36,4 +36,5 @@ Providence is the “back-end” core cataloguing and data management applicatio
 Pawtucket
 ^^^^^^^^^
 
-Pawtucket is an optional "front-end" publication and discovery platform for collections. 
+Pawtucket is an optional "front-end" publication and discovery platform for collections. A public web-access tool for digital publication and discovery, Pawtucket's selected features are designed to handle various aspects relating to data modeling, workflow management, web publishing, granular control and digital preservation for a variety of collections. 	
+
