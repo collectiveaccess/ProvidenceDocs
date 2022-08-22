@@ -3,7 +3,16 @@
 Mapping Options
 ===============
 
+* `Full List of Mapping Options`_
+* `Option: applyRegularExpressions`_ 
+* `Option: prefix`_ 
+* `Option: suffix`_ 
+* `Transform Values Using Worksheet`_ 
+
 Options allow you to set additional formatting and conditionals on data during import. Some Options are designed to actually set parameters on the mapping behavior, such as the skip options. **skipGroupIfEmpty**, for example, allows you to prevent the import of certain fields, depending on the presence of data in another related field. Other Options simply format data, such as **formatWithTemplate**, **suffix**, and **convertNewlinesToHTML**. 
+
+Full List of Mapping Options
+----------------------------
 
 A full list of mapping options is listed below.
 
@@ -51,8 +60,20 @@ In this example, the first regular expression matches <number>.<number> and repl
 Option: prefix
 '''''''''''''''''''''''''''''''
 
+With the prefix option, text can be added to prepend to values prior to import. This option can be particularly useful when importing currency values; using this option can prepend a currency symbol that will display upon import. 
+
+.. code-block::
+
+   {"prefix": "$"}
+
 Option: suffix
 '''''''''''''''''''''''''''''''
+
+Using the suffix option allows text to be added to append to values prior to import.
+
+.. code-block::
+
+   {"suffix": "cm"}
 
 
 
