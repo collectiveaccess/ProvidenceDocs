@@ -4,7 +4,7 @@ Configuring Relationship Types
 * `Viewing Available Relationship Types`_
 * `Creating Relationship Types`_
 
-All Relationships in CollectiveAccess are defined by Relationship Types. Relationship Types are configurable to suit a multitude of data needs. All relationships in CollectiveAccess are reciprocal. 
+All Relationships in CollectiveAccess are reciprocal and are defined by Relationship Types. Relationship Types are configurable to suit a multitude of data needs. 
 
 Relationship Types can be managed via the CollectiveAccess user interface. Relationship Types can be created, and also viewed and edited, in the  user interface.
 
@@ -16,9 +16,11 @@ To view all possible Relationship Types in a CollectiveAccess system:
 1. Navigate to **Manage > Administration** in the Global Navigation menu. 
 2. Select **Relationship Types** from the left sidebar to open the Relationship Types viewer.
 
-.. image:: hierarchy_relationships.png
+.. figure:: hierarchy_relationships.png
    :scale: 50%
    :align: center
+
+   The relationship types hierarchy viewer. 
 
 The left-most column displays all of the possible relationships available between records in the system. These are not editable, but simply represent different relationships  between the relevant primary tables. For example, the relationship listed between two objects, or between a place and an entity.
 
@@ -53,10 +55,12 @@ To create a new Relationship Type in the user interface:
 
 6. The **Relationship Type Editor** screen will be displayed, where relevant information for the new Relationship Type can be entered and saved: 
 
-.. image:: conrel3.png
+.. figure:: conrel3.png
    :scale: 50%
    :align: center
 
+   Creating a new relationship type. 
+   
 The Relationship Type Editor screen contains the following information to add to the newly defined relationship type: 
 
 * **Typename (forward sense)**: The display name of the Relationship Type. These are often named so that they complete a sentence. For example, in an Entity to Object relationship, one relationship type might be “created.” 
