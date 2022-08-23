@@ -88,7 +88,7 @@ When set to 1, **skipIfEmpty** will skip the mapping if the data value being map
    {"skipIfEmpty": 1}
 
 
-.. note:: Remember that 1 = yes, and 0 = no. 
+.. note:: Remember that 1 = yes, and 0 = no. Setting skipIfEmpty to 1 (yes) will ensure that the mapping is skipped if the data value is empty. 
 
 **skipIfEmpty** can be used in conjunction with other Options as well. 
 

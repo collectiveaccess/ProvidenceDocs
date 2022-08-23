@@ -519,3 +519,8 @@ Creating Interstitial Data
    }
 
 For more, see `Interstitial Data <file:///Users/charlotteposever/Documents/ca_manual/providence/user/dataModelling/interstitial.html#datamodelling-interstitial>`_. 
+
+Mapping Multiple Source Data Values to a Single Notes Field
+-----------------------------------------------------------
+
+

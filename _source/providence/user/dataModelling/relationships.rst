@@ -8,7 +8,7 @@ Relationships
 
 As a relational database, a core feature of CollectiveAccess is that it can create relationships between records of any type. A relationship’s most basic function is to link records together, creating a bi-directional connection between various kinds of records. Creating relationship records in a database is entirely optional, and in fact won't be accessible unless a user interface is defined for them. However, relationships are extremely useful in situating records within a greater network of interrelated data; they reflect the real-life connections between data. In CollectiveAccess, relationships are indicated using the bi-directional arrow ⇔. Relationships may be created between records in any primary table without restriction. 
 
-Relationships, like other aspects of CollectiveAccess, are configurable. Therefore it is useful to define relationships through relationship types. Relationship types characterize what kinds of relationships records in Collective Access have with each other. While relationships connect records together, relationship types simply define those connections; they are configurable specifiers that distinguish the different kinds of relationships that may occur in a database. 
+Relationships, like other aspects of CollectiveAccess, are configurable. All relationships in CollectiveAccess are defined through relationship types. Relationship types characterize what kinds of relationships records in Collective Access have with each other. While relationships connect records together, relationship types simply define those connections; they are configurable specifiers that distinguish the different kinds of relationships that may occur in a database. 
 
 Any number of relationships can be created between a pair of records, and each relationship can optionally incorporate additional metadata elements, or interstitial data, within a record. This feature allows cataloguers to describe a relationship beyond simply selecting a relationship type. Any two records can carry this interstitial description, so long as metadata and a user interface has been created. Common examples of relationships that could require interstitial metadata include: objects to places; objects to entities; entities to places; or entities to entities. For more on interstitial relationships and examples, see `Interstitial Data <https://manual.collectiveaccess.org/dataModelling/interstitial.html>`_. 
 
@@ -17,17 +17,21 @@ Relationships and Relationship Types
 
 An example of a Relationship, with the Relationship Types defined in parentheses, is shown below:
 
-.. image:: relationships_entities_ex.png
+.. figure:: relationships_entities_ex.png
    :scale: 50%
    :align: center
 
-Each CollectiveAccess system has a defined list of relationships and Relationship Types. 
+   Related entities in CollectiveAccess, with the relationship types in parentheses. 
 
-To access and manage Relationships and Relationship Types,  by navigating to **Manage > Administration > Relationship Types.** The hierarchy will display:
+Each CollectiveAccess system has a defined list of relationships and Relationship Types. To access and manage Relationships and Relationship Types, navigate to **Manage > Administration > Relationship Types.** The hierarchy viewer will display:
 
-.. image:: relationship_hierarchy.png
+.. figure:: relationship_hierarchy.png
    :scale: 50%
    :align: center
+
+   The Relationship Type hierarchy viewer. 
+
+Within the hierarchy viewer are all the relationships and relationship types available within a given system. To view the relationship types (on the left in bold), simply select the releationship listed in the right-hand column. 
 
 **Incorporating Relationships in a Data Import**
 ------------------------------------------------
@@ -41,14 +45,14 @@ Relationships in a mapping will be defined simultaneously in the `Refinery Colum
 **Relationships in the User Interface**
 ---------------------------------------
 
-To view what relationship types are available in a system, navigate in CollectiveAccess to Manage > Administration > Relationship Types. A list of relationships will be displayed, with their corresponding relationship types. 
+To view what relationship types are available in a system, navigate in CollectiveAccess to **Manage > Administration > Relationship Types**. A list of relationships will be displayed, with their corresponding relationship types. 
 
 .. image:: Relationships1.png
    :align: center
    :scale: 40% 
 
 
-Scrolling down on the left side of the list will enable the full list of possible relationship types to be viewed. Selecting a relationship (shown above in bold) will display all possible relationship types that are available within that specific relationship. 
+Scrolling down on the left side of the list will enable the full list of possible relationship types for each relationship to be viewed. Selecting a relationship (shown above in bold) will display all possible relationship types that are available within that specific relationship (see above). 
 
 A variety of types are available to help best describe the data in any given database. 
 
@@ -59,9 +63,11 @@ A variety of types are available to help best describe the data in any given dat
 
 Choose "Relationships" from the side navigation in any type of record in the database. This will display a page of all the possible relationships between record types available to use. 
 
-.. image:: relationships2.png
+.. figure:: relationships2.png
    :scale: 50%
    :align: center
+
+   The Relationships tab of a record in CollectiveAccess. This tab is where relationships can be viewed, added, or edited. 
 
 In order to state a relationship, a record or records must already exist in the database. For example, when relating an Object record to an Entity, there must already be a separate and existing record for that particular Entity. Note that each available relationship in the Relationships tab contains an arrow icon |icon| which indicates a relationship can be searched and added from that field. 
 
@@ -70,9 +76,11 @@ In order to state a relationship, a record or records must already exist in the 
 
 To add a relationship to an existing record, simply begin typing into the field of any given relationship as needed. A drop-down list will appear that best matches the typed text, and will display a list to choose from. This list will also include an option to *Create* a record for the new relationship.
 
-.. image:: relationships3.png
+.. figure:: relationships3.png
    :scale: 50%
    :align: center
+
+   Searching for an Entity in the user interface. A dropdown menu will appear showing any existing matches, with the option to Create a new entity record. 
 
 Once the correct record to relate is identified, select it. An optional dropdown menu will appear to the right, where the relationship type can be clarified, if needed (for example, when relating Entities, shown below.)
 
@@ -80,7 +88,7 @@ Once the correct record to relate is identified, select it. An optional dropdown
    :scale: 50%
    :align: center
 
-   Relating an Entity.
+   Relating an Entity. Choose a relationship type from the  dropdown menu.
 
 Save the changes made to the Relationships screen.
 
