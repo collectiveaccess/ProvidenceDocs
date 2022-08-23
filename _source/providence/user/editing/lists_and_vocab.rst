@@ -4,7 +4,7 @@ Lists and Vocabularies
 * `Creating a New List`_ 
 * `Adding Items to a List`_ 
 
-Metadata elements in a CollectiveAccess system must be defined before they can be added to a user interface. Metadata elements, the fields that make up record metadata, cannot be created within the context of an editor screen in the user interface. Instead, these elements are selected from a wide-ranging pool of available metadata elements, and added to the appropriate screens at the user’s discretion. Metadata elements are configurable, creating flexible and customizable cataloging options. 
+`Metadata elements <file:///Users/charlotteposever/Documents/ca_manual/providence/user/dataModelling/metadata.html?highlight=metadata+elements>`_ in a CollectiveAccess system must be defined before they can be added to a user interface. Fields that make up record metadata cannot be created within the context of an editor screen in the user interface. Instead, these elements are selected from a wide-ranging pool of available metadata elements, and added to the appropriate screens at the user’s discretion. Metadata elements are configurable, creating flexible and customizable cataloging options. 
 
 Lists and Vocabularies in CollectiveAccess refers to the metadata element values which are arranged and manipulated within a system (fields). They are, in fact, data points, which can be edited and adjusted through the user interface.
 
@@ -29,9 +29,11 @@ The list itself has a screen, where options are defined for the new list. To cre
 
 A screen displaying options for the new list will appear with the following options to set: 
 
-.. image:: lists3.png
+.. figure:: lists3.png
    :scale: 50% 
    :align: center
+
+   Creating a new list. 
 
 Options include:
 
@@ -62,9 +64,11 @@ CollectiveAccess also supports the addition of new metadata element values to an
           :scale: 50% 
 4. **Create a record** for the new list item. 
 
-.. image:: lists6.png
+.. figure:: lists6.png
    :scale: 50%
    :align: center
+
+   Creating a new list item. 
 
 By default, the Basic Info screen for this list item will include its place in the hierarchy, preferred names, identifiers, and other information: 
 
