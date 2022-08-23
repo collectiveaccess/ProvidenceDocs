@@ -88,35 +88,45 @@ Note that these interstitial records are meant to be small and manageable, so on
 Setting up Interstitial Relationship Records through the User Interface
 -----------------------------------------------------------------------
 
-Setting up a relationship record through the user interface is essentially just like creating a user interface for any other type of record (see `User Interface Administration <file:///Users/charlotteposever/Documents/ca_manual/providence/user/editing/interfaces.html#user-interface-administration>`_). It follows the same steps wherein a metadata element is created, and then added to the user interface.
+Setting up an interstitial relationship record through the user interface is essentially just like creating a user interface for any other type of record (see `User Interface Administration <file:///Users/charlotteposever/Documents/ca_manual/providence/user/editing/interfaces.html#user-interface-administration>`_). It follows the same steps wherein a metadata element is created, and then added, to the user interface.
 
 The key difference is what **Type restrictions** are chosen for the elements, and what **type** is used to create the user interface.
 
-Navigate to **Manage > Administration > User Interfaces**, where user interfaces can be added and edited. 
+Steps 
+^^^^^
 
-At the top of the screen, there is an option to add a new user interface for any type of table or relationship in CollectiveAccess. To add an interstitial user interface for an entity-entity relationship, select **entity-entity relationshi** from the drop-down menu: 
+1. Navigate to **Manage > Administration > User Interfaces**, where user interfaces can be added and edited. 
+
+2. Add a new user interface for any type of table or relationship in CollectiveAccess. To add an interstitial user interface for an entity-entity relationship, select **entity-entity relationship** from the drop-down menu. 
 
 .. image:: interstitial2.png
    :scale: 50%
    :align: center
 
-Select the plus icon |icon| to add the new user interface for the relationship.
+3. Select the plus icon |icon| to add the new user interface for the relationship.
 
 .. |icon| image:: interstitial3.png
           :scale: 50%
 
-Scroll down to the **Screens** field, and add a new screen. This new screen will be the screen within the relationship that displays the interstitial data. Here, it’s been called Interstitial: 
+4. The new editor UI will display. Scroll down to the **Screens** field, and add a new screen. This new screen will be the screen within the relationship that displays the interstitial data. Here, it’s been called Interstitial: 
+
+.. image:: interstitial11.png
+   :scale: 50%
+   :align: center
+
+Remember to save the new UI in order to add screens to it. 
+  
+5. Select the page icon |page| to add preferred labels, type restrictions, and screen content to the interstital data screen.
+
+.. |page| image:: page.png
+          :scale: 50%
 
 .. image:: interstitial4.png
    :scale: 50%
    :align: center
   
-Select the page icon |page| to add preferred labels, type restrictions, and screen content to the interstital data screen.
 
-.. |page| image:: page.png
-          :scale: 50%
-
-Adding metadata elements to the interstitial data screen is the same process as adding metadata elements to a user interface as outlined in `User Interface Administration <file:///Users/charlotteposever/Documents/ca_manual/providence/user/editing/interfaces.html#user-interface-administration>`_. Navigate to **Screen content** to move the metadata elements onto the new screen.
+6. Adding metadata elements to the interstitial data screen is the same process as adding metadata elements to a user interface as outlined in `User Interface Administration <file:///Users/charlotteposever/Documents/ca_manual/providence/user/editing/interfaces.html#user-interface-administration>`_. Navigate to **Screen content** to move the metadata elements onto the new screen.
 
 .. figure:: interstitial6.png
    :scale: 50%
