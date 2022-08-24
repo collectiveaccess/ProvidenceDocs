@@ -16,9 +16,6 @@ Displays, also known as bundle displays, specify exactly which fields from a rec
 
 Once custom displays are created and configured, several workflow options are available to output the data as displays are essentially synonymous with reports. Users can batch-edit data in spreadsheet format, export the data to tab or comma delimited files, or generate a PDF.
 
-**Configuring Displays**
-------------------------
-
 **Creating a New Display**
 --------------------------
 
@@ -27,8 +24,6 @@ Once custom displays are created and configured, several workflow options are av
 
 .. image:: displays1.jpg
    :width: 1533px
-   :height: 112px
-   :scale: 50%
    :align: center
 
 3. **Select** the plus sign + icon |plus| to create a new Display. 
@@ -38,17 +33,19 @@ Once custom displays are created and configured, several workflow options are av
 
 4. **Input** the basic information about the new Display. This information will look different depending on the selected record type: 
 
-.. image:: displays3.png
+.. figure:: displays3.png
    :scale: 50%
    :align: center
+
+   Creating a new display. 
 
 * **Display list name**: The display name for the display. 
 * **Display code**: The unique identifier for the display to be used throughout the system.
 * **Is system display?**: Set the display to be available or restricted to all users as part of the system-wide display list. 
 * **Display settings**: Display list values to show even when nothing is entered. 
 * **Type restrictions**: 
-* **User access**: 
-* **Group access**: 
+* **User access**: Add users and set access restrictions. 
+* **Group access**: Add access for groups and set access restrictions. 
 
 5. **Save** the options set for the new Display. 
 
