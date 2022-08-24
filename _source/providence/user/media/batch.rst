@@ -20,6 +20,11 @@ When a directory of media is uploaded, the media importer will do the following:
 
 * A combination of both
 
+Batch Importing Media
+---------------------
+
+To batch import media: 
+
 Navigate to **Import > Media.** The Media Importer will dispslay:
 
 .. figure:: media_importer.png
@@ -28,28 +33,34 @@ Navigate to **Import > Media.** The Media Importer will dispslay:
 
    A partial view of the Media Importer screen.
 
+Where a variety of options are available to configure the media import. Read on to learn about each option and its functionality. 
+
 Batch Import Options
 --------------------
 
 **Target**
 ^^^^^^^^^^
 
-.. image:: import_target.png
+.. figure:: import_target.png
    :scale: 50%
    :align: center
 
+   Set the import target to the desired primary table. 
+
 Media is stored in CollectiveAccess via media representation records. Each time media is imported into CollectiveAccess, a new media representation record is created. However, these records are almost always associated with other types of records from primary tables such as Objects. 
 
-Use the **Import Target** drop-down to set which primary table and type of record the media representations should be associated with (Objects, Entities, Collections, and so on.) 
+Use the **Import Target** drop-down (shown above) to set which primary table and type of record the media representations should be associated with (Objects, Entities, Collections, and so on.) 
 
 **Directory to Import**
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-.. image:: directory_to_import.png
+.. figure:: directory_to_import.png
    :scale: 50%
    :align: center
 
-Check the inspector to find out what server directory is associated with the importer tool. By default, it is set to your installation's /import folder. However, the directory can be changed in **app.conf**.
+   The Import directory. 
+
+Check the inspector to find out what server directory is associated with the importer tool. By default, it is set to your installation's /import folder. However, the directory can be changed in `app.conf <file:///Users/charlotteposever/Documents/ca_manual/providence/user/configuration/mainConfiguration/app.html>`_.
 
 A hierarchy browser reflecting the import directory will be displayed. The hierarchy browser contains two settings under Directory to Import: 
 
@@ -60,9 +71,11 @@ A hierarchy browser reflecting the import directory will be displayed. The hiera
 **Import Mode**
 ^^^^^^^^^^^^^^^
 
-.. image:: import_mode.png
+.. figure:: import_mode.png
    :scale: 50%
    :align: center
+
+   Select the import mode. 
 
 Import mode determines how the media will be imported into CollectiveAccess. Choose from the following options in the drop-down menu:
 
@@ -73,9 +86,11 @@ Import mode determines how the media will be imported into CollectiveAccess. Cho
 **Type**
 ^^^^^^^^
 
-.. image:: type.png
+.. figure:: type.png
    :scale: 50%
    :align: center
+
+   Select the type. 
 
 .. csv-table:: 
    :header-rows: 1
@@ -84,9 +99,11 @@ Import mode determines how the media will be imported into CollectiveAccess. Cho
 **Set**
 ^^^^^^^
 
-.. image:: set.png
+.. figure:: set.png
    :scale: 50%
    :align: center
+
+   Create a set of imported media. 
 
 This menu allows you to associate imported records with a set.
 
@@ -97,9 +114,11 @@ This menu allows you to associate imported records with a set.
 **Object Identifier**
 ^^^^^^^^^^^^^^^^^^^^^
 
-.. image:: object_identifier.png
+.. figure:: object_identifier.png
    :scale: 50%
    :align: center
+
+   Set the identifier for the media being imported.
 
 .. csv-table:: 
    :header-rows: 1
@@ -108,9 +127,11 @@ This menu allows you to associate imported records with a set.
 Object Title
 ^^^^^^^^^^^^
 
-.. image:: object_title.png
+.. figure:: object_title.png
    :scale: 50%
    :align: center
+
+   Set the object title. 
 
 .. csv-table:: 
    :header-rows: 1
@@ -134,12 +155,12 @@ This menu simply allows you to set the **status** and **access** fields for both
 
 There are several advanced options for a batch media import. They can be found on the same **Import > Media > Settings** page by scrolling down and selecting **Show advanced options >**. 
 
-.. image:: media7.png
-   :width: 1996px
-   :height: 1708px
+.. figure:: media7.png
    :align: center
-   :scale: 50%
-
+   :scale: 50% 
+   
+   Advanced Options for media importing. 
+   
 In many cases, the default settings and basic options are sufficient for a media import. Advanced options include: 
 
 Matching 
