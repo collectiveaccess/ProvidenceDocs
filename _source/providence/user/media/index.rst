@@ -15,3 +15,4 @@ Media
    Floorplans <floorplans.rst>
    Annotation Editor <annotation_editor.rst>
    Media Embedded Metadata <media_embedded_metadata.rst>
+   Supported Media File Formats <SupportedMedia.rst>
