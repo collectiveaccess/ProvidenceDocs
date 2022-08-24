@@ -17,21 +17,25 @@ To deaccession an item:
 2. Select the **Administrative Metadata** screen. 
 3. Navigate to the **Deaccession Status** field: 
 
-.. image:: deaccession1.png
+.. figure:: deaccession1.png
    :scale: 50%
    :align: center
+
+   The deaccession status bundle in a record. 
 
 4. **Select the deaccession checkbox** located within the bundle. This will flag the object record as **deaccessioned**, and will also expand the bundle so you can add additional information such as the date of deaccession, the "type", and any other qualifying notes. Deaccessioned items will be marked in the object editor screen in the Inspector in red. 
 
 Filter Results by Deaccession Status
 ------------------------------------
 
-The **Deaccessioned facet** can also be included to filter search results. To do so: 
+Once deaccessions are created, the **Deaccessioned facet** can also be included to filter search results. To do so: 
 
 1. Navigate to **Objects > Browse**.
 2. Select the **Deaccession** facet. 
 3. **Filter** the results according to whether records have, or have not, been deaccessioned.
 
-.. image:: deaccession2.png
+.. figure:: deaccession2.png
    :scale: 50%
    :align: center
+
+   Browsing by deaccession status. 
