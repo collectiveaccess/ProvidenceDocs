@@ -6,21 +6,21 @@ Display Template Syntax
 .. contents::
    :local:
    
-Display templates are used to format data from bundles (elements of metadata stored in CollectiveAccess) for display on screen, output into reports and presentation in search results. When no display template is defined CollectiveAccess defaults to displaying bundle data in the simplest possible way, typically as a semicolon-delimited list of values. For bundles comprised of a single value (Eg. a simple text metadata element) this is often enough. For complex bundles consisting of several discrete values – a mailing address for example – a template is usually required to adequately format the value. Other cases where bundle display templates are called for:
+Display templates are used to format data from `bundles <file:///Users/charlotteposever/Documents/ca_manual/providence/user/reference/glossaries/Bundles.html?highlight=bundles>`_ (elements of metadata stored in CollectiveAccess) for display on screen, output into reports and presentation in search results. When no display template is defined, CollectiveAccess defaults to displaying bundle data in the simplest possible way, typically as a semicolon-delimited list of values. For bundles comprised of a single value (Eg. a simple text metadata element) this is often enough. For complex bundles consisting of several discrete values – a mailing address for example – a template is usually required to adequately format the value. Other cases where bundle display templates are called for include:
 
-    - To define styling, such as headings, bold and italics around bundle elements.
-    - To format and conditionally include delimiters and suffixes between values in a complex bundle. For example, in a bundle with width, length and height dimensions, "x" delimiters can be placed between each dimension value. A display can be used to output values in a width/length/height order (or any other order). Thus a bundle with length=24", height=8" and width=3" can be output as 3" x 24" x 8" ... or 3"W x 24"L x 8"H ... or 3"W x 8"H if length happens to be undefined (because displays can intelligently omit the delimiter and suffix).
-    - To display data attached to related items. For example to display both the name and life dates for related entities a bundle display template can be used to extract and format the data. Any data attached to the related entity can be displayed.
-    - To display related data traversing any number of intervening relationships. As a simple example, imagine that you have an object related to a collection, and the collection is related to a donor. It's not necessary to catalog the donor directly on the object in order to display the donor's address there, because it's possible to pull the address through the intervening collection relationship. Another example prevalent in film and performance archives, is that objects can be related to "works" (occurrences) which in turn have entity relationships ("director", "actor", "choreographer"). A display template can display object information alongside entity data related to a work that is related to the object.
-    - To apply one of several display formats using expressions conditional on one or more data values.
+    - **To define styling**, such as headings, bold and italics around bundle elements.
+    - **To format and conditionally include delimiters and suffixes between values in a complex bundle**. For example, in a bundle with width, length and height dimensions, "x" delimiters can be placed between each dimension value. A display can be used to output values in a width/length/height order (or any other order). Thus a bundle with length=24", height=8" and width=3" can be output as 3" x 24" x 8" ... or 3"W x 24"L x 8"H ... or 3"W x 8"H if length happens to be undefined (because displays can intelligently omit the delimiter and suffix).
+    - **To display data attached to related items**. For example to display both the name and life dates for related entities a bundle display template can be used to extract and format the data. Any data attached to the related entity can be displayed.
+    - **To display related data traversing any number of intervening relationships**. As a simple example, imagine that you have an object related to a collection, and the collection is related to a donor. It's not necessary to catalog the donor directly on the object in order to display the donor's address there, because it's possible to pull the address through the intervening collection relationship. Another example prevalent in film and performance archives, is that objects can be related to "works" (occurrences) which in turn have entity relationships ("director", "actor", "choreographer"). A display template can display object information alongside entity data related to a work that is related to the object.
+    - **To apply one of several display formats** using expressions conditional on one or more data values.
 
-Display templates are also used extensively by Pawtucket 2.0 for formatting in themes. They are the preferred formatting method in Pawtucket 2.0, although mixed HTML/PHP coding is still supported.
+.. note:: Display templates are also used extensively by Pawtucket 2.0 for formatting in themes. They are the preferred formatting method in Pawtucket 2.0, although mixed HTML/PHP coding is still supported.
 
 Defining templates
 ^^^^^^^^^^^^^^^^^^
-Default display templates can be defined for metadata elements as part of their configuration. Default formatting can be overridden by additional context-specific templates within a display or user interface.
+Default display templates can be defined for metadata elements as part of their configuration (see `Configuring Metadata Elements <file:///Users/charlotteposever/Documents/ca_manual/providence/user/editing/metadataelements.html?highlight=configuring+metadata>`_). Default formatting can be overridden by additional context-specific templates within a display or user interface.
 
-The default template for a metadata element can be set in the configuration interface. Display and user interface related templates may be set in their respective configuration editors on a per-bundle basis. When a template is defined for a metadata element within a display or editor user interface it will take precedence over templates defined in the element's configuration.
+The default template for a metadata element can be set in the configuration interface. Display and user interface related templates may be set in their respective configuration editors on a per-bundle basis. When a template is defined for a metadata element within a display or editor user interface, it will take precedence over templates defined in the element's configuration.
 
 Template syntax
 ^^^^^^^^^^^^^^^
@@ -110,9 +110,9 @@ There are some cases in which you may need to make part of a template conditiona
     ^ca_objects.dimensions.width<ifdef code="ca_objects.dimensions.width">W x</ifdef> ^ca_objects.dimensions.height
     <ifdef code="ca_objects.dimensions.height">H x</ifdef> ^ca_objects.dimensions.depth<ifdef code="ca_objects.dimensions.depth">D</ifdef>
 
-Placeholder options
+Placeholder Options
 ^^^^^^^^^^^^^^^^^^^
-Placeholder values may be modified by options appended as a series of named parameters. Options are separated from the placeholder with a ``%`` character and listed in ``<name>=<value>`` pairs delimited by ``&`` or ``%`` characters.((``&`` are used in older templates, but now may be used interchangeably with ``%``). For example:
+Placeholder values may be modified by options appended as a series of named parameters. Options are separated from the placeholder with a ``%`` character and listed in ``<name>=<value>`` pairs delimited by ``&`` or ``%`` characters(``&`` are used in older templates, but now may be used interchangeably with ``%``). For example:
 
 .. code-block:: text
 
@@ -143,7 +143,7 @@ and
 
     ^ca_objects.preferred_labels.name%trim
 
-Pulling metadata through a relationship
+Pulling Metadata Through a Relationship
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 In the previous examples, data displayed is always from a particular object record at hand – the "primary" record. Templates are always processed relative to to the primary record. If you are formatting object search results, for example, your template will be repeatedly evaluated for each object in the result set, with each object taking its turn as primary. It's obvious but still worth stating: placeholders referring directly to data in the primary (``^ca_objects.idno`` for example) derive their values from the primary. If a bundle repeats for a record, you may get multiple values, but all values referring to the primary will always be taken from the primary. Any record can be primary. *Primary-ness* is simply the context is which a template is processed.
