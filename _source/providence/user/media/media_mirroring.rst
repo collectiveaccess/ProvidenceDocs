@@ -67,5 +67,6 @@ Note the ``accessUsingMirror`` directive. This tells CollectiveAccess what mirro
 is available. If you omit this directive the mirror will receive files from CollectiveAccess but
 will not actually be used by CollectiveAccess to serve media.
 
-For further details about the mirror configuration see `FTP Mirror configuration <file:///Users/charlotteposever/Documents/ca_manual/providence/user/configuration/developer/media_volumes.conf.html?highlight=ftp>`_.
+For further details about the mirror configuration see `FTP Mirror Configuration <file:///Users/charlotteposever/Documents/ca_manual/providence/user/configuration/developer/media_volumes.conf.html#ftp-mirror-configuration>`_ in `Media_volumes.conf <file:///Users/charlotteposever/Documents/ca_manual/providence/user/configuration/developer/media_volumes.conf.html>`_. 
 
+.. _rst_tutorial:
