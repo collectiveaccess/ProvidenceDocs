@@ -1,4 +1,4 @@
-Tracking current object location
+Tracking Current Object Location
 ================================
 
 .. contents::
@@ -11,6 +11,10 @@ Tracking current object location
 Overview
 --------
 CollectiveAccess provides a storage location hierarchy to describe the physical locations where collection objects may be located, displayed or stored. Storage locations are just another type of record and may be associated with objects using relationships. The location of an object may be recorded by creating a relationship between object and location. 
+
+.. image:: workflow_storage_loc_hierarchy.png
+   :scale: 50%
+   :align: center
 
 This arrangement has the advantage of simplicity but comes with significant limitations:
 

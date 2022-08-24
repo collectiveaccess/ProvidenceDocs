@@ -89,9 +89,9 @@ You can also nest additional layers of ``<unit>`` tags within the syntax discuss
 Indirect relationships
 ----------------------
 
-One use of the ``<unit>`` tag is to allow cataloguers to display metadata with some relative distance to the chosen record. We could call this the Six Degrees of Kevin Bacon for CollectiveAccess.
+One use of the ``<unit>`` tag is to allow cataloguers to display metadata with some relative distance to the chosen record. 
 
-Let's say you're creating a Collection summary and you'd like to display metadata about Entities, but Entities aren't related directly to Collections. Perhaps they are related to Objects related to the Collection. Never fear! Just as Bruce Willis is 2 degrees away from Kevin Bacon (thanks to Brad Pitt, "The Hamster Factor" and the movie "8"), Entities are also 2 degrees away from Collections thanks to their relativity to Objects.
+Let's say you're creating a Collection summary and you'd like to display metadata about Entities, but Entities aren't related directly to Collections. Perhaps they are related to Objects related to the Collection. Entities are also 2 degrees away from Collections thanks to their relativity to Objects.
 
 How does this look in practice? Here's a display template that is used on the object bundle (through the GUI) or object placement (in a profile). It pulls statement metadata from a container on each Entity record related to each Object.
 
@@ -145,7 +145,7 @@ Notice that the sort direction is ``ASC``. Sort direction may be either ASCendin
 Skipping units
 ---------------
 
-(From v1.5) You can skip records selected by unit tags using the ``skipIfExpression`` attribute. It takes an :ref:`Expression <expressions>` as parameter. Note that the ``skipIfExpression`` attribute is evaluated on record level, so while you can use it if your ``relativeTo`` spec is a container or an attribute, it doesn't really make sense to do so. Below is a simple example that would skip all entities where the ``idno`` had the sequence ``test`` in it.
+From CollectiveAccess Version 1.5, you can skip records selected by unit tags using the ``skipIfExpression`` attribute. It takes an :ref:`Expression <expressions>` as parameter. Note that the ``skipIfExpression`` attribute is evaluated on record level, so while you can use it if your ``relativeTo`` spec is a container or an attribute, it doesn't really make sense to do so. Below is a simple example that would skip all entities where the ``idno`` had the sequence ``test`` in it.
 
 .. code-block:: xml
 
