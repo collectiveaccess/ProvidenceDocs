@@ -16,11 +16,13 @@ To create a new metadata element in the user interface:
 1. Navigate to **Manage > Administration**. 
 2. Select **Metadata Elements** from the sidebar. This displays a complete list of all of the metadata elements currently available in the system: 
 
-.. image:: metadata_el2.png
+.. figure:: metadata_el2.png
    :scale: 50%
    :align: center
 
-3. Select the **plus icon** |plus| in the upper right corner. This displays the **Metadata Element Editor** which contains the following options for adding a new metadata element:
+   Metadata elements in a CollectiveAccess system. 
+
+3. Select the **plus icon** |plus| next to **New** in the upper right corner. This displays the **Metadata Element Editor** which contains the following options for adding a new metadata element:
 
 .. |plus| image:: metadata1.png
           :scale: 50%
@@ -29,7 +31,7 @@ To create a new metadata element in the user interface:
    :scale: 50%
    :align: center
 
-   The Record for the new metadata element being created. 
+   Creating a new metadata element.  
 
 Fields to fill in for the new metadata element include:
 
@@ -37,7 +39,7 @@ Fields to fill in for the new metadata element include:
 * **Disambiguation Labels**: 
 * **Element code**: All Metadata Elements require a unique alpha-numeric code which is used to identify it throughout the system. For examples, see the list of all Metadata Elements in the sidebar; the element codes are listed next to each element. 
 * **Documentation URL** : An optional link to documentation about the new metadata element.
-* **Datatype**: Determine the type of data that the field will receive (a text box, date range, list, etc). For detailed information about each type, see Attribute Types. Additional configuration options for each datatype become available after the information is saved. 
+* **Datatype**: Determine the type of data that the field will receive (a text box, container, date range, list, etc). For detailed information about each type, see Attribute Types. Additional configuration options for each datatype become available after the information is saved. 
 * **Use list**: Choose from this drop-down all the different lists defined in “Lists and Vocabularies.” This will append the actual content of the list to the metadata element.
 * **Datatype-specific options**: Additional configuration options according to the datatype assigned to the new metadata element. These options change depending on the Datatype selected. 
 * **Type restrictions**: Define the minimum and maximum number of attributes that must be associated with this metadata element. By setting Type Restrictions for the new metadata element, the Editor will populate a list of subtypes if they exist.
@@ -49,11 +51,13 @@ When configuring metadata elements in the User Interface, there are a few option
 
 To view these options, navigate to **Manage > Administration > Metadata Elements.** The full list of available metadata elements will be displayed:
 
-.. image:: datatype_options_1.png
+.. figure:: datatype_options_1.png
    :scale: 50%
    :align: center
 
-Note that the options available will differ for each **type** of metadata element. In the full list of metadata elements, these types are available to view in the third column from the left. Some common types can include: 
+   Metadata elements in a CollectiveAccess system. 
+
+Note that the options available will differ for each **type** of metadata element. In the full list of metadata elements, these types are available to view in the third column from the left. Some common types include: 
 
 * **Text**: Free text fields. 
 * **Containers**: Fields with one or more sub-fields. 
@@ -75,9 +79,11 @@ Select the appropriate text field to be changed. For example, to the text option
 .. |pageicon| image:: textfieldicon.png
               :scale: 50%
 
-.. image:: caption.png
+.. figure:: caption.png
    :scale: 50%
    :align: center
+
+   An individual metadata element. 
 
 Selecting the page icon will display the metadata element’s editor screen, where the name, description, and other details can be viewed, and changed. 
 
