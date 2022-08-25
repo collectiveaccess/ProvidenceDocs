@@ -7,6 +7,7 @@ Importing Data in CollectiveAccess
 * `Why Use an Import Mapping?`_
 * `Supported Data Input Formats`_
 * `Sample Import Mapping Spreadsheet, Sample Source Data, and Sample Installation Profile`_ 
+* `Blank Import Mapping Spreadsheet`_ 
 
 Basic Concepts: What is an Import Mapping? 
 ------------------------------------------
@@ -53,5 +54,8 @@ To follow along with the tutorial, download the following three files:
 
 :download:`Sample Installation Profile <Sample_import_profile.xml>`: The sample Providence installation profile. This profile, written in XML format, defines the aspects of the CollectiveAccess system, into which the example data is imported. The profile tells the software how to set up various aspects of Providence. For more on installation profiles in CollectiveAccess, please see `Profiles <https://manual.collectiveaccess.org/dataModelling/Profiles.html>`_. 
 
+Blank Import Mapping Spreadsheet
+--------------------------------
 
+:download:`Blank Import Mapping Spreadsheet <Blank_starter_import_mapping.xlsx>`: A blank import mapping spreadsheet in XLXS forrmat. This is a blank template provided to help create a new import mapping. Download this blank spreadsheet to create an import mapping with your own data. 
 
