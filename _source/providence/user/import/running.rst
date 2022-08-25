@@ -12,7 +12,7 @@ Running an Import
 Running a Data Import
 ---------------------
 
-There are two ways to import data into CollectiveAccess:
+Once an import mapping has been created, data can be imported into CollectiveAccess. There are two ways to import data into CollectiveAccess:
 
 1. **Directly from the command line (terminal)**. This method is recommended for larger imports, so the import is not tied up by a web browser. 
 
@@ -20,7 +20,7 @@ There are two ways to import data into CollectiveAccess:
 
 Both options require an import mapping spreadsheet, and source data in a supported data format. 
 
-.. warning:: Import mappings contain code. If code is invalid, the data importer in the user interface will refuse to upload the mapping. Common places where errors can occur in code phrases are with spaces, quotation marks, and spelling. Check code phrases for any inconsistencies; an online code validator and formatter is usually very helpful in catching any errors. 
+.. warning:: Import mappings contain code. If code is invalid, the data importer in the user interface will refuse to upload the mapping. Common places where errors can occur in code phrases are with spaces, quotation marks, and spelling. Check code phrases for any inconsistencies; an online `code validator and formatter <https://jsonlint.com/>`_  is usually very helpful in catching any errors. 
 
 .. note:: Remember to always back up your database before running an import, as you will likely have to tweak imports multiple times. 
 
@@ -29,7 +29,7 @@ Both options require an import mapping spreadsheet, and source data in a support
 
 To run a data import in the terminal or through the CollectiveAccess user interface, eight basic steps are involved: 
 
-1. **Create an import mapping spreadsheet.** This can be made in Excel or in Google Sheets, and will serve as a crosswalk between source data and the destination in CollectiveAccess. This step is necessary for either manner in which an import will be executed. See `Creating an Import Mapping <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/c_creating_mapping.html>`_ for complete instructions. 
+1. **Create an import mapping spreadsheet.** This can be made in Excel or in Google Sheets, and will serve as a crosswalk between source data and the destination in CollectiveAccess. This step is necessary for either manner in which an import will be executed. See `Tutorial: Import Mapping Spreadsheet <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/c_import_tutorial.html>`_ for complete instructions. 
 2. **Create a backup of the database** by executing a data dump before running the import.
 3. **Run the import** from either the command line (terminal) or the graphical user interface in CollectiveAccess. 
 4. **Check the data** that has been imported in CollectiveAccess. Look for any errors or points of inconsistencies. Errors will usually show up in error messages during an import; however, it is necessary to conduct general quality checks in the system. 
@@ -47,9 +47,7 @@ Follow the steps outlined below to generate a successful import from the termina
 
 1. **Create a place** where the data and data import mappings are easily accessible, without an inconveniently-long file path. For example, the import material could live in a Providence directory at:
 
-/support/project/mappings and
-
-/support/project/data
+``/support/project/mappings`` and ``/support/project/data``
 
 2. **Backup your data**. Before importing, back-up your database: 
 
