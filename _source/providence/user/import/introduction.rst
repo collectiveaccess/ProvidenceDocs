@@ -29,7 +29,7 @@ Import mappings operate under two basic assumptions about the data being importe
 
 A **row** in an import mapping spreadsheet contains all the metadata about a single, specific record: title, date, location, and other metadata that is present in the source data, and is arbitrary to the data set(s). A **column** groups these metadata elements together: all titles, all dates, all locations, and so on. This organization through rows and columns is a key aspect of creating an import mapping. 
 
-.. note:: The exception to these assumptions is an option called treatAsIdentifiersForMultipleRows that will explode a single row into multiple records. This is very useful if you have a data source that references common metadata shared by many pre-existing records in a single row. See `Mapping Options <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/mappingOptions.html>`_ for more details.
+.. note:: The exception to these assumptions is an option called *treatAsIdentifiersForMultipleRows* that will explode a single row into multiple records. This is very useful if you have a data source that references common metadata shared by many pre-existing records in a single row. See `Mapping Options <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/mappingOptions.html>`_ for more details.
 
 .. note:: Excel Tip for Import Mapping Spreadsheets: Translating A, B, C… to 1, 2, 3… can be time-consuming. Excel’s preferences allow you to change columns to display numerically rather than alphabetically. Go to Excel Preferences and select “General.” Click “Use R1C1 reference style.” This will display the column values as numbers.
 
@@ -40,7 +40,7 @@ Data can only be imported into CollectiveAccess in a supported data format. Supp
 
 For more, see `Supported File Formats <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/mappings/formats.html?highlight=file+format>`_. 
 
-The following pages, A First Import Tutorial, and Running a Data Import, will walk the user through the different parts of an import mapping, how to create an import mapping, and finally, how to run an import mapping to import data. 
+The following pages will walk the user through the different parts of an import mapping spreadsheet, how to create an import mapping, and finally, how to run a data import in CollectiveAccess using the import mapping. 
 
 Sample Import Mapping Spreadsheet, Sample Source Data, and Sample Installation Profile
 --------------------------------------------------------------------------------------
