@@ -15,13 +15,20 @@ An import mapping is a spreadsheet (XLSX or GoogleSheets) that defines how data 
 
 Each import mapping spreadsheet contains a set of intrinsic columns. A comprehensive description and function of these columns will be described below. Each import mapping also contains specific, customized Settings. Tables will be used to list possible options and the functions of each aspect of the spreadsheet in more detail. 
 
-Here is a column-by-column explanation of each component of the import mapping spreadsheet. 
+Helpful Resources
+^^^^^^^^^^^^^^^^^
 
-:download:`Sample Import Mapping Spreadsheet <sample_mapping_tutorial.xlsx>`: The import mapping spreadsheet; a schema crosswalk. For every data source, a target “destination” in CollectiveAccess is defined. This file is in the supported file format of XLXS; therefore, columns and rows are numbered using 1, 2, 3, and so on. 
+As the parts of a mapping are explained and a `Tutorial <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/c_import_tutorial.html>`_ is provided, it may be useful to download a sample mapping, sample data used to create the sample mapping, a sample installation profile, or a blank import mapping spreadsheet template, provided below. 
 
-:download:`Sample Import Data (Source Data) <sample_import_data_tutorial.xlsx>`: The sample source data. This sample data includes three records (one row = one record), with 10 examples of possible metadata fields (one column = one field). The sample data is in the supported file format of XLXS; therefore, columns and rows are numbered using 1, 2, 3, and so on. 
+:download:`Sample Import Mapping Spreadsheet <sample_mapping_tutorial.xlsx>`
 
-:download:`Sample Installation Profile <Sample_import_profile.xml>`: The sample Providence installation profile. This profile, written in XML format, defines the aspects of the CollectiveAccess system, into which the example data is imported. The profile tells the software how to set up various aspects of Providence. For more on installation profiles in CollectiveAccess, please see `Profiles <https://manual.collectiveaccess.org/dataModelling/Profiles.html>`_.
+:download:`Sample Import Data (Source Data) <sample_import_data_tutorial.xlsx>`
+
+:download:`Sample Installation Profile <Sample_import_profile.xml>`
+
+:download:`Blank Import Mapping Spreadsheet <Blank_starter_import_mapping.xlsx>`
+
+Below is a column-by-column explanation of each component of the import mapping spreadsheet. 
 
 Parts of an Import Mapping: Settings, Columns, and More
 -------------------------------------------------------
@@ -29,7 +36,9 @@ Parts of an Import Mapping: Settings, Columns, and More
 Settings
 --------
 
-Every import mapping requires general settings. Settings include the importer name, data format of the source data (for a comprehensive list of supported file formats, please see `Supported File Formats <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/mappings/formats.html?highlight=file+format>`_), the selected CollectiveAccess table, and more. This section can be placed at the top or bottom of a mapping spreadsheet. Although the Settings are integrated into the spreadsheet, they do function separately from the main column-defined body of the import mapping.
+Every import mapping requires general settings. Settings include the importer name, data format of the source data (for a comprehensive list of supported file formats, please see `Supported File Formats <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/mappings/formats.html?highlight=file+format>`_), the selected CollectiveAccess table, and more. This section can be placed at the top or bottom of a mapping spreadsheet. 
+
+Although the Settings are integrated into the spreadsheet, they do function separately from the main column-defined body of the import mapping.
 
 .. note:: In Settings, the rule types in Column 1 must be set to “Settings.” 
 
@@ -44,7 +53,7 @@ Columns
 Column 1: Rule Types
 ^^^^^^^^^^^^^^^^^^^^
 
-For each row in the import mapping spreadsheet, a Rule Type must be set. These rules determine how the importer will treat the record, or row. In other words, the rules define how each row will be imported. There are five rules available to choose from:
+**For each row in the import mapping spreadsheet, a Rule Type must be set**. These rules determine how the importer will treat the record, or row. In other words, the rules define how each row will be imported. There are five rules available to choose from:
 
 =============   ===========
 **Rule type**   **Description**
@@ -60,9 +69,11 @@ Setting         Sets general preferences for the mapping itself. This simply def
 Column 2: Source
 ^^^^^^^^^^^^^^^^
 
-As mentioned above, the purpose of an import mapping spreadsheet is to define specifically *how* and *where* source data will be imported into CollectiveAccess. The Source column defines *where* data is coming from outside CollectiveAccess; this is the first part of the crosswalk.  
+As mentioned above, the purpose of an import mapping spreadsheet is to define specifically *how* and *where* source data will be imported into CollectiveAccess. **The Source column defines *where* data is coming from outside CollectiveAccess; this is the first part of the crosswalk.**  
 
-How values go in the Source column depends on the file format of the source data that is being imported. CollectiveAccess supports a variety of file formats, and each format has a unique, corresponding Source column value. A few of these are described below: 
+How values go in the Source column depends on the file format of the source data that is being imported. CollectiveAccess supports a variety of file formats, and each format has a unique, corresponding Source column value. 
+
+A few of these are described below: 
 
 .. csv-table::
    :header-rows: 1
@@ -83,7 +94,7 @@ Column 3: CA table.element
 
 As a crosswalk, the import mapping spreadsheet determines where data comes from outside of CollectiveAccess (source data), but it also determines where that data will go in CollectiveAccess. Similarly to how Column 2 defines the source data, Column 3 determines where that source data goes in CollectiveAccess, using various **ca_table.element_codes.**
 
-This column declares the bundle code or metadata element in CollectiveAccess that the source data will be mapped to. It is possible to view what metadata elements are available and their formatting directly in CollectiveAccess. To do so, navigate to **Manage > My Preferences > Developer > Show Bundle Codes**, and select a preference. Navigate back to any record’s page, and these codes will be displayed for each field; these then can go directly into Column 3. To copy a bundle code, simply select it, and paste into the import mapping spreadsheet. 
+**This column declares the bundle code or metadata element in CollectiveAccess to which the source data will be mapped.** It is possible to view what metadata elements are available and their formatting directly in CollectiveAccess. To do so, navigate to **Manage > My Preferences > Developer > Show Bundle Codes**, and select a preference. Navigate back to any record’s page, and these codes will be displayed for each field; these then can go directly into Column 3. To copy a bundle code, simply select it, and paste into the import mapping spreadsheet. 
 
 When you are importing to simple free text, DateRange, Numeric, Currency, or other kinds of datatypes, a **ca_table.element** code is all that is needed. 
 
