@@ -7,7 +7,7 @@ Existing Record Policies
 
 .. note:: To understand Existing Record Policies and their meanings, it is useful to know that In CollectiveAccess, the primary identifying field for each record is **“idno”** (identifying number) while the primary title/name field is a **“preferred_label.”** 
 
-Existing Record Policies determine how records created by the import mapping are integrated, merged, or separated from other existing records. These policies are designed to be used in data imports that contain multiple parts, or, in other words, utilize multiple import mappings. Additionally, these policies can be used when revising an import mapping spreadsheet. All available Existing Record Policies, as of CollectiveAccess Version 1.8, are defined below:
+Existing Record Policies determine how records created by the import mapping are integrated, merged, or separated from other existing records. These policies are designed to be used in data imports that contain multiple parts, or, in other words, utilize multiple import mappings. Additionally, these policies can be used when revising an import mapping spreadsheet. All available Existing Record Policies, as of CollectiveAccess Version 1.8, are defined below.
 
 When Should Each Existing Record Policy be Used? 
 ------------------------------------------------
