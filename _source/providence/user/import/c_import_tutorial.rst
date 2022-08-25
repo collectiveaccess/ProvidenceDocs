@@ -19,17 +19,22 @@ Tutorial: Import Mapping Spreadsheet
 
 This Tutorial goes through each step of an import mapping spreadsheet, using sample data, a sample spreadsheet, and a sample installtion profile. 
 
+Helpful Resources
+^^^^^^^^^^^^^^^^^
+
 To follow along with this tutorial, download the following three files:
 
-:download:`Sample Import Mapping Spreadsheet <sample_mapping_tutorial.xlsx>`: The import mapping spreadsheet; a schema crosswalk. For every data source, a target “destination” in CollectiveAccess is defined. This file is in the supported file format of XLXS; therefore, columns and rows are numbered using 1, 2, 3, and so on. 
+:download:`Sample Import Mapping Spreadsheet <sample_mapping_tutorial.xlsx>`
 
-:download:`Sample Import Data (Source Data) <sample_import_data_tutorial.xlsx>`: The sample source data. This sample data includes three records (one row = one record), with 10 examples of possible metadata fields (one column = one field). The sample data is in the supported file format of XLXS; therefore, columns and rows are numbered using 1, 2, 3, and so on. 
+:download:`Sample Import Data (Source Data) <sample_import_data_tutorial.xlsx>`
 
-:download:`Sample Installation Profile <Sample_import_profile.xml>`: The sample Providence installation profile. This profile, written in XML format, defines the aspects of the CollectiveAccess system, into which the example data is imported. The profile tells the software how to set up various aspects of Providence. For more on installation profiles in CollectiveAccess, please see `Profiles <https://manual.collectiveaccess.org/dataModelling/Profiles.html>`_. 
+:download:`Sample Installation Profile <Sample_import_profile.xml>`
 
-For a blank import mapping spreadsheet, download the following file: 
+:download:`Blank Sample Import Mapping Spreadsheet <Blank_starter_import_mapping.xlsx>`
 
-:download:`Sample Import Mapping Spreadsheet Blank <sample_mapping_blank.xlsx>`
+`Import Reference Pages <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/import_reference.html>`_
+
+`JSON Online Validator and Formatter <https://jsonlint.com/>`_ 
 
 Import Mapping Spreadsheet: Column Overview
 -------------------------------------------
@@ -75,7 +80,13 @@ Column 1: Rule Types
 
    Rule Type Column in the sample import mapping spreadsheet. Note that these are selected from a pre-existing drop-down menu.
 
-Rule Types are the first column in an import mapping. The rules that are set in this column determine how each row in the mapping spreadsheet will be imported: the row can be mapped, meaning it will be imported; skipped, meaning the row will not be imported; can be set to a constant value; can be set to rule; or can be set to a setting. 
+Rule Types are the first column in an import mapping. The rules that are set in this column determine how each row in the mapping spreadsheet will be imported. 
+
+* **Mapping**: The row can be mapped, meaning it will be imported. 
+* **SKIP**: The row will not be imported. 
+* **Constant** The row will be set to a constant value. 
+* **Setting**: The row is a Setting. 
+* **Rule**: Rules will be applied to the mapping. For more, see `Rules <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/rules.html>`_. 
 
 .. note: Only rule types corresponding to specific settings in the import mapping should be set to Setting. For rows that correspond to data, do not use this rule type. 
 
@@ -111,11 +122,21 @@ Column 3: CA_table.element_code
 
 The destination, or target, in CollectiveAccess for each column of source data is defined in the third column of the import mapping spreadsheet. This column forms the second part of the crosswalk. 
 
-It is necessary to use a **ca_table.element_code** value in this column, as this declares the specific location where the source data will live once imported into CollectiveAccess. Each code corresponds to a specific metadata field in CollectiveAccess, and is a unique code assigned to a metadata element in the CA configuration, or an intrinsic field in CA, found in the installation profile. In the sample import mapping spreadsheet, most of these bundle codes begin with ca_objects, which refers back to the fact that these records are being imported as object records; this is also defined in the Table set in the Settings. These codes are listed and explained in more detail here. 
+It is necessary to use a **ca_table.element_code** value in this column, as this declares the specific location where the source data will live once imported into CollectiveAccess. Each code corresponds to a specific metadata field in CollectiveAccess. 
+
+In the sample import mapping spreadsheet, most of these bundle codes begin with **ca_objects**, which refers to the `primary table <file:///Users/charlotteposever/Documents/ca_manual/providence/user/dataModelling/primaryTables.html?highlight=primary+table>`_. This is also defined in the **Table** in the Settings. These codes are explained in more detail `here <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/import_ref_bundlecodes.html#import-import-ref-bundlecodes>`_. 
 
 In the sample source data, Column 1 contains all Titles for the objects, while Column 2 contains all Identifiers belonging to the objects. In the sample import mapping spreadsheet, Column 1 (Titles: source) will be mapped in CollectiveAccess as **ca_objects.preferred_labels** (Titles: destination). Column 2 (Identifiers: source) will be mapped in CollectiveAccess as **ca_objects.idno** (Identifiers: destination), and so on. Simply match the contents of the source data with the corresponding field in CollectiveAccess. 
 
-The sample import data also includes names (see column 7 in both the sample data and import mapping) which use a different bundle code. Data usually contains references to related tables, such as related Entities, Object Lots, Collections, Storage Locations, and so on. When an import mapping includes references to a table outside of the primary table defined in the Settings (in this example, **ca_objects**), simply cite that table name in this column. For example, Column 7 in the Source column is cited just as **ca_entities** (row 9). 
+Data usually contains references to related tables, such as related Entities, Object Lots, Collections, Storage Locations, and so on. When an import mapping includes references to a table outside of the primary table defined in the Settings (in this example, **ca_objects**), simply cite that table name in this column. For example, Column 7 in the Source column is cited just as **ca_entities** (row 9). 
+
+.. figure:: tutorial_ca_entities.png
+   :scale: 50%
+   :align: center
+
+   Column 7 mapped to **ca_entities.** 
+
+For more, see `Using Bundle Codes in an Import Mapping <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/import_ref_bundlecodes.html#import-import-ref-bundlecodes>`_. 
 
 Column 4: Group
 ---------------
@@ -126,7 +147,7 @@ Column 4: Group
 
    Columns 3 and 4 of the sample import mapping, showing a custom group made for the Date field.
 
-Column 4 of the import mapping spreadsheet is used for declaring Groups. The presence of Groups is optional, but is required for metadata elements being mapped in a **Container**. A container is a metadata element or field that contains sub-elements; in the sample mapping, this metadata element is Date. Sub-elements defining the date and date type (for more on Containers, please see xxx) reside within the metadata element Date. Using Groups is a simple way to ensure that all mappings to a Container actually end up in the same Container instance.
+Column 4 of the import mapping spreadsheet is used for declaring Groups. The presence of Groups is optional, but is required for metadata elements being mapped in a **Container**. A container is a metadata element or field that contains sub-elements; in the sample mapping, this metadata element is Date. Sub-elements defining the date and date type reside within the metadata element Date. Using Groups is a simple way to ensure that all mappings to a Container actually end up in the same Container instance. For more, see `Containers <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/containers.html#import-containers>`_. 
 
 In the sample import mapping, two sub-elements of **ca_objects.date** are declared as the bundle codes **ca_objects.date.date_value** and **ca_objects.date.date_type**. In order to import to specific sub-elements within a Container, the element codes for both the Container itself, **ca_objects.date**, as well as the code for the sub-element that is your ultimate target, **date_value** and **date_type**, must be cited. 
 
@@ -141,7 +162,7 @@ Column 5: Options
 
    Column 5 with two Options defined in the import mapping spreadsheet. 
 
-Options are used to set a variety of conditions on the import itself. Options can process data that needs cleaning up, skip empty data cells, or format data with specific templates. Options must be written in code (JSON). In the sample import mapping, two common options are used to set conditions on particular columns of source data being imported. 
+Options are used to set a variety of conditions on the import itself. Options can process data that needs cleaning up, skip empty data cells, or format data with specific templates. Options must be written in code (`JSON <https://www.json.org/json-en.html>`_). In the sample import mapping, two common options are used to set conditions on particular columns of source data being imported. 
 
 Row 6 in the sample import mapping corresponds to Source column 4 in the sample import data. Two records in Source column 4 have multiple subject values in the same cell, separated by semicolons: 
 
@@ -204,7 +225,7 @@ Column 7: Refinery Parameters
 
 Refinery Parameters define the conditions for the refinery being used in the import mapping. Each time a Refinery is used in a mapping, a Refinery Parameter must be used to tell the importer exactly how to manipulate the source data, and create separate records. Like Options, Refinery parameters are written in code (JSON). 
 
-In the sample import mapping, the Refinery **EntitySplitter** indicates that separate and related Entity records will be created from the Creators column in the source data. The Refinery Parameter simply specifies the relationship type that these records will have to other object records in the import (creator), as well as specifies the type of entity being created (individual). 
+In the sample import mapping, the Refinery **EntitySplitter** indicates that separate and related Entity records will be created from the Creators column in the source data. The Refinery Parameter simply specifies the relationship type that these records will have to other object records in the import (creator), as well as specifies the type of entity being created (individual). See `Using Lists and Vocabularies in an Import Mapping <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/lists_and_vocab_in_mapping.html#import-lists-and-vocab-in-mapping>`_ for more. 
 
 The Refinery **ObjectLotSplitter** indicates that separate and related Object Lot Records will be created from the Accession column in the source data. The Refinery Parameter specifies that these Object Lot records will be displayed as “gifts,” and will contain the Accession Number from column 9 in the source data. 
 
