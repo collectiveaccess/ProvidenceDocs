@@ -94,7 +94,7 @@ Column 3: CA table.element
 
 As a crosswalk, the import mapping spreadsheet determines where data comes from outside of CollectiveAccess (source data), but it also determines where that data will go in CollectiveAccess. Similarly to how Column 2 defines the source data, Column 3 determines where that source data goes in CollectiveAccess, using various **ca_table.element_codes.**
 
-**This column declares the bundle code or metadata element in CollectiveAccess to which the source data will be mapped.** It is possible to view what metadata elements are available and their formatting directly in CollectiveAccess. To do so, navigate to **Manage > My Preferences > Developer > Show Bundle Codes**, and select a preference. Navigate back to any record’s page, and these codes will be displayed for each field; these then can go directly into Column 3. To copy a bundle code, simply select it, and paste into the import mapping spreadsheet. 
+**This column declares the bundle code or metadata element in CollectiveAccess to which the source data will be mapped.** It is possible to view what metadata elements are available and their formatting directly in CollectiveAccess. To do so, navigate to **Manage > My Preferences > Developer > Show Bundle Codes**, and select **Show.** Navigate back to any record’s page, and these codes will be displayed for each field; these then can go directly into Column 3. To copy a bundle code, simply select it, and paste into the import mapping spreadsheet. 
 
 When you are importing to simple free text, DateRange, Numeric, Currency, or other kinds of datatypes, a **ca_table.element** code is all that is needed. 
 
@@ -107,7 +107,7 @@ However, there are a few cases where some additional steps are involved. For mor
 Column 4: Group
 ^^^^^^^^^^^^^^^
 
-In many cases, data will map into corresponding metadata elements bundled together in a container. Declaring a Group in Column 4 of an import mapping is a simple way to ensure that all of your mappings to a Container actually end up in the same place. Group names are arbitrary; CollectiveAccess will recognize a group of any name for any number of metadata elements, as long as the name is consistent. 
+In many cases, data will map into corresponding metadata elements bundled together in a `Container <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/containers.html#import-containers>`_. **Declaring a Group in Column 4 of an import mapping is a simple way to ensure that all of your mappings to a Container actually end up in the same place.** Group names are arbitrary; CollectiveAccess will recognize a group of any name for any number of metadata elements, as long as the name is consistent. 
 
 To create a group, assign the arbitrary group name to a line in the Group column. This will direct the mapping to place rows of data into a single container. To make sure both the Date itself and the date type end up in the same instance of the Date container, simply assign them to the same group in the fourth mapping column.
 
@@ -118,7 +118,7 @@ The name you assign the group is arbitrary, but it should be something that is r
 Column 5: Options
 ^^^^^^^^^^^^^^^^^
 
-Options can be used in an import mapping to set a variety of formatting choices and set conditions on the import itself. Options can also help process data that needs a clean-up, or can  format data with a variety of templates. Some Options are designed to set parameters on the import mapping behavior, such as preventing the import of certain fields. 
+**Options can be used in an import mapping to set a variety of formatting choices and set conditions on the import itself.** Options can also help process data that needs a clean-up, or can  format data with a variety of templates. Some Options are designed to set parameters on the import mapping behavior, such as preventing the import of certain fields. 
 
 Options are written in code. Within that code are specific terms for Options that function to manipulate the behavior of the source data. Common Options for import mappings are listed and described below:
 
@@ -136,7 +136,7 @@ Setting the delimiter option in the mapping ensures that values in the soruce da
 Column 6: Refinery
 ^^^^^^^^^^^^^^^^^^
 
-A refinery is designed to take a specific data format and transform it via a specific behavior as it is imported into CollectiveAccess. Refineries allow for greater complexity in data representation, and can be used to create separate but related records from the import spreadsheet. For more on Refineries, their definitions, types, and how to use them, see the `Refineries <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/mappings/refineries.html#import-mappings-refineries>`_ page. 
+**A refinery is designed to take a specific data format and transform it via a specific behavior as it is imported into CollectiveAccess.** Refineries allow for greater complexity in data representation, and can be used to create separate but related records from the import spreadsheet. For more on Refineries, their definitions, types, and how to use them, see the `Refineries <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/mappings/refineries.html#import-mappings-refineries>`_ page. 
 
 If a data import requires related records, then refineries must be used.  
 
@@ -151,7 +151,7 @@ Lastly, Splitters aren't the only type of Refinery - they're just the most commo
 Column 7: Refinery parameters
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Refinery parameters define the conditions for the refinery being used in the import mapping. Where a Refinery declares what data is being manipulated, the refinery parameter dictates how the data will be changed. 
+**Refinery parameters define the conditions for the refinery being used in the import mapping.** Where a Refinery declares what data is being manipulated, the refinery parameter dictates how the data will be changed. 
 
 Refinery parameters are written in code, and require valid code to function properly in the import mapping. Common Refinery parameters are listed below: 
 
@@ -164,7 +164,7 @@ Refinery parameters are written in code, and require valid code to function prop
 Columns 8 and 9: Original Values/Replacement Values
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-An import mapping can find values within source data and replace them with new values upon import. This is a necessary step for data that does not match the list item code for corresponding values in CollectiveAccess. Values for the source data will be input in Column 8, while the values replacing those will be input in Column 9. Multiple values may be added to a single cell in an import mapping, so long as the replacement value matches the original value line by line.
+**An import mapping can find values within source data and replace them with new values upon import.** This is a necessary step for data that does not match the list item code for corresponding values in CollectiveAccess. Values for the source data will be input in Column 8, while the values replacing those will be input in Column 9. Multiple values may be added to a single cell in an import mapping, so long as the replacement value matches the original value line by line.
 
 In our sample data, there is a list element called "Reproduction" with values for reproduction, original, and unknown. In our source data, however, you'll notice that the data input for these values are abbreviated (e.g "orig", "repro", and "dontknow"). By using original and replacement values, our mapping transforms "orig" to "original" and "repro" to "reproduction" so that they can match on the list item code for the corresponding values in CollectiveAccess.
 
