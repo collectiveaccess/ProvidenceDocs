@@ -3,7 +3,15 @@
 Overview
 ========
 
-CollectiveAccess offers several web-based APIs for data access and manipulation. Two are general-use APIs, providing access to much of CollectiveAccess' functionality including data access and editing, search and configuration. 
+CollectiveAccess offers several web-based APIs for data access and manipulation: 
+
+* GraphQL 
+* Simple 
+* JSON 
+* IIIF 
+* OAI-PMH 
+
+Two are general-use APIs, providing access to much of CollectiveAccess' functionality including data access and editing, search and configuration. 
 
 General-Use APIs
 ----------------
