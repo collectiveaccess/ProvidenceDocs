@@ -22,7 +22,7 @@ Some common examples include:
 * ca_entities.preferred_labels
 * ca_storage_locations.preferred_labels
 
-Where **ca_objects**, **ca_entities**, and **ca_storage_locations** are all referencing CollectiveAccess basic tables, and **preferred_labels** is referencing a specific field in CollectiveAccess. Fields will vary based on system configuration and what fields are available. 
+Where **ca_objects**, **ca_entities**, and **ca_storage_locations** are all referencing CollectiveAccess basic tables, and **preferred_labels** is referencing a specific field in CollectiveAccess. Fields will vary based on system configuration. 
 
 There are a few exceptions that require slightly different values to be placed in Column 3. See `Creating an Import Mapping: Overview <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/c_creating_mapping.html#column-3-ca-table-element>`_ and `Tutorial: Import Mapping Spreadsheet <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/c_import_tutorial.html>`_ for more. 
 
@@ -45,12 +45,14 @@ It’s possible to find bundle codes in a system that houses existing records, a
 
 In an empty CollectiveAccess system (with no records imported), navigate to the **New** tab at the top of the navigation bar. Create any kind of new record, hit save, and the bundle codes for each field will be displayed. 
 
-It’s necessary in a blank system to create a new test record and save it, so that all metadata screens will be available. If this is not done, only selected fields will display. 
+It’s necessary in a blank system to create a new test record and save it, so that all metadata screens will be available. If this is not done, the fields available to view are restricted. 
 
 In a system with prior existing records, navigate to any record’s page. The CA table.element codes will be displayed to the right of each metadata field: 
 
-.. image:: bundle_codes_2.png
+.. figure:: bundle_codes_2.png
    :scale: 50%
    :align: center
 
+   Fields for an existing records with their bundle codes. 
+   
 Selecting the CA table.element code from the record’s interface will copy the code to the clipboard. This makes copying and pasting CA table.element codes easy and efficient, so no mistakes are present in the import mapping spreadsheet. 
