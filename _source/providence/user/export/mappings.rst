@@ -28,7 +28,11 @@ Export Mappings
 Supported Output Formats
 ------------------------
 
-Currently: XML, MARC21, CSV
+Supported output formats currently include: 
+
+* XML
+* MARC21
+* CSV
 
 Creating an Export Mapping
 --------------------------
@@ -37,14 +41,14 @@ To create a mapping, first download the Excel-based export mapping template avai
 
 :download:`Data Export Mapping Template <Data_Export_Mapping_template.xlsx>`
 
-Once all of the mappings and settings have been entered into the template it can be loaded directly into CollectiveAccess (see Running an export, below). The mapping is automatically checked using format-specific rules before it is added so if your mapping has any errors or ambiguities, the mapping loader will let you know.
+Once all of the mappings and settings have been entered into the template it can be `loaded directly <file:///Users/charlotteposever/Documents/ca_manual/providence/user/export/mappings.html#running-an-export>`_ into CollectiveAccess. The mapping is automatically checked using format-specific rules before it is added, so if your mapping has any errors or ambiguities, the mapping loader will let you know.
 
-Creating the mapping is a very dependent on the format you want to export. Specific notes and examples can be found in the section about element values and formats.
+Creating the mapping is dependent on the format you want to export. Specific notes and examples can be found in `Element Values and General Notes on Specific Formats <file:///Users/charlotteposever/Documents/ca_manual/providence/user/export/mappings.html#element-values-and-general-notes-on-specific-formats>`_. 
 
 Rule Types
 ----------
 
-The first column of the main mapping spreadsheet is called "Rule type". What you set here basically qualifies what this row does. Most of the rows will end up being of the "Mapping" type but there are several options available:
+The first column of the main mapping spreadsheet is **Rule Type.** Similarly to Rule Types in an import mapping, in an export mapping, what you set here qualifies what this row does. There are several options available:
 
 .. csv-table::
    :header-rows: 1
@@ -54,14 +58,16 @@ The first column of the main mapping spreadsheet is called "Rule type". What you
 Hierarchical Mappings
 ---------------------
 
-Some export formats support hierarchical relationships between mapping items. For XML this is a very core concept. To create a hierarchy, simply assign a number to a mapping in the 2nd column of the Mapping sheet and then reference that number in other rows (i.e. for other items) in the 3rd row, which is typically named "Parent ID". The second item will then become a direct child if the first one. In theory, those hierarchies can be nested very deep but in practice the format implementations may apply restrictions.
+Some export formats support hierarchical relationships between mapping items. For XML this is a very core concept. To create a hierarchy, simply assign a number to a mapping in the 2nd column of the Mapping sheet and then reference that number in other rows (i.e. for other items) in the 3rd row, which is typically named "Parent ID". The second item will then become a direct child if the first one. In theory, those hierarchies can be nested very deep, but in practice, the format implementations may apply restrictions.
 
 Source
 ------
 
-The value for the 5th column in the mapping sheet can be any CollectiveAccess bundle specifier. See API:Getting_Data#Bundle_specifiers for details. This usually specifies the actual data that is pulled into this item. Can be set to arbitrary text for items with static content or be left empty for items without content (e.g. wrapping elements in XML or empty columns in CSV).
+The value for the 5th column in the mapping sheet can be any CollectiveAccess bundle specifier. See `API: Getting Data and Methods of Access <file:///Users/charlotteposever/Documents/ca_manual/providence/developer/api_getting_data.html>`_ for details. 
 
-Note that if the context for the current mapping is changed, there are a couple of special keys available for the source column. For more information see the description for the "context" option in the table below.
+This usually specifies the actual data that is pulled into this item, and can be set to arbitrary text for items with static content or be left empty for items without content (e.g. wrapping elements in XML, or empty columns in CSV).
+
+Note that if the context for the current mapping is changed, there are a couple of special keys available for the source column. For more information see the description for the `Context <file:///Users/charlotteposever/Documents/ca_manual/providence/user/export/mappings.html#options>`_ option in the table below.
 
 Element Values and General Notes on Specific Formats
 ----------------------------------------------------
@@ -93,7 +99,7 @@ MARC Element Values
 
 Let's start off by saying that MARC is a very old and very specific format. Creating MARC mappings can be a bit painful. Make yourself familiar with the format before you dive into the following description.
 
-In MARC mappings, the Element value is either a control field or a data field definition. For control field definitions, simply enter the field code (like '001') here. For data field definitions, enter the field code, followed by a forward slash and both indicator characters. For details on valid field codes and indicators, please refer to the MARC documentation. For empty/unused indicators, use the pound sign (#). Valid examples are 001 300/## 490/1#
+In MARC mappings, the Element value is either a control field or a data field definition. For control field definitions, simply enter the field code (like '001') here. For data field definitions, enter the field code, followed by a forward slash and both indicator characters. For details on valid field codes and indicators, please refer to the MARC documentation. For empty/unused indicators, use the pound sign (#). Valid examples are: 001 300/## 490/1#.
 
 Mapping items with data field definitions also shouldn't have any source definition or static data. The data resides in subfields, which should be separate mapping items with a hierarchical relationship (via Parent ID) to the field definition. For instance, you'd define an item for the data field "300/##". Suppose it had the ID 1. This field (like every data field) has a couple of subfields [1], namely a through g and 3, 6, 8 (leave out the $ character from the original documentation). Now create separate mapping items for each subfield you need, pull in the CA data you want using the 'Source' field in the mapping sheet and fill in the Parent ID "1", the identifier of the data field. Here's an example in table form (which may not make sense from a MARC standpoint but we're only trying to explain the format here, not the semantics of MARC fields):
 
