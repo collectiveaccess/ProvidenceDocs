@@ -12,37 +12,24 @@ In the sample import mapping spreadsheet, the rule types **Mapping**, **SKIP**, 
 
 The use of Constant is arbitrary and will depend on the source data, what will be included in the import, and how. Constant sets an arbitrary constant value once the data is imported, usually within a `Container <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/containers.html>`_. As well as setting the Constant Rule Type in the Rule Type Column (Column 1 in an Import Mapping Spreadsheet), when using Constant, the Source Column (Column 2 in an Import Mapping Spreadsheet) must be set to a text value. Add the value to the Source Column, and the value will be set in the corresponding metadata element for every record that is imported. 
 
-When to Use Constant Rule Type
-------------------------------
-
-Knowing when to use Constant as a Rule Type is important, as it will affect how the data looks in CollectiveAccess. 
-
-The most common indicator of whether the Constant Rule Type should be used is if source data contains a column or columns describing the date type, measurement type, or other defined type descriptors  such as “created,” “overall,” or even “accessioned.”
-
-Another indicator is whether the Collective Access system itself contains a field or fields using drop-down values, where a set list of values is displayed, but needs to be selected through the import mapping spreadsheet. 
-
-For more on mapping to drop-down lists, see Mapping to a Drop-Down List. 
-
-An example of the use of the Rule Type Constant is available to view in `Tutorial: Import Mapping Spreadsheet <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/c_import_tutorial.html>`_ and in the sample mapping spreadsheet. Download the sample mapping spreadsheet and sample source data below.
-
-:download:`Sample Import Mapping Spreadsheet <sample_mapping_tutorial.xlsx>`
-
-:download:`Sample Import Data (Source Data) <sample_import_data_tutorial.xlsx>` 
-
 Example of Constant Rule Type: Dates
 ------------------------------------
+
+The following example assumes that source data contains a date value, as well as a description of the date (a date type). In CollectiveAccess, date types can be expressed through a drop-down menu. 
+
+In the sample import mapping below is an example of using the Constant rule type to map dates: 
 
 .. figure:: constant_ex_1.png
    :scale: 50%
    :align: center
 
-   The Constant Rule Type used in the Sample import mapping spreadsheet. Note the text field in the Source column, as well as the Group “date” in the Group column. 
+   The Constant Rule Type used in the Sample import mapping spreadsheet. Note the text in the Source column, as well as the Group “date” in the Group column. 
 
-Although there is only one date field in the sample source data, **two** mappings relating to the date are needed in the import mapping to accommodate the Constant Rule Type “created,” because the date value (the date itself) and the date type (the value “created”) must be mapped separately. Therefore, the date (date itself) (Column 3 of the source data) is mapped to the CA table.element **ca_objects.date_value**, while the date type (described by the constant “created”) is mapped to the CA table.element **ca_objects.date_type**. To ensure they get mapped to the same Container, a Group called “date” has been used in Column 4  (see above). 
+Although there is only one date field in the sample source data, **two** mapping rows relating to the date are needed in the import mapping to accommodate the date itself, and the type of date described. 
+
+The date value (the date itself) and the date type (the value “created”) must be mapped separately, because the Date field in CollectiveAccess is a Container with two sub-elements: the date value, and the date type. Therefore, the date (date itself) (Column 3 of the source data) is mapped to the CA table.element **ca_objects.date_value**, while the date type (described by the constant “created”) is mapped to the CA table.element **ca_objects.date_type**. To ensure they get mapped to the same Container, a Group called “date” has been used in Column 4  (see above). 
 
 Anytime Constant is used in an import mapping spreadsheet, a separate row must be created to accommodate whatever is being defined by the Constant Rule, in addition to mapping the “original” value. Often, a Group must also be used to ensure the two values get mapped into the same Container in CollectiveAccess. 
-
-Note that the CA table.element varies for the date value (the date itself) and the date type, which is described by the Constant “created.” 
 
 When imported in CollectiveAccess, the date and date type will display within the Date Container like so: 
 

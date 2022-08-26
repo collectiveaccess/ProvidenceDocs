@@ -22,7 +22,7 @@ This Tutorial goes through each step of an import mapping spreadsheet, using sam
 Helpful Resources
 ^^^^^^^^^^^^^^^^^
 
-To follow along with this tutorial, download the following three files:
+To follow along with this tutorial, download the following files:
 
 :download:`Sample Import Mapping Spreadsheet <sample_mapping_tutorial.xlsx>`
 
@@ -30,7 +30,11 @@ To follow along with this tutorial, download the following three files:
 
 :download:`Sample Installation Profile <Sample_import_profile.xml>`
 
+To create your own mapping, download the following template: 
+
 :download:`Blank Sample Import Mapping Spreadsheet <Blank_starter_import_mapping.xlsx>`
+
+Other useful resources for creating an import mapping: 
 
 `Import Reference Pages <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/import_reference.html>`_
 
@@ -95,6 +99,8 @@ In the sample import mapping spreadsheet, the rule types Mapping, SKIP, and Cons
 The use of SKIP and Constant is arbitrary and will depend on the source data, what will be included in the import, and how. 
 
 Most importantly, in order to import any data into CollectiveAccess, rule types for data that will be imported must be set to Mapping (with a few exceptions; these will be explained and clarified further on in the tutorial). If the rule type is not set to Mapping for any data that needs to be included in the import, the data simply will not show up in CollectiveAccess. 
+
+See `here <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/c_creating_mapping.html#column-1-rule-types>`_ for details on Rule Types. 
 
 Column 2: Source
 ----------------
