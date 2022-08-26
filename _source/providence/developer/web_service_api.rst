@@ -20,7 +20,7 @@ Collective Access provides a REST API (Representational State Transfer Applicati
 
 .. note:: Most of the query examples described below assume that curl is installed. 
 
-.. note:: For an introduction to development in CollectiveAccess, please see API:Accessing_Data. 
+For an introduction to development in CollectiveAccess, please see `API: Getting Data and Methods of Access <file:///Users/charlotteposever/Documents/ca_manual/providence/developer/api_getting_data.html>`_. 
 
 Global parameters
 -----------------
@@ -52,7 +52,8 @@ Use that token to quickly authenticate all subsequent requests against the API, 
 .. warning:: The token will expire within a few hours, resulting in a 401 Access Denied HTTP response. Simply re-authenticate using the auth/login service.
 
 .. note.. Pre v1.5 you're going to have to add HTTP Basic authentication to every API call. This is still supported in v1.5 for compatibility reasons, but strongly discouraged.
-http://user:password@localhost/service.php/<your_service_endpoint>
+``http://user:password@localhost/service.php/<your_service_endpoint>``
+
 Note that anyone can easily sniff the password if the transport layer is not encrypted. If you're opening up your API for remote access, you should strongly consider enabling TLS in your web server.
 
 JSON Pretty Printing
