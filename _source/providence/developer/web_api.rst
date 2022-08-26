@@ -1,20 +1,7 @@
 .. developer_web_api:
 
 Overview
-=====================
-
-* `General-Use APIs`_
-* `APIs Providing More Specialized Access`_
-
-APIs Providing More Specialized Access
-.. toctree::
-   :hidden:
-   
-   GraphQL <web_api/graphql>
-   Simple <web_api/simple>
-   JSON <web_api/json>
-   IIIF <web_api/iiif>
-   OAI-PMH <web_api/oaipmh>
+========
 
 CollectiveAccess offers several web-based APIs for data access and manipulation. Two are general-use APIs, providing access to much of CollectiveAccess' functionality including data access and editing, search and configuration. 
 
