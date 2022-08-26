@@ -1,19 +1,13 @@
 User Access Control
 ===================
 
+There are many ways to grant and restrict access in CollectiveAccess using settings that can be enabled in the installation profile, including:
+
 * `Intrinsic Access Bundle`_ 
 * `Metadata-level Access Control`_ 
 * `Type-level Access Control`_ 
 * `Source-level Access Control`_ 
 * `Item-level Access Control`_ 
-
-There are many ways to grant and restrict access in CollectiveAccess using settings that can be enabled in the installation profile, including:
-
-* Intrinsic Access Bundle 
-* Metadata-level Access Control 
-* Type-level Access Control
-* Source-level Access Control
-* Item-level Access Control
 
 Enabling these controls and customizing the controls settings will affect which records can be viewed, what information within records can be viewed, and by whom, in a given system. 
 
@@ -54,7 +48,33 @@ It's also possible to change the default values of the access drop-down by copyi
 **Metadata-level Access Control**
 ---------------------------------
 
-Use metadata-level access control to set specific metadata elements as "No Access" "Read-only access" or "Read/edit access" for different access roles in Providence. To alter the settings navigate to **Manage > Access control > Access roles > Metadata**.
+Use metadata-level access control to set specific metadata elements as "No Access" "Read-only access" or "Read/edit access" for different access roles in Providence. 
+
+To alter the settings in the user interface, navigate to **Manage > Access control > Access roles**:
+
+.. image:: accessroles1.png
+   :scale: 50%
+   :align: center
+
+Select the page icon |page| to the right of the role you'd like to edit. 
+
+.. |page| image:: accessrole_page.png
+          :scale: 50%
+
+Where you can edit the role: 
+
+.. image:: accessrole2.png
+   :scale: 50%
+   :align: center
+
+From the tabs, select **Metadata.** 
+
+.. image:: accessrole3.png
+   :scale: 50%
+   :align: center
+
+Where you can configure role access for various elements relating to primary tables in the system. 
+
 
 In the profile, use the following syntax:
 
