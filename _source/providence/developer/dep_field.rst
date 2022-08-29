@@ -10,7 +10,7 @@ Available from CollectiveAccess Version 1.6, Dependent field visibility is a fea
 Enabling Dependent Field Visibility
 -----------------------------------
 
-To enable, set the following in **app.conf**:
+To enable, set the following in *app.conf*:
 
 .. code-block::
 
@@ -18,7 +18,7 @@ To enable, set the following in **app.conf**:
 
 Once enabled, a few new settings become available for List metadata elements with render type "Drop-down list" or "Radio buttons.” Note that this will not work with any of the other render modes. 
 
-A new config setting will appear on the metadata element configuration screen for each item in the list. These settings allow you to select the bundle placements to hide when this list item is chosen:
+A new config setting will appear on the `metadata element configuration <file:///Users/charlotteposever/Documents/ca_manual/providence/user/editing/metadataelements.html?highlight=configuring+metadata+elements>`_ screen for each item in the list. These settings allow you to select the bundle placements to hide when this list item is chosen:
 
 .. image:: dep_field1.png
    :scale: 70%
@@ -36,7 +36,7 @@ Navigate to a screen that has the List metadata element, and select one of the i
 Configuration in Profiles
 -------------------------
 
-To set up dependent field visibility at installation time (in the installation profile), have the **app.conf** setting enabled (see above). Then, add settings to List metadata elements as follows:
+To set up dependent field visibility at installation time (in the installation profile), have the *app.conf* setting enabled (see above). Then, add settings to List metadata elements as follows:
 
 .. code-block::
 

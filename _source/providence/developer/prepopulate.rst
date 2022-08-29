@@ -5,17 +5,17 @@ Prepopulate
 * `Prepopulate Rule Settings`_ 
 * `Flowchart`_ 
 
-As of Collective Access version 1.5, Prepopulate automatically prepopulates fields in CollectiveAccess records based on Display Templates and Expressions.
+As of Collective Access version 1.5, **prepopulate** automatically prepopulates fields in CollectiveAccess records based on `Display Templates <file:///Users/charlotteposever/Documents/ca_manual/providence/user/reporting/templates.html>`_ and `Expressions <file:///Users/charlotteposever/Documents/ca_manual/providence/user/reporting/expressions.html>`_.
 
 Setup
 -----
 
-The core configuration is done in **app/conf/prepopulate.conf**. There are two settings that control when the prepopulate rules kick in: 
+The core configuration is done in *app/conf/prepopulate.conf*. There are two settings that control when the prepopulate rules kick in: 
 
 1. On record save, **prepopulate_fields_on_save**
 2. Each time an editor is opened, **prepopulate_fields_on_edit** 
 
-Both settings are turned off by default. Set one or both of these settings to 1 to enable the feature.
+.. note:: Both settings are turned off by default. Set one or both of these settings to 1 to enable the feature.
 
 The main part of the configuration is a list of rules under **prepopulate_rules**. Each rule should have a unique code, e.g. **test_rule**, in the example block below:
 

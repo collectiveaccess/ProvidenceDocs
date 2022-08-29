@@ -6,7 +6,7 @@ Deduplication
 * `Implementation Details`_ 
 * `Computing the Checksum`_
 
-Deduplication, available as of CollectiveAccess version 1.7, is only available as a command line utility, and as part of the   `Replication <file:///Users/charlotteposever/Documents/ca_manual/providence/developer/Replication.html>`_ protocol. 
+As of CollectiveAccess version 1.7, **deduplication** is only available as a `command line utility <file:///Users/charlotteposever/Documents/ca_manual/providence/user/administration/caUtils.html?highlight=cautil>`_, and as part of the  `Replication <file:///Users/charlotteposever/Documents/ca_manual/providence/developer/Replication.html>`_ protocol. 
 
 Using Deduplication
 -------------------
@@ -51,7 +51,7 @@ Configuration
 
 The default settings should work in most cases. The script uses checksums to find similar records. 
 
-There are a few settings that control how these checksums are computed. To override the default values, you would add them to **app.conf**:
+There are a few settings that control how these checksums are computed. To override the default values, you would add them to *app.conf*:
 
 .. csv-table:: 
    :header-rows: 1
@@ -60,7 +60,7 @@ There are a few settings that control how these checksums are computed. To overr
 Implementation Details
 ----------------------
 
-The core implementation is in a trait "DeduplicateBaseModel", which is then mixed into BundlableLabelableBaseModelWithAttributes. It defines methods to compute checksums and some static utilities to list duplicates and merge records for the current table.
+The core implementation is in a trait "DeduplicateBaseModel", which is then mixed into *BundlableLabelableBaseModelWithAttributes*. It defines methods to compute checksums and some static utilities to list duplicates and merge records for the current table.
 
 Computing the Checksum
 ----------------------
@@ -74,6 +74,7 @@ The record checksum is a simple sha256 hash of a serialized PHP array that conta
 * The checksum of the hierarchy parent record (e.g. for places or storage locations)
 * The source code (source_id translated into a list item idno)
 * Additional table-specific checksum components, for instance: 
+
     * ca_entities: lifespan
     * ca_lists: list_code
     * for anything under BaseRelationshipModel: the GUIDs of the left and right record, the relationship type code, and the effective date/source_info intrinsics
