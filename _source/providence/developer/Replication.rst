@@ -8,7 +8,7 @@ Replication
 * `Replication Service`_ 
 * `Implementation Details`_ 
 
-Replication, available from CollectiveAccess Version 1.7, allows for the replication of data from one CollectiveAccess system to another. To do so, CollectiveAccess will use a specialized version of the Web Service API. 
+Replication, available from CollectiveAccess Version 1.7, allows for the replication of data from one CollectiveAccess system to another. To do so, CollectiveAccess will use a specialized version of the `Web Service API <file:///Users/charlotteposever/Documents/ca_manual/providence/developer/web_service_api.html>`_. 
 
 Usage
 -----
@@ -81,9 +81,7 @@ Once replication.conf is set up, the replicator can be run. It is recommended to
 
 The replicator is a simple script in caUtils:
 
-.. code-block:: php
-
-   support/bin/caUtils replicate-data
+``support/bin/caUtils replicate-data``
 
 It will create a log file in the location specified in replication.conf.
 
@@ -105,9 +103,7 @@ Replication Service
 
 All communication is done via the newly implemented replication service. It facilitates both the "source" and the "target" functionality through these endpoints. Note that all the names are case-insensitive. Their CamelCase equivalents will work just as well.
 
-.. code-block:: php
-
-   GET getlog
+``GET getlog``
 
 returns the change log for that system. Parameters are:
 
@@ -119,9 +115,7 @@ returns the change log for that system. Parameters are:
 
 The response body is the JSON-encoded change log
 
-.. code-block:: php
-
-   GET getsysguid
+``GET getsysguid``
 
 Returns the system GUID for this target or source. the response body will have the GUID under the "system_guid" key. 
 
@@ -179,14 +173,14 @@ The main functionality of the feature is in the **getlog** and **applylog** func
 
 **Getlog**
 
-The actual implementation is not in the ReplicationService, but in ca_change_log::getLog(). For the most part, it just gets the change log from the given start point, and pulls in ca_change_log_snapshots and ca_change_log_subjects for each of the resulting rows. It then goes through some lengths to make these records useful for sync by adding GUIDs for all system-specific *_id columns.
+The actual implementation is not in the ReplicationService, but in *ca_change_log::getLog()*. For the most part, it just gets the change log from the given start point, and pulls in *ca_change_log_snapshots* and *ca_change_log_subjects* for each of the resulting rows. It then goes through some lengths to make these records useful for sync by adding GUIDs for all system-specific *_id columns.
 
 It also processes the skipIfExpression rules. They're applied to the change log subjects for each change log entry. The whole change log entry is skipped if the expression (and the table) matches for one of the subjects.
 
 **Applylog**
 
 The ReplicationService will pull the log out of the request body and apply some basic sanity checks. It'll also figure out if setIntrinsics was set and prepare that as an option to pass to the change log entry implementations.
-It then loops through the log entries and calls CA\Sync\LogEntry\Base::getInstance() for each of the entries. That class method will return one of the Implementations of CA\Sync\LogEntry\Base, based on what kind of record that log entry represents:
+It then loops through the log entries and calls *CA\Sync\LogEntry\Base::getInstance()* for each of the entries. That class method will return one of the Implementations of *CA\Sync\LogEntry\Base*, based on what kind of record that log entry represents:
 
 .. code-block:: php
 
