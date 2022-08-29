@@ -6,7 +6,7 @@ Configuring Displays
 * `Refining Displays`_
 * `Using Type Restrictions`_
 
-Displays allow users to access and view selected metadata in a summary-style format. They can be used to generate reports and provide information to users with read-only access. Displays can be configured through the user interface, but it is most efficient to go ahead and set them in the profile before installing.
+`Displays <file:///Users/charlotteposever/Documents/ca_manual/providence/user/reporting/displays.html>`_ allow users to access and view selected metadata in a summary-style format. They can be used to generate reports and provide information to users with read-only access. Displays can be configured through the user interface, but it is most efficient to go ahead and set them in the profile before installing.
 
 Codes for Displays
 ------------------
@@ -28,7 +28,7 @@ The basic code needed to configure displays in the installation profile is as fo
       </bundlePlacements>
     </display>
 
-Displays are configured similarly to user interfaces in that they require defined bundles. However, the syntax is slightly different; the table as well as the element code must be specified: 
+Displays are configured similarly to user interfaces in that they require defined `bundles <file:///Users/charlotteposever/Documents/ca_manual/providence/user/reference/glossaries/Bundles.html>`_. However, the syntax is slightly different; the table as well as the element code must be specified: 
 
 .. code-block:: php
 
