@@ -17,7 +17,7 @@ Application Plugins
 
 Application plugins are PHP classes that can be written to add specialized functionality to CollectiveAccess. Custom user interfaces, menu items, and screens are all added to a system with application plugins. 
 
-Each application plugin has its own directory in **app/plugins** which contains all of the code, views, graphics and configuration required for operation. At a minimum, every plugin has a **plugin class**. This class, a subclass of *BaseApplicationPlugin*, defines methods that "hook" various events that may occur during a user request. Plugin classes need only implement methods for the hooks they are interested in. Every time a user request is processed by CollectiveAccess and hookable events triggered, each plugin implementing a method for a given hook will be called.
+Each application plugin has its own directory in *app/plugins* which contains all of the code, views, graphics and configuration required for operation. At a minimum, every plugin has a **plugin class**. This class, a subclass of *BaseApplicationPlugin*, defines methods that "hook" various events that may occur during a user request. Plugin classes need only implement methods for the hooks they are interested in. Every time a user request is processed by CollectiveAccess and hookable events triggered, each plugin implementing a method for a given hook will be called.
 
 Information will be passed to your methods by the application plugin interface. The scope and format of this information varies by hook and is described in detail below. 
 
@@ -26,13 +26,14 @@ All plugins have access to the current request object, and by extension, request
 Usage
 -----
 
-1. Application plugins are particularly useful for: 
-2. Adding custom menus
-3. Adding completely custom screens with individual controllers, views and database tables
-4. Modifying, verifying, or otherwise intercepting data being edited, saved or deleted
-5. Modifying the behavior of the CollectiveAccess user interface in specific ways
+Application plugins are particularly useful for: 
 
-.. note:: Other application plugins exist to to add support for new media formats, add custom search functionality, implement new attribute types (including attributes that leverage web services), generate custom item identifiers, or support alternative file and media storage (eg. cloud storage, external repositories). For more, please see <link here>
+* Adding custom menus
+* Adding completely custom screens with individual controllers, views and database tables
+* Modifying, verifying, or otherwise intercepting data being edited, saved or deleted
+* Modifying the behavior of the CollectiveAccess user interface in specific ways
+
+.. note:: Other application plugins exist to to add support for new media formats, add custom search functionality, implement new attribute types (including attributes that leverage web services), generate custom item identifiers, or support alternative file and media storage (eg. cloud storage, external repositories). 
 
 Layout
 --------
