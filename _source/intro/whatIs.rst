@@ -33,17 +33,13 @@ Providence is the “back-end” core cataloguing and data management applicatio
 
 * `Providence Developer Guide <file:///Users/charlotteposever/Documents/ca_manual/providence/developer/index.html>`_
 
+* `Providence Demonstration System <https://demo.collectiveaccess.org/system/auth/login>`_
+
+.. note:: The back-end Providence demonstration site is used by people around the world to experiment with CollectiveAccess and view its many features. Therefore, the locale can sometimes be set to various languages. To set the locale throughout the system to your preferred language, nagivate to **Manage > Preferences > user interface locale**, where a list of CollectiveAccess locales can be selected. 
+
 Pawtucket
 ^^^^^^^^^
 
 Pawtucket is an optional "front-end" publication and discovery platform for collections. A public web-access tool for digital publication and discovery, Pawtucket's selected features are designed to handle various aspects relating to data modeling, workflow management, web publishing, granular control and digital preservation for a variety of collections. 	
 
-CollectiveAccess Providence Demonstration System
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-To view a working, sample back-end Providence system, please visit the CollectiveAccess `Demonstration site <https://demo.collectiveaccess.org/system/auth/login>`_ where you can login with the credentials: 
-
-* username: demo
-* password: demo
-
-.. note:: The back-end Providence demonstration site is used by people around the world to experiment with CollectiveAccess and view its many features. Therefore, the locale can sometimes be set to various languages. To set the locale throughout the system to your preferred language, nagivate to **Manage > Preferences > user interface locale**, where a list of CollectiveAccess locales can be selected. 
