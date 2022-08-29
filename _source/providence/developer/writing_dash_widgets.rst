@@ -8,43 +8,55 @@ Writing Dashboard Widgets
 
 Widgets are mini-applications that run within the dashboard in Providence. Users can select and freely arrange widgets on their dashboard to create a custom system management interface. 
 
-The functionality that is encapsulated in a widget is only limited by space – they must fit within a single dashboard column (approximately 350 pixels wide). While widgets will typically provide simple, focused functionality, they have full access to the CollectiveAccess database and programming APIs, as well as their own configuration files and views. Widgets can interact with other CollectiveAccess plugins and external systems. See the Dashboard for a list of widgets included in the standard installation of CA.
+.. figure:: counts_widget.png
+   :align: center
+   :scale: 50%
+
+   The Counts widget in a CollectiveAccess dashboard. 
+
+The functionality that is encapsulated in a widget is only limited by space – they must fit within a single dashboard column (approximately 350 pixels wide). While widgets will typically provide simple, focused functionality, they have full access to the CollectiveAccess database and programming APIs, as well as their own configuration files and views. Widgets can interact with other CollectiveAccess plugins and external systems. 
+
+For more on the dashboard and widgets, and how to view the full list of widgets included in a standard installtion of CollectiveAccess, see `Dashboard Configuration <file:///Users/charlotteposever/Documents/ca_manual/providence/user/editing/dashboard.html>`_. 
 
 Layout
 ------
 
-Widgets are similar in structure to Application plugins, as each widget has a directory in **app/widgets**. The name of this directory must be the name of the widget (for example, Clock). Within this directory, a PHP class must exist with the widget's name and the **suffix Widget.php**. For a widget, Clock, the class is named **ClockWidget.php**.
+Widgets are similar in structure to `Application plugins <file:///Users/charlotteposever/Documents/ca_manual/providence/developer/app_plugins.html>`_, as each widget has a directory in *app/widgets*. **The name of this directory must be the name of the widget (for example, Clock).** Within this directory, a PHP class must exist with the widget's name and the *suffix Widget.php*. For a widget, Clock, the class is named *ClockWidget.php*.
 
-Any widget must consist of a widget class and at least one view (named, by convention, main_html.php). It can also have, if required, additional views, graphics and configuration files. By convention, these are located in directories within the widget directory with the following layout: 
+Any widget must consist of a widget class and at least one view (named, by convention, *main_html.php*). It can also have, if required, additional views, graphics and configuration files. By convention, these are located in directories within the widget directory with the following layout: 
 
-.. code-block:: php
 
-   app/widgets/Clock app/widgets/Clock/ClockWidget.php [widget class]
+* Widget class: ``app/widgets/Clock app/widgets/Clock/ClockWidget.php``
 
-   app/widgets/Clock/conf [directory containing widget's configuration file(s)]
+* Directory containing widget's configuration file(s): ``app/widgets/Clock/conf``
 
-   app/widgets/Clock/views [directory containing views for the widget; you must define at least one view]
+* Directory containing views for the widget (you must define at least one view): ``app/widgets/Clock/views``
 
-   app/widgets/Clock/graphics [directory containing graphic elements; only needed if the widget needs its own graphics]
+* directory containing graphic elements (only needed if the widget needs its own graphics): ``app/widgets/Clock/graphics``
 
 The Widget Class
 ----------------
 
 The widget class (**ClockWidget.php**) must define two methods, two properties and a single data structure. The required methods are:
 
-1. checkStatus(): returns information about the widget and whether it is available for use or not. The return value for checkStatus() is an array with four keys:
+* checkStatus(): returns information about the widget and whether it is available for use or not. The return value for checkStatus() is an array with four keys:
+
         * **Description**: a description of the widget
         * **Errors**: an array of text error messages relating to the initialization of the widget. This should be an empty array if there are no errors. If the widget is not available the reason why should be expressed in the errors array.
         * **Warnings**: an array of text warning messages relating to the initialization of the widget. Should be a list of warnings about anything that will limit the functionality of the widget. Should be an empty array if there are no warnings.
         * **Available**: set to true if widget is loaded and available for use, false if it cannot load for some reason.
 
-2. If initialization of the widget fails, or the widget is not be available in the current context (eg. some requirement for running is not met) then return false for the available value.
+* If initialization of the widget fails, or the widget is not be available in the current context (eg. some requirement for running is not met) then return false for the available value.
 
-3. renderWidget: is called when the widget needs to be displayed. This is where most of your widget code will live. The method is passed several parameters:
+* renderWidget: is called when the widget needs to be displayed. This is where most of your widget code will live. The method is passed several parameters:
+
        * **$ps_widget_id**: 32 character MD5 hash widget unique identifying the widget instance
-       * **$pa_settings**: an array of widget settings in a key-value format corresponding to the settings structure defined in the BaseWidget::$s_widget_settings entry for the widget (see below for further discussion)
+       * **$pa_settings**: an array of widget settings in a key-value format corresponding to the settings structure defined in the *BaseWidget::$s_widget_settings* entry for the widget (see below for further discussion)
 
 The widget must also set the *$title* and *$description* properties, inherited from the base widget class. The *$title* property should be set to a single line description of the widget. The *$description* property should be set to a short narrative description of the plugin. Both are intended for display to end-users, and should be written in plain and accessible language.
+
+Per-user Settings
+^^^^^^^^^^^^^^^^^
 
 If the widget defines per-user settings, then your widget class must also define an entry in the **BaseWidget::$s_widget_settings** array. The entry should have an array key equal to the **widget name + 'Widget' (eg. 'ClockWidget')**, and an array value that defines each setting. 
 
@@ -82,6 +94,7 @@ The settings form for the widget is created by the dashboard, so there is no nee
 
 
 To specify widget settings, define an entry in **BaseWidget::$s_widget_settings**, whose key is:
+
    * The name of the widget + 'Widget' (eg. 'ClockWidget') 
    * The value is an array listing each setting 
 
@@ -120,6 +133,18 @@ The settings array for the clock example looks like this:
 
 Each setting in the settings list has an alphanumeric code that uniquely identifies the setting within the context of the widget. The formatType and displayType values for the setting determine the type of data stored and the form the editing element will take for it in the settings form. The constants used for these two values are the same as those used in model definitions, as defined in **app/lib/core/BaseModel.php**. 
 
-The dashboard settings form generator only supports a subset of the full list of format and displayType values, including: FT_TEXT for formatType (only text values are currently allowed) and DT_FIELD, DT_SELECT and DT_CHECKBOXES for displayType.
+The dashboard settings form generator only supports a subset of the full list of formatType and displayType values, including: 
+
+formatType
+^^^^^^^^^^
+
+* FT_TEXT (only text values are currently allowed)
+
+displayType
+^^^^^^^^^^^
+
+* DT_FIELD
+* DT_SELECT
+* DT_CHECKBOXES
 
 The *takesLocale* value should be set to true if the setting needs to be customized for each supported cataloguing language, otherwise false. Some values, such as options are only required when using specific form editing elements, such as DT_SELECT (and HTML <select> drop-down menu). The 'default' value should be chosen with care since it will be used when the user has not yet set a value. This means that the defaults you specify will help determine what the widget looks like when it is first added to the dashboard.
