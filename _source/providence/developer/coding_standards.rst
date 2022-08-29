@@ -45,7 +45,7 @@ Styles in CSS files should be as specific as possible. Try to avoid using a bare
 
 The most efficient way to style an element is by styling that type of element inside a container. If only one element needs to be styled in a special way, it should be assigned an id and styled using the id and preferably a container.
 
-See this link for examples: http://en.wikibooks.org/wiki/PHP_Programming/Coding_Standards#CSS_Standards 
+See `here <http://en.wikibooks.org/wiki/PHP_Programming/Coding_Standards#CSS_Standards>`_ for more details. 
 
 Coding Standards
 ----------------
