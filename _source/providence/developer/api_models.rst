@@ -4,15 +4,15 @@ API: Models and Tables
 * `Model Classes`_ 
 * `Model Inheritance`_ 
 
-Each table in the CollectiveAccess database has a corresponding model class. Model classes provide functionality that eases reading, editing and writing data to its table, including:
+Each `table <file:///Users/charlotteposever/Documents/ca_manual/providence/user/dataModelling/primaryTables.html>`_ in the CollectiveAccess database has a corresponding model class. Model classes provide functionality that eases reading, editing and writing data to its table, including:
 
-1. Insert, update and delete functions (you don't need to, and should not, write SQL for these operations)
-2. Navigating of hierarchies for tables supporting hierarchical tables
-3. Support for extended data types, including date ranges, georeferences, uploaded media, timecode and more
-4. Support for user defined, repeating fields
-5. Support for retrieving data from rows in related tables (many-one and many-to-many)
-6. Support for fields restricted to lists defined in the list/vocabulary manager
-7. Generation of HTML form element widgets for specific fields
+* Insert, update and delete functions (you don't need to, and should not, write SQL for these operations)
+* Navigating of hierarchies for tables supporting hierarchical tables
+* Support for extended data types, including date ranges, georeferences, uploaded media, timecode and more
+* Support for user defined, repeating fields
+* Support for retrieving data from rows in related tables (many-one and many-to-many)
+* Support for fields restricted to lists defined in the list/vocabulary manager
+* Generation of HTML form element widgets for specific fields
 
 Model classes
 -------------
