@@ -35,7 +35,7 @@ Providence is the “back-end” core cataloguing and data management applicatio
 
 * `Providence Demonstration System <https://demo.collectiveaccess.org/system/auth/login>`_
 
-.. note:: The back-end Providence demonstration site is used by people around the world to experiment with CollectiveAccess and view its many features. Therefore, the locale can sometimes be set to various languages. To set the locale throughout the system to your preferred language, nagivate to **Manage > Preferences > user interface locale**, where a list of CollectiveAccess locales can be selected. 
+.. note:: The back-end Providence demonstration site is for users around the world to experiment with CollectiveAccess and view its many features. The locale can be set to various languages. To set the locale throughout the system to your preferred language, nagivate to **Manage > Preferences > user interface locale**, where a list of CollectiveAccess supported locales can be selected. 
 
 Pawtucket
 ^^^^^^^^^
