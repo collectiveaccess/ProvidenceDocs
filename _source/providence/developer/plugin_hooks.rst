@@ -1,6 +1,9 @@
 Plugin Hooks
 ============
 
+Supported Plugin Hooks
+----------------------
+
 Supported hooks in Pawtucket2 include:
 
 .. csv-table:: 

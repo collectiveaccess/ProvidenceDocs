@@ -6,7 +6,7 @@ Access Restrictions Configuration: access_restrictions.conf
 * `Example Rules`_ 
 
 
-CollectiveAccess uses a Model-View-Controller structure that allows one to restrict access to each navigation module, controller or even controller action. Those restrictions are defined in access_restrictions.conf. The access_restrictions.conf configuration file is part of this structure 
+CollectiveAccess uses a Model-View-Controller structure that allows one to restrict access to each navigation module, controller or even controller action. Those restrictions are defined in *access_restrictions.conf*. The *access_restrictions.conf* configuration file is part of this structure 
 
 More here
 
@@ -15,21 +15,17 @@ Syntax
 
 The beginning of the file features a key that allows you to disable all module, controller, or action-based access control. To not enforce access restrictions, set the following to zero. To enforce access restrictions, set to 1. 
 
-.. code-block::
+``: enforce_access_restrictions = 1``
 
-   : enforce_access_restrictions = 1
+The second directive in this file is a big array named "access_restrictions". It consists of an arbitrary number of module, controller, and action-based access restrictions. The key of each array element is either a path to a controller group ("module") in *app/controllers*, or a path to a controller in a controller group: 
 
-The second directive in this file is a big array named "access_restrictions". It consists of an arbitrary number of module, controller, and action-based access restrictions. The key of each array element is either a path to a controller group ("module") in app/controllers, or a path to a controller in a controller group: 
+Path to controller group (module): ``administrate/setup``
 
-Path to controller group (module): administrate/setup
-
-Path to controller in a controller group: administrate/setup/RelationshipTypesController
+Path to controller in a controller group: ``administrate/setup/RelationshipTypesController``
 
 The key can even feature an action (method) of a particular controller, as follows:
 
-.. code-block::
-
-   administrate/setup/RelationshipTypesController/Save
+``administrate/setup/RelationshipTypesController/Save``
 
 Rules and Arrays
 ----------------

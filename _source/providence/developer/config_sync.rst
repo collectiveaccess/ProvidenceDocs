@@ -12,7 +12,7 @@ A feature as of CollectiveAccess Version 1.6.2, **configuration sync** allows fo
 Exporting Partial Configurations
 --------------------------------
 
-There are a few options in **app.conf** that control what exactly gets exported. These options are as follows:
+There are a few options in *app.conf* that control what exactly gets exported. These options are as follows:
 
 * **configuration_export_only_system_displays**: if set to 1, only system displays are exported
 * **configuration_export_only_system_search_forms**: if set to 1, only system search forms are exported

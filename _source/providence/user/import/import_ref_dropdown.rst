@@ -37,6 +37,11 @@ Drop-down value lists will have a set number of options to choose from that may 
 
 The field containing the drop-down values will have its own **CA table.element** code, that will be mapped in Column 3 of the import mapping spreadsheet (see :ref:`Creating an Import Mapping: Overview <import_c_creating_mapping>`). 
 
+If all values are the same for the field, set the Rule Type in Column 1 to Constant, and place the value from the drop-down in Column 2 of the import mapping spreadsheet: 
+
+.. image:: constant_dropdown.png
+   :align: center
+
 The Condition Drop-Down List
 ----------------------------
 

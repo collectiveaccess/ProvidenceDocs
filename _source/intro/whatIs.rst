@@ -1,6 +1,6 @@
 **What is CollectiveAccess?**
 =========================
-CollectiveAccess is collections management and presentation software maintained by the staff at Whirl-i-Gig and contributed to by the open-source community. The CollectiveAccess project began in 2003 as a response to the complete lack of non-commercial, affordable, open-source solutions for digital collections management. Almost two decades later, CollectiveAccess has projects on 5 continents, providing hundreds of institutions with configurable, up-to-date collections management software. 
+`CollectiveAccess <https://collectiveaccess.org/>`_ is collections management and presentation software maintained by the staff at Whirl-i-Gig and contributed to by the open-source community. The CollectiveAccess project began in 2003 as a response to the complete lack of non-commercial, affordable, open-source solutions for digital collections management. Almost two decades later, CollectiveAccess has projects on 5 continents, providing hundreds of institutions with configurable, up-to-date collections management software. 
 
 CollectiveAccess is a relational database that enables powerful searching and browsing options, while providing opportunities for nuanced web-based collection discovery. It is designed to handle large, heterogeneous collections that have complex cataloging requirements and collections which need support for a variety of metadata standards and media formats. CollectiveAccess has two main components: Providence and Pawtucket. Providence is the core cataloguing application of CollectiveAccess where data, media and metadata is input, edited, and managed. Pawtucket is the optional, public web-access tool for digital publication and discovery. Selected features are designed to handle various aspects relating to data modeling, workflow management, web publishing, granular control and digital preservation for a variety of collections. 	
 
@@ -23,5 +23,23 @@ Hundreds of institutions worldwide currently use CollectiveAccess to manage, cat
 * **It's relational.** CollectiveAccess can create relationships between various items within a given collection, situating objects within a broader network of inter-related connections. 
 
 * **Support is available.** A variety of free resources are available to get you started and support you as you develop your project with CollectiveAccess. All online support is provided on a best-effort basis by CollectiveAccess developers and the user community. Paid support and project development services are also available. 
+
+Providence
+^^^^^^^^^^
+
+Providence is the “back-end” core cataloguing and data management application. Providence provides a relational approach to cataloging that allows users to create and describe relationships between different record-types, construct hierarchical relationships for complex collections, and to do so using commonly accepted library and archive standards. Nuanced search and browse tools, advanced display and reporting tools, batch edit and import capabilities, superior media-handling, and more enables users to catalogue almost anything in any way.
+
+* `Providence User Guide <file:///Users/charlotteposever/Documents/ca_manual/providence/user/index.html>`_
+
+* `Providence Developer Guide <file:///Users/charlotteposever/Documents/ca_manual/providence/developer/index.html>`_
+
+* `Providence Demonstration System <https://demo.collectiveaccess.org/system/auth/login>`_
+
+.. note:: The back-end Providence demonstration site is used by people around the world to experiment with CollectiveAccess and view its many features. Therefore, the locale can sometimes be set to various languages. To set the locale throughout the system to your preferred language, nagivate to **Manage > Preferences > user interface locale**, where a list of CollectiveAccess locales can be selected. 
+
+Pawtucket
+^^^^^^^^^
+
+Pawtucket is an optional "front-end" publication and discovery platform for collections. A public web-access tool for digital publication and discovery, Pawtucket's selected features are designed to handle various aspects relating to data modeling, workflow management, web publishing, granular control and digital preservation for a variety of collections. 	
 
 

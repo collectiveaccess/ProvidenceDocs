@@ -34,7 +34,7 @@ Sets can be filtered by:
 
 CollectiveAccess can generate unique Sets to help organize and manage records for a multitude of purposes. To create a Set: 
 
-1. **Navigate** to Manage > My Sets > All Sets. 
+1. **Navigate** to **Manage > My Sets > All Sets**. 
 2. **Specify** the kind and content of the new set: 
 
 .. image:: sets2.jpg
@@ -60,9 +60,11 @@ The **Containing** dropdown contains a list of what types of records will be add
 
 4. **Name the set**. This is an arbitrary name given to the Set to distinguish it. A Set Code, Description, and access settings can be configured as well. Note that items cannot be added to a set until the title information for that set is saved.
 
-.. image:: sets3new.png
+.. figure:: sets3new.png
    :align: center
    :scale: 50% 
+
+   Creating a new Set. 
 
 * **Name:** Assign a name for the new Set. 
 * **Set code:** A unique alphanumeric code for this Set. Specify this if using the Set in a special context, for example, on a web front-end, in which the Set must be unambiguously identified.
@@ -81,24 +83,29 @@ Records can only be added to as set after a new set has been created. To add rec
  2. Within the set's user interface, navigate to **Items.**
  3. **Type** the name of records into the search drop-down. This search drop-down pulls records from across the primary table selected while creating the new set. 
 
-.. image:: search_set.png
+.. figure:: search_set.png
    :align: center
    :scale: 50%
 
-4. **Select** the items that appear in the search drop-down to add them to the set. 
+   Adding records to a Set. 
+4. **Select** the items that appear in the search drop-down to add them to the set: 
 
 .. image:: add_set.png
    :scale: 50%
    :align: center
+
+5. **Save** the Set. 
 
 Set Options in the Inspector Window
 -----------------------------------
 
 Once a Set has been created and Saved, and records have begun to be added to the Set, a few options appear in the Set's Inspector Window. These include:
 
-.. image:: set_inspector_window.png
+.. figure:: set_inspector_window.png
    :scale: 50%
    :align: center
+
+   The set inspector window. 
 
 * |type|: Change the type of Set that has been created. For example, if a user Set was created, this will change the type from a user Set to a public presentation. Note that by changing types, any information in all fields not applicable to the new type will be discarded. In additon, changing types cannot be undone. 
 

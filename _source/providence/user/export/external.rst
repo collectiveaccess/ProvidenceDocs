@@ -91,9 +91,9 @@ Detailed configuration is contained in three blocks:
 Running an Export
 -----------------------------------
 
-How to run an export here.
+See `Running an Export <file:///Users/charlotteposever/Documents/ca_manual/providence/user/export/mappings.html#running-an-export>`_. 
 
 Extending the Framework
 -----------------------------------
 
-Overview of plugin system here
+Overview of plugin system to come. 

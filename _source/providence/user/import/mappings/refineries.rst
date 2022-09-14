@@ -2,6 +2,16 @@
 
 **Refineries**
 ==============
+* `What is a Refinery?`_
+* `Types of Refineries`_ 
+* `Refinery Parameter`_ 
+* `Splitters`_
+* `Builders <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/mappings/builders.html?highlight=builders>`_
+* `Joiners`_ 
+
+What is a Refinery?
+-------------------
+
 A refinery is a command that creates a record while simultaneously creating a relationship and relationship type associated with that same record. A refinery can also match on an existing record in a database, and create a relationship between that record and the source data. 
 
 A refinery takes a particular data format in given source data, and transforms it through a specific behavior as it is imported into CollectiveAccess. In other words, refineries tell CollectiveAccess *how* to import certain data, such as names, dates, and relationships, through a specific text command. This then determines how the data will be displayed once it is imported. 
@@ -9,6 +19,9 @@ A refinery takes a particular data format in given source data, and transforms i
 A refinery, at a simplistic level, is what it sounds like - it refines an individual data import mapping and allows for greater complexity in data representation. 
 
 .. note:: If a data import requires related records, then refineries must be used. For more on how to implement these in an import mapping, and why, see `Relationships <file:///Users/charlotteposever/Documents/ca_manual/providence/user/dataModelling/relationships.html?highlight=relationship>`_ and `Creating an Import Mapping: Overview <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/c_creating_mapping.html>`_ page. 
+
+Types of Refineries
+-------------------
 
 There are a few types of refineries commonly used in CollectiveAccess:
 

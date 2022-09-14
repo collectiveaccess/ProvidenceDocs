@@ -2,8 +2,6 @@
 
 User Interfaces
 ===============
-User Interface Administration
-=============================
 
 .. contents::
    :local:
@@ -11,13 +9,15 @@ User Interface Administration
 User Interface Configuration
 ----------------------------
 
-CollectiveAccess supports a multitude of user interfaces in CollectiveAccess to best suit a plethora of collections needs. Simply put, the user interfaces are the screens where users interact with a given system. 
+CollectiveAccess supports a multitude of user interfaces to best suit a plethora of collections needs. Simply put, the **user interfaces** are the screens where users interact with the system. 
 
 To view the user interfaces available in a CollectiveAccess system, navigate to **Manage > Administration > User Interfaces**. The total number of available user interfaces that are defined in the system, with the Name of the user interface, Type, Code, and use in the system, will be displayed: 
 
-.. image:: uiadmin1.png
+.. figure:: uiadmin1.png
    :align: center 
    :scale: 50% 
+
+   The user interfaces available in a system. Note that each user interface has a Name, Type and Code. 
 
 From here, user interfaces can be selected and edited.
 
@@ -32,7 +32,7 @@ To edit a user interface:
 .. |page| image:: uiadmin2.png
           :scale: 40% 
 
-3. The **Basic Info** page of the selected user interface includes the as the name and code of the user interface, as well as a list of all of the screens within that interface. Fill in or change any necessary information about the selected user interface.
+3. The **Basic Info** page of the selected user interface will display. This includes the name and code of the user interface, as well as a list of all of the screens within that interface. Fill in or change any necessary information about the selected user interface.
 
 .. figure:: entity_editor_screen_ex.png
    :scale: 50%
@@ -50,6 +50,7 @@ To edit a user interface:
 
 .. |plus| image:: uiadmin3.png
           :scale: 40% 
+          
 6. **Type in** the name for the new screen. 
 7. **Save** the changes at the bottom of the page; the new screen will now appear in the Screens element on the Basic Info page. 
 

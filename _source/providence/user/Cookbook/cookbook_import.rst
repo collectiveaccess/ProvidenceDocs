@@ -46,7 +46,11 @@ Contents
 * `Importing Entities from a Single Source Data Column without a Delimiter`_
 * `Importing Currency Values with Currency Symbols`_
 * `How to format Source Column for XML or FileMakerPro Data`_
-* `Measurement Values not Showing Up in CollectiveAccess`_
+* `Changing the Maximum Number of Field Characters`_
+* `Setting the Correct Type`_ 
+* `Date and Time Format Errors`_
+* `Importing a Storage Location Hierarchy`_ 
+* `Creating Interstitial Data`_ 
 
 Mapping Related Object Lot Records
 ---------------------------------- 
@@ -442,9 +446,81 @@ medium
 
 medium_details
 
-Measurement Values not Showing Up in CollectiveAccess
------------------------------------------------------
+or 
 
-**Problem:** You've mapped and imported your source data, but your measurement values are not showing up in the corresponding CollectiveAccess field. 
+/medium
 
-**Solution:** 
+/medium_details
+
+Changing the Maximum Number of Field Characters
+-----------------------------------------------
+
+**Problem:** You've completed a data import but received the error: **[Field here] must be no more than 255 characters long.**
+
+**Solution:** A metadata element's maximum character count must be increased to fit the data being imported. To do so, navigate to **Manage > Administration > Metadata Elements.** The full list of available metadata elements will be displayed. Select the element that contains the error, and scroll down to **datatype specific options**, where the maximum (and minimum) character count can be viewed, and edited. 
+For more, please see `Configuring Metadata Elements <file:///Users/charlotteposever/Documents/ca_manual/providence/user/editing/metadataelements.html>`_. 
+
+Setting the Correct Type
+------------------------
+
+**Problem:** You've completed a data import but received the error: **Could not insert new record for object (type was DEFAULT_TYPE): A valid type must be specified.** 
+
+**Solution:** In the Settings section of the import mapping spreadsheet, a valid type was not set, referring to the type to set all imported records to. Some valid types include people, artifact, image, and artwork. These correspond to CollectiveAccess list item idnos. If you are importing Objects, what type are they? Photographs, Artifacts, Paintings, etc. This value needs to correspond to an existing value in the the **types list** (Manage > Lists and Vocabularies). For objects, the list is **object_types**. If the import includes a mapping to **type_id**, that will be privileged and the type setting will be ignored.
+For more, please see `Creating an Import Mapping: Overview`_. 
+
+Date and Time Format Errors
+---------------------------
+
+**Problem:** You’ve completed a data import, but received the error: **[accession number] Failed to add value for date; values were _source =; Circa. 1940: Date of Object (From, To) is invalid.** 
+
+**Solution:** CollectiveAccess accepts a variety of date formats. However, in order for dates to import properly, an accepted format must be used. If a date is not formatted correctly, the date will simply not be imported. 
+To ensure that dates are formatted according to CA standards, please see `Date and Time Formats <file:///Users/charlotteposever/Documents/ca_manual/providence/user/dataModelling/metadata/dateTime.html?highlight=date>`_. 
+
+Importing a Storage Location Hierarchy
+--------------------------------------
+
+**Problem:** You have a hierarchy of storage locations in your sample data that includes rooms, shelves and boxes. You’d like to import storage locations as a hierarchy in CA. 
+
+
+**Solution:** In Column 6 of your import mapping spreadsheet, use a **storageLocationSplitter.** In Column 7, use the refinery hierarchicalDelimiter: 
+
+.. code-block::
+
+   {
+     "storageLocationType": "building",
+     "hierarchicalDelimiter": ",",
+     "hierarchicalStorageLocationTypes": [
+             "room", "shelf", "box"
+     ],
+
+     "relationshipType": "current_location"
+   }
+
+Where the storageLocationType is from the types list in CollectiveAccess, the hierarchicalStorageLocationTypes are taken from the types list in CollectiveAccess, and the relationshipType is taken from the relationship types list in CollectiveAccess. For more see `Mapping a Storage Location Hierarchy <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/mapping_storage_loc_hierarchy.html#import-mapping-storage-loc-hierarchy>`_. 
+
+Creating Interstitial Data 
+--------------------------
+
+**Problem:** You have objects in your source data that were in a particular storage location, but are now in a different location. You’d like to account for the time they were in another location within the object record. 
+
+**Solution:** Use interstitial data to capture this information that will live within the relationship between the object and a storage location created from the import mapping. To do so requires using the **interstitial** Refinery Parameter. Place this parameter within the other parameters for the storage location: 
+
+.. code-block:: 
+
+   {
+	"storageLocationType": "building",
+	"hierarchicalDelimiter": ",",
+	"hierarchicalStorageLocationTypes": [
+		"room", "shelf", "box"
+	],
+   "interstitial":{"effective_date": "1/1/2020"},
+
+	"relationshipType": "historic_location"
+   }
+
+For more, see `Interstitial Data <file:///Users/charlotteposever/Documents/ca_manual/providence/user/dataModelling/interstitial.html#datamodelling-interstitial>`_. 
+
+Mapping Multiple Source Data Values to a Single Notes Field
+-----------------------------------------------------------
+
+

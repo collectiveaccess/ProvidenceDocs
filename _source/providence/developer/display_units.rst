@@ -64,29 +64,21 @@ CollectiveAccess supports the formatting of Hierarchical relationships. An examp
 
 Without the **<unit>** tag, only the preferred label of each child would be displayed; delimiters such as line breaks could not be specified. With the **<unit>** tag, however, the child records can be broken up into discrete pieces. Additional metadata about each can also be included. To display child records along with their idnos:
 
-.. code-block::
-
-   <unit relativeTo="ca_collections.children">^ca_collections.preferred_labels, ^ca_collections.idno</unit>
+``<unit relativeTo="ca_collections.children">^ca_collections.preferred_labels, ^ca_collections.idno</unit>``
 
 In which "relativeTo" specifies the table in question, and asks the display to find child records. Once the "relativeTo" frame has been set, however, drop the ".children" and simply reference the collections table, wherein the child records live. 
 
 To display the immediate parent of the record at hand, format it as:
 
-.. code-block::
-
-   <unit relativeTo="ca_collections.parent">
+``<unit relativeTo="ca_collections.parent">``
 
 To display all parents, format the template with respect to the entire hierarchy:
 
-.. code-block::
-
-    <unit relativeTo="ca_collections.hierarchy">
+``<unit relativeTo="ca_collections.hierarchy">``
 
 If you are dealing with multiple records, either as children or as "hierarchy," enclose the entire template within a <unit>, so that each record's metadata can be displayed in an organized manner. For example:
 
-.. code-block::
-
-   <unit><unit relativeTo="ca_collections.children" delimiter="</br>">^ca_collections.preferred_labels, ^ca_collections.idno</unit></unit> 
+``<unit><unit relativeTo="ca_collections.children" delimiter="</br>">^ca_collections.preferred_labels, ^ca_collections.idno</unit></unit>``
 
 would display records like this:
 
@@ -129,7 +121,7 @@ The display template that is used on the object bundle (through the GUI) or obje
 
    </unit><br/><br/>
 
-The result is a list of artwork titles, artist names, and their statements for the works in the collection. Note that in the Falling Water example entity John Smith has two repeats of the statements container:
+The result is a list of artwork titles, artist names, and their statements for the works in the collection.
 
 Restricted Indirect Relationships
 ---------------------------------

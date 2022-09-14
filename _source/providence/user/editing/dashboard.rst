@@ -17,9 +17,14 @@ Adding Widgets to the Dashboard
 
 The dashboard in a CollectiveAccess system will usually look like: 
 
-.. image:: dashboard1.png
+.. figure:: dashboard1.png
    :scale: 50%
    :align: center
+
+   The dashboard, or landing page, of a CollectiveAccess system. From here users can create new records, search for records, manage administrative information, and import data. 
+
+Editing the Dashboard
+---------------------
 
 To edit the dashboard:
 
@@ -46,9 +51,6 @@ To edit the dashboard:
 .. |plus| image:: dashboard5.png
           :scale: 50%
 
-
-Editing the Dashboard
----------------------
 
 The position of widgets on the Dashboard can be configured. Once widgets have been selected and added, they will display on the Dashboard. 
 

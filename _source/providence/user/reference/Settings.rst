@@ -5,6 +5,6 @@ Settings
    :maxdepth: 2
    :titlesonly:
 
-   User interface Settings <settings/userInterfaceSettings>
-   Metadata element <settings/metadataElementSettings>
-   Display settings <settings/bundleDisplaySettings>
+   User Interface Settings <settings/userInterfaceSettings>
+   Metadata Element Settings <settings/metadataElementSettings>
+   Display Settings <settings/bundleDisplaySettings>

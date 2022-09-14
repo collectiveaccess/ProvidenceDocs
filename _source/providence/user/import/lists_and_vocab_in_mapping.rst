@@ -3,9 +3,7 @@
 Using Lists and Vocabularies in an Import Mapping Spreadsheet
 =============================================================
 
-Lists and Vocabularies are important in determining a number of aspects about a data import. The Lists and Vocabularies in a CollectiveAccess system are often incorporated into an import mapping spreadsheet to define types of relationships, entities, dimensions, and other aspects that can help inform how best to structure the import mapping spreadsheet. 
-
-Lists and Vocabulaies in an import mapping define what types of relationships will be created upon import, what kind of entity records will be created upon import, and other key aspects to performing a successful data import. 
+Lists and Vocabularies are important in determining a number of aspects about a data import. The Lists and Vocabularies in a CollectiveAccess system are often incorporated into an import mapping spreadsheet to define types of relationships, types of entities, and other information that will determine how data is imported. 
 
 For other uses of Lists and Vocabularies in CollectiveAccess, see `Lists and Vocabularies <file:///Users/charlotteposever/Documents/ca_manual/providence/user/editing/lists_and_vocab.html>`_. 
 
@@ -14,10 +12,12 @@ How to find Lists and Vocabularies in CollectiveAccess
 
 To view the Lists and Vocabularies in a given CollectiveAccess system, navigate to **Manage > Lists and Vocabularies**. The Lists and Vocabularies hierarchy will be displayed: 
 
-.. image:: lists_mapping_1.png
+.. figure:: lists_mapping_1.png
    :scale: 50%
    :align: center
 
+   The Lists and Vocabularies hierarchy. 
+   
 Scrolling through the hierarchy, the various terms used in the system will be displayed. By selecting the **>** icon to the right of each heading, the list of relevant terms is displayed:  
 
 .. image:: lists_mapping_2.png

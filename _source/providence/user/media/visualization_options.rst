@@ -82,24 +82,23 @@ Set screen size options.
 
    }
 
-}
-
-}
-
 
 
 The appearance of the timeline can be customized. For example, to color code a certain time period to see which objects fall into a certain era: 
 
 .. code-block:: php
-
-   options = {
-			width = 100%,
-			height = 100%,
-			highlightSpans = {
-				confederation = {
-					label = Confederation,
-					range = 9/13/1759 to 7/1/1867,
-					startLabel = 1759,
-					endLabel = Confederation,
-					color = #FFC080
+    
+	options = {
+   	width = 100 % ,
+   	height = 100 % ,
+   	highlightSpans = {
+   		confederation = {
+   			label = Confederation,
+   			range = 9 / 13 / 1759 to 7 / 1 / 1867,
+   			startLabel = 1759,
+   			endLabel = Confederation,
+   			color = #FFC080
+   		}
+   	}
+   }
  

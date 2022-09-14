@@ -1,40 +1,40 @@
 Access Control Settings
 =======================
 
+* `Managing Access Control`_ 
 * `User Logins`_ 
+* `Adding a New User`_
 * `User Groups`_ 
 * `Access Roles`_ 
 * `Record-Level Access`_ 
 * `Public Access Settings`_ 
 
-CollectiveAccess employs access control tools to ensure the safety of data and manage workflow. 
+CollectiveAccess employs access control tools to ensure the safety of data and to manage workflow. 
 
-Managing the settings for access control are purposefully only available to administrators. Administrators can create logins, determine which users have access to various parts of the site, and assign specific roles to users, such as “cataloguer” or “researcher.” These settings can all be managed in the user interface. 
+Management of settings for access control are purposefully only available to administrators. Administrators can create logins, determine which users have access to various parts of the site, and assign specific roles to users, such as “cataloguer” or “researcher.” These settings can all be managed in the user interface. 
+
+Managing Access Control
+-----------------------
 
 To manage access control settings:
 
 1. Navigate to **Manage > Access Control**, where options for User Logins, User Groups, and Access Roles will be displayed to the far left of the screen: 
 
-.. image:: accesscontrolsettings1.png
-   :scale: 40% 
+.. figure:: useraccess_new.png
+   :scale: 50% 
    :align: center
 
+   Users in a CollectiveAccess system.
 
 User Logins
 -----------
 
-**User Logins** are the first access control setting that can be configured. There are 6 columns displaying user access login names, first and last names, emails, activity, last login information, and a column to optimally edit or delete each user. 
+**User Logins** are the first access control setting that can be configured. There are 6 columns displaying user access login names, first and last names, emails, activity, last login information, and a column to edit or delete each user. 
 
-To define settings and other information pertaining to an individual user, select the **page icon.** |page|
+To define settings and other information pertaining to an individual user, select the **page icon** |page| to the right of any user's last login.
 
 .. |page| image:: accesscontrolsettings2.png   
           :scale: 40%
-
-To add a new user, select the **plus icon** next to **New user**. |plus|
-
-.. |plus| image:: accesscontrolsettings3.png
-          :scale: 40%
-
 
 To filter users that are displayed, select the **Show users** drop down menu to the left of the plus icon. This menu displays three options: 
 
@@ -43,6 +43,22 @@ To filter users that are displayed, select the **Show users** drop down menu to 
 * **Public-access**: users have front-end access only 
 
 * **Deleted**: an option to be used only in the case of a former user whose user logs you may want to see
+
+Adding a New User 
+-----------------
+
+To add a new user, select the **plus icon** next to **New user**. |plus|
+
+.. |plus| image:: accesscontrolsettings3.png
+          :scale: 40%
+
+A screen will display where you can add information about the new user, set passwords and login names, and provide other information about the user. 
+
+.. image:: new_user.png
+   :scale: 50%
+   :align: center
+
+
 
 User Groups
 -----------

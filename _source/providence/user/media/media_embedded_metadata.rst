@@ -14,7 +14,7 @@ Creating an Export Mapping
 
 Use the generic CollectiveAccess Data_Exporter to generate the data for the embedding process. To create a spreadsheet that maps CollectiveAccess bundles to media metadata fields (e.g. XMP, EXIF, IPTC), use the sample mapping: 
 
-.. warning:: file here
+:download:`Data Export Mapping Template <Data_Export_Mapping_template copy.xlsx>`
 
 The exporter mapping should have the exporter_type "ExifTool" set. It must be non-hierarchical (flat) and should only contain valid fields for exiftool's XML format. Take an image and create an example for such an XML file on a Terminal by typing:
 
@@ -35,7 +35,7 @@ This is also the exact command CollectiveAccess will run.
 Target table / Precedence
 -------------------------
 
-The mapping target (the Table setting in the export mapping) can be either the subject table, i.e. the table the downloaded representation is attached to - usually ca_objects, or it can be ca_object_representations to pull metadata directly from the representation record. 
+The mapping target (the Table setting in the export mapping) can be either the subject table, i.e. the table the downloaded representation is attached to - usually **ca_objects**, or it can be **ca_object_representations** to pull metadata directly from the representation record. 
 
 For example, when downloading a representation file from the media screen in the object editor, CollectiveAccess will first run any ca_objects mappings that apply and then after that, any ca_object_representations mappings that are set up. exiftool's metadata embedding is non-destructive, meaning that even if the mapping only sets a few fields, it won't nuke any other existing metadata in the file. If both "subject table" (object) and representation mappings are set up, both will end up getting merged with the representation mapping, winning out on any conflicting fields.
 

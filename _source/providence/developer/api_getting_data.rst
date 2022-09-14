@@ -15,12 +15,12 @@ API: Getting Data and Methods of Access
 * `Getting Data from Model Instances and Search Results`_ 
 * `Getting Data from Direct Databse Queries using the Db Class`_
 
-Getting data out of CollectiveAccess is one of the most commonly performed tasks when writing code. In a typical database application, executing SQL queries yields results. Because it is a relational database, direct queries in Collective Access may return the same content in several languages, leaving you to figure out which is the most appropriate language to use. Therefore, there are three main methods of accessing data stored in CollectiveAccess. 
+Getting data out of CollectiveAccess is one of the most commonly performed tasks when writing code. In a typical database application, executing `SQL queries <file:///Users/charlotteposever/Documents/ca_manual/providence/user/searchBrowse/searchEngines/sql.html>`_ yields results. Because it is a relational database, direct queries in Collective Access may return the same content in several languages, leaving you to figure out which is the most appropriate language to use. Therefore, there are three main methods of accessing data stored in CollectiveAccess. 
 
 Use Direct SQL Queries on the Database
 --------------------------------------
 
-Data can always be accessed using the standard MySQL database client. Additionally, CollectiveAccess' database access library, Db, located in app/lib/core/Db.php can also be used. 
+Data can always be accessed using the standard MySQL database client. Additionally, CollectiveAccess' database access library, Db, located in *app/lib/core/Db.php* can also be used. 
 
 Performing direct queries in CollectiveAccess accesses the raw data store. Some values (dates for example), are stored in specific formats that must be parsed prior to display. Attributes (user defined, possibly repeating, fields) are stored in a generic fashion that depending upon field type may require some parsing as well. And media fields must be processed to resolve URL and server paths prior to use. 
 
@@ -39,8 +39,6 @@ Use the search engine (via a table-specific subclass such as *ObjectSearch* or *
 The result object will provide functionality for getting information out of the search result for display, as well as functionality specific to the type of data being search for. (For example, *ObjectSearchResult* includes special methods for getting related media for display; the other *SearchResult* sub-classes don't have these functions because they don't support related media.) 
 
 The browse engine returns results in a similar manner, with its own classes (eg. *ObjectBrowseResult*) that inherit from the same parent and implement the same functionality as their search counterparts. In general, whatever you can do with a search result can be done with a browse result too.
-
-In general, options 2 and 3 should be used in code. 
 
 Types of Information
 --------------------
@@ -187,7 +185,7 @@ If this sounds complicated, that's because it is a bit. Perhaps the best way to 
 Getting Data from Direct Database Queries using the Db Class
 ------------------------------------------------------------
 
-You can execute any SQL query directly on the CA MySQL database using the Db class (app/lib/core/Db.php). Typical code to perform a SQL SELECT statement and print out identifiers is below:
+You can execute any SQL query directly on the CA MySQL database using the Db class (*app/lib/core/Db.php*). Typical code to perform a SQL SELECT statement and print out identifiers is below:
 
 .. code-block:: 
    $o_data = new Db();

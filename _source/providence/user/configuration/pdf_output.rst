@@ -1,6 +1,20 @@
 PDF Output
 ==========
 
+* `How PDF Templates are Evaluated`_ 
+* `Creating PDF Formats`_  
+* `For all results (Browse or Search)`_ 
+* `For Search Results`_ 
+* `For Browse Results`_ 
+* `For Summaries`_ 
+* `For Labels`_
+* `Using View Variables`_
+* `Setting the Download File Name`_
+* `Displaying Barcodes`_
+* `Supported Bar Code Formats`_
+* `Rendering Engines`_
+* `Testing Labels`_
+
 CollectiveAccess can output data as formatted PDFs in several contexts:
 
 1. As a **Report** presenting formatted data from the results of a search or browse.
@@ -39,7 +53,7 @@ Custom formats must generate a full, freestanding and well-formed HTML document.
 
 .. csv-table::
    :header-rows: 1
-   :file: pdf_output_table1.csv
+   :file: pdf_output_newtable1.csv
 
 For labels the following additional header entries defining the geometry of the label form are also required:
 
@@ -80,35 +94,35 @@ From CollectiveAccess Version 1.7, you can temporarily disable a template using 
 
 Your template view will be provided with a set of variables to work with that is dependent upon the context. Below is a list of variables by template context:
 
-For all results (browse or search)
+For All Results (Browse or Search)
 ----------------------------------
 
 .. csv-table::
    :header-rows: 1
    :file: pdf_output_table4.csv
 
-For search results
+For Search Results
 ------------------
 
 .. csv-table::
    :header-rows: 1
    :file: pdf_output_table5.csv
 
-For browse results
+For Browse Results
 ------------------
 
 .. csv-table::
    :header-rows: 1
    :file: pdf_output_table6.csv
 
-For summaries
+For Summaries
 -------------
 
 .. csv-table::
    :header-rows: 1
    :file: pdf_output_table7.csv
 
-For labels
+For Labels
 ----------
 
 .. csv-table::

@@ -93,7 +93,7 @@ is true because "seth" = "seth" is true and only one needs to be true for logica
 Additional Comparison Operators
 -------------------------------
 
-The comparison operators shown above are useful but limited. There are a couple of additional ones that are really where the action is :-) They are:
+The comparison operators shown above are useful but limited. There are a couple of additional ones that are really where the action is. They are:
 
 The "IN" Operator
 -----------------
@@ -194,4 +194,10 @@ returns `true` if the random number between 0 and 10 is greater than 5.
 Parentheses
 -----------
 
-You may have noticed that parens have been sprinkled through some of the examples. You can use matched parens to group elements of an expression. This makes it easier to read and also ensures that operators are applied in the desired sequence in complex expressions. The three things you need to know about parens are: (1) each paren'ed sub-expression is evaluated as a single unit, before being combined with other sub-expressions (2) you must always match each opening paren with a closing paren and (3) parens don't hurt anything, but can improve readability of the expression so you are encouraged to use them liberally.
+You may have noticed that parens have been sprinkled through some of the examples. You can use matched parens to group elements of an expression. This makes it easier to read and also ensures that operators are applied in the desired sequence in complex expressions. The three things you need to know about parens are: 
+
+* Each paren'ed sub-expression is evaluated as a single unit, before being combined with other sub-expressions 
+
+* Always match each opening paren with a closing paren
+
+* Parens don't hurt anything, but can improve readability of the expression so you are encouraged to use them liberally.

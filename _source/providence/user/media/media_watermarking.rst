@@ -4,8 +4,6 @@ Media Watermarking
 * `Creating a Watermark`_
 * `Configuring a Watermark in CollectiveAccess`_ 
 
-.. warning:: needs rest of table 
-
 Watermarks are usually a transparent stamp, logo, or or signature that has been superimposed onto an existing image. Thus, they are considered part of an image, and cannot be easily removed (they can be cropped out or Photoshopped away). CollectiveAccess can automatically add a visible watermark to image derivatives. The watermark pattern is a graphic provided by the user; it can be a logo, text or anything else that can be expressed in a bitmap format. Watermarking is applied as derivatives are created. 
 
 Watermarking is only supported for image formats processed by the ImageMagick and IMagick media processing plugins. Watermarking is not supported with GD. 
@@ -26,7 +24,7 @@ How the watermark image is defined will greatly affect how well it performs. An 
 Configuring a Watermark in CollectiveAccess
 -------------------------------------------
 
-To configure a watermark in CollectiveAccess, use the **media_processing.conf** configuration file in **app/conf**.
+To configure a watermark in CollectiveAccess, use the `media_processing.conf <file:///Users/charlotteposever/Documents/ca_manual/providence/user/configuration/mainConfiguration/media_processing.conf.html>`_ configuration file in **app/conf**.
 
 Add watermarking to specific image derivatives (or "versions" as they are referred to in the configuration file) by adding a WATERMARK rule to their processing rules.
 
@@ -34,7 +32,7 @@ The WATERMARK rule takes the following parameters:
 
 .. csv-table:: 
    :header-rows: 1
-   :file: imagewatermarkingtable1.csv
+   :file: watermarking_newtable1.csv
 
 Add a WATERMARK rule, with the appropriate values, to each version that will contain a watermark. A watermark configuration for the "small" version (default 240x240 pixel image) might look like this:
 

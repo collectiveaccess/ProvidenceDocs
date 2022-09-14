@@ -16,14 +16,22 @@ Let's walk through an example. (See also the in-depth description of :ref:`expre
 
 For our example, we are going to skip all records with the phrase "do not use" in the description. To do so we write an expression to match "do not use" in the required field, and then set the action to execute when the expression is true to be "SKIP." For the sake of this example we're importing an Excel spreadsheet and the description is in column 5:
 
-This is how the rule should look in the import mapping:
+This is how the rule should look in the import mapping spreadsheet:
 
-.. image:: ../../_static/images/Rules_Mapping.png
+.. image:: rules_1.png
+   :scale: 50%
+   :align: center
 
+Using Rules
+------------
 
 Set "Rule" as your rule type and add the following to the Rule triggers column:
 
      (^5 =~ /do not use/)
+
+.. image:: rule_types_triggers.png
+   :scale: 50%
+   :align: center
      
 Where ^5 references column 5 and =~ invokes the regular expression operator. In the "actions" column is a simple reference to the action:
 
