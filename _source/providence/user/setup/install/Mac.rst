@@ -48,7 +48,12 @@ Then edit the Apache configuration file located at `/usr/local/etc/httpd/httpd.c
 
 .. code::
 
-    LoadModule php7_module /usr/local/opt/php@7.4/lib/httpd/modules/libphp7.so
+    LoadModule php7_module /opt/homebrew/opt/php@7.4/lib/httpd/modules/libphp7.so
+
+where `/opt/homebrew` is the path to your Homebrew directory. 
+
+.. tip::
+	You can find your Homebrew directory path by running the command `echo $(brew --prefix)`. It is often `/opt/homebrew` but may be different on some systems.
 
 Next, look for this configuration in the Apache configuration file:
 
@@ -130,7 +135,11 @@ Next we install various packages to support processing of media: ffmpeg (audio/v
 
     brew install ffmpeg ghostscript GraphicsMagick mediainfo xpdf
 
-Finally, we are ready to install the CollectiveAccess `Providence` back-end cataloguing application. The web server we installed earlier uses `/usr/local/var/www` for documents by default (the "web server root" directory). We are going to place CollectiveAccess in this directory, in a subdirectory named `ca`. A URL for this directory will be http://localhost:8080/ca (assuming that you're still running on port 8080). If you're running on port 80, the URL will be http://localhost/ca.
+Finally, we are ready to install the CollectiveAccess `Providence` back-end cataloguing application. The web server we installed earlier uses `/opt/homebrew/var/www` for documents by default (the "web server root" directory). We are going to place CollectiveAccess in this directory, in a subdirectory named `ca`. A URL for this directory will be http://localhost:8080/ca (assuming that you're still running on port 8080). If you're running on port 80, the URL will be http://localhost/ca.
+
+.. tip::
+	Some systems may use a directory other than `/opt/homebrew`. You can verify the Homebrew directory path on your system by running the command `echo $(brew --prefix)`.
+
 
 .. tip::
 
@@ -142,9 +151,9 @@ To install with Git, in the Terminal change directory into the web server root d
 
 .. code::
 
-     cd /usr/local/var/www
+     cd /opt/homebrew/var/www
 
-Then "clone" the Providence application code from GitHub:
+(Assuming your Homebrew path is `/opt/homebrew`) Then "clone" the Providence application code from GitHub:
 
 .. code::
 
