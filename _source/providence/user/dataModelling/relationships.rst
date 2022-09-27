@@ -71,7 +71,7 @@ Choose "Relationships" from the side navigation in any type of record in the dat
 
 In order to state a relationship, a record or records must already exist in the database. For example, when relating an Object record to an Entity, there must already be a separate and existing record for that particular Entity. Note that each available relationship in the Relationships tab contains an arrow icon |icon| which indicates a relationship can be searched and added from that field. 
 
-.. |icon| image:: downarrow.png
+.. |icon| image:: relationship_arrow.png
             :scale: 50%
 
 To add a relationship to an existing record, simply begin typing into the field of any given relationship as needed. A drop-down list will appear that best matches the typed text, and will display a list to choose from. This list will also include an option to *Create* a record for the new relationship.
@@ -90,9 +90,5 @@ Once the correct record to relate is identified, select it. An optional dropdown
 
    Relating an Entity. Choose a relationship type from the  dropdown menu.
 
-Save the changes made to the Relationships screen.
-
-It is also possible to create hierarchical relationships between records of various types.
-
-
+Save the changes made to the Relationships screen. 
 
