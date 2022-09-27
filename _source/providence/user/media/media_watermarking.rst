@@ -49,7 +49,7 @@ Add a WATERMARK rule, with the appropriate values, to each version that will con
         SET = {quality = 75, format = image/jpeg}
     }
 
-The non-WATERMARK rules are just the default rules; only WATERMARK is new. The configuration above assumes that the **my_watermark_logo.png** image file is located in a directory called **watermarks** in the **CA app/ directory**.
+The non-WATERMARK rules are just the default rules; only WATERMARK is new. The configuration above assumes that the **my_watermark_logo.png** image file is located in a directory called **watermarks** in the CollectiveAccess *app/directory*.
 
 .. note::
 

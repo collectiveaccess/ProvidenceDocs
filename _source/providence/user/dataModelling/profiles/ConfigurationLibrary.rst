@@ -7,60 +7,23 @@ Listed below are a selection of user-contributed installation profiles. Some are
 
 Note that the profiles listed here are not intended as exemplars of "good design." Many employ sub-optimal metadata and user interface structures in order to accommodate various legacy and project-specific requirements. They are presented merely as examples of how previous users have approached systems design for their particular discipline. Your mileage may vary.
 
-To use a profile listed here with your copy of CollectiveAccess download the desired profile and copy it into the profiles/xml directory of the installer (Eg. /install/profiles/xml). After reloading the installer start page the newly installed profile should appear in the profiles drop-down menu.
+To use a profile listed here with your copy of CollectiveAccess, download the desired profile and copy it into the **profiles/xml** directory of the installer (Eg. /install/profiles/xml). After reloading the installer start page, the newly installed profile should appear in the profiles drop-down menu.
 
-Libraries, Museum, and Archives
--------------------------------
+Standards
+---------
 
-.. csv-table::
-   :widths: auto
+.. csv-table:: 
    :header-rows: 1
-   :file: lams.csv
+   :file: standards_for_configlib.csv
 
-Consortiums
------------
+See `Metadata Standards <file:///Users/charlotteposever/Documents/ca_manual/providence/user/dataModelling/profiles/MetadataStandards.html>`_ for more information on standards-compliant profiles. 
 
-.. csv-table::
-   :widths: auto
-   :header-rows: 1
-   :file: consortiums.csv
 
-Institutional archives
-----------------------
-
-.. csv-table::
-   :widths: auto
-   :header-rows: 1
-   :file: institutional_archives.csv
-
-Performing Arts
----------------
-
-.. csv-table::
-   :widths: auto
-   :header-rows: 1
-   :file: performing_arts.csv
-
-Art galleries
+User Profiles
 -------------
 
-.. csv-table::
-   :widths: auto
+.. csv-table:: 
    :header-rows: 1
-   :file: art_galleries.csv
+   :file: user_profiles_for_configlib_recent copy.csv
 
-Moving Images
--------------
 
-.. csv-table::
-   :widths: auto
-   :header-rows: 1
-   :file: moving_images.csv
-
-Paleontology
-------------
-
-.. csv-table::
-   :widths: auto
-   :header-rows: 1
-   :file: paleontology.csv
