@@ -151,9 +151,9 @@ To install with Git, in the Terminal change directory into the web server root d
 
 .. code::
 
-     cd /usr/local/var/www
+     cd /opt/homebrew/var/www
 
-Then "clone" the Providence application code from GitHub:
+(Assuming your Homebrew path is `/opt/homebrew`) Then "clone" the Providence application code from GitHub:
 
 .. code::
 
