@@ -67,4 +67,5 @@ add,"Always add values after existing ones even if existing record policy mandat
 replace,"Always replace values, removing existing, ones even if existing record policy does not mandate replacement (Eg. is not merge_on_idno_with_replace, Etc.).",Available from version 1.8,
 upperCaseFirst,Force first letter of value to uppercase.,Available from version 1.8,
 toUpperCase,Force value to uppercase.,Available from version 1.8,
-toLowerCase,Force value to lowercase..,Available from version 1.8,
+toLowerCase,Force value to lowercase.,Available from version 1.8,
+parentIDElement,Code of element to use for parent_id lookups when importing hierarchical data. If not set the identifier will be used.,Available from version 1.8,
