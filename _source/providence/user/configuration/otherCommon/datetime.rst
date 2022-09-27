@@ -1,9 +1,7 @@
 Datetime.conf
 =============
 
-'''In Progress'''
-
-The output, or display, of dates and times inside dateRange metadata elements can be configured in datetime.conf. For valid <em>input</em> formats for dates and times, please visit [[Date_and_Time_Formats|this page.]]
+The output, or display, of dates and times inside dateRange metadata elements can be configured in datetime.conf. For valid formats for dates and times, please visit `Date and Time Formats <file:///Users/charlotteposever/Documents/ca_manual/providence/user/dataModelling/metadata/dateTime.html>`_. 
 
 Date/time output configuration
 ------------------------------

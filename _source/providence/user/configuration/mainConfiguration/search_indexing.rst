@@ -418,4 +418,4 @@ Note that all fields included in an access point must be included in the search 
 
 **Rebuilding the search index**
 
-Changes to search_indexing.conf take effect immediately for all subsequent indexing. Any items indexed prior to the change will not reflect the configuration modifications. To update the entire search index to reflect the new configuration, rebuild the index using "Rebuild search indices" web interface under Manage > Administrate > Maintenance; or reindex using the command-line caUtils rebuild-search-indices command
+Changes to search_indexing.conf take effect immediately for all subsequent indexing. Any items indexed prior to the change will not reflect the configuration modifications. To update the entire search index to reflect the new configuration, rebuild the index using "Rebuild search indices" web interface under **Manage > Administrate > Maintenance**; or reindex using the command-line caUtils rebuild-search-indices command.
