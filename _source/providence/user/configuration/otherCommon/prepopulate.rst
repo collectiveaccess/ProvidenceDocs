@@ -137,7 +137,7 @@ An example configuration for replicating container values in their entirety from
 Settings
 --------
 
-The following settings are available when configuring Prepopulate rules:
+The following settings are available when configuring `Prepopulate <file:///Users/charlotteposever/Documents/ca_manual/providence/developer/prepopulate.html>`_ rules:
 
 .. csv-table::
    :widths: auto

@@ -184,9 +184,9 @@ This setting is similar to the object identifier setting, only it applies specif
 Relationships
 ^^^^^^^^^^^^^
 
-.. image:: relationships_copy.png
+.. image:: rel_batch.png
    :scale: 50%
-   align: center
+   :align: center
 
 Some projects have a very structured way of assigning file names to media. A media file name may not only include an identifier for the file itself, but may also include identifiers for authorities or events that are depicted in the file itself. For projects with Entity, for example, it's not uncommon for a media filename to include the entity identifier in the file, if that media happens to depict the entity. 
 

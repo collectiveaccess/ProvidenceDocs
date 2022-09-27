@@ -23,8 +23,6 @@ Selecting **Search Builder** from the four Search and Browse options on the left
    :scale: 50%
    :align: center
 
-More here 
-
 Search Builder for Primary Tables
 ---------------------------------
 
@@ -32,12 +30,10 @@ Similarly to the Browse function, the Search Builder is available to search with
 
 Options exist to Save the search builder that was created. 
 
-More here
-
 Add Rule
 --------
 
-More here
+More to Come 
 
 
 Add group
@@ -45,4 +41,4 @@ Add group
 
 Groups allow for multiple Elements to be put together into collapsible units that create dynamic yet complex search forms.
 
-More here 
+More to Come 
