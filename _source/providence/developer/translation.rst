@@ -10,11 +10,7 @@ Translation
 * `Translating Pawtucket`_ 
 * `Sharing Your Translation`_ 
 
-Modern  versions of CollectiveAccess, version 1.0 and later are designed to be fully localizable.
-We are working to get CA translated for use in as many languages and locales as possible.
-If you wish to help us translate CA into your language,  email us at info@collectiveaccess.org
-
-To learn more about the mechanics of creating a new translation, read on.
+CollectiveAccess is designed to be fully localizable. We are working to get CA translated for use in as many languages and locales as possible. If you wish to help us translate CA into your language,  email us at info@collectiveaccess.org. To learn more about the mechanics of creating a new translation, read on.
 
 Components of a Translation
 ###########################
@@ -38,23 +34,11 @@ For editing translations, we are using online tool `Transifex <https://www.trans
 If your language or language variant is not enabled on Transifex, write us to info@collectiveaccess.org and we will create it.
 After translation completion contact us, and  we will copy translation to application sources.
 
-Legacy Way
-**********
-
-You can also create translation without using online tools.
-If you are starting a new translation you need to do the following:
-
-#. Decide what the locale code of your translation is. For example, if you are writing a translation specifically for use in Flemish-speaking Belgium then you would probably want to use the locale nl_BE. If it is a more general Dutch translation, then nl_NL is probably more appropriate (of course, an nl_NL translation already exists!) Note that the language always comes first and is lower case. The country comes second and is always upper-case. The language codes should adhere to the ISO-639-1 standard.
-#. Create a directory in *app/locale* for your new locale.
-#. Copy the *messages.po* file from the en_US directory to your new locale directory.
-#. Correct settings for language variant - language name, & plural forms.
-#. Open and edit *messages.po* using a GetText-compatible editor such as `Poedit <http://www.poedit.net>`_ and translate each English string into your target language. If using POEdit, the *.mo* file will be automatically created or updated every time you save your *.po* file.
-
 
 Creating a Localization File for the date/time Parser
 #####################################################
 
-The next step is to localize the date/time parser. To do so copy the English language date/time parser settings file in *app/lib/core/Parsers/TimeExpressionParser/en_US.lang* to a file with your locale in the name in *app/lib/core/Parsers/TimeExpressionParser* and edit to suit. The file includes comments describing the meaning and format of various settings.
+The next step is to localize the date/time parser. To do so copy the English language date/time parser settings file in *app/lib/Parsers/TimeExpressionParser/en_US.lang* to a file with your locale in the name in *app/lib/Parsers/TimeExpressionParser* and edit to suit. The file includes comments describing the meaning and format of various settings.
 
 Localizing an Installation Profile
 ##################################
@@ -67,13 +51,3 @@ Installation-specific Translations
 In some cases the terminology used in the translations in *app/locales* are not quite what you want. Naturally, you can modify the terms used in the locale files to suit your purposes. However, this approach comes with a problem: you risk losing your changes when updating your CollectiveAccess installation, as the standard locale files in the update will overwrite your changes.
 
 To avoid this problem, CollectiveAccess supports installation-specific locale files. Simply create a directory for your locale in *app/locales/user* and use it to house your custom *messages.po* and *messages.mo*. CollectiveAccess will always use an installation-specific locale, when present, in preference to the standard locale files.
-
-Translating Pawtucket
-#########################
-
-Pawtucket uses a similar system for localization. It has locale files in *app/locale* and date/time parser settings in *app/lib/core/Parsers/TimeExpressionParser*.
-
-Sharing Your Translation
-########################
-
-We invite you to submit your translations for inclusion in the CollectiveAccess software distribution! If you wish to contribute please contact us at support@collectiveaccess.org, or create Pull Request on `github <https://github.com/collectiveaccess/providence>`_.
