@@ -172,7 +172,7 @@ dateJoiner
 
 .. csv-table::
    :header-rows: 1
-   :file: refinery_parameter_datejoiner.csv
+   :file: refinery_parameter_dateJoiner.csv
 
 dateAccuracyJoiner
 ^^^^^^^^^^^^^^^^^^

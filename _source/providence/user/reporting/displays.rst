@@ -124,8 +124,6 @@ For a dimensions container that includes Length, Width and Height subfields, det
 Under **Preferences > Units of Measurement**, a user can set a default currency for displays. Using daily data from the European Central Bank, CollectiveAccess auto-converts values between currencies. With this tool, it is possible to include in a single function values entered with different currency units, resulting in a single value in the desired target currency. Note that the Attribute Type Currency must be used for relevant metadata elements in order for this feature to function.
 
 For example, CAD (or Canadian Dollar) is selected in **Manage > My Preferences > Units of Measurement**. If a Current Insurance Value field is added with the ^PAGESUM function, you'd see this in a search result set:
-
- .. warning:: 2 old images here
  
 If the "Display currency conversion" checkbox is unchecked, the parenthetical conversions will disappear, but the bottom line total conversion will remain.
 

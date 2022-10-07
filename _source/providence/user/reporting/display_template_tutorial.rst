@@ -83,8 +83,6 @@ Without the **<unit>** tag, the output would print every Rating value followed b
    :scale: 50%
    :align: center
 
-.. note:: For more information about formatting with **<ifdef>** and **<unit>** tags, please see Display Templates.
-
 Formatting Metadata from Related Records for Display
 ----------------------------------------------------
  
