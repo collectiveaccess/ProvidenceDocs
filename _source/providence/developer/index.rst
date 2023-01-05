@@ -19,7 +19,7 @@ Providence developer guide
    Configuring Displays <config_displays.rst>
    Deduplication <deduplication.rst>
    Prepopulate <prepopulate.rst>
-   Pawtucket2: Plguin Hooks <plugin_hooks.rst>
+   Pawtucket2: Plugin Hooks <plugin_hooks.rst>
    Dependent Field Visibility <dep_field.rst>
    Pawtucket Directory Layout <directory_layout.rst>
    Addressing Data in Bundleable Models <bundleable_models.rst>
