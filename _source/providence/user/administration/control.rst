@@ -21,7 +21,7 @@ In Pawtucket's **/app/conf/app.conf** file you'll see the following:
 .. code-block:: php
 
    # -------------------
-   # Item viewablity (access enforcement)
+   # Item viewability (access enforcement)
    # -------------------
 
    <!--T:5-->
