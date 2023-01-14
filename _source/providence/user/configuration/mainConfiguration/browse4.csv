@@ -13,3 +13,4 @@ hierarchical_delimiter,Character(s) to place between elements of the hierarchy,N
 remove_first_items,Number of items to trim off the top of the hierarchy (leave blank or set to 0 to trim nothing),No
 hierarchy_limit,Maximum length of hierarchy to display (leave blank to return hierarchy unabridged),No
 hierarchy_order,Direction to display hierarchy in. Can be ASC or DESC (default is DESC). ASC displays the root first; DESC displays the lowest element in the hierarchy first,No
+check_access,Set to non-zero value to only show related items with public access when browsing in Pawtucket. Has no effect in Providence. Default value is to perform access checking.,
