@@ -1,0 +1,15 @@
+Settings,Description,Default,Values
+requireValue,Require that an entity be set. If option is not set then blank values are allowed. Devault is to require values.,1,0 or 1
+allowDuplicateValues,Allow duplicate values to be set when element is not in a container and is repeating. Default is to not allow duplicate values.,0,0 or 1
+raiseErrorOnDuplicateValue,Show an error message when value is duplicate and <em>allow duplicate values</em> is not set. Default is to not show an error message and discard the duplicate value silently.,0,0 or 1
+fieldWidth,"Width, in characters or pixels, of the field when displayed in a user interface. Pixel values must be followed by the suffix ""px""",60,"Integers greater then zero, with or without a ""px"" suffix. Ex. ""10"", ""100px"""
+doesNotTakeLocale,Disable locale specification for values. By default values will not take locale specifications. If set to 0 a locale selector will be displayed alongside each value in a user interface.,1,0 or 1
+singleValuePerLocale,Restrict entry to a single value per-locale. By default any number of values may be set for a locale. If set only one values per locale may be defined.,0,0 or 1
+canBeUsedInSort,Allow values to be used for sorting of search results. By default values are available for sorts.,1,0 or 1
+canBeUsedInSearchForm,Allow values to be used in search forms. By default values are available for use in search forms.,1,0 or 1
+canBeUsedInDisplay,Allow values to be included in displays. By default values are available for inclusion in displays.,1,0 or 1
+canMakePDF,Allow PDF to be generated for values. By default PDFs are not generated. If set options to generate PDFs for the values will be present in a user interface.,0,0 or 1
+canMakePDFForValue,Allow PDF to be generated for individual values. By default PDFs are not generated. If set options to generate PDFs for individual values will be present in a user interface.,0,0 or 1
+displayTemplate,"Layout for values when used in a display. Element code tags prefixed with the ^ character, used to represent the value in the template. For example: <i>^ca_entities.lifesdates</i>. If omitted the system default template will be used.",System default,HTML
+displayDelimiter,Delimiter to use between multiple values.,", (comma)",Text
+restrictToTypes,Restricts display to items of the specified type(s). Omit for no restriction.,,Entity type code; repeat for multiple types.
