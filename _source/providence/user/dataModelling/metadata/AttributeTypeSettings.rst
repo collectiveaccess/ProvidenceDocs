@@ -206,7 +206,7 @@ Accepts references to entity records defined in the system.
 Attribute settings: Places
 ----------------------------
 
-Accepts references to placew records defined in the system.
+Accepts references to place records defined in the system.
 
 .. csv-table::
    :widths: auto
