@@ -127,33 +127,90 @@ relationships between two tables:
 .. code-block:: Text
 
 	query {
-      relationshipTypes(table: "ca_objects", relatedTable: "ca_entities") {
-        relationshipTable,
-        types {
-        	  id, code,
-              name, name_reverse, 
-              description, description_reverse,
-              rank, locale, isDefault,
-              restrictToTypeLeft, restrictToTypeRight, includeSubtypesLeft, includeSubtypesRight
+		  relationshipTypes(table: "ca_objects", relatedTable: "ca_entities") {
+			relationshipTable,
+			types {
+				  id, code,
+				  name, name_reverse, 
+				  description, description_reverse,
+				  rank, locale, isDefault,
+				  restrictToTypeLeft, restrictToTypeRight, includeSubtypesLeft, includeSubtypesRight
 
-        }
-      }
-}
+			}
+		  }
+	}
 
 The name of the relationship table may also be used. This query is equivalent to the previous one:
 
 .. code-block:: Text
 
 	query {
-      relationshipTypes(table: "ca_objects_x_entities") {
-        relationshipTable,
-        types {
-        	  id, code,
-              name, name_reverse, 
-              description, description_reverse,
-              rank, locale, isDefault,
-              restrictToTypeLeft, restrictToTypeRight, includeSubtypesLeft, includeSubtypesRight
+		  relationshipTypes(table: "ca_objects_x_entities") {
+			relationshipTable,
+			types {
+				  id, code,
+				  name, name_reverse, 
+				  description, description_reverse,
+				  rank, locale, isDefault,
+				  restrictToTypeLeft, restrictToTypeRight, includeSubtypesLeft, includeSubtypesRight
 
-        }
-      }
-}
+			}
+		  }
+	}
+
+The relationship type list returned is in the form:
+
+.. code-block:: Text
+
+	{
+		"ok": true,
+		"data": {
+			"relationshipTypes": {
+				"relationshipTable": "ca_objects_x_entities",
+				"types": [
+					{
+						"name": "Artist",
+						"name_reverse": "Artist",
+						"description": "",
+						"description_reverse": "",
+						"code": "artist",
+						"rank": 10,
+						"locale": "en_US",
+						"isDefault": false,
+						"restrictToTypeLeft": null,
+						"restrictToTypeRight": null,
+						"includeSubtypesLeft": false,
+						"includeSubtypesRight": false
+					},
+					{
+						"name": "Illustrator",
+						"name_reverse": "illustrator",
+						"description": "",
+						"description_reverse": "",
+						"code": "artist_illustrator",
+						"rank": 10,
+						"locale": "en_US",
+						"isDefault": false,
+						"restrictToTypeLeft": null,
+						"restrictToTypeRight": null,
+						"includeSubtypesLeft": false,
+						"includeSubtypesRight": false
+					},
+					{
+						"name": "Cover artist",
+						"name_reverse": "Cover artist",
+						"description": "",
+						"description_reverse": "",
+						"code": "artist_cover_art",
+						"rank": 10,
+						"locale": "en_US",
+						"isDefault": false,
+						"restrictToTypeLeft": null,
+						"restrictToTypeRight": null,
+						"includeSubtypesLeft": false,
+						"includeSubtypesRight": false
+					}
+				]
+			}
+		}
+	}
