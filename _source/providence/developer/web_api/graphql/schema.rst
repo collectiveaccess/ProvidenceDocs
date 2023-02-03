@@ -125,6 +125,7 @@ The ``relationshipTypes`` query will return a list of available relationship typ
 relationships between two tables:
 
 .. code-block:: Text
+
 	query {
       relationshipTypes(table: "ca_objects", relatedTable: "ca_entities") {
         relationshipTable,
@@ -141,8 +142,8 @@ relationships between two tables:
 
 The name of the relationship table may also be used. This query is equivalent to the previous one:
 
-
 .. code-block:: Text
+
 	query {
       relationshipTypes(table: "ca_objects_x_entities") {
         relationshipTable,
