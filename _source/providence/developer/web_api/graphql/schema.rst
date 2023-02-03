@@ -120,3 +120,39 @@ The ``bundles`` query will return a list of all available data bundles, includin
 	  }
 
 This query can be used to discover queryable and editable data elements from any record type in the CollectiveAccess system.
+
+The ``relationshipTypes`` query will return a list of available relationship types for a relationship between two tables. To get relationship types for
+relationships between two tables:
+
+.. code-block:: Text
+	query {
+      relationshipTypes(table: "ca_objects", relatedTable: "ca_entities") {
+        relationshipTable,
+        types {
+        	  id, code,
+              name, name_reverse, 
+              description, description_reverse,
+              rank, locale, isDefault,
+              restrictToTypeLeft, restrictToTypeRight, includeSubtypesLeft, includeSubtypesRight
+
+        }
+      }
+}
+
+The name of the relationship table may also be used. This query is equivalent to the previous one:
+
+
+.. code-block:: Text
+	query {
+      relationshipTypes(table: "ca_objects_x_entities") {
+        relationshipTable,
+        types {
+        	  id, code,
+              name, name_reverse, 
+              description, description_reverse,
+              rank, locale, isDefault,
+              restrictToTypeLeft, restrictToTypeRight, includeSubtypesLeft, includeSubtypesRight
+
+        }
+      }
+}
