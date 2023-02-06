@@ -19,7 +19,7 @@ A full list of mapping options is listed below.
 
 .. csv-table::
    :header-rows: 1
-   :file: mapping_options.csv
+   :file: mapping_options_updated.csv
 
 
 Option: applyRegularExpressions
