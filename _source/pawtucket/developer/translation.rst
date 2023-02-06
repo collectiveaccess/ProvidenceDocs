@@ -10,7 +10,7 @@ Translation
 * `Translating Pawtucket`_ 
 * `Sharing Your Translation`_ 
 
-CollectiveAccess is designed to be fully localizable. We are working to get CA translated for use in as many languages and locales as possible. If you wish to help us translate CA into your language,  email us at info@collectiveaccess.org. To learn more about the mechanics of creating a new translation, read on.
+CollectiveAccess is designed to be fully localizable. We are working to get CA translated for use in as many languages and locales as possible. To learn more about the mechanics of creating a new translation, read on.
 
 Components of a Translation
 ###########################
@@ -51,3 +51,8 @@ Installation-specific Translations
 In some cases the terminology used in the translations in *app/locales* are not quite what you want. Naturally, you can modify the terms used in the locale files to suit your purposes. However, this approach comes with a problem: you risk losing your changes when updating your CollectiveAccess installation, as the standard locale files in the update will overwrite your changes.
 
 To avoid this problem, CollectiveAccess supports installation-specific locale files. Simply create a directory for your locale in *app/locales/user* and use it to house your custom *messages.po* and *messages.mo*. CollectiveAccess will always use an installation-specific locale, when present, in preference to the standard locale files.
+
+Translating Pawtucket
+#########################
+
+Pawtucket uses a similar system for localization. It has locale files in *app/locale* and date/time parser settings in *app/lib/Parsers/TimeExpressionParser*.

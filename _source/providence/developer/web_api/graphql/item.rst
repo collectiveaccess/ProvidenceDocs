@@ -158,11 +158,11 @@ Use the ``getRelationships`` query to fetch a list of relationships between an i
 			id, 
 			table, 
 			idno, 
-			relationship_typename,
-			relationship_typecode,
 			relationships { 
 				id, 
 				table, 
+				relationship_typename,
+				relationship_typecode,
 				bundles { 
 					name, 
 					code, 
@@ -195,12 +195,12 @@ returns:
 				"id": 10,
 				"table": "ca_objects",
 				"idno": "test.1",
-				"relationship_typename": "Donor",
-				"relationship_typecode": "donor",
 				"relationships": [
 					{
 						"id": 11,
 						"table": "ca_objects_x_entities",
+						"relationship_typename": "Donor",
+						"relationship_typecode": "donor",
 						"bundles": [
 							{
 								"name": "Display name (from entities)",

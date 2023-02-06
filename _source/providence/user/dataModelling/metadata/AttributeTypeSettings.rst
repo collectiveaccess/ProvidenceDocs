@@ -16,6 +16,8 @@ Unlike all other attribute types, containers do not represent data values. Rathe
 Attribute settings: Text
 ------------------------
 
+Accepts text values up to 4gb in length. Text may include HTML formatting.
+
 .. csv-table::
    :widths: auto
    :header-rows: 1
@@ -24,13 +26,17 @@ Attribute settings: Text
 Attribute settings: DateRange
 -----------------------------
 
+Accepts valid date/time expressions as described in [[Date_and_Time_Formats|this page.]]
+
 .. csv-table::
    :widths: auto
    :header-rows: 1
    :file: daterange_settings.csv
 
-Attribute settings: Lists
--------------------------
+Attribute settings: List
+------------------------
+
+Accepts values from lists. Can present lists of any size and structure, from simple check lists and flat down-down lists to large, deeply nested hierarchical lists.
 
 .. csv-table::
    :widths: auto
@@ -40,16 +46,12 @@ Attribute settings: Lists
 Attribute settings: Geocode
 ---------------------------
 
-The Geocode attribute type represents one or more coordinates (latitude/longitude pairs) indicating the location of an item (collection object, geographic place, storage location or whatever else you want to place on a map).
+Represents one or more coordinates (latitude/longitude pairs) indicating the location of an item (collection object, geographic place, storage location or whatever else you want to place on a map).
 
-Coordinates can be entered as decimal latitude/longitude pairs (ex. 40.321,-74.55) or in degrees-minutes-seconds format (ex. 40 23' 10N, 74 30' 5W). Multiple latitude/longitude coordinates should be separated with semicolons (";"). `UTM <https://en.wikipedia.org/wiki/Universal_Transverse_Mercator_coordinate_system>`_ format coordinates is also supported.
+Coordinates can be entered as decimal latitude/longitude pairs (ex. 40.321,-74.55) or in degrees-minutes-seconds format (ex. 40 23' 10N, 74 30' 5W). Multiple latitude/longitude coordinates must be separated with semicolons (";"). `UTM <https://en.wikipedia.org/wiki/Universal_Transverse_Mercator_coordinate_system>`_ format coordinates is supported.
 
-Non-coordinate entries are converted to coordinates using the Google Maps Geocoding service, which works well for most full and partial addresses worldwide. To unambiguously distinguish coordinate data from address data to be geocoded, it is strongly suggested that coordinate lists be enclosed in square brackets (ex. [40.321,-74.55; 41.321,-74.55;41.321,-75.55;40.321,-75.55;40.321,-74.55].
+Non-coordinate entries are converted to coordinates using the OpenStreetMaps Geocoding service, which works well for most full and partial addresses worldwide. To unambiguously distinguish coordinate data from address data to be geocoded, it is strongly suggested that coordinate lists be enclosed in square brackets (ex. [40.321,-74.55; 41.321,-74.55;41.321,-75.55;40.321,-75.55;40.321,-74.55].
 
-Google Maps integration
-^^^^^^^^^^^^^^^^^^^^^^^
-
-The Google Maps mapping service is used to produce maps displaying your coordinates. The Geocode attribute used to support either version 2 or 3 of the Google Maps API, selectable via the google_api directive in the global.conf file. As of August 2010, only the v3 API is supported since v2 is now officially deprecated by Google. Any old v2 configuration in your installation (assuming you installed prior to August 2010) will be ignored.
 
 Adding rectified overlays
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -64,7 +66,7 @@ You can add layers that include rectified maps by creating serve-able tiles usin
 Attribute settings: Url
 -----------------------
 
-Accepts a properly formatted URL value.
+Accepts properly formatted URL values.
 
 .. csv-table::
    :widths: auto
@@ -74,7 +76,7 @@ Accepts a properly formatted URL value.
 Attribute settings: Currency
 ----------------------------
 
-Accepts a currency value composed of a currency specifier and a decimal number.
+Accepts currency values composed of a currency specifier followed by a decimal number.
 
 .. csv-table::
    :widths: auto
@@ -82,7 +84,7 @@ Accepts a currency value composed of a currency specifier and a decimal number.
    :file: currency_settings.csv
 
 Attribute settings: Length
----------------------------
+--------------------------
 
 Accepts length measurements in metric, English and typographical points units.
 
@@ -92,7 +94,7 @@ Accepts length measurements in metric, English and typographical points units.
    :file: length_settings.csv
 
 Attribute settings: Weight
----------------------------
+--------------------------
 
 Accepts weight measurements in metric and English units.
 
@@ -104,7 +106,7 @@ Accepts weight measurements in metric and English units.
 Attribute settings: TimeCode
 ----------------------------
 
-Accepts time offsets in a number of time code formats.
+Accepts time offsets in commonly used formats.
 
 .. csv-table::
    :widths: auto
@@ -134,7 +136,7 @@ Accepts numeric values and strings consisting of optional sign, any number of di
 Attribute settings: LCSH
 ------------------------
 
-Library of Congress Subject Heading values.
+Accepts Library of Congress Subject Heading references.
 
 .. csv-table::
    :widths: auto
@@ -144,17 +146,17 @@ Library of Congress Subject Heading values.
 Attribute settings: GeoNames
 ----------------------------
 
-Represents one or more latitude/longitude coordinates
+Accepts references to Geonames.org entries for locations.
 
 .. csv-table::
    :widths: auto
    :header-rows: 1
    :file: geonames_settings.csv
 
-Attribute settings: Files
--------------------------
+Attribute settings: File
+------------------------
 
-Uploaded file
+Accepts uploads of files of any type. Files are stored as binary data and returned as-is. No parsing or thumbnail generation is performed. 
 
 .. csv-table::
    :widths: auto
@@ -164,40 +166,144 @@ Uploaded file
 Attribute settings: Media
 -------------------------
 
-Uploaded media (image, sound video).
+Accepts uploads of media (image, sound video) files. Only types supported by CollectiveAccess and configured in media_processing.conf are accepted. Generation of previews is performed.
 
 .. csv-table::
    :widths: auto
    :header-rows: 1
    :file: media_settings.csv
 
-Attribute settings: Taxonomy
-----------------------------
+Attribute settings: InformationService
+--------------------------------------
+
+Accepts values defined by an external information service. CollectiveAccess includes plugins for various external information services, including the Getty AAT, TGN and ULAN, Nomisma, Encylopedia of Life, GlobalNames and more. Generic SparQL endpoints are also supported.
 
 .. csv-table::
    :widths: auto
    :header-rows: 1
-   :file: taxonomy_settings.csv
+   :file: information_service_settings.csv
 
+Attribute settings: ObjectRepresentations
+-----------------------------------------
+
+Accepts references to object representation records defined in the system.
+
+.. csv-table::
+   :widths: auto
+   :header-rows: 1
+   :file: object_representations_settings.csv
+   
 Attribute settings: Entities
 ----------------------------
+
+Accepts references to entity records defined in the system.
 
 .. csv-table::
    :widths: auto
    :header-rows: 1
    :file: entities_settings.csv
+   
+Attribute settings: Places
+----------------------------
+
+Accepts references to place records defined in the system.
+
+.. csv-table::
+   :widths: auto
+   :header-rows: 1
+   :file: places_settings.csv
+
+Attribute settings: Occurrences
+-------------------------------
+
+Accepts references to occurrence records defined in the system.
+
+.. csv-table::
+   :widths: auto
+   :header-rows: 1
+   :file: occurrences_settings.csv
+
+Attribute settings: Collections
+-------------------------------
+
+Accepts references to collection records defined in the system.
+
+.. csv-table::
+   :widths: auto
+   :header-rows: 1
+   :file: collections_settings.csv
+
+Attribute settings: StorageLocations
+------------------------------------
+
+Accepts references to storage location records defined in the system.
+
+.. csv-table::
+   :widths: auto
+   :header-rows: 1
+   :file: storage_locations_settings.csv
+
+Attribute settings: Loans
+-------------------------
+
+Accepts references to loan records defined in the system.
+
+.. csv-table::
+   :widths: auto
+   :header-rows: 1
+   :file: loans_settings.csv
+
+Attribute settings: Movements
+-----------------------------
+
+Accepts references to movement records defined in the system.
+
+.. csv-table::
+   :widths: auto
+   :header-rows: 1
+   :file: movements_settings.csv
+
+Attribute settings: Objects
+---------------------------
+
+Accepts references to object records defined in the system.
+
+.. csv-table::
+   :widths: auto
+   :header-rows: 1
+   :file: objects_settings.csv
+
+Attribute settings: ObjectLots
+------------------------------
+
+Accepts references to object lot records defined in the system.
+
+.. csv-table::
+   :widths: auto
+   :header-rows: 1
+   :file: object_lots_settings.csv
+   
+Attribute settings: FloorPlan
+-----------------------------
+
+Accepts floor plan locations defined against a graphic attached to a place record. This allows objects related to locations within a building defined in the place hierarchy to be shown overlayed upon an uploaded floorplan graphic. Typically used for documentation of artwork in exhibitions. 
+
+.. csv-table::
+   :widths: auto
+   :header-rows: 1
+   :file: floorplan_settings.csv
 
 Attribute settings: Color
 ---------------------------
 
-Stores color values. User interface typically provides a color picker. Values are stored internally as RGB hex color values.
+Accepts color values. Values are stored internally as RGB hex color values.
 
 .. csv-table::
    :widths: auto
    :header-rows: 1
    :file: color_settings.csv
    
-Attribute settings: File size
+Attribute settings: Filesize
 -----------------------------
 
 Accepts digital file size values with commonly used suffixes: B, KB, KiB, MB, MiB, GB, GiB, TB, Tib, PB and PiB. Available from version 1.8.
@@ -206,4 +312,14 @@ Accepts digital file size values with commonly used suffixes: B, KB, KiB, MB, Mi
    :widths: auto
    :header-rows: 1
    :file: filesize_settings.csv
+   
+Attribute settings: ExternalMedia
+---------------------------------
+
+Accepts URLs to media stored on external services such as YouTube and Vimeo. Can parse URLs and generate embed tags. Available from version 1.8.
+
+.. csv-table::
+   :widths: auto
+   :header-rows: 1
+   :file: external_media_settings.csv
    

@@ -4,7 +4,7 @@ entityTypeDefault,"Sets the default entity type that will be used if none are de
 forename,Accepts a constant value for the forename or a reference to the location in the data source where the forename can be found.,"{""forename"":""^3""}"
 surname,Accepts a constant value for the surname or a reference to the location in the data source where the surname can be found.,"{""surname"": ""^2""}"
 other_forenames,Accepts a constant value for the entity's other forenames or a reference to the location in the data source where the other forenames can be found.,"{""other_forenames"": ""^10""}"
-middlename,Accepts a constant value for the middlename or a reference to the location in the data source where the middlename can be found.,"{""surname"": ""^12""}"
+middlename,Accepts a constant value for the middlename or a reference to the location in the data source where the middlename can be found.,"{""middlename"": ""^12""}"
 displayname,Accepts a constant value for the displayname or a reference to the location in the data source where the displayname can be found.,"{""displayname"": ""^14""}"
 prefix,Accepts a constant value for the prefix or a reference to the location in the data source where the prefix can be found.,"{""prefix"": ""^14""}"
 suffix,Accepts a constant value for the suffix or a reference to the location in the data source where the suffix can be found.,"{""suffix"": ""^14""}"

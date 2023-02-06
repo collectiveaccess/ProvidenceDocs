@@ -16,7 +16,7 @@ Standards
    :header-rows: 1
    :file: standards_for_configlib.csv
 
-See `Metadata Standards <file:///Users/charlotteposever/Documents/ca_manual/providence/user/dataModelling/profiles/MetadataStandards.html>`_ for more information on standards-compliant profiles. 
+See `Metadata Standards <user/dataModelling/profiles/MetadataStandards.html>`_ for more information on standards-compliant profiles. 
 
 
 User Profiles
@@ -24,6 +24,6 @@ User Profiles
 
 .. csv-table:: 
    :header-rows: 1
-   :file: user_profiles_for_configlib_recent copy.csv
+   :file: user_profiles_for_configlib_recent.csv
 
 

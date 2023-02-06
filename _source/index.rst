@@ -31,4 +31,5 @@ Contents
    :maxdepth: 1
    :caption: Pawtucket
    
-   Developer guide <pawtucket/index>
+   User guide <pawtucket/user/index>
+   Developer guide <pawtucket/developer/index>
