@@ -127,7 +127,7 @@ storageLocationSplitter
 
 .. csv-table::
    :header-rows: 1
-   :file: refinery_parameter_storagelocSplitter.csv
+   :file: refinery_parameter_storagelocSplitter_updated.csv
 
 loanSplitter
 ^^^^^^^^^^^^
