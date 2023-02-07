@@ -88,7 +88,7 @@ Note that these interstitial records are meant to be small and manageable, so on
 Setting up Interstitial Relationship Records through the User Interface
 -----------------------------------------------------------------------
 
-Setting up an interstitial relationship record through the user interface is essentially just like creating a user interface for any other type of record (see `User Interface Administration <file:///Users/charlotteposever/Documents/ca_manual/providence/user/editing/interfaces.html#user-interface-administration>`_). It follows the same steps wherein a metadata element is created, and then added, to the user interface.
+Setting up an interstitial relationship record through the user interface is essentially just like creating a user interface for any other type of record (see `User Interface Administration <https://manual.collectiveaccess.org/providence/user/editing/interfaces.html>`_). It follows the same steps wherein a metadata element is created, and then added, to the user interface.
 
 The key difference is what **Type restrictions** are chosen for the elements, and what **type** is used to create the user interface.
 
