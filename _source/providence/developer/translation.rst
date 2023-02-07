@@ -43,7 +43,7 @@ The next step is to localize the date/time parser. To do so copy the English lan
 Localizing an Installation Profile
 ##################################
 
-At this point you have a translated application. You still need a translated configuration, however. If you decide to use an existing `installation_profile <https://manual.collectiveaccess.org/providence/user/dataModelling/Profiles.html>`_ as the basis of your system then you will likely need to edit the profile adding localized text as needed. All display text in a profile is tagged with a locale string and supports specification of multiple locales. Simply add your translation alongside the existing text tagged with your selected locale.
+At this point you have a translated application. You still need a translated configuration, however. If you decide to use an existing `installation profile <https://manual.collectiveaccess.org/providence/user/dataModelling/Profiles.html>`_ as the basis of your system, then you will likely need to edit the profile adding localized text as needed. All display text in a profile is tagged with a locale string and supports specification of multiple locales. Simply add your translation alongside the existing text tagged with your selected locale.
 
 Installation-specific Translations
 ##################################
