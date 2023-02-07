@@ -18,7 +18,7 @@ Display templates are used to format data from `bundles <https://manual.collecti
 
 Defining templates
 ^^^^^^^^^^^^^^^^^^
-Default display templates can be defined for metadata elements as part of their configuration (see `Configuring Metadata Elements <file:///Users/charlotteposever/Documents/ca_manual/providence/user/editing/metadataelements.html?highlight=configuring+metadata>`_). Default formatting can be overridden by additional context-specific templates within a display or user interface.
+Default display templates can be defined for metadata elements as part of their configuration (see `Configuring Metadata Elements <https://manual.collectiveaccess.org/providence/user/editing/metadataelements.html>`_). Default formatting can be overridden by additional context-specific templates within a display or user interface.
 
 The default template for a metadata element can be set in the configuration interface. Display and user interface related templates may be set in their respective configuration editors on a per-bundle basis. When a template is defined for a metadata element within a display or editor user interface, it will take precedence over templates defined in the element's configuration.
 
