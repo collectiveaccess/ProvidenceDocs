@@ -10,7 +10,7 @@ Using formatWithTemplate in an Import Mapping Spreadsheet
 When to Use formatWithTemplate
 ------------------------------
 
-**formatWithTemplate** is a useful Option for labeling certain fields in CollectiveAccess to match those in source data, especially for a field like Notes, where some distinction between notes is helpful.
+**formatWithTemplate** is a useful tool for labeling certain fields in CollectiveAccess to match those in source data, especially for a field like Notes, where some distinction between notes is helpful.
 
 Source data, for example, might contain a column for “Technique Notes” that does not have a correlating field in CollectiveAccess, or, might have other information about the technique of an item in CollectiveAccess. Here’s an example of source data: 
 
