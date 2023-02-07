@@ -19,9 +19,6 @@ As noted in `Running an Import <https://manual.collectiveaccess.org/import/runni
    :scale: 50%
    :align: center
 
-full image here?
-
-
 This screen is where certain options for the import can be set. Note that these options do **not** affect the dSetata being imported; they simply generate various levels of error messages, determine if the import is a dry run, or limit the error messages that will be received after the data import is completed. **Logs** refer to the files that contain these error messages. 
 
 The various options are described below. 
