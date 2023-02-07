@@ -3,7 +3,7 @@
 Using formatWithTemplate in an Import Mapping Spreadsheet
 =========================================================
 
-**formatWithTemplate** is an `Option <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/mappings/mappingOptions.html?highlight=options>`_ available to use when creating an import mapping spreadsheet. 
+**formatWithTemplate** is an `Option <https://manual.collectiveaccess.org/providence/user/import/mappingOptions.html>`_ available to use when creating an import mapping spreadsheet. 
 
 **formatWithTemplate** is, essentially, a display template with which to format values prior to importing those values in CollectiveAccess. Like other Options, Refineries, and Refinery Parameters, this option dictates exactly how source data will be manipulated and imported into CollectiveAccess. 
 
