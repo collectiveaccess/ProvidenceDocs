@@ -27,7 +27,7 @@ Browse Facets
 
 The Browse search allows a search to be conducted through facets, or terms. These facets will filter items within the CollectiveAccess system, depending on what is selected.
 
-.. note:: Facets can be configurable, and will differ from system to system. For more on how to configure these in an installation profile, see `Browse.conf <file:///Users/charlotteposever/Documents/ca_manual/providence/user/configuration/mainConfiguration/browse.html?highlight=facet>`_. 
+.. note:: Facets can be configurable, and will differ from system to system. For more on how to configure these in an installation profile, see `Browse.conf <https://manual.collectiveaccess.org/providence/user/configuration/mainConfiguration/browse.html?highlight=facet>`_. 
 
 Browsing Using Facets
 --------------------
@@ -81,7 +81,7 @@ To modify or change your Browse terms, click the [X] symbol to remove the attrib
 Facets for Primary Tables
 -------------------------
 
-What primary tables are available in CollectiveAccess will depend upon a system's configuration (see `Primary Tables and Intrinsic Fields <file:///Users/charlotteposever/Documents/ca_manual/providence/user/dataModelling/primaryTables.html?highlight=primary+tables>`_). However, browsing by facets is available for each primary table. 
+What primary tables are available in CollectiveAccess will depend upon a system's configuration (see `Primary Tables and Intrinsic Fields <https://manual.collectiveaccess.org/providence/user/dataModelling/primaryTables.html?highlight=primary+tables>`_). However, browsing by facets is available for each primary table. 
 
 The facets available for browsing will be different for each primary table. The examples above use **Find > Objects**; therefore, the facets are object related. However, the **Find > Browse** function can be utilized for each primary table. 
 

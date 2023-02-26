@@ -16,12 +16,12 @@ Widgets are mini-applications that run within the dashboard in Providence. Users
 
 The functionality that is encapsulated in a widget is only limited by space – they must fit within a single dashboard column (approximately 350 pixels wide). While widgets will typically provide simple, focused functionality, they have full access to the CollectiveAccess database and programming APIs, as well as their own configuration files and views. Widgets can interact with other CollectiveAccess plugins and external systems. 
 
-For more on the dashboard and widgets, and how to view the full list of widgets included in a standard installtion of CollectiveAccess, see `Dashboard Configuration <file:///Users/charlotteposever/Documents/ca_manual/providence/user/editing/dashboard.html>`_. 
+For more on the dashboard and widgets, and how to view the full list of widgets included in a standard installtion of CollectiveAccess, see `Dashboard Configuration <https://manual.collectiveaccess.org/providence/user/editing/dashboard.html>`_. 
 
 Layout
 ------
 
-Widgets are similar in structure to `Application plugins <file:///Users/charlotteposever/Documents/ca_manual/providence/developer/app_plugins.html>`_, as each widget has a directory in *app/widgets*. **The name of this directory must be the name of the widget (for example, Clock).** Within this directory, a PHP class must exist with the widget's name and the *suffix Widget.php*. For a widget, Clock, the class is named *ClockWidget.php*.
+Widgets are similar in structure to `Application plugins <https://manual.collectiveaccess.org/providence/developer/app_plugins.html>`_, as each widget has a directory in *app/widgets*. **The name of this directory must be the name of the widget (for example, Clock).** Within this directory, a PHP class must exist with the widget's name and the *suffix Widget.php*. For a widget, Clock, the class is named *ClockWidget.php*.
 
 Any widget must consist of a widget class and at least one view (named, by convention, *main_html.php*). It can also have, if required, additional views, graphics and configuration files. By convention, these are located in directories within the widget directory with the following layout: 
 

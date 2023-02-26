@@ -19,7 +19,7 @@ Bundles
 
 `Bundle` is a high-level term for the various structures in CollectiveAccess used to store catalogued content. There are four distinct types of bundles, each with their own unique set of characteristics and uses: `labels`, `intrinsics`, `metadata elements` and `relationships`. Records are simply assemblages of various bundles, chosen to meet specific representational requirements.
 
-Read more: `Bundles <file:///Users/charlotteposever/Documents/ca_manual/providence/user/reference/glossaries/Bundles.html?highlight=bundles>`_
+Read more: `Bundles <https://manual.collectiveaccess.org/providence/user/reference/glossaries/Bundles.html?highlight=bundles>`_
 
 Labels
 ******

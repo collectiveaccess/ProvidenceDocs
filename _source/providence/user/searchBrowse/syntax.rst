@@ -19,7 +19,7 @@ Search Syntax
 * `Searching on Creation and Modification Dates`_
 * `Searching on Counts`_
 
-No matter what back-end `search engine <file:///Users/charlotteposever/Documents/ca_manual/providence/user/searchBrowse/engines.html>`_ you configure CA with, the `Lucene search syntax`_ is always used to specify queries. This helps to provide a consistent experience for users across implementations and also leverages the Lucene syntax, which is well designed and widely adopted. Note that not all back-end engines support all aspects of the Lucene syntax. In general you can rely upon core functionality always being supported: text searches, field-level limiting, parenthetical grouping and booleans. Features such as boosting, fuzzy matching and range searches may not be available in all engines. 
+No matter what back-end `search engine <https://manual.collectiveaccess.org/providence/user/searchBrowse/engines.html>`_ you configure CA with, the `Lucene search syntax`_ is always used to specify queries. This helps to provide a consistent experience for users across implementations and also leverages the Lucene syntax, which is well designed and widely adopted. Note that not all back-end engines support all aspects of the Lucene syntax. In general you can rely upon core functionality always being supported: text searches, field-level limiting, parenthetical grouping and booleans. Features such as boosting, fuzzy matching and range searches may not be available in all engines. 
 
 .. _Lucene search syntax: http://lucene.apache.org/core/2_9_4/queryparsersyntax.html
 .. _search engine: http://docs.collectiveaccess.org/sphinx/_build/html/searchBrowse/engines.html

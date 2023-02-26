@@ -1,7 +1,7 @@
 Datetime.conf
 =============
 
-The output, or display, of dates and times inside dateRange metadata elements can be configured in datetime.conf. For valid formats for dates and times, please visit `Date and Time Formats <file:///Users/charlotteposever/Documents/ca_manual/providence/user/dataModelling/metadata/dateTime.html>`_. 
+The output, or display, of dates and times inside dateRange metadata elements can be configured in datetime.conf. For valid formats for dates and times, please visit `Date and Time Formats <https://manual.collectiveaccess.org/providence/user/dataModelling/metadata/dateTime.html>`_. 
 
 Date/time output configuration
 ------------------------------

@@ -10,7 +10,7 @@ Rule Types are the first column in an import mapping. The rules that are set in 
 
 In the sample import mapping spreadsheet, the rule types **Mapping**, **SKIP**, and **Constant** are used. Since each column from the sample data corresponds to a single row in the import mapping spreadsheet, the same number of rule types must be set as there are columns of metadata.
 
-The use of Constant is arbitrary and will depend on the source data, what will be included in the import, and how. Constant sets an arbitrary constant value once the data is imported, usually within a `Container <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/containers.html>`_. As well as setting the Constant Rule Type in the Rule Type Column (Column 1 in an Import Mapping Spreadsheet), when using Constant, the Source Column (Column 2 in an Import Mapping Spreadsheet) must be set to a text value. Add the value to the Source Column, and the value will be set in the corresponding metadata element for every record that is imported. 
+The use of Constant is arbitrary and will depend on the source data, what will be included in the import, and how. Constant sets an arbitrary constant value once the data is imported, usually within a `Container <https://manual.collectiveaccess.org/providence/user/import/containers.html>`_. As well as setting the Constant Rule Type in the Rule Type Column (Column 1 in an Import Mapping Spreadsheet), when using Constant, the Source Column (Column 2 in an Import Mapping Spreadsheet) must be set to a text value. Add the value to the Source Column, and the value will be set in the corresponding metadata element for every record that is imported. 
 
 Example of Constant Rule Type: Dates
 ------------------------------------

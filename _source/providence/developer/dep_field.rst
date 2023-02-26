@@ -18,7 +18,7 @@ To enable, set the following in *app.conf*:
 
 Once enabled, a few new settings become available for List metadata elements with render type "Drop-down list" or "Radio buttons.” Note that this will not work with any of the other render modes. 
 
-A new config setting will appear on the `metadata element configuration <file:///Users/charlotteposever/Documents/ca_manual/providence/user/editing/metadataelements.html?highlight=configuring+metadata+elements>`_ screen for each item in the list. These settings allow you to select the bundle placements to hide when this list item is chosen:
+A new config setting will appear on the `metadata element configuration <https://manual.collectiveaccess.org/providence/user/editing/metadataelements.html?highlight=configuring+metadata+elements>`_ screen for each item in the list. These settings allow you to select the bundle placements to hide when this list item is chosen:
 
 .. image:: dep_field1.png
    :scale: 70%

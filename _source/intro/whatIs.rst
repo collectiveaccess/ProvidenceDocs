@@ -29,9 +29,9 @@ Providence
 
 Providence is the “back-end” core cataloguing and data management application. Providence provides a relational approach to cataloging that allows users to create and describe relationships between different record-types, construct hierarchical relationships for complex collections, and to do so using commonly accepted library and archive standards. Nuanced search and browse tools, advanced display and reporting tools, batch edit and import capabilities, superior media-handling, and more enables users to catalogue almost anything in any way.
 
-* `Providence User Guide <file:///Users/charlotteposever/Documents/ca_manual/providence/user/index.html>`_
+* `Providence User Guide <https://manual.collectiveaccess.org/providence/user/index.html>`_
 
-* `Providence Developer Guide <file:///Users/charlotteposever/Documents/ca_manual/providence/developer/index.html>`_
+* `Providence Developer Guide <https://manual.collectiveaccess.org/providence/developer/index.html>`_
 
 * `Providence Demonstration System <https://demo.collectiveaccess.org/system/auth/login>`_
 

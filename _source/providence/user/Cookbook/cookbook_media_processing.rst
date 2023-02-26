@@ -7,7 +7,7 @@ Each scenario in this section begins with a “problem,” describing a certain 
 
 Click on a scenario below in the Contents to view problems and solutions. For more support, please see the online `Support Forum <https://collectiveaccess.org/support/>`_, `Online Chat <https://gitter.im/collectiveaccess/support>`_, `Slack Channel for Developers <https://collectiveacc-uye7574.slack.com/join/signup#/domain-signup>`_, and `Back-end <https://github.com/collectiveaccess/providence>`_ and `Front-end <https://github.com/collectiveaccess/pawtucket2>`_ GitHub Repositories. 
 
-See also: `Media <file:///Users/charlotteposever/Documents/ca_manual/providence/user/media/index.html>`_. 
+See also: `Media <https://manual.collectiveaccess.org/providence/user/media/index.html>`_. 
 
 Contents
 --------

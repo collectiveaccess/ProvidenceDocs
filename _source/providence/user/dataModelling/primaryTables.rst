@@ -215,7 +215,7 @@ See label name fields below for table specific name fields.
 Label Table Intrinsics
 ^^^^^^^^^^^^^^^^^^^^^^
 
-Occassionally label table names and intrinsic fields need to be referenced directly, for example while configuring searching indexing.  Search indexing in `Search_indexing.conf <file:///Users/charlotteposever/Documents/ca_manual/providence/user/configuration/mainConfiguration/search_indexing.html>`_.
+Occassionally label table names and intrinsic fields need to be referenced directly, for example while configuring searching indexing.  Search indexing in `Search_indexing.conf <https://manual.collectiveaccess.org/providence/user/configuration/mainConfiguration/search_indexing.html>`_.
 
 .. note:: 
 	<table name>.preferred_labels.<name of intrinsic> is used by data mappings and display templates to reference the intrinsic _name_ field for preferred labels. The _<table name>.preferred_labels_ construct is simply an alias for the label table, filtered to return only those entries with the _is_preferred_  set. For example _ca_objects.preferred_labels.name_ and _ca_object_labels.name_ refer to the same thing, except that the _ca_object_labels.name_ version will return _all_ labels, while _ca_objects.preferred_labels.name_ will return only those marked as preferred. Similarly,  _<table name>.nonpreferred_labels.<name of intrinsic>_ will return all entries _not_ marked as preferred. Whether you use _ca_objects.preferred_labels.<name of intrinsic>_, ca_objects.nonpreferred_labels.<name of intrinsic>_ or _ca_object_labels.<name of intrinsic>_, the intrinsic names used are the same ones listed below.

@@ -26,7 +26,7 @@ For certain source data sets, simply importing a single storage location will no
 
 CollectiveAccess can import single storage locations using the **storageLocationSplitter**; however, it can also import a hierarchy based on multiple locations given in the source data. The format of the hierarchy is defined in the Refinery Parameter for the **storageLocationSplitter** Refinery, in the import mapping spreadsheet. 
 
-See `Refineries and Refinery Parameters <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/mappings/refineries.html?highlight=refineries>`_ for more. 
+See `Refineries and Refinery Parameters <https://manual.collectiveaccess.org/providence/user/import/mappings/refineries.html?highlight=refineries>`_ for more. 
 
 How to find storageLocationType and relationshipType
 ----------------------------------------------------
@@ -63,7 +63,7 @@ Navigate to **Manage > Lists and Vocabularies** and find the storage location ty
    :scale: 50%
    :align: center
 
-The supported types will be displayed by selecting the **>** icon. For more, see `Using Lists and Vocabularies in an Import Mapping Spreadsheet <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/lists_and_vocab_in_mapping.html?highlight=using+lists>`_. 
+The supported types will be displayed by selecting the **>** icon. For more, see `Using Lists and Vocabularies in an Import Mapping Spreadsheet <https://manual.collectiveaccess.org/providence/user/import/lists_and_vocab_in_mapping.html?highlight=using+lists>`_. 
 
 Hierarchical Locations in an Import Mapping
 --------------------------------------
@@ -94,7 +94,7 @@ A mapping for this hierarchy would use the parameter:
 
 Where the most general **storageLocationType** is defined as **building** from the list of storageLocationTypes in the system; the **hierarchical delimiter** is set to separate the locations on the comma values from the source data, and a hierarchy is created, from general to more specific, based on the values in the data (floor, room, shelf), with the **relationshipType** set to a constant value of **related.**
 
-To map `Interstitial Data <file:///Users/charlotteposever/Documents/ca_manual/providence/user/dataModelling/interstitial.html?highlight=interstitial>`_ into the storage location, simply add the interstitial parameter into the rest of the parameter: 
+To map `Interstitial Data <https://manual.collectiveaccess.org/providence/user/dataModelling/interstitial.html?highlight=interstitial>`_ into the storage location, simply add the interstitial parameter into the rest of the parameter: 
 
 .. code-block::
 

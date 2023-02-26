@@ -24,7 +24,7 @@ How the watermark image is defined will greatly affect how well it performs. An 
 Configuring a Watermark in CollectiveAccess
 -------------------------------------------
 
-To configure a watermark in CollectiveAccess, use the `media_processing.conf <file:///Users/charlotteposever/Documents/ca_manual/providence/user/configuration/mainConfiguration/media_processing.conf.html>`_ configuration file in **app/conf**.
+To configure a watermark in CollectiveAccess, use the `media_processing.conf <https://manual.collectiveaccess.org/providence/user/configuration/mainConfiguration/media_processing.conf.html>`_ configuration file in **app/conf**.
 
 Add watermarking to specific image derivatives (or "versions" as they are referred to in the configuration file) by adding a WATERMARK rule to their processing rules.
 
