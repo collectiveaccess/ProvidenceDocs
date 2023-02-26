@@ -7,7 +7,7 @@ Each scenario in this section begins with a “problem,” describing a certain 
 
 Click on a scenario below in the Contents to view problems and solutions. For more support, please see the online `Support Forum <https://collectiveaccess.org/support/>`_, `Online Chat <https://gitter.im/collectiveaccess/support>`_, `Slack Channel for Developers <https://collectiveacc-uye7574.slack.com/join/signup#/domain-signup>`_, and `Back-end <https://github.com/collectiveaccess/providence>`_ and `Front-end <https://github.com/collectiveaccess/pawtucket2>`_ GitHub Repositories. 
 
-See also: `User Interface Administration <file:///Users/charlotteposever/Documents/ca_manual/providence/user/editing/interfaces.html?highlight=user+interface>`_ and `User Interface Settings <file:///Users/charlotteposever/Documents/ca_manual/providence/user/reference/settings/userInterfaceSettings.html?highlight=user+interface>`_. 
+See also: `User Interface Administration <https://manual.collectiveaccess.org/providence/user/editing/interfaces.html?highlight=user+interface>`_ and `User Interface Settings <https://manual.collectiveaccess.org/providence/user/reference/settings/userInterfaceSettings.html?highlight=user+interface>`_. 
 
 Contents
 --------
@@ -53,7 +53,7 @@ Using Summaries
 
 **Problem**: You want to use the "Summary" screen to view a record, but it seems to be blank.
 
-**Solution**: You must configure a display that includes all of the metadata you want to see summarized. To do this through the UI, navigate to **Manage > My Displays**. Then, to create a new display, choose the table for which the display is relevant, go to "Display List," and then drag and format the elements you wish to include. For tips on formatting, see `Bundle Display Templates <file:///Users/charlotteposever/Documents/ca_manual/providence/user/dataModelling/bundleSpecifiers.html?highlight=bundle+display+template>`_. Then, when you are in the Summary screen, you can choose the appropriate Display from the drop-down in the top-right corner.
+**Solution**: You must configure a display that includes all of the metadata you want to see summarized. To do this through the UI, navigate to **Manage > My Displays**. Then, to create a new display, choose the table for which the display is relevant, go to "Display List," and then drag and format the elements you wish to include. For tips on formatting, see `Bundle Display Templates <https://manual.collectiveaccess.org/providence/user/dataModelling/bundleSpecifiers.html?highlight=bundle+display+template>`_. Then, when you are in the Summary screen, you can choose the appropriate Display from the drop-down in the top-right corner.
 
 Including an ID Number (idno) in a Display
 -----------------------------------
@@ -74,7 +74,7 @@ Keeping Track of an Item's Changes
 
 **Problem**: You're not finished working on an Object record, but you need to do some other work before you can return to it.
 
-**Solution**: Add the record to the "My Watched Items" list. In the `Inspector Window <file:///Users/charlotteposever/Documents/ca_manual/providence/user/administration/colorcodinginspector.html?highlight=inspector+window>`_ of a record’s user interface, click on a small icon that looks like an eye.  The record will then be stored in the "My Watched Items" list, which is accessible through 
+**Solution**: Add the record to the "My Watched Items" list. In the `Inspector Window <https://manual.collectiveaccess.org/providence/user/administration/colorcodinginspector.html?highlight=inspector+window>`_ of a record’s user interface, click on a small icon that looks like an eye.  The record will then be stored in the "My Watched Items" list, which is accessible through 
 **Manage > My Watched Items**. Changes to the record will be tracked here.
 
 Match a Batch Media Import through a Relationship
@@ -296,7 +296,7 @@ Creating a New Metadata Element Through the UI
 
 **Problem**: Your system is already all set-up and contains lots of records that you don't want to override, but you've realized you need to add a whole new field.
 
-**Solution**: Go to **Manage > Administration** and click "Metadata Elements" on the left-hand navigation. On the top-right, click the plus-sign labeled "new." Give your field a name, description (if necessary), and unique code. Choose the datatype - is it simple text? A date range? A container that will hold other elements? Then, depending on which type you choose, fill out the datatype-specific options (roll over each for a description). At the bottom of the screen, click "Add type restriction" to bind your new element to the appropriate table. Once all of this has been taken care of, you can add it to the appropriate user interface. Click on the "edit" icon to the right of your chosen interface, and scroll down to "Screens." Click the editing icon next to the appropriate screen (such as "Basic Info") and drag your new element bundle from the list of "Available editor elements'' to the list of "Elements to display on this screen." See also `Configuring Metadata Elements <file:///Users/charlotteposever/Documents/ca_manual/providence/user/editing/metadataelements.html?highlight=metadata+elements>`_. 
+**Solution**: Go to **Manage > Administration** and click "Metadata Elements" on the left-hand navigation. On the top-right, click the plus-sign labeled "new." Give your field a name, description (if necessary), and unique code. Choose the datatype - is it simple text? A date range? A container that will hold other elements? Then, depending on which type you choose, fill out the datatype-specific options (roll over each for a description). At the bottom of the screen, click "Add type restriction" to bind your new element to the appropriate table. Once all of this has been taken care of, you can add it to the appropriate user interface. Click on the "edit" icon to the right of your chosen interface, and scroll down to "Screens." Click the editing icon next to the appropriate screen (such as "Basic Info") and drag your new element bundle from the list of "Available editor elements'' to the list of "Elements to display on this screen." See also `Configuring Metadata Elements <https://manual.collectiveaccess.org/providence/user/editing/metadataelements.html?highlight=metadata+elements>`_. 
 
 Downloading Search Results to Excel
 -----------------------------------

@@ -100,7 +100,7 @@ Select Dowload. The PDF will download, and look like:
 Reports from a Set
 ------------------
 
-Create a Set of records from the databse. For instructions and more information, see `Sets <file:///Users/charlotteposever/Documents/ca_manual/providence/user/workflow/sets.html?highlight=sets>`_. 
+Create a Set of records from the databse. For instructions and more information, see `Sets <https://manual.collectiveaccess.org/providence/user/workflow/sets.html?highlight=sets>`_. 
 
 Once the Set is created, navigate to the **Items** screen to add records to the Set. 
 

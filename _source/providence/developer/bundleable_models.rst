@@ -13,14 +13,14 @@ Addressing Data in Bundleable Models
 Types of Data
 -------------
 
-Each `primary table <file:///Users/charlotteposever/Documents/ca_manual/providence/user/dataModelling/primaryTables.html?highlight=primary+table>`_ in the CollectiveAccess database schema has a corresponding model class in *app/models*. 
+Each `primary table <https://manual.collectiveaccess.org/providence/user/dataModelling/primaryTables.html?highlight=primary+table>`_ in the CollectiveAccess database schema has a corresponding model class in *app/models*. 
 
 All models inherit from the *BaseModel* class, which provides a variety of basic functionality, including field-level data validation, generation of insert, update and delete SQL, support for "special" field types. These fields may include historic and inexact date ranges, processed media, and automated generation for field editing HTML, for example. Some models inherit from *BaseModelWithAttributes*, a subclass of *BaseModel* that provides attribute (user defined data fields based on the  **ca_metadata_elements table**) functionality for its subclasses. Being user defined allows for flexible run-time, and configurable cataloging schema. 
 
 Metadata Element and Attribute Model
 ------------------------------------
 
-The `metadata element <file:///Users/charlotteposever/Documents/ca_manual/providence/user/dataModelling/metadata.html>`_ and `attribute <file:///Users/charlotteposever/Documents/ca_manual/providence/developer/api_getting_data.html?highlight=attributes#attributes>`_ system in CollectiveAccess provides several benefits over standard SQL table-level fields, including:
+The `metadata element <https://manual.collectiveaccess.org/providence/user/dataModelling/metadata.html>`_ and `attribute <https://manual.collectiveaccess.org/providence/developer/api_getting_data.html?highlight=attributes#attributes>`_ system in CollectiveAccess provides several benefits over standard SQL table-level fields, including:
 
 1. Attributes may repeat
 2. Attributes may be comprised of multiple values arranged in a value hierarchy
@@ -33,9 +33,9 @@ Any model that inherits from *BaseModelWithAttributes* is effectively endowed wi
 Labelable Models
 ----------------
 
-`Attributes <file:///Users/charlotteposever/Documents/ca_manual/providence/developer/api_getting_data.html?highlight=attributes#attributes>`_ provide storage for all sorts of data. However, there are a few categories of information that play special roles in CollectiveAccess, and therefore require somewhat different handling. 
+`Attributes <https://manual.collectiveaccess.org/providence/developer/api_getting_data.html?highlight=attributes#attributes>`_ provide storage for all sorts of data. However, there are a few categories of information that play special roles in CollectiveAccess, and therefore require somewhat different handling. 
 
-One such category is **labels**. `Labels <file:///Users/charlotteposever/Documents/ca_manual/providence/user/dataModelling/labels.html?highlight=labels>`_ are names or titles for key cataloguing items such as Objects, Entities, Geographic Places, Collections, and Storage locations. Labels aren't just bits of text attached to a record; they are key to the identification of individual catalogued items and are required by the CollectiveAccess user interface in various locations. 
+One such category is **labels**. `Labels <https://manual.collectiveaccess.org/providence/user/dataModelling/labels.html?highlight=labels>`_ are names or titles for key cataloguing items such as Objects, Entities, Geographic Places, Collections, and Storage locations. Labels aren't just bits of text attached to a record; they are key to the identification of individual catalogued items and are required by the CollectiveAccess user interface in various locations. 
 
 Models that inherit from *BundleableLabelableBaseModelWithAttributes* are endowed with the ability to take on labels as well as attributes. When displaying a catalogued item, typically it will be identified by using the label methods provided by *BundleableLabelableBaseModelWithAttributes* to fetch the appropriate label. 
 
@@ -44,7 +44,7 @@ Models that inherit from *BundleableLabelableBaseModelWithAttributes* are endowe
 Intrinsic Fields
 ----------------
 
-There are a few basic fields, however, that are essential to any Collective Access database schema. Called `intrinsic fields <file:///Users/charlotteposever/Documents/ca_manual/providence/user/dataModelling/primaryTables.html?highlight=primary+table>`_, these data elements are implemented as standard database fields. They never repeat, and do not take attribute value types; they are restricted to the basic field types supported by *BaseModel*. 
+There are a few basic fields, however, that are essential to any Collective Access database schema. Called `intrinsic fields <https://manual.collectiveaccess.org/providence/user/dataModelling/primaryTables.html?highlight=primary+table>`_, these data elements are implemented as standard database fields. They never repeat, and do not take attribute value types; they are restricted to the basic field types supported by *BaseModel*. 
 
 There are relatively few intrinsic fields in CollectiveAccess. A few common intrinsic fields include:
 

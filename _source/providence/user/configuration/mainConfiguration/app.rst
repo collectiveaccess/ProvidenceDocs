@@ -815,7 +815,7 @@ Defines options available in the toolbar
 Enable dependent field visibility feature
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-See `Dependent Field Visibility <file:///Users/charlotteposever/Documents/ca_manual/providence/developer/dep_field.html?highlight=dependent+field+visibility>`_ for more information. 
+See `Dependent Field Visibility <https://manual.collectiveaccess.org/providence/developer/dep_field.html?highlight=dependent+field+visibility>`_ for more information. 
 
 .. code-block:: none
 

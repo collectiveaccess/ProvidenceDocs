@@ -20,7 +20,7 @@ Collective Access provides a REST API (Representational State Transfer Applicati
 
 .. note:: Most of the query examples described below assume that curl is installed. 
 
-For an introduction to development in CollectiveAccess, please see `API: Getting Data and Methods of Access <file:///Users/charlotteposever/Documents/ca_manual/providence/developer/api_getting_data.html>`_. 
+For an introduction to development in CollectiveAccess, please see `API: Getting Data and Methods of Access <https://manual.collectiveaccess.org/providence/developer/api_getting_data.html>`_. 
 
 Global parameters
 -----------------

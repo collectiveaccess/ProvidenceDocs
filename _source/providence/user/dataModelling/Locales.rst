@@ -29,4 +29,4 @@ Each CollectiveAccess user may select a preferred locale for their user interfac
 **Translating CollectiveAccess into a New Language**
 ----------------------------------------------------
 
-For information on how to translate CollectiveAccess into a language for which a translation does not yet exist, see the the page on creating `Translations <file:///Users/charlotteposever/Documents/ca_manual/providence/developer/translation.html?highlight=translations>`_.
+For information on how to translate CollectiveAccess into a language for which a translation does not yet exist, see the the page on creating `Translations <https://manual.collectiveaccess.org/providence/developer/translation.html?highlight=translations>`_.

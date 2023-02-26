@@ -5,7 +5,7 @@ Information Services
 * `Available Plugins`_ 
 * `Implementing New Plugins`_ 
 
-InformationService is a `metadata element type <file:///Users/charlotteposever/Documents/ca_manual/providence/user/dataModelling/metadata/informationServices.html>`_ that allows for the referencing of external web services as metadata attached to CollectiveAccess records. 
+InformationService is a `metadata element type <https://manual.collectiveaccess.org/providence/user/dataModelling/metadata/informationServices.html>`_ that allows for the referencing of external web services as metadata attached to CollectiveAccess records. 
 
 InformationService is also a plugin API that makes it easy to add support for other external services. The exact information stored locally differs from plugin to plugin.
 

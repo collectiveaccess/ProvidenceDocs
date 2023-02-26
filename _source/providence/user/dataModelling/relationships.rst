@@ -38,9 +38,9 @@ Within the hierarchy viewer are all the relationships and relationship types ava
 
 Relationships can be incorporated and defined within a data import mapping prior to a data import. 
 
-For pre-determined relationships that will be imported as such, it is necessary to define the relationships and their corresponding types directly in the import mapping. For instructions on creating an import mapping, downloading a starter template, and the necessary steps to incorporate related data, see `Creating an Import Mapping: Overview <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/c_creating_mapping.html>`_. 
+For pre-determined relationships that will be imported as such, it is necessary to define the relationships and their corresponding types directly in the import mapping. For instructions on creating an import mapping, downloading a starter template, and the necessary steps to incorporate related data, see `Creating an Import Mapping: Overview <https://manual.collectiveaccess.org/providence/user/import/c_creating_mapping.html>`_. 
 
-Relationships in a mapping will be defined simultaneously in the `Refinery Column <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/c_creating_mapping.html#column-6-refinery>`_ and in the `Refinery Parameters column <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/c_creating_mapping.html#column-7-refinery-parameters>`_. 
+Relationships in a mapping will be defined simultaneously in the `Refinery Column <https://manual.collectiveaccess.org/providence/user/import/c_creating_mapping.html#column-6-refinery>`_ and in the `Refinery Parameters column <https://manual.collectiveaccess.org/providence/user/import/c_creating_mapping.html#column-7-refinery-parameters>`_. 
 
 **Relationships in the User Interface**
 ---------------------------------------
@@ -56,7 +56,7 @@ Scrolling down on the left side of the list will enable the full list of possibl
 
 A variety of types are available to help best describe the data in any given database. 
 
-.. note:: If a data import requires related records, then refineries must be used to create relationships between data. For more, see the `Creating an Import Mapping: Overview <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/c_creating_mapping.html>`_, `Tutorial: Import Mapping Spreadsheet <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/c_import_tutorial.html>`_, and `Refineries and Refinery Parameters <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/mappings/refineries.html#import-mappings-refineries>`_. 
+.. note:: If a data import requires related records, then refineries must be used to create relationships between data. For more, see the `Creating an Import Mapping: Overview <https://manual.collectiveaccess.org/providence/user/import/c_creating_mapping.html>`_, `Tutorial: Import Mapping Spreadsheet <https://manual.collectiveaccess.org/providence/user/import/c_import_tutorial.html>`_, and `Refineries and Refinery Parameters <https://manual.collectiveaccess.org/providence/user/import/mappings/refineries.html#import-mappings-refineries>`_. 
 
 **Adding or Editing Relationships after Import**
 ------------------------------------------------

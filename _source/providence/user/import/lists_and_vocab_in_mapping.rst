@@ -5,7 +5,7 @@ Using Lists and Vocabularies in an Import Mapping Spreadsheet
 
 Lists and Vocabularies are important in determining a number of aspects about a data import. The Lists and Vocabularies in a CollectiveAccess system are often incorporated into an import mapping spreadsheet to define types of relationships, types of entities, and other information that will determine how data is imported. 
 
-For other uses of Lists and Vocabularies in CollectiveAccess, see `Lists and Vocabularies <file:///Users/charlotteposever/Documents/ca_manual/providence/user/editing/lists_and_vocab.html>`_. 
+For other uses of Lists and Vocabularies in CollectiveAccess, see `Lists and Vocabularies <https://manual.collectiveaccess.org/providence/user/editing/lists_and_vocab.html>`_. 
 
 How to find Lists and Vocabularies in CollectiveAccess
 ------------------------------------------------------
@@ -57,7 +57,7 @@ Here is an example taken from the Sample Import Mapping Spreadsheet (:download:`
    :scale: 50%
    :align: center
 
-Highlighted in red are the relationship type and entity type for the entitySplitter. These are defined in quotes as parts of the Parameter for each Refinery (see `Refineries and Refinery Parameters <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/mappings/refineries.html?highlight=refineries>`_ for more). These types can be found in Lists and Vocabularies. 
+Highlighted in red are the relationship type and entity type for the entitySplitter. These are defined in quotes as parts of the Parameter for each Refinery (see `Refineries and Refinery Parameters <https://manual.collectiveaccess.org/providence/user/import/mappings/refineries.html?highlight=refineries>`_ for more). These types can be found in Lists and Vocabularies. 
 
 When the types taken from Lists and Vocabularies, as well as Relationship Types (explained below), are put into the mapping, CollectiveAccess will know to create those specific types of relationships and records. Read on for a few examples of how to find the types and relationships needed in an import mapping spreadsheet. 
 

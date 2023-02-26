@@ -4,7 +4,7 @@ Lists and Vocabularies
 * `Creating a New List`_ 
 * `Adding Items to a List`_ 
 
-`Metadata elements <file:///Users/charlotteposever/Documents/ca_manual/providence/user/dataModelling/metadata.html?highlight=metadata+elements>`_ in a CollectiveAccess system must be defined before they can be added to a user interface. Fields that make up record metadata cannot be created within the context of an editor screen in the user interface. Instead, these elements are selected from a wide-ranging pool of available metadata elements, and added to the appropriate screens at the user’s discretion. Metadata elements are configurable, creating flexible and customizable cataloging options. 
+`Metadata elements <https://manual.collectiveaccess.org/providence/user/dataModelling/metadata.html?highlight=metadata+elements>`_ in a CollectiveAccess system must be defined before they can be added to a user interface. Fields that make up record metadata cannot be created within the context of an editor screen in the user interface. Instead, these elements are selected from a wide-ranging pool of available metadata elements, and added to the appropriate screens at the user’s discretion. Metadata elements are configurable, creating flexible and customizable cataloging options. 
 
 Lists and Vocabularies in CollectiveAccess refers to the metadata element values which are arranged and manipulated within a system (fields). They are, in fact, data points, which can be edited and adjusted through the user interface.
 

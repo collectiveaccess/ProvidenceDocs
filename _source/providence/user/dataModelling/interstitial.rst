@@ -126,7 +126,7 @@ Remember to save the new UI in order to add screens to it.
    :align: center
   
 
-6. Adding metadata elements to the interstitial data screen is the same process as adding metadata elements to a user interface as outlined in `User Interface Administration <file:///Users/charlotteposever/Documents/ca_manual/providence/user/editing/interfaces.html#user-interface-administration>`_. Navigate to **Screen content** to move the metadata elements onto the new screen.
+6. Adding metadata elements to the interstitial data screen is the same process as adding metadata elements to a user interface as outlined in `User Interface Administration <https://manual.collectiveaccess.org/providence/user/editing/interfaces.html#user-interface-administration>`_. Navigate to **Screen content** to move the metadata elements onto the new screen.
 
 .. figure:: interstitial6.png
    :scale: 50%
@@ -169,9 +169,9 @@ Scroll through this drop-down. Once the element is selected, follow the same ste
 Including Interstitial Data in an Import Mapping Spreadsheet
 ------------------------------------------------------------
 
-As noted above, interstitial data screens can be added by configuring the installation profile (see `Installation Profiles <file:///Users/charlotteposever/Documents/ca_manual/providence/user/dataModelling/Profiles.html>`_ for more), and interstitial data itself can be manually added through the user interface. However, it is useful to know how to include interstitial data in an import mapping. 
+As noted above, interstitial data screens can be added by configuring the installation profile (see `Installation Profiles <https://manual.collectiveaccess.org/providence/user/dataModelling/Profiles.html>`_ for more), and interstitial data itself can be manually added through the user interface. However, it is useful to know how to include interstitial data in an import mapping. 
 
-In `Refineries and Refinery Parameters <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/mappings/refineries.html?highlight=refineries>`_, Splitters, Joiners, and Builders can all use the **interstitial** refinery parameter. 
+In `Refineries and Refinery Parameters <https://manual.collectiveaccess.org/providence/user/import/mappings/refineries.html?highlight=refineries>`_, Splitters, Joiners, and Builders can all use the **interstitial** refinery parameter. 
 
 As a refinery parameter, **interstitial** sets or maps metadata for the interstitial movement relationship record by referencing the metadataElement code and the location in the data source where the data values can be found. Its exact function differs for each type of refinery. 
 
@@ -183,4 +183,4 @@ A general example of the Refinery column (left) and Refinery Parameters column (
    
 Where the interstitial data is a date of a relationship, and is being pulled from the source data column 4. 
 
-Examples for all types of Refineries with Refinery Parameters are available to view `here <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/mappings/refineries.html?highlight=refineries>`_. 
+Examples for all types of Refineries with Refinery Parameters are available to view `here <https://manual.collectiveaccess.org/providence/user/import/mappings/refineries.html?highlight=refineries>`_. 

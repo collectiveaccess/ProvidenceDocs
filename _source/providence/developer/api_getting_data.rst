@@ -15,7 +15,7 @@ API: Getting Data and Methods of Access
 * `Getting Data from Model Instances and Search Results`_ 
 * `Getting Data from Direct Databse Queries using the Db Class`_
 
-Getting data out of CollectiveAccess is one of the most commonly performed tasks when writing code. In a typical database application, executing `SQL queries <file:///Users/charlotteposever/Documents/ca_manual/providence/user/searchBrowse/searchEngines/sql.html>`_ yields results. Because it is a relational database, direct queries in Collective Access may return the same content in several languages, leaving you to figure out which is the most appropriate language to use. Therefore, there are three main methods of accessing data stored in CollectiveAccess. 
+Getting data out of CollectiveAccess is one of the most commonly performed tasks when writing code. In a typical database application, executing `SQL queries <https://manual.collectiveaccess.org/providence/user/searchBrowse/searchEngines/sql.html>`_ yields results. Because it is a relational database, direct queries in Collective Access may return the same content in several languages, leaving you to figure out which is the most appropriate language to use. Therefore, there are three main methods of accessing data stored in CollectiveAccess. 
 
 Use Direct SQL Queries on the Database
 --------------------------------------

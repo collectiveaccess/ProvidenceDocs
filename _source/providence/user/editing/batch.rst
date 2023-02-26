@@ -20,7 +20,7 @@ There are two ways to effectively Batch Edit records in CollectiveAccess:
 1. Batch editing using **sets**
 2. Batch editing sets using **search results**
 
-In order to batch-edit records, a set must be created and defined. For more on creating a Set and options for Sets, see `Sets <file:///Users/charlotteposever/Documents/ca_manual/providence/user/workflow/sets.html>`_.
+In order to batch-edit records, a set must be created and defined. For more on creating a Set and options for Sets, see `Sets <https://manual.collectiveaccess.org/providence/user/workflow/sets.html>`_.
 
 Batch Editing Using Sets
 ------------------------
@@ -53,7 +53,7 @@ Select “Execute Batch Edit" to save changes and make a batch edit.
 Batch Editing Sets Using Search Results
 ---------------------------------------
 
-Sets can also be quickly generated (and subsequently edited) based on a search term. For more information about searching and browsing, see `Search and Browse <file:///Users/charlotteposever/Documents/ca_manual/providence/user/searchBrowse/index.html?highlight=search+browse>`_. 
+Sets can also be quickly generated (and subsequently edited) based on a search term. For more information about searching and browsing, see `Search and Browse <https://manual.collectiveaccess.org/providence/user/searchBrowse/index.html?highlight=search+browse>`_. 
 
 Use the Browse function to search and find records to add to a Set. For example, Browsing for records that have media: 
 

@@ -9,7 +9,7 @@ Each scenario begins with a “problem,” describing a certain challenge or que
 
 Click on a scenario below in the Contents to view problems and solutions. For more support, please see the online `Support Forum <https://collectiveaccess.org/support/>`_, `Online Chat <https://gitter.im/collectiveaccess/support>`_, `Slack Channel for Developers <https://collectiveacc-uye7574.slack.com/join/signup#/domain-signup>`_, and `Back-end <https://github.com/collectiveaccess/providence>`_ and `Front-end <https://github.com/collectiveaccess/pawtucket2>`_ GitHub Repositories.  
 
-See also: `Creating an Import Mapping: Overview <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/c_creating_mapping.html>`_, `Tutorial: Import Mapping Spreadsheet <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/c_import_tutorial.html>`_, and `Running an Import <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/running.html>`_. 
+See also: `Creating an Import Mapping: Overview <https://manual.collectiveaccess.org/providence/user/import/c_creating_mapping.html>`_, `Tutorial: Import Mapping Spreadsheet <https://manual.collectiveaccess.org/providence/user/import/c_import_tutorial.html>`_, and `Running an Import <https://manual.collectiveaccess.org/providence/user/import/running.html>`_. 
 
 Contents
 --------
@@ -458,7 +458,7 @@ Changing the Maximum Number of Field Characters
 **Problem:** You've completed a data import but received the error: **[Field here] must be no more than 255 characters long.**
 
 **Solution:** A metadata element's maximum character count must be increased to fit the data being imported. To do so, navigate to **Manage > Administration > Metadata Elements.** The full list of available metadata elements will be displayed. Select the element that contains the error, and scroll down to **datatype specific options**, where the maximum (and minimum) character count can be viewed, and edited. 
-For more, please see `Configuring Metadata Elements <file:///Users/charlotteposever/Documents/ca_manual/providence/user/editing/metadataelements.html>`_. 
+For more, please see `Configuring Metadata Elements <https://manual.collectiveaccess.org/providence/user/editing/metadataelements.html>`_. 
 
 Setting the Correct Type
 ------------------------
@@ -474,7 +474,7 @@ Date and Time Format Errors
 **Problem:** You’ve completed a data import, but received the error: **[accession number] Failed to add value for date; values were _source =; Circa. 1940: Date of Object (From, To) is invalid.** 
 
 **Solution:** CollectiveAccess accepts a variety of date formats. However, in order for dates to import properly, an accepted format must be used. If a date is not formatted correctly, the date will simply not be imported. 
-To ensure that dates are formatted according to CA standards, please see `Date and Time Formats <file:///Users/charlotteposever/Documents/ca_manual/providence/user/dataModelling/metadata/dateTime.html?highlight=date>`_. 
+To ensure that dates are formatted according to CA standards, please see `Date and Time Formats <https://manual.collectiveaccess.org/providence/user/dataModelling/metadata/dateTime.html?highlight=date>`_. 
 
 Importing a Storage Location Hierarchy
 --------------------------------------
@@ -496,7 +496,7 @@ Importing a Storage Location Hierarchy
      "relationshipType": "current_location"
    }
 
-Where the storageLocationType is from the types list in CollectiveAccess, the hierarchicalStorageLocationTypes are taken from the types list in CollectiveAccess, and the relationshipType is taken from the relationship types list in CollectiveAccess. For more see `Mapping a Storage Location Hierarchy <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/mapping_storage_loc_hierarchy.html#import-mapping-storage-loc-hierarchy>`_. 
+Where the storageLocationType is from the types list in CollectiveAccess, the hierarchicalStorageLocationTypes are taken from the types list in CollectiveAccess, and the relationshipType is taken from the relationship types list in CollectiveAccess. For more see `Mapping a Storage Location Hierarchy <https://manual.collectiveaccess.org/providence/user/import/mapping_storage_loc_hierarchy.html#import-mapping-storage-loc-hierarchy>`_. 
 
 Creating Interstitial Data 
 --------------------------
@@ -518,7 +518,7 @@ Creating Interstitial Data
 	"relationshipType": "historic_location"
    }
 
-For more, see `Interstitial Data <file:///Users/charlotteposever/Documents/ca_manual/providence/user/dataModelling/interstitial.html#datamodelling-interstitial>`_. 
+For more, see `Interstitial Data <https://manual.collectiveaccess.org/providence/user/dataModelling/interstitial.html#datamodelling-interstitial>`_. 
 
 Mapping Multiple Source Data Values to a Single Notes Field
 -----------------------------------------------------------

@@ -8,7 +8,7 @@ Replication
 * `Replication Service`_ 
 * `Implementation Details`_ 
 
-Replication, available from CollectiveAccess Version 1.7, allows for the replication of data from one CollectiveAccess system to another. To do so, CollectiveAccess will use a specialized version of the `Web Service API <file:///Users/charlotteposever/Documents/ca_manual/providence/developer/web_service_api.html>`_. 
+Replication, available from CollectiveAccess Version 1.7, allows for the replication of data from one CollectiveAccess system to another. To do so, CollectiveAccess will use a specialized version of the `Web Service API <https://manual.collectiveaccess.org/providence/developer/web_service_api.html>`_. 
 
 Usage
 -----

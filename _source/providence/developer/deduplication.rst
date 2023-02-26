@@ -6,7 +6,7 @@ Deduplication
 * `Implementation Details`_ 
 * `Computing the Checksum`_
 
-As of CollectiveAccess version 1.7, **deduplication** is only available as a `command line utility <file:///Users/charlotteposever/Documents/ca_manual/providence/user/administration/caUtils.html?highlight=cautil>`_, and as part of the  `Replication <file:///Users/charlotteposever/Documents/ca_manual/providence/developer/Replication.html>`_ protocol. 
+As of CollectiveAccess version 1.7, **deduplication** is only available as a `command line utility <https://manual.collectiveaccess.org/providence/user/administration/caUtils.html?highlight=cautil>`_, and as part of the  `Replication <https://manual.collectiveaccess.org/providence/developer/Replication.html>`_ protocol. 
 
 Using Deduplication
 -------------------

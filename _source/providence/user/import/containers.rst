@@ -47,7 +47,7 @@ Individual source data can be mapped directly to these sub-elements within a Con
 
 Both fields above are mapped to their specific **ca_table_element.code**, and they are grouped together by the Group called "date." Instead of mapping to the bundle code of the container as a whole, it is important to map to the individual bundle code of the sub-element. 
 
-For more on the function of Groups, how to use Groups in an import mapping, and how to map source data into specific Containers in CollectiveAccess, please see `Creating an Import Mapping: Overview <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/c_creating_mapping.html>`_ and `Tutorial: Import Mapping Spreadsheet <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/c_import_column_overview.html>`_. 
+For more on the function of Groups, how to use Groups in an import mapping, and how to map source data into specific Containers in CollectiveAccess, please see `Creating an Import Mapping: Overview <https://manual.collectiveaccess.org/providence/user/import/c_creating_mapping.html>`_ and `Tutorial: Import Mapping Spreadsheet <https://manual.collectiveaccess.org/providence/user/import/c_import_column_overview.html>`_. 
 
-For more on the use of the Rule Type Constant, shown above, see `Using the Constant Rule Type in an Import Mapping Spreadsheet <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/import_ref_constant_rule.html#import-import-ref-constant-rule>`_. 
+For more on the use of the Rule Type Constant, shown above, see `Using the Constant Rule Type in an Import Mapping Spreadsheet <https://manual.collectiveaccess.org/providence/user/import/import_ref_constant_rule.html#import-import-ref-constant-rule>`_. 
 

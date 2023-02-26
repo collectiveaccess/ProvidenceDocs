@@ -21,18 +21,18 @@ Within Find, options exist within each primary table which determines the scope 
 Browse
 ------
 
-`Browse <file:///Users/charlotteposever/Documents/ca_manual/providence/user/searchBrowse/browse.html>`_ filters results by primary table, with additional facets that narrow down a search query within the database. Browse is a method for viewing all records of a specific type, and allows sorting and filtering records based on designated attributes, which are configurable. 
+`Browse <https://manual.collectiveaccess.org/providence/user/searchBrowse/browse.html>`_ filters results by primary table, with additional facets that narrow down a search query within the database. Browse is a method for viewing all records of a specific type, and allows sorting and filtering records based on designated attributes, which are configurable. 
 
 Browse is a search option in the local navigation bar under Find. Options for grouping search results will appear, and this selection will narrow any query. "Start Over" will erase any selected facets and begin a new Browse query. 
 
 QuickSearch
 -----------
 
-Using `QuickSearch <file:///Users/charlotteposever/Documents/ca_manual/providence/user/searchBrowse/quicksearch.html>`_ runs a full-text query across the entire database, and organizes results according to primary tables. QuickSearch is located at the top right of any CollectiveAccess user interface. The results provide a database-wide context for any search query. The top 100 results for a search query are displayed. QuickSearch will process queries with single words, numbers, or phrases. 
+Using `QuickSearch <https://manual.collectiveaccess.org/providence/user/searchBrowse/quicksearch.html>`_ runs a full-text query across the entire database, and organizes results according to primary tables. QuickSearch is located at the top right of any CollectiveAccess user interface. The results provide a database-wide context for any search query. The top 100 results for a search query are displayed. QuickSearch will process queries with single words, numbers, or phrases. 
 
 Advanced Search
 ---------------
 
-`Advanced Search <file:///Users/charlotteposever/Documents/ca_manual/providence/user/searchBrowse/forms.html>`_ is a query tool that allows searching on multiple fields across different tables, from a single form. CollectiveAccess Advanced Search Forms can be customized using the `Advanced Search Form Builder <file:///Users/charlotteposever/Documents/ca_manual/providence/user/searchBrowse/builder.html>`_, and there is no limit as to how many different forms can be used within the system.
+`Advanced Search <https://manual.collectiveaccess.org/providence/user/searchBrowse/forms.html>`_ is a query tool that allows searching on multiple fields across different tables, from a single form. CollectiveAccess Advanced Search Forms can be customized using the `Advanced Search Form Builder <https://manual.collectiveaccess.org/providence/user/searchBrowse/builder.html>`_, and there is no limit as to how many different forms can be used within the system.
 
 Advanced Search offers several different ways in which a result can be generated, searching on a Title, Object Identifier, Record Type, Access Setting, Display Name, or Record Status.

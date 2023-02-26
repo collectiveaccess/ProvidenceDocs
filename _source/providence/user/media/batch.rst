@@ -14,7 +14,7 @@ CollectiveAccess supports the upload of entire directories of media at once, als
 
 When a directory of media is uploaded, the media importer will do the following:
 
-* Generate new records for each file, which can be completed later by hand, or by using the `Batch Editor tool <file:///Users/charlotteposever/Documents/ca_manual/providence/user/editing/batch.html?highlight=batch+edit>`_. 
+* Generate new records for each file, which can be completed later by hand, or by using the `Batch Editor tool <https://manual.collectiveaccess.org/providence/user/editing/batch.html?highlight=batch+edit>`_. 
 
 * Match each file with existing records in CollectiveAccess
 
@@ -60,7 +60,7 @@ Use the **Import Target** drop-down (shown above) to set which primary table and
 
    The Import directory. 
 
-Check the inspector to find out what server directory is associated with the importer tool. By default, it is set to your installation's /import folder. However, the directory can be changed in `app.conf <file:///Users/charlotteposever/Documents/ca_manual/providence/user/configuration/mainConfiguration/app.html>`_.
+Check the inspector to find out what server directory is associated with the importer tool. By default, it is set to your installation's /import folder. However, the directory can be changed in `app.conf <https://manual.collectiveaccess.org/providence/user/configuration/mainConfiguration/app.html>`_.
 
 A hierarchy browser reflecting the import directory will be displayed. The hierarchy browser contains two settings under Directory to Import: 
 

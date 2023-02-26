@@ -29,7 +29,7 @@ Both options require an import mapping spreadsheet, and source data in a support
 
 To run a data import in the terminal or through the CollectiveAccess user interface, eight basic steps are involved: 
 
-1. **Create an import mapping spreadsheet.** This can be made in Excel or in Google Sheets, and will serve as a crosswalk between source data and the destination in CollectiveAccess. This step is necessary for either manner in which an import will be executed. See `Tutorial: Import Mapping Spreadsheet <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/c_import_tutorial.html>`_ for complete instructions. 
+1. **Create an import mapping spreadsheet.** This can be made in Excel or in Google Sheets, and will serve as a crosswalk between source data and the destination in CollectiveAccess. This step is necessary for either manner in which an import will be executed. See `Tutorial: Import Mapping Spreadsheet <https://manual.collectiveaccess.org/providence/user/import/c_import_tutorial.html>`_ for complete instructions. 
 2. **Create a backup of the database** by executing a data dump before running the import.
 3. **Run the import** from either the command line (terminal) or the graphical user interface in CollectiveAccess. 
 4. **Check the data** that has been imported in CollectiveAccess. Look for any errors or points of inconsistencies. Errors will usually show up in error messages during an import; however, it is necessary to conduct general quality checks in the system. 

@@ -12,7 +12,7 @@ How are CA table.element codes formatted?
 -----------------------------------------
 
 In an import mapping, **CA table.element** codes must be formatted and copied correctly. 
-Codes are divided into two components by a period. To the left is the **ca_table**, which corresponds to CollectiveAccess basic tables (see `Primary Tables <file:///Users/charlotteposever/Documents/ca_manual/providence/user/dataModelling/primaryTables.html?highlight=tables>`_). To the right is the **element_code**, which is simply the unique code assigned to any particular metadata element, or field, in a CollectiveAccess configuration.
+Codes are divided into two components by a period. To the left is the **ca_table**, which corresponds to CollectiveAccess basic tables (see `Primary Tables <https://manual.collectiveaccess.org/providence/user/dataModelling/primaryTables.html?highlight=tables>`_). To the right is the **element_code**, which is simply the unique code assigned to any particular metadata element, or field, in a CollectiveAccess configuration.
 
 The table used in the first part of the **CA table.element code**  will likely correspond (in most, but not all cases) to the table you declared in the Setting table of the import mapping spreadsheet.
 
@@ -24,9 +24,9 @@ Some common examples include:
 
 Where **ca_objects**, **ca_entities**, and **ca_storage_locations** are all referencing CollectiveAccess basic tables, and **preferred_labels** is referencing a specific field in CollectiveAccess. Fields will vary based on system configuration. 
 
-There are a few exceptions that require slightly different values to be placed in Column 3. See `Creating an Import Mapping: Overview <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/c_creating_mapping.html#column-3-ca-table-element>`_ and `Tutorial: Import Mapping Spreadsheet <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/c_import_tutorial.html>`_ for more. 
+There are a few exceptions that require slightly different values to be placed in Column 3. See `Creating an Import Mapping: Overview <https://manual.collectiveaccess.org/providence/user/import/c_creating_mapping.html#column-3-ca-table-element>`_ and `Tutorial: Import Mapping Spreadsheet <https://manual.collectiveaccess.org/providence/user/import/c_import_tutorial.html>`_ for more. 
 
-To import data of one basic table (like **ca_objects**) while also creating and related records of other tables (like **ca_entities**), use Refineries. For more, see `Refineries and Refinery Parameters <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/mappings/refineries.html?highlight=refineries>`_.
+To import data of one basic table (like **ca_objects**) while also creating and related records of other tables (like **ca_entities**), use Refineries. For more, see `Refineries and Refinery Parameters <https://manual.collectiveaccess.org/providence/user/import/mappings/refineries.html?highlight=refineries>`_.
 
 Finding Bundle Codes
 --------------------

@@ -246,7 +246,7 @@ Typical ExifTool output with these options should resemble this example:
 Creating Mappings
 -----------------
 
-Import of media embedded metadata is managed through the same `import mapping <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/c_creating_mapping.html>`_ system used for import of stand-alone datasets. All standard options are available when performing an import of embedded metadata. Embedded imports are always performed in the context of ``ca_object_representations`` records, and any relationships generated will be relative to the object representation record housing the imported media.
+Import of media embedded metadata is managed through the same `import mapping <https://manual.collectiveaccess.org/providence/user/import/c_creating_mapping.html>`_ system used for import of stand-alone datasets. All standard options are available when performing an import of embedded metadata. Embedded imports are always performed in the context of ``ca_object_representations`` records, and any relationships generated will be relative to the object representation record housing the imported media.
 
 MediaInfo
 *********

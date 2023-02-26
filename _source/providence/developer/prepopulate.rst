@@ -5,7 +5,7 @@ Prepopulate
 * `Prepopulate Rule Settings`_ 
 * `Flowchart`_ 
 
-As of Collective Access version 1.5, **prepopulate** automatically prepopulates fields in CollectiveAccess records based on `Display Templates <file:///Users/charlotteposever/Documents/ca_manual/providence/user/reporting/templates.html>`_ and `Expressions <file:///Users/charlotteposever/Documents/ca_manual/providence/user/reporting/expressions.html>`_.
+As of Collective Access version 1.5, **prepopulate** automatically prepopulates fields in CollectiveAccess records based on `Display Templates <https://manual.collectiveaccess.org/providence/user/reporting/templates.html>`_ and `Expressions <https://manual.collectiveaccess.org/providence/user/reporting/expressions.html>`_.
 
 Setup
 -----

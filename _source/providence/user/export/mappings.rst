@@ -41,9 +41,9 @@ To create a mapping, first download the Excel-based export mapping template avai
 
 :download:`Data Export Mapping Template <Data_Export_Mapping_template.xlsx>`
 
-Once all of the mappings and settings have been entered into the template it can be `loaded directly <file:///Users/charlotteposever/Documents/ca_manual/providence/user/export/mappings.html#running-an-export>`_ into CollectiveAccess. The mapping is automatically checked using format-specific rules before it is added, so if your mapping has any errors or ambiguities, the mapping loader will let you know.
+Once all of the mappings and settings have been entered into the template it can be `loaded directly <https://manual.collectiveaccess.org/providence/user/export/mappings.html#running-an-export>`_ into CollectiveAccess. The mapping is automatically checked using format-specific rules before it is added, so if your mapping has any errors or ambiguities, the mapping loader will let you know.
 
-Creating the mapping is dependent on the format you want to export. Specific notes and examples can be found in `Element Values and General Notes on Specific Formats <file:///Users/charlotteposever/Documents/ca_manual/providence/user/export/mappings.html#element-values-and-general-notes-on-specific-formats>`_. 
+Creating the mapping is dependent on the format you want to export. Specific notes and examples can be found in `Element Values and General Notes on Specific Formats <https://manual.collectiveaccess.org/providence/user/export/mappings.html#element-values-and-general-notes-on-specific-formats>`_. 
 
 Rule Types
 ----------
@@ -63,11 +63,11 @@ Some export formats support hierarchical relationships between mapping items. Fo
 Source
 ------
 
-The value for the 5th column in the mapping sheet can be any CollectiveAccess bundle specifier. See `API: Getting Data and Methods of Access <file:///Users/charlotteposever/Documents/ca_manual/providence/developer/api_getting_data.html>`_ for details. 
+The value for the 5th column in the mapping sheet can be any CollectiveAccess bundle specifier. See `API: Getting Data and Methods of Access <https://manual.collectiveaccess.org/providence/developer/api_getting_data.html>`_ for details. 
 
 This usually specifies the actual data that is pulled into this item, and can be set to arbitrary text for items with static content or be left empty for items without content (e.g. wrapping elements in XML, or empty columns in CSV).
 
-Note that if the context for the current mapping is changed, there are a couple of special keys available for the source column. For more information see the description for the `Context <file:///Users/charlotteposever/Documents/ca_manual/providence/user/export/mappings.html#options>`_ option in the table below.
+Note that if the context for the current mapping is changed, there are a couple of special keys available for the source column. For more information see the description for the `Context <https://manual.collectiveaccess.org/providence/user/export/mappings.html#options>`_ option in the table below.
 
 Element Values and General Notes on Specific Formats
 ----------------------------------------------------

@@ -7,11 +7,11 @@ Unlike mapping other records, mapping Object Lots requires some specifications i
 
 Firstly, to create separate and related object lot records from a table **other than** ca_object_lots, the Refinery **objectLotSplitter** is needed in the Refinery column of the import mapping spreadsheet. Since Refineries require Refinery Parameters, a Parameter is needed to define various aspects about the lot records. 
 
-Object Lots require more than just a label and a type defined in the Refinery Parameter column. Lots also have a non-optional **lot_status_id** value, taken from the Object Lot Statuses list in CollectiveAccess (see `Using Lists and Vocabularies in an Import Mapping Spreadsheet <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/lists_and_vocab_in_mapping.html?highlight=using+lists>`_). The **lot_status_id** must be set to a valid status value, or the lot will fail to insert during import. 
+Object Lots require more than just a label and a type defined in the Refinery Parameter column. Lots also have a non-optional **lot_status_id** value, taken from the Object Lot Statuses list in CollectiveAccess (see `Using Lists and Vocabularies in an Import Mapping Spreadsheet <https://manual.collectiveaccess.org/providence/user/import/lists_and_vocab_in_mapping.html?highlight=using+lists>`_). The **lot_status_id** must be set to a valid status value, or the lot will fail to insert during import. 
 
 In addition, the **ca_table.element_code** (Column 3 in the import mapping spreadsheet) must be set to **ca_objects.lot_id.** ID Numbers for ca_object_lots don’t map to the normal idno, but rather **ca_object_lots.idno_stub.**
 
-For more on Object Lots and their required or optional codes, see `Primary Tables and Intrinsic Fields <file:///Users/charlotteposever/Documents/ca_manual/providence/user/dataModelling/primaryTables.html?highlight=primary+tables#object-lots-ca-object-lots>`_. 
+For more on Object Lots and their required or optional codes, see `Primary Tables and Intrinsic Fields <https://manual.collectiveaccess.org/providence/user/dataModelling/primaryTables.html?highlight=primary+tables#object-lots-ca-object-lots>`_. 
 
 How to Map Object Lots
 ----------------------

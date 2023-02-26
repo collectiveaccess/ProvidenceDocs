@@ -91,7 +91,7 @@ Detailed configuration is contained in three blocks:
 Running an Export
 -----------------------------------
 
-See `Running an Export <file:///Users/charlotteposever/Documents/ca_manual/providence/user/export/mappings.html#running-an-export>`_. 
+See `Running an Export <https://manual.collectiveaccess.org/providence/user/export/mappings.html#running-an-export>`_. 
 
 Extending the Framework
 -----------------------------------

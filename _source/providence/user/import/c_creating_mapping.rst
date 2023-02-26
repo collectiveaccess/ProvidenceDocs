@@ -11,14 +11,14 @@ Introduction
 
 The purpose of an import mapping is to define specifically *how* and *where* source data will be imported into CollectiveAccess. Data must be imported into CollectiveAccess using an import mapping. 
 
-An import mapping is a spreadsheet (XLSX or GoogleSheets) that defines how data is imported into CollectiveAccess. This spreadsheet acts as a crosswalk, detailing where data is coming from outside of CollectiveAccess, and where that same data will go in CollectiveAccess. For a tutorial using the Sample Import Mapping Spreadsheet and Sample Import Data, please see `Tutorial: Import Mapping Spreadsheet <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/c_import_tutorial.html>`_. 
+An import mapping is a spreadsheet (XLSX or GoogleSheets) that defines how data is imported into CollectiveAccess. This spreadsheet acts as a crosswalk, detailing where data is coming from outside of CollectiveAccess, and where that same data will go in CollectiveAccess. For a tutorial using the Sample Import Mapping Spreadsheet and Sample Import Data, please see `Tutorial: Import Mapping Spreadsheet <https://manual.collectiveaccess.org/providence/user/import/c_import_tutorial.html>`_. 
 
 Each import mapping spreadsheet contains a set of intrinsic columns. A comprehensive description and function of these columns will be described below. Each import mapping also contains specific, customized Settings. Tables will be used to list possible options and the functions of each aspect of the spreadsheet in more detail. 
 
 Helpful Resources
 ^^^^^^^^^^^^^^^^^
 
-As the parts of a mapping are explained and a `Tutorial <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/c_import_tutorial.html>`_ is provided, it may be useful to download a sample mapping, sample data used to create the sample mapping, a sample installation profile, or a blank import mapping spreadsheet template, provided below. 
+As the parts of a mapping are explained and a `Tutorial <https://manual.collectiveaccess.org/providence/user/import/c_import_tutorial.html>`_ is provided, it may be useful to download a sample mapping, sample data used to create the sample mapping, a sample installation profile, or a blank import mapping spreadsheet template, provided below. 
 
 :download:`Sample Import Mapping Spreadsheet <sample_mapping_tutorial.xlsx>`
 
@@ -36,7 +36,7 @@ Parts of an Import Mapping: Settings, Columns, and More
 Settings
 --------
 
-Every import mapping requires general settings. Settings include the importer name, data format of the source data (for a comprehensive list of supported file formats, please see `Supported File Formats <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/mappings/formats.html?highlight=file+format>`_), the selected CollectiveAccess table, and more. This section can be placed at the top or bottom of a mapping spreadsheet. 
+Every import mapping requires general settings. Settings include the importer name, data format of the source data (for a comprehensive list of supported file formats, please see `Supported File Formats <https://manual.collectiveaccess.org/providence/user/import/mappings/formats.html?highlight=file+format>`_), the selected CollectiveAccess table, and more. This section can be placed at the top or bottom of a mapping spreadsheet. 
 
 Although the Settings are integrated into the spreadsheet, they do function separately from the main column-defined body of the import mapping.
 
@@ -79,9 +79,9 @@ A few of these are described below:
    :header-rows: 1
    :file: source_table1.csv
 
-A full description of the supported import formats and how they may be referenced in an import mapping is available in the `Supported File Formats <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/mappings/formats.html?highlight=file+format>`_ page.
+A full description of the supported import formats and how they may be referenced in an import mapping is available in the `Supported File Formats <https://manual.collectiveaccess.org/providence/user/import/mappings/formats.html?highlight=file+format>`_ page.
 
-.. Note:: In the example we're using for this tutorial, the sample data is in Excel. However, you may need to import data that is in an XML format. XML sources are cited in xPath, which is the standard syntax for retrieving data encoded in XML. Documentation regarding xPath be found `here <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/mappings/formats.html?highlight=xpath?>`_.
+.. Note:: In the example we're using for this tutorial, the sample data is in Excel. However, you may need to import data that is in an XML format. XML sources are cited in xPath, which is the standard syntax for retrieving data encoded in XML. Documentation regarding xPath be found `here <https://manual.collectiveaccess.org/providence/user/import/mappings/formats.html?highlight=xpath?>`_.
 
 Source data columns may also be referenced elsewhere in the import mapping (generally in the Options or Refinery columns described below) by prefixing the column number with a caret "^" (for example "^10"), which indicates to the mapping that the value from column 10 should be inserted.
 
@@ -100,14 +100,14 @@ When you are importing to simple free text, DateRange, Numeric, Currency, or oth
 
 .. note:: When creating Lot records in an import mapping, set the **ca_table.element_code** to **ca_objects.lot_id**. 
 
-However, there are a few cases where some additional steps are involved. For more, see `Containers <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/containers.html#import-containers>`_ and `Using Bundle Codes in an Import Mapping <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/import_ref_bundlecodes.html#import-import-ref-bundlecodes>`_. 
+However, there are a few cases where some additional steps are involved. For more, see `Containers <https://manual.collectiveaccess.org/providence/user/import/containers.html#import-containers>`_ and `Using Bundle Codes in an Import Mapping <https://manual.collectiveaccess.org/providence/user/import/import_ref_bundlecodes.html#import-import-ref-bundlecodes>`_. 
 
 .. _import_group:
 
 Column 4: Group
 ^^^^^^^^^^^^^^^
 
-In many cases, data will map into corresponding metadata elements bundled together in a `Container <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/containers.html#import-containers>`_. **Declaring a Group in Column 4 of an import mapping is a simple way to ensure that all of your mappings to a Container actually end up in the same place.** Group names are arbitrary; CollectiveAccess will recognize a group of any name for any number of metadata elements, as long as the name is consistent. 
+In many cases, data will map into corresponding metadata elements bundled together in a `Container <https://manual.collectiveaccess.org/providence/user/import/containers.html#import-containers>`_. **Declaring a Group in Column 4 of an import mapping is a simple way to ensure that all of your mappings to a Container actually end up in the same place.** Group names are arbitrary; CollectiveAccess will recognize a group of any name for any number of metadata elements, as long as the name is consistent. 
 
 To create a group, assign the arbitrary group name to a line in the Group column. This will direct the mapping to place rows of data into a single container. To make sure both the Date itself and the date type end up in the same instance of the Date container, simply assign them to the same group in the fourth mapping column.
 
@@ -129,22 +129,22 @@ skipIfEmpty     If the data value corresponding to this mapping is empty, skip t
 delimiter       Delimiter to split repeating values on.                                           delimiter value          {"delimiter": ";"}
 ==============  ================================================================================  =======================  =======================================
 
-Setting the delimiter option in the mapping ensures that values in the soruce data get parsed and imported to discrete instances of relevant fields. Without the delimiter option, the entire string would end up a single instance of the Subject field. For a full list of Options, see `Mapping Options <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/mappings/mappingOptions.html#import-mappings-mappingoptions>`_. 
+Setting the delimiter option in the mapping ensures that values in the soruce data get parsed and imported to discrete instances of relevant fields. Without the delimiter option, the entire string would end up a single instance of the Subject field. For a full list of Options, see `Mapping Options <https://manual.collectiveaccess.org/providence/user/import/mappings/mappingOptions.html#import-mappings-mappingoptions>`_. 
 
 .. _import_refinery:
 
 Column 6: Refinery
 ^^^^^^^^^^^^^^^^^^
 
-**A refinery is designed to take a specific data format and transform it via a specific behavior as it is imported into CollectiveAccess.** Refineries allow for greater complexity in data representation, and can be used to create separate but related records from the import spreadsheet. For more on Refineries, their definitions, types, and how to use them, see the `Refineries <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/mappings/refineries.html#import-mappings-refineries>`_ page. 
+**A refinery is designed to take a specific data format and transform it via a specific behavior as it is imported into CollectiveAccess.** Refineries allow for greater complexity in data representation, and can be used to create separate but related records from the import spreadsheet. For more on Refineries, their definitions, types, and how to use them, see the `Refineries <https://manual.collectiveaccess.org/providence/user/import/mappings/refineries.html#import-mappings-refineries>`_ page. 
 
 If a data import requires related records, then refineries must be used.  
 
 While you can get really complex with refinery parameters, at its most basic, a refinery simply creates a record, or matches on an existing record, and creates a relationship between it and the record you are importing directly from the source data.
 
-The **objectLotSplitter** requires a few extra settings, all of which are cited in our example mapping and detailed in `Mapping Object Lot Records in an Import Mapping Spreadsheet <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/mapping_object_lot_recs.html#import-mapping-object-lot-recs?>`_. 
+The **objectLotSplitter** requires a few extra settings, all of which are cited in our example mapping and detailed in `Mapping Object Lot Records in an Import Mapping Spreadsheet <https://manual.collectiveaccess.org/providence/user/import/mapping_object_lot_recs.html#import-mapping-object-lot-recs?>`_. 
 
-Lastly, Splitters aren't the only type of Refinery - they're just the most common. A complete list of Refineries and Splitters can be seen `here <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/mappings/refineries.html#import-mappings-refineries>`_. 
+Lastly, Splitters aren't the only type of Refinery - they're just the most common. A complete list of Refineries and Splitters can be seen `here <https://manual.collectiveaccess.org/providence/user/import/mappings/refineries.html#import-mappings-refineries>`_. 
 
 .. _import_parameters:
 
@@ -168,9 +168,9 @@ Columns 8 and 9: Original Values/Replacement Values
 
 In our sample data, there is a list element called "Reproduction" with values for reproduction, original, and unknown. In our source data, however, you'll notice that the data input for these values are abbreviated (e.g "orig", "repro", and "dontknow"). By using original and replacement values, our mapping transforms "orig" to "original" and "repro" to "reproduction" so that they can match on the list item code for the corresponding values in CollectiveAccess.
 
-.. note:: Original Values and Replacement Values are ideal for smaller replacements. For large transformation dictionaries, use the Option `transformValuesUsingWorksheet <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/mappings/mappingOptions.html?highlight=transformvaluesusingworksheet>`_. 
+.. note:: Original Values and Replacement Values are ideal for smaller replacements. For large transformation dictionaries, use the Option `transformValuesUsingWorksheet <https://manual.collectiveaccess.org/providence/user/import/mappings/mappingOptions.html?highlight=transformvaluesusingworksheet>`_. 
 
-For an example of when to use these columns and how, please see `Using Original and Replacement Values in an Import Mapping <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/orig_replace_example.html#import-orig-replace-example?>`_. 
+For an example of when to use these columns and how, please see `Using Original and Replacement Values in an Import Mapping <https://manual.collectiveaccess.org/providence/user/import/orig_replace_example.html#import-orig-replace-example?>`_. 
 
 .. _import_notes:
 

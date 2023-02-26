@@ -14,7 +14,7 @@ Basic Concepts: What is an Import Mapping?
 
 In order to import data into CollectiveAccess, it is necessary to define exactly *how* and *where* the source data will be imported. This information, along with other settings and criteria, is defined in an **import mapping spreadsheet.**
 
-An import mapping spreadsheet (XLSX or GoogleSheets) defines how data is imported into CollectiveAccess. This spreadsheet acts as a crosswalk, detailing where data is coming from outside of CollectiveAccess (source), and where that same data will go once it is in CollectiveAccess (destination). There are many settings and options available in an import mapping to help organize and manipulate source data, and to ensure that data gets imported in a logical way, while also meeting a variety of user needs. These settings and options are described in more detail on the `Creating an Import Mapping: Overview <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/c_creating_mapping.html>`_ page. 
+An import mapping spreadsheet (XLSX or GoogleSheets) defines how data is imported into CollectiveAccess. This spreadsheet acts as a crosswalk, detailing where data is coming from outside of CollectiveAccess (source), and where that same data will go once it is in CollectiveAccess (destination). There are many settings and options available in an import mapping to help organize and manipulate source data, and to ensure that data gets imported in a logical way, while also meeting a variety of user needs. These settings and options are described in more detail on the `Creating an Import Mapping: Overview <https://manual.collectiveaccess.org/providence/user/import/c_creating_mapping.html>`_ page. 
 
 Why Use an Import Mapping?
 --------------------------
@@ -30,7 +30,7 @@ Import mappings operate under two basic assumptions about the data being importe
 
 A **row** in an import mapping spreadsheet contains all the metadata about a single, specific record: title, date, location, and other metadata that is present in the source data, and is arbitrary to the data set(s). A **column** groups these metadata elements together: all titles, all dates, all locations, and so on. This organization through rows and columns is a key aspect of creating an import mapping. 
 
-.. note:: The exception to these assumptions is an option called *treatAsIdentifiersForMultipleRows* that will explode a single row into multiple records. This is very useful if you have a data source that references common metadata shared by many pre-existing records in a single row. See `Mapping Options <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/mappingOptions.html>`_ for more details.
+.. note:: The exception to these assumptions is an option called *treatAsIdentifiersForMultipleRows* that will explode a single row into multiple records. This is very useful if you have a data source that references common metadata shared by many pre-existing records in a single row. See `Mapping Options <https://manual.collectiveaccess.org/providence/user/import/mappingOptions.html>`_ for more details.
 
 .. note:: Excel Tip for Import Mapping Spreadsheets: Translating A, B, C… to 1, 2, 3… can be time-consuming. Excel’s preferences allow you to change columns to display numerically rather than alphabetically. Go to Excel Preferences and select “General.” Click “Use R1C1 reference style.” This will display the column values as numbers.
 
@@ -39,7 +39,7 @@ Supported Data Input Formats
 
 Data can only be imported into CollectiveAccess in a supported data format. Supported data formats include: XLXS, Exif, MODS, RDF, Vernon, FMPDSOResult, MediaBin, ResourceSpace, WordpressRSS, CSVDelimited, FMPXMLResult, MySQL, SimpleXML, WorldCat, CollectiveAccess (CA-to-CA imports), Inmagic, Omeka, TEI, iDigBio, EAD, MARC, PBCoreInst, TabDelimited, Excel, MARCXML, PastPerfectXML, and ULAN. 
 
-For more, see `Supported File Formats <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/mappings/formats.html?highlight=file+format>`_. 
+For more, see `Supported File Formats <https://manual.collectiveaccess.org/providence/user/import/mappings/formats.html?highlight=file+format>`_. 
 
 The following pages will walk the user through the different parts of an import mapping spreadsheet, how to create an import mapping, and finally, how to run a data import in CollectiveAccess using the import mapping. 
 

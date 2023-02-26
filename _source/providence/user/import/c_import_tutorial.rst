@@ -36,7 +36,7 @@ To create your own mapping, download the following template:
 
 Other useful resources for creating an import mapping: 
 
-`Import Reference Pages <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/import_reference.html>`_
+`Import Reference Pages <https://manual.collectiveaccess.org/providence/user/import/import_reference.html>`_
 
 `JSON Online Validator and Formatter <https://jsonlint.com/>`_ 
 
@@ -90,7 +90,7 @@ Rule Types are the first column in an import mapping. The rules that are set in 
 * **SKIP**: The row will not be imported. 
 * **Constant** The row will be set to a constant value. 
 * **Setting**: The row is a Setting. 
-* **Rule**: Rules will be applied to the mapping. For more, see `Rules <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/rules.html>`_. 
+* **Rule**: Rules will be applied to the mapping. For more, see `Rules <https://manual.collectiveaccess.org/providence/user/import/rules.html>`_. 
 
 .. note: Only rule types corresponding to specific settings in the import mapping should be set to Setting. For rows that correspond to data, do not use this rule type. 
 
@@ -100,7 +100,7 @@ The use of SKIP and Constant is arbitrary and will depend on the source data, wh
 
 Most importantly, in order to import any data into CollectiveAccess, rule types for data that will be imported must be set to Mapping (with a few exceptions; these will be explained and clarified further on in the tutorial). If the rule type is not set to Mapping for any data that needs to be included in the import, the data simply will not show up in CollectiveAccess. 
 
-See `here <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/c_creating_mapping.html#column-1-rule-types>`_ for details on Rule Types. 
+See `here <https://manual.collectiveaccess.org/providence/user/import/c_creating_mapping.html#column-1-rule-types>`_ for details on Rule Types. 
 
 Column 2: Source
 ----------------
@@ -130,7 +130,7 @@ The destination, or target, in CollectiveAccess for each column of source data i
 
 It is necessary to use a **ca_table.element_code** value in this column, as this declares the specific location where the source data will live once imported into CollectiveAccess. Each code corresponds to a specific metadata field in CollectiveAccess. 
 
-In the sample import mapping spreadsheet, most of these bundle codes begin with **ca_objects**, which refers to the `primary table <file:///Users/charlotteposever/Documents/ca_manual/providence/user/dataModelling/primaryTables.html?highlight=primary+table>`_. This is also defined in the **Table** in the Settings. These codes are explained in more detail `here <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/import_ref_bundlecodes.html#import-import-ref-bundlecodes>`_. 
+In the sample import mapping spreadsheet, most of these bundle codes begin with **ca_objects**, which refers to the `primary table <https://manual.collectiveaccess.org/providence/user/dataModelling/primaryTables.html?highlight=primary+table>`_. This is also defined in the **Table** in the Settings. These codes are explained in more detail `here <https://manual.collectiveaccess.org/providence/user/import/import_ref_bundlecodes.html#import-import-ref-bundlecodes>`_. 
 
 In the sample source data, Column 1 contains all Titles for the objects, while Column 2 contains all Identifiers belonging to the objects. In the sample import mapping spreadsheet, Column 1 (Titles: source) will be mapped in CollectiveAccess as **ca_objects.preferred_labels** (Titles: destination). Column 2 (Identifiers: source) will be mapped in CollectiveAccess as **ca_objects.idno** (Identifiers: destination), and so on. Simply match the contents of the source data with the corresponding field in CollectiveAccess. 
 
@@ -142,7 +142,7 @@ Data usually contains references to related tables, such as related Entities, Ob
 
    Column 7 mapped to **ca_entities.** 
 
-For more, see `Using Bundle Codes in an Import Mapping <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/import_ref_bundlecodes.html#import-import-ref-bundlecodes>`_. 
+For more, see `Using Bundle Codes in an Import Mapping <https://manual.collectiveaccess.org/providence/user/import/import_ref_bundlecodes.html#import-import-ref-bundlecodes>`_. 
 
 Column 4: Group
 ---------------
@@ -153,7 +153,7 @@ Column 4: Group
 
    Columns 3 and 4 of the sample import mapping, showing a custom group made for the Date field.
 
-Column 4 of the import mapping spreadsheet is used for declaring Groups. The presence of Groups is optional, but is required for metadata elements being mapped in a **Container**. A container is a metadata element or field that contains sub-elements; in the sample mapping, this metadata element is Date. Sub-elements defining the date and date type reside within the metadata element Date. Using Groups is a simple way to ensure that all mappings to a Container actually end up in the same Container instance. For more, see `Containers <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/containers.html#import-containers>`_. 
+Column 4 of the import mapping spreadsheet is used for declaring Groups. The presence of Groups is optional, but is required for metadata elements being mapped in a **Container**. A container is a metadata element or field that contains sub-elements; in the sample mapping, this metadata element is Date. Sub-elements defining the date and date type reside within the metadata element Date. Using Groups is a simple way to ensure that all mappings to a Container actually end up in the same Container instance. For more, see `Containers <https://manual.collectiveaccess.org/providence/user/import/containers.html#import-containers>`_. 
 
 In the sample import mapping, two sub-elements of **ca_objects.date** are declared as the bundle codes **ca_objects.date.date_value** and **ca_objects.date.date_type**. In order to import to specific sub-elements within a Container, the element codes for both the Container itself, **ca_objects.date**, as well as the code for the sub-element that is your ultimate target, **date_value** and **date_type**, must be cited. 
 
@@ -186,7 +186,7 @@ Row 8 of the import mapping spreadsheet corresponds to Source column 6 in the sa
 
 Using the **skipIfEmpty** option ensures that the empty value in this column does not get imported into the Collective Access system. Declaring the number one after the colon in the Option indicates that the cell will be skipped if empty (1= yes, 0= no). 
 
-For a list of common options used in an import mapping spreadsheet, see the table below. For a full list of mapping options, see `Mapping Options <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/mappings/mappingOptions.html?highlight=options>`_. 
+For a list of common options used in an import mapping spreadsheet, see the table below. For a full list of mapping options, see `Mapping Options <https://manual.collectiveaccess.org/providence/user/import/mappings/mappingOptions.html?highlight=options>`_. 
 
 .. csv-table:: 
    :header-rows: 1
@@ -213,7 +213,7 @@ To create new, separate, and related records for Entities and Object Lots, Refin
 
 Columns 7 and 8 in the source data contain values for Creators and Accessions. Note that in the sample import mapping, all records are being imported as **ca_objects** records. But, these two columns do not reference object metadata. By using the Refinery **EntitySplitter** for column 7, separate and related Entity records are made from the Creators column. By using the Refinery **ObjectLotSplitter** for column 8, separate and related Object Lot records are made from the Accession column. 
 
-See the table below for a list of common refineries. For a full list of refineries, see `Refineries and Refinery Parameters <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/mappings/refineries.html?highlight=refineries>`_. 
+See the table below for a list of common refineries. For a full list of refineries, see `Refineries and Refinery Parameters <https://manual.collectiveaccess.org/providence/user/import/mappings/refineries.html?highlight=refineries>`_. 
 
 .. csv-table::
    :header-rows: 1
@@ -231,11 +231,11 @@ Column 7: Refinery Parameters
 
 Refinery Parameters define the conditions for the refinery being used in the import mapping. Each time a Refinery is used in a mapping, a Refinery Parameter must be used to tell the importer exactly how to manipulate the source data, and create separate records. Like Options, Refinery parameters are written in code (JSON). 
 
-In the sample import mapping, the Refinery **EntitySplitter** indicates that separate and related Entity records will be created from the Creators column in the source data. The Refinery Parameter simply specifies the relationship type that these records will have to other object records in the import (creator), as well as specifies the type of entity being created (individual). See `Using Lists and Vocabularies in an Import Mapping <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/lists_and_vocab_in_mapping.html#import-lists-and-vocab-in-mapping>`_ for more. 
+In the sample import mapping, the Refinery **EntitySplitter** indicates that separate and related Entity records will be created from the Creators column in the source data. The Refinery Parameter simply specifies the relationship type that these records will have to other object records in the import (creator), as well as specifies the type of entity being created (individual). See `Using Lists and Vocabularies in an Import Mapping <https://manual.collectiveaccess.org/providence/user/import/lists_and_vocab_in_mapping.html#import-lists-and-vocab-in-mapping>`_ for more. 
 
 The Refinery **ObjectLotSplitter** indicates that separate and related Object Lot Records will be created from the Accession column in the source data. The Refinery Parameter specifies that these Object Lot records will be displayed as “gifts,” and will contain the Accession Number from column 9 in the source data. 
 
-See the table below for a list of common refinery parameters. For a full list of refineries and refinery parameters, see `Refineries and Refinery Parameters <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/mappings/refineries.html?highlight=refineries>`_. 
+See the table below for a list of common refinery parameters. For a full list of refineries and refinery parameters, see `Refineries and Refinery Parameters <https://manual.collectiveaccess.org/providence/user/import/mappings/refineries.html?highlight=refineries>`_. 
 
 .. csv-table::
    :header-rows: 1
@@ -262,7 +262,7 @@ In the sample import mapping, three values are present in row 12.
 
 However, these values do not exist in a predetermined list in CollectiveAccess. By using original and replacement values, upon import, these values are transformed from “orig” to “original,” from “repro” to “reproduction,” and from “dontknow” to “unknown,” so that these values can match on the list item code for any corresponding values in CollectiveAccess. This ensures important data is kept, but changes its formatting to match that in CollectiveAccess. 
 
-For more on the use of Original and Replacement Values, see `Use of Original Value/Replacement Value Columns <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/orig_replace_example.html>`_. 
+For more on the use of Original and Replacement Values, see `Use of Original Value/Replacement Value Columns <https://manual.collectiveaccess.org/providence/user/import/orig_replace_example.html>`_. 
 
 Column 9: Replacement Values
 ----------------------------
