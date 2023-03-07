@@ -124,8 +124,8 @@ To search the area within a specified radius of a point, use this kind of search
 
 As with the bounding box query, enclose the search expression in square brackets and quotes. The maximum distance from the point can be specified in any of the units of length supported by the "Length" attribute type. The above query will find anything geocoded as being within 5 kilometers of the specified point.
 
-Searching for Blank Values
---------------------------
+Searching for [BLANK] Values
+----------------------------
 
 As of version 1.4 you may search for item that have no content in a specific field using the special [BLANK] search term. [BLANK] must be used in conjunction with field specification and must be enclosed in double quotes. The following example will return all objects lacking descriptions:
 
