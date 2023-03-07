@@ -676,7 +676,7 @@ When using the ``targets`` option information about representations attached to 
 								limit: 5, 
 								table: "ca_entities",
 								restrictToTypes: ["individual"],
-								restrictToRelationshipTypes:["donor"],
+								restrictToRelationshipTypes:["artist"],
 								bundles: ["ca_entities.preferred_labels.displayname", "ca_entities.idno"]
 							}
 						]
@@ -723,7 +723,7 @@ When using the ``targets`` option information about representations attached to 
 
 The response would resemble:
 
-	.. code-block:: text
+.. code-block:: text
 
 	{
 		"ok": true,
@@ -1111,57 +1111,6 @@ The response would resemble:
 														"id": null,
 														"code": "0",
 														"value": "NAM0145",
-														"dataType": null
-													}
-												]
-											}
-										]
-									}
-								]
-							},
-							{
-								"relationship_typename": "location",
-								"relationship_typecode": "location",
-								"id": 1903,
-								"table": "ca_objects_x_entities",
-								"media": [],
-								"bundles": [
-									{
-										"name": "Display name (from name authorities)",
-										"code": "ca_entities.preferred_labels.displayname",
-										"dataType": "Container",
-										"values": [
-											{
-												"id": 777,
-												"value_id": null,
-												"locale": "en_US",
-												"value": "National Gallery of Art, Washington, District of Columbia",
-												"subvalues": [
-													{
-														"id": null,
-														"code": "displayname",
-														"value": "National Gallery of Art, Washington, District of Columbia",
-														"dataType": "Container"
-													}
-												]
-											}
-										]
-									},
-									{
-										"name": "Name Authority identifier (from name authorities)",
-										"code": "ca_entities.idno",
-										"dataType": "Container",
-										"values": [
-											{
-												"id": 0,
-												"value_id": null,
-												"locale": "en_US",
-												"value": "NAM0858",
-												"subvalues": [
-													{
-														"id": null,
-														"code": "0",
-														"value": "NAM0858",
 														"dataType": null
 													}
 												]
