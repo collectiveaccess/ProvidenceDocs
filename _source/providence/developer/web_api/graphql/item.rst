@@ -651,7 +651,7 @@ The response:
 Fetching related media representations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-When using the ``targets`` option information about representations attached to related records may be returned setting the ``includeMedia`` option on a target. By default information for the "thumbnail", "small", "medium", "large" and "original" media versions are returned. Use the ``mediaVersions`` option on the target return other media versions. Information for attached media includes original media attributes such as representation idno, name (label), MIME type, width, height, duration and primary status. Per-version attributes include url, MIME type, width, height, duration and filesize. The previous query with media returned for related objects:
+When using the ``targets`` option information about representations attached to related records may be returned setting the ``includeMedia`` option on a target. By default information for the "thumbnail", "small", "medium", "large" and "original" media versions are returned. Use the ``mediaVersions`` option on the target return other media versions. Information for attached media includes original media attributes such as representation idno, name (label), representation type, MIME type, width, height, duration and primary status. Per-version attributes include url, MIME type, width, height, duration and filesize. The previous query with media returned for related objects:
 
 
 .. code-block:: text
@@ -711,7 +711,7 @@ When using the ``targets`` option information about representations attached to 
 											}
 									},
 									media {
-										id, idno, name, mimetype, isPrimary, width, height, duration, 
+										id, idno, name, type, mimetype, isPrimary, width, height, duration, 
 										versions {
 											version, url, mimetype, width, height, duration, filesize
 										}
@@ -746,6 +746,7 @@ The response would resemble:
 										"id": "2013",
 										"idno": "4026",
 										"name": "[No Title]",
+										"type": "front",
 										"mimetype": "image/jpeg",
 										"isPrimary": true,
 										"width": 5201,
@@ -776,6 +777,7 @@ The response would resemble:
 										"id": "4134",
 										"idno": "8257",
 										"name": "[No Title]",
+										"type": "front",
 										"mimetype": "video/mp4",
 										"isPrimary": false,
 										"width": 640,
@@ -1125,6 +1127,8 @@ The response would resemble:
 			}
 		}
 	}
+	
+You may optionally restrict media returned type type using the optional ``restrictMediaToTypes`` option.
 	
 Limiting results using access values
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
