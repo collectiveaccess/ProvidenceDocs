@@ -48,7 +48,7 @@ Creating the mapping is dependent on the format you want to export. Specific not
 Rule Types
 ----------
 
-The first column of the main mapping spreadsheet is **Rule Type.** Similarly to Rule Types in an import mapping, in an export mapping, what you set here qualifies what this row does. There are several options available:
+The first column of the main mapping spreadsheet is **Rule Type.** Similarly to Rule Types in an `import mapping <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/c_import_tutorial.html#column-1-rule-types>`_, in an export mapping, what you set here qualifies what this row does. There are several options available:
 
 .. csv-table::
    :header-rows: 1
@@ -119,7 +119,7 @@ An example export for a single object looks like this then. Note that we selecte
 Variables
 ---------
 
-This feature allows you, using all the available features of the exporter, to assign a value to a user-defined identifier for later usage. The value can be anything you can pull from the database. The '''identifier''' should '''only contain alphanumeric text, dashes and underscores'''. Otherwise the mapping spreadsheet will fail to load. For example: type, my_variable, some-value, somethingCamelCase.
+This feature allows you, using all the available features of the exporter, to assign a value to a user-defined identifier for later usage. The value can be anything you can pull from the database. The "identifier" should only contain alphanumeric text, dashes and underscores. Otherwise the mapping spreadsheet will fail to load. For example: type, my_variable, some-value, somethingCamelCase.
 
 The identifier (essentially the name) that you assign to the variable goes into the element column. Since variable don't end up in the export, this column has no other use. Below is a simple example.
 
@@ -146,7 +146,7 @@ These are configuration options that apply to the whole exporter mapping.
 
 Options
 -------
-Each mapping item (i.e. a line in the mapping spreadsheet) can have its own settings as well. To set these settings, you can fill out the 6th column of the mapping sheet, called 'Options'. The options must be filled in in JavaScript Object Notation. If you set this value and it's not formatted properly, the mapping loading tool will throw an error. Here's a description of the available options:
+Each mapping item (i.e. a line in the mapping spreadsheet) can have its own settings as well. To set these settings, you can fill out the 6th column of the mapping sheet, called **Options**. The options must be filled in in JavaScript Object Notation. If you set this value and it's not formatted properly, the mapping loading tool will throw an error. Here's a description of the available options:
 
 .. csv-table::
    :widths: 15, 25, 40, 20
@@ -170,20 +170,22 @@ Processing Order
 In some cases the order in which the options and replacements (see next sub-section) are applied to each value can make a significant difference so it's important to note it here:
 
 1) skipIfExpression (available for v1.5)
+
 2) filterByRegExp
+
 3) Replacements (see below)
 
    a) If value is empty, respect 'default' setting
    b) If value is not empty, use prefix and suffix
 
-5) Truncate if result is longer than maxLength
+4) Truncate if result is longer than maxLength
 
 Replacements
 ------------
 
-While looking at the exporter mapping template you might have noticed that there's a second sheet called 'Replacements' in there. This can be used to assign replacements to each mapping item. The first column references the ID you set in the 2nd column of the mapping item table. The second column defines what is to be replaced. This again should be a PCRE-compatible regular expression without delimiters. The 3rd column defines what value should be inserted for the matched values. These conditions are applied to each matching value in the order they've been defined, i.e. if you have multiple replacements for the same mapping item, the incoming value is first passed through the first replacement, the result of this action is then passed in to the second replacement, and so on ...
+A second sheet called **Replacements** exists in the exporter mapping template. This can be used to assign replacements to each mapping item. The first column references the ID you set in the 2nd column of the mapping item table. The second column defines what is to be replaced. This again should be a PCRE-compatible regular expression without delimiters. The 3rd column defines what value should be inserted for the matched values. These conditions are applied to each matching value in the order they've been defined, i.e. if you have multiple replacements for the same mapping item, the incoming value is first passed through the first replacement, the result of this action is then passed in to the second replacement, and so on ...
 
-.. note:: **For advanced users and PHP programmers**, the values are passed through preg_replace, the 'pattern' being the 2nd column value (plus delimiters) and the 'replacement' being the value from the 3rd column. This allows you to do pretty nifty stuff, for instance rewriting dates:
+.. note:: **For advanced users and PHP programmers**: the values are passed through preg_replace, the 'pattern' being the 2nd column value (plus delimiters) and the 'replacement' being the value from the 3rd column. This allows you to do pretty nifty stuff, for instance rewriting dates:
 
 Search column:  (\w+) (\d+), (\d+)
 Replace column: $2 $1 $3
@@ -193,7 +195,7 @@ result: 15 April 2003
 Mapping Repetition
 ------------------
 
-The 'RepeatMappings' rule type allows you to repeat a set list of mappings in a different context without actually defining them again. This is, for instance, very useful when creating EAD exports of hierarchical data where the basic structure is always the same (for archdesc, c01, c02, etc.) but the context changes. It's basically a shortcut that saves a lot of work in certain scenarios. Note that all hierarchy children of the listed items are repeated as well.
+The *RepeatMappings* rule type allows you to repeat a set list of mappings in a different context without actually defining them again. This is, for instance, very useful when creating EAD exports of hierarchical data where the basic structure is always the same (for archdesc, c01, c02, etc.) but the context changes. It's basically a shortcut that saves a lot of work in certain scenarios. Note that all hierarchy children of the listed items are repeated as well.
 
 If you create a RepeatMappings rule, the mapping loader expects a comma-delimited list of references to the 2nd column in the Mapping sheet. It also really only makes sense to create this type of rule if you change the context in the same step. A simple example could look like this:
 
@@ -254,7 +256,9 @@ In most real-world export projects you'll need to export a set of records or eve
 3) Export a Diverse Set of Records ("RDF mode")
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-[For advanced users] The error handling in this portion of the code is very poor so you're pretty much left on an island if something goes wrong.
+.. note:: For advanced users only 
+
+The error handling in this portion of the code is very poor so you're pretty much left on an island if something goes wrong.
 
 Sometimes a limited export scope to for example ca_objects like in the previous example is not enough to meet the target format requirements. Occasionally you may want to build a kind of 'mixed' export where records from multiple database entities (objects, list items, places, ...) are treated equally. We have found this requirement when trying to use the exporter to generate an RDF graph, hence the name. The export framework originally wasn't designed for this case but the caUtils export-data command offers a way around that. The switch --rdf enables this so called "RDF mode". In this mode, you again use -f to specify the output file and you have to provide an additional configuration file (see Configuration_File_Syntax) which tells the exporter about the records and corresponding mappings which will be used for this export.
 
