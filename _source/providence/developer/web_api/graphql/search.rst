@@ -24,7 +24,7 @@ A typical ``search`` query might take the form:
 			table, 
 			search, 
 			count, 
-			results {
+			result {
 				id, 
 				table, 
 				idno, 
@@ -50,7 +50,7 @@ Note that the last entry in the ``bundles`` list is a :ref:`display template <di
             "table": "ca_objects",
             "search": "Drop the Dips",
             "count": 1,
-            "results": [
+            "result": [
                 {
                     "id": 10,
                     "table": "ca_objects",
@@ -117,7 +117,7 @@ Returned results can be limited to specified record types setting the ``restrict
 			table, 
 			search, 
 			count, 
-			results {
+			result {
 				id, 
 				table, 
 				idno, 
@@ -158,7 +158,7 @@ The ``find`` query takes most of the parameters used for ``search`` (``table``, 
 			table, 
 			search, 
 			count, 
-			results {
+			result {
 				id, 
 				table, 
 				idno, 
@@ -182,6 +182,640 @@ The ``criteria`` parameter is a list of field-level search criteria. Each criter
 		operator: IN, 
 		values: ["2020.22", "2020.55"]
 	}
+	
+Multiple searches or finds in a single query
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+For applications needing to launch multiple simultaneous searches (to query across several different record types, for example) issuing a separate request for each search can significantly impact performance. The API provides a method to wrap any number of searches or finds in a single GraphQL query. To execute multiple searches set the ``searches`` option with a list of searches, in this form:
+
+.. code-block:: text
+
+	query {
+	  search(
+		searches:[{
+			name:"entity_search",
+			table: "ca_entities",
+			search:"Berlin",
+			bundles: ["ca_entitiy.preferred_labels.displayname", "ca_entities.idno"],
+			restrictToTypes:["individual"],
+			start: 0,
+			limit: 5
+		}, {
+			name:"object_search",
+			table: "ca_objects",
+			search:"Berlin",
+			bundles: ["ca_objects.preferred_labels", "ca_objects.idno"],
+			start: 0,
+			limit: 5
+		}]
+	  )
+	  {
+		results {
+			name, count, result {
+		  id,
+		  table,
+		  idno,
+		  bundles {
+			code,
+			name,
+			dataType,
+			values {
+			  value,
+			  locale
+			}}
+		  }
+		}
+	  }
+	}
+
+This query will search for entities of type "individual" and objects of any type containing the word "Berlin". If will return up to five matching records for each. Note that each search may be named. These names are returned with results in the query response and may be used to pain results with queries. If the ``name`` option is not set it will default to the value of the ``table`` option. A typical response would resemble:
+
+.. code-block:: text
+
+	{
+		"ok": true,
+		"data": {
+			"search": {
+				"results": [
+					{
+						"name": "entity_search",
+						"count": 5,
+						"result": [
+							{
+								"id": 4,
+								"table": "ca_entities",
+								"idno": "NAM0001",
+								"bundles": [
+									{
+										"code": "ca_entities.preferred_labels.displayname",
+										"name": "Display name",
+										"dataType": "Text",
+										"values": [
+											{
+												"value": "Abate, Niccolò dell', 1509/1512-1571",
+												"locale": "en_US"
+											}
+										]
+									},
+									{
+										"code": "ca_entities.idno",
+										"name": "Name Authority identifier",
+										"dataType": "Text",
+										"values": [
+											{
+												"value": "NAM0001",
+												"locale": null
+											}
+										]
+									}
+								]
+							},
+							{
+								"id": 896,
+								"table": "ca_entities",
+								"idno": "NAM0980",
+								"bundles": [
+									{
+										"code": "ca_entities.preferred_labels.displayname",
+										"name": "Display name",
+										"dataType": "Text",
+										"values": [
+											{
+												"value": "Pseudo Jacopino di Francesco, c. 1325-1350",
+												"locale": "en_US"
+											}
+										]
+									},
+									{
+										"code": "ca_entities.idno",
+										"name": "Name Authority identifier",
+										"dataType": "Text",
+										"values": [
+											{
+												"value": "NAM0980",
+												"locale": null
+											}
+										]
+									}
+								]
+							},
+							{
+								"id": 903,
+								"table": "ca_entities",
+								"idno": "NAM0987",
+								"bundles": [
+									{
+										"code": "ca_entities.preferred_labels.displayname",
+										"name": "Display name",
+										"dataType": "Text",
+										"values": [
+											{
+												"value": "Quercia, Priamo della, active 1438-after 1467",
+												"locale": "en_US"
+											}
+										]
+									},
+									{
+										"code": "ca_entities.idno",
+										"name": "Name Authority identifier",
+										"dataType": "Text",
+										"values": [
+											{
+												"value": "NAM0987",
+												"locale": null
+											}
+										]
+									}
+								]
+							},
+							{
+								"id": 902,
+								"table": "ca_entities",
+								"idno": "NAM0986",
+								"bundles": [
+									{
+										"code": "ca_entities.preferred_labels.displayname",
+										"name": "Display name",
+										"dataType": "Text",
+										"values": [
+											{
+												"value": "Quercia, Jacopo della, 1371/1374-1438",
+												"locale": "en_US"
+											}
+										]
+									},
+									{
+										"code": "ca_entities.idno",
+										"name": "Name Authority identifier",
+										"dataType": "Text",
+										"values": [
+											{
+												"value": "NAM0986",
+												"locale": null
+											}
+										]
+									}
+								]
+							},
+							{
+								"id": 901,
+								"table": "ca_entities",
+								"idno": "NAM0985",
+								"bundles": [
+									{
+										"code": "ca_entities.preferred_labels.displayname",
+										"name": "Display name",
+										"dataType": "Text",
+										"values": [
+											{
+												"value": "Pütt, Johann Philipp von der, c. 1560/1562-1619",
+												"locale": "en_US"
+											}
+										]
+									},
+									{
+										"code": "ca_entities.idno",
+										"name": "Name Authority identifier",
+										"dataType": "Text",
+										"values": [
+											{
+												"value": "NAM0985",
+												"locale": null
+											}
+										]
+									}
+								]
+							}
+						]
+					},
+					{
+						"name": "object_search",
+						"count": 5,
+						"result": [
+							{
+								"id": 3227,
+								"table": "ca_objects",
+								"idno": "1330",
+								"bundles": [
+									{
+										"code": "ca_objects.preferred_labels",
+										"name": "Art object titles",
+										"dataType": "Container",
+										"values": [
+											{
+												"value": "Madonna and Child",
+												"locale": "en_US"
+											}
+										]
+									},
+									{
+										"code": "ca_objects.idno",
+										"name": "Object identifier",
+										"dataType": "Text",
+										"values": [
+											{
+												"value": "1330",
+												"locale": null
+											}
+										]
+									}
+								]
+							},
+							{
+								"id": 3379,
+								"table": "ca_objects",
+								"idno": "1872",
+								"bundles": [
+									{
+										"code": "ca_objects.preferred_labels",
+										"name": "Art object titles",
+										"dataType": "Container",
+										"values": [
+											{
+												"value": "Saint Margaret",
+												"locale": "en_US"
+											}
+										]
+									},
+									{
+										"code": "ca_objects.idno",
+										"name": "Object identifier",
+										"dataType": "Text",
+										"values": [
+											{
+												"value": "1872",
+												"locale": null
+											}
+										]
+									}
+								]
+							},
+							{
+								"id": 3179,
+								"table": "ca_objects",
+								"idno": "1798",
+								"bundles": [
+									{
+										"code": "ca_objects.preferred_labels",
+										"name": "Art object titles",
+										"dataType": "Container",
+										"values": [
+											{
+												"value": "Saint Apollonia",
+												"locale": "en_US"
+											}
+										]
+									},
+									{
+										"code": "ca_objects.idno",
+										"name": "Object identifier",
+										"dataType": "Text",
+										"values": [
+											{
+												"value": "1798",
+												"locale": null
+											}
+										]
+									}
+								]
+							},
+							{
+								"id": 485,
+								"table": "ca_objects",
+								"idno": "2087",
+								"bundles": [
+									{
+										"code": "ca_objects.preferred_labels",
+										"name": "Art object titles",
+										"dataType": "Container",
+										"values": [
+											{
+												"value": "The Baptism of Christ",
+												"locale": "en_US"
+											}
+										]
+									},
+									{
+										"code": "ca_objects.idno",
+										"name": "Object identifier",
+										"dataType": "Text",
+										"values": [
+											{
+												"value": "2087",
+												"locale": null
+											}
+										]
+									}
+								]
+							},
+							{
+								"id": 1578,
+								"table": "ca_objects",
+								"idno": "1223",
+								"bundles": [
+									{
+										"code": "ca_objects.preferred_labels",
+										"name": "Art object titles",
+										"dataType": "Container",
+										"values": [
+											{
+												"value": "Laocoön",
+												"locale": "en_US"
+											}
+										]
+									},
+									{
+										"code": "ca_objects.idno",
+										"name": "Object identifier",
+										"dataType": "Text",
+										"values": [
+											{
+												"value": "1223",
+												"locale": null
+											}
+										]
+									}
+								]
+							}
+						]
+					}
+				]
+			}
+		}
+	}
+	
+A similar construction may be used to execute several ``find`` operations in a single GraphQL query. Multiple find operations are defined in the ``finds`` option. For example to simultaneous find entity and object records: 
+
+.. code-block:: text
+
+	query {
+	  find(
+		finds:[{
+			name:"entity_find",
+			table: "ca_entities",
+			criteria:[{name:"ca_entities.preferred_labels.displayname", operator:LIKE, value:"%berlin%"}],
+			bundles: ["ca_entities.preferred_labels.displayname",
+			"ca_entities.idno"],
+			start: 0,
+			limit: 5
+		}, {
+			name:"object_find",
+			table: "ca_objects",
+			criteria:[{name:"ca_objects.preferred_labels.name", operator:LIKE, value:"%adoration%"}],
+			bundles: ["ca_objects.preferred_labels",
+			"ca_objects.idno"],
+			start: 0,
+			limit: 5
+		}]
+	  )
+	  {
+		results {
+			name, count, result {
+		  id,
+		  table,
+		  idno,
+		  bundles {
+			code,
+			name,
+			dataType,
+			values {
+			  value,
+			  locale
+			}}
+		  }
+		}
+	  }
+	}
+	
+A typical response would look like:
+
+.. code-block:: text
+
+	{
+		"ok": true,
+		"data": {
+			"find": {
+				"table": "ca_entities",
+				"count": 2,
+				"results": [
+					{
+						"result": [
+							{
+								"id": 20,
+								"table": "ca_entities",
+								"idno": "NAM0017",
+								"bundles": [
+									{
+										"code": "ca_entities.preferred_labels.displayname",
+										"name": "Display name",
+										"dataType": "Text",
+										"values": [
+											{
+												"value": "Allen Memorial Art Museum, Oberlin College, Oberlin, Ohio",
+												"locale": "en_US"
+											}
+										]
+									},
+									{
+										"code": "ca_entities.idno",
+										"name": "Name Authority identifier",
+										"dataType": "Text",
+										"values": [
+											{
+												"value": "NAM0017",
+												"locale": null
+											}
+										]
+									}
+								]
+							},
+							{
+								"id": 1187,
+								"table": "ca_entities",
+								"idno": "NAM1293",
+								"bundles": [
+									{
+										"code": "ca_entities.preferred_labels.displayname",
+										"name": "Display name",
+										"dataType": "Text",
+										"values": [
+											{
+												"value": "Berlinghieri, Bonaventura, active 13th century",
+												"locale": "en_US"
+											}
+										]
+									},
+									{
+										"code": "ca_entities.idno",
+										"name": "Name Authority identifier",
+										"dataType": "Text",
+										"values": [
+											{
+												"value": "NAM1293",
+												"locale": null
+											}
+										]
+									}
+								]
+							}
+						]
+					},
+					{
+						"result": [
+							{
+								"id": 1664,
+								"table": "ca_objects",
+								"idno": "44",
+								"bundles": [
+									{
+										"code": "ca_objects.preferred_labels",
+										"name": "Art object titles",
+										"dataType": "Container",
+										"values": [
+											{
+												"value": "A Gentleman in Adoration before the Madonna",
+												"locale": "en_US"
+											}
+										]
+									},
+									{
+										"code": "ca_objects.idno",
+										"name": "Object identifier",
+										"dataType": "Text",
+										"values": [
+											{
+												"value": "44",
+												"locale": null
+											}
+										]
+									}
+								]
+							},
+							{
+								"id": 817,
+								"table": "ca_objects",
+								"idno": "578",
+								"bundles": [
+									{
+										"code": "ca_objects.preferred_labels",
+										"name": "Art object titles",
+										"dataType": "Container",
+										"values": [
+											{
+												"value": "Coronation of the Virgin; Adoration of the Magi",
+												"locale": "en_US"
+											}
+										]
+									},
+									{
+										"code": "ca_objects.idno",
+										"name": "Object identifier",
+										"dataType": "Text",
+										"values": [
+											{
+												"value": "578",
+												"locale": null
+											}
+										]
+									}
+								]
+							},
+							{
+								"id": 1401,
+								"table": "ca_objects",
+								"idno": "2038",
+								"bundles": [
+									{
+										"code": "ca_objects.preferred_labels",
+										"name": "Art object titles",
+										"dataType": "Container",
+										"values": [
+											{
+												"value": "The Adoration of the Child",
+												"locale": "en_US"
+											}
+										]
+									},
+									{
+										"code": "ca_objects.idno",
+										"name": "Object identifier",
+										"dataType": "Text",
+										"values": [
+											{
+												"value": "2038",
+												"locale": null
+											}
+										]
+									}
+								]
+							},
+							{
+								"id": 1188,
+								"table": "ca_objects",
+								"idno": "2039",
+								"bundles": [
+									{
+										"code": "ca_objects.preferred_labels",
+										"name": "Art object titles",
+										"dataType": "Container",
+										"values": [
+											{
+												"value": "The Adoration of the Magi",
+												"locale": "en_US"
+											}
+										]
+									},
+									{
+										"code": "ca_objects.idno",
+										"name": "Object identifier",
+										"dataType": "Text",
+										"values": [
+											{
+												"value": "2039",
+												"locale": null
+											}
+										]
+									}
+								]
+							},
+							{
+								"id": 476,
+								"table": "ca_objects",
+								"idno": "2040",
+								"bundles": [
+									{
+										"code": "ca_objects.preferred_labels",
+										"name": "Art object titles",
+										"dataType": "Container",
+										"values": [
+											{
+												"value": "The Adoration of the Magi",
+												"locale": "en_US"
+											}
+										]
+									},
+									{
+										"code": "ca_objects.idno",
+										"name": "Object identifier",
+										"dataType": "Text",
+										"values": [
+											{
+												"value": "2040",
+												"locale": null
+											}
+										]
+									}
+								]
+							}
+						]
+					}
+				]
+			}
+		}
+	}
+	
+There is no restriction on the number of operations that may be executed, and multiple operations may be executed on the same table, each individually restricted and/or limited.
+
 	
 Record lookup by value using the ``exists`` query
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

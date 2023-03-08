@@ -214,3 +214,39 @@ The relationship type list returned is in the form:
 			}
 		}
 	}
+	
+The ``validateBundleCodes`` query provides a means to validate one or more bundle codes for a given table. Parameters include ``table`` and ``bundles`` (a list of bundle codes). The ``type`` parameter optionally restricts validation to the specified type. A typical query:
+
+.. code-block:: Text
+
+	query {
+		  validateBundleCodes(table: "ca_objects", bundles: ["ca_objects.preferred_labels", "ca_objects.a_bad_code", "ca_objects.idno"]) {
+			bundles {name, isValid}
+		  }
+	}
+	
+would return:
+
+.. code-block:: Text
+
+	{
+		"ok": true,
+		"data": {
+			"validateBundleCodes": {
+				"bundles": [
+					{
+						"name": "preferred_labels",
+						"isValid": true
+					},
+					{
+						"name": "a_bad_code",
+						"isValid": false
+					},
+					{
+						"name": "idno",
+						"isValid": true
+					}
+				]
+			}
+		}
+	}

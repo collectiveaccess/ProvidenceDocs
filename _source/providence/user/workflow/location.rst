@@ -60,6 +60,10 @@ An example ``history_tracking_policies`` configuration for workflow-based locati
 			current_location = {
 				name = _(Current location),
 				table = ca_objects,
+				contents = {
+					expandHierarchically = 1,
+					template = "^ca_object_representations.media.icon ^ca_objects.preferred_labels"
+				},
 				elements = {
 					ca_storage_locations = {
 						__default__ = {
@@ -97,7 +101,9 @@ An example ``history_tracking_policies`` configuration for workflow-based locati
 			}  
 	 }
 	 
-Within the ``policies`` section are settings for each configured policy. In the example, a single policy with the code ``current_location`` is defined. Within each policy are entries for ``name`` (the display name of the policy), ``table`` (the tables to which this policy applies) and ``elements``. 
+Within the ``policies`` section are settings for each configured policy. In the example, a single policy with the code ``current_location`` is defined. Within each policy are entries for ``name`` (the display name of the policy), ``table`` (the tables to which this policy applies), ``contents`` and ``elements``. 
+
+``Contents`` sets default configuration values for the current contents bundle when displaying this policy. (See the "The current contents bundle" section below for more information on use of this bundle). These defaults may be overriden by setting option values for the placement of the bundle in the user interface. Options include ``expandHierarchically`` (show contents of child locations)  and ``template`` (template used for display of each item in the contents list). 
 
 ``Elements`` defines the various types of data used by the policy to determine current location. Each key is a :ref:`table <primary_tables>` name. Within each table block are entries for types. The special ``__default__`` type is used to match any type not explicitly listed for the table. In the example the configuration for storage locations (ca_storage_locations) applies to all types of locations. The ca_occurrences entry includes a configuration specifically for occurrences of type "exhibition", and a default configuration for all other types.
 
