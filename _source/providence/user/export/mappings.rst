@@ -41,9 +41,9 @@ To create a mapping, first download the Excel-based export mapping template avai
 
 :download:`Data Export Mapping Template <Data_Export_Mapping_template.xlsx>`
 
-Once all of the mappings and settings have been entered into the template it can be `loaded directly <file:///Users/charlotteposever/Documents/ca_manual/providence/user/export/mappings.html#running-an-export>`_ into CollectiveAccess. The mapping is automatically checked using format-specific rules before it is added, so if your mapping has any errors or ambiguities, the mapping loader will let you know.
+Once all of the mappings and settings have been entered into the template it can be `loaded directly <https://manual.collectiveaccess.org/providence/user/export/mappings.html#running-an-export>`_ into CollectiveAccess. The mapping is automatically checked using format-specific rules before it is added, so if your mapping has any errors or ambiguities, the mapping loader will let you know.
 
-Creating the mapping is dependent on the format you want to export. Specific notes and examples can be found in `Element Values and General Notes on Specific Formats <file:///Users/charlotteposever/Documents/ca_manual/providence/user/export/mappings.html#element-values-and-general-notes-on-specific-formats>`_. 
+Creating the mapping is dependent on the format you want to export. Specific notes and examples can be found in `Element Values and General Notes on Specific Formats`_. 
 
 Rule Types
 ----------
