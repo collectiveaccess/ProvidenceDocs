@@ -7,8 +7,8 @@ Translation
 * `Creating a Localization File for the date/time Parser`_ 
 * `Localizing an Installation Profile`_ 
 * `Installation-Specific Translations`_ 
-* `Translating Pawtucket`_ 
-* `Sharing Your Translation`_  
+* `Translating Pawtucket`_  
+* `Sharing Your Translation`_ 
 
 CollectiveAccess is designed to be fully localizable. We are working to get CA translated for use in as many languages and locales as possible. If you wish to help us translate CA into your language,  email us at info@collectiveaccess.org. To learn more about the mechanics of creating a new translation, read on.
 
