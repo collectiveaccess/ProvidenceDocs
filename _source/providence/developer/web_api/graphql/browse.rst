@@ -1,10 +1,6 @@
 .. _developer_api_graphql_browse:
 
 Browsing (endpoint name ``Browse``)
-====================================
-
-Item-level data access (endpoint name ``Item``)
-================================================
 
 The Browse service provides access to CollectiveAccess' faceted browse functionality. Facets are defined in the ``browse.conf`` file for each table. 
 
