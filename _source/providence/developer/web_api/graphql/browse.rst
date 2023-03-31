@@ -1,6 +1,7 @@
 .. _developer_api_graphql_browse:
 
 Browsing (endpoint name ``Browse``)
+====================================
 
 The Browse service provides access to CollectiveAccess' faceted browse functionality. Facets are defined in the ``browse.conf`` file for each table. 
 
