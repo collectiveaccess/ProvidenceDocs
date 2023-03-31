@@ -300,9 +300,9 @@ A browse without filter criteria will match all available records. As criteria a
 	
 In addition to adding the filter value, ``addFilterValue`` can also return results for the newly refined browse (``items``), as well as display media for items (``items`` >> ``media``) and a list of currently applied criteria (``filters``).
 
-.. code-block:: text
-
 A typical response:
+
+.. code-block:: text
 
 	{
 		"ok": true,
