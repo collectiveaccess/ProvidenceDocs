@@ -137,8 +137,9 @@ The query will return:
 	
 Including bundles referring to related tables will include relationship data in the item response. For example, adding `ca_entities` to the query would return:
 
-TODO: add note about ids
+.. note::
 
+	The ``identifier`` parameter value matches records using either CollectiveAccess ID (an application-generated unique integer value) or ``idno`` (a user-set alphanumeric value that is typically, but not necessarily, unique). Matching is performed first on CollectiveAccess ID and then on ``idno`` values. While ``idno`` values typically include letters and punctation that clearly distinguish them from purely integer CollectiveAccess IDs, this is not always the case. Use of integers for ``idno`` values will introduce ambiguities as a value may match both CollectiveAccess ID and ``idno`` values. To constrain which values are used for matching set the ``id`` or ``idno`` input parameters instead of ``identifier``. ``id`` will match only on CollectiveAccess IDs. ``idno`` will match only on user-set ``idno`` values.
 
 Fetching relationships for an item
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
