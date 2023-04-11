@@ -1,7 +1,7 @@
 .. _developer_api_graphql_lightbox:
 
-Browsing (endpoint name ``Lightbox``)
-====================================
+Lightbox/set management (endpoint name ``Lightbox``)
+====================================================
 
 The Lightbox service provides access to CollectiveAccess' back-end ``sets`` functionality, which is usually referred to as ``Lightbox`` on public-facing front-end interfaces, such as the interface provided by Pawtucket2.
 
