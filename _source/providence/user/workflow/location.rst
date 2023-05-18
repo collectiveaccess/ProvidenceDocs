@@ -398,7 +398,7 @@ the name of the additional template to use. For example,
 
 will display the current location value using the "simplePath" template, rather than the more complex default template.
 
-.. note:: If the additional template name referenced by the ``useTemplate`` option is not defined for the current value's policy element. the element's default ``template`` will be used.
+.. note:: If the additional template name referenced by the ``useTemplate`` option is not defined for the current value's policy element the element's default ``template`` will be used.
 
 .. tip:: When using ``additionalTemplates`` with policies that include more than one element, it is 
 advisable to define the same set of named templates for each element. This will ensure that a value will be displayed regardless of 
