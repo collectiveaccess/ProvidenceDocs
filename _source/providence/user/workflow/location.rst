@@ -355,7 +355,7 @@ Current value information may be included in :ref:`display templates <reporting/
 
 By default the current value will be displayed using the ``template`` set for the relevant policy element. Additional named templates may
 be defined for policy elements using the optional ``additionalTemplates`` entry. Each key/value pair within ``additionalTemplates`` defines 
-a name, and a template. For example:
+a name and a template. For example:
 
 ::
 
@@ -389,7 +389,7 @@ a name, and a template. For example:
 		} 
 	}
 
-Additional templates may be used in place of the policy element's default template by passing the ``useTemplate`` option set to 
+Additional templates may be used in place of the policy element's default ``template`` by passing the ``useTemplate`` option set to 
 the name of the additional template to use. For example,
 
 ::
@@ -401,8 +401,8 @@ will display the current location value using the "simplePath" template, rather 
 .. note:: If the additional template name is not defined for the current value's policy element. the element's default
 ``template`` will be used.
 
-.. tip:: When using ``additionalTemplates`` with policies that include more than one element, it is usually 
-advisable to define the same set of named templates for each element. This ensures a value will be displayed regardlesss of 
+.. tip:: When using ``additionalTemplates`` with policies that include more than one element, it is 
+advisable to define the same set of named templates for each element. This ensures a value will be displayed regardless of 
 the type of current value. 
 
 
