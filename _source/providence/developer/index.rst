@@ -18,7 +18,6 @@ Providence developer guide
    Configuration Sync <config_sync.rst>
    Configuring Displays <config_displays.rst>
    Deduplication <deduplication.rst>
-   Prepopulate <prepopulate.rst>
    Pawtucket2: Plugin Hooks <plugin_hooks.rst>
    Dependent Field Visibility <dep_field.rst>
    Pawtucket Directory Layout <directory_layout.rst>
