@@ -215,9 +215,9 @@ matchOn
 
       ``{""matchOn"": [""labels"", ""idno""]}`` -Will try to match on labels first, then idno.
 
-``{""matchOn"": [""idno"", ""labels""]}`` - Will do the opposite, first idno and then labels.
+      ``{""matchOn"": [""idno"", ""labels""]}`` - Will do the opposite, first idno and then labels.
 
-You can also limit matching by doing one or the other. Eg:
-{""matchOn"": ""idno""]} will only match on idno.
+      You can also limit matching by doing one or the other. Eg:
+      {""matchOn"": ""idno""]} will only match on idno.
 
-{""matchOn"": [""^ca_collections.your_custom_code""]} will match on a custom metadata element in the collection record. Use the syntax ^ca_collections.metadataElement code.
+      {""matchOn"": [""^ca_collections.your_custom_code""]} will match on a custom metadata element in the collection record. Use the syntax ^ca_collections.metadataElement code.
