@@ -18,7 +18,7 @@ Each import mapping spreadsheet contains a set of intrinsic columns. A comprehen
 Helpful Resources
 ^^^^^^^^^^^^^^^^^
 
-As the parts of a mapping are explained and a `Tutorial <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/c_import_tutorial.html>`_ is provided, it may be useful to download a sample mapping, sample data used to create the sample mapping, a sample installation profile, or a blank import mapping spreadsheet template, provided below. 
+As the parts of a mapping are explained and a `Tutorial <https://manual.collectiveaccess.org/providence/user/import/c_import_tutorial.html>`_ is provided, it may be useful to download a sample mapping, sample data used to create the sample mapping, a sample installation profile, or a blank import mapping spreadsheet template, provided below. 
 
 :download:`Sample Import Mapping Spreadsheet <sample_mapping_tutorial.xlsx>`
 
@@ -36,7 +36,7 @@ Parts of an Import Mapping: Settings, Columns, and More
 Settings
 --------
 
-Every import mapping requires general settings. Settings include the importer name, data format of the source data (for a comprehensive list of supported file formats, please see `Supported File Formats <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/mappings/formats.html?highlight=file+format>`_), the selected CollectiveAccess table, and more. This section can be placed at the top or bottom of a mapping spreadsheet. 
+Every import mapping requires general settings. Settings include the importer name, data format of the source data (for a comprehensive list of supported file formats, please see `Supported File Formats <https://manual.collectiveaccess.org/providence/user/import/introduction.html>`_), the selected CollectiveAccess table, and more. This section can be placed at the top or bottom of a mapping spreadsheet. 
 
 Although the Settings are integrated into the spreadsheet, they do function separately from the main column-defined body of the import mapping.
 
