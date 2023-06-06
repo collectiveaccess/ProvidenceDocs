@@ -129,7 +129,7 @@ skipIfEmpty     If the data value corresponding to this mapping is empty, skip t
 delimiter       Delimiter to split repeating values on.                                           delimiter value          {"delimiter": ";"}
 ==============  ================================================================================  =======================  =======================================
 
-Setting the delimiter option in the mapping ensures that values in the soruce data get parsed and imported to discrete instances of relevant fields. Without the delimiter option, the entire string would end up a single instance of the Subject field. For a full list of Options, see `Mapping Options <file:///Users/charlotteposever/Documents/ca_manual/providence/user/import/mappings/mappingOptions.html#import-mappings-mappingoptions>`_. 
+Setting the delimiter option in the mapping ensures that values in the soruce data get parsed and imported to discrete instances of relevant fields. Without the delimiter option, the entire string would end up a single instance of the Subject field. For a full list of Options, see `Mapping Options <https://manual.collectiveaccess.org/providence/user/import/mappings/mappingOptions.html>`_. 
 
 .. _import_refinery:
 
