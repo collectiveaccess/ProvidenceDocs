@@ -22,6 +22,7 @@ sourceMap,"A dictionary mapping sub-element codes in a source container (specifi
 			edition_dimension_types = edition_dimension_types,
 			edition_dimensions_notes = edition_dimensions_notes
 		}"
+omitFromIsSetCheck,"A list of container elements to skip values checks for when determining if the target container already contains a value", "A list of element codes", "[edition_dimension_types]"
 skipIfExpression,"An optional expression that controls if the rule is applied. The expression is evaluated relative to the currently edited record. If the result is true, the rule will not be applied for the current record.",A valid :ref:`expression <expressions>`,^ca_objects.object_status_new !~ /deaccessioned/
 context,"Controls how relationships are prepopulated.  Options include
 

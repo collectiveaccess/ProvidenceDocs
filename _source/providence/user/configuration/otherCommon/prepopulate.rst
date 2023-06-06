@@ -37,7 +37,7 @@ An example ``prepopulate_rules`` dictionary with a single rule with code ``test_
          restrictToTypes = [artwork],
 
          # mode determines handling of existing values in target element
-         # can be overwrite, or addIfEmpty
+         # can be merge, overwrite, overwriteIfSet or addIfEmpty
          # See the 'target' setting below 
          mode = addIfEmpty,
 
@@ -131,13 +131,16 @@ An example configuration for replicating container values in their entirety from
 				edition_dimensions_width = edition_dimensions_width,
 				edition_dimension_types = edition_dimension_types,
 				edition_dimensions_notes = edition_dimensions_notes
-			}
+			},
+			omitFromIsSetCheck = [edition_dimension_types]
 		}
+
+When determining if a container is empty or not (when mode is ``addIfEmpty``), each element in the container will be checked. If any element contains a non-empty value the container will be considered populated. If the container includes elements that are never empty (Eg. drop-down lists with default values) then it may be necessary to skip consideration of those elements to make an accurate determination. As of version 1.8, the ``omitFromIsSetCheck`` option may be set to a list of element codes to skip. In the example above, ``edition_dimension_types`` is not checked when determining if the target container has existing values.
 
 Settings
 --------
 
-The following settings are available when configuring `Prepopulate <file:///Users/charlotteposever/Documents/ca_manual/providence/developer/prepopulate.html>`_ rules:
+The following settings are available when configuring Prepopulate rules:
 
 .. csv-table::
    :widths: auto

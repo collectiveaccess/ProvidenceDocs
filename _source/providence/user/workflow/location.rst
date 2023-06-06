@@ -353,6 +353,58 @@ Current value information may be included in :ref:`display templates <reporting/
    :header-rows: 1
    :file: location_display_tags.csv
 
+By default the current value will be displayed using the ``template`` set for the relevant policy element. Additional named templates may
+be defined for policy elements using the optional ``additionalTemplates`` entry. Each key/value pair within ``additionalTemplates`` defines 
+a name and a template. For example:
+
+::
+
+	history_tracking_policies = {
+		defaults = { 
+			ca_objects = current_location
+		},
+		policies = {
+			current_location = {
+				name = _(Current location),
+				table = ca_objects,
+				elements = {
+					ca_storage_locations = {
+						__default__ = {
+							date = ca_objects_x_storage_locations.effective_date,
+							setInterstitialElementsOnAdd = [effective_date],
+							useDatePicker = 0,
+							template = "<p><l>^ca_storage_locations.hierarchy.preferred_labels%delimiter=_➜_</l><br/>^ca_storage_locations.location_notes</p>",
+							trackingRelationshipType = Current,
+							restrictToRelationshipTypes = [Current],
+							color = "#cccc00",
+							
+							additionalTemplates = {
+								simplePath = ^ca_storage_locations.hierarchy.preferred_labels%delimiter=_➜_,
+								nameOnly = ^ca_storage_locations.preferred_labels
+							}
+						}
+					},
+				}
+			}
+		} 
+	}
+
+Additional templates may be used in place of the policy element's default ``template`` by passing the ``useTemplate`` option set to 
+the name of the additional template to use. For example,
+
+::
+
+	^ca_objects.history_tracking_current_value%useTemplate=simplePath
+
+will display the current location value using the "simplePath" template, rather than the more complex default template.
+
+.. note:: If the additional template name referenced by the ``useTemplate`` option is not defined for the current value's policy element the element's default ``template`` will be used.
+
+.. tip:: When using ``additionalTemplates`` with policies that include more than one element, it is 
+advisable to define the same set of named templates for each element. This will ensure that a value will be displayed regardless of 
+the type of current value. 
+
+
 Searching on current values
 ---------------------------
 

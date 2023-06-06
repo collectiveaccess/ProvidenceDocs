@@ -23,6 +23,7 @@ Endpoints
    graphql/item
    graphql/edit
    graphql/browse
+   graphql/lightbox
    graphql/schema
    graphql/metadataimport
    graphql/configuration
