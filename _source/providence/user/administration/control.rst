@@ -189,7 +189,7 @@ Use item-level access control to hide full records from specific users or user g
    <!--T:36-->
    default_item_access_level = __CA_ACL_EDIT_DELETE_ACCESS__
 
-For more about configuring these settings in the user interface and item-level control, see `Access Control Settings <file:///Users/charlotteposever/Documents/ca_manual/providence/user/administration/accesscontrolsettings.html>`_.
+For more about configuring these settings in the user interface and item-level control, see `Access Control Settings <https://manual.collectiveaccess.org/providence/user/administration/accesscontrolsettings.html>`_.
 
 
 
