@@ -3,4 +3,4 @@ delimiter,Text to use as delimiter for multiple values.,;
 maxLevelsFromTop,Restrict the number of levels returned to the top-most beginning with the root.,None
 maxLevelsFromBottom,Restrict the number of levels returned to the bottom-most beginning with the lowest level.,None
 hierarchyDirection,"Order in which to return hierarchical levels. Set to either ""asc"" or ""desc"". ""asc""ending returns hierarchy beginning with the root; ""desc""ending begins with the child furthest from the root.",asc
-allDescendants,Return all items from the full depth of the hierarchy when fetching children using the children modifier. By default only immediate children are returned.,FALSE
+allDescendants,"Return all items from the full depth of the hierarchy when fetching children using the children modifier. By default only immediate children are returned. As of version 2.0 you may use the ""descendants"" hierarchy modifier in place of this option. They are synonymous.",FALSE

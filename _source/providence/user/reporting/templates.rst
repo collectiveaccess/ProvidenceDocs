@@ -387,7 +387,7 @@ This one calculates the age of Alan Turing:
 
 Formatting hierarchical displays
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Many types of records can be arranged hierarchically. To get some or all of the hierarchy for display use a hierarchical bundle specifier. This is just a normal specifier with a hierarchical modifier (``hierarchy``, ``parent``, ``children``) added.
+Many types of records can be arranged hierarchically. To get some or all of the hierarchy for display use a hierarchical bundle specifier. This is just a normal specifier with a hierarchical modifier (``hierarchy``, ``parent``, ``children``) added. As of version 2.0, two additional modifiers, ``descendants`` and ``branch`` are available. 
 
 For example, for an ``object`` primary, a ``^ca_objects.hierarchy.preferred_labels.name`` placeholder will return the names of all objects in the hierarchy from top to bottom. You'll probably want to set a delimiter between each item in the hierarchy. You can do so by adding a ``placeholder`` option: append a percent sign and ``delimiter=<my delimiter>`` to the bundle specifier, like so:
 
@@ -405,7 +405,7 @@ You can get more control over hierarchy displays using a ``<unit>`` set relative
 
 will evaluate the ``<unit>`` for each record in the hierarchy in turn set to primary. Related data can be accessed as well, and additional ``<unit>``'s can be specified within.
 
-The ``parent`` and ``children`` modifiers work similarly to ``hierarchy`` but return the immediate parent of a record or its immediate children respectively.
+The ``parent`` and ``children`` modifiers work similarly to ``hierarchy`` but return the immediate parent of a record or its immediate children respectively. The ``descendant`` modifier returns all records below a given record. The ``branch`` modifier is similar to ``descendants`` but includes the given record along with its descendants.
 
 There are a number of placeholder options that can be used to modify how hierarchical data is displayed:
 
