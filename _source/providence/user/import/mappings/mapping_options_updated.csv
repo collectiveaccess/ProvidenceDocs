@@ -65,6 +65,7 @@ matchMode,"Determines whether to search on file names, enclosing directory names
 errorPolicy,"Determines how errors are handled for the mapping.  Options are to ignore the error, stop the import when an error is encountered and to receive a prompt when the error is encountered.",Valid values are _ignore_ and _stop_.,
 add,"Always add values after existing ones even if existing record policy mandates replacement (Eg. merge_on_idno_with_replace, Etc.)",Available from version 1.8,
 replace,"Always replace values, removing existing, ones even if existing record policy does not mandate replacement (Eg. is not merge_on_idno_with_replace, Etc.).",Available from version 1.8,
+replaceIfExpression,"Replace values if specified expression evaluated as true, removing existing, ones even if existing record policy does not mandate replacement (Eg. is not merge_on_idno_with_replace, Etc.).",Available from version 1.8,
 upperCaseFirst,Force first letter of value to uppercase.,Available from version 1.8,
 toUpperCase,Force value to uppercase.,Available from version 1.8,
 toLowerCase,Force value to lowercase..,Available from version 1.8,
