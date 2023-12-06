@@ -127,6 +127,8 @@ Source              Description
 ``__filepath__``    The full path on the server to the file being imported.
 ``__now__``         The current date and time. (Available from version 1.8).
 ``__date__``		The current date (time is omitted). (Available from version 1.8).
+``__sheetname``		The name of the current worksheet being imported. (Excel imports only; available from version 1.8).
+``__sheetnum__``	The index of the current worksheet being imported. The index is one-based. (Excel imports only; available from version 1.8).
 ================    ================================================================================
 
 CA_table.element (Column 3)
