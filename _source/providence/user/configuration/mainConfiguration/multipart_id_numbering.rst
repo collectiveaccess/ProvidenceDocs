@@ -26,6 +26,7 @@ CollectiveAccess supports ID numbers for the following items:
 - content managed site pages (*ca_site_pages*)
 - tours (*ca_tours*)
 - tour stops (*ca_tour_stops*)
+- sets (*ca_sets*)
 
 You may specify numbering formats for any type of item listed above in multipart_id_numbering.conf. The format name for each must be identical to the item code (italicized in the list above). CollectiveAccess will use the format to generate an ID number entry interface and validate input for the ID number field of the respective data item. For lots this is the 'idno_stub' field; for objects and other items it is the 'idno' field.
 
@@ -241,3 +242,17 @@ The automatically issued SERIAL values should always be one more than the larges
 and you have configured different number formats for different types within the same table, try setting the ``sequence_by_type`` setting for each type, which will cause each type to have its own numeric sequence. By default all types within a table share a single numeric sequence. This is often desirable, but significantly differing numbering formats with a single table can cause the sequence generator to fail. Separating sequences by type can ensure that usable sequences are created within each type.
 
 The sequence number system relies upon sortable versions of formatted identifiers to reliably generate new values in sequence. Incorrect sequence values may be produced if these sortable values are somehow corrupted. To regenerate correct sortable values try the *reloading sort values* option in the administrative *Maintenance* menu or the command line :ref:`caUtils <ca_utils>` command using the *rebuild-sort-values* option. 
+
+
+Using UUID's as identifiers
+-----------------------------
+The UUID numbering plug-in offers a simplified unique numbering system using universally unique identifiers (UUID's). UUID's
+are 128-bit values expressed as a series of hexadecimal (base-16) numbers. When appropriately generated they are for all practical
+purposes unique.
+
+The UUID pluig-in can be enabled on a per-table basis by changing the `<table>_id_numbering_plugin` values in `app.conf` to "UUIDNumber".
+
+The UUID plugin utilizes the `multipart_id_numbering.conf` configuration file, but assumes all formats have a single element of type "FREE". 
+If identifier values for existing records have non-UUID values set, the plugin will overwrite these with valid UUID's. To tolerate invalid
+UUID values for existing records set the `dont_overwrite_invalid_guid` option in the format element used for the UUID value to a non-zero value. 
+(This option is available as of version 2.0)
